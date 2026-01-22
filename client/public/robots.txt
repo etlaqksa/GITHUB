@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Disallow: /ar/keywords
+Disallow: /en/keywords
+Sitemap: https://etlaqksa.com/sitemap.xml
