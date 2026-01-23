@@ -14,8 +14,8 @@ import { useMemo, useState } from 'react';
 
 type FilterKey = 'all' | 'riyadh' | 'jeddah' | 'dammam' | 'eastern' | 'western' | 'central';
 
-function regionOf(city: string) {
-  const c = city.toLowerCase();
+function regionOf(city: unknown) {
+  const c = String(city ?? '').toLowerCase();
   if (['الرياض','riyadh','المجمعة','الزلفي','الرس','بريدة','عنيزة','القصيم','qassim','zulfi','majmaah'].some((x) => c.includes(x))) return 'central';
   if (['جدة','jeddah','مكة','makkah','الطائف','taif','ينبع','yanbu','المدينة','madinah','المدينة المنورة'].some((x) => c.includes(x))) return 'western';
   if (['الدمام','dammam','الخبر','khobar','الجبيل','jubail','الظهران','dhahran','القطيف','qatif','الهفوف','hofuf'].some((x) => c.includes(x))) return 'eastern';
@@ -31,19 +31,21 @@ export default function CaseStudies() {
     // Map projects into case-study cards (projects dataset already has problem/approach/results fields in most cases)
     const mapped = projects.map((p) => ({
       slug: p.slug,
-      title: lang === 'ar' ? p.title : p.titleEn,
-      city: lang === 'ar' ? p.location : p.locationEn,
-      tags: (lang === 'ar' ? (p.tags || []) : (p.tagsEn || [])) as string[],
-      summary: lang === 'ar' ? p.summary : p.summaryEn,
+      title: String(lang === 'ar' ? p.title : (p as any).titleEn || ''),
+      city: String(lang === 'ar' ? (p as any).location : (p as any).locationEn || ''),
+      tags: (lang === 'ar' ? ((p as any).tags || []) : ((p as any).tagsEn || [])).map((t: any) => String(t)) as string[],
+      summary: String(lang === 'ar' ? (p as any).summary : (p as any).summaryEn || ''),
       date: p.date,
-      region: regionOf(lang === 'ar' ? p.location : p.locationEn),
+      region: regionOf(lang === 'ar' ? (p as any).location : (p as any).locationEn),
     }));
 
     if (filter === 'all') return mapped;
 
-    if (filter === 'riyadh') return mapped.filter((x) => x.city.toLowerCase().includes('الرياض') || x.city.toLowerCase().includes('riyadh'));
-    if (filter === 'jeddah') return mapped.filter((x) => x.city.toLowerCase().includes('جدة') || x.city.toLowerCase().includes('jeddah'));
-    if (filter === 'dammam') return mapped.filter((x) => x.city.toLowerCase().includes('الدمام') || x.city.toLowerCase().includes('dammam'));
+    const lower = (v: unknown) => String(v ?? '').toLowerCase();
+
+    if (filter === 'riyadh') return mapped.filter((x) => lower(x.city).includes('الرياض') || lower(x.city).includes('riyadh'));
+    if (filter === 'jeddah') return mapped.filter((x) => lower(x.city).includes('جدة') || lower(x.city).includes('jeddah'));
+    if (filter === 'dammam') return mapped.filter((x) => lower(x.city).includes('الدمام') || lower(x.city).includes('dammam'));
 
     return mapped.filter((x) => x.region === filter);
   }, [lang, filter]);

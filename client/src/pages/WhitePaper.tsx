@@ -1,4 +1,5 @@
 import { SEO } from '@/components/SEO';
+import RelatedLinksHub from '@/components/RelatedLinksHub';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -15,6 +16,8 @@ export default function WhitePaper() {
 
   const title = language === 'ar' ? titleAr : titleEn;
   const description = language === 'ar' ? descAr : descEn;
+  const relatedSignals = [title, description, 'geophysical', 'جيوفيزياء', 'GPR', 'ERT', 'كشف فراغات', 'تكهفات'].filter(Boolean) as string[];
+
 
   return (
     <div className="container mx-auto px-4 py-10">
@@ -90,6 +93,7 @@ export default function WhitePaper() {
             ? 'ملاحظة: هذه الورقة للأغراض الإرشادية ولا تغني عن التقييم الموقعي أو الدراسة التفصيلية عند الحاجة.'
             : 'Note: This paper is for guidance and does not replace a proper site assessment or detailed investigation when required.'}
         </div>
+      <RelatedLinksHub signals={relatedSignals} serviceSlug="geophysical-surveys" />
       </div>
     </div>
   );

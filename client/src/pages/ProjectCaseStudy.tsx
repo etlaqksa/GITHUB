@@ -2,6 +2,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { SEO } from '@/components/SEO';
+import RelatedLinksHub from '@/components/RelatedLinksHub';
 import TrustStats from '@/components/TrustStats';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { projects } from '@/data/projects';
@@ -19,6 +20,8 @@ export default function ProjectCaseStudy() {
     if (!slug) return null;
     return projects.find((p) => p.slug === slug) ?? null;
   }, [params?.slug]);
+
+  const relatedSignals = [project?.title, project?.titleEn, project?.summary, project?.summaryEn, project?.location, project?.locationEn, ...(project?.tags || []), ...(project?.tagsEn || [])].filter(Boolean).map(String);
 
   if (!match || !project) {
     return (
@@ -177,6 +180,7 @@ export default function ProjectCaseStudy() {
           </div>
 
           <div className="mt-10">
+            <RelatedLinksHub signals={relatedSignals} />
             <TrustStats className="rounded-2xl border bg-card/60 backdrop-blur p-6 md:p-8" />
           </div>
         </div>

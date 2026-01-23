@@ -128,6 +128,17 @@ export default function BlogPost() {
 
   const readTime = useMemo(() => estimateReadTime(contentRaw, language), [contentRaw, language]);
   const pageUrl = useMemo(() => absUrl(`/blog/${article?.slug || ''}`), [article?.slug]);
+  const relatedSignals = [
+    title,
+    description,
+    article.category,
+    article.categoryEn,
+    ...(article.categoriesAr || []),
+    ...(article.categoriesEn || []),
+    // light content signal
+    contentRaw.slice(0, 300),
+  ].filter(Boolean) as string[];
+
   const faqItems = useMemo(() => {
     if (!article) return [] as { question: string; answer: string }[];
     return (language === 'ar' ? (article.faqAr || []) : (article.faqEn || [])) as { question: string; answer: string }[];
@@ -415,7 +426,7 @@ const handleHeroError = () => {
           <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground mb-6">
             <div className="flex items-center gap-1">
               <User className="h-4 w-4" />
-              <span>{language === 'ar' ? 'فريق اتلاق' : 'Etlaq Team'}</span>
+              <span>{language === 'ar' ? 'فريق إطلاق' : 'Etlaq Team'}</span>
             </div>
             {article.date ? (
               <div className="flex items-center gap-1">
@@ -483,6 +494,8 @@ const handleHeroError = () => {
               {contentRaw}
             </ReactMarkdown>
           </article>
+
+          <RelatedLinksHub signals={relatedSignals} />
         </div>
       </div>
     </div>
