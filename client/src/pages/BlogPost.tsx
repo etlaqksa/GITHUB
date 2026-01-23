@@ -10,6 +10,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import LocalizedLink from '@/components/LocalizedLink';
+import { absUrl } from '@/lib/siteUrl';
 
 function stripMarkdown(md: string) {
   return md
@@ -41,6 +42,31 @@ function getCategories(article: ArticleContent, language: 'ar' | 'en') {
  * Remove Arabic characters from an English article *without* destroying newlines.
  * This is important for Markdown tables/lists to render correctly.
  */
+
+function buildFaqSchema(items: { question: string; answer: string }[], pageUrl: string) {
+  return {
+    '@type': 'FAQPage',
+    mainEntity: items.map((it) => ({
+      '@type': 'Question',
+      name: it.question,
+      acceptedAnswer: { '@type': 'Answer', text: it.answer },
+    })),
+    url: pageUrl,
+  };
+}
+
+function buildArticleSchema(params: { title: string; description: string; url: string; image?: string; date?: string; author?: string }) {
+  return {
+    '@type': 'Article',
+    headline: params.title,
+    description: params.description,
+    url: params.url,
+    image: params.image ? [params.image] : undefined,
+    datePublished: params.date,
+    dateModified: params.date,
+    author: params.author ? { '@type': 'Person', name: params.author } : undefined,
+  };
+}
 function normalizeEnglishContent(input: string) {
   return (
     input
@@ -87,6 +113,46 @@ export default function BlogPost() {
   }, [article, language]);
 
   const readTime = useMemo(() => estimateReadTime(contentRaw, language), [contentRaw, language]);
+  const pageUrl = useMemo(() => absUrl(`/blog/${article?.slug || ''}`), [article?.slug]);
+  const faqItems = useMemo(() => {
+    if (!article) return [] as { question: string; answer: string }[];
+    return (language === 'ar' ? (article.faqAr || []) : (article.faqEn || [])) as { question: string; answer: string }[];
+  }, [article, language]);
+
+  const schema = useMemo(() => {
+    if (!article) return undefined;
+    const image = absUrl(`/article-images/hero/${article.slug}.webp`);
+    const graph: any[] = [];
+
+    // Organization (minimal, consistent)
+    graph.push({
+      '@type': 'Organization',
+      name: 'شركة إطلاق المتميزة المحدودة (ETLAQ)',
+      url: absUrl('/'),
+      logo: absUrl('/logo.png'),
+    });
+
+    graph.push({
+      '@type': 'WebPage',
+      name: title,
+      url: pageUrl,
+    });
+
+    graph.push(buildArticleSchema({
+      title,
+      description,
+      url: pageUrl,
+      image,
+      date: article.date,
+      author: article.author,
+    }));
+
+    if (faqItems.length) {
+      graph.push(buildFaqSchema(faqItems, pageUrl));
+    }
+
+    return { '@context': 'https://schema.org', '@graph': graph };
+  }, [article, title, description, pageUrl, faqItems]);
 
   const { prevArticle, nextArticle } = useMemo(() => {
     if (!article) return { prevArticle: null as ArticleContent | null, nextArticle: null as ArticleContent | null };
@@ -216,7 +282,7 @@ const handleHeroError = () => {
 
   return (
     <div className="container mx-auto px-4 py-12">
-      <SEO title={title} description={description} />
+      <SEO title={title} description={description} schema={schema} />
       <div className="max-w-4xl mx-auto" ref={swipeRef}>
         <LocalizedLink href="/blog">
           <a className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground mb-6">

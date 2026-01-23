@@ -6,6 +6,8 @@ export interface ArticleImage {
   license: string;
 }
 
+export interface FAQItem { question: string; answer: string; questionEn?: string; answerEn?: string; }
+
 export interface ArticleContent {
   id: number;
   title: string;
@@ -21,6 +23,8 @@ export interface ArticleContent {
   content: string;
   contentEn: string;
   slug: string;
+  faqAr?: { question: string; answer: string }[];
+  faqEn?: { question: string; answer: string }[];
   image?: ArticleImage;
 }
 
@@ -3398,4 +3402,1624 @@ After the grouting process is complete and the soil beneath the affected foundat
 
 It is required to monitor the cracks for a period of no less than 3 to 6 months following the treatment, with readings documented regularly. The cessation of crack development is the definitive physical evidence of the geotechnical intervention's success.`,
   },
+
+  {
+    id: 69,
+    title: "دليل حقن التربة (حقن أسمنتي): متى تحتاجه وكيف نختار الحل",
+    titleEn: "Soil Grouting Guide: When to Use It and How to Choose the Right Approach",
+    category: "حقن التربة",
+    categoryEn: "Soil Grouting",
+    categoriesAr: ["حقن التربة", "الهندسة الجيوتقنية", "تقوية الأساسات"],
+    categoriesEn: ["Soil Grouting", "Geotechnical Engineering", "Foundation Engineering"],
+    date: '2026-01-23',
+    readTime: '10 دقائق',
+    readTimeEn: '10 min',
+    author: 'فريق ETLAQ الهندسي',
+    slug: 'soil-grouting-guide',
+    content: `# دليل حقن التربة (حقن أسمنتي): متى تحتاجه وكيف نختار الحل
+
+هذا الدليل يشرح **المشكلة ولماذا تحدث**، ومتى تحتاج تدخلًا هندسيًا، وما هي **الخطوة التالية** بشكل عملي.  
+إذا كنت تريد تنفيذًا مباشرًا، راجع صفحة الخدمة: [الخدمة المرتبطة ](/services/grouting)  
+وللاستهداف المحلي يمكنك مراجعة صفحات المدن، مثل: [حقن تربة في الرياض](/locations/riyadh/soil-grouting) أو [كشف فراغات في جدة](/locations/jeddah/void-detection) أو [تقوية أساسات في الدمام](/locations/dammam/foundation-strengthening).
+
+---
+
+## متى أحتاج تدخلًا؟
+- ظهور **تشققات متزايدة** أو اختلاف مناسيب الأرضيات.
+- هبوط موضعي حول المبنى أو في المواقف/الساحات.
+- مؤشرات على فراغات تحت البلاطات أو قرب الخدمات الأرضية.
+
+> **قاعدة عملية:** إذا كانت الأعراض **تتطور مع الزمن** فغالبًا المشكلة جيوتكنيكية وتحتاج تشخيصًا ثم معالجة.
+
+---
+
+## لماذا تحدث المشكلة؟
+أشيع الأسباب:
+1) تغيّر رطوبة التربة/مياه جوفية.  
+2) تسربات من شبكات المياه أو الصرف.  
+3) فراغات أو تكهفات أو تجاويف كارستية.  
+4) ضعف تربة ردم أو سوء دمك.  
+
+---
+
+## كيف يتم التشخيص بشكل مهني؟
+- **زيارة ميدانية** + توصيف الأعراض.
+- اختيار وسيلة فحص مناسبة:
+  - **GPR** لمسح سريع تحت البلاطات.
+  - **ERT** لتحديد مناطق ضعف/فراغات أعمق.
+  - **حفر اختباري/جسات** عند الحاجة.
+- ربط النتائج بمخاطر المنشأة ومتطلبات السلامة.
+
+---
+
+## خيارات المعالجة (حسب الحالة)
+- **حقن تربة/حقن أسمنتي:** لملء الفراغات ورفع الصلابة في مناطق محددة.  
+- **تقوية أساسات/Underpinning:** عندما تكون المشكلة مرتبطة بالأساس أو الحمل.  
+- **معالجة فراغات/تكهفات:** عند وجود cavities أو مسارات تسرب.
+
+---
+
+## منهجية تنفيذ نموذجية
+1) إعداد خطة عمل + مناطق الاستهداف.  
+2) تنفيذ المعالجة على مراحل (بحسب المخاطر).  
+3) توثيق الاستهلاك/الضغوط/الملاحظات.  
+4) اختبارات تحقق + تقرير نهائي.
+
+---
+
+## معايير القبول والتحقق (Validation)
+أمثلة على مخرجات التحقق:
+- ثبات القراءات (Crack monitoring) وتوقف تطور التشققات.
+- تحسن قياسات الاستجابة أو قيم الاختبار (حسب المشروع).
+- توافق نتائج ما بعد التنفيذ مع الهدف المحدد في الخطة.
+
+---
+
+## أخطاء شائعة يجب تجنبها
+- بدء المعالجة قبل تحديد **سبب** المشكلة.
+- استخدام مادة حقن غير مناسبة لبيئة التربة أو للمياه.
+- غياب خطة تحقق واضحة بعد التنفيذ.
+
+---
+
+## أسئلة شائعة
+> تم تلخيص أهم الأسئلة في أسفل الصفحة ضمن بيانات منظمة (FAQ schema) لتسهيل ظهورها في نتائج البحث.
+
+---
+
+## الخطوة التالية
+إذا لديك موقع داخل المملكة وتريد **تقييم مختصر وخطة خطوة تالية واضحة**:
+- ابدأ من صفحة الطلب: [اطلب خدمة](/request-service)
+- أو راجع الخدمة: [تفاصيل الخدمة](/services/grouting)
+`,
+    contentEn: `# Soil Grouting Guide: When to Use It and How to Choose the Right Approach
+
+This pillar guide explains **why the issue happens**, when you should act, and what the **next step** should be.  
+For direct execution, see the service page: [Related service](/services/grouting).  
+For local intent pages, see: [Soil Grouting in Riyadh](/locations/riyadh/soil-grouting) or [Void Detection in Jeddah](/locations/jeddah/void-detection) or [Foundation Strengthening in Dammam](/locations/dammam/foundation-strengthening).
+
+---
+
+## When should I take action?
+- **Growing cracks** or noticeable floor level differences.
+- Localized settlement around the building or in parking/surrounding areas.
+- Suspected voids beneath slabs or near underground utilities.
+
+---
+
+## Why does it happen?
+Common causes:
+1) Moisture/water table changes.  
+2) Utility leaks.  
+3) Voids, sinkholes, or karst cavities.  
+4) Poor compaction or weak fill layers.  
+
+---
+
+## How do we diagnose professionally?
+- Site visit + symptom mapping.
+- Choose the right method:
+  - **GPR** for fast slab-level screening.
+  - **ERT** for deeper weakness/void mapping.
+  - Boreholes/test pits where needed.
+- Tie results to structural risk and safety requirements.
+
+---
+
+## Treatment options (case-dependent)
+- **Soil/cement grouting:** fill voids and locally improve stiffness.  
+- **Underpinning / foundation strengthening:** when the foundation is involved.  
+- **Void/sinkhole remediation:** when cavities or subsurface pathways exist.
+
+---
+
+## Typical execution workflow
+1) Define targets + method statement.  
+2) Stage execution based on risk.  
+3) Log injection/pressure/observations.  
+4) Verification tests + final report.
+
+---
+
+## Validation criteria (examples)
+- Crack monitoring stabilizes (no continued widening).
+- Improved test response (as specified).
+- Post-work results match the defined objectives.
+
+---
+
+## Common mistakes to avoid
+- Treating before identifying the **root cause**.
+- Wrong material selection for the soil/water conditions.
+- No verification plan after execution.
+
+---
+
+## Next step
+If you need a quick assessment and clear next actions in Saudi Arabia:
+- Start here: [Request service](/request-service)
+- Or read the service page: [Service details](/services/grouting)
+`,
+    faqAr: [{"question": "هل حقن التربة مناسب لكل حالات الهبوط؟", "answer": "ليس دائمًا. يعتمد القرار على سبب الهبوط وعمق/نطاق المشكلة. أحيانًا تكون تقوية الأساسات أو معالجة التسربات أولًا هي الأهم."}, {"question": "كم يستغرق التشخيص قبل بدء التنفيذ؟", "answer": "قد يبدأ بتقييم ميداني سريع، ثم تُحدد أدوات الفحص المناسبة (مثل GPR/ERT أو جسات) حسب المخاطر. بعض الحالات تُحسم خلال أيام، وأخرى تحتاج برنامج فحص أوسع."}, {"question": "ما أهم شيء بعد التنفيذ؟", "answer": "خطة تحقق (Validation) واضحة: توثيق، قراءات متابعة، ومخرجات تقرير نهائي يوضح ما تم وأثره."}, {"question": "هل يمكن تنفيذ العمل دون إيقاف المبنى؟", "answer": "غالبًا نعم حسب موقع العمل وحساسية المنشأة، ويتم ذلك بخطة مراحل وإجراءات سلامة."}],
+    faqEn: [{"question": "Is soil grouting suitable for every settlement case?", "answer": "Not always. It depends on the root cause and the depth/extent of the problem. In some cases, underpinning or leak remediation is the priority."}, {"question": "How long does diagnosis take before execution?", "answer": "It may start with a quick site assessment, then the appropriate methods (GPR/ERT/boreholes) are selected based on risk. Some cases take days; others require a broader program."}, {"question": "What matters most after execution?", "answer": "A clear validation plan: logs, follow-up readings, and a final report documenting what was done and its impact."}, {"question": "Can the work be done without shutting down the building?", "answer": "Often yes, depending on access and sensitivity. Execution is staged with safety controls."}],
+  },
+
+
+  {
+    id: 70,
+    title: "تقوية الأساسات (Underpinning): حلول عملية لمعالجة الهبوط",
+    titleEn: "Foundation Strengthening (Underpinning): Practical Solutions for Settlement",
+    category: "تقوية الأساسات",
+    categoryEn: "Foundation Strengthening",
+    categoriesAr: ["تقوية الأساسات", "الهندسة الجيوتقنية", "تقوية الأساسات"],
+    categoriesEn: ["Foundation Strengthening", "Geotechnical Engineering", "Foundation Engineering"],
+    date: '2026-01-23',
+    readTime: '10 دقائق',
+    readTimeEn: '10 min',
+    author: 'فريق ETLAQ الهندسي',
+    slug: 'foundation-strengthening-guide',
+    content: `# تقوية الأساسات (Underpinning): حلول عملية لمعالجة الهبوط
+
+هذا الدليل يشرح **المشكلة ولماذا تحدث**، ومتى تحتاج تدخلًا هندسيًا، وما هي **الخطوة التالية** بشكل عملي.  
+إذا كنت تريد تنفيذًا مباشرًا، راجع صفحة الخدمة: [الخدمة المرتبطة ](/services/foundation-strengthening)  
+وللاستهداف المحلي يمكنك مراجعة صفحات المدن، مثل: [حقن تربة في الرياض](/locations/riyadh/soil-grouting) أو [كشف فراغات في جدة](/locations/jeddah/void-detection) أو [تقوية أساسات في الدمام](/locations/dammam/foundation-strengthening).
+
+---
+
+## متى أحتاج تدخلًا؟
+- ظهور **تشققات متزايدة** أو اختلاف مناسيب الأرضيات.
+- هبوط موضعي حول المبنى أو في المواقف/الساحات.
+- مؤشرات على فراغات تحت البلاطات أو قرب الخدمات الأرضية.
+
+> **قاعدة عملية:** إذا كانت الأعراض **تتطور مع الزمن** فغالبًا المشكلة جيوتكنيكية وتحتاج تشخيصًا ثم معالجة.
+
+---
+
+## لماذا تحدث المشكلة؟
+أشيع الأسباب:
+1) تغيّر رطوبة التربة/مياه جوفية.  
+2) تسربات من شبكات المياه أو الصرف.  
+3) فراغات أو تكهفات أو تجاويف كارستية.  
+4) ضعف تربة ردم أو سوء دمك.  
+
+---
+
+## كيف يتم التشخيص بشكل مهني؟
+- **زيارة ميدانية** + توصيف الأعراض.
+- اختيار وسيلة فحص مناسبة:
+  - **GPR** لمسح سريع تحت البلاطات.
+  - **ERT** لتحديد مناطق ضعف/فراغات أعمق.
+  - **حفر اختباري/جسات** عند الحاجة.
+- ربط النتائج بمخاطر المنشأة ومتطلبات السلامة.
+
+---
+
+## خيارات المعالجة (حسب الحالة)
+- **حقن تربة/حقن أسمنتي:** لملء الفراغات ورفع الصلابة في مناطق محددة.  
+- **تقوية أساسات/Underpinning:** عندما تكون المشكلة مرتبطة بالأساس أو الحمل.  
+- **معالجة فراغات/تكهفات:** عند وجود cavities أو مسارات تسرب.
+
+---
+
+## منهجية تنفيذ نموذجية
+1) إعداد خطة عمل + مناطق الاستهداف.  
+2) تنفيذ المعالجة على مراحل (بحسب المخاطر).  
+3) توثيق الاستهلاك/الضغوط/الملاحظات.  
+4) اختبارات تحقق + تقرير نهائي.
+
+---
+
+## معايير القبول والتحقق (Validation)
+أمثلة على مخرجات التحقق:
+- ثبات القراءات (Crack monitoring) وتوقف تطور التشققات.
+- تحسن قياسات الاستجابة أو قيم الاختبار (حسب المشروع).
+- توافق نتائج ما بعد التنفيذ مع الهدف المحدد في الخطة.
+
+---
+
+## أخطاء شائعة يجب تجنبها
+- بدء المعالجة قبل تحديد **سبب** المشكلة.
+- استخدام مادة حقن غير مناسبة لبيئة التربة أو للمياه.
+- غياب خطة تحقق واضحة بعد التنفيذ.
+
+---
+
+## أسئلة شائعة
+> تم تلخيص أهم الأسئلة في أسفل الصفحة ضمن بيانات منظمة (FAQ schema) لتسهيل ظهورها في نتائج البحث.
+
+---
+
+## الخطوة التالية
+إذا لديك موقع داخل المملكة وتريد **تقييم مختصر وخطة خطوة تالية واضحة**:
+- ابدأ من صفحة الطلب: [اطلب خدمة](/request-service)
+- أو راجع الخدمة: [تفاصيل الخدمة](/services/foundation-strengthening)
+`,
+    contentEn: `# Foundation Strengthening (Underpinning): Practical Solutions for Settlement
+
+This pillar guide explains **why the issue happens**, when you should act, and what the **next step** should be.  
+For direct execution, see the service page: [Related service](/services/foundation-strengthening).  
+For local intent pages, see: [Soil Grouting in Riyadh](/locations/riyadh/soil-grouting) or [Void Detection in Jeddah](/locations/jeddah/void-detection) or [Foundation Strengthening in Dammam](/locations/dammam/foundation-strengthening).
+
+---
+
+## When should I take action?
+- **Growing cracks** or noticeable floor level differences.
+- Localized settlement around the building or in parking/surrounding areas.
+- Suspected voids beneath slabs or near underground utilities.
+
+---
+
+## Why does it happen?
+Common causes:
+1) Moisture/water table changes.  
+2) Utility leaks.  
+3) Voids, sinkholes, or karst cavities.  
+4) Poor compaction or weak fill layers.  
+
+---
+
+## How do we diagnose professionally?
+- Site visit + symptom mapping.
+- Choose the right method:
+  - **GPR** for fast slab-level screening.
+  - **ERT** for deeper weakness/void mapping.
+  - Boreholes/test pits where needed.
+- Tie results to structural risk and safety requirements.
+
+---
+
+## Treatment options (case-dependent)
+- **Soil/cement grouting:** fill voids and locally improve stiffness.  
+- **Underpinning / foundation strengthening:** when the foundation is involved.  
+- **Void/sinkhole remediation:** when cavities or subsurface pathways exist.
+
+---
+
+## Typical execution workflow
+1) Define targets + method statement.  
+2) Stage execution based on risk.  
+3) Log injection/pressure/observations.  
+4) Verification tests + final report.
+
+---
+
+## Validation criteria (examples)
+- Crack monitoring stabilizes (no continued widening).
+- Improved test response (as specified).
+- Post-work results match the defined objectives.
+
+---
+
+## Common mistakes to avoid
+- Treating before identifying the **root cause**.
+- Wrong material selection for the soil/water conditions.
+- No verification plan after execution.
+
+---
+
+## Next step
+If you need a quick assessment and clear next actions in Saudi Arabia:
+- Start here: [Request service](/request-service)
+- Or read the service page: [Service details](/services/foundation-strengthening)
+`,
+    faqAr: [{"question": "هل حقن التربة مناسب لكل حالات الهبوط؟", "answer": "ليس دائمًا. يعتمد القرار على سبب الهبوط وعمق/نطاق المشكلة. أحيانًا تكون تقوية الأساسات أو معالجة التسربات أولًا هي الأهم."}, {"question": "كم يستغرق التشخيص قبل بدء التنفيذ؟", "answer": "قد يبدأ بتقييم ميداني سريع، ثم تُحدد أدوات الفحص المناسبة (مثل GPR/ERT أو جسات) حسب المخاطر. بعض الحالات تُحسم خلال أيام، وأخرى تحتاج برنامج فحص أوسع."}, {"question": "ما أهم شيء بعد التنفيذ؟", "answer": "خطة تحقق (Validation) واضحة: توثيق، قراءات متابعة، ومخرجات تقرير نهائي يوضح ما تم وأثره."}, {"question": "هل يمكن تنفيذ العمل دون إيقاف المبنى؟", "answer": "غالبًا نعم حسب موقع العمل وحساسية المنشأة، ويتم ذلك بخطة مراحل وإجراءات سلامة."}],
+    faqEn: [{"question": "Is soil grouting suitable for every settlement case?", "answer": "Not always. It depends on the root cause and the depth/extent of the problem. In some cases, underpinning or leak remediation is the priority."}, {"question": "How long does diagnosis take before execution?", "answer": "It may start with a quick site assessment, then the appropriate methods (GPR/ERT/boreholes) are selected based on risk. Some cases take days; others require a broader program."}, {"question": "What matters most after execution?", "answer": "A clear validation plan: logs, follow-up readings, and a final report documenting what was done and its impact."}, {"question": "Can the work be done without shutting down the building?", "answer": "Often yes, depending on access and sensitivity. Execution is staged with safety controls."}],
+  },
+
+
+  {
+    id: 71,
+    title: "كشف الفراغات تحت المباني: مؤشرات الخطر وخطة الفحص",
+    titleEn: "Void Detection Under Buildings: Risk Signs and Inspection Plan",
+    category: "كشف الفراغات",
+    categoryEn: "Void Detection",
+    categoriesAr: ["كشف الفراغات", "الهندسة الجيوتقنية", "تقوية الأساسات"],
+    categoriesEn: ["Void Detection", "Geotechnical Engineering", "Foundation Engineering"],
+    date: '2026-01-23',
+    readTime: '10 دقائق',
+    readTimeEn: '10 min',
+    author: 'فريق ETLAQ الهندسي',
+    slug: 'void-detection-guide',
+    content: `# كشف الفراغات تحت المباني: مؤشرات الخطر وخطة الفحص
+
+هذا الدليل يشرح **المشكلة ولماذا تحدث**، ومتى تحتاج تدخلًا هندسيًا، وما هي **الخطوة التالية** بشكل عملي.  
+إذا كنت تريد تنفيذًا مباشرًا، راجع صفحة الخدمة: [الخدمة المرتبطة ](/services/void-detection)  
+وللاستهداف المحلي يمكنك مراجعة صفحات المدن، مثل: [حقن تربة في الرياض](/locations/riyadh/soil-grouting) أو [كشف فراغات في جدة](/locations/jeddah/void-detection) أو [تقوية أساسات في الدمام](/locations/dammam/foundation-strengthening).
+
+---
+
+## متى أحتاج تدخلًا؟
+- ظهور **تشققات متزايدة** أو اختلاف مناسيب الأرضيات.
+- هبوط موضعي حول المبنى أو في المواقف/الساحات.
+- مؤشرات على فراغات تحت البلاطات أو قرب الخدمات الأرضية.
+
+> **قاعدة عملية:** إذا كانت الأعراض **تتطور مع الزمن** فغالبًا المشكلة جيوتكنيكية وتحتاج تشخيصًا ثم معالجة.
+
+---
+
+## لماذا تحدث المشكلة؟
+أشيع الأسباب:
+1) تغيّر رطوبة التربة/مياه جوفية.  
+2) تسربات من شبكات المياه أو الصرف.  
+3) فراغات أو تكهفات أو تجاويف كارستية.  
+4) ضعف تربة ردم أو سوء دمك.  
+
+---
+
+## كيف يتم التشخيص بشكل مهني؟
+- **زيارة ميدانية** + توصيف الأعراض.
+- اختيار وسيلة فحص مناسبة:
+  - **GPR** لمسح سريع تحت البلاطات.
+  - **ERT** لتحديد مناطق ضعف/فراغات أعمق.
+  - **حفر اختباري/جسات** عند الحاجة.
+- ربط النتائج بمخاطر المنشأة ومتطلبات السلامة.
+
+---
+
+## خيارات المعالجة (حسب الحالة)
+- **حقن تربة/حقن أسمنتي:** لملء الفراغات ورفع الصلابة في مناطق محددة.  
+- **تقوية أساسات/Underpinning:** عندما تكون المشكلة مرتبطة بالأساس أو الحمل.  
+- **معالجة فراغات/تكهفات:** عند وجود cavities أو مسارات تسرب.
+
+---
+
+## منهجية تنفيذ نموذجية
+1) إعداد خطة عمل + مناطق الاستهداف.  
+2) تنفيذ المعالجة على مراحل (بحسب المخاطر).  
+3) توثيق الاستهلاك/الضغوط/الملاحظات.  
+4) اختبارات تحقق + تقرير نهائي.
+
+---
+
+## معايير القبول والتحقق (Validation)
+أمثلة على مخرجات التحقق:
+- ثبات القراءات (Crack monitoring) وتوقف تطور التشققات.
+- تحسن قياسات الاستجابة أو قيم الاختبار (حسب المشروع).
+- توافق نتائج ما بعد التنفيذ مع الهدف المحدد في الخطة.
+
+---
+
+## أخطاء شائعة يجب تجنبها
+- بدء المعالجة قبل تحديد **سبب** المشكلة.
+- استخدام مادة حقن غير مناسبة لبيئة التربة أو للمياه.
+- غياب خطة تحقق واضحة بعد التنفيذ.
+
+---
+
+## أسئلة شائعة
+> تم تلخيص أهم الأسئلة في أسفل الصفحة ضمن بيانات منظمة (FAQ schema) لتسهيل ظهورها في نتائج البحث.
+
+---
+
+## الخطوة التالية
+إذا لديك موقع داخل المملكة وتريد **تقييم مختصر وخطة خطوة تالية واضحة**:
+- ابدأ من صفحة الطلب: [اطلب خدمة](/request-service)
+- أو راجع الخدمة: [تفاصيل الخدمة](/services/void-detection)
+`,
+    contentEn: `# Void Detection Under Buildings: Risk Signs and Inspection Plan
+
+This pillar guide explains **why the issue happens**, when you should act, and what the **next step** should be.  
+For direct execution, see the service page: [Related service](/services/void-detection).  
+For local intent pages, see: [Soil Grouting in Riyadh](/locations/riyadh/soil-grouting) or [Void Detection in Jeddah](/locations/jeddah/void-detection) or [Foundation Strengthening in Dammam](/locations/dammam/foundation-strengthening).
+
+---
+
+## When should I take action?
+- **Growing cracks** or noticeable floor level differences.
+- Localized settlement around the building or in parking/surrounding areas.
+- Suspected voids beneath slabs or near underground utilities.
+
+---
+
+## Why does it happen?
+Common causes:
+1) Moisture/water table changes.  
+2) Utility leaks.  
+3) Voids, sinkholes, or karst cavities.  
+4) Poor compaction or weak fill layers.  
+
+---
+
+## How do we diagnose professionally?
+- Site visit + symptom mapping.
+- Choose the right method:
+  - **GPR** for fast slab-level screening.
+  - **ERT** for deeper weakness/void mapping.
+  - Boreholes/test pits where needed.
+- Tie results to structural risk and safety requirements.
+
+---
+
+## Treatment options (case-dependent)
+- **Soil/cement grouting:** fill voids and locally improve stiffness.  
+- **Underpinning / foundation strengthening:** when the foundation is involved.  
+- **Void/sinkhole remediation:** when cavities or subsurface pathways exist.
+
+---
+
+## Typical execution workflow
+1) Define targets + method statement.  
+2) Stage execution based on risk.  
+3) Log injection/pressure/observations.  
+4) Verification tests + final report.
+
+---
+
+## Validation criteria (examples)
+- Crack monitoring stabilizes (no continued widening).
+- Improved test response (as specified).
+- Post-work results match the defined objectives.
+
+---
+
+## Common mistakes to avoid
+- Treating before identifying the **root cause**.
+- Wrong material selection for the soil/water conditions.
+- No verification plan after execution.
+
+---
+
+## Next step
+If you need a quick assessment and clear next actions in Saudi Arabia:
+- Start here: [Request service](/request-service)
+- Or read the service page: [Service details](/services/void-detection)
+`,
+    faqAr: [{"question": "هل حقن التربة مناسب لكل حالات الهبوط؟", "answer": "ليس دائمًا. يعتمد القرار على سبب الهبوط وعمق/نطاق المشكلة. أحيانًا تكون تقوية الأساسات أو معالجة التسربات أولًا هي الأهم."}, {"question": "كم يستغرق التشخيص قبل بدء التنفيذ؟", "answer": "قد يبدأ بتقييم ميداني سريع، ثم تُحدد أدوات الفحص المناسبة (مثل GPR/ERT أو جسات) حسب المخاطر. بعض الحالات تُحسم خلال أيام، وأخرى تحتاج برنامج فحص أوسع."}, {"question": "ما أهم شيء بعد التنفيذ؟", "answer": "خطة تحقق (Validation) واضحة: توثيق، قراءات متابعة، ومخرجات تقرير نهائي يوضح ما تم وأثره."}, {"question": "هل يمكن تنفيذ العمل دون إيقاف المبنى؟", "answer": "غالبًا نعم حسب موقع العمل وحساسية المنشأة، ويتم ذلك بخطة مراحل وإجراءات سلامة."}],
+    faqEn: [{"question": "Is soil grouting suitable for every settlement case?", "answer": "Not always. It depends on the root cause and the depth/extent of the problem. In some cases, underpinning or leak remediation is the priority."}, {"question": "How long does diagnosis take before execution?", "answer": "It may start with a quick site assessment, then the appropriate methods (GPR/ERT/boreholes) are selected based on risk. Some cases take days; others require a broader program."}, {"question": "What matters most after execution?", "answer": "A clear validation plan: logs, follow-up readings, and a final report documenting what was done and its impact."}, {"question": "Can the work be done without shutting down the building?", "answer": "Often yes, depending on access and sensitivity. Execution is staged with safety controls."}],
+  },
+
+
+  {
+    id: 72,
+    title: "دليل دراسة التكهفات والكهوف: التشخيص وتقليل المخاطر",
+    titleEn: "Sinkhole & Cavity Investigation Guide: Diagnosis and Risk Reduction",
+    category: "دراسة التكهفات",
+    categoryEn: "Sinkhole Investigation",
+    categoriesAr: ["دراسة التكهفات", "الهندسة الجيوتقنية", "تقوية الأساسات"],
+    categoriesEn: ["Sinkhole Investigation", "Geotechnical Engineering", "Foundation Engineering"],
+    date: '2026-01-23',
+    readTime: '10 دقائق',
+    readTimeEn: '10 min',
+    author: 'فريق ETLAQ الهندسي',
+    slug: 'sinkhole-investigation-guide',
+    content: `# دليل دراسة التكهفات والكهوف: التشخيص وتقليل المخاطر
+
+هذا الدليل يشرح **المشكلة ولماذا تحدث**، ومتى تحتاج تدخلًا هندسيًا، وما هي **الخطوة التالية** بشكل عملي.  
+إذا كنت تريد تنفيذًا مباشرًا، راجع صفحة الخدمة: [الخدمة المرتبطة ](/services/geophysical-surveys)  
+وللاستهداف المحلي يمكنك مراجعة صفحات المدن، مثل: [حقن تربة في الرياض](/locations/riyadh/soil-grouting) أو [كشف فراغات في جدة](/locations/jeddah/void-detection) أو [تقوية أساسات في الدمام](/locations/dammam/foundation-strengthening).
+
+---
+
+## متى أحتاج تدخلًا؟
+- ظهور **تشققات متزايدة** أو اختلاف مناسيب الأرضيات.
+- هبوط موضعي حول المبنى أو في المواقف/الساحات.
+- مؤشرات على فراغات تحت البلاطات أو قرب الخدمات الأرضية.
+
+> **قاعدة عملية:** إذا كانت الأعراض **تتطور مع الزمن** فغالبًا المشكلة جيوتكنيكية وتحتاج تشخيصًا ثم معالجة.
+
+---
+
+## لماذا تحدث المشكلة؟
+أشيع الأسباب:
+1) تغيّر رطوبة التربة/مياه جوفية.  
+2) تسربات من شبكات المياه أو الصرف.  
+3) فراغات أو تكهفات أو تجاويف كارستية.  
+4) ضعف تربة ردم أو سوء دمك.  
+
+---
+
+## كيف يتم التشخيص بشكل مهني؟
+- **زيارة ميدانية** + توصيف الأعراض.
+- اختيار وسيلة فحص مناسبة:
+  - **GPR** لمسح سريع تحت البلاطات.
+  - **ERT** لتحديد مناطق ضعف/فراغات أعمق.
+  - **حفر اختباري/جسات** عند الحاجة.
+- ربط النتائج بمخاطر المنشأة ومتطلبات السلامة.
+
+---
+
+## خيارات المعالجة (حسب الحالة)
+- **حقن تربة/حقن أسمنتي:** لملء الفراغات ورفع الصلابة في مناطق محددة.  
+- **تقوية أساسات/Underpinning:** عندما تكون المشكلة مرتبطة بالأساس أو الحمل.  
+- **معالجة فراغات/تكهفات:** عند وجود cavities أو مسارات تسرب.
+
+---
+
+## منهجية تنفيذ نموذجية
+1) إعداد خطة عمل + مناطق الاستهداف.  
+2) تنفيذ المعالجة على مراحل (بحسب المخاطر).  
+3) توثيق الاستهلاك/الضغوط/الملاحظات.  
+4) اختبارات تحقق + تقرير نهائي.
+
+---
+
+## معايير القبول والتحقق (Validation)
+أمثلة على مخرجات التحقق:
+- ثبات القراءات (Crack monitoring) وتوقف تطور التشققات.
+- تحسن قياسات الاستجابة أو قيم الاختبار (حسب المشروع).
+- توافق نتائج ما بعد التنفيذ مع الهدف المحدد في الخطة.
+
+---
+
+## أخطاء شائعة يجب تجنبها
+- بدء المعالجة قبل تحديد **سبب** المشكلة.
+- استخدام مادة حقن غير مناسبة لبيئة التربة أو للمياه.
+- غياب خطة تحقق واضحة بعد التنفيذ.
+
+---
+
+## أسئلة شائعة
+> تم تلخيص أهم الأسئلة في أسفل الصفحة ضمن بيانات منظمة (FAQ schema) لتسهيل ظهورها في نتائج البحث.
+
+---
+
+## الخطوة التالية
+إذا لديك موقع داخل المملكة وتريد **تقييم مختصر وخطة خطوة تالية واضحة**:
+- ابدأ من صفحة الطلب: [اطلب خدمة](/request-service)
+- أو راجع الخدمة: [تفاصيل الخدمة](/services/geophysical-surveys)
+`,
+    contentEn: `# Sinkhole & Cavity Investigation Guide: Diagnosis and Risk Reduction
+
+This pillar guide explains **why the issue happens**, when you should act, and what the **next step** should be.  
+For direct execution, see the service page: [Related service](/services/geophysical-surveys).  
+For local intent pages, see: [Soil Grouting in Riyadh](/locations/riyadh/soil-grouting) or [Void Detection in Jeddah](/locations/jeddah/void-detection) or [Foundation Strengthening in Dammam](/locations/dammam/foundation-strengthening).
+
+---
+
+## When should I take action?
+- **Growing cracks** or noticeable floor level differences.
+- Localized settlement around the building or in parking/surrounding areas.
+- Suspected voids beneath slabs or near underground utilities.
+
+---
+
+## Why does it happen?
+Common causes:
+1) Moisture/water table changes.  
+2) Utility leaks.  
+3) Voids, sinkholes, or karst cavities.  
+4) Poor compaction or weak fill layers.  
+
+---
+
+## How do we diagnose professionally?
+- Site visit + symptom mapping.
+- Choose the right method:
+  - **GPR** for fast slab-level screening.
+  - **ERT** for deeper weakness/void mapping.
+  - Boreholes/test pits where needed.
+- Tie results to structural risk and safety requirements.
+
+---
+
+## Treatment options (case-dependent)
+- **Soil/cement grouting:** fill voids and locally improve stiffness.  
+- **Underpinning / foundation strengthening:** when the foundation is involved.  
+- **Void/sinkhole remediation:** when cavities or subsurface pathways exist.
+
+---
+
+## Typical execution workflow
+1) Define targets + method statement.  
+2) Stage execution based on risk.  
+3) Log injection/pressure/observations.  
+4) Verification tests + final report.
+
+---
+
+## Validation criteria (examples)
+- Crack monitoring stabilizes (no continued widening).
+- Improved test response (as specified).
+- Post-work results match the defined objectives.
+
+---
+
+## Common mistakes to avoid
+- Treating before identifying the **root cause**.
+- Wrong material selection for the soil/water conditions.
+- No verification plan after execution.
+
+---
+
+## Next step
+If you need a quick assessment and clear next actions in Saudi Arabia:
+- Start here: [Request service](/request-service)
+- Or read the service page: [Service details](/services/geophysical-surveys)
+`,
+    faqAr: [{"question": "هل حقن التربة مناسب لكل حالات الهبوط؟", "answer": "ليس دائمًا. يعتمد القرار على سبب الهبوط وعمق/نطاق المشكلة. أحيانًا تكون تقوية الأساسات أو معالجة التسربات أولًا هي الأهم."}, {"question": "كم يستغرق التشخيص قبل بدء التنفيذ؟", "answer": "قد يبدأ بتقييم ميداني سريع، ثم تُحدد أدوات الفحص المناسبة (مثل GPR/ERT أو جسات) حسب المخاطر. بعض الحالات تُحسم خلال أيام، وأخرى تحتاج برنامج فحص أوسع."}, {"question": "ما أهم شيء بعد التنفيذ؟", "answer": "خطة تحقق (Validation) واضحة: توثيق، قراءات متابعة، ومخرجات تقرير نهائي يوضح ما تم وأثره."}, {"question": "هل يمكن تنفيذ العمل دون إيقاف المبنى؟", "answer": "غالبًا نعم حسب موقع العمل وحساسية المنشأة، ويتم ذلك بخطة مراحل وإجراءات سلامة."}],
+    faqEn: [{"question": "Is soil grouting suitable for every settlement case?", "answer": "Not always. It depends on the root cause and the depth/extent of the problem. In some cases, underpinning or leak remediation is the priority."}, {"question": "How long does diagnosis take before execution?", "answer": "It may start with a quick site assessment, then the appropriate methods (GPR/ERT/boreholes) are selected based on risk. Some cases take days; others require a broader program."}, {"question": "What matters most after execution?", "answer": "A clear validation plan: logs, follow-up readings, and a final report documenting what was done and its impact."}, {"question": "Can the work be done without shutting down the building?", "answer": "Often yes, depending on access and sensitivity. Execution is staged with safety controls."}],
+  },
+
+
+  {
+    id: 73,
+    title: "معايير التحقق (Validation Criteria) لحقن التربة: ماذا نقيس؟",
+    titleEn: "Grouting Validation Criteria: What Should Be Measured?",
+    category: "حقن التربة",
+    categoryEn: "Soil Grouting",
+    categoriesAr: ["حقن التربة", "الهندسة الجيوتقنية", "تقوية الأساسات"],
+    categoriesEn: ["Soil Grouting", "Geotechnical Engineering", "Foundation Engineering"],
+    date: '2026-01-23',
+    readTime: '10 دقائق',
+    readTimeEn: '10 min',
+    author: 'فريق ETLAQ الهندسي',
+    slug: 'validation-criteria-grouting',
+    content: `# معايير التحقق (Validation Criteria) لحقن التربة: ماذا نقيس؟
+
+هذا الدليل يشرح **المشكلة ولماذا تحدث**، ومتى تحتاج تدخلًا هندسيًا، وما هي **الخطوة التالية** بشكل عملي.  
+إذا كنت تريد تنفيذًا مباشرًا، راجع صفحة الخدمة: [الخدمة المرتبطة ](/services/grouting)  
+وللاستهداف المحلي يمكنك مراجعة صفحات المدن، مثل: [حقن تربة في الرياض](/locations/riyadh/soil-grouting) أو [كشف فراغات في جدة](/locations/jeddah/void-detection) أو [تقوية أساسات في الدمام](/locations/dammam/foundation-strengthening).
+
+---
+
+## متى أحتاج تدخلًا؟
+- ظهور **تشققات متزايدة** أو اختلاف مناسيب الأرضيات.
+- هبوط موضعي حول المبنى أو في المواقف/الساحات.
+- مؤشرات على فراغات تحت البلاطات أو قرب الخدمات الأرضية.
+
+> **قاعدة عملية:** إذا كانت الأعراض **تتطور مع الزمن** فغالبًا المشكلة جيوتكنيكية وتحتاج تشخيصًا ثم معالجة.
+
+---
+
+## لماذا تحدث المشكلة؟
+أشيع الأسباب:
+1) تغيّر رطوبة التربة/مياه جوفية.  
+2) تسربات من شبكات المياه أو الصرف.  
+3) فراغات أو تكهفات أو تجاويف كارستية.  
+4) ضعف تربة ردم أو سوء دمك.  
+
+---
+
+## كيف يتم التشخيص بشكل مهني؟
+- **زيارة ميدانية** + توصيف الأعراض.
+- اختيار وسيلة فحص مناسبة:
+  - **GPR** لمسح سريع تحت البلاطات.
+  - **ERT** لتحديد مناطق ضعف/فراغات أعمق.
+  - **حفر اختباري/جسات** عند الحاجة.
+- ربط النتائج بمخاطر المنشأة ومتطلبات السلامة.
+
+---
+
+## خيارات المعالجة (حسب الحالة)
+- **حقن تربة/حقن أسمنتي:** لملء الفراغات ورفع الصلابة في مناطق محددة.  
+- **تقوية أساسات/Underpinning:** عندما تكون المشكلة مرتبطة بالأساس أو الحمل.  
+- **معالجة فراغات/تكهفات:** عند وجود cavities أو مسارات تسرب.
+
+---
+
+## منهجية تنفيذ نموذجية
+1) إعداد خطة عمل + مناطق الاستهداف.  
+2) تنفيذ المعالجة على مراحل (بحسب المخاطر).  
+3) توثيق الاستهلاك/الضغوط/الملاحظات.  
+4) اختبارات تحقق + تقرير نهائي.
+
+---
+
+## معايير القبول والتحقق (Validation)
+أمثلة على مخرجات التحقق:
+- ثبات القراءات (Crack monitoring) وتوقف تطور التشققات.
+- تحسن قياسات الاستجابة أو قيم الاختبار (حسب المشروع).
+- توافق نتائج ما بعد التنفيذ مع الهدف المحدد في الخطة.
+
+---
+
+## أخطاء شائعة يجب تجنبها
+- بدء المعالجة قبل تحديد **سبب** المشكلة.
+- استخدام مادة حقن غير مناسبة لبيئة التربة أو للمياه.
+- غياب خطة تحقق واضحة بعد التنفيذ.
+
+---
+
+## أسئلة شائعة
+> تم تلخيص أهم الأسئلة في أسفل الصفحة ضمن بيانات منظمة (FAQ schema) لتسهيل ظهورها في نتائج البحث.
+
+---
+
+## الخطوة التالية
+إذا لديك موقع داخل المملكة وتريد **تقييم مختصر وخطة خطوة تالية واضحة**:
+- ابدأ من صفحة الطلب: [اطلب خدمة](/request-service)
+- أو راجع الخدمة: [تفاصيل الخدمة](/services/grouting)
+`,
+    contentEn: `# Grouting Validation Criteria: What Should Be Measured?
+
+This pillar guide explains **why the issue happens**, when you should act, and what the **next step** should be.  
+For direct execution, see the service page: [Related service](/services/grouting).  
+For local intent pages, see: [Soil Grouting in Riyadh](/locations/riyadh/soil-grouting) or [Void Detection in Jeddah](/locations/jeddah/void-detection) or [Foundation Strengthening in Dammam](/locations/dammam/foundation-strengthening).
+
+---
+
+## When should I take action?
+- **Growing cracks** or noticeable floor level differences.
+- Localized settlement around the building or in parking/surrounding areas.
+- Suspected voids beneath slabs or near underground utilities.
+
+---
+
+## Why does it happen?
+Common causes:
+1) Moisture/water table changes.  
+2) Utility leaks.  
+3) Voids, sinkholes, or karst cavities.  
+4) Poor compaction or weak fill layers.  
+
+---
+
+## How do we diagnose professionally?
+- Site visit + symptom mapping.
+- Choose the right method:
+  - **GPR** for fast slab-level screening.
+  - **ERT** for deeper weakness/void mapping.
+  - Boreholes/test pits where needed.
+- Tie results to structural risk and safety requirements.
+
+---
+
+## Treatment options (case-dependent)
+- **Soil/cement grouting:** fill voids and locally improve stiffness.  
+- **Underpinning / foundation strengthening:** when the foundation is involved.  
+- **Void/sinkhole remediation:** when cavities or subsurface pathways exist.
+
+---
+
+## Typical execution workflow
+1) Define targets + method statement.  
+2) Stage execution based on risk.  
+3) Log injection/pressure/observations.  
+4) Verification tests + final report.
+
+---
+
+## Validation criteria (examples)
+- Crack monitoring stabilizes (no continued widening).
+- Improved test response (as specified).
+- Post-work results match the defined objectives.
+
+---
+
+## Common mistakes to avoid
+- Treating before identifying the **root cause**.
+- Wrong material selection for the soil/water conditions.
+- No verification plan after execution.
+
+---
+
+## Next step
+If you need a quick assessment and clear next actions in Saudi Arabia:
+- Start here: [Request service](/request-service)
+- Or read the service page: [Service details](/services/grouting)
+`,
+    faqAr: [{"question": "ما المقصود بمعايير التحقق (Validation Criteria) للحقن؟", "answer": "هي مؤشرات/اختبارات متفق عليها مسبقًا لتأكيد تحقيق الهدف: مثل ثبات التشققات، تحسن قراءات/اختبارات، أو توافق النتائج مع مخطط المعالجة."}, {"question": "هل حقن التربة مناسب لكل حالات الهبوط؟", "answer": "ليس دائمًا. يعتمد القرار على سبب الهبوط وعمق/نطاق المشكلة. أحيانًا تكون تقوية الأساسات أو معالجة التسربات أولًا هي الأهم."}, {"question": "كم يستغرق التشخيص قبل بدء التنفيذ؟", "answer": "قد يبدأ بتقييم ميداني سريع، ثم تُحدد أدوات الفحص المناسبة (مثل GPR/ERT أو جسات) حسب المخاطر. بعض الحالات تُحسم خلال أيام، وأخرى تحتاج برنامج فحص أوسع."}, {"question": "ما أهم شيء بعد التنفيذ؟", "answer": "خطة تحقق (Validation) واضحة: توثيق، قراءات متابعة، ومخرجات تقرير نهائي يوضح ما تم وأثره."}, {"question": "هل يمكن تنفيذ العمل دون إيقاف المبنى؟", "answer": "غالبًا نعم حسب موقع العمل وحساسية المنشأة، ويتم ذلك بخطة مراحل وإجراءات سلامة."}],
+    faqEn: [{"question": "What do grouting validation criteria mean?", "answer": "Pre-agreed indicators/tests that confirm objectives were met: stabilized cracks, improved test results, or post-work outcomes matching the method statement."}, {"question": "Is soil grouting suitable for every settlement case?", "answer": "Not always. It depends on the root cause and the depth/extent of the problem. In some cases, underpinning or leak remediation is the priority."}, {"question": "How long does diagnosis take before execution?", "answer": "It may start with a quick site assessment, then the appropriate methods (GPR/ERT/boreholes) are selected based on risk. Some cases take days; others require a broader program."}, {"question": "What matters most after execution?", "answer": "A clear validation plan: logs, follow-up readings, and a final report documenting what was done and its impact."}, {"question": "Can the work be done without shutting down the building?", "answer": "Often yes, depending on access and sensitivity. Execution is staged with safety controls."}],
+  },
+
+
+  {
+    id: 74,
+    title: "GPR vs ERT: أيهما أفضل لكشف الفراغات؟",
+    titleEn: "GPR vs ERT: Which Is Better for Void Detection?",
+    category: "الدراسات الجيوفيزيائية",
+    categoryEn: "Geophysical Surveys",
+    categoriesAr: ["الدراسات الجيوفيزيائية", "الهندسة الجيوتقنية", "تقوية الأساسات"],
+    categoriesEn: ["Geophysical Surveys", "Geotechnical Engineering", "Foundation Engineering"],
+    date: '2026-01-23',
+    readTime: '10 دقائق',
+    readTimeEn: '10 min',
+    author: 'فريق ETLAQ الهندسي',
+    slug: 'gpr-vs-ert',
+    content: `# GPR vs ERT: أيهما أفضل لكشف الفراغات؟
+
+هذا الدليل يشرح **المشكلة ولماذا تحدث**، ومتى تحتاج تدخلًا هندسيًا، وما هي **الخطوة التالية** بشكل عملي.  
+إذا كنت تريد تنفيذًا مباشرًا، راجع صفحة الخدمة: [الخدمة المرتبطة ](/services/geophysical-surveys)  
+وللاستهداف المحلي يمكنك مراجعة صفحات المدن، مثل: [حقن تربة في الرياض](/locations/riyadh/soil-grouting) أو [كشف فراغات في جدة](/locations/jeddah/void-detection) أو [تقوية أساسات في الدمام](/locations/dammam/foundation-strengthening).
+
+---
+
+## متى أحتاج تدخلًا؟
+- ظهور **تشققات متزايدة** أو اختلاف مناسيب الأرضيات.
+- هبوط موضعي حول المبنى أو في المواقف/الساحات.
+- مؤشرات على فراغات تحت البلاطات أو قرب الخدمات الأرضية.
+
+> **قاعدة عملية:** إذا كانت الأعراض **تتطور مع الزمن** فغالبًا المشكلة جيوتكنيكية وتحتاج تشخيصًا ثم معالجة.
+
+---
+
+## لماذا تحدث المشكلة؟
+أشيع الأسباب:
+1) تغيّر رطوبة التربة/مياه جوفية.  
+2) تسربات من شبكات المياه أو الصرف.  
+3) فراغات أو تكهفات أو تجاويف كارستية.  
+4) ضعف تربة ردم أو سوء دمك.  
+
+---
+
+## كيف يتم التشخيص بشكل مهني؟
+- **زيارة ميدانية** + توصيف الأعراض.
+- اختيار وسيلة فحص مناسبة:
+  - **GPR** لمسح سريع تحت البلاطات.
+  - **ERT** لتحديد مناطق ضعف/فراغات أعمق.
+  - **حفر اختباري/جسات** عند الحاجة.
+- ربط النتائج بمخاطر المنشأة ومتطلبات السلامة.
+
+---
+
+## خيارات المعالجة (حسب الحالة)
+- **حقن تربة/حقن أسمنتي:** لملء الفراغات ورفع الصلابة في مناطق محددة.  
+- **تقوية أساسات/Underpinning:** عندما تكون المشكلة مرتبطة بالأساس أو الحمل.  
+- **معالجة فراغات/تكهفات:** عند وجود cavities أو مسارات تسرب.
+
+---
+
+## منهجية تنفيذ نموذجية
+1) إعداد خطة عمل + مناطق الاستهداف.  
+2) تنفيذ المعالجة على مراحل (بحسب المخاطر).  
+3) توثيق الاستهلاك/الضغوط/الملاحظات.  
+4) اختبارات تحقق + تقرير نهائي.
+
+---
+
+## معايير القبول والتحقق (Validation)
+أمثلة على مخرجات التحقق:
+- ثبات القراءات (Crack monitoring) وتوقف تطور التشققات.
+- تحسن قياسات الاستجابة أو قيم الاختبار (حسب المشروع).
+- توافق نتائج ما بعد التنفيذ مع الهدف المحدد في الخطة.
+
+---
+
+## أخطاء شائعة يجب تجنبها
+- بدء المعالجة قبل تحديد **سبب** المشكلة.
+- استخدام مادة حقن غير مناسبة لبيئة التربة أو للمياه.
+- غياب خطة تحقق واضحة بعد التنفيذ.
+
+---
+
+## أسئلة شائعة
+> تم تلخيص أهم الأسئلة في أسفل الصفحة ضمن بيانات منظمة (FAQ schema) لتسهيل ظهورها في نتائج البحث.
+
+---
+
+## الخطوة التالية
+إذا لديك موقع داخل المملكة وتريد **تقييم مختصر وخطة خطوة تالية واضحة**:
+- ابدأ من صفحة الطلب: [اطلب خدمة](/request-service)
+- أو راجع الخدمة: [تفاصيل الخدمة](/services/geophysical-surveys)
+`,
+    contentEn: `# GPR vs ERT: Which Is Better for Void Detection?
+
+This pillar guide explains **why the issue happens**, when you should act, and what the **next step** should be.  
+For direct execution, see the service page: [Related service](/services/geophysical-surveys).  
+For local intent pages, see: [Soil Grouting in Riyadh](/locations/riyadh/soil-grouting) or [Void Detection in Jeddah](/locations/jeddah/void-detection) or [Foundation Strengthening in Dammam](/locations/dammam/foundation-strengthening).
+
+---
+
+## When should I take action?
+- **Growing cracks** or noticeable floor level differences.
+- Localized settlement around the building or in parking/surrounding areas.
+- Suspected voids beneath slabs or near underground utilities.
+
+---
+
+## Why does it happen?
+Common causes:
+1) Moisture/water table changes.  
+2) Utility leaks.  
+3) Voids, sinkholes, or karst cavities.  
+4) Poor compaction or weak fill layers.  
+
+---
+
+## How do we diagnose professionally?
+- Site visit + symptom mapping.
+- Choose the right method:
+  - **GPR** for fast slab-level screening.
+  - **ERT** for deeper weakness/void mapping.
+  - Boreholes/test pits where needed.
+- Tie results to structural risk and safety requirements.
+
+---
+
+## Treatment options (case-dependent)
+- **Soil/cement grouting:** fill voids and locally improve stiffness.  
+- **Underpinning / foundation strengthening:** when the foundation is involved.  
+- **Void/sinkhole remediation:** when cavities or subsurface pathways exist.
+
+---
+
+## Typical execution workflow
+1) Define targets + method statement.  
+2) Stage execution based on risk.  
+3) Log injection/pressure/observations.  
+4) Verification tests + final report.
+
+---
+
+## Validation criteria (examples)
+- Crack monitoring stabilizes (no continued widening).
+- Improved test response (as specified).
+- Post-work results match the defined objectives.
+
+---
+
+## Common mistakes to avoid
+- Treating before identifying the **root cause**.
+- Wrong material selection for the soil/water conditions.
+- No verification plan after execution.
+
+---
+
+## Next step
+If you need a quick assessment and clear next actions in Saudi Arabia:
+- Start here: [Request service](/request-service)
+- Or read the service page: [Service details](/services/geophysical-surveys)
+`,
+    faqAr: [{"question": "ما الفرق بين GPR و ERT؟", "answer": "GPR مناسب للمسح السريع قريب السطح وتحت البلاطات، بينما ERT مناسب لتحديد مناطق ضعف/فراغات أعمق عبر مقاومية التربة."}, {"question": "هل حقن التربة مناسب لكل حالات الهبوط؟", "answer": "ليس دائمًا. يعتمد القرار على سبب الهبوط وعمق/نطاق المشكلة. أحيانًا تكون تقوية الأساسات أو معالجة التسربات أولًا هي الأهم."}, {"question": "كم يستغرق التشخيص قبل بدء التنفيذ؟", "answer": "قد يبدأ بتقييم ميداني سريع، ثم تُحدد أدوات الفحص المناسبة (مثل GPR/ERT أو جسات) حسب المخاطر. بعض الحالات تُحسم خلال أيام، وأخرى تحتاج برنامج فحص أوسع."}, {"question": "ما أهم شيء بعد التنفيذ؟", "answer": "خطة تحقق (Validation) واضحة: توثيق، قراءات متابعة، ومخرجات تقرير نهائي يوضح ما تم وأثره."}, {"question": "هل يمكن تنفيذ العمل دون إيقاف المبنى؟", "answer": "غالبًا نعم حسب موقع العمل وحساسية المنشأة، ويتم ذلك بخطة مراحل وإجراءات سلامة."}],
+    faqEn: [{"question": "What is the difference between GPR and ERT?", "answer": "GPR is great for fast near-surface/slab screening, while ERT is better for mapping deeper weakness/voids using soil resistivity."}, {"question": "Is soil grouting suitable for every settlement case?", "answer": "Not always. It depends on the root cause and the depth/extent of the problem. In some cases, underpinning or leak remediation is the priority."}, {"question": "How long does diagnosis take before execution?", "answer": "It may start with a quick site assessment, then the appropriate methods (GPR/ERT/boreholes) are selected based on risk. Some cases take days; others require a broader program."}, {"question": "What matters most after execution?", "answer": "A clear validation plan: logs, follow-up readings, and a final report documenting what was done and its impact."}, {"question": "Can the work be done without shutting down the building?", "answer": "Often yes, depending on access and sensitivity. Execution is staged with safety controls."}],
+  },
+
+
+  {
+    id: 75,
+    title: "تشققات المباني والهبوط: كيف نفرّق بين السبب الإنشائي والجيوتكنيكي؟",
+    titleEn: "Cracks & Settlement: Structural vs Geotechnical Root Causes",
+    category: "معالجة التشققات",
+    categoryEn: "Crack & Settlement",
+    categoriesAr: ["معالجة التشققات", "الهندسة الجيوتقنية", "تقوية الأساسات"],
+    categoriesEn: ["Crack & Settlement", "Geotechnical Engineering", "Foundation Engineering"],
+    date: '2026-01-23',
+    readTime: '10 دقائق',
+    readTimeEn: '10 min',
+    author: 'فريق ETLAQ الهندسي',
+    slug: 'cracks-settlement-guide',
+    content: `# تشققات المباني والهبوط: كيف نفرّق بين السبب الإنشائي والجيوتكنيكي؟
+
+هذا الدليل يشرح **المشكلة ولماذا تحدث**، ومتى تحتاج تدخلًا هندسيًا، وما هي **الخطوة التالية** بشكل عملي.  
+إذا كنت تريد تنفيذًا مباشرًا، راجع صفحة الخدمة: [الخدمة المرتبطة ](/services/foundation-strengthening)  
+وللاستهداف المحلي يمكنك مراجعة صفحات المدن، مثل: [حقن تربة في الرياض](/locations/riyadh/soil-grouting) أو [كشف فراغات في جدة](/locations/jeddah/void-detection) أو [تقوية أساسات في الدمام](/locations/dammam/foundation-strengthening).
+
+---
+
+## متى أحتاج تدخلًا؟
+- ظهور **تشققات متزايدة** أو اختلاف مناسيب الأرضيات.
+- هبوط موضعي حول المبنى أو في المواقف/الساحات.
+- مؤشرات على فراغات تحت البلاطات أو قرب الخدمات الأرضية.
+
+> **قاعدة عملية:** إذا كانت الأعراض **تتطور مع الزمن** فغالبًا المشكلة جيوتكنيكية وتحتاج تشخيصًا ثم معالجة.
+
+---
+
+## لماذا تحدث المشكلة؟
+أشيع الأسباب:
+1) تغيّر رطوبة التربة/مياه جوفية.  
+2) تسربات من شبكات المياه أو الصرف.  
+3) فراغات أو تكهفات أو تجاويف كارستية.  
+4) ضعف تربة ردم أو سوء دمك.  
+
+---
+
+## كيف يتم التشخيص بشكل مهني؟
+- **زيارة ميدانية** + توصيف الأعراض.
+- اختيار وسيلة فحص مناسبة:
+  - **GPR** لمسح سريع تحت البلاطات.
+  - **ERT** لتحديد مناطق ضعف/فراغات أعمق.
+  - **حفر اختباري/جسات** عند الحاجة.
+- ربط النتائج بمخاطر المنشأة ومتطلبات السلامة.
+
+---
+
+## خيارات المعالجة (حسب الحالة)
+- **حقن تربة/حقن أسمنتي:** لملء الفراغات ورفع الصلابة في مناطق محددة.  
+- **تقوية أساسات/Underpinning:** عندما تكون المشكلة مرتبطة بالأساس أو الحمل.  
+- **معالجة فراغات/تكهفات:** عند وجود cavities أو مسارات تسرب.
+
+---
+
+## منهجية تنفيذ نموذجية
+1) إعداد خطة عمل + مناطق الاستهداف.  
+2) تنفيذ المعالجة على مراحل (بحسب المخاطر).  
+3) توثيق الاستهلاك/الضغوط/الملاحظات.  
+4) اختبارات تحقق + تقرير نهائي.
+
+---
+
+## معايير القبول والتحقق (Validation)
+أمثلة على مخرجات التحقق:
+- ثبات القراءات (Crack monitoring) وتوقف تطور التشققات.
+- تحسن قياسات الاستجابة أو قيم الاختبار (حسب المشروع).
+- توافق نتائج ما بعد التنفيذ مع الهدف المحدد في الخطة.
+
+---
+
+## أخطاء شائعة يجب تجنبها
+- بدء المعالجة قبل تحديد **سبب** المشكلة.
+- استخدام مادة حقن غير مناسبة لبيئة التربة أو للمياه.
+- غياب خطة تحقق واضحة بعد التنفيذ.
+
+---
+
+## أسئلة شائعة
+> تم تلخيص أهم الأسئلة في أسفل الصفحة ضمن بيانات منظمة (FAQ schema) لتسهيل ظهورها في نتائج البحث.
+
+---
+
+## الخطوة التالية
+إذا لديك موقع داخل المملكة وتريد **تقييم مختصر وخطة خطوة تالية واضحة**:
+- ابدأ من صفحة الطلب: [اطلب خدمة](/request-service)
+- أو راجع الخدمة: [تفاصيل الخدمة](/services/foundation-strengthening)
+`,
+    contentEn: `# Cracks & Settlement: Structural vs Geotechnical Root Causes
+
+This pillar guide explains **why the issue happens**, when you should act, and what the **next step** should be.  
+For direct execution, see the service page: [Related service](/services/foundation-strengthening).  
+For local intent pages, see: [Soil Grouting in Riyadh](/locations/riyadh/soil-grouting) or [Void Detection in Jeddah](/locations/jeddah/void-detection) or [Foundation Strengthening in Dammam](/locations/dammam/foundation-strengthening).
+
+---
+
+## When should I take action?
+- **Growing cracks** or noticeable floor level differences.
+- Localized settlement around the building or in parking/surrounding areas.
+- Suspected voids beneath slabs or near underground utilities.
+
+---
+
+## Why does it happen?
+Common causes:
+1) Moisture/water table changes.  
+2) Utility leaks.  
+3) Voids, sinkholes, or karst cavities.  
+4) Poor compaction or weak fill layers.  
+
+---
+
+## How do we diagnose professionally?
+- Site visit + symptom mapping.
+- Choose the right method:
+  - **GPR** for fast slab-level screening.
+  - **ERT** for deeper weakness/void mapping.
+  - Boreholes/test pits where needed.
+- Tie results to structural risk and safety requirements.
+
+---
+
+## Treatment options (case-dependent)
+- **Soil/cement grouting:** fill voids and locally improve stiffness.  
+- **Underpinning / foundation strengthening:** when the foundation is involved.  
+- **Void/sinkhole remediation:** when cavities or subsurface pathways exist.
+
+---
+
+## Typical execution workflow
+1) Define targets + method statement.  
+2) Stage execution based on risk.  
+3) Log injection/pressure/observations.  
+4) Verification tests + final report.
+
+---
+
+## Validation criteria (examples)
+- Crack monitoring stabilizes (no continued widening).
+- Improved test response (as specified).
+- Post-work results match the defined objectives.
+
+---
+
+## Common mistakes to avoid
+- Treating before identifying the **root cause**.
+- Wrong material selection for the soil/water conditions.
+- No verification plan after execution.
+
+---
+
+## Next step
+If you need a quick assessment and clear next actions in Saudi Arabia:
+- Start here: [Request service](/request-service)
+- Or read the service page: [Service details](/services/foundation-strengthening)
+`,
+    faqAr: [{"question": "هل حقن التربة مناسب لكل حالات الهبوط؟", "answer": "ليس دائمًا. يعتمد القرار على سبب الهبوط وعمق/نطاق المشكلة. أحيانًا تكون تقوية الأساسات أو معالجة التسربات أولًا هي الأهم."}, {"question": "كم يستغرق التشخيص قبل بدء التنفيذ؟", "answer": "قد يبدأ بتقييم ميداني سريع، ثم تُحدد أدوات الفحص المناسبة (مثل GPR/ERT أو جسات) حسب المخاطر. بعض الحالات تُحسم خلال أيام، وأخرى تحتاج برنامج فحص أوسع."}, {"question": "ما أهم شيء بعد التنفيذ؟", "answer": "خطة تحقق (Validation) واضحة: توثيق، قراءات متابعة، ومخرجات تقرير نهائي يوضح ما تم وأثره."}, {"question": "هل يمكن تنفيذ العمل دون إيقاف المبنى؟", "answer": "غالبًا نعم حسب موقع العمل وحساسية المنشأة، ويتم ذلك بخطة مراحل وإجراءات سلامة."}],
+    faqEn: [{"question": "Is soil grouting suitable for every settlement case?", "answer": "Not always. It depends on the root cause and the depth/extent of the problem. In some cases, underpinning or leak remediation is the priority."}, {"question": "How long does diagnosis take before execution?", "answer": "It may start with a quick site assessment, then the appropriate methods (GPR/ERT/boreholes) are selected based on risk. Some cases take days; others require a broader program."}, {"question": "What matters most after execution?", "answer": "A clear validation plan: logs, follow-up readings, and a final report documenting what was done and its impact."}, {"question": "Can the work be done without shutting down the building?", "answer": "Often yes, depending on access and sensitivity. Execution is staged with safety controls."}],
+  },
+
+
+  {
+    id: 76,
+    title: "تقرير فحص التربة: كيف تقرأه وما الذي يهمك كمالك أو مطور؟",
+    titleEn: "Soil Report: How to Read It (What Matters for Owners/Developers)",
+    category: "تقارير التربة",
+    categoryEn: "Soil Reports",
+    categoriesAr: ["تقارير التربة", "الهندسة الجيوتقنية", "تقوية الأساسات"],
+    categoriesEn: ["Soil Reports", "Geotechnical Engineering", "Foundation Engineering"],
+    date: '2026-01-23',
+    readTime: '10 دقائق',
+    readTimeEn: '10 min',
+    author: 'فريق ETLAQ الهندسي',
+    slug: 'soil-investigation-report-guide',
+    content: `# تقرير فحص التربة: كيف تقرأه وما الذي يهمك كمالك أو مطور؟
+
+هذا الدليل يشرح **المشكلة ولماذا تحدث**، ومتى تحتاج تدخلًا هندسيًا، وما هي **الخطوة التالية** بشكل عملي.  
+إذا كنت تريد تنفيذًا مباشرًا، راجع صفحة الخدمة: [الخدمة المرتبطة ](/services)  
+وللاستهداف المحلي يمكنك مراجعة صفحات المدن، مثل: [حقن تربة في الرياض](/locations/riyadh/soil-grouting) أو [كشف فراغات في جدة](/locations/jeddah/void-detection) أو [تقوية أساسات في الدمام](/locations/dammam/foundation-strengthening).
+
+---
+
+## متى أحتاج تدخلًا؟
+- ظهور **تشققات متزايدة** أو اختلاف مناسيب الأرضيات.
+- هبوط موضعي حول المبنى أو في المواقف/الساحات.
+- مؤشرات على فراغات تحت البلاطات أو قرب الخدمات الأرضية.
+
+> **قاعدة عملية:** إذا كانت الأعراض **تتطور مع الزمن** فغالبًا المشكلة جيوتكنيكية وتحتاج تشخيصًا ثم معالجة.
+
+---
+
+## لماذا تحدث المشكلة؟
+أشيع الأسباب:
+1) تغيّر رطوبة التربة/مياه جوفية.  
+2) تسربات من شبكات المياه أو الصرف.  
+3) فراغات أو تكهفات أو تجاويف كارستية.  
+4) ضعف تربة ردم أو سوء دمك.  
+
+---
+
+## كيف يتم التشخيص بشكل مهني؟
+- **زيارة ميدانية** + توصيف الأعراض.
+- اختيار وسيلة فحص مناسبة:
+  - **GPR** لمسح سريع تحت البلاطات.
+  - **ERT** لتحديد مناطق ضعف/فراغات أعمق.
+  - **حفر اختباري/جسات** عند الحاجة.
+- ربط النتائج بمخاطر المنشأة ومتطلبات السلامة.
+
+---
+
+## خيارات المعالجة (حسب الحالة)
+- **حقن تربة/حقن أسمنتي:** لملء الفراغات ورفع الصلابة في مناطق محددة.  
+- **تقوية أساسات/Underpinning:** عندما تكون المشكلة مرتبطة بالأساس أو الحمل.  
+- **معالجة فراغات/تكهفات:** عند وجود cavities أو مسارات تسرب.
+
+---
+
+## منهجية تنفيذ نموذجية
+1) إعداد خطة عمل + مناطق الاستهداف.  
+2) تنفيذ المعالجة على مراحل (بحسب المخاطر).  
+3) توثيق الاستهلاك/الضغوط/الملاحظات.  
+4) اختبارات تحقق + تقرير نهائي.
+
+---
+
+## معايير القبول والتحقق (Validation)
+أمثلة على مخرجات التحقق:
+- ثبات القراءات (Crack monitoring) وتوقف تطور التشققات.
+- تحسن قياسات الاستجابة أو قيم الاختبار (حسب المشروع).
+- توافق نتائج ما بعد التنفيذ مع الهدف المحدد في الخطة.
+
+---
+
+## أخطاء شائعة يجب تجنبها
+- بدء المعالجة قبل تحديد **سبب** المشكلة.
+- استخدام مادة حقن غير مناسبة لبيئة التربة أو للمياه.
+- غياب خطة تحقق واضحة بعد التنفيذ.
+
+---
+
+## أسئلة شائعة
+> تم تلخيص أهم الأسئلة في أسفل الصفحة ضمن بيانات منظمة (FAQ schema) لتسهيل ظهورها في نتائج البحث.
+
+---
+
+## الخطوة التالية
+إذا لديك موقع داخل المملكة وتريد **تقييم مختصر وخطة خطوة تالية واضحة**:
+- ابدأ من صفحة الطلب: [اطلب خدمة](/request-service)
+- أو راجع الخدمة: [تفاصيل الخدمة](/services)
+`,
+    contentEn: `# Soil Report: How to Read It (What Matters for Owners/Developers)
+
+This pillar guide explains **why the issue happens**, when you should act, and what the **next step** should be.  
+For direct execution, see the service page: [Related service](/services).  
+For local intent pages, see: [Soil Grouting in Riyadh](/locations/riyadh/soil-grouting) or [Void Detection in Jeddah](/locations/jeddah/void-detection) or [Foundation Strengthening in Dammam](/locations/dammam/foundation-strengthening).
+
+---
+
+## When should I take action?
+- **Growing cracks** or noticeable floor level differences.
+- Localized settlement around the building or in parking/surrounding areas.
+- Suspected voids beneath slabs or near underground utilities.
+
+---
+
+## Why does it happen?
+Common causes:
+1) Moisture/water table changes.  
+2) Utility leaks.  
+3) Voids, sinkholes, or karst cavities.  
+4) Poor compaction or weak fill layers.  
+
+---
+
+## How do we diagnose professionally?
+- Site visit + symptom mapping.
+- Choose the right method:
+  - **GPR** for fast slab-level screening.
+  - **ERT** for deeper weakness/void mapping.
+  - Boreholes/test pits where needed.
+- Tie results to structural risk and safety requirements.
+
+---
+
+## Treatment options (case-dependent)
+- **Soil/cement grouting:** fill voids and locally improve stiffness.  
+- **Underpinning / foundation strengthening:** when the foundation is involved.  
+- **Void/sinkhole remediation:** when cavities or subsurface pathways exist.
+
+---
+
+## Typical execution workflow
+1) Define targets + method statement.  
+2) Stage execution based on risk.  
+3) Log injection/pressure/observations.  
+4) Verification tests + final report.
+
+---
+
+## Validation criteria (examples)
+- Crack monitoring stabilizes (no continued widening).
+- Improved test response (as specified).
+- Post-work results match the defined objectives.
+
+---
+
+## Common mistakes to avoid
+- Treating before identifying the **root cause**.
+- Wrong material selection for the soil/water conditions.
+- No verification plan after execution.
+
+---
+
+## Next step
+If you need a quick assessment and clear next actions in Saudi Arabia:
+- Start here: [Request service](/request-service)
+- Or read the service page: [Service details](/services)
+`,
+    faqAr: [{"question": "هل حقن التربة مناسب لكل حالات الهبوط؟", "answer": "ليس دائمًا. يعتمد القرار على سبب الهبوط وعمق/نطاق المشكلة. أحيانًا تكون تقوية الأساسات أو معالجة التسربات أولًا هي الأهم."}, {"question": "كم يستغرق التشخيص قبل بدء التنفيذ؟", "answer": "قد يبدأ بتقييم ميداني سريع، ثم تُحدد أدوات الفحص المناسبة (مثل GPR/ERT أو جسات) حسب المخاطر. بعض الحالات تُحسم خلال أيام، وأخرى تحتاج برنامج فحص أوسع."}, {"question": "ما أهم شيء بعد التنفيذ؟", "answer": "خطة تحقق (Validation) واضحة: توثيق، قراءات متابعة، ومخرجات تقرير نهائي يوضح ما تم وأثره."}, {"question": "هل يمكن تنفيذ العمل دون إيقاف المبنى؟", "answer": "غالبًا نعم حسب موقع العمل وحساسية المنشأة، ويتم ذلك بخطة مراحل وإجراءات سلامة."}],
+    faqEn: [{"question": "Is soil grouting suitable for every settlement case?", "answer": "Not always. It depends on the root cause and the depth/extent of the problem. In some cases, underpinning or leak remediation is the priority."}, {"question": "How long does diagnosis take before execution?", "answer": "It may start with a quick site assessment, then the appropriate methods (GPR/ERT/boreholes) are selected based on risk. Some cases take days; others require a broader program."}, {"question": "What matters most after execution?", "answer": "A clear validation plan: logs, follow-up readings, and a final report documenting what was done and its impact."}, {"question": "Can the work be done without shutting down the building?", "answer": "Often yes, depending on access and sensitivity. Execution is staged with safety controls."}],
+  },
+
+
+  {
+    id: 77,
+    title: "قبل البدء بالبناء: قائمة فحص مخاطر التربة والأساسات",
+    titleEn: "Before Construction: Soil & Foundation Risk Checklist",
+    category: "استشارات هندسية",
+    categoryEn: "Engineering Consulting",
+    categoriesAr: ["استشارات هندسية", "الهندسة الجيوتقنية", "تقوية الأساسات"],
+    categoriesEn: ["Engineering Consulting", "Geotechnical Engineering", "Foundation Engineering"],
+    date: '2026-01-23',
+    readTime: '10 دقائق',
+    readTimeEn: '10 min',
+    author: 'فريق ETLAQ الهندسي',
+    slug: 'pre-construction-risk-guide',
+    content: `# قبل البدء بالبناء: قائمة فحص مخاطر التربة والأساسات
+
+هذا الدليل يشرح **المشكلة ولماذا تحدث**، ومتى تحتاج تدخلًا هندسيًا، وما هي **الخطوة التالية** بشكل عملي.  
+إذا كنت تريد تنفيذًا مباشرًا، راجع صفحة الخدمة: [الخدمة المرتبطة ](/services)  
+وللاستهداف المحلي يمكنك مراجعة صفحات المدن، مثل: [حقن تربة في الرياض](/locations/riyadh/soil-grouting) أو [كشف فراغات في جدة](/locations/jeddah/void-detection) أو [تقوية أساسات في الدمام](/locations/dammam/foundation-strengthening).
+
+---
+
+## متى أحتاج تدخلًا؟
+- ظهور **تشققات متزايدة** أو اختلاف مناسيب الأرضيات.
+- هبوط موضعي حول المبنى أو في المواقف/الساحات.
+- مؤشرات على فراغات تحت البلاطات أو قرب الخدمات الأرضية.
+
+> **قاعدة عملية:** إذا كانت الأعراض **تتطور مع الزمن** فغالبًا المشكلة جيوتكنيكية وتحتاج تشخيصًا ثم معالجة.
+
+---
+
+## لماذا تحدث المشكلة؟
+أشيع الأسباب:
+1) تغيّر رطوبة التربة/مياه جوفية.  
+2) تسربات من شبكات المياه أو الصرف.  
+3) فراغات أو تكهفات أو تجاويف كارستية.  
+4) ضعف تربة ردم أو سوء دمك.  
+
+---
+
+## كيف يتم التشخيص بشكل مهني؟
+- **زيارة ميدانية** + توصيف الأعراض.
+- اختيار وسيلة فحص مناسبة:
+  - **GPR** لمسح سريع تحت البلاطات.
+  - **ERT** لتحديد مناطق ضعف/فراغات أعمق.
+  - **حفر اختباري/جسات** عند الحاجة.
+- ربط النتائج بمخاطر المنشأة ومتطلبات السلامة.
+
+---
+
+## خيارات المعالجة (حسب الحالة)
+- **حقن تربة/حقن أسمنتي:** لملء الفراغات ورفع الصلابة في مناطق محددة.  
+- **تقوية أساسات/Underpinning:** عندما تكون المشكلة مرتبطة بالأساس أو الحمل.  
+- **معالجة فراغات/تكهفات:** عند وجود cavities أو مسارات تسرب.
+
+---
+
+## منهجية تنفيذ نموذجية
+1) إعداد خطة عمل + مناطق الاستهداف.  
+2) تنفيذ المعالجة على مراحل (بحسب المخاطر).  
+3) توثيق الاستهلاك/الضغوط/الملاحظات.  
+4) اختبارات تحقق + تقرير نهائي.
+
+---
+
+## معايير القبول والتحقق (Validation)
+أمثلة على مخرجات التحقق:
+- ثبات القراءات (Crack monitoring) وتوقف تطور التشققات.
+- تحسن قياسات الاستجابة أو قيم الاختبار (حسب المشروع).
+- توافق نتائج ما بعد التنفيذ مع الهدف المحدد في الخطة.
+
+---
+
+## أخطاء شائعة يجب تجنبها
+- بدء المعالجة قبل تحديد **سبب** المشكلة.
+- استخدام مادة حقن غير مناسبة لبيئة التربة أو للمياه.
+- غياب خطة تحقق واضحة بعد التنفيذ.
+
+---
+
+## أسئلة شائعة
+> تم تلخيص أهم الأسئلة في أسفل الصفحة ضمن بيانات منظمة (FAQ schema) لتسهيل ظهورها في نتائج البحث.
+
+---
+
+## الخطوة التالية
+إذا لديك موقع داخل المملكة وتريد **تقييم مختصر وخطة خطوة تالية واضحة**:
+- ابدأ من صفحة الطلب: [اطلب خدمة](/request-service)
+- أو راجع الخدمة: [تفاصيل الخدمة](/services)
+`,
+    contentEn: `# Before Construction: Soil & Foundation Risk Checklist
+
+This pillar guide explains **why the issue happens**, when you should act, and what the **next step** should be.  
+For direct execution, see the service page: [Related service](/services).  
+For local intent pages, see: [Soil Grouting in Riyadh](/locations/riyadh/soil-grouting) or [Void Detection in Jeddah](/locations/jeddah/void-detection) or [Foundation Strengthening in Dammam](/locations/dammam/foundation-strengthening).
+
+---
+
+## When should I take action?
+- **Growing cracks** or noticeable floor level differences.
+- Localized settlement around the building or in parking/surrounding areas.
+- Suspected voids beneath slabs or near underground utilities.
+
+---
+
+## Why does it happen?
+Common causes:
+1) Moisture/water table changes.  
+2) Utility leaks.  
+3) Voids, sinkholes, or karst cavities.  
+4) Poor compaction or weak fill layers.  
+
+---
+
+## How do we diagnose professionally?
+- Site visit + symptom mapping.
+- Choose the right method:
+  - **GPR** for fast slab-level screening.
+  - **ERT** for deeper weakness/void mapping.
+  - Boreholes/test pits where needed.
+- Tie results to structural risk and safety requirements.
+
+---
+
+## Treatment options (case-dependent)
+- **Soil/cement grouting:** fill voids and locally improve stiffness.  
+- **Underpinning / foundation strengthening:** when the foundation is involved.  
+- **Void/sinkhole remediation:** when cavities or subsurface pathways exist.
+
+---
+
+## Typical execution workflow
+1) Define targets + method statement.  
+2) Stage execution based on risk.  
+3) Log injection/pressure/observations.  
+4) Verification tests + final report.
+
+---
+
+## Validation criteria (examples)
+- Crack monitoring stabilizes (no continued widening).
+- Improved test response (as specified).
+- Post-work results match the defined objectives.
+
+---
+
+## Common mistakes to avoid
+- Treating before identifying the **root cause**.
+- Wrong material selection for the soil/water conditions.
+- No verification plan after execution.
+
+---
+
+## Next step
+If you need a quick assessment and clear next actions in Saudi Arabia:
+- Start here: [Request service](/request-service)
+- Or read the service page: [Service details](/services)
+`,
+    faqAr: [{"question": "هل حقن التربة مناسب لكل حالات الهبوط؟", "answer": "ليس دائمًا. يعتمد القرار على سبب الهبوط وعمق/نطاق المشكلة. أحيانًا تكون تقوية الأساسات أو معالجة التسربات أولًا هي الأهم."}, {"question": "كم يستغرق التشخيص قبل بدء التنفيذ؟", "answer": "قد يبدأ بتقييم ميداني سريع، ثم تُحدد أدوات الفحص المناسبة (مثل GPR/ERT أو جسات) حسب المخاطر. بعض الحالات تُحسم خلال أيام، وأخرى تحتاج برنامج فحص أوسع."}, {"question": "ما أهم شيء بعد التنفيذ؟", "answer": "خطة تحقق (Validation) واضحة: توثيق، قراءات متابعة، ومخرجات تقرير نهائي يوضح ما تم وأثره."}, {"question": "هل يمكن تنفيذ العمل دون إيقاف المبنى؟", "answer": "غالبًا نعم حسب موقع العمل وحساسية المنشأة، ويتم ذلك بخطة مراحل وإجراءات سلامة."}],
+    faqEn: [{"question": "Is soil grouting suitable for every settlement case?", "answer": "Not always. It depends on the root cause and the depth/extent of the problem. In some cases, underpinning or leak remediation is the priority."}, {"question": "How long does diagnosis take before execution?", "answer": "It may start with a quick site assessment, then the appropriate methods (GPR/ERT/boreholes) are selected based on risk. Some cases take days; others require a broader program."}, {"question": "What matters most after execution?", "answer": "A clear validation plan: logs, follow-up readings, and a final report documenting what was done and its impact."}, {"question": "Can the work be done without shutting down the building?", "answer": "Often yes, depending on access and sensitivity. Execution is staged with safety controls."}],
+  },
+
+
+  {
+    id: 78,
+    title: "مراقبة ما بعد المعالجة: متى نراقب التشققات وما الذي يعتبر نجاحًا؟",
+    titleEn: "Post-Remediation Monitoring: When to Monitor Cracks and What Counts as Success?",
+    category: "مراقبة التشققات",
+    categoryEn: "Crack Monitoring",
+    categoriesAr: ["مراقبة التشققات", "الهندسة الجيوتقنية", "تقوية الأساسات"],
+    categoriesEn: ["Crack Monitoring", "Geotechnical Engineering", "Foundation Engineering"],
+    date: '2026-01-23',
+    readTime: '10 دقائق',
+    readTimeEn: '10 min',
+    author: 'فريق ETLAQ الهندسي',
+    slug: 'maintenance-monitoring-guide',
+    content: `# مراقبة ما بعد المعالجة: متى نراقب التشققات وما الذي يعتبر نجاحًا؟
+
+هذا الدليل يشرح **المشكلة ولماذا تحدث**، ومتى تحتاج تدخلًا هندسيًا، وما هي **الخطوة التالية** بشكل عملي.  
+إذا كنت تريد تنفيذًا مباشرًا، راجع صفحة الخدمة: [الخدمة المرتبطة ](/services)  
+وللاستهداف المحلي يمكنك مراجعة صفحات المدن، مثل: [حقن تربة في الرياض](/locations/riyadh/soil-grouting) أو [كشف فراغات في جدة](/locations/jeddah/void-detection) أو [تقوية أساسات في الدمام](/locations/dammam/foundation-strengthening).
+
+---
+
+## متى أحتاج تدخلًا؟
+- ظهور **تشققات متزايدة** أو اختلاف مناسيب الأرضيات.
+- هبوط موضعي حول المبنى أو في المواقف/الساحات.
+- مؤشرات على فراغات تحت البلاطات أو قرب الخدمات الأرضية.
+
+> **قاعدة عملية:** إذا كانت الأعراض **تتطور مع الزمن** فغالبًا المشكلة جيوتكنيكية وتحتاج تشخيصًا ثم معالجة.
+
+---
+
+## لماذا تحدث المشكلة؟
+أشيع الأسباب:
+1) تغيّر رطوبة التربة/مياه جوفية.  
+2) تسربات من شبكات المياه أو الصرف.  
+3) فراغات أو تكهفات أو تجاويف كارستية.  
+4) ضعف تربة ردم أو سوء دمك.  
+
+---
+
+## كيف يتم التشخيص بشكل مهني؟
+- **زيارة ميدانية** + توصيف الأعراض.
+- اختيار وسيلة فحص مناسبة:
+  - **GPR** لمسح سريع تحت البلاطات.
+  - **ERT** لتحديد مناطق ضعف/فراغات أعمق.
+  - **حفر اختباري/جسات** عند الحاجة.
+- ربط النتائج بمخاطر المنشأة ومتطلبات السلامة.
+
+---
+
+## خيارات المعالجة (حسب الحالة)
+- **حقن تربة/حقن أسمنتي:** لملء الفراغات ورفع الصلابة في مناطق محددة.  
+- **تقوية أساسات/Underpinning:** عندما تكون المشكلة مرتبطة بالأساس أو الحمل.  
+- **معالجة فراغات/تكهفات:** عند وجود cavities أو مسارات تسرب.
+
+---
+
+## منهجية تنفيذ نموذجية
+1) إعداد خطة عمل + مناطق الاستهداف.  
+2) تنفيذ المعالجة على مراحل (بحسب المخاطر).  
+3) توثيق الاستهلاك/الضغوط/الملاحظات.  
+4) اختبارات تحقق + تقرير نهائي.
+
+---
+
+## معايير القبول والتحقق (Validation)
+أمثلة على مخرجات التحقق:
+- ثبات القراءات (Crack monitoring) وتوقف تطور التشققات.
+- تحسن قياسات الاستجابة أو قيم الاختبار (حسب المشروع).
+- توافق نتائج ما بعد التنفيذ مع الهدف المحدد في الخطة.
+
+---
+
+## أخطاء شائعة يجب تجنبها
+- بدء المعالجة قبل تحديد **سبب** المشكلة.
+- استخدام مادة حقن غير مناسبة لبيئة التربة أو للمياه.
+- غياب خطة تحقق واضحة بعد التنفيذ.
+
+---
+
+## أسئلة شائعة
+> تم تلخيص أهم الأسئلة في أسفل الصفحة ضمن بيانات منظمة (FAQ schema) لتسهيل ظهورها في نتائج البحث.
+
+---
+
+## الخطوة التالية
+إذا لديك موقع داخل المملكة وتريد **تقييم مختصر وخطة خطوة تالية واضحة**:
+- ابدأ من صفحة الطلب: [اطلب خدمة](/request-service)
+- أو راجع الخدمة: [تفاصيل الخدمة](/services)
+`,
+    contentEn: `# Post-Remediation Monitoring: When to Monitor Cracks and What Counts as Success?
+
+This pillar guide explains **why the issue happens**, when you should act, and what the **next step** should be.  
+For direct execution, see the service page: [Related service](/services).  
+For local intent pages, see: [Soil Grouting in Riyadh](/locations/riyadh/soil-grouting) or [Void Detection in Jeddah](/locations/jeddah/void-detection) or [Foundation Strengthening in Dammam](/locations/dammam/foundation-strengthening).
+
+---
+
+## When should I take action?
+- **Growing cracks** or noticeable floor level differences.
+- Localized settlement around the building or in parking/surrounding areas.
+- Suspected voids beneath slabs or near underground utilities.
+
+---
+
+## Why does it happen?
+Common causes:
+1) Moisture/water table changes.  
+2) Utility leaks.  
+3) Voids, sinkholes, or karst cavities.  
+4) Poor compaction or weak fill layers.  
+
+---
+
+## How do we diagnose professionally?
+- Site visit + symptom mapping.
+- Choose the right method:
+  - **GPR** for fast slab-level screening.
+  - **ERT** for deeper weakness/void mapping.
+  - Boreholes/test pits where needed.
+- Tie results to structural risk and safety requirements.
+
+---
+
+## Treatment options (case-dependent)
+- **Soil/cement grouting:** fill voids and locally improve stiffness.  
+- **Underpinning / foundation strengthening:** when the foundation is involved.  
+- **Void/sinkhole remediation:** when cavities or subsurface pathways exist.
+
+---
+
+## Typical execution workflow
+1) Define targets + method statement.  
+2) Stage execution based on risk.  
+3) Log injection/pressure/observations.  
+4) Verification tests + final report.
+
+---
+
+## Validation criteria (examples)
+- Crack monitoring stabilizes (no continued widening).
+- Improved test response (as specified).
+- Post-work results match the defined objectives.
+
+---
+
+## Common mistakes to avoid
+- Treating before identifying the **root cause**.
+- Wrong material selection for the soil/water conditions.
+- No verification plan after execution.
+
+---
+
+## Next step
+If you need a quick assessment and clear next actions in Saudi Arabia:
+- Start here: [Request service](/request-service)
+- Or read the service page: [Service details](/services)
+`,
+    faqAr: [{"question": "هل حقن التربة مناسب لكل حالات الهبوط؟", "answer": "ليس دائمًا. يعتمد القرار على سبب الهبوط وعمق/نطاق المشكلة. أحيانًا تكون تقوية الأساسات أو معالجة التسربات أولًا هي الأهم."}, {"question": "كم يستغرق التشخيص قبل بدء التنفيذ؟", "answer": "قد يبدأ بتقييم ميداني سريع، ثم تُحدد أدوات الفحص المناسبة (مثل GPR/ERT أو جسات) حسب المخاطر. بعض الحالات تُحسم خلال أيام، وأخرى تحتاج برنامج فحص أوسع."}, {"question": "ما أهم شيء بعد التنفيذ؟", "answer": "خطة تحقق (Validation) واضحة: توثيق، قراءات متابعة، ومخرجات تقرير نهائي يوضح ما تم وأثره."}, {"question": "هل يمكن تنفيذ العمل دون إيقاف المبنى؟", "answer": "غالبًا نعم حسب موقع العمل وحساسية المنشأة، ويتم ذلك بخطة مراحل وإجراءات سلامة."}],
+    faqEn: [{"question": "Is soil grouting suitable for every settlement case?", "answer": "Not always. It depends on the root cause and the depth/extent of the problem. In some cases, underpinning or leak remediation is the priority."}, {"question": "How long does diagnosis take before execution?", "answer": "It may start with a quick site assessment, then the appropriate methods (GPR/ERT/boreholes) are selected based on risk. Some cases take days; others require a broader program."}, {"question": "What matters most after execution?", "answer": "A clear validation plan: logs, follow-up readings, and a final report documenting what was done and its impact."}, {"question": "Can the work be done without shutting down the building?", "answer": "Often yes, depending on access and sensitivity. Execution is staged with safety controls."}],
+  },
+
 ];
