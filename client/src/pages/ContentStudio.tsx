@@ -1,4 +1,5 @@
 import { SEO } from '@/components/SEO';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -175,6 +176,8 @@ ${resultsEn}
       <div className="max-w-4xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 mb-6">
           <div>
+            <Breadcrumbs items={[{ name: lang === 'ar' ? 'استوديو المحتوى' : 'Content Studio', href: '/content-studio', isCurrent: true }]} />
+
             <h1 className="text-2xl font-bold">{lang === 'ar' ? 'استوديو المحتوى (داخلي)' : 'Content Studio (Internal)'}</h1>
             <p className="text-muted-foreground mt-1">
               {lang === 'ar'

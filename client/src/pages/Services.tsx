@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { SEO } from '@/components/SEO';
 import TrustStats from '@/components/TrustStats';
 import QuickRequestCard from '@/components/QuickRequestCard';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { CheckCircle2, ClipboardList, Drill, Radar, ShieldCheck, Sparkles } from 'lucide-react';
 import { trackEvent } from '@/lib/analytics';
@@ -177,14 +178,16 @@ export default function Services() {
             ? 'حقن التربة، كشف التكهفات، والدراسات الجيوفيزيائية. نعمل في جميع مناطق المملكة (+20 مدينة).'
             : 'Soil grouting, cavity detection, and geophysical surveys across KSA (20+ cities).'
         }
-        image={absUrl('/og-image.jpg')}
+        image={absUrl('/og-image.webp')}
         schema={schema}
       />
 
       <section className="py-10 md:py-14">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center space-y-3">
-            <h1 className="text-3xl md:text-5xl font-bold">{language === 'ar' ? 'خدماتنا' : 'Our services'}</h1>
+            <Breadcrumbs items={[{ name: language === 'ar' ? 'الخدمات' : 'Services', href: '/services', isCurrent: true }]} />
+
+        <h1 className="text-3xl md:text-5xl font-bold">{language === 'ar' ? 'خدماتنا' : 'Our services'}</h1>
             <p className="text-muted-foreground leading-relaxed">
               {language === 'ar'
                 ? 'نركز على خدمات محددة تؤثر مباشرة على سلامة الأساسات وتقليل المخاطر: حقن التربة، كشف التكهفات، والدراسات الجيوفيزيائية (عند الحاجة للتشخيص الأدق).'

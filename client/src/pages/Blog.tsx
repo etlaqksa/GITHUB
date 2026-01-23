@@ -82,12 +82,11 @@ function ArticleCard({
 
   return (
     <Card className="group h-full overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:scale-[1.07]">
-      <LocalizedLink href={`/blog/${article.slug}`}>
-        <a className="block relative" aria-label={title}>
+      <LocalizedLink href={`/blog/${article.slug}`} className="block relative" aria-label={title}>
           <div className="aspect-[16/9] w-full bg-muted">
             <img src={imgUrl} alt={title} className="w-full h-full object-cover" loading="lazy" draggable={false} onContextMenu={(e) => e.preventDefault()} onError={(e) => { (e.currentTarget as HTMLImageElement).src = fallbackUrl; }} />
           </div>
-        </a>
+        
       </LocalizedLink>
 
       <CardHeader className="pb-3">
@@ -111,12 +110,11 @@ function ArticleCard({
           {cats.length > 3 && <Badge variant="outline">+{cats.length - 3}</Badge>}
         </div>
 
-        <LocalizedLink href={`/blog/${article.slug}`}>
-          <a className="block">
+        <LocalizedLink href={`/blog/${article.slug}`} className="block">
             <CardTitle className="leading-tight hover:underline">
               {title || (language === 'ar' ? 'مقال تقني' : `${article.categoryEn || 'Geotechnics'} Article #${article.id}`)}
             </CardTitle>
-          </a>
+          
         </LocalizedLink>
 
         <CardDescription className="mt-2">
@@ -140,10 +138,9 @@ function ArticleCard({
           </div>
         </div>
 
-        <LocalizedLink href={`/blog/${article.slug}`}>
-          <a className="inline-flex items-center justify-center rounded-lg px-4 py-2 font-medium bg-primary text-primary-foreground hover:opacity-95 transition">
+        <LocalizedLink href={`/blog/${article.slug}`} className="inline-flex items-center justify-center rounded-lg px-4 py-2 font-medium bg-primary text-primary-foreground hover:opacity-95 transition">
             {language === 'ar' ? 'اقرأ المزيد' : 'Read more'}
-          </a>
+          
         </LocalizedLink>
 
       </CardContent>

@@ -11,8 +11,10 @@ import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import LocalizedLink from '@/components/LocalizedLink';
 import { absUrl } from '@/lib/siteUrl';
+import { buildLocalBusinessSchema } from '@/lib/companyProfile';
 import { buildBreadcrumbList } from '@/lib/schemaHelpers';
 import RelatedLinksHub from '@/components/RelatedLinksHub';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
 function stripMarkdown(md: string) {
   return md
@@ -57,16 +59,26 @@ function buildFaqSchema(items: { question: string; answer: string }[], pageUrl: 
   };
 }
 
-function buildArticleSchema(params: { title: string; description: string; url: string; image?: string; date?: string; author?: string }) {
+function buildArticleSchema(params: { title: string; description: string; url: string; image?: string; date?: string; author?: string; language?: 'ar' | 'en' }) {
+  const org = {
+    '@type': 'Organization',
+    name: 'شركة إطلاق المتميزة المحدودة (ETLAQ)',
+    url: absUrl('/'),
+    logo: absUrl('/logo.png'),
+  };
+
   return {
     '@type': 'Article',
     headline: params.title,
     description: params.description,
     url: params.url,
+    mainEntityOfPage: { '@type': 'WebPage', '@id': params.url },
     image: params.image ? [params.image] : undefined,
     datePublished: params.date,
     dateModified: params.date,
+    inLanguage: params.language,
     author: params.author ? { '@type': 'Person', name: params.author } : undefined,
+    publisher: org,
   };
 }
 function normalizeEnglishContent(input: string) {
@@ -127,6 +139,9 @@ export default function BlogPost() {
     const graph: any[] = [];
 
     // Organization (minimal, consistent)
+    const localBusinessSchema = buildLocalBusinessSchema({ url: absUrl('/'), logoUrl: absUrl('/logo.png') });
+    graph.push(localBusinessSchema);
+
     graph.push({
       '@type': 'Organization',
       name: 'شركة إطلاق المتميزة المحدودة (ETLAQ)',
@@ -147,6 +162,7 @@ export default function BlogPost() {
       image,
       date: article.date,
       author: article.author,
+      language: language as 'ar' | 'en',
     }));
 
     if (faqItems.length) {
@@ -234,9 +250,16 @@ export default function BlogPost() {
     return (
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-3xl mx-auto text-center">
-          <h1 className="text-3xl font-bold mb-4">{language === 'ar' ? 'المقال غير موجود' : 'Article not found'}</h1>
-          <LocalizedLink href="/blog">
-            <a className="text-primary underline">{language === 'ar' ? 'العودة للمقالات' : 'Back to blog'}</a>
+          <Breadcrumbs
+              items={[
+                { name: language === 'ar' ? 'المدونة' : 'Blog', href: '/blog' },
+                { name: title, href: `/blog/${article.slug}`, isCurrent: true },
+              ]}
+            />
+
+            <h1 className="text-3xl font-bold mb-4">{language === 'ar' ? 'المقال غير موجود' : 'Article not found'}</h1>
+          <LocalizedLink href="/blog" className="text-primary underline">
+            {language === 'ar' ? 'العودة للمقالات' : 'Back to blog'}
           </LocalizedLink>
         </div>
       </div>
@@ -286,11 +309,10 @@ const handleHeroError = () => {
     <div className="container mx-auto px-4 py-12">
       <SEO title={title} description={description} schema={schema} />
       <div className="max-w-4xl mx-auto" ref={swipeRef}>
-        <LocalizedLink href="/blog">
-          <a className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground mb-6">
+        <LocalizedLink href="/blog" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground mb-6">
             <ArrowLeft className="h-4 w-4" />
             {language === 'ar' ? 'رجوع للمقالات' : 'Back to articles'}
-          </a>
+          
         </LocalizedLink>
 
         {/* Side navigation (desktop + mobile small buttons) */}

@@ -1,6 +1,7 @@
 import { SEO } from '@/components/SEO';
 import RelatedLinksHub from '@/components/RelatedLinksHub';
 import QuickRequestCard from '@/components/QuickRequestCard';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import LocalizedLink from '@/components/LocalizedLink';
@@ -8,6 +9,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { findCity, findServiceLanding } from '@/data/seoLocations';
 import { buildLandingKeywords } from '@/lib/seoKeywords';
 import { absUrl, getSiteUrl } from '@/lib/siteUrl';
+import { COMPANY, buildLocalBusinessSchema } from '@/lib/companyProfile';
 import { buildBreadcrumbList } from '@/lib/schemaHelpers';
 import { CheckCircle2, ClipboardList, MapPin, ShieldCheck } from 'lucide-react';
 
@@ -73,11 +75,11 @@ export default function CityServiceLanding({ params }: Props) {
   const canonical = absUrl(canonicalPath);
   const ogImage = (() => {
     const slug = service?.slug || '';
-    if (slug.includes('soil-grouting')) return absUrl('/og-soil-grouting.jpg');
-    if (slug.includes('void-detection')) return absUrl('/og-void-detection.jpg');
-    if (slug.includes('geophysical-surveys')) return absUrl('/og-geophysical-surveys.jpg');
-    if (slug.includes('foundation-strengthening')) return absUrl('/og-foundation-strengthening.jpg');
-    return absUrl('/og-image.jpg');
+    if (slug.includes('soil-grouting')) return absUrl('/og-soil-grouting.webp');
+    if (slug.includes('void-detection')) return absUrl('/og-void-detection.webp');
+    if (slug.includes('geophysical-surveys')) return absUrl('/og-geophysical-surveys.webp');
+    if (slug.includes('foundation-strengthening')) return absUrl('/og-foundation-strengthening.webp');
+    return absUrl('/og-image.webp');
   })();
 
 
@@ -97,11 +99,7 @@ export default function CityServiceLanding({ params }: Props) {
     '@type': 'Service',
     name: title,
     description,
-    provider: {
-      '@type': 'LocalBusiness',
-      name: language === 'ar' ? 'شركة إطلاق المتميزة المحدودة' : 'Etlaq Distinguished Company',
-      url: getSiteUrl(),
-    },
+    provider: buildLocalBusinessSchema({ url: getSiteUrl(), logoUrl: absUrl('/logo.png'), imageUrl: ogImage }),
     areaServed: city
       ? {
           '@type': 'City',
@@ -113,6 +111,8 @@ export default function CityServiceLanding({ params }: Props) {
     url: canonical,
   };
 
+  const localBusinessSchema = buildLocalBusinessSchema({ url: getSiteUrl(), logoUrl: absUrl('/logo.png'), imageUrl: ogImage });
+
   const breadcrumb = buildBreadcrumbList([
     { name: language === 'ar' ? 'الرئيسية' : 'Home', url: absUrl(`/${language}/`) },
     { name: language === 'ar' ? 'المدن' : 'Locations', url: absUrl(`/${language}/locations`) },
@@ -122,7 +122,7 @@ export default function CityServiceLanding({ params }: Props) {
 
   const combinedSchema = {
     '@context': 'https://schema.org',
-    '@graph': [serviceSchema, faqSchema, breadcrumb],
+    '@graph': [localBusinessSchema, serviceSchema, faqSchema, breadcrumb],
   };
 
   const deliverables =
@@ -169,6 +169,14 @@ export default function CityServiceLanding({ params }: Props) {
                 <span className="text-muted-foreground">{language === 'ar' ? 'خطة واضحة ومخرجات مفهومة' : 'Clear plan & deliverables'}</span>
               </span>
             </div>
+
+            <Breadcrumbs
+              items={[
+                { name: language === 'ar' ? 'المدن' : 'Locations', href: '/locations' },
+                { name: cityName, href: `/locations/${params?.citySlug || city?.slug || ''}` },
+                { name: serviceName, href: canonical, isCurrent: true },
+              ]}
+            />
 
             <h1 className="text-3xl md:text-5xl font-bold leading-tight">{title}</h1>
             <p className="text-muted-foreground leading-relaxed">{description}</p>

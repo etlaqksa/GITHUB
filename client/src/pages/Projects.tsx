@@ -2,6 +2,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { SEO } from '@/components/SEO';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import TrustStats from '@/components/TrustStats';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { projects as allProjects, type ServiceKey } from '@/data/projects';
@@ -54,7 +55,9 @@ export default function Projects() {
       <section className="py-16 md:py-20">
         <div className="container">
           <div className="max-w-4xl">
-            <h1 className="text-4xl md:text-5xl font-bold">{language === 'ar' ? 'مشاريعنا' : 'Our Projects'}</h1>
+            <Breadcrumbs items={[{ name: language === 'ar' ? 'المشاريع' : 'Projects', href: '/projects', isCurrent: true }]} />
+
+        <h1 className="text-4xl md:text-5xl font-bold">{language === 'ar' ? 'مشاريعنا' : 'Our Projects'}</h1>
             <p className="mt-4 text-lg md:text-xl text-muted-foreground">
               {language === 'ar'
                 ? 'نحوّل الخبرة الميدانية إلى نتائج قابلة للقياس—استعرض نماذج من أعمالنا مع ملخصات منهجية تساعدك على فهم طريقة تنفيذنا.'

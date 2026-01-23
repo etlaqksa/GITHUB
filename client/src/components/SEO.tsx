@@ -95,7 +95,8 @@ export function SEO({
       {/* Primary Meta Tags */}
       <title>{title}</title>
       <meta name="title" content={title} />
-      <meta name="description" content={description} />
+            <meta name="theme-color" content="#0f172a" />
+<meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="author" content="شركة إطلاق المتميزة المحدودة" />
       {noIndex ? (

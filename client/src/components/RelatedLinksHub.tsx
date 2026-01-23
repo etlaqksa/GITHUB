@@ -94,11 +94,9 @@ export default function RelatedLinksHub({ signals = [], serviceSlug }: HubProps)
               </div>
               <div className="flex flex-wrap gap-2">
                 {citiesPicked.map((c) => (
-                  <LocalizedLink key={c.slug} href={`/locations/${c.slug}/${svc.slug}`}>
-                    <a className="text-xs rounded-full border px-3 py-1 bg-background hover:bg-accent">
+                  <LocalizedLink key={c.slug} href={`/locations/${c.slug}/${svc.slug}`} className="text-xs rounded-full border px-3 py-1 bg-background hover:bg-accent">
                       {lang === 'ar' ? c.ar : c.en}
-                    </a>
-                  </LocalizedLink>
+                    </LocalizedLink>
                 ))}
               </div>
             </div>
