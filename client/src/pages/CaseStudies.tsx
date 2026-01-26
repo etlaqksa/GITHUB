@@ -28,16 +28,33 @@ export default function CaseStudies() {
   const [filter, setFilter] = useState<FilterKey>('all');
 
   const items = useMemo(() => {
-    // Map projects into case-study cards (projects dataset already has problem/approach/results fields in most cases)
-    const mapped = projects.map((p) => ({
-      slug: p.slug,
-      title: String(lang === 'ar' ? p.title : (p as any).titleEn || ''),
-      city: String(lang === 'ar' ? (p as any).location : (p as any).locationEn || ''),
-      tags: (lang === 'ar' ? ((p as any).tags || []) : ((p as any).tagsEn || [])).map((t: any) => String(t)) as string[],
-      summary: String(lang === 'ar' ? (p as any).summary : (p as any).summaryEn || ''),
-      date: p.date,
-      region: regionOf(lang === 'ar' ? (p as any).location : (p as any).locationEn),
-    }));
+    const mapped = projects.map((p) => {
+      const title = lang === 'ar' ? p.title.ar : p.title.en;
+      const city = lang === 'ar' ? p.location.ar : p.location.en;
+      const summary = lang === 'ar' ? p.summary.ar : p.summary.en;
+      const category = lang === 'ar' ? p.categoryLabel.ar : p.categoryLabel.en;
+      const year = p.year;
+
+      // lightweight tag set from serviceKey/category + city
+      const tags = [
+        category,
+        p.serviceKey === 'grouting' ? (lang === 'ar' ? 'حقن التربة' : 'Soil grouting') : null,
+        p.serviceKey === 'cavity' ? (lang === 'ar' ? 'كشف الفراغات' : 'Void detection') : null,
+        p.serviceKey === 'geophysical' ? (lang === 'ar' ? 'مسوحات جيوفيزيائية' : 'Geophysics') : null,
+        city,
+        year,
+      ].filter(Boolean) as string[];
+
+      return {
+        slug: p.slug,
+        title,
+        city,
+        tags,
+        summary,
+        year,
+        region: regionOf(city),
+      };
+    });
 
     if (filter === 'all') return mapped;
 
