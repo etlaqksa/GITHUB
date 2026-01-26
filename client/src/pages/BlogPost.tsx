@@ -96,6 +96,7 @@ function normalizeEnglishContent(input: string) {
 
 export default function BlogPost() {
   const { language } = useLanguage();
+  const lang = language;
   const [, params] = useRoute<{ slug: string }>('/blog/:slug');
   const [, setLocation] = useLocation();
 
