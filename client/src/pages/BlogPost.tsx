@@ -27,12 +27,12 @@ function stripMarkdown(md: string) {
     .trim();
 }
 
-function estimateReadTime(content: string, lang: 'ar' | 'en') {
+function estimateReadTime(content: string, language: 'ar' | 'en') {
   const plain = stripMarkdown(content);
   const words = plain.split(/\s+/).filter(Boolean).length;
-  const wpm = lang === 'ar' ? 170 : 220;
+  const wpm = language === 'ar' ? 170 : 220;
   const minutes = Math.max(1, Math.round(words / wpm));
-  return lang === 'ar' ? `${minutes} دقيقة` : `${minutes} min`;
+  return language === 'ar' ? `${minutes} دقيقة` : `${minutes} min`;
 }
 
 function getCategories(article: ArticleContent, language: 'ar' | 'en') {
@@ -96,7 +96,6 @@ function normalizeEnglishContent(input: string) {
 
 export default function BlogPost() {
   const { language } = useLanguage();
-  const lang = language;
   const [, params] = useRoute<{ slug: string }>('/blog/:slug');
   const [, setLocation] = useLocation();
 
@@ -148,12 +147,12 @@ export default function BlogPost() {
   }, [article, language]);
 
     const relatedArticles = useMemo(() => {
-    const key = (lang === 'ar' ? article.category : article.categoryEn) || '';
+    const key = (language === 'ar' ? article.category : article.categoryEn) || '';
     return articles
       .filter((a) => a.slug !== article.slug)
-      .filter((a) => (lang === 'ar' ? a.category : a.categoryEn) === key)
+      .filter((a) => (language === 'ar' ? a.category : a.categoryEn) === key)
       .slice(0, 6);
-  }, [lang, article.slug, article.category, article.categoryEn]);
+  }, [language, article.slug, article.category, article.categoryEn]);
 
 const schema = useMemo(() => {
     if (!article) return undefined;
@@ -454,7 +453,7 @@ const handleHeroError = () => {
           {/* Content */}
           <article
             dir={language === 'ar' ? 'rtl' : 'ltr'}
-            lang={language === 'ar' ? 'ar' : 'en'}
+            language={language === 'ar' ? 'ar' : 'en'}
             className={`prose prose-slate dark:prose-invert max-w-none
               prose-headings:font-bold prose-headings:text-primary
               prose-p:text-muted-foreground prose-p:leading-relaxed prose-p:text-lg
@@ -509,7 +508,7 @@ const handleHeroError = () => {
           {relatedArticles.length > 0 && (
             <section className="mt-10">
               <h2 className="text-xl font-semibold mb-4">
-                {lang === 'ar' ? 'مقالات ذات صلة' : 'Related articles'}
+                {language === 'ar' ? 'مقالات ذات صلة' : 'Related articles'}
               </h2>
               <div className="grid gap-3">
                 {relatedArticles.map((ra) => (
@@ -518,9 +517,9 @@ const handleHeroError = () => {
                     href={`/blog/${ra.slug}`}
                     className="rounded-lg border p-4 hover:bg-accent transition-colors"
                   >
-                    <div className="font-medium">{lang === 'ar' ? ra.title : ra.titleEn}</div>
+                    <div className="font-medium">{language === 'ar' ? ra.title : ra.titleEn}</div>
                     <div className="text-sm text-muted-foreground mt-1 line-clamp-2">
-                      {(lang === 'ar' ? ra.content : ra.contentEn).replace(/[#*_>`]/g, '').slice(0, 140)}...
+                      {(language === 'ar' ? ra.content : ra.contentEn).replace(/[#*_>`]/g, '').slice(0, 140)}...
                     </div>
                   </LocalizedLink>
                 ))}
@@ -528,16 +527,16 @@ const handleHeroError = () => {
             </section>
           )}
 
-          {((lang === 'ar' ? article.faqAr : article.faqEn) || []).length > 0 && (
+          {((language === 'ar' ? article.faqAr : article.faqEn) || []).length > 0 && (
             <section className="mt-10">
               <h2 className="text-xl font-semibold mb-4">
-                {lang === 'ar' ? 'الأسئلة الشائعة' : 'Frequently Asked Questions'}
+                {language === 'ar' ? 'الأسئلة الشائعة' : 'Frequently Asked Questions'}
               </h2>
               <Accordion type="single" collapsible className="w-full">
-                {((lang === 'ar' ? article.faqAr : article.faqEn) || []).map((f: any, idx: number) => (
+                {((language === 'ar' ? article.faqAr : article.faqEn) || []).map((f: any, idx: number) => (
                   <AccordionItem key={String(idx)} value={String(idx)}>
                     <AccordionTrigger className="text-right">
-                      <span className={lang === 'ar' ? 'text-right' : 'text-left'}>{f.question}</span>
+                      <span className={language === 'ar' ? 'text-right' : 'text-left'}>{f.question}</span>
                     </AccordionTrigger>
                     <AccordionContent>
                       <p className="text-muted-foreground leading-relaxed">{f.answer}</p>
