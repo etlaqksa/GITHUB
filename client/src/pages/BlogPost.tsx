@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { useRoute, useLocation } from 'wouter';
 import { Badge } from '@/components/ui/badge';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { articles as allArticles, type ArticleContent } from '@/data/articles';
 import { SEO } from '@/components/SEO';
@@ -128,6 +129,7 @@ export default function BlogPost() {
 
   const readTime = useMemo(() => estimateReadTime(contentRaw, language), [contentRaw, language]);
   const pageUrl = useMemo(() => absUrl(`/blog/${article?.slug || ''}`), [article?.slug]);
+  const ogImage = absUrl(article.image?.url || '/og-image.webp');
   const relatedSignals = [
     title,
     description,
@@ -144,7 +146,15 @@ export default function BlogPost() {
     return (language === 'ar' ? (article.faqAr || []) : (article.faqEn || [])) as { question: string; answer: string }[];
   }, [article, language]);
 
-  const schema = useMemo(() => {
+    const relatedArticles = useMemo(() => {
+    const key = (lang === 'ar' ? article.category : article.categoryEn) || '';
+    return articles
+      .filter((a) => a.slug !== article.slug)
+      .filter((a) => (lang === 'ar' ? a.category : a.categoryEn) === key)
+      .slice(0, 6);
+  }, [lang, article.slug, article.category, article.categoryEn]);
+
+const schema = useMemo(() => {
     if (!article) return undefined;
     const image = absUrl(`/article-images/hero/${article.slug}.webp`);
     const graph: any[] = [];
@@ -318,7 +328,7 @@ const handleHeroError = () => {
 
   return (
     <div className="container mx-auto px-4 py-12">
-      <SEO title={title} description={description} schema={schema} />
+      <SEO title={title} description={description} image={ogImage} url={pageUrl} type="article" schema={schema} />
       <div className="max-w-4xl mx-auto" ref={swipeRef}>
         <LocalizedLink href="/blog" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground mb-6">
             <ArrowLeft className="h-4 w-4" />
@@ -494,6 +504,48 @@ const handleHeroError = () => {
               {contentRaw}
             </ReactMarkdown>
           </article>
+
+          {relatedArticles.length > 0 && (
+            <section className="mt-10">
+              <h2 className="text-xl font-semibold mb-4">
+                {lang === 'ar' ? 'مقالات ذات صلة' : 'Related articles'}
+              </h2>
+              <div className="grid gap-3">
+                {relatedArticles.map((ra) => (
+                  <LocalizedLink
+                    key={ra.slug}
+                    href={`/blog/${ra.slug}`}
+                    className="rounded-lg border p-4 hover:bg-accent transition-colors"
+                  >
+                    <div className="font-medium">{lang === 'ar' ? ra.title : ra.titleEn}</div>
+                    <div className="text-sm text-muted-foreground mt-1 line-clamp-2">
+                      {(lang === 'ar' ? ra.content : ra.contentEn).replace(/[#*_>`]/g, '').slice(0, 140)}...
+                    </div>
+                  </LocalizedLink>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {((lang === 'ar' ? article.faqAr : article.faqEn) || []).length > 0 && (
+            <section className="mt-10">
+              <h2 className="text-xl font-semibold mb-4">
+                {lang === 'ar' ? 'الأسئلة الشائعة' : 'Frequently Asked Questions'}
+              </h2>
+              <Accordion type="single" collapsible className="w-full">
+                {((lang === 'ar' ? article.faqAr : article.faqEn) || []).map((f: any, idx: number) => (
+                  <AccordionItem key={String(idx)} value={String(idx)}>
+                    <AccordionTrigger className="text-right">
+                      <span className={lang === 'ar' ? 'text-right' : 'text-left'}>{f.question}</span>
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      <p className="text-muted-foreground leading-relaxed">{f.answer}</p>
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </section>
+          )}
 
           <RelatedLinksHub signals={relatedSignals} />
         </div>
