@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Disallow: /ar/keywords
+Disallow: /en/keywords
+Disallow: /ar/content-studio
+Disallow: /en/content-studio
+Sitemap: https://etlaqksa.com/sitemap.xml

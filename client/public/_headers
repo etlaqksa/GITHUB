@@ -1,0 +1,36 @@
+# ---- Aggressive caching for immutable assets ----
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/gallery/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/images/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/article-images/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# ---- HTML entry points should revalidate ----
+/
+  Cache-Control: public, max-age=0, must-revalidate
+
+/ar/*
+  Cache-Control: public, max-age=0, must-revalidate
+
+/en/*
+  Cache-Control: public, max-age=0, must-revalidate
+
+/white-paper.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+# ---- Security headers (site-wide) ----
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+  # Allow Wikimedia for open-license article images
+  # NOTE: We use Google Fonts for bilingual typography. If you prefer stricter CSP,
+  # self-host the fonts and remove these sources.
+  Content-Security-Policy: default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://upload.wikimedia.org https://commons.wikimedia.org; connect-src 'self' https://commons.wikimedia.org; font-src 'self' data: https://fonts.gstatic.com;
