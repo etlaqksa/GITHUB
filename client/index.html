@@ -18,19 +18,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
     <script>
-    (function(){
-      var p = (location.pathname || '/');
-      var isEn = p.startsWith('/en');
-      var l = isEn ? 'en' : 'ar';
-      // Create REAL global bindings so ESM bundles can access free identifiers safely
-      window.__ETLAQ_LANG__ = l;
-      // eslint-disable-next-line no-var
-      var lang = l;
-      // eslint-disable-next-line no-var
-      var language = l;
-      // Mirror to globalThis as well
-      try { globalThis.lang = l; globalThis.language = l; } catch(e){}
-    })();
+    // Global language bindings for any legacy code that references `lang`
+    // Default Arabic unless the path starts with /en
+    var lang = (location.pathname || '/').startsWith('/en') ? 'en' : 'ar';
+    var language = lang;
+    try { window.lang = lang; window.language = language; globalThis.lang = lang; globalThis.language = language; } catch(e) {}
   </script>
 
 </head>
