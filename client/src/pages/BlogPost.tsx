@@ -3,7 +3,7 @@ import { useRoute, useLocation } from 'wouter';
 import { Badge } from '@/components/ui/badge';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { articles as allArticles, type ArticleContent } from '@/data/articles';
+import { type ArticleContent } from '@/data/articles';
 import { SEO } from '@/components/SEO';
 import { Calendar, Clock, User, ArrowLeft, ArrowRight } from 'lucide-react';
 
@@ -105,7 +105,7 @@ export default function BlogPost() {
   const article = useMemo(() => {
     const slug = params?.slug;
     if (!slug) return null;
-    return allArticles.find((a) => a.slug === slug) || null;
+    return [].find((a) => a.slug === slug) || null;
   }, [params?.slug]);
 
   const title = useMemo(() => {
@@ -145,14 +145,6 @@ export default function BlogPost() {
     if (!article) return [] as { question: string; answer: string }[];
     return (language === 'ar' ? (article.faqAr || []) : (article.faqEn || [])) as { question: string; answer: string }[];
   }, [article, language]);
-
-    const relatedArticles = useMemo(() => {
-    const key = (language === 'ar' ? article.category : article.categoryEn) || '';
-    return allArticles
-      .filter((a) => a.slug !== article.slug)
-      .filter((a) => (language === 'ar' ? a.category : a.categoryEn) === key)
-      .slice(0, 6);
-  }, [language, article.slug, article.category, article.categoryEn]);
 
 const schema = useMemo(() => {
     if (!article) return undefined;
@@ -196,9 +188,9 @@ const schema = useMemo(() => {
   const { prevArticle, nextArticle } = useMemo(() => {
     if (!article) return { prevArticle: null as ArticleContent | null, nextArticle: null as ArticleContent | null };
 
-    // Keep the same sequence used by the blog listing (allArticles array order),
+    // Keep the same sequence used by the blog listing ([] array order),
     // but only include items that have content in the current language.
-    const list = allArticles.filter((a) => (language === 'ar' ? Boolean(a.title && a.content) : Boolean(a.titleEn && a.contentEn)));
+    const list = [].filter((a) => (language === 'ar' ? Boolean(a.title && a.content) : Boolean(a.titleEn && a.contentEn)));
     const idx = list.findIndex((a) => a.slug === article.slug);
     return {
       prevArticle: idx > 0 ? list[idx - 1] : null,
@@ -332,7 +324,7 @@ const handleHeroError = () => {
       <div className="max-w-4xl mx-auto" ref={swipeRef}>
         <LocalizedLink href="/blog" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground mb-6">
             <ArrowLeft className="h-4 w-4" />
-            {language === 'ar' ? 'رجوع للمقالات' : 'Back to allArticles'}
+            {language === 'ar' ? 'رجوع للمقالات' : 'Back to []'}
           
         </LocalizedLink>
 
@@ -504,28 +496,6 @@ const handleHeroError = () => {
               {contentRaw}
             </ReactMarkdown>
           </article>
-
-          {relatedArticles.length > 0 && (
-            <section className="mt-10">
-              <h2 className="text-xl font-semibold mb-4">
-                {language === 'ar' ? 'مقالات ذات صلة' : 'Related allArticles'}
-              </h2>
-              <div className="grid gap-3">
-                {relatedArticles.map((ra) => (
-                  <LocalizedLink
-                    key={ra.slug}
-                    href={`/blog/${ra.slug}`}
-                    className="rounded-lg border p-4 hover:bg-accent transition-colors"
-                  >
-                    <div className="font-medium">{language === 'ar' ? ra.title : ra.titleEn}</div>
-                    <div className="text-sm text-muted-foreground mt-1 line-clamp-2">
-                      {(language === 'ar' ? ra.content : ra.contentEn).replace(/[#*_>`]/g, '').slice(0, 140)}...
-                    </div>
-                  </LocalizedLink>
-                ))}
-              </div>
-            </section>
-          )}
 
           {((language === 'ar' ? article.faqAr : article.faqEn) || []).length > 0 && (
             <section className="mt-10">

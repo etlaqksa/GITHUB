@@ -51,78 +51,128 @@ export const articles: ArticleContent[] =  [
     },
     content: `# دور 'جسر المراقبة' (Crack Monitoring) في تحديد فعالية عملية الحقن
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **دور 'جسر المراقبة' (Crack Monitoring) في تحديد فعالية عملية الحقن** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل القصيم).  
+**تصنيف المقال:** حقن التربة.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل الخبر).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+شرح عملي يربط الفكرة بالقرار التنفيذي: متى تستخدم، كيف تُنفذ بأمان، وما الذي يُعد جودة حقيقية.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- تحليل نمط التشقق (مائل/متدرج/شعري) مع قياسات زمنية هو مفتاح تحديد السبب (هبوط تفاضلي، تمدد حراري، تسرب مياه، ضعف تربة).
-- مراقبة التشققات قبل وأثناء وبعد المعالجة (Crack Monitoring) تقلل المخاطر وتثبت النجاح؛ يمكن استخدام مساطر شروخ/قراءات منسوب/محطات توتال حسب حساسية المشروع.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- جمع بيانات الموقع
+- تحديد نطاق عمل مرحلي
+- تسجيل الضغط/الكميات/المراحل
+- تقييم ما قبل/بعد
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- توثيق الخلطة وقابلية التشغيل عند اللزوم
+- مراقبة استجابة الموقع
+- تقرير نهائي وتوصيات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **الخبر** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- البدء بالمعالجة دون تشخيص
+- عدم وجود حدود ضغط/مرحلية
+- غياب معايير قبول
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/soil-grouting](/ar/services/soil-grouting)
-- مدينة الخبر: [/ar/locations/khobar/soil-grouting](/ar/locations/khobar/soil-grouting)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# The Role of Crack Monitoring in Determining Grouting Effectiveness
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Khobar).
+**Executive summary:** This article provides a structured engineering approach to **The Role of Crack Monitoring in Determining Grouting Effectiveness** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Qassim).  
+**Category:** Soil Grouting.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- Crack pattern analysis (diagonal/stepped/hairline) with time-based measurements is essential to identify root cause: differential settlement, thermal movement, leakage, or bearing issues.
-- Crack/level monitoring before, during, and after treatment reduces risk and documents success—using crack gauges, level readings, or total-station where needed.
+## Engineering context
+A practical guide that connects concept to execution: when to use it, how to execute safely, and what “quality” means.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Collect site data
+- Define a staged scope
+- Log pressure/takes/stages
+- Before/after evaluation
 
-## Quick practical example
-For an occupied building in **Khobar**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Document mix and workability when needed
+- Monitor response
+- Final report and recommendations
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating without diagnosis
+- No pressure/staging limits
+- No acceptance criteria
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/soil-grouting](/en/services/soil-grouting)
-- Khobar: [/en/locations/khobar/soil-grouting](/en/locations/khobar/soil-grouting)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "ما الفرق بين حقن التربة وحقن الخرسانة؟", answer: "حقن التربة يستهدف تحسين/ملء التربة والفراغات تحت الأساسات أو البلاطات، بينما حقن الخرسانة لمعالجة عيوب داخل العناصر الخرسانية." },
       { question: "هل الحقن يسبب رفع البلاط؟", answer: "قد يحدث رفع إذا كانت الضغوط غير مضبوطة. الحل: حقن مرحلي وحدود رفع ومراقبة مستمرة." },
@@ -160,78 +210,126 @@ For an occupied building in **Khobar**, we start with near-surface checks for ut
     },
     content: `# أسباب هبوط المباني وطرق معالجتها
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **أسباب هبوط المباني وطرق معالجتها** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل الرياض).  
+**تصنيف المقال:** معالجة الهبوط.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل المدينة المنورة).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+تشخيص الهبوط (كلي/تفاضلي) وتحديد إن كان نشطًا، ثم بناء نطاق معالجة متدرّج يقلل مخاطر الرفع.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- الضغط ليس هدفًا بحد ذاته؛ الهدف هو تحقيق ملء/تحسين بدون رفع (Heave) أو إحداث ضرر. لذلك نعتمد حقنًا مرحليًا وحدود رفع ومراقبة مستمرة.
-- تقنية GPR ممتازة للأهداف القريبة من السطح وتحديد مرافق تحت الأرض والفراغات الضحلة، لكن أداؤها يتأثر بالرطوبة العالية أو التربة الطينية.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- مسح مناسيب/Level survey وتحديد خريطة الهبوط
+- مراجعة التسربات ومصادر المياه
+- اختيار حقن/دمك حسب حالة التربة والفراغات
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- قياسات مناسيب متكررة
+- تسجيل كميات الحقن لكل مرحلة
+- مراقبة استجابة المنشأ (شقوق/أبواب)
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **المدينة المنورة** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- بدء المعالجة دون خريطة هبوط
+- تجاهل التسربات
+- رفع البلاطات بسبب ضغط زائد
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/foundation-strengthening](/ar/services/foundation-strengthening)
-- مدينة المدينة المنورة: [/ar/locations/madinah/foundation-strengthening](/ar/locations/madinah/foundation-strengthening)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# Causes of Building Settlement and Remediation Methods
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Madinah).
+**Executive summary:** This article provides a structured engineering approach to **Causes of Building Settlement and Remediation Methods** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Riyadh).  
+**Category:** Settlement Treatment.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- Pressure is not the goal. The goal is filling/improvement without heave or damage—hence staged injection, strict heave limits, and continuous monitoring.
-- GPR is excellent for near-surface targets, utilities, and shallow voids, but performance can degrade in wet/clayey soils.
+## Engineering context
+Diagnose settlement (total/differential), confirm if it’s ongoing, then build a staged scope that controls heave.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Elevation mapping via level survey
+- Check leakage/moisture sources
+- Select grouting/compaction based on soil & voiding
 
-## Quick practical example
-For an occupied building in **Madinah**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Repeated elevation surveys
+- Stage-by-stage grout take logs
+- Monitor structural response (cracks/doors)
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating without a settlement map
+- Ignoring leakage
+- Slab heave from excessive pressure
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/foundation-strengthening](/en/services/foundation-strengthening)
-- Madinah: [/en/locations/madinah/foundation-strengthening](/en/locations/madinah/foundation-strengthening)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "ما الفرق بين حقن التربة وحقن الخرسانة؟", answer: "حقن التربة يستهدف تحسين/ملء التربة والفراغات تحت الأساسات أو البلاطات، بينما حقن الخرسانة لمعالجة عيوب داخل العناصر الخرسانية." },
       { question: "هل الحقن يسبب رفع البلاط؟", answer: "قد يحدث رفع إذا كانت الضغوط غير مضبوطة. الحل: حقن مرحلي وحدود رفع ومراقبة مستمرة." },
@@ -269,78 +367,126 @@ For an occupied building in **Madinah**, we start with near-surface checks for u
     },
     content: `# تقنيات كشف التكهفات تحت الأرض
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **تقنيات كشف التكهفات تحت الأرض** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل مكة المكرمة).  
+**تصنيف المقال:** كشف التكهفات.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل مكة المكرمة).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+منهجية كشف الفراغات: اختيار التقنية، فهم حدود الدقة، ثم تحويل النتائج إلى نقاط تحقق ونطاق معالجة.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- في البيئات الكارستية (صخور جيرية/دولومايت)، التكهفات قد تكون مرتبطة بمسارات مياه؛ الحل عادةً يجمع بين كشف جيوفيزيائي + خطة حقن/تدعيم + السيطرة على مصادر المياه.
-- تقنية GPR ممتازة للأهداف القريبة من السطح وتحديد مرافق تحت الأرض والفراغات الضحلة، لكن أداؤها يتأثر بالرطوبة العالية أو التربة الطينية.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- GPR عندما تكون التربة مناسبة
+- ERT/Resistivity للتربة الرطبة/الملحية
+- حفر تحقق لتثبيت التفسير
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- خرائط شذوذ + نقاط تحقق
+- تقرير تفسير مع نسبة ثقة
+- ربط الأعماق مع منسوب الأساسات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **مكة المكرمة** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- اعتبار كل شذوذ فراغًا مؤكدًا
+- تجاهل حدود الطريقة
+- حقن قبل التحقق
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/void-detection](/ar/services/void-detection)
-- مدينة مكة المكرمة: [/ar/locations/makkah/void-detection](/ar/locations/makkah/void-detection)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# Advanced Underground Cavity Detection Techniques
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Makkah).
+**Executive summary:** This article provides a structured engineering approach to **Advanced Underground Cavity Detection Techniques** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Makkah).  
+**Category:** Cavity Detection.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- In karstic carbonate environments, cavities can relate to water pathways. A robust solution combines geophysics, a staged grouting/strengthening plan, and water control.
-- GPR is excellent for near-surface targets, utilities, and shallow voids, but performance can degrade in wet/clayey soils.
+## Engineering context
+A void detection workflow: select the method, state limitations, then translate results into verification and treatment scope.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- GPR where soil conditions allow
+- ERT/resistivity for wet/saline ground
+- Verification drilling to ground-truth anomalies
 
-## Quick practical example
-For an occupied building in **Makkah**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Anomaly maps + verification points
+- Interpretation with confidence notes
+- Depth correlation vs foundation levels
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating every anomaly as confirmed void
+- Ignoring method limits
+- Grouting before verification
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/void-detection](/en/services/void-detection)
-- Makkah: [/en/locations/makkah/void-detection](/en/locations/makkah/void-detection)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "متى أختار GPR ومتى أختار ERT؟", answer: "GPR للأهداف القريبة والشبكات، وERT للأعماق الأكبر أو التربة الرطبة." },
       { question: "هل هي بديل للجسات؟", answer: "ليست بديلًا مطلقًا؛ لكنها توجه الجسات وتقللها حسب الهدف." },
@@ -378,78 +524,128 @@ For an occupied building in **Makkah**, we start with near-surface checks for ut
     },
     content: `# أنواع الحقن الأسمنتي واستخداماتها
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **أنواع الحقن الأسمنتي واستخداماتها** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل تبوك).  
+**تصنيف المقال:** حقن التربة.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل مكة المكرمة).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+شرح عملي يربط الفكرة بالقرار التنفيذي: متى تستخدم، كيف تُنفذ بأمان، وما الذي يُعد جودة حقيقية.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- تقنية GPR ممتازة للأهداف القريبة من السطح وتحديد مرافق تحت الأرض والفراغات الضحلة، لكن أداؤها يتأثر بالرطوبة العالية أو التربة الطينية.
-- اختبار النزف (Bleed) مؤشر مهم لاستقرار الخلطة؛ نزف مرتفع قد يعني انفصال ماء/أسمنت ويضعف فعالية ملء الفراغات. المعالجة تكون بتعديل نسبة الماء أو استخدام إضافات مناسبة عند الحاجة.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- جمع بيانات الموقع
+- تحديد نطاق عمل مرحلي
+- تسجيل الضغط/الكميات/المراحل
+- تقييم ما قبل/بعد
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- توثيق الخلطة وقابلية التشغيل عند اللزوم
+- مراقبة استجابة الموقع
+- تقرير نهائي وتوصيات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **مكة المكرمة** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- البدء بالمعالجة دون تشخيص
+- عدم وجود حدود ضغط/مرحلية
+- غياب معايير قبول
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/soil-grouting](/ar/services/soil-grouting)
-- مدينة مكة المكرمة: [/ar/locations/makkah/soil-grouting](/ar/locations/makkah/soil-grouting)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# Types and Applications of Cement Grouting
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Makkah).
+**Executive summary:** This article provides a structured engineering approach to **Types and Applications of Cement Grouting** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Tabuk).  
+**Category:** Soil Grouting.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- GPR is excellent for near-surface targets, utilities, and shallow voids, but performance can degrade in wet/clayey soils.
-- Bleed is a key stability indicator. High bleed can cause separation and reduce void filling quality. Mitigation includes adjusting water ratio or using suitable admixtures when needed.
+## Engineering context
+A practical guide that connects concept to execution: when to use it, how to execute safely, and what “quality” means.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Collect site data
+- Define a staged scope
+- Log pressure/takes/stages
+- Before/after evaluation
 
-## Quick practical example
-For an occupied building in **Makkah**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Document mix and workability when needed
+- Monitor response
+- Final report and recommendations
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating without diagnosis
+- No pressure/staging limits
+- No acceptance criteria
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/soil-grouting](/en/services/soil-grouting)
-- Makkah: [/en/locations/makkah/soil-grouting](/en/locations/makkah/soil-grouting)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "ما الفرق بين حقن التربة وحقن الخرسانة؟", answer: "حقن التربة يستهدف تحسين/ملء التربة والفراغات تحت الأساسات أو البلاطات، بينما حقن الخرسانة لمعالجة عيوب داخل العناصر الخرسانية." },
       { question: "هل الحقن يسبب رفع البلاط؟", answer: "قد يحدث رفع إذا كانت الضغوط غير مضبوطة. الحل: حقن مرحلي وحدود رفع ومراقبة مستمرة." },
@@ -487,78 +683,126 @@ For an occupied building in **Makkah**, we start with near-surface checks for ut
     },
     content: `# التشققات في المباني: الأسباب والحلول
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **التشققات في المباني: الأسباب والحلول** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل الدمام).  
+**تصنيف المقال:** إصلاح التشققات.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل الرياض).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+إدارة التشققات كعرض وربطها بسبب جيوتكنيكي/إنشائي، مع مراقبة رقمية منضبطة قبل وأثناء وبعد المعالجة.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- تحليل نمط التشقق (مائل/متدرج/شعري) مع قياسات زمنية هو مفتاح تحديد السبب (هبوط تفاضلي، تمدد حراري، تسرب مياه، ضعف تربة).
-- الـ Packer يضمن عزل القطاع داخل الحفرة ويمنح تحكمًا أفضل في الضغط والتدفق؛ الخطأ الشائع هو اختيار قطر/مطاط غير مناسب أو عدم التأكد من إحكام العزل مما يسبب تسريبًا سطحيًا.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- تثبيت نقاط قياس للشقوق/الميل وربطها بشبكة محاور
+- تحديد خط أساس قبل أي تدخل
+- ربط كل قراءة بمرحلة التنفيذ والضغط/الكميات
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- قياسات اتساع الشقوق والميول
+- سجل مناسيب للأرضيات عند الهبوط التفاضلي
+- صور مقارنة بنفس الزوايا
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **الرياض** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- إغلاق الشق دون علاج السبب
+- غياب خط الأساس
+- الحقن بدون مراحل يرفع مخاطر الرفع/التشققات الجديدة
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/foundation-strengthening](/ar/services/foundation-strengthening)
-- مدينة الرياض: [/ar/locations/riyadh/foundation-strengthening](/ar/locations/riyadh/foundation-strengthening)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# Cracks in Buildings: Causes and Solutions
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Riyadh).
+**Executive summary:** This article provides a structured engineering approach to **Cracks in Buildings: Causes and Solutions** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Dammam).  
+**Category:** Crack Repair.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- Crack pattern analysis (diagonal/stepped/hairline) with time-based measurements is essential to identify root cause: differential settlement, thermal movement, leakage, or bearing issues.
-- A packer isolates the injection zone and improves control of pressure/flow. A common mistake is using the wrong diameter or poor sealing, leading to surface leakage and loss of effectiveness.
+## Engineering context
+Treat cracking as a symptom and tie it to geotechnical/structural causes using disciplined monitoring before/during/after intervention.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Install crack/tilt gauges tied to a reference grid
+- Establish a baseline before intervention
+- Correlate readings with stages, pressure and grout takes
 
-## Quick practical example
-For an occupied building in **Riyadh**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Crack width & tilt readings
+- Floor level survey for differential settlement
+- Photo documentation from repeatable angles
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Sealing cracks without treating the cause
+- No baseline
+- Non-staged injection increases heave/new cracking risk
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/foundation-strengthening](/en/services/foundation-strengthening)
-- Riyadh: [/en/locations/riyadh/foundation-strengthening](/en/locations/riyadh/foundation-strengthening)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "ما الفرق بين حقن التربة وحقن الخرسانة؟", answer: "حقن التربة يستهدف تحسين/ملء التربة والفراغات تحت الأساسات أو البلاطات، بينما حقن الخرسانة لمعالجة عيوب داخل العناصر الخرسانية." },
       { question: "هل الحقن يسبب رفع البلاط؟", answer: "قد يحدث رفع إذا كانت الضغوط غير مضبوطة. الحل: حقن مرحلي وحدود رفع ومراقبة مستمرة." },
@@ -596,78 +840,128 @@ For an occupied building in **Riyadh**, we start with near-surface checks for ut
     },
     content: `# أهمية فحص التربة قبل البناء
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **أهمية فحص التربة قبل البناء** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل جدة).  
+**تصنيف المقال:** فحص التربة.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل الجبيل).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+شرح عملي يربط الفكرة بالقرار التنفيذي: متى تستخدم، كيف تُنفذ بأمان، وما الذي يُعد جودة حقيقية.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- اختبار اللزوجة يساعد في ضبط قابلية الضخ والاختراق داخل المسام/الشقوق؛ لزوجة أعلى تعني اختراق أقل وعادةً مناسبة لفراغات أكبر، بينما لزوجة أقل قد تناسب تربة أدق بشرط التحكم في النزف.
-- الـ Packer يضمن عزل القطاع داخل الحفرة ويمنح تحكمًا أفضل في الضغط والتدفق؛ الخطأ الشائع هو اختيار قطر/مطاط غير مناسب أو عدم التأكد من إحكام العزل مما يسبب تسريبًا سطحيًا.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- جمع بيانات الموقع
+- تحديد نطاق عمل مرحلي
+- تسجيل الضغط/الكميات/المراحل
+- تقييم ما قبل/بعد
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- توثيق الخلطة وقابلية التشغيل عند اللزوم
+- مراقبة استجابة الموقع
+- تقرير نهائي وتوصيات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **الجبيل** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- البدء بالمعالجة دون تشخيص
+- عدم وجود حدود ضغط/مرحلية
+- غياب معايير قبول
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/soil-grouting](/ar/services/soil-grouting)
-- مدينة الجبيل: [/ar/locations/jubail/soil-grouting](/ar/locations/jubail/soil-grouting)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# The Importance of Soil Investigation Before Construction
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Jubail).
+**Executive summary:** This article provides a structured engineering approach to **The Importance of Soil Investigation Before Construction** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Jeddah).  
+**Category:** Soil Testing.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- Viscosity helps tune pumpability and penetration. Higher viscosity tends to reduce penetration and fits larger voids; lower viscosity can suit finer soils if bleed is controlled.
-- A packer isolates the injection zone and improves control of pressure/flow. A common mistake is using the wrong diameter or poor sealing, leading to surface leakage and loss of effectiveness.
+## Engineering context
+A practical guide that connects concept to execution: when to use it, how to execute safely, and what “quality” means.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Collect site data
+- Define a staged scope
+- Log pressure/takes/stages
+- Before/after evaluation
 
-## Quick practical example
-For an occupied building in **Jubail**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Document mix and workability when needed
+- Monitor response
+- Final report and recommendations
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating without diagnosis
+- No pressure/staging limits
+- No acceptance criteria
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/soil-grouting](/en/services/soil-grouting)
-- Jubail: [/en/locations/jubail/soil-grouting](/en/locations/jubail/soil-grouting)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "هل كشف الفراغات 100%؟", answer: "هو تحديد شذوذات عالية الثقة ويُفضّل معايرة النتائج بنقاط تحقق عند المشاريع الحساسة." },
       { question: "ما الفرق بين GPR وERT؟", answer: "GPR للسطح والشبكات، وERT للعمق الأكبر والتربة الرطبة/الطينية." },
@@ -705,78 +999,126 @@ For an occupied building in **Jubail**, we start with near-surface checks for ut
     },
     content: `# تقنية رادار اختراق الأرض (GPR)
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **تقنية رادار اختراق الأرض (GPR)** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل الجبيل).  
+**تصنيف المقال:** كشف التكهفات.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل جدة).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+كيف يعمل رادار اختراق الأرض وما الذي يستطيع/لا يستطيع كشفه، وكيف تُصمم شبكة المسح وتقرأ النتائج بواقعية.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- تقنية GPR ممتازة للأهداف القريبة من السطح وتحديد مرافق تحت الأرض والفراغات الضحلة، لكن أداؤها يتأثر بالرطوبة العالية أو التربة الطينية.
-- اختبار النزف (Bleed) مؤشر مهم لاستقرار الخلطة؛ نزف مرتفع قد يعني انفصال ماء/أسمنت ويضعف فعالية ملء الفراغات. المعالجة تكون بتعديل نسبة الماء أو استخدام إضافات مناسبة عند الحاجة.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- اختيار تردد الهوائي حسب العمق/الدقة
+- شبكة مسح Grid مع اتجاهات متقاطعة
+- معايرة السرعة وربطها ببيانات تحقق
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- مقاطع رادارية + خرائط زمنية
+- تحديد مناطق التشويش
+- تأكيد بحفر/فتحات تحقق
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **جدة** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- توقع نتائج قوية في تربة طينية عالية التوصيل
+- إهمال الملوحة/الرطوبة
+- عدم وجود تحقق موقعي
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/void-detection](/ar/services/void-detection)
-- مدينة جدة: [/ar/locations/jeddah/void-detection](/ar/locations/jeddah/void-detection)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# Ground Penetrating Radar (GPR) Technology
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Jeddah).
+**Executive summary:** This article provides a structured engineering approach to **Ground Penetrating Radar (GPR) Technology** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Jubail).  
+**Category:** Cavity Detection.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- GPR is excellent for near-surface targets, utilities, and shallow voids, but performance can degrade in wet/clayey soils.
-- Bleed is a key stability indicator. High bleed can cause separation and reduce void filling quality. Mitigation includes adjusting water ratio or using suitable admixtures when needed.
+## Engineering context
+How GPR works, what it can/can’t detect, and how to design a survey grid and interpret results realistically.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Select antenna frequency for depth/resolution
+- Grid survey with crossing lines
+- Velocity calibration and verification tie-in
 
-## Quick practical example
-For an occupied building in **Jeddah**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Radargrams + time-slice maps
+- Noise/clutter identification
+- Confirmation via drilling/test pits
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Expecting strong results in conductive clays
+- Ignoring salinity/moisture
+- No ground-truthing
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/void-detection](/en/services/void-detection)
-- Jeddah: [/en/locations/jeddah/void-detection](/en/locations/jeddah/void-detection)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "هل كشف الفراغات 100%؟", answer: "هو تحديد شذوذات عالية الثقة ويُفضّل معايرة النتائج بنقاط تحقق عند المشاريع الحساسة." },
       { question: "ما الفرق بين GPR وERT؟", answer: "GPR للسطح والشبكات، وERT للعمق الأكبر والتربة الرطبة/الطينية." },
@@ -814,78 +1156,126 @@ For an occupied building in **Jeddah**, we start with near-surface checks for ut
     },
     content: `# معالجة هبوط الأرضيات الخرسانية
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **معالجة هبوط الأرضيات الخرسانية** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل الدمام).  
+**تصنيف المقال:** معالجة الهبوط.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل جدة).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+تشخيص الهبوط (كلي/تفاضلي) وتحديد إن كان نشطًا، ثم بناء نطاق معالجة متدرّج يقلل مخاطر الرفع.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- تحليل نمط التشقق (مائل/متدرج/شعري) مع قياسات زمنية هو مفتاح تحديد السبب (هبوط تفاضلي، تمدد حراري، تسرب مياه، ضعف تربة).
-- عند مقارنة التكلفة، الأهم هو تكلفة المخاطر (إعادة أعمال، توقف تشغيل، تعويضات). الحل الأرخص قد يكون الأعلى تكلفة على المدى المتوسط إذا لم يعالج السبب الجذري.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- مسح مناسيب/Level survey وتحديد خريطة الهبوط
+- مراجعة التسربات ومصادر المياه
+- اختيار حقن/دمك حسب حالة التربة والفراغات
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- قياسات مناسيب متكررة
+- تسجيل كميات الحقن لكل مرحلة
+- مراقبة استجابة المنشأ (شقوق/أبواب)
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **جدة** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- بدء المعالجة دون خريطة هبوط
+- تجاهل التسربات
+- رفع البلاطات بسبب ضغط زائد
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/foundation-strengthening](/ar/services/foundation-strengthening)
-- مدينة جدة: [/ar/locations/jeddah/foundation-strengthening](/ar/locations/jeddah/foundation-strengthening)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# Remediation of Concrete Slab Settlement
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Jeddah).
+**Executive summary:** This article provides a structured engineering approach to **Remediation of Concrete Slab Settlement** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Dammam).  
+**Category:** Settlement Treatment.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- Crack pattern analysis (diagonal/stepped/hairline) with time-based measurements is essential to identify root cause: differential settlement, thermal movement, leakage, or bearing issues.
-- When comparing cost, consider risk cost (rework, downtime, liabilities). The cheapest option can be most expensive long-term if it doesn’t address root causes.
+## Engineering context
+Diagnose settlement (total/differential), confirm if it’s ongoing, then build a staged scope that controls heave.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Elevation mapping via level survey
+- Check leakage/moisture sources
+- Select grouting/compaction based on soil & voiding
 
-## Quick practical example
-For an occupied building in **Jeddah**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Repeated elevation surveys
+- Stage-by-stage grout take logs
+- Monitor structural response (cracks/doors)
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating without a settlement map
+- Ignoring leakage
+- Slab heave from excessive pressure
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/foundation-strengthening](/en/services/foundation-strengthening)
-- Jeddah: [/en/locations/jeddah/foundation-strengthening](/en/locations/jeddah/foundation-strengthening)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "ما الفرق بين حقن التربة وحقن الخرسانة؟", answer: "حقن التربة يستهدف تحسين/ملء التربة والفراغات تحت الأساسات أو البلاطات، بينما حقن الخرسانة لمعالجة عيوب داخل العناصر الخرسانية." },
       { question: "هل الحقن يسبب رفع البلاط؟", answer: "قد يحدث رفع إذا كانت الضغوط غير مضبوطة. الحل: حقن مرحلي وحدود رفع ومراقبة مستمرة." },
@@ -923,78 +1313,126 @@ For an occupied building in **Jeddah**, we start with near-surface checks for ut
     },
     content: `# حقن الإيبوكسي لإصلاح التشققات
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **حقن الإيبوكسي لإصلاح التشققات** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل أبها).  
+**تصنيف المقال:** إصلاح التشققات.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل المدينة المنورة).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+إدارة التشققات كعرض وربطها بسبب جيوتكنيكي/إنشائي، مع مراقبة رقمية منضبطة قبل وأثناء وبعد المعالجة.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- تحليل نمط التشقق (مائل/متدرج/شعري) مع قياسات زمنية هو مفتاح تحديد السبب (هبوط تفاضلي، تمدد حراري، تسرب مياه، ضعف تربة).
-- الضغط ليس هدفًا بحد ذاته؛ الهدف هو تحقيق ملء/تحسين بدون رفع (Heave) أو إحداث ضرر. لذلك نعتمد حقنًا مرحليًا وحدود رفع ومراقبة مستمرة.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- تثبيت نقاط قياس للشقوق/الميل وربطها بشبكة محاور
+- تحديد خط أساس قبل أي تدخل
+- ربط كل قراءة بمرحلة التنفيذ والضغط/الكميات
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- قياسات اتساع الشقوق والميول
+- سجل مناسيب للأرضيات عند الهبوط التفاضلي
+- صور مقارنة بنفس الزوايا
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **المدينة المنورة** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- إغلاق الشق دون علاج السبب
+- غياب خط الأساس
+- الحقن بدون مراحل يرفع مخاطر الرفع/التشققات الجديدة
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/soil-grouting](/ar/services/soil-grouting)
-- مدينة المدينة المنورة: [/ar/locations/madinah/soil-grouting](/ar/locations/madinah/soil-grouting)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# Epoxy Injection for Crack Repair
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Madinah).
+**Executive summary:** This article provides a structured engineering approach to **Epoxy Injection for Crack Repair** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Abha).  
+**Category:** Crack Repair.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- Crack pattern analysis (diagonal/stepped/hairline) with time-based measurements is essential to identify root cause: differential settlement, thermal movement, leakage, or bearing issues.
-- Pressure is not the goal. The goal is filling/improvement without heave or damage—hence staged injection, strict heave limits, and continuous monitoring.
+## Engineering context
+Treat cracking as a symptom and tie it to geotechnical/structural causes using disciplined monitoring before/during/after intervention.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Install crack/tilt gauges tied to a reference grid
+- Establish a baseline before intervention
+- Correlate readings with stages, pressure and grout takes
 
-## Quick practical example
-For an occupied building in **Madinah**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Crack width & tilt readings
+- Floor level survey for differential settlement
+- Photo documentation from repeatable angles
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Sealing cracks without treating the cause
+- No baseline
+- Non-staged injection increases heave/new cracking risk
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/soil-grouting](/en/services/soil-grouting)
-- Madinah: [/en/locations/madinah/soil-grouting](/en/locations/madinah/soil-grouting)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "ما الفرق بين حقن التربة وحقن الخرسانة؟", answer: "حقن التربة يستهدف تحسين/ملء التربة والفراغات تحت الأساسات أو البلاطات، بينما حقن الخرسانة لمعالجة عيوب داخل العناصر الخرسانية." },
       { question: "هل الحقن يسبب رفع البلاط؟", answer: "قد يحدث رفع إذا كانت الضغوط غير مضبوطة. الحل: حقن مرحلي وحدود رفع ومراقبة مستمرة." },
@@ -1032,78 +1470,128 @@ For an occupied building in **Madinah**, we start with near-surface checks for u
     },
     content: `# تقوية الأساسات الضعيفة
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **تقوية الأساسات الضعيفة** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل مكة المكرمة).  
+**تصنيف المقال:** تقوية الأساسات.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل الدمام).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+شرح عملي يربط الفكرة بالقرار التنفيذي: متى تستخدم، كيف تُنفذ بأمان، وما الذي يُعد جودة حقيقية.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- تحليل نمط التشقق (مائل/متدرج/شعري) مع قياسات زمنية هو مفتاح تحديد السبب (هبوط تفاضلي، تمدد حراري، تسرب مياه، ضعف تربة).
-- الـ Packer يضمن عزل القطاع داخل الحفرة ويمنح تحكمًا أفضل في الضغط والتدفق؛ الخطأ الشائع هو اختيار قطر/مطاط غير مناسب أو عدم التأكد من إحكام العزل مما يسبب تسريبًا سطحيًا.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- جمع بيانات الموقع
+- تحديد نطاق عمل مرحلي
+- تسجيل الضغط/الكميات/المراحل
+- تقييم ما قبل/بعد
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- توثيق الخلطة وقابلية التشغيل عند اللزوم
+- مراقبة استجابة الموقع
+- تقرير نهائي وتوصيات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **الدمام** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- البدء بالمعالجة دون تشخيص
+- عدم وجود حدود ضغط/مرحلية
+- غياب معايير قبول
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/foundation-strengthening](/ar/services/foundation-strengthening)
-- مدينة الدمام: [/ar/locations/dammam/foundation-strengthening](/ar/locations/dammam/foundation-strengthening)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# Strengthening Weak Foundations
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Dammam).
+**Executive summary:** This article provides a structured engineering approach to **Strengthening Weak Foundations** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Makkah).  
+**Category:** Foundation Strengthening.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- Crack pattern analysis (diagonal/stepped/hairline) with time-based measurements is essential to identify root cause: differential settlement, thermal movement, leakage, or bearing issues.
-- A packer isolates the injection zone and improves control of pressure/flow. A common mistake is using the wrong diameter or poor sealing, leading to surface leakage and loss of effectiveness.
+## Engineering context
+A practical guide that connects concept to execution: when to use it, how to execute safely, and what “quality” means.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Collect site data
+- Define a staged scope
+- Log pressure/takes/stages
+- Before/after evaluation
 
-## Quick practical example
-For an occupied building in **Dammam**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Document mix and workability when needed
+- Monitor response
+- Final report and recommendations
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating without diagnosis
+- No pressure/staging limits
+- No acceptance criteria
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/foundation-strengthening](/en/services/foundation-strengthening)
-- Dammam: [/en/locations/dammam/foundation-strengthening](/en/locations/dammam/foundation-strengthening)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "هل كل التشققات سببها التربة؟", answer: "لا. قد تكون إنشائية أو حرارية أو بسبب تسرب مياه. التشخيص يحدد الحل." },
       { question: "ما الفرق بين التدعيم والحقن؟", answer: "التدعيم قد يشمل underpinning وحلول إنشائية، بينما الحقن يحسن التربة/يملأ الفراغات." },
@@ -1141,78 +1629,128 @@ For an occupied building in **Dammam**, we start with near-surface checks for ut
     },
     content: `# المشاكل الجيوتقنية في السعودية
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **المشاكل الجيوتقنية في السعودية** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل الخبر).  
+**تصنيف المقال:** فحص التربة.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل مكة المكرمة).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+شرح عملي يربط الفكرة بالقرار التنفيذي: متى تستخدم، كيف تُنفذ بأمان، وما الذي يُعد جودة حقيقية.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- في البيئات الكارستية (صخور جيرية/دولومايت)، التكهفات قد تكون مرتبطة بمسارات مياه؛ الحل عادةً يجمع بين كشف جيوفيزيائي + خطة حقن/تدعيم + السيطرة على مصادر المياه.
-- التقرير الاحترافي لا يكتفي بوصف طبقات التربة، بل يربط النتائج بالقرار التنفيذي: نوع الأساس، حدود الهبوط، توصيات الردم/الدمك، واحتياج تحسين/حقن.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- جمع بيانات الموقع
+- تحديد نطاق عمل مرحلي
+- تسجيل الضغط/الكميات/المراحل
+- تقييم ما قبل/بعد
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- توثيق الخلطة وقابلية التشغيل عند اللزوم
+- مراقبة استجابة الموقع
+- تقرير نهائي وتوصيات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **مكة المكرمة** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- البدء بالمعالجة دون تشخيص
+- عدم وجود حدود ضغط/مرحلية
+- غياب معايير قبول
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/soil-grouting](/ar/services/soil-grouting)
-- مدينة مكة المكرمة: [/ar/locations/makkah/soil-grouting](/ar/locations/makkah/soil-grouting)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# Geotechnical Problems in Saudi Arabia
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Makkah).
+**Executive summary:** This article provides a structured engineering approach to **Geotechnical Problems in Saudi Arabia** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Khobar).  
+**Category:** Soil Testing.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- In karstic carbonate environments, cavities can relate to water pathways. A robust solution combines geophysics, a staged grouting/strengthening plan, and water control.
-- A high-quality report links soil layers to decisions: foundation type, settlement limits, compaction/backfill, and whether improvement/grouting is needed.
+## Engineering context
+A practical guide that connects concept to execution: when to use it, how to execute safely, and what “quality” means.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Collect site data
+- Define a staged scope
+- Log pressure/takes/stages
+- Before/after evaluation
 
-## Quick practical example
-For an occupied building in **Makkah**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Document mix and workability when needed
+- Monitor response
+- Final report and recommendations
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating without diagnosis
+- No pressure/staging limits
+- No acceptance criteria
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/soil-grouting](/en/services/soil-grouting)
-- Makkah: [/en/locations/makkah/soil-grouting](/en/locations/makkah/soil-grouting)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "هل كل التشققات سببها التربة؟", answer: "لا. قد تكون إنشائية أو حرارية أو بسبب تسرب مياه. التشخيص يحدد الحل." },
       { question: "ما الفرق بين التدعيم والحقن؟", answer: "التدعيم قد يشمل underpinning وحلول إنشائية، بينما الحقن يحسن التربة/يملأ الفراغات." },
@@ -1250,78 +1788,128 @@ For an occupied building in **Makkah**, we start with near-surface checks for ut
     },
     content: `# تقنية Jet Grouting وتطبيقاتها
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **تقنية Jet Grouting وتطبيقاتها** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل أبها).  
+**تصنيف المقال:** حقن التربة.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل المدينة المنورة).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+شرح عملي يربط الفكرة بالقرار التنفيذي: متى تستخدم، كيف تُنفذ بأمان، وما الذي يُعد جودة حقيقية.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- اختبار اللزوجة يساعد في ضبط قابلية الضخ والاختراق داخل المسام/الشقوق؛ لزوجة أعلى تعني اختراق أقل وعادةً مناسبة لفراغات أكبر، بينما لزوجة أقل قد تناسب تربة أدق بشرط التحكم في النزف.
-- في البيئات الكارستية (صخور جيرية/دولومايت)، التكهفات قد تكون مرتبطة بمسارات مياه؛ الحل عادةً يجمع بين كشف جيوفيزيائي + خطة حقن/تدعيم + السيطرة على مصادر المياه.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- جمع بيانات الموقع
+- تحديد نطاق عمل مرحلي
+- تسجيل الضغط/الكميات/المراحل
+- تقييم ما قبل/بعد
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- توثيق الخلطة وقابلية التشغيل عند اللزوم
+- مراقبة استجابة الموقع
+- تقرير نهائي وتوصيات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **المدينة المنورة** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- البدء بالمعالجة دون تشخيص
+- عدم وجود حدود ضغط/مرحلية
+- غياب معايير قبول
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/soil-grouting](/ar/services/soil-grouting)
-- مدينة المدينة المنورة: [/ar/locations/madinah/soil-grouting](/ar/locations/madinah/soil-grouting)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# Jet Grouting Technology and Its Applications
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Madinah).
+**Executive summary:** This article provides a structured engineering approach to **Jet Grouting Technology and Its Applications** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Abha).  
+**Category:** Soil Grouting.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- Viscosity helps tune pumpability and penetration. Higher viscosity tends to reduce penetration and fits larger voids; lower viscosity can suit finer soils if bleed is controlled.
-- In karstic carbonate environments, cavities can relate to water pathways. A robust solution combines geophysics, a staged grouting/strengthening plan, and water control.
+## Engineering context
+A practical guide that connects concept to execution: when to use it, how to execute safely, and what “quality” means.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Collect site data
+- Define a staged scope
+- Log pressure/takes/stages
+- Before/after evaluation
 
-## Quick practical example
-For an occupied building in **Madinah**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Document mix and workability when needed
+- Monitor response
+- Final report and recommendations
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating without diagnosis
+- No pressure/staging limits
+- No acceptance criteria
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/soil-grouting](/en/services/soil-grouting)
-- Madinah: [/en/locations/madinah/soil-grouting](/en/locations/madinah/soil-grouting)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "ما الفرق بين حقن التربة وحقن الخرسانة؟", answer: "حقن التربة يستهدف تحسين/ملء التربة والفراغات تحت الأساسات أو البلاطات، بينما حقن الخرسانة لمعالجة عيوب داخل العناصر الخرسانية." },
       { question: "هل الحقن يسبب رفع البلاط؟", answer: "قد يحدث رفع إذا كانت الضغوط غير مضبوطة. الحل: حقن مرحلي وحدود رفع ومراقبة مستمرة." },
@@ -1359,78 +1947,128 @@ For an occupied building in **Madinah**, we start with near-surface checks for u
     },
     content: `# كيفية اختيار تقنية الحقن المناسبة
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **كيفية اختيار تقنية الحقن المناسبة** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل القصيم).  
+**تصنيف المقال:** حقن التربة.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل المدينة المنورة).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+شرح عملي يربط الفكرة بالقرار التنفيذي: متى تستخدم، كيف تُنفذ بأمان، وما الذي يُعد جودة حقيقية.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- تقنية GPR ممتازة للأهداف القريبة من السطح وتحديد مرافق تحت الأرض والفراغات الضحلة، لكن أداؤها يتأثر بالرطوبة العالية أو التربة الطينية.
-- الـ Packer يضمن عزل القطاع داخل الحفرة ويمنح تحكمًا أفضل في الضغط والتدفق؛ الخطأ الشائع هو اختيار قطر/مطاط غير مناسب أو عدم التأكد من إحكام العزل مما يسبب تسريبًا سطحيًا.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- جمع بيانات الموقع
+- تحديد نطاق عمل مرحلي
+- تسجيل الضغط/الكميات/المراحل
+- تقييم ما قبل/بعد
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- توثيق الخلطة وقابلية التشغيل عند اللزوم
+- مراقبة استجابة الموقع
+- تقرير نهائي وتوصيات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **المدينة المنورة** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- البدء بالمعالجة دون تشخيص
+- عدم وجود حدود ضغط/مرحلية
+- غياب معايير قبول
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/soil-grouting](/ar/services/soil-grouting)
-- مدينة المدينة المنورة: [/ar/locations/madinah/soil-grouting](/ar/locations/madinah/soil-grouting)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# How to Select the Appropriate Grouting Technique
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Madinah).
+**Executive summary:** This article provides a structured engineering approach to **How to Select the Appropriate Grouting Technique** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Qassim).  
+**Category:** Soil Grouting.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- GPR is excellent for near-surface targets, utilities, and shallow voids, but performance can degrade in wet/clayey soils.
-- A packer isolates the injection zone and improves control of pressure/flow. A common mistake is using the wrong diameter or poor sealing, leading to surface leakage and loss of effectiveness.
+## Engineering context
+A practical guide that connects concept to execution: when to use it, how to execute safely, and what “quality” means.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Collect site data
+- Define a staged scope
+- Log pressure/takes/stages
+- Before/after evaluation
 
-## Quick practical example
-For an occupied building in **Madinah**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Document mix and workability when needed
+- Monitor response
+- Final report and recommendations
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating without diagnosis
+- No pressure/staging limits
+- No acceptance criteria
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/soil-grouting](/en/services/soil-grouting)
-- Madinah: [/en/locations/madinah/soil-grouting](/en/locations/madinah/soil-grouting)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "ما الفرق بين حقن التربة وحقن الخرسانة؟", answer: "حقن التربة يستهدف تحسين/ملء التربة والفراغات تحت الأساسات أو البلاطات، بينما حقن الخرسانة لمعالجة عيوب داخل العناصر الخرسانية." },
       { question: "هل الحقن يسبب رفع البلاط؟", answer: "قد يحدث رفع إذا كانت الضغوط غير مضبوطة. الحل: حقن مرحلي وحدود رفع ومراقبة مستمرة." },
@@ -1468,78 +2106,128 @@ For an occupied building in **Madinah**, we start with near-surface checks for u
     },
     content: `# معالجة تسربات المياه في الأساسات
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **معالجة تسربات المياه في الأساسات** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل أبها).  
+**تصنيف المقال:** معالجة الهبوط.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل مكة المكرمة).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+شرح عملي يربط الفكرة بالقرار التنفيذي: متى تستخدم، كيف تُنفذ بأمان، وما الذي يُعد جودة حقيقية.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- تقنية GPR ممتازة للأهداف القريبة من السطح وتحديد مرافق تحت الأرض والفراغات الضحلة، لكن أداؤها يتأثر بالرطوبة العالية أو التربة الطينية.
-- تقنية ERT مناسبة للأعماق الأكبر وتحديد مناطق ضعف/تكهف محتملة عبر فروقات المقاومة الكهربائية، وغالبًا ما تكون أكثر موثوقية في التربة الرطبة مقارنةً بـ GPR.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- جمع بيانات الموقع
+- تحديد نطاق عمل مرحلي
+- تسجيل الضغط/الكميات/المراحل
+- تقييم ما قبل/بعد
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- توثيق الخلطة وقابلية التشغيل عند اللزوم
+- مراقبة استجابة الموقع
+- تقرير نهائي وتوصيات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **مكة المكرمة** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- البدء بالمعالجة دون تشخيص
+- عدم وجود حدود ضغط/مرحلية
+- غياب معايير قبول
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/foundation-strengthening](/ar/services/foundation-strengthening)
-- مدينة مكة المكرمة: [/ar/locations/makkah/foundation-strengthening](/ar/locations/makkah/foundation-strengthening)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# Treating Water Leakage in Foundations
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Makkah).
+**Executive summary:** This article provides a structured engineering approach to **Treating Water Leakage in Foundations** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Abha).  
+**Category:** Settlement Treatment.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- GPR is excellent for near-surface targets, utilities, and shallow voids, but performance can degrade in wet/clayey soils.
-- ERT is suitable for deeper targets and mapping potential cavities via resistivity contrasts, often more reliable than GPR in wet conditions.
+## Engineering context
+A practical guide that connects concept to execution: when to use it, how to execute safely, and what “quality” means.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Collect site data
+- Define a staged scope
+- Log pressure/takes/stages
+- Before/after evaluation
 
-## Quick practical example
-For an occupied building in **Makkah**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Document mix and workability when needed
+- Monitor response
+- Final report and recommendations
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating without diagnosis
+- No pressure/staging limits
+- No acceptance criteria
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/foundation-strengthening](/en/services/foundation-strengthening)
-- Makkah: [/en/locations/makkah/foundation-strengthening](/en/locations/makkah/foundation-strengthening)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "هل كل التشققات سببها التربة؟", answer: "لا. قد تكون إنشائية أو حرارية أو بسبب تسرب مياه. التشخيص يحدد الحل." },
       { question: "ما الفرق بين التدعيم والحقن؟", answer: "التدعيم قد يشمل underpinning وحلول إنشائية، بينما الحقن يحسن التربة/يملأ الفراغات." },
@@ -1577,78 +2265,128 @@ For an occupied building in **Makkah**, we start with near-surface checks for ut
     },
     content: `# التدعيم بألياف الكربون
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **التدعيم بألياف الكربون** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل القصيم).  
+**تصنيف المقال:** إصلاح التشققات.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل الخبر).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+شرح عملي يربط الفكرة بالقرار التنفيذي: متى تستخدم، كيف تُنفذ بأمان، وما الذي يُعد جودة حقيقية.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- الـ Packer يضمن عزل القطاع داخل الحفرة ويمنح تحكمًا أفضل في الضغط والتدفق؛ الخطأ الشائع هو اختيار قطر/مطاط غير مناسب أو عدم التأكد من إحكام العزل مما يسبب تسريبًا سطحيًا.
-- عند مقارنة التكلفة، الأهم هو تكلفة المخاطر (إعادة أعمال، توقف تشغيل، تعويضات). الحل الأرخص قد يكون الأعلى تكلفة على المدى المتوسط إذا لم يعالج السبب الجذري.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- جمع بيانات الموقع
+- تحديد نطاق عمل مرحلي
+- تسجيل الضغط/الكميات/المراحل
+- تقييم ما قبل/بعد
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- توثيق الخلطة وقابلية التشغيل عند اللزوم
+- مراقبة استجابة الموقع
+- تقرير نهائي وتوصيات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **الخبر** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- البدء بالمعالجة دون تشخيص
+- عدم وجود حدود ضغط/مرحلية
+- غياب معايير قبول
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/soil-grouting](/ar/services/soil-grouting)
-- مدينة الخبر: [/ar/locations/khobar/soil-grouting](/ar/locations/khobar/soil-grouting)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# Carbon Fiber Reinforcement
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Khobar).
+**Executive summary:** This article provides a structured engineering approach to **Carbon Fiber Reinforcement** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Qassim).  
+**Category:** Crack Repair.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- A packer isolates the injection zone and improves control of pressure/flow. A common mistake is using the wrong diameter or poor sealing, leading to surface leakage and loss of effectiveness.
-- When comparing cost, consider risk cost (rework, downtime, liabilities). The cheapest option can be most expensive long-term if it doesn’t address root causes.
+## Engineering context
+A practical guide that connects concept to execution: when to use it, how to execute safely, and what “quality” means.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Collect site data
+- Define a staged scope
+- Log pressure/takes/stages
+- Before/after evaluation
 
-## Quick practical example
-For an occupied building in **Khobar**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Document mix and workability when needed
+- Monitor response
+- Final report and recommendations
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating without diagnosis
+- No pressure/staging limits
+- No acceptance criteria
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/soil-grouting](/en/services/soil-grouting)
-- Khobar: [/en/locations/khobar/soil-grouting](/en/locations/khobar/soil-grouting)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "هل كل التشققات سببها التربة؟", answer: "لا. قد تكون إنشائية أو حرارية أو بسبب تسرب مياه. التشخيص يحدد الحل." },
       { question: "ما الفرق بين التدعيم والحقن؟", answer: "التدعيم قد يشمل underpinning وحلول إنشائية، بينما الحقن يحسن التربة/يملأ الفراغات." },
@@ -1686,78 +2424,128 @@ For an occupied building in **Khobar**, we start with near-surface checks for ut
     },
     content: `# الفحص الدوري للمباني
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **الفحص الدوري للمباني** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل أبها).  
+**تصنيف المقال:** فحص التربة.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل الدمام).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+شرح عملي يربط الفكرة بالقرار التنفيذي: متى تستخدم، كيف تُنفذ بأمان، وما الذي يُعد جودة حقيقية.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- الـ Packer يضمن عزل القطاع داخل الحفرة ويمنح تحكمًا أفضل في الضغط والتدفق؛ الخطأ الشائع هو اختيار قطر/مطاط غير مناسب أو عدم التأكد من إحكام العزل مما يسبب تسريبًا سطحيًا.
-- اختبار اللزوجة يساعد في ضبط قابلية الضخ والاختراق داخل المسام/الشقوق؛ لزوجة أعلى تعني اختراق أقل وعادةً مناسبة لفراغات أكبر، بينما لزوجة أقل قد تناسب تربة أدق بشرط التحكم في النزف.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- جمع بيانات الموقع
+- تحديد نطاق عمل مرحلي
+- تسجيل الضغط/الكميات/المراحل
+- تقييم ما قبل/بعد
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- توثيق الخلطة وقابلية التشغيل عند اللزوم
+- مراقبة استجابة الموقع
+- تقرير نهائي وتوصيات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **الدمام** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- البدء بالمعالجة دون تشخيص
+- عدم وجود حدود ضغط/مرحلية
+- غياب معايير قبول
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/soil-grouting](/ar/services/soil-grouting)
-- مدينة الدمام: [/ar/locations/dammam/soil-grouting](/ar/locations/dammam/soil-grouting)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# Periodic Building Inspection
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Dammam).
+**Executive summary:** This article provides a structured engineering approach to **Periodic Building Inspection** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Abha).  
+**Category:** Soil Testing.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- A packer isolates the injection zone and improves control of pressure/flow. A common mistake is using the wrong diameter or poor sealing, leading to surface leakage and loss of effectiveness.
-- Viscosity helps tune pumpability and penetration. Higher viscosity tends to reduce penetration and fits larger voids; lower viscosity can suit finer soils if bleed is controlled.
+## Engineering context
+A practical guide that connects concept to execution: when to use it, how to execute safely, and what “quality” means.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Collect site data
+- Define a staged scope
+- Log pressure/takes/stages
+- Before/after evaluation
 
-## Quick practical example
-For an occupied building in **Dammam**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Document mix and workability when needed
+- Monitor response
+- Final report and recommendations
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating without diagnosis
+- No pressure/staging limits
+- No acceptance criteria
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/soil-grouting](/en/services/soil-grouting)
-- Dammam: [/en/locations/dammam/soil-grouting](/en/locations/dammam/soil-grouting)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "هل كل التشققات سببها التربة؟", answer: "لا. قد تكون إنشائية أو حرارية أو بسبب تسرب مياه. التشخيص يحدد الحل." },
       { question: "ما الفرق بين التدعيم والحقن؟", answer: "التدعيم قد يشمل underpinning وحلول إنشائية، بينما الحقن يحسن التربة/يملأ الفراغات." },
@@ -1795,78 +2583,126 @@ For an occupied building in **Dammam**, we start with near-surface checks for ut
     },
     content: `# التكهفات الصخرية: المخاطر والحلول
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **التكهفات الصخرية: المخاطر والحلول** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل تبوك).  
+**تصنيف المقال:** كشف التكهفات.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل مكة المكرمة).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+منهجية كشف الفراغات: اختيار التقنية، فهم حدود الدقة، ثم تحويل النتائج إلى نقاط تحقق ونطاق معالجة.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- في البيئات الكارستية (صخور جيرية/دولومايت)، التكهفات قد تكون مرتبطة بمسارات مياه؛ الحل عادةً يجمع بين كشف جيوفيزيائي + خطة حقن/تدعيم + السيطرة على مصادر المياه.
-- الـ Packer يضمن عزل القطاع داخل الحفرة ويمنح تحكمًا أفضل في الضغط والتدفق؛ الخطأ الشائع هو اختيار قطر/مطاط غير مناسب أو عدم التأكد من إحكام العزل مما يسبب تسريبًا سطحيًا.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- GPR عندما تكون التربة مناسبة
+- ERT/Resistivity للتربة الرطبة/الملحية
+- حفر تحقق لتثبيت التفسير
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- خرائط شذوذ + نقاط تحقق
+- تقرير تفسير مع نسبة ثقة
+- ربط الأعماق مع منسوب الأساسات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **مكة المكرمة** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- اعتبار كل شذوذ فراغًا مؤكدًا
+- تجاهل حدود الطريقة
+- حقن قبل التحقق
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/void-detection](/ar/services/void-detection)
-- مدينة مكة المكرمة: [/ar/locations/makkah/void-detection](/ar/locations/makkah/void-detection)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# Rock Cavities: Risks and Solutions
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Makkah).
+**Executive summary:** This article provides a structured engineering approach to **Rock Cavities: Risks and Solutions** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Tabuk).  
+**Category:** Cavity Detection.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- In karstic carbonate environments, cavities can relate to water pathways. A robust solution combines geophysics, a staged grouting/strengthening plan, and water control.
-- A packer isolates the injection zone and improves control of pressure/flow. A common mistake is using the wrong diameter or poor sealing, leading to surface leakage and loss of effectiveness.
+## Engineering context
+A void detection workflow: select the method, state limitations, then translate results into verification and treatment scope.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- GPR where soil conditions allow
+- ERT/resistivity for wet/saline ground
+- Verification drilling to ground-truth anomalies
 
-## Quick practical example
-For an occupied building in **Makkah**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Anomaly maps + verification points
+- Interpretation with confidence notes
+- Depth correlation vs foundation levels
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating every anomaly as confirmed void
+- Ignoring method limits
+- Grouting before verification
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/void-detection](/en/services/void-detection)
-- Makkah: [/en/locations/makkah/void-detection](/en/locations/makkah/void-detection)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "هل كشف الفراغات 100%؟", answer: "هو تحديد شذوذات عالية الثقة ويُفضّل معايرة النتائج بنقاط تحقق عند المشاريع الحساسة." },
       { question: "ما الفرق بين GPR وERT؟", answer: "GPR للسطح والشبكات، وERT للعمق الأكبر والتربة الرطبة/الطينية." },
@@ -1904,78 +2740,128 @@ For an occupied building in **Makkah**, we start with near-surface checks for ut
     },
     content: `# تحسين خواص التربة قبل البناء
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **تحسين خواص التربة قبل البناء** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل الخبر).  
+**تصنيف المقال:** حقن التربة.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل الدمام).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+شرح عملي يربط الفكرة بالقرار التنفيذي: متى تستخدم، كيف تُنفذ بأمان، وما الذي يُعد جودة حقيقية.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- تحليل نمط التشقق (مائل/متدرج/شعري) مع قياسات زمنية هو مفتاح تحديد السبب (هبوط تفاضلي، تمدد حراري، تسرب مياه، ضعف تربة).
-- الضغط ليس هدفًا بحد ذاته؛ الهدف هو تحقيق ملء/تحسين بدون رفع (Heave) أو إحداث ضرر. لذلك نعتمد حقنًا مرحليًا وحدود رفع ومراقبة مستمرة.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- جمع بيانات الموقع
+- تحديد نطاق عمل مرحلي
+- تسجيل الضغط/الكميات/المراحل
+- تقييم ما قبل/بعد
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- توثيق الخلطة وقابلية التشغيل عند اللزوم
+- مراقبة استجابة الموقع
+- تقرير نهائي وتوصيات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **الدمام** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- البدء بالمعالجة دون تشخيص
+- عدم وجود حدود ضغط/مرحلية
+- غياب معايير قبول
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/soil-grouting](/ar/services/soil-grouting)
-- مدينة الدمام: [/ar/locations/dammam/soil-grouting](/ar/locations/dammam/soil-grouting)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# Soil Improvement Prior to Construction
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Dammam).
+**Executive summary:** This article provides a structured engineering approach to **Soil Improvement Prior to Construction** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Khobar).  
+**Category:** Soil Grouting.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- Crack pattern analysis (diagonal/stepped/hairline) with time-based measurements is essential to identify root cause: differential settlement, thermal movement, leakage, or bearing issues.
-- Pressure is not the goal. The goal is filling/improvement without heave or damage—hence staged injection, strict heave limits, and continuous monitoring.
+## Engineering context
+A practical guide that connects concept to execution: when to use it, how to execute safely, and what “quality” means.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Collect site data
+- Define a staged scope
+- Log pressure/takes/stages
+- Before/after evaluation
 
-## Quick practical example
-For an occupied building in **Dammam**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Document mix and workability when needed
+- Monitor response
+- Final report and recommendations
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating without diagnosis
+- No pressure/staging limits
+- No acceptance criteria
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/soil-grouting](/en/services/soil-grouting)
-- Dammam: [/en/locations/dammam/soil-grouting](/en/locations/dammam/soil-grouting)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "ما الفرق بين حقن التربة وحقن الخرسانة؟", answer: "حقن التربة يستهدف تحسين/ملء التربة والفراغات تحت الأساسات أو البلاطات، بينما حقن الخرسانة لمعالجة عيوب داخل العناصر الخرسانية." },
       { question: "هل الحقن يسبب رفع البلاط؟", answer: "قد يحدث رفع إذا كانت الضغوط غير مضبوطة. الحل: حقن مرحلي وحدود رفع ومراقبة مستمرة." },
@@ -2013,78 +2899,128 @@ For an occupied building in **Dammam**, we start with near-surface checks for ut
     },
     content: `# أهمية تقرير التربة: دليل شامل للملاك والمهندسين
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **أهمية تقرير التربة: دليل شامل للملاك والمهندسين** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل الخبر).  
+**تصنيف المقال:** فحص التربة والتحريات الجيوتقنية.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل الخبر).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+شرح عملي يربط الفكرة بالقرار التنفيذي: متى تستخدم، كيف تُنفذ بأمان، وما الذي يُعد جودة حقيقية.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- التقرير الاحترافي لا يكتفي بوصف طبقات التربة، بل يربط النتائج بالقرار التنفيذي: نوع الأساس، حدود الهبوط، توصيات الردم/الدمك، واحتياج تحسين/حقن.
-- الضغط ليس هدفًا بحد ذاته؛ الهدف هو تحقيق ملء/تحسين بدون رفع (Heave) أو إحداث ضرر. لذلك نعتمد حقنًا مرحليًا وحدود رفع ومراقبة مستمرة.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- جمع بيانات الموقع
+- تحديد نطاق عمل مرحلي
+- تسجيل الضغط/الكميات/المراحل
+- تقييم ما قبل/بعد
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- توثيق الخلطة وقابلية التشغيل عند اللزوم
+- مراقبة استجابة الموقع
+- تقرير نهائي وتوصيات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **الخبر** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- البدء بالمعالجة دون تشخيص
+- عدم وجود حدود ضغط/مرحلية
+- غياب معايير قبول
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/soil-grouting](/ar/services/soil-grouting)
-- مدينة الخبر: [/ar/locations/khobar/soil-grouting](/ar/locations/khobar/soil-grouting)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# The Importance of the Soil Report: A Comprehensive Guide for Owners and Engineers
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Khobar).
+**Executive summary:** This article provides a structured engineering approach to **The Importance of the Soil Report: A Comprehensive Guide for Owners and Engineers** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Khobar).  
+**Category:** Soil Investigation & Testing.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- A high-quality report links soil layers to decisions: foundation type, settlement limits, compaction/backfill, and whether improvement/grouting is needed.
-- Pressure is not the goal. The goal is filling/improvement without heave or damage—hence staged injection, strict heave limits, and continuous monitoring.
+## Engineering context
+A practical guide that connects concept to execution: when to use it, how to execute safely, and what “quality” means.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Collect site data
+- Define a staged scope
+- Log pressure/takes/stages
+- Before/after evaluation
 
-## Quick practical example
-For an occupied building in **Khobar**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Document mix and workability when needed
+- Monitor response
+- Final report and recommendations
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating without diagnosis
+- No pressure/staging limits
+- No acceptance criteria
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/soil-grouting](/en/services/soil-grouting)
-- Khobar: [/en/locations/khobar/soil-grouting](/en/locations/khobar/soil-grouting)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "هل كل التشققات سببها التربة؟", answer: "لا. قد تكون إنشائية أو حرارية أو بسبب تسرب مياه. التشخيص يحدد الحل." },
       { question: "ما الفرق بين التدعيم والحقن؟", answer: "التدعيم قد يشمل underpinning وحلول إنشائية، بينما الحقن يحسن التربة/يملأ الفراغات." },
@@ -2122,78 +3058,128 @@ For an occupied building in **Khobar**, we start with near-surface checks for ut
     },
     content: `# الجسات الأرضية (Boreholes): العدد، العمق، والمعايير الفنية
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **الجسات الأرضية (Boreholes): العدد، العمق، والمعايير الفنية** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل القصيم).  
+**تصنيف المقال:** فحص التربة والتحريات الجيوتقنية.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل الخبر).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+شرح عملي يربط الفكرة بالقرار التنفيذي: متى تستخدم، كيف تُنفذ بأمان، وما الذي يُعد جودة حقيقية.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- عند مقارنة التكلفة، الأهم هو تكلفة المخاطر (إعادة أعمال، توقف تشغيل، تعويضات). الحل الأرخص قد يكون الأعلى تكلفة على المدى المتوسط إذا لم يعالج السبب الجذري.
-- اختبار النزف (Bleed) مؤشر مهم لاستقرار الخلطة؛ نزف مرتفع قد يعني انفصال ماء/أسمنت ويضعف فعالية ملء الفراغات. المعالجة تكون بتعديل نسبة الماء أو استخدام إضافات مناسبة عند الحاجة.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- جمع بيانات الموقع
+- تحديد نطاق عمل مرحلي
+- تسجيل الضغط/الكميات/المراحل
+- تقييم ما قبل/بعد
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- توثيق الخلطة وقابلية التشغيل عند اللزوم
+- مراقبة استجابة الموقع
+- تقرير نهائي وتوصيات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **الخبر** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- البدء بالمعالجة دون تشخيص
+- عدم وجود حدود ضغط/مرحلية
+- غياب معايير قبول
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/soil-grouting](/ar/services/soil-grouting)
-- مدينة الخبر: [/ar/locations/khobar/soil-grouting](/ar/locations/khobar/soil-grouting)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# Boreholes: Number, Depth, and Technical Specifications
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Khobar).
+**Executive summary:** This article provides a structured engineering approach to **Boreholes: Number, Depth, and Technical Specifications** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Qassim).  
+**Category:** Soil Investigation & Testing.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- When comparing cost, consider risk cost (rework, downtime, liabilities). The cheapest option can be most expensive long-term if it doesn’t address root causes.
-- Bleed is a key stability indicator. High bleed can cause separation and reduce void filling quality. Mitigation includes adjusting water ratio or using suitable admixtures when needed.
+## Engineering context
+A practical guide that connects concept to execution: when to use it, how to execute safely, and what “quality” means.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Collect site data
+- Define a staged scope
+- Log pressure/takes/stages
+- Before/after evaluation
 
-## Quick practical example
-For an occupied building in **Khobar**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Document mix and workability when needed
+- Monitor response
+- Final report and recommendations
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating without diagnosis
+- No pressure/staging limits
+- No acceptance criteria
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/soil-grouting](/en/services/soil-grouting)
-- Khobar: [/en/locations/khobar/soil-grouting](/en/locations/khobar/soil-grouting)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "ما الفرق بين حقن التربة وحقن الخرسانة؟", answer: "حقن التربة يستهدف تحسين/ملء التربة والفراغات تحت الأساسات أو البلاطات، بينما حقن الخرسانة لمعالجة عيوب داخل العناصر الخرسانية." },
       { question: "هل الحقن يسبب رفع البلاط؟", answer: "قد يحدث رفع إذا كانت الضغوط غير مضبوطة. الحل: حقن مرحلي وحدود رفع ومراقبة مستمرة." },
@@ -2231,78 +3217,128 @@ For an occupied building in **Khobar**, we start with near-surface checks for ut
     },
     content: `# اختبار الاختراق القياسي (SPT): كيف نحدد كثافة التربة وقدرتها على التحمل؟
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **اختبار الاختراق القياسي (SPT): كيف نحدد كثافة التربة وقدرتها على التحمل؟** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل جدة).  
+**تصنيف المقال:** فحص التربة والتحريات الجيوتقنية.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل الرياض).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+شرح عملي يربط الفكرة بالقرار التنفيذي: متى تستخدم، كيف تُنفذ بأمان، وما الذي يُعد جودة حقيقية.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- تقنية GPR ممتازة للأهداف القريبة من السطح وتحديد مرافق تحت الأرض والفراغات الضحلة، لكن أداؤها يتأثر بالرطوبة العالية أو التربة الطينية.
-- الضغط ليس هدفًا بحد ذاته؛ الهدف هو تحقيق ملء/تحسين بدون رفع (Heave) أو إحداث ضرر. لذلك نعتمد حقنًا مرحليًا وحدود رفع ومراقبة مستمرة.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- جمع بيانات الموقع
+- تحديد نطاق عمل مرحلي
+- تسجيل الضغط/الكميات/المراحل
+- تقييم ما قبل/بعد
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- توثيق الخلطة وقابلية التشغيل عند اللزوم
+- مراقبة استجابة الموقع
+- تقرير نهائي وتوصيات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **الرياض** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- البدء بالمعالجة دون تشخيص
+- عدم وجود حدود ضغط/مرحلية
+- غياب معايير قبول
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/soil-grouting](/ar/services/soil-grouting)
-- مدينة الرياض: [/ar/locations/riyadh/soil-grouting](/ar/locations/riyadh/soil-grouting)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# Standard Penetration Test (SPT): How to Determine Soil Density and Bearing Capacity
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Riyadh).
+**Executive summary:** This article provides a structured engineering approach to **Standard Penetration Test (SPT): How to Determine Soil Density and Bearing Capacity** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Jeddah).  
+**Category:** Soil Investigation & Testing.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- GPR is excellent for near-surface targets, utilities, and shallow voids, but performance can degrade in wet/clayey soils.
-- Pressure is not the goal. The goal is filling/improvement without heave or damage—hence staged injection, strict heave limits, and continuous monitoring.
+## Engineering context
+A practical guide that connects concept to execution: when to use it, how to execute safely, and what “quality” means.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Collect site data
+- Define a staged scope
+- Log pressure/takes/stages
+- Before/after evaluation
 
-## Quick practical example
-For an occupied building in **Riyadh**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Document mix and workability when needed
+- Monitor response
+- Final report and recommendations
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating without diagnosis
+- No pressure/staging limits
+- No acceptance criteria
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/soil-grouting](/en/services/soil-grouting)
-- Riyadh: [/en/locations/riyadh/soil-grouting](/en/locations/riyadh/soil-grouting)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "ما الفرق بين حقن التربة وحقن الخرسانة؟", answer: "حقن التربة يستهدف تحسين/ملء التربة والفراغات تحت الأساسات أو البلاطات، بينما حقن الخرسانة لمعالجة عيوب داخل العناصر الخرسانية." },
       { question: "هل الحقن يسبب رفع البلاط؟", answer: "قد يحدث رفع إذا كانت الضغوط غير مضبوطة. الحل: حقن مرحلي وحدود رفع ومراقبة مستمرة." },
@@ -2340,78 +3376,128 @@ For an occupied building in **Riyadh**, we start with near-surface checks for ut
     },
     content: `# المخاطر الخفية وتجاهل التوصيات: ميكانيكا التربة
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **المخاطر الخفية وتجاهل التوصيات: ميكانيكا التربة** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل الدمام).  
+**تصنيف المقال:** فحص التربة والتحريات الجيوتقنية.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل جدة).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+شرح عملي يربط الفكرة بالقرار التنفيذي: متى تستخدم، كيف تُنفذ بأمان، وما الذي يُعد جودة حقيقية.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- اختبار النزف (Bleed) مؤشر مهم لاستقرار الخلطة؛ نزف مرتفع قد يعني انفصال ماء/أسمنت ويضعف فعالية ملء الفراغات. المعالجة تكون بتعديل نسبة الماء أو استخدام إضافات مناسبة عند الحاجة.
-- الـ Packer يضمن عزل القطاع داخل الحفرة ويمنح تحكمًا أفضل في الضغط والتدفق؛ الخطأ الشائع هو اختيار قطر/مطاط غير مناسب أو عدم التأكد من إحكام العزل مما يسبب تسريبًا سطحيًا.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- جمع بيانات الموقع
+- تحديد نطاق عمل مرحلي
+- تسجيل الضغط/الكميات/المراحل
+- تقييم ما قبل/بعد
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- توثيق الخلطة وقابلية التشغيل عند اللزوم
+- مراقبة استجابة الموقع
+- تقرير نهائي وتوصيات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **جدة** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- البدء بالمعالجة دون تشخيص
+- عدم وجود حدود ضغط/مرحلية
+- غياب معايير قبول
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/soil-grouting](/ar/services/soil-grouting)
-- مدينة جدة: [/ar/locations/jeddah/soil-grouting](/ar/locations/jeddah/soil-grouting)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# The Hidden Risks of Ignoring Recommendations in Soil Mechanics
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Jeddah).
+**Executive summary:** This article provides a structured engineering approach to **The Hidden Risks of Ignoring Recommendations in Soil Mechanics** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Dammam).  
+**Category:** Soil Investigation & Testing.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- Bleed is a key stability indicator. High bleed can cause separation and reduce void filling quality. Mitigation includes adjusting water ratio or using suitable admixtures when needed.
-- A packer isolates the injection zone and improves control of pressure/flow. A common mistake is using the wrong diameter or poor sealing, leading to surface leakage and loss of effectiveness.
+## Engineering context
+A practical guide that connects concept to execution: when to use it, how to execute safely, and what “quality” means.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Collect site data
+- Define a staged scope
+- Log pressure/takes/stages
+- Before/after evaluation
 
-## Quick practical example
-For an occupied building in **Jeddah**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Document mix and workability when needed
+- Monitor response
+- Final report and recommendations
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating without diagnosis
+- No pressure/staging limits
+- No acceptance criteria
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/soil-grouting](/en/services/soil-grouting)
-- Jeddah: [/en/locations/jeddah/soil-grouting](/en/locations/jeddah/soil-grouting)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "هل كل التشققات سببها التربة؟", answer: "لا. قد تكون إنشائية أو حرارية أو بسبب تسرب مياه. التشخيص يحدد الحل." },
       { question: "ما الفرق بين التدعيم والحقن؟", answer: "التدعيم قد يشمل underpinning وحلول إنشائية، بينما الحقن يحسن التربة/يملأ الفراغات." },
@@ -2449,78 +3535,128 @@ For an occupied building in **Jeddah**, we start with near-surface checks for ut
     },
     content: `# دور المهندس الجيوتقني والهندسة القيمية (Value Engineering)
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **دور المهندس الجيوتقني والهندسة القيمية (Value Engineering)** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل الرياض).  
+**تصنيف المقال:** فحص التربة والتحريات الجيوتقنية.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل مكة المكرمة).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+شرح عملي يربط الفكرة بالقرار التنفيذي: متى تستخدم، كيف تُنفذ بأمان، وما الذي يُعد جودة حقيقية.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- اختبار النزف (Bleed) مؤشر مهم لاستقرار الخلطة؛ نزف مرتفع قد يعني انفصال ماء/أسمنت ويضعف فعالية ملء الفراغات. المعالجة تكون بتعديل نسبة الماء أو استخدام إضافات مناسبة عند الحاجة.
-- مراقبة التشققات قبل وأثناء وبعد المعالجة (Crack Monitoring) تقلل المخاطر وتثبت النجاح؛ يمكن استخدام مساطر شروخ/قراءات منسوب/محطات توتال حسب حساسية المشروع.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- جمع بيانات الموقع
+- تحديد نطاق عمل مرحلي
+- تسجيل الضغط/الكميات/المراحل
+- تقييم ما قبل/بعد
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- توثيق الخلطة وقابلية التشغيل عند اللزوم
+- مراقبة استجابة الموقع
+- تقرير نهائي وتوصيات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **مكة المكرمة** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- البدء بالمعالجة دون تشخيص
+- عدم وجود حدود ضغط/مرحلية
+- غياب معايير قبول
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/soil-grouting](/ar/services/soil-grouting)
-- مدينة مكة المكرمة: [/ar/locations/makkah/soil-grouting](/ar/locations/makkah/soil-grouting)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# The Role of the Geotechnical Engineer and Value Engineering
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Makkah).
+**Executive summary:** This article provides a structured engineering approach to **The Role of the Geotechnical Engineer and Value Engineering** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Riyadh).  
+**Category:** Soil Investigation & Testing.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- Bleed is a key stability indicator. High bleed can cause separation and reduce void filling quality. Mitigation includes adjusting water ratio or using suitable admixtures when needed.
-- Crack/level monitoring before, during, and after treatment reduces risk and documents success—using crack gauges, level readings, or total-station where needed.
+## Engineering context
+A practical guide that connects concept to execution: when to use it, how to execute safely, and what “quality” means.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Collect site data
+- Define a staged scope
+- Log pressure/takes/stages
+- Before/after evaluation
 
-## Quick practical example
-For an occupied building in **Makkah**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Document mix and workability when needed
+- Monitor response
+- Final report and recommendations
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating without diagnosis
+- No pressure/staging limits
+- No acceptance criteria
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/soil-grouting](/en/services/soil-grouting)
-- Makkah: [/en/locations/makkah/soil-grouting](/en/locations/makkah/soil-grouting)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "هل كل التشققات سببها التربة؟", answer: "لا. قد تكون إنشائية أو حرارية أو بسبب تسرب مياه. التشخيص يحدد الحل." },
       { question: "ما الفرق بين التدعيم والحقن؟", answer: "التدعيم قد يشمل underpinning وحلول إنشائية، بينما الحقن يحسن التربة/يملأ الفراغات." },
@@ -2558,78 +3694,126 @@ For an occupied building in **Makkah**, we start with near-surface checks for ut
     },
     content: `# التشققات الانهيارية (Collapsible Soil): متى تكون التربة 'فخاً' تحت الأساسات؟
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **التشققات الانهيارية (Collapsible Soil): متى تكون التربة 'فخاً' تحت الأساسات؟** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل تبوك).  
+**تصنيف المقال:** فحص التربة والتحريات الجيوتقنية.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل الخبر).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+إدارة التشققات كعرض وربطها بسبب جيوتكنيكي/إنشائي، مع مراقبة رقمية منضبطة قبل وأثناء وبعد المعالجة.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- تحليل نمط التشقق (مائل/متدرج/شعري) مع قياسات زمنية هو مفتاح تحديد السبب (هبوط تفاضلي، تمدد حراري، تسرب مياه، ضعف تربة).
-- اختبار اللزوجة يساعد في ضبط قابلية الضخ والاختراق داخل المسام/الشقوق؛ لزوجة أعلى تعني اختراق أقل وعادةً مناسبة لفراغات أكبر، بينما لزوجة أقل قد تناسب تربة أدق بشرط التحكم في النزف.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- تثبيت نقاط قياس للشقوق/الميل وربطها بشبكة محاور
+- تحديد خط أساس قبل أي تدخل
+- ربط كل قراءة بمرحلة التنفيذ والضغط/الكميات
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- قياسات اتساع الشقوق والميول
+- سجل مناسيب للأرضيات عند الهبوط التفاضلي
+- صور مقارنة بنفس الزوايا
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **الخبر** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- إغلاق الشق دون علاج السبب
+- غياب خط الأساس
+- الحقن بدون مراحل يرفع مخاطر الرفع/التشققات الجديدة
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/foundation-strengthening](/ar/services/foundation-strengthening)
-- مدينة الخبر: [/ar/locations/khobar/foundation-strengthening](/ar/locations/khobar/foundation-strengthening)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# Collapsible Soils: A Hidden Risk Beneath Foundations
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Khobar).
+**Executive summary:** This article provides a structured engineering approach to **Collapsible Soils: A Hidden Risk Beneath Foundations** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Tabuk).  
+**Category:** Soil Investigation & Testing.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- Crack pattern analysis (diagonal/stepped/hairline) with time-based measurements is essential to identify root cause: differential settlement, thermal movement, leakage, or bearing issues.
-- Viscosity helps tune pumpability and penetration. Higher viscosity tends to reduce penetration and fits larger voids; lower viscosity can suit finer soils if bleed is controlled.
+## Engineering context
+Treat cracking as a symptom and tie it to geotechnical/structural causes using disciplined monitoring before/during/after intervention.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Install crack/tilt gauges tied to a reference grid
+- Establish a baseline before intervention
+- Correlate readings with stages, pressure and grout takes
 
-## Quick practical example
-For an occupied building in **Khobar**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Crack width & tilt readings
+- Floor level survey for differential settlement
+- Photo documentation from repeatable angles
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Sealing cracks without treating the cause
+- No baseline
+- Non-staged injection increases heave/new cracking risk
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/foundation-strengthening](/en/services/foundation-strengthening)
-- Khobar: [/en/locations/khobar/foundation-strengthening](/en/locations/khobar/foundation-strengthening)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "هل كل التشققات سببها التربة؟", answer: "لا. قد تكون إنشائية أو حرارية أو بسبب تسرب مياه. التشخيص يحدد الحل." },
       { question: "ما الفرق بين التدعيم والحقن؟", answer: "التدعيم قد يشمل underpinning وحلول إنشائية، بينما الحقن يحسن التربة/يملأ الفراغات." },
@@ -2667,78 +3851,128 @@ For an occupied building in **Khobar**, we start with near-surface checks for ut
     },
     content: `# تحديد منسوب المياه الجوفية وتأثيره الكارثي على أساسات المباني
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **تحديد منسوب المياه الجوفية وتأثيره الكارثي على أساسات المباني** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل أبها).  
+**تصنيف المقال:** فحص التربة والتحريات الجيوتقنية.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل الجبيل).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+شرح عملي يربط الفكرة بالقرار التنفيذي: متى تستخدم، كيف تُنفذ بأمان، وما الذي يُعد جودة حقيقية.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- الضغط ليس هدفًا بحد ذاته؛ الهدف هو تحقيق ملء/تحسين بدون رفع (Heave) أو إحداث ضرر. لذلك نعتمد حقنًا مرحليًا وحدود رفع ومراقبة مستمرة.
-- عند مقارنة التكلفة، الأهم هو تكلفة المخاطر (إعادة أعمال، توقف تشغيل، تعويضات). الحل الأرخص قد يكون الأعلى تكلفة على المدى المتوسط إذا لم يعالج السبب الجذري.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- جمع بيانات الموقع
+- تحديد نطاق عمل مرحلي
+- تسجيل الضغط/الكميات/المراحل
+- تقييم ما قبل/بعد
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- توثيق الخلطة وقابلية التشغيل عند اللزوم
+- مراقبة استجابة الموقع
+- تقرير نهائي وتوصيات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **الجبيل** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- البدء بالمعالجة دون تشخيص
+- عدم وجود حدود ضغط/مرحلية
+- غياب معايير قبول
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/foundation-strengthening](/ar/services/foundation-strengthening)
-- مدينة الجبيل: [/ar/locations/jubail/foundation-strengthening](/ar/locations/jubail/foundation-strengthening)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# Determining the Groundwater Level and Its Catastrophic Effect on Building Foundations
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Jubail).
+**Executive summary:** This article provides a structured engineering approach to **Determining the Groundwater Level and Its Catastrophic Effect on Building Foundations** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Abha).  
+**Category:** Soil Investigation & Testing.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- Pressure is not the goal. The goal is filling/improvement without heave or damage—hence staged injection, strict heave limits, and continuous monitoring.
-- When comparing cost, consider risk cost (rework, downtime, liabilities). The cheapest option can be most expensive long-term if it doesn’t address root causes.
+## Engineering context
+A practical guide that connects concept to execution: when to use it, how to execute safely, and what “quality” means.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Collect site data
+- Define a staged scope
+- Log pressure/takes/stages
+- Before/after evaluation
 
-## Quick practical example
-For an occupied building in **Jubail**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Document mix and workability when needed
+- Monitor response
+- Final report and recommendations
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating without diagnosis
+- No pressure/staging limits
+- No acceptance criteria
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/foundation-strengthening](/en/services/foundation-strengthening)
-- Jubail: [/en/locations/jubail/foundation-strengthening](/en/locations/jubail/foundation-strengthening)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "هل كل التشققات سببها التربة؟", answer: "لا. قد تكون إنشائية أو حرارية أو بسبب تسرب مياه. التشخيص يحدد الحل." },
       { question: "ما الفرق بين التدعيم والحقن؟", answer: "التدعيم قد يشمل underpinning وحلول إنشائية، بينما الحقن يحسن التربة/يملأ الفراغات." },
@@ -2776,78 +4010,128 @@ For an occupied building in **Jubail**, we start with near-surface checks for ut
     },
     content: `# التربة الانتفاخية (Expansive Soil): مشاكلها وحلولها الهندسية قبل البناء
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **التربة الانتفاخية (Expansive Soil): مشاكلها وحلولها الهندسية قبل البناء** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل تبوك).  
+**تصنيف المقال:** فحص التربة والتحريات الجيوتقنية.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل الخبر).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+شرح عملي يربط الفكرة بالقرار التنفيذي: متى تستخدم، كيف تُنفذ بأمان، وما الذي يُعد جودة حقيقية.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- تقنية GPR ممتازة للأهداف القريبة من السطح وتحديد مرافق تحت الأرض والفراغات الضحلة، لكن أداؤها يتأثر بالرطوبة العالية أو التربة الطينية.
-- التقرير الاحترافي لا يكتفي بوصف طبقات التربة، بل يربط النتائج بالقرار التنفيذي: نوع الأساس، حدود الهبوط، توصيات الردم/الدمك، واحتياج تحسين/حقن.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- جمع بيانات الموقع
+- تحديد نطاق عمل مرحلي
+- تسجيل الضغط/الكميات/المراحل
+- تقييم ما قبل/بعد
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- توثيق الخلطة وقابلية التشغيل عند اللزوم
+- مراقبة استجابة الموقع
+- تقرير نهائي وتوصيات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **الخبر** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- البدء بالمعالجة دون تشخيص
+- عدم وجود حدود ضغط/مرحلية
+- غياب معايير قبول
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/soil-grouting](/ar/services/soil-grouting)
-- مدينة الخبر: [/ar/locations/khobar/soil-grouting](/ar/locations/khobar/soil-grouting)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# Expansive Soil: Challenges and Pre-Construction Engineering Solutions
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Khobar).
+**Executive summary:** This article provides a structured engineering approach to **Expansive Soil: Challenges and Pre-Construction Engineering Solutions** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Tabuk).  
+**Category:** Soil Investigation & Testing.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- GPR is excellent for near-surface targets, utilities, and shallow voids, but performance can degrade in wet/clayey soils.
-- A high-quality report links soil layers to decisions: foundation type, settlement limits, compaction/backfill, and whether improvement/grouting is needed.
+## Engineering context
+A practical guide that connects concept to execution: when to use it, how to execute safely, and what “quality” means.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Collect site data
+- Define a staged scope
+- Log pressure/takes/stages
+- Before/after evaluation
 
-## Quick practical example
-For an occupied building in **Khobar**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Document mix and workability when needed
+- Monitor response
+- Final report and recommendations
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating without diagnosis
+- No pressure/staging limits
+- No acceptance criteria
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/soil-grouting](/en/services/soil-grouting)
-- Khobar: [/en/locations/khobar/soil-grouting](/en/locations/khobar/soil-grouting)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "هل كل التشققات سببها التربة؟", answer: "لا. قد تكون إنشائية أو حرارية أو بسبب تسرب مياه. التشخيص يحدد الحل." },
       { question: "ما الفرق بين التدعيم والحقن؟", answer: "التدعيم قد يشمل underpinning وحلول إنشائية، بينما الحقن يحسن التربة/يملأ الفراغات." },
@@ -2883,80 +4167,128 @@ For an occupied building in **Khobar**, we start with near-surface checks for ut
       creditUrl: '',
       license: 'TBD'
     },
-    content: `# استخدام تقنية \'الرادار الأرضي\' (GPR) في كشف التكهفات تحت القواعد
+    content: `# استخدام تقنية \\'الرادار الأرضي\\' (GPR) في كشف التكهفات تحت القواعد
+
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **استخدام تقنية \\'الرادار الأرضي\\' (GPR) في كشف التكهفات تحت القواعد** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل القصيم).  
+**تصنيف المقال:** فحص التربة والتحريات الجيوتقنية.
 
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل مكة المكرمة).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+منهجية كشف الفراغات: اختيار التقنية، فهم حدود الدقة، ثم تحويل النتائج إلى نقاط تحقق ونطاق معالجة.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- تقنية GPR ممتازة للأهداف القريبة من السطح وتحديد مرافق تحت الأرض والفراغات الضحلة، لكن أداؤها يتأثر بالرطوبة العالية أو التربة الطينية.
-- في البيئات الكارستية (صخور جيرية/دولومايت)، التكهفات قد تكون مرتبطة بمسارات مياه؛ الحل عادةً يجمع بين كشف جيوفيزيائي + خطة حقن/تدعيم + السيطرة على مصادر المياه.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- GPR عندما تكون التربة مناسبة
+- ERT/Resistivity للتربة الرطبة/الملحية
+- حفر تحقق لتثبيت التفسير
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- خرائط شذوذ + نقاط تحقق
+- تقرير تفسير مع نسبة ثقة
+- ربط الأعماق مع منسوب الأساسات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **مكة المكرمة** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- اعتبار كل شذوذ فراغًا مؤكدًا
+- تجاهل حدود الطريقة
+- حقن قبل التحقق
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/void-detection](/ar/services/void-detection)
-- مدينة مكة المكرمة: [/ar/locations/makkah/void-detection](/ar/locations/makkah/void-detection)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# The Use of Ground Penetrating Radar (GPR) in Detecting Voids Beneath Foundations
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Makkah).
+**Executive summary:** This article provides a structured engineering approach to **The Use of Ground Penetrating Radar (GPR) in Detecting Voids Beneath Foundations** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Qassim).  
+**Category:** Soil Investigation & Testing.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- GPR is excellent for near-surface targets, utilities, and shallow voids, but performance can degrade in wet/clayey soils.
-- In karstic carbonate environments, cavities can relate to water pathways. A robust solution combines geophysics, a staged grouting/strengthening plan, and water control.
+## Engineering context
+A void detection workflow: select the method, state limitations, then translate results into verification and treatment scope.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- GPR where soil conditions allow
+- ERT/resistivity for wet/saline ground
+- Verification drilling to ground-truth anomalies
 
-## Quick practical example
-For an occupied building in **Makkah**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Anomaly maps + verification points
+- Interpretation with confidence notes
+- Depth correlation vs foundation levels
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating every anomaly as confirmed void
+- Ignoring method limits
+- Grouting before verification
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/void-detection](/en/services/void-detection)
-- Makkah: [/en/locations/makkah/void-detection](/en/locations/makkah/void-detection)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "متى أختار GPR ومتى أختار ERT؟", answer: "GPR للأهداف القريبة والشبكات، وERT للأعماق الأكبر أو التربة الرطبة." },
       { question: "هل هي بديل للجسات؟", answer: "ليست بديلًا مطلقًا؛ لكنها توجه الجسات وتقللها حسب الهدف." },
@@ -2994,78 +4326,128 @@ For an occupied building in **Makkah**, we start with near-surface checks for ut
     },
     content: `# أهمية اختبارات المعامل (Lab Tests) لعينات التربة ودورها في تصميم الحقن الأسمنتي
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **أهمية اختبارات المعامل (Lab Tests) لعينات التربة ودورها في تصميم الحقن الأسمنتي** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل القصيم).  
+**تصنيف المقال:** فحص التربة والتحريات الجيوتقنية.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل الدمام).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+شرح عملي يربط الفكرة بالقرار التنفيذي: متى تستخدم، كيف تُنفذ بأمان، وما الذي يُعد جودة حقيقية.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- تقنية GPR ممتازة للأهداف القريبة من السطح وتحديد مرافق تحت الأرض والفراغات الضحلة، لكن أداؤها يتأثر بالرطوبة العالية أو التربة الطينية.
-- اختبار اللزوجة يساعد في ضبط قابلية الضخ والاختراق داخل المسام/الشقوق؛ لزوجة أعلى تعني اختراق أقل وعادةً مناسبة لفراغات أكبر، بينما لزوجة أقل قد تناسب تربة أدق بشرط التحكم في النزف.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- جمع بيانات الموقع
+- تحديد نطاق عمل مرحلي
+- تسجيل الضغط/الكميات/المراحل
+- تقييم ما قبل/بعد
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- توثيق الخلطة وقابلية التشغيل عند اللزوم
+- مراقبة استجابة الموقع
+- تقرير نهائي وتوصيات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **الدمام** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- البدء بالمعالجة دون تشخيص
+- عدم وجود حدود ضغط/مرحلية
+- غياب معايير قبول
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/soil-grouting](/ar/services/soil-grouting)
-- مدينة الدمام: [/ar/locations/dammam/soil-grouting](/ar/locations/dammam/soil-grouting)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# The Importance of Laboratory Tests for Soil Samples and Their Role in Cement Grouting Design
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Dammam).
+**Executive summary:** This article provides a structured engineering approach to **The Importance of Laboratory Tests for Soil Samples and Their Role in Cement Grouting Design** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Qassim).  
+**Category:** Soil Investigation & Testing.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- GPR is excellent for near-surface targets, utilities, and shallow voids, but performance can degrade in wet/clayey soils.
-- Viscosity helps tune pumpability and penetration. Higher viscosity tends to reduce penetration and fits larger voids; lower viscosity can suit finer soils if bleed is controlled.
+## Engineering context
+A practical guide that connects concept to execution: when to use it, how to execute safely, and what “quality” means.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Collect site data
+- Define a staged scope
+- Log pressure/takes/stages
+- Before/after evaluation
 
-## Quick practical example
-For an occupied building in **Dammam**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Document mix and workability when needed
+- Monitor response
+- Final report and recommendations
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating without diagnosis
+- No pressure/staging limits
+- No acceptance criteria
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/soil-grouting](/en/services/soil-grouting)
-- Dammam: [/en/locations/dammam/soil-grouting](/en/locations/dammam/soil-grouting)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "ما الفرق بين حقن التربة وحقن الخرسانة؟", answer: "حقن التربة يستهدف تحسين/ملء التربة والفراغات تحت الأساسات أو البلاطات، بينما حقن الخرسانة لمعالجة عيوب داخل العناصر الخرسانية." },
       { question: "هل الحقن يسبب رفع البلاط؟", answer: "قد يحدث رفع إذا كانت الضغوط غير مضبوطة. الحل: حقن مرحلي وحدود رفع ومراقبة مستمرة." },
@@ -3103,78 +4485,128 @@ For an occupied building in **Dammam**, we start with near-surface checks for ut
     },
     content: `# الظواهر الكارستية في المملكة العربية السعودية: أين تتواجد ولماذا؟
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **الظواهر الكارستية في المملكة العربية السعودية: أين تتواجد ولماذا؟** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل الجبيل).  
+**تصنيف المقال:** التكهفات والتكهفات الأرضية.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل مكة المكرمة).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+شرح عملي يربط الفكرة بالقرار التنفيذي: متى تستخدم، كيف تُنفذ بأمان، وما الذي يُعد جودة حقيقية.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- في البيئات الكارستية (صخور جيرية/دولومايت)، التكهفات قد تكون مرتبطة بمسارات مياه؛ الحل عادةً يجمع بين كشف جيوفيزيائي + خطة حقن/تدعيم + السيطرة على مصادر المياه.
-- مراقبة التشققات قبل وأثناء وبعد المعالجة (Crack Monitoring) تقلل المخاطر وتثبت النجاح؛ يمكن استخدام مساطر شروخ/قراءات منسوب/محطات توتال حسب حساسية المشروع.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- جمع بيانات الموقع
+- تحديد نطاق عمل مرحلي
+- تسجيل الضغط/الكميات/المراحل
+- تقييم ما قبل/بعد
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- توثيق الخلطة وقابلية التشغيل عند اللزوم
+- مراقبة استجابة الموقع
+- تقرير نهائي وتوصيات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **مكة المكرمة** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- البدء بالمعالجة دون تشخيص
+- عدم وجود حدود ضغط/مرحلية
+- غياب معايير قبول
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/void-detection](/ar/services/void-detection)
-- مدينة مكة المكرمة: [/ar/locations/makkah/void-detection](/ar/locations/makkah/void-detection)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# Karst Phenomena in the Kingdom of Saudi Arabia: Occurrence and Causative Factors
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Makkah).
+**Executive summary:** This article provides a structured engineering approach to **Karst Phenomena in the Kingdom of Saudi Arabia: Occurrence and Causative Factors** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Jubail).  
+**Category:** Voids & Sinkholes.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- In karstic carbonate environments, cavities can relate to water pathways. A robust solution combines geophysics, a staged grouting/strengthening plan, and water control.
-- Crack/level monitoring before, during, and after treatment reduces risk and documents success—using crack gauges, level readings, or total-station where needed.
+## Engineering context
+A practical guide that connects concept to execution: when to use it, how to execute safely, and what “quality” means.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Collect site data
+- Define a staged scope
+- Log pressure/takes/stages
+- Before/after evaluation
 
-## Quick practical example
-For an occupied building in **Makkah**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Document mix and workability when needed
+- Monitor response
+- Final report and recommendations
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating without diagnosis
+- No pressure/staging limits
+- No acceptance criteria
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/void-detection](/en/services/void-detection)
-- Makkah: [/en/locations/makkah/void-detection](/en/locations/makkah/void-detection)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "ما الفرق بين حقن التربة وحقن الخرسانة؟", answer: "حقن التربة يستهدف تحسين/ملء التربة والفراغات تحت الأساسات أو البلاطات، بينما حقن الخرسانة لمعالجة عيوب داخل العناصر الخرسانية." },
       { question: "هل الحقن يسبب رفع البلاط؟", answer: "قد يحدث رفع إذا كانت الضغوط غير مضبوطة. الحل: حقن مرحلي وحدود رفع ومراقبة مستمرة." },
@@ -3212,78 +4644,128 @@ For an occupied building in **Makkah**, we start with near-surface checks for ut
     },
     content: `# مخاطر البناء على الصخور الجيرية المذابة: استراتيجيات التدعيم
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **مخاطر البناء على الصخور الجيرية المذابة: استراتيجيات التدعيم** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل المدينة المنورة).  
+**تصنيف المقال:** التكهفات والتكهفات الأرضية.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل الخبر).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+شرح عملي يربط الفكرة بالقرار التنفيذي: متى تستخدم، كيف تُنفذ بأمان، وما الذي يُعد جودة حقيقية.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- مراقبة التشققات قبل وأثناء وبعد المعالجة (Crack Monitoring) تقلل المخاطر وتثبت النجاح؛ يمكن استخدام مساطر شروخ/قراءات منسوب/محطات توتال حسب حساسية المشروع.
-- تقنية GPR ممتازة للأهداف القريبة من السطح وتحديد مرافق تحت الأرض والفراغات الضحلة، لكن أداؤها يتأثر بالرطوبة العالية أو التربة الطينية.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- جمع بيانات الموقع
+- تحديد نطاق عمل مرحلي
+- تسجيل الضغط/الكميات/المراحل
+- تقييم ما قبل/بعد
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- توثيق الخلطة وقابلية التشغيل عند اللزوم
+- مراقبة استجابة الموقع
+- تقرير نهائي وتوصيات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **الخبر** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- البدء بالمعالجة دون تشخيص
+- عدم وجود حدود ضغط/مرحلية
+- غياب معايير قبول
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/void-detection](/ar/services/void-detection)
-- مدينة الخبر: [/ar/locations/khobar/void-detection](/ar/locations/khobar/void-detection)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# Construction Risks on Dissolved Limestone: Ground Improvement Strategies
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Khobar).
+**Executive summary:** This article provides a structured engineering approach to **Construction Risks on Dissolved Limestone: Ground Improvement Strategies** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Madinah).  
+**Category:** Voids & Sinkholes.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- Crack/level monitoring before, during, and after treatment reduces risk and documents success—using crack gauges, level readings, or total-station where needed.
-- GPR is excellent for near-surface targets, utilities, and shallow voids, but performance can degrade in wet/clayey soils.
+## Engineering context
+A practical guide that connects concept to execution: when to use it, how to execute safely, and what “quality” means.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Collect site data
+- Define a staged scope
+- Log pressure/takes/stages
+- Before/after evaluation
 
-## Quick practical example
-For an occupied building in **Khobar**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Document mix and workability when needed
+- Monitor response
+- Final report and recommendations
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating without diagnosis
+- No pressure/staging limits
+- No acceptance criteria
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/void-detection](/en/services/void-detection)
-- Khobar: [/en/locations/khobar/void-detection](/en/locations/khobar/void-detection)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "هل كشف الفراغات 100%؟", answer: "هو تحديد شذوذات عالية الثقة ويُفضّل معايرة النتائج بنقاط تحقق عند المشاريع الحساسة." },
       { question: "ما الفرق بين GPR وERT؟", answer: "GPR للسطح والشبكات، وERT للعمق الأكبر والتربة الرطبة/الطينية." },
@@ -3321,78 +4803,126 @@ For an occupied building in **Khobar**, we start with near-surface checks for ut
     },
     content: `# كيف تتكون التكهفات الصخرية عبر مئات السنين؟ شرح جيولوجي مبسط
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **كيف تتكون التكهفات الصخرية عبر مئات السنين؟ شرح جيولوجي مبسط** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل جدة).  
+**تصنيف المقال:** التكهفات والتكهفات الأرضية.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل الرياض).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+منهجية كشف الفراغات: اختيار التقنية، فهم حدود الدقة، ثم تحويل النتائج إلى نقاط تحقق ونطاق معالجة.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- في البيئات الكارستية (صخور جيرية/دولومايت)، التكهفات قد تكون مرتبطة بمسارات مياه؛ الحل عادةً يجمع بين كشف جيوفيزيائي + خطة حقن/تدعيم + السيطرة على مصادر المياه.
-- عند مقارنة التكلفة، الأهم هو تكلفة المخاطر (إعادة أعمال، توقف تشغيل، تعويضات). الحل الأرخص قد يكون الأعلى تكلفة على المدى المتوسط إذا لم يعالج السبب الجذري.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- GPR عندما تكون التربة مناسبة
+- ERT/Resistivity للتربة الرطبة/الملحية
+- حفر تحقق لتثبيت التفسير
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- خرائط شذوذ + نقاط تحقق
+- تقرير تفسير مع نسبة ثقة
+- ربط الأعماق مع منسوب الأساسات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **الرياض** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- اعتبار كل شذوذ فراغًا مؤكدًا
+- تجاهل حدود الطريقة
+- حقن قبل التحقق
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/void-detection](/ar/services/void-detection)
-- مدينة الرياض: [/ar/locations/riyadh/void-detection](/ar/locations/riyadh/void-detection)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# The Geological Formation of Rock Cavities: A Simplified Explanation
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Riyadh).
+**Executive summary:** This article provides a structured engineering approach to **The Geological Formation of Rock Cavities: A Simplified Explanation** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Jeddah).  
+**Category:** Voids & Sinkholes.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- In karstic carbonate environments, cavities can relate to water pathways. A robust solution combines geophysics, a staged grouting/strengthening plan, and water control.
-- When comparing cost, consider risk cost (rework, downtime, liabilities). The cheapest option can be most expensive long-term if it doesn’t address root causes.
+## Engineering context
+A void detection workflow: select the method, state limitations, then translate results into verification and treatment scope.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- GPR where soil conditions allow
+- ERT/resistivity for wet/saline ground
+- Verification drilling to ground-truth anomalies
 
-## Quick practical example
-For an occupied building in **Riyadh**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Anomaly maps + verification points
+- Interpretation with confidence notes
+- Depth correlation vs foundation levels
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating every anomaly as confirmed void
+- Ignoring method limits
+- Grouting before verification
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/void-detection](/en/services/void-detection)
-- Riyadh: [/en/locations/riyadh/void-detection](/en/locations/riyadh/void-detection)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "هل كشف الفراغات 100%؟", answer: "هو تحديد شذوذات عالية الثقة ويُفضّل معايرة النتائج بنقاط تحقق عند المشاريع الحساسة." },
       { question: "ما الفرق بين GPR وERT؟", answer: "GPR للسطح والشبكات، وERT للعمق الأكبر والتربة الرطبة/الطينية." },
@@ -3428,80 +4958,128 @@ For an occupied building in **Riyadh**, we start with near-surface checks for ut
       creditUrl: '',
       license: 'TBD'
     },
-    content: `# استخدام تقنية \'الرادار الأرضي\' (GPR) في كشف التكهفات تحت القواعد: تقنية متقدمة
+    content: `# استخدام تقنية \\'الرادار الأرضي\\' (GPR) في كشف التكهفات تحت القواعد: تقنية متقدمة
+
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **استخدام تقنية \\'الرادار الأرضي\\' (GPR) في كشف التكهفات تحت القواعد: تقنية متقدمة** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل الرياض).  
+**تصنيف المقال:** التكهفات والتكهفات الأرضية.
 
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل المدينة المنورة).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+منهجية كشف الفراغات: اختيار التقنية، فهم حدود الدقة، ثم تحويل النتائج إلى نقاط تحقق ونطاق معالجة.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- تقنية GPR ممتازة للأهداف القريبة من السطح وتحديد مرافق تحت الأرض والفراغات الضحلة، لكن أداؤها يتأثر بالرطوبة العالية أو التربة الطينية.
-- في البيئات الكارستية (صخور جيرية/دولومايت)، التكهفات قد تكون مرتبطة بمسارات مياه؛ الحل عادةً يجمع بين كشف جيوفيزيائي + خطة حقن/تدعيم + السيطرة على مصادر المياه.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- GPR عندما تكون التربة مناسبة
+- ERT/Resistivity للتربة الرطبة/الملحية
+- حفر تحقق لتثبيت التفسير
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- خرائط شذوذ + نقاط تحقق
+- تقرير تفسير مع نسبة ثقة
+- ربط الأعماق مع منسوب الأساسات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **المدينة المنورة** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- اعتبار كل شذوذ فراغًا مؤكدًا
+- تجاهل حدود الطريقة
+- حقن قبل التحقق
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/void-detection](/ar/services/void-detection)
-- مدينة المدينة المنورة: [/ar/locations/madinah/void-detection](/ar/locations/madinah/void-detection)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# The Use of Ground Penetrating Radar (GPR) in Detecting Voids Beneath Foundations: An Advanced Technique
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Madinah).
+**Executive summary:** This article provides a structured engineering approach to **The Use of Ground Penetrating Radar (GPR) in Detecting Voids Beneath Foundations: An Advanced Technique** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Riyadh).  
+**Category:** Voids & Sinkholes.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- GPR is excellent for near-surface targets, utilities, and shallow voids, but performance can degrade in wet/clayey soils.
-- In karstic carbonate environments, cavities can relate to water pathways. A robust solution combines geophysics, a staged grouting/strengthening plan, and water control.
+## Engineering context
+A void detection workflow: select the method, state limitations, then translate results into verification and treatment scope.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- GPR where soil conditions allow
+- ERT/resistivity for wet/saline ground
+- Verification drilling to ground-truth anomalies
 
-## Quick practical example
-For an occupied building in **Madinah**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Anomaly maps + verification points
+- Interpretation with confidence notes
+- Depth correlation vs foundation levels
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating every anomaly as confirmed void
+- Ignoring method limits
+- Grouting before verification
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/void-detection](/en/services/void-detection)
-- Madinah: [/en/locations/madinah/void-detection](/en/locations/madinah/void-detection)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "هل كشف الفراغات 100%؟", answer: "هو تحديد شذوذات عالية الثقة ويُفضّل معايرة النتائج بنقاط تحقق عند المشاريع الحساسة." },
       { question: "ما الفرق بين GPR وERT؟", answer: "GPR للسطح والشبكات، وERT للعمق الأكبر والتربة الرطبة/الطينية." },
@@ -3539,78 +5117,126 @@ For an occupied building in **Madinah**, we start with near-surface checks for u
     },
     content: `# التصوير المقطعي للمقاومة الكهربائية (ERT): أحدث تقنيات كشف التكهفات العميقة
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **التصوير المقطعي للمقاومة الكهربائية (ERT): أحدث تقنيات كشف التكهفات العميقة** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل القصيم).  
+**تصنيف المقال:** التكهفات والتكهفات الأرضية.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل الجبيل).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+منهجية كشف الفراغات: اختيار التقنية، فهم حدود الدقة، ثم تحويل النتائج إلى نقاط تحقق ونطاق معالجة.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- تقنية ERT مناسبة للأعماق الأكبر وتحديد مناطق ضعف/تكهف محتملة عبر فروقات المقاومة الكهربائية، وغالبًا ما تكون أكثر موثوقية في التربة الرطبة مقارنةً بـ GPR.
-- في البيئات الكارستية (صخور جيرية/دولومايت)، التكهفات قد تكون مرتبطة بمسارات مياه؛ الحل عادةً يجمع بين كشف جيوفيزيائي + خطة حقن/تدعيم + السيطرة على مصادر المياه.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- GPR عندما تكون التربة مناسبة
+- ERT/Resistivity للتربة الرطبة/الملحية
+- حفر تحقق لتثبيت التفسير
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- خرائط شذوذ + نقاط تحقق
+- تقرير تفسير مع نسبة ثقة
+- ربط الأعماق مع منسوب الأساسات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **الجبيل** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- اعتبار كل شذوذ فراغًا مؤكدًا
+- تجاهل حدود الطريقة
+- حقن قبل التحقق
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/void-detection](/ar/services/void-detection)
-- مدينة الجبيل: [/ar/locations/jubail/void-detection](/ar/locations/jubail/void-detection)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# Electrical Resistivity Tomography (ERT): Advanced Technology for Deep Cave Detection
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Jubail).
+**Executive summary:** This article provides a structured engineering approach to **Electrical Resistivity Tomography (ERT): Advanced Technology for Deep Cave Detection** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Qassim).  
+**Category:** Voids & Sinkholes.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- ERT is suitable for deeper targets and mapping potential cavities via resistivity contrasts, often more reliable than GPR in wet conditions.
-- In karstic carbonate environments, cavities can relate to water pathways. A robust solution combines geophysics, a staged grouting/strengthening plan, and water control.
+## Engineering context
+A void detection workflow: select the method, state limitations, then translate results into verification and treatment scope.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- GPR where soil conditions allow
+- ERT/resistivity for wet/saline ground
+- Verification drilling to ground-truth anomalies
 
-## Quick practical example
-For an occupied building in **Jubail**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Anomaly maps + verification points
+- Interpretation with confidence notes
+- Depth correlation vs foundation levels
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating every anomaly as confirmed void
+- Ignoring method limits
+- Grouting before verification
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/void-detection](/en/services/void-detection)
-- Jubail: [/en/locations/jubail/void-detection](/en/locations/jubail/void-detection)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "متى أختار GPR ومتى أختار ERT؟", answer: "GPR للأهداف القريبة والشبكات، وERT للأعماق الأكبر أو التربة الرطبة." },
       { question: "هل هي بديل للجسات؟", answer: "ليست بديلًا مطلقًا؛ لكنها توجه الجسات وتقللها حسب الهدف." },
@@ -3648,78 +5274,128 @@ For an occupied building in **Jubail**, we start with near-surface checks for ut
     },
     content: `# السيناريوهات المحتملة عند اكتشاف كهف تحت موقع البناء: الردم أم الجسروات أم الحقن؟
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **السيناريوهات المحتملة عند اكتشاف كهف تحت موقع البناء: الردم أم الجسروات أم الحقن؟** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل مكة المكرمة).  
+**تصنيف المقال:** التكهفات والتكهفات الأرضية.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل الخبر).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+شرح عملي يربط الفكرة بالقرار التنفيذي: متى تستخدم، كيف تُنفذ بأمان، وما الذي يُعد جودة حقيقية.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- في البيئات الكارستية (صخور جيرية/دولومايت)، التكهفات قد تكون مرتبطة بمسارات مياه؛ الحل عادةً يجمع بين كشف جيوفيزيائي + خطة حقن/تدعيم + السيطرة على مصادر المياه.
-- تحليل نمط التشقق (مائل/متدرج/شعري) مع قياسات زمنية هو مفتاح تحديد السبب (هبوط تفاضلي، تمدد حراري، تسرب مياه، ضعف تربة).
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- جمع بيانات الموقع
+- تحديد نطاق عمل مرحلي
+- تسجيل الضغط/الكميات/المراحل
+- تقييم ما قبل/بعد
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- توثيق الخلطة وقابلية التشغيل عند اللزوم
+- مراقبة استجابة الموقع
+- تقرير نهائي وتوصيات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **الخبر** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- البدء بالمعالجة دون تشخيص
+- عدم وجود حدود ضغط/مرحلية
+- غياب معايير قبول
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/soil-grouting](/ar/services/soil-grouting)
-- مدينة الخبر: [/ar/locations/khobar/soil-grouting](/ar/locations/khobar/soil-grouting)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# Potential Scenarios for Addressing a Cave Beneath a Construction Site: Filling, Bridging, or Grouting?
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Khobar).
+**Executive summary:** This article provides a structured engineering approach to **Potential Scenarios for Addressing a Cave Beneath a Construction Site: Filling, Bridging, or Grouting?** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Makkah).  
+**Category:** Voids & Sinkholes.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- In karstic carbonate environments, cavities can relate to water pathways. A robust solution combines geophysics, a staged grouting/strengthening plan, and water control.
-- Crack pattern analysis (diagonal/stepped/hairline) with time-based measurements is essential to identify root cause: differential settlement, thermal movement, leakage, or bearing issues.
+## Engineering context
+A practical guide that connects concept to execution: when to use it, how to execute safely, and what “quality” means.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Collect site data
+- Define a staged scope
+- Log pressure/takes/stages
+- Before/after evaluation
 
-## Quick practical example
-For an occupied building in **Khobar**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Document mix and workability when needed
+- Monitor response
+- Final report and recommendations
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating without diagnosis
+- No pressure/staging limits
+- No acceptance criteria
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/soil-grouting](/en/services/soil-grouting)
-- Khobar: [/en/locations/khobar/soil-grouting](/en/locations/khobar/soil-grouting)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "ما الفرق بين حقن التربة وحقن الخرسانة؟", answer: "حقن التربة يستهدف تحسين/ملء التربة والفراغات تحت الأساسات أو البلاطات، بينما حقن الخرسانة لمعالجة عيوب داخل العناصر الخرسانية." },
       { question: "هل الحقن يسبب رفع البلاط؟", answer: "قد يحدث رفع إذا كانت الضغوط غير مضبوطة. الحل: حقن مرحلي وحدود رفع ومراقبة مستمرة." },
@@ -3757,78 +5433,126 @@ For an occupied building in **Khobar**, we start with near-surface checks for ut
     },
     content: `# الهبوط الأرضي المفاجئ (Sinkholes): هل منزلك في خطر؟
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **الهبوط الأرضي المفاجئ (Sinkholes): هل منزلك في خطر؟** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل تبوك).  
+**تصنيف المقال:** التكهفات والتكهفات الأرضية.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل المدينة المنورة).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+تشخيص الهبوط (كلي/تفاضلي) وتحديد إن كان نشطًا، ثم بناء نطاق معالجة متدرّج يقلل مخاطر الرفع.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- في البيئات الكارستية (صخور جيرية/دولومايت)، التكهفات قد تكون مرتبطة بمسارات مياه؛ الحل عادةً يجمع بين كشف جيوفيزيائي + خطة حقن/تدعيم + السيطرة على مصادر المياه.
-- اختبار اللزوجة يساعد في ضبط قابلية الضخ والاختراق داخل المسام/الشقوق؛ لزوجة أعلى تعني اختراق أقل وعادةً مناسبة لفراغات أكبر، بينما لزوجة أقل قد تناسب تربة أدق بشرط التحكم في النزف.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- مسح مناسيب/Level survey وتحديد خريطة الهبوط
+- مراجعة التسربات ومصادر المياه
+- اختيار حقن/دمك حسب حالة التربة والفراغات
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- قياسات مناسيب متكررة
+- تسجيل كميات الحقن لكل مرحلة
+- مراقبة استجابة المنشأ (شقوق/أبواب)
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **المدينة المنورة** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- بدء المعالجة دون خريطة هبوط
+- تجاهل التسربات
+- رفع البلاطات بسبب ضغط زائد
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/void-detection](/ar/services/void-detection)
-- مدينة المدينة المنورة: [/ar/locations/madinah/void-detection](/ar/locations/madinah/void-detection)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# Sudden Ground Collapse (Sinkholes): Is Your Home at Risk?
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Madinah).
+**Executive summary:** This article provides a structured engineering approach to **Sudden Ground Collapse (Sinkholes): Is Your Home at Risk?** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Tabuk).  
+**Category:** Voids & Sinkholes.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- In karstic carbonate environments, cavities can relate to water pathways. A robust solution combines geophysics, a staged grouting/strengthening plan, and water control.
-- Viscosity helps tune pumpability and penetration. Higher viscosity tends to reduce penetration and fits larger voids; lower viscosity can suit finer soils if bleed is controlled.
+## Engineering context
+Diagnose settlement (total/differential), confirm if it’s ongoing, then build a staged scope that controls heave.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Elevation mapping via level survey
+- Check leakage/moisture sources
+- Select grouting/compaction based on soil & voiding
 
-## Quick practical example
-For an occupied building in **Madinah**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Repeated elevation surveys
+- Stage-by-stage grout take logs
+- Monitor structural response (cracks/doors)
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating without a settlement map
+- Ignoring leakage
+- Slab heave from excessive pressure
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/void-detection](/en/services/void-detection)
-- Madinah: [/en/locations/madinah/void-detection](/en/locations/madinah/void-detection)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "هل كشف الفراغات 100%؟", answer: "هو تحديد شذوذات عالية الثقة ويُفضّل معايرة النتائج بنقاط تحقق عند المشاريع الحساسة." },
       { question: "ما الفرق بين GPR وERT؟", answer: "GPR للسطح والشبكات، وERT للعمق الأكبر والتربة الرطبة/الطينية." },
@@ -3866,78 +5590,126 @@ For an occupied building in **Madinah**, we start with near-surface checks for u
     },
     content: `# تأثير تسرب مياه الصرف الصحي والمياه الجوفية في توسيع التكهفات
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **تأثير تسرب مياه الصرف الصحي والمياه الجوفية في توسيع التكهفات** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل المدينة المنورة).  
+**تصنيف المقال:** التكهفات والتكهفات الأرضية.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل الجبيل).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+منهجية كشف الفراغات: اختيار التقنية، فهم حدود الدقة، ثم تحويل النتائج إلى نقاط تحقق ونطاق معالجة.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- في البيئات الكارستية (صخور جيرية/دولومايت)، التكهفات قد تكون مرتبطة بمسارات مياه؛ الحل عادةً يجمع بين كشف جيوفيزيائي + خطة حقن/تدعيم + السيطرة على مصادر المياه.
-- التقرير الاحترافي لا يكتفي بوصف طبقات التربة، بل يربط النتائج بالقرار التنفيذي: نوع الأساس، حدود الهبوط، توصيات الردم/الدمك، واحتياج تحسين/حقن.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- GPR عندما تكون التربة مناسبة
+- ERT/Resistivity للتربة الرطبة/الملحية
+- حفر تحقق لتثبيت التفسير
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- خرائط شذوذ + نقاط تحقق
+- تقرير تفسير مع نسبة ثقة
+- ربط الأعماق مع منسوب الأساسات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **الجبيل** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- اعتبار كل شذوذ فراغًا مؤكدًا
+- تجاهل حدود الطريقة
+- حقن قبل التحقق
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/void-detection](/ar/services/void-detection)
-- مدينة الجبيل: [/ar/locations/jubail/void-detection](/ar/locations/jubail/void-detection)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# The Impact of Sewage and Groundwater Seepage on Cavity Expansion
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Jubail).
+**Executive summary:** This article provides a structured engineering approach to **The Impact of Sewage and Groundwater Seepage on Cavity Expansion** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Madinah).  
+**Category:** Voids & Sinkholes.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- In karstic carbonate environments, cavities can relate to water pathways. A robust solution combines geophysics, a staged grouting/strengthening plan, and water control.
-- A high-quality report links soil layers to decisions: foundation type, settlement limits, compaction/backfill, and whether improvement/grouting is needed.
+## Engineering context
+A void detection workflow: select the method, state limitations, then translate results into verification and treatment scope.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- GPR where soil conditions allow
+- ERT/resistivity for wet/saline ground
+- Verification drilling to ground-truth anomalies
 
-## Quick practical example
-For an occupied building in **Jubail**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Anomaly maps + verification points
+- Interpretation with confidence notes
+- Depth correlation vs foundation levels
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating every anomaly as confirmed void
+- Ignoring method limits
+- Grouting before verification
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/void-detection](/en/services/void-detection)
-- Jubail: [/en/locations/jubail/void-detection](/en/locations/jubail/void-detection)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "ما الفرق بين حقن التربة وحقن الخرسانة؟", answer: "حقن التربة يستهدف تحسين/ملء التربة والفراغات تحت الأساسات أو البلاطات، بينما حقن الخرسانة لمعالجة عيوب داخل العناصر الخرسانية." },
       { question: "هل الحقن يسبب رفع البلاط؟", answer: "قد يحدث رفع إذا كانت الضغوط غير مضبوطة. الحل: حقن مرحلي وحدود رفع ومراقبة مستمرة." },
@@ -3975,78 +5747,126 @@ For an occupied building in **Jubail**, we start with near-surface checks for ut
     },
     content: `# بروتوكولات الأمان عند الحفر في مناطق معروفة بوجود تكهفات
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **بروتوكولات الأمان عند الحفر في مناطق معروفة بوجود تكهفات** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل تبوك).  
+**تصنيف المقال:** التكهفات والتكهفات الأرضية.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل الخبر).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+منهجية كشف الفراغات: اختيار التقنية، فهم حدود الدقة، ثم تحويل النتائج إلى نقاط تحقق ونطاق معالجة.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- في البيئات الكارستية (صخور جيرية/دولومايت)، التكهفات قد تكون مرتبطة بمسارات مياه؛ الحل عادةً يجمع بين كشف جيوفيزيائي + خطة حقن/تدعيم + السيطرة على مصادر المياه.
-- تقنية ERT مناسبة للأعماق الأكبر وتحديد مناطق ضعف/تكهف محتملة عبر فروقات المقاومة الكهربائية، وغالبًا ما تكون أكثر موثوقية في التربة الرطبة مقارنةً بـ GPR.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- GPR عندما تكون التربة مناسبة
+- ERT/Resistivity للتربة الرطبة/الملحية
+- حفر تحقق لتثبيت التفسير
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- خرائط شذوذ + نقاط تحقق
+- تقرير تفسير مع نسبة ثقة
+- ربط الأعماق مع منسوب الأساسات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **الخبر** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- اعتبار كل شذوذ فراغًا مؤكدًا
+- تجاهل حدود الطريقة
+- حقن قبل التحقق
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/void-detection](/ar/services/void-detection)
-- مدينة الخبر: [/ar/locations/khobar/void-detection](/ar/locations/khobar/void-detection)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# Safety Protocols for Drilling in Areas with Known Voids
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Khobar).
+**Executive summary:** This article provides a structured engineering approach to **Safety Protocols for Drilling in Areas with Known Voids** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Tabuk).  
+**Category:** Voids & Sinkholes.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- In karstic carbonate environments, cavities can relate to water pathways. A robust solution combines geophysics, a staged grouting/strengthening plan, and water control.
-- ERT is suitable for deeper targets and mapping potential cavities via resistivity contrasts, often more reliable than GPR in wet conditions.
+## Engineering context
+A void detection workflow: select the method, state limitations, then translate results into verification and treatment scope.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- GPR where soil conditions allow
+- ERT/resistivity for wet/saline ground
+- Verification drilling to ground-truth anomalies
 
-## Quick practical example
-For an occupied building in **Khobar**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Anomaly maps + verification points
+- Interpretation with confidence notes
+- Depth correlation vs foundation levels
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating every anomaly as confirmed void
+- Ignoring method limits
+- Grouting before verification
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/void-detection](/en/services/void-detection)
-- Khobar: [/en/locations/khobar/void-detection](/en/locations/khobar/void-detection)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "هل كشف الفراغات 100%؟", answer: "هو تحديد شذوذات عالية الثقة ويُفضّل معايرة النتائج بنقاط تحقق عند المشاريع الحساسة." },
       { question: "ما الفرق بين GPR وERT؟", answer: "GPR للسطح والشبكات، وERT للعمق الأكبر والتربة الرطبة/الطينية." },
@@ -4084,78 +5904,126 @@ For an occupied building in **Khobar**, we start with near-surface checks for ut
     },
     content: `# دراسة مقارنة: معالجة التكهفات السطحية مقابل التكهفات العميقة
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **دراسة مقارنة: معالجة التكهفات السطحية مقابل التكهفات العميقة** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل الدمام).  
+**تصنيف المقال:** التكهفات والتكهفات الأرضية.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل الجبيل).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+منهجية كشف الفراغات: اختيار التقنية، فهم حدود الدقة، ثم تحويل النتائج إلى نقاط تحقق ونطاق معالجة.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- في البيئات الكارستية (صخور جيرية/دولومايت)، التكهفات قد تكون مرتبطة بمسارات مياه؛ الحل عادةً يجمع بين كشف جيوفيزيائي + خطة حقن/تدعيم + السيطرة على مصادر المياه.
-- تقنية GPR ممتازة للأهداف القريبة من السطح وتحديد مرافق تحت الأرض والفراغات الضحلة، لكن أداؤها يتأثر بالرطوبة العالية أو التربة الطينية.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- GPR عندما تكون التربة مناسبة
+- ERT/Resistivity للتربة الرطبة/الملحية
+- حفر تحقق لتثبيت التفسير
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- خرائط شذوذ + نقاط تحقق
+- تقرير تفسير مع نسبة ثقة
+- ربط الأعماق مع منسوب الأساسات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **الجبيل** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- اعتبار كل شذوذ فراغًا مؤكدًا
+- تجاهل حدود الطريقة
+- حقن قبل التحقق
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/void-detection](/ar/services/void-detection)
-- مدينة الجبيل: [/ar/locations/jubail/void-detection](/ar/locations/jubail/void-detection)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# A Comparative Study: Remediation of Shallow versus Deep Cavities
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Jubail).
+**Executive summary:** This article provides a structured engineering approach to **A Comparative Study: Remediation of Shallow versus Deep Cavities** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Dammam).  
+**Category:** Voids & Sinkholes.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- In karstic carbonate environments, cavities can relate to water pathways. A robust solution combines geophysics, a staged grouting/strengthening plan, and water control.
-- GPR is excellent for near-surface targets, utilities, and shallow voids, but performance can degrade in wet/clayey soils.
+## Engineering context
+A void detection workflow: select the method, state limitations, then translate results into verification and treatment scope.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- GPR where soil conditions allow
+- ERT/resistivity for wet/saline ground
+- Verification drilling to ground-truth anomalies
 
-## Quick practical example
-For an occupied building in **Jubail**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Anomaly maps + verification points
+- Interpretation with confidence notes
+- Depth correlation vs foundation levels
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating every anomaly as confirmed void
+- Ignoring method limits
+- Grouting before verification
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/void-detection](/en/services/void-detection)
-- Jubail: [/en/locations/jubail/void-detection](/en/locations/jubail/void-detection)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "ما الفرق بين حقن التربة وحقن الخرسانة؟", answer: "حقن التربة يستهدف تحسين/ملء التربة والفراغات تحت الأساسات أو البلاطات، بينما حقن الخرسانة لمعالجة عيوب داخل العناصر الخرسانية." },
       { question: "هل الحقن يسبب رفع البلاط؟", answer: "قد يحدث رفع إذا كانت الضغوط غير مضبوطة. الحل: حقن مرحلي وحدود رفع ومراقبة مستمرة." },
@@ -4193,78 +6061,128 @@ For an occupied building in **Jubail**, we start with near-surface checks for ut
     },
     content: `# دليل شامل لأنواع مواد الحقن: من الأسمنت البورتلاندي إلى المواد الكيميائية
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **دليل شامل لأنواع مواد الحقن: من الأسمنت البورتلاندي إلى المواد الكيميائية** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل القصيم).  
+**تصنيف المقال:** تقنيات وآليات الحقن الأسمنتي.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل المدينة المنورة).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+شرح عملي يربط الفكرة بالقرار التنفيذي: متى تستخدم، كيف تُنفذ بأمان، وما الذي يُعد جودة حقيقية.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- عند مقارنة التكلفة، الأهم هو تكلفة المخاطر (إعادة أعمال، توقف تشغيل، تعويضات). الحل الأرخص قد يكون الأعلى تكلفة على المدى المتوسط إذا لم يعالج السبب الجذري.
-- مراقبة التشققات قبل وأثناء وبعد المعالجة (Crack Monitoring) تقلل المخاطر وتثبت النجاح؛ يمكن استخدام مساطر شروخ/قراءات منسوب/محطات توتال حسب حساسية المشروع.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- جمع بيانات الموقع
+- تحديد نطاق عمل مرحلي
+- تسجيل الضغط/الكميات/المراحل
+- تقييم ما قبل/بعد
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- توثيق الخلطة وقابلية التشغيل عند اللزوم
+- مراقبة استجابة الموقع
+- تقرير نهائي وتوصيات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **المدينة المنورة** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- البدء بالمعالجة دون تشخيص
+- عدم وجود حدود ضغط/مرحلية
+- غياب معايير قبول
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/soil-grouting](/ar/services/soil-grouting)
-- مدينة المدينة المنورة: [/ar/locations/madinah/soil-grouting](/ar/locations/madinah/soil-grouting)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# A Comprehensive Guide to Grout Types: From Portland Cement to Chemical Grouts
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Madinah).
+**Executive summary:** This article provides a structured engineering approach to **A Comprehensive Guide to Grout Types: From Portland Cement to Chemical Grouts** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Qassim).  
+**Category:** Cement Grouting Methods.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- When comparing cost, consider risk cost (rework, downtime, liabilities). The cheapest option can be most expensive long-term if it doesn’t address root causes.
-- Crack/level monitoring before, during, and after treatment reduces risk and documents success—using crack gauges, level readings, or total-station where needed.
+## Engineering context
+A practical guide that connects concept to execution: when to use it, how to execute safely, and what “quality” means.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Collect site data
+- Define a staged scope
+- Log pressure/takes/stages
+- Before/after evaluation
 
-## Quick practical example
-For an occupied building in **Madinah**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Document mix and workability when needed
+- Monitor response
+- Final report and recommendations
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating without diagnosis
+- No pressure/staging limits
+- No acceptance criteria
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/soil-grouting](/en/services/soil-grouting)
-- Madinah: [/en/locations/madinah/soil-grouting](/en/locations/madinah/soil-grouting)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "ما الفرق بين حقن التربة وحقن الخرسانة؟", answer: "حقن التربة يستهدف تحسين/ملء التربة والفراغات تحت الأساسات أو البلاطات، بينما حقن الخرسانة لمعالجة عيوب داخل العناصر الخرسانية." },
       { question: "هل الحقن يسبب رفع البلاط؟", answer: "قد يحدث رفع إذا كانت الضغوط غير مضبوطة. الحل: حقن مرحلي وحدود رفع ومراقبة مستمرة." },
@@ -4302,78 +6220,128 @@ For an occupied building in **Madinah**, we start with near-surface checks for u
     },
     content: `# الحقن بالضغط المنخفض (Low Pressure) مقابل الضغط العالي: متى نستخدم كل منهما؟
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **الحقن بالضغط المنخفض (Low Pressure) مقابل الضغط العالي: متى نستخدم كل منهما؟** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل مكة المكرمة).  
+**تصنيف المقال:** تقنيات وآليات الحقن الأسمنتي.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل الدمام).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+شرح عملي يربط الفكرة بالقرار التنفيذي: متى تستخدم، كيف تُنفذ بأمان، وما الذي يُعد جودة حقيقية.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- الضغط ليس هدفًا بحد ذاته؛ الهدف هو تحقيق ملء/تحسين بدون رفع (Heave) أو إحداث ضرر. لذلك نعتمد حقنًا مرحليًا وحدود رفع ومراقبة مستمرة.
-- الـ Packer يضمن عزل القطاع داخل الحفرة ويمنح تحكمًا أفضل في الضغط والتدفق؛ الخطأ الشائع هو اختيار قطر/مطاط غير مناسب أو عدم التأكد من إحكام العزل مما يسبب تسريبًا سطحيًا.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- جمع بيانات الموقع
+- تحديد نطاق عمل مرحلي
+- تسجيل الضغط/الكميات/المراحل
+- تقييم ما قبل/بعد
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- توثيق الخلطة وقابلية التشغيل عند اللزوم
+- مراقبة استجابة الموقع
+- تقرير نهائي وتوصيات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **الدمام** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- البدء بالمعالجة دون تشخيص
+- عدم وجود حدود ضغط/مرحلية
+- غياب معايير قبول
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/soil-grouting](/ar/services/soil-grouting)
-- مدينة الدمام: [/ar/locations/dammam/soil-grouting](/ar/locations/dammam/soil-grouting)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# Low-Pressure vs. High-Pressure Grouting: When to Use Each
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Dammam).
+**Executive summary:** This article provides a structured engineering approach to **Low-Pressure vs. High-Pressure Grouting: When to Use Each** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Makkah).  
+**Category:** Cement Grouting Methods.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- Pressure is not the goal. The goal is filling/improvement without heave or damage—hence staged injection, strict heave limits, and continuous monitoring.
-- A packer isolates the injection zone and improves control of pressure/flow. A common mistake is using the wrong diameter or poor sealing, leading to surface leakage and loss of effectiveness.
+## Engineering context
+A practical guide that connects concept to execution: when to use it, how to execute safely, and what “quality” means.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Collect site data
+- Define a staged scope
+- Log pressure/takes/stages
+- Before/after evaluation
 
-## Quick practical example
-For an occupied building in **Dammam**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Document mix and workability when needed
+- Monitor response
+- Final report and recommendations
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating without diagnosis
+- No pressure/staging limits
+- No acceptance criteria
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/soil-grouting](/en/services/soil-grouting)
-- Dammam: [/en/locations/dammam/soil-grouting](/en/locations/dammam/soil-grouting)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "ما الفرق بين حقن التربة وحقن الخرسانة؟", answer: "حقن التربة يستهدف تحسين/ملء التربة والفراغات تحت الأساسات أو البلاطات، بينما حقن الخرسانة لمعالجة عيوب داخل العناصر الخرسانية." },
       { question: "هل الحقن يسبب رفع البلاط؟", answer: "قد يحدث رفع إذا كانت الضغوط غير مضبوطة. الحل: حقن مرحلي وحدود رفع ومراقبة مستمرة." },
@@ -4411,78 +6379,128 @@ For an occupied building in **Dammam**, we start with near-surface checks for ut
     },
     content: `# تقنية الحقن الدمكي (Compaction Grouting): زيادة كثافة التربة بدون حفر
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **تقنية الحقن الدمكي (Compaction Grouting): زيادة كثافة التربة بدون حفر** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل جدة).  
+**تصنيف المقال:** تقنيات وآليات الحقن الأسمنتي.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل الدمام).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+شرح عملي يربط الفكرة بالقرار التنفيذي: متى تستخدم، كيف تُنفذ بأمان، وما الذي يُعد جودة حقيقية.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- التقرير الاحترافي لا يكتفي بوصف طبقات التربة، بل يربط النتائج بالقرار التنفيذي: نوع الأساس، حدود الهبوط، توصيات الردم/الدمك، واحتياج تحسين/حقن.
-- في البيئات الكارستية (صخور جيرية/دولومايت)، التكهفات قد تكون مرتبطة بمسارات مياه؛ الحل عادةً يجمع بين كشف جيوفيزيائي + خطة حقن/تدعيم + السيطرة على مصادر المياه.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- جمع بيانات الموقع
+- تحديد نطاق عمل مرحلي
+- تسجيل الضغط/الكميات/المراحل
+- تقييم ما قبل/بعد
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- توثيق الخلطة وقابلية التشغيل عند اللزوم
+- مراقبة استجابة الموقع
+- تقرير نهائي وتوصيات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **الدمام** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- البدء بالمعالجة دون تشخيص
+- عدم وجود حدود ضغط/مرحلية
+- غياب معايير قبول
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/soil-grouting](/ar/services/soil-grouting)
-- مدينة الدمام: [/ar/locations/dammam/soil-grouting](/ar/locations/dammam/soil-grouting)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# Compaction Grouting: Increasing Soil Density Without Excavation
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Dammam).
+**Executive summary:** This article provides a structured engineering approach to **Compaction Grouting: Increasing Soil Density Without Excavation** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Jeddah).  
+**Category:** Cement Grouting Methods.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- A high-quality report links soil layers to decisions: foundation type, settlement limits, compaction/backfill, and whether improvement/grouting is needed.
-- In karstic carbonate environments, cavities can relate to water pathways. A robust solution combines geophysics, a staged grouting/strengthening plan, and water control.
+## Engineering context
+A practical guide that connects concept to execution: when to use it, how to execute safely, and what “quality” means.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Collect site data
+- Define a staged scope
+- Log pressure/takes/stages
+- Before/after evaluation
 
-## Quick practical example
-For an occupied building in **Dammam**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Document mix and workability when needed
+- Monitor response
+- Final report and recommendations
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating without diagnosis
+- No pressure/staging limits
+- No acceptance criteria
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/soil-grouting](/en/services/soil-grouting)
-- Dammam: [/en/locations/dammam/soil-grouting](/en/locations/dammam/soil-grouting)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "ما الفرق بين حقن التربة وحقن الخرسانة؟", answer: "حقن التربة يستهدف تحسين/ملء التربة والفراغات تحت الأساسات أو البلاطات، بينما حقن الخرسانة لمعالجة عيوب داخل العناصر الخرسانية." },
       { question: "هل الحقن يسبب رفع البلاط؟", answer: "قد يحدث رفع إذا كانت الضغوط غير مضبوطة. الحل: حقن مرحلي وحدود رفع ومراقبة مستمرة." },
@@ -4518,80 +6536,130 @@ For an occupied building in **Dammam**, we start with near-surface checks for ut
       creditUrl: '',
       license: 'TBD'
     },
-    content: `# الحقن النفاث (Jet Grouting): كيف يُنشئ أعمدة \'تربة-أسمنتية\' تحت الأرض؟
+    content: `# الحقن النفاث (Jet Grouting): كيف يُنشئ أعمدة \\'تربة-أسمنتية\\' تحت الأرض؟
+
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **الحقن النفاث (Jet Grouting): كيف يُنشئ أعمدة \\'تربة-أسمنتية\\' تحت الأرض؟** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل الرياض).  
+**تصنيف المقال:** تقنيات وآليات الحقن الأسمنتي.
 
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل الدمام).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+شرح عملي يربط الفكرة بالقرار التنفيذي: متى تستخدم، كيف تُنفذ بأمان، وما الذي يُعد جودة حقيقية.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- التقرير الاحترافي لا يكتفي بوصف طبقات التربة، بل يربط النتائج بالقرار التنفيذي: نوع الأساس، حدود الهبوط، توصيات الردم/الدمك، واحتياج تحسين/حقن.
-- اختبار النزف (Bleed) مؤشر مهم لاستقرار الخلطة؛ نزف مرتفع قد يعني انفصال ماء/أسمنت ويضعف فعالية ملء الفراغات. المعالجة تكون بتعديل نسبة الماء أو استخدام إضافات مناسبة عند الحاجة.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- جمع بيانات الموقع
+- تحديد نطاق عمل مرحلي
+- تسجيل الضغط/الكميات/المراحل
+- تقييم ما قبل/بعد
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- توثيق الخلطة وقابلية التشغيل عند اللزوم
+- مراقبة استجابة الموقع
+- تقرير نهائي وتوصيات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **الدمام** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- البدء بالمعالجة دون تشخيص
+- عدم وجود حدود ضغط/مرحلية
+- غياب معايير قبول
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/soil-grouting](/ar/services/soil-grouting)
-- مدينة الدمام: [/ar/locations/dammam/soil-grouting](/ar/locations/dammam/soil-grouting)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# Jet Grouting: How Does It Create 'Soil-Cement' Columns Underground?
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Dammam).
+**Executive summary:** This article provides a structured engineering approach to **Jet Grouting: How Does It Create 'Soil-Cement' Columns Underground?** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Riyadh).  
+**Category:** Cement Grouting Methods.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- A high-quality report links soil layers to decisions: foundation type, settlement limits, compaction/backfill, and whether improvement/grouting is needed.
-- Bleed is a key stability indicator. High bleed can cause separation and reduce void filling quality. Mitigation includes adjusting water ratio or using suitable admixtures when needed.
+## Engineering context
+A practical guide that connects concept to execution: when to use it, how to execute safely, and what “quality” means.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Collect site data
+- Define a staged scope
+- Log pressure/takes/stages
+- Before/after evaluation
 
-## Quick practical example
-For an occupied building in **Dammam**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Document mix and workability when needed
+- Monitor response
+- Final report and recommendations
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating without diagnosis
+- No pressure/staging limits
+- No acceptance criteria
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/soil-grouting](/en/services/soil-grouting)
-- Dammam: [/en/locations/dammam/soil-grouting](/en/locations/dammam/soil-grouting)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "ما الفرق بين حقن التربة وحقن الخرسانة؟", answer: "حقن التربة يستهدف تحسين/ملء التربة والفراغات تحت الأساسات أو البلاطات، بينما حقن الخرسانة لمعالجة عيوب داخل العناصر الخرسانية." },
       { question: "هل الحقن يسبب رفع البلاط؟", answer: "قد يحدث رفع إذا كانت الضغوط غير مضبوطة. الحل: حقن مرحلي وحدود رفع ومراقبة مستمرة." },
@@ -4629,78 +6697,128 @@ For an occupied building in **Dammam**, we start with near-surface checks for ut
     },
     content: `# الحقن الستائري (Curtain Grouting): حماية السدود والأقبية من تسرب المياه
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **الحقن الستائري (Curtain Grouting): حماية السدود والأقبية من تسرب المياه** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل الجبيل).  
+**تصنيف المقال:** تقنيات وآليات الحقن الأسمنتي.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل الدمام).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+شرح عملي يربط الفكرة بالقرار التنفيذي: متى تستخدم، كيف تُنفذ بأمان، وما الذي يُعد جودة حقيقية.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- اختبار اللزوجة يساعد في ضبط قابلية الضخ والاختراق داخل المسام/الشقوق؛ لزوجة أعلى تعني اختراق أقل وعادةً مناسبة لفراغات أكبر، بينما لزوجة أقل قد تناسب تربة أدق بشرط التحكم في النزف.
-- في البيئات الكارستية (صخور جيرية/دولومايت)، التكهفات قد تكون مرتبطة بمسارات مياه؛ الحل عادةً يجمع بين كشف جيوفيزيائي + خطة حقن/تدعيم + السيطرة على مصادر المياه.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- جمع بيانات الموقع
+- تحديد نطاق عمل مرحلي
+- تسجيل الضغط/الكميات/المراحل
+- تقييم ما قبل/بعد
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- توثيق الخلطة وقابلية التشغيل عند اللزوم
+- مراقبة استجابة الموقع
+- تقرير نهائي وتوصيات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **الدمام** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- البدء بالمعالجة دون تشخيص
+- عدم وجود حدود ضغط/مرحلية
+- غياب معايير قبول
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/soil-grouting](/ar/services/soil-grouting)
-- مدينة الدمام: [/ar/locations/dammam/soil-grouting](/ar/locations/dammam/soil-grouting)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# Curtain Grouting: Protecting Dams and Basements from Water Seepage
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Dammam).
+**Executive summary:** This article provides a structured engineering approach to **Curtain Grouting: Protecting Dams and Basements from Water Seepage** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Jubail).  
+**Category:** Cement Grouting Methods.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- Viscosity helps tune pumpability and penetration. Higher viscosity tends to reduce penetration and fits larger voids; lower viscosity can suit finer soils if bleed is controlled.
-- In karstic carbonate environments, cavities can relate to water pathways. A robust solution combines geophysics, a staged grouting/strengthening plan, and water control.
+## Engineering context
+A practical guide that connects concept to execution: when to use it, how to execute safely, and what “quality” means.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Collect site data
+- Define a staged scope
+- Log pressure/takes/stages
+- Before/after evaluation
 
-## Quick practical example
-For an occupied building in **Dammam**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Document mix and workability when needed
+- Monitor response
+- Final report and recommendations
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating without diagnosis
+- No pressure/staging limits
+- No acceptance criteria
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/soil-grouting](/en/services/soil-grouting)
-- Dammam: [/en/locations/dammam/soil-grouting](/en/locations/dammam/soil-grouting)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "ما الفرق بين حقن التربة وحقن الخرسانة؟", answer: "حقن التربة يستهدف تحسين/ملء التربة والفراغات تحت الأساسات أو البلاطات، بينما حقن الخرسانة لمعالجة عيوب داخل العناصر الخرسانية." },
       { question: "هل الحقن يسبب رفع البلاط؟", answer: "قد يحدث رفع إذا كانت الضغوط غير مضبوطة. الحل: حقن مرحلي وحدود رفع ومراقبة مستمرة." },
@@ -4738,78 +6856,126 @@ For an occupied building in **Dammam**, we start with near-surface checks for ut
     },
     content: `# الحقن التغلغلي (Permeation Grouting): ملء التكهفات الدقيقة لتقوية التربة الرملية
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **الحقن التغلغلي (Permeation Grouting): ملء التكهفات الدقيقة لتقوية التربة الرملية** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل القصيم).  
+**تصنيف المقال:** تقنيات وآليات الحقن الأسمنتي.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل الدمام).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+منهجية كشف الفراغات: اختيار التقنية، فهم حدود الدقة، ثم تحويل النتائج إلى نقاط تحقق ونطاق معالجة.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- في البيئات الكارستية (صخور جيرية/دولومايت)، التكهفات قد تكون مرتبطة بمسارات مياه؛ الحل عادةً يجمع بين كشف جيوفيزيائي + خطة حقن/تدعيم + السيطرة على مصادر المياه.
-- اختبار اللزوجة يساعد في ضبط قابلية الضخ والاختراق داخل المسام/الشقوق؛ لزوجة أعلى تعني اختراق أقل وعادةً مناسبة لفراغات أكبر، بينما لزوجة أقل قد تناسب تربة أدق بشرط التحكم في النزف.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- GPR عندما تكون التربة مناسبة
+- ERT/Resistivity للتربة الرطبة/الملحية
+- حفر تحقق لتثبيت التفسير
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- خرائط شذوذ + نقاط تحقق
+- تقرير تفسير مع نسبة ثقة
+- ربط الأعماق مع منسوب الأساسات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **الدمام** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- اعتبار كل شذوذ فراغًا مؤكدًا
+- تجاهل حدود الطريقة
+- حقن قبل التحقق
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/soil-grouting](/ar/services/soil-grouting)
-- مدينة الدمام: [/ar/locations/dammam/soil-grouting](/ar/locations/dammam/soil-grouting)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# Permeation Grouting: Filling Micro-voids to Strengthen Sandy Soils
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Dammam).
+**Executive summary:** This article provides a structured engineering approach to **Permeation Grouting: Filling Micro-voids to Strengthen Sandy Soils** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Qassim).  
+**Category:** Cement Grouting Methods.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- In karstic carbonate environments, cavities can relate to water pathways. A robust solution combines geophysics, a staged grouting/strengthening plan, and water control.
-- Viscosity helps tune pumpability and penetration. Higher viscosity tends to reduce penetration and fits larger voids; lower viscosity can suit finer soils if bleed is controlled.
+## Engineering context
+A void detection workflow: select the method, state limitations, then translate results into verification and treatment scope.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- GPR where soil conditions allow
+- ERT/resistivity for wet/saline ground
+- Verification drilling to ground-truth anomalies
 
-## Quick practical example
-For an occupied building in **Dammam**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Anomaly maps + verification points
+- Interpretation with confidence notes
+- Depth correlation vs foundation levels
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating every anomaly as confirmed void
+- Ignoring method limits
+- Grouting before verification
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/soil-grouting](/en/services/soil-grouting)
-- Dammam: [/en/locations/dammam/soil-grouting](/en/locations/dammam/soil-grouting)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "ما الفرق بين حقن التربة وحقن الخرسانة؟", answer: "حقن التربة يستهدف تحسين/ملء التربة والفراغات تحت الأساسات أو البلاطات، بينما حقن الخرسانة لمعالجة عيوب داخل العناصر الخرسانية." },
       { question: "هل الحقن يسبب رفع البلاط؟", answer: "قد يحدث رفع إذا كانت الضغوط غير مضبوطة. الحل: حقن مرحلي وحدود رفع ومراقبة مستمرة." },
@@ -4847,78 +7013,128 @@ For an occupied building in **Dammam**, we start with near-surface checks for ut
     },
     content: `# مكونات محطة الحقن الأسمنتي: الخلاطات، المضخات، وخراطيم الضغط
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **مكونات محطة الحقن الأسمنتي: الخلاطات، المضخات، وخراطيم الضغط** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل القصيم).  
+**تصنيف المقال:** تقنيات وآليات الحقن الأسمنتي.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل الرياض).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+شرح عملي يربط الفكرة بالقرار التنفيذي: متى تستخدم، كيف تُنفذ بأمان، وما الذي يُعد جودة حقيقية.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- الضغط ليس هدفًا بحد ذاته؛ الهدف هو تحقيق ملء/تحسين بدون رفع (Heave) أو إحداث ضرر. لذلك نعتمد حقنًا مرحليًا وحدود رفع ومراقبة مستمرة.
-- التقرير الاحترافي لا يكتفي بوصف طبقات التربة، بل يربط النتائج بالقرار التنفيذي: نوع الأساس، حدود الهبوط، توصيات الردم/الدمك، واحتياج تحسين/حقن.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- جمع بيانات الموقع
+- تحديد نطاق عمل مرحلي
+- تسجيل الضغط/الكميات/المراحل
+- تقييم ما قبل/بعد
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- توثيق الخلطة وقابلية التشغيل عند اللزوم
+- مراقبة استجابة الموقع
+- تقرير نهائي وتوصيات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **الرياض** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- البدء بالمعالجة دون تشخيص
+- عدم وجود حدود ضغط/مرحلية
+- غياب معايير قبول
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/soil-grouting](/ar/services/soil-grouting)
-- مدينة الرياض: [/ar/locations/riyadh/soil-grouting](/ar/locations/riyadh/soil-grouting)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# Components of a Cement Grouting Plant: Mixers, Pumps, and Pressure Hoses
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Riyadh).
+**Executive summary:** This article provides a structured engineering approach to **Components of a Cement Grouting Plant: Mixers, Pumps, and Pressure Hoses** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Qassim).  
+**Category:** Cement Grouting Methods.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- Pressure is not the goal. The goal is filling/improvement without heave or damage—hence staged injection, strict heave limits, and continuous monitoring.
-- A high-quality report links soil layers to decisions: foundation type, settlement limits, compaction/backfill, and whether improvement/grouting is needed.
+## Engineering context
+A practical guide that connects concept to execution: when to use it, how to execute safely, and what “quality” means.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Collect site data
+- Define a staged scope
+- Log pressure/takes/stages
+- Before/after evaluation
 
-## Quick practical example
-For an occupied building in **Riyadh**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Document mix and workability when needed
+- Monitor response
+- Final report and recommendations
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating without diagnosis
+- No pressure/staging limits
+- No acceptance criteria
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/soil-grouting](/en/services/soil-grouting)
-- Riyadh: [/en/locations/riyadh/soil-grouting](/en/locations/riyadh/soil-grouting)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "ما الفرق بين حقن التربة وحقن الخرسانة؟", answer: "حقن التربة يستهدف تحسين/ملء التربة والفراغات تحت الأساسات أو البلاطات، بينما حقن الخرسانة لمعالجة عيوب داخل العناصر الخرسانية." },
       { question: "هل الحقن يسبب رفع البلاط؟", answer: "قد يحدث رفع إذا كانت الضغوط غير مضبوطة. الحل: حقن مرحلي وحدود رفع ومراقبة مستمرة." },
@@ -4956,78 +7172,128 @@ For an occupied building in **Riyadh**, we start with near-surface checks for ut
     },
     content: `# تصميم خلطة الحقن (Grout Mix Design): أهمية نسبة الماء إلى الأسمنت والمواد المضافة
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **تصميم خلطة الحقن (Grout Mix Design): أهمية نسبة الماء إلى الأسمنت والمواد المضافة** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل الجبيل).  
+**تصنيف المقال:** تقنيات وآليات الحقن الأسمنتي.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل مكة المكرمة).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+شرح عملي يربط الفكرة بالقرار التنفيذي: متى تستخدم، كيف تُنفذ بأمان، وما الذي يُعد جودة حقيقية.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- اختبار اللزوجة يساعد في ضبط قابلية الضخ والاختراق داخل المسام/الشقوق؛ لزوجة أعلى تعني اختراق أقل وعادةً مناسبة لفراغات أكبر، بينما لزوجة أقل قد تناسب تربة أدق بشرط التحكم في النزف.
-- الضغط ليس هدفًا بحد ذاته؛ الهدف هو تحقيق ملء/تحسين بدون رفع (Heave) أو إحداث ضرر. لذلك نعتمد حقنًا مرحليًا وحدود رفع ومراقبة مستمرة.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- جمع بيانات الموقع
+- تحديد نطاق عمل مرحلي
+- تسجيل الضغط/الكميات/المراحل
+- تقييم ما قبل/بعد
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- توثيق الخلطة وقابلية التشغيل عند اللزوم
+- مراقبة استجابة الموقع
+- تقرير نهائي وتوصيات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **مكة المكرمة** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- البدء بالمعالجة دون تشخيص
+- عدم وجود حدود ضغط/مرحلية
+- غياب معايير قبول
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/soil-grouting](/ar/services/soil-grouting)
-- مدينة مكة المكرمة: [/ar/locations/makkah/soil-grouting](/ar/locations/makkah/soil-grouting)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# Grout Mix Design: The Importance of the Water-to-Cement Ratio and Admixtures
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Makkah).
+**Executive summary:** This article provides a structured engineering approach to **Grout Mix Design: The Importance of the Water-to-Cement Ratio and Admixtures** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Jubail).  
+**Category:** Cement Grouting Methods.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- Viscosity helps tune pumpability and penetration. Higher viscosity tends to reduce penetration and fits larger voids; lower viscosity can suit finer soils if bleed is controlled.
-- Pressure is not the goal. The goal is filling/improvement without heave or damage—hence staged injection, strict heave limits, and continuous monitoring.
+## Engineering context
+A practical guide that connects concept to execution: when to use it, how to execute safely, and what “quality” means.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Collect site data
+- Define a staged scope
+- Log pressure/takes/stages
+- Before/after evaluation
 
-## Quick practical example
-For an occupied building in **Makkah**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Document mix and workability when needed
+- Monitor response
+- Final report and recommendations
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating without diagnosis
+- No pressure/staging limits
+- No acceptance criteria
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/soil-grouting](/en/services/soil-grouting)
-- Makkah: [/en/locations/makkah/soil-grouting](/en/locations/makkah/soil-grouting)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "ما الفرق بين حقن التربة وحقن الخرسانة؟", answer: "حقن التربة يستهدف تحسين/ملء التربة والفراغات تحت الأساسات أو البلاطات، بينما حقن الخرسانة لمعالجة عيوب داخل العناصر الخرسانية." },
       { question: "هل الحقن يسبب رفع البلاط؟", answer: "قد يحدث رفع إذا كانت الضغوط غير مضبوطة. الحل: حقن مرحلي وحدود رفع ومراقبة مستمرة." },
@@ -5065,78 +7331,128 @@ For an occupied building in **Makkah**, we start with near-surface checks for ut
     },
     content: `# كيفية مراقبة جودة الحقن أثناء التنفيذ: اختبارات الضغط والتدفق
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **كيفية مراقبة جودة الحقن أثناء التنفيذ: اختبارات الضغط والتدفق** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل مكة المكرمة).  
+**تصنيف المقال:** تقنيات وآليات الحقن الأسمنتي.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل الرياض).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+شرح عملي يربط الفكرة بالقرار التنفيذي: متى تستخدم، كيف تُنفذ بأمان، وما الذي يُعد جودة حقيقية.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- الضغط ليس هدفًا بحد ذاته؛ الهدف هو تحقيق ملء/تحسين بدون رفع (Heave) أو إحداث ضرر. لذلك نعتمد حقنًا مرحليًا وحدود رفع ومراقبة مستمرة.
-- مراقبة التشققات قبل وأثناء وبعد المعالجة (Crack Monitoring) تقلل المخاطر وتثبت النجاح؛ يمكن استخدام مساطر شروخ/قراءات منسوب/محطات توتال حسب حساسية المشروع.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- جمع بيانات الموقع
+- تحديد نطاق عمل مرحلي
+- تسجيل الضغط/الكميات/المراحل
+- تقييم ما قبل/بعد
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- توثيق الخلطة وقابلية التشغيل عند اللزوم
+- مراقبة استجابة الموقع
+- تقرير نهائي وتوصيات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **الرياض** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- البدء بالمعالجة دون تشخيص
+- عدم وجود حدود ضغط/مرحلية
+- غياب معايير قبول
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/soil-grouting](/ar/services/soil-grouting)
-- مدينة الرياض: [/ar/locations/riyadh/soil-grouting](/ar/locations/riyadh/soil-grouting)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# How to Monitor Grouting Quality During Implementation: Pressure and Flow Tests
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Riyadh).
+**Executive summary:** This article provides a structured engineering approach to **How to Monitor Grouting Quality During Implementation: Pressure and Flow Tests** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Makkah).  
+**Category:** Cement Grouting Methods.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- Pressure is not the goal. The goal is filling/improvement without heave or damage—hence staged injection, strict heave limits, and continuous monitoring.
-- Crack/level monitoring before, during, and after treatment reduces risk and documents success—using crack gauges, level readings, or total-station where needed.
+## Engineering context
+A practical guide that connects concept to execution: when to use it, how to execute safely, and what “quality” means.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Collect site data
+- Define a staged scope
+- Log pressure/takes/stages
+- Before/after evaluation
 
-## Quick practical example
-For an occupied building in **Riyadh**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Document mix and workability when needed
+- Monitor response
+- Final report and recommendations
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating without diagnosis
+- No pressure/staging limits
+- No acceptance criteria
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/soil-grouting](/en/services/soil-grouting)
-- Riyadh: [/en/locations/riyadh/soil-grouting](/en/locations/riyadh/soil-grouting)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "ما الفرق بين حقن التربة وحقن الخرسانة؟", answer: "حقن التربة يستهدف تحسين/ملء التربة والفراغات تحت الأساسات أو البلاطات، بينما حقن الخرسانة لمعالجة عيوب داخل العناصر الخرسانية." },
       { question: "هل الحقن يسبب رفع البلاط؟", answer: "قد يحدث رفع إذا كانت الضغوط غير مضبوطة. الحل: حقن مرحلي وحدود رفع ومراقبة مستمرة." },
@@ -5172,80 +7488,130 @@ For an occupied building in **Riyadh**, we start with near-surface checks for ut
       creditUrl: '',
       license: 'TBD'
     },
-    content: `# استخدام \'الباكر\' (Packer) في توجيه مادة الحقن داخل الطبقات الصخرية
+    content: `# استخدام \\'الباكر\\' (Packer) في توجيه مادة الحقن داخل الطبقات الصخرية
+
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **استخدام \\'الباكر\\' (Packer) في توجيه مادة الحقن داخل الطبقات الصخرية** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل الرياض).  
+**تصنيف المقال:** تقنيات وآليات الحقن الأسمنتي.
 
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل الجبيل).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+شرح عملي يربط الفكرة بالقرار التنفيذي: متى تستخدم، كيف تُنفذ بأمان، وما الذي يُعد جودة حقيقية.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- الـ Packer يضمن عزل القطاع داخل الحفرة ويمنح تحكمًا أفضل في الضغط والتدفق؛ الخطأ الشائع هو اختيار قطر/مطاط غير مناسب أو عدم التأكد من إحكام العزل مما يسبب تسريبًا سطحيًا.
-- الضغط ليس هدفًا بحد ذاته؛ الهدف هو تحقيق ملء/تحسين بدون رفع (Heave) أو إحداث ضرر. لذلك نعتمد حقنًا مرحليًا وحدود رفع ومراقبة مستمرة.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- جمع بيانات الموقع
+- تحديد نطاق عمل مرحلي
+- تسجيل الضغط/الكميات/المراحل
+- تقييم ما قبل/بعد
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- توثيق الخلطة وقابلية التشغيل عند اللزوم
+- مراقبة استجابة الموقع
+- تقرير نهائي وتوصيات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **الجبيل** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- البدء بالمعالجة دون تشخيص
+- عدم وجود حدود ضغط/مرحلية
+- غياب معايير قبول
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/soil-grouting](/ar/services/soil-grouting)
-- مدينة الجبيل: [/ar/locations/jubail/soil-grouting](/ar/locations/jubail/soil-grouting)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# The Use of Packers in Directing Grout within Rock Formations
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Jubail).
+**Executive summary:** This article provides a structured engineering approach to **The Use of Packers in Directing Grout within Rock Formations** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Riyadh).  
+**Category:** Cement Grouting Methods.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- A packer isolates the injection zone and improves control of pressure/flow. A common mistake is using the wrong diameter or poor sealing, leading to surface leakage and loss of effectiveness.
-- Pressure is not the goal. The goal is filling/improvement without heave or damage—hence staged injection, strict heave limits, and continuous monitoring.
+## Engineering context
+A practical guide that connects concept to execution: when to use it, how to execute safely, and what “quality” means.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Collect site data
+- Define a staged scope
+- Log pressure/takes/stages
+- Before/after evaluation
 
-## Quick practical example
-For an occupied building in **Jubail**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Document mix and workability when needed
+- Monitor response
+- Final report and recommendations
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating without diagnosis
+- No pressure/staging limits
+- No acceptance criteria
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/soil-grouting](/en/services/soil-grouting)
-- Jubail: [/en/locations/jubail/soil-grouting](/en/locations/jubail/soil-grouting)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "ما الفرق بين حقن التربة وحقن الخرسانة؟", answer: "حقن التربة يستهدف تحسين/ملء التربة والفراغات تحت الأساسات أو البلاطات، بينما حقن الخرسانة لمعالجة عيوب داخل العناصر الخرسانية." },
       { question: "هل الحقن يسبب رفع البلاط؟", answer: "قد يحدث رفع إذا كانت الضغوط غير مضبوطة. الحل: حقن مرحلي وحدود رفع ومراقبة مستمرة." },
@@ -5283,78 +7649,126 @@ For an occupied building in **Jubail**, we start with near-surface checks for ut
     },
     content: `# الهبوط التفاوتي للقواعد (Differential Settlement): السبب الرئيسي لتشققات الجدران
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **الهبوط التفاوتي للقواعد (Differential Settlement): السبب الرئيسي لتشققات الجدران** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل مكة المكرمة).  
+**تصنيف المقال:** معالجة المباني والتشققات.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل الدمام).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+إدارة التشققات كعرض وربطها بسبب جيوتكنيكي/إنشائي، مع مراقبة رقمية منضبطة قبل وأثناء وبعد المعالجة.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- تحليل نمط التشقق (مائل/متدرج/شعري) مع قياسات زمنية هو مفتاح تحديد السبب (هبوط تفاضلي، تمدد حراري، تسرب مياه، ضعف تربة).
-- مراقبة التشققات قبل وأثناء وبعد المعالجة (Crack Monitoring) تقلل المخاطر وتثبت النجاح؛ يمكن استخدام مساطر شروخ/قراءات منسوب/محطات توتال حسب حساسية المشروع.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- تثبيت نقاط قياس للشقوق/الميل وربطها بشبكة محاور
+- تحديد خط أساس قبل أي تدخل
+- ربط كل قراءة بمرحلة التنفيذ والضغط/الكميات
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- قياسات اتساع الشقوق والميول
+- سجل مناسيب للأرضيات عند الهبوط التفاضلي
+- صور مقارنة بنفس الزوايا
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **الدمام** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- إغلاق الشق دون علاج السبب
+- غياب خط الأساس
+- الحقن بدون مراحل يرفع مخاطر الرفع/التشققات الجديدة
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/foundation-strengthening](/ar/services/foundation-strengthening)
-- مدينة الدمام: [/ar/locations/dammam/foundation-strengthening](/ar/locations/dammam/foundation-strengthening)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# Differential Settlement of Foundations: The Main Cause of Wall Cracks
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Dammam).
+**Executive summary:** This article provides a structured engineering approach to **Differential Settlement of Foundations: The Main Cause of Wall Cracks** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Makkah).  
+**Category:** Building Remediation & Cracks.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- Crack pattern analysis (diagonal/stepped/hairline) with time-based measurements is essential to identify root cause: differential settlement, thermal movement, leakage, or bearing issues.
-- Crack/level monitoring before, during, and after treatment reduces risk and documents success—using crack gauges, level readings, or total-station where needed.
+## Engineering context
+Treat cracking as a symptom and tie it to geotechnical/structural causes using disciplined monitoring before/during/after intervention.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Install crack/tilt gauges tied to a reference grid
+- Establish a baseline before intervention
+- Correlate readings with stages, pressure and grout takes
 
-## Quick practical example
-For an occupied building in **Dammam**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Crack width & tilt readings
+- Floor level survey for differential settlement
+- Photo documentation from repeatable angles
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Sealing cracks without treating the cause
+- No baseline
+- Non-staged injection increases heave/new cracking risk
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/foundation-strengthening](/en/services/foundation-strengthening)
-- Dammam: [/en/locations/dammam/foundation-strengthening](/en/locations/dammam/foundation-strengthening)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "ما الفرق بين حقن التربة وحقن الخرسانة؟", answer: "حقن التربة يستهدف تحسين/ملء التربة والفراغات تحت الأساسات أو البلاطات، بينما حقن الخرسانة لمعالجة عيوب داخل العناصر الخرسانية." },
       { question: "هل الحقن يسبب رفع البلاط؟", answer: "قد يحدث رفع إذا كانت الضغوط غير مضبوطة. الحل: حقن مرحلي وحدود رفع ومراقبة مستمرة." },
@@ -5392,78 +7806,126 @@ For an occupied building in **Dammam**, we start with near-surface checks for ut
     },
     content: `# كيف نميز بين شروخ الهبوط وشروخ التمدد الحراري؟ تحليل مهني
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **كيف نميز بين شروخ الهبوط وشروخ التمدد الحراري؟ تحليل مهني** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل جدة).  
+**تصنيف المقال:** معالجة المباني والتشققات.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل الرياض).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+إدارة التشققات كعرض وربطها بسبب جيوتكنيكي/إنشائي، مع مراقبة رقمية منضبطة قبل وأثناء وبعد المعالجة.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- تحليل نمط التشقق (مائل/متدرج/شعري) مع قياسات زمنية هو مفتاح تحديد السبب (هبوط تفاضلي، تمدد حراري، تسرب مياه، ضعف تربة).
-- عند مقارنة التكلفة، الأهم هو تكلفة المخاطر (إعادة أعمال، توقف تشغيل، تعويضات). الحل الأرخص قد يكون الأعلى تكلفة على المدى المتوسط إذا لم يعالج السبب الجذري.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- تثبيت نقاط قياس للشقوق/الميل وربطها بشبكة محاور
+- تحديد خط أساس قبل أي تدخل
+- ربط كل قراءة بمرحلة التنفيذ والضغط/الكميات
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- قياسات اتساع الشقوق والميول
+- سجل مناسيب للأرضيات عند الهبوط التفاضلي
+- صور مقارنة بنفس الزوايا
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **الرياض** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- إغلاق الشق دون علاج السبب
+- غياب خط الأساس
+- الحقن بدون مراحل يرفع مخاطر الرفع/التشققات الجديدة
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/foundation-strengthening](/ar/services/foundation-strengthening)
-- مدينة الرياض: [/ar/locations/riyadh/foundation-strengthening](/ar/locations/riyadh/foundation-strengthening)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# How to Differentiate Between Settlement and Thermal Expansion Cracks: A Professional Analysis
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Riyadh).
+**Executive summary:** This article provides a structured engineering approach to **How to Differentiate Between Settlement and Thermal Expansion Cracks: A Professional Analysis** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Jeddah).  
+**Category:** Building Remediation & Cracks.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- Crack pattern analysis (diagonal/stepped/hairline) with time-based measurements is essential to identify root cause: differential settlement, thermal movement, leakage, or bearing issues.
-- When comparing cost, consider risk cost (rework, downtime, liabilities). The cheapest option can be most expensive long-term if it doesn’t address root causes.
+## Engineering context
+Treat cracking as a symptom and tie it to geotechnical/structural causes using disciplined monitoring before/during/after intervention.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Install crack/tilt gauges tied to a reference grid
+- Establish a baseline before intervention
+- Correlate readings with stages, pressure and grout takes
 
-## Quick practical example
-For an occupied building in **Riyadh**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Crack width & tilt readings
+- Floor level survey for differential settlement
+- Photo documentation from repeatable angles
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Sealing cracks without treating the cause
+- No baseline
+- Non-staged injection increases heave/new cracking risk
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/foundation-strengthening](/en/services/foundation-strengthening)
-- Riyadh: [/en/locations/riyadh/foundation-strengthening](/en/locations/riyadh/foundation-strengthening)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "ما الفرق بين حقن التربة وحقن الخرسانة؟", answer: "حقن التربة يستهدف تحسين/ملء التربة والفراغات تحت الأساسات أو البلاطات، بينما حقن الخرسانة لمعالجة عيوب داخل العناصر الخرسانية." },
       { question: "هل الحقن يسبب رفع البلاط؟", answer: "قد يحدث رفع إذا كانت الضغوط غير مضبوطة. الحل: حقن مرحلي وحدود رفع ومراقبة مستمرة." },
@@ -5501,78 +7963,128 @@ For an occupied building in **Riyadh**, we start with near-surface checks for ut
     },
     content: `# رفع المباني الهابطة باستخدام تقنيات الحقن الحديثة (Grout Jacking)
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **رفع المباني الهابطة باستخدام تقنيات الحقن الحديثة (Grout Jacking)** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل الجبيل).  
+**تصنيف المقال:** معالجة المباني والتشققات.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل مكة المكرمة).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+شرح عملي يربط الفكرة بالقرار التنفيذي: متى تستخدم، كيف تُنفذ بأمان، وما الذي يُعد جودة حقيقية.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- حدود الرفع (Heave Limits) يجب تحديدها قبل التنفيذ، خصوصًا داخل المباني. أي ارتفاع ملحوظ في البلاط/المنسوب يستدعي إيقاف الحقن وإعادة ضبط الخطة.
-- اختبار اللزوجة يساعد في ضبط قابلية الضخ والاختراق داخل المسام/الشقوق؛ لزوجة أعلى تعني اختراق أقل وعادةً مناسبة لفراغات أكبر، بينما لزوجة أقل قد تناسب تربة أدق بشرط التحكم في النزف.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- جمع بيانات الموقع
+- تحديد نطاق عمل مرحلي
+- تسجيل الضغط/الكميات/المراحل
+- تقييم ما قبل/بعد
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- توثيق الخلطة وقابلية التشغيل عند اللزوم
+- مراقبة استجابة الموقع
+- تقرير نهائي وتوصيات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **مكة المكرمة** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- البدء بالمعالجة دون تشخيص
+- عدم وجود حدود ضغط/مرحلية
+- غياب معايير قبول
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/soil-grouting](/ar/services/soil-grouting)
-- مدينة مكة المكرمة: [/ar/locations/makkah/soil-grouting](/ar/locations/makkah/soil-grouting)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# Lifting Settled Buildings Using Modern Grout Jacking Techniques
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Makkah).
+**Executive summary:** This article provides a structured engineering approach to **Lifting Settled Buildings Using Modern Grout Jacking Techniques** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Jubail).  
+**Category:** Building Remediation & Cracks.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- Heave limits should be set before execution, especially indoors. Any noticeable uplift requires stopping injection and revising the plan.
-- Viscosity helps tune pumpability and penetration. Higher viscosity tends to reduce penetration and fits larger voids; lower viscosity can suit finer soils if bleed is controlled.
+## Engineering context
+A practical guide that connects concept to execution: when to use it, how to execute safely, and what “quality” means.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Collect site data
+- Define a staged scope
+- Log pressure/takes/stages
+- Before/after evaluation
 
-## Quick practical example
-For an occupied building in **Makkah**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Document mix and workability when needed
+- Monitor response
+- Final report and recommendations
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating without diagnosis
+- No pressure/staging limits
+- No acceptance criteria
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/soil-grouting](/en/services/soil-grouting)
-- Makkah: [/en/locations/makkah/soil-grouting](/en/locations/makkah/soil-grouting)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "ما الفرق بين حقن التربة وحقن الخرسانة؟", answer: "حقن التربة يستهدف تحسين/ملء التربة والفراغات تحت الأساسات أو البلاطات، بينما حقن الخرسانة لمعالجة عيوب داخل العناصر الخرسانية." },
       { question: "هل الحقن يسبب رفع البلاط؟", answer: "قد يحدث رفع إذا كانت الضغوط غير مضبوطة. الحل: حقن مرحلي وحدود رفع ومراقبة مستمرة." },
@@ -5610,78 +8122,128 @@ For an occupied building in **Makkah**, we start with near-surface checks for ut
     },
     content: `# ترميم الأساسات القديمة وحمايتها من التآكل بالحقن الأسمنتي
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **ترميم الأساسات القديمة وحمايتها من التآكل بالحقن الأسمنتي** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل الرياض).  
+**تصنيف المقال:** معالجة المباني والتشققات.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل المدينة المنورة).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+شرح عملي يربط الفكرة بالقرار التنفيذي: متى تستخدم، كيف تُنفذ بأمان، وما الذي يُعد جودة حقيقية.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- اختبار اللزوجة يساعد في ضبط قابلية الضخ والاختراق داخل المسام/الشقوق؛ لزوجة أعلى تعني اختراق أقل وعادةً مناسبة لفراغات أكبر، بينما لزوجة أقل قد تناسب تربة أدق بشرط التحكم في النزف.
-- مراقبة التشققات قبل وأثناء وبعد المعالجة (Crack Monitoring) تقلل المخاطر وتثبت النجاح؛ يمكن استخدام مساطر شروخ/قراءات منسوب/محطات توتال حسب حساسية المشروع.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- جمع بيانات الموقع
+- تحديد نطاق عمل مرحلي
+- تسجيل الضغط/الكميات/المراحل
+- تقييم ما قبل/بعد
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- توثيق الخلطة وقابلية التشغيل عند اللزوم
+- مراقبة استجابة الموقع
+- تقرير نهائي وتوصيات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **المدينة المنورة** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- البدء بالمعالجة دون تشخيص
+- عدم وجود حدود ضغط/مرحلية
+- غياب معايير قبول
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/soil-grouting](/ar/services/soil-grouting)
-- مدينة المدينة المنورة: [/ar/locations/madinah/soil-grouting](/ar/locations/madinah/soil-grouting)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# Rehabilitation and Protection of Old Foundations from Corrosion Using Cement Grouting
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Madinah).
+**Executive summary:** This article provides a structured engineering approach to **Rehabilitation and Protection of Old Foundations from Corrosion Using Cement Grouting** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Riyadh).  
+**Category:** Building Remediation & Cracks.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- Viscosity helps tune pumpability and penetration. Higher viscosity tends to reduce penetration and fits larger voids; lower viscosity can suit finer soils if bleed is controlled.
-- Crack/level monitoring before, during, and after treatment reduces risk and documents success—using crack gauges, level readings, or total-station where needed.
+## Engineering context
+A practical guide that connects concept to execution: when to use it, how to execute safely, and what “quality” means.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Collect site data
+- Define a staged scope
+- Log pressure/takes/stages
+- Before/after evaluation
 
-## Quick practical example
-For an occupied building in **Madinah**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Document mix and workability when needed
+- Monitor response
+- Final report and recommendations
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating without diagnosis
+- No pressure/staging limits
+- No acceptance criteria
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/soil-grouting](/en/services/soil-grouting)
-- Madinah: [/en/locations/madinah/soil-grouting](/en/locations/madinah/soil-grouting)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "ما الفرق بين حقن التربة وحقن الخرسانة؟", answer: "حقن التربة يستهدف تحسين/ملء التربة والفراغات تحت الأساسات أو البلاطات، بينما حقن الخرسانة لمعالجة عيوب داخل العناصر الخرسانية." },
       { question: "هل الحقن يسبب رفع البلاط؟", answer: "قد يحدث رفع إذا كانت الضغوط غير مضبوطة. الحل: حقن مرحلي وحدود رفع ومراقبة مستمرة." },
@@ -5719,78 +8281,128 @@ For an occupied building in **Madinah**, we start with near-surface checks for u
     },
     content: `# معالجة ميلان الأبراج والمباني العالية عن طريق حقن التربة
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **معالجة ميلان الأبراج والمباني العالية عن طريق حقن التربة** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل الدمام).  
+**تصنيف المقال:** معالجة المباني والتشققات.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل الرياض).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+شرح عملي يربط الفكرة بالقرار التنفيذي: متى تستخدم، كيف تُنفذ بأمان، وما الذي يُعد جودة حقيقية.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- في البيئات الكارستية (صخور جيرية/دولومايت)، التكهفات قد تكون مرتبطة بمسارات مياه؛ الحل عادةً يجمع بين كشف جيوفيزيائي + خطة حقن/تدعيم + السيطرة على مصادر المياه.
-- التقرير الاحترافي لا يكتفي بوصف طبقات التربة، بل يربط النتائج بالقرار التنفيذي: نوع الأساس، حدود الهبوط، توصيات الردم/الدمك، واحتياج تحسين/حقن.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- جمع بيانات الموقع
+- تحديد نطاق عمل مرحلي
+- تسجيل الضغط/الكميات/المراحل
+- تقييم ما قبل/بعد
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- توثيق الخلطة وقابلية التشغيل عند اللزوم
+- مراقبة استجابة الموقع
+- تقرير نهائي وتوصيات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **الرياض** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- البدء بالمعالجة دون تشخيص
+- عدم وجود حدود ضغط/مرحلية
+- غياب معايير قبول
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/soil-grouting](/ar/services/soil-grouting)
-- مدينة الرياض: [/ar/locations/riyadh/soil-grouting](/ar/locations/riyadh/soil-grouting)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# Correcting the Tilt of Towers and High-Rise Buildings Using Soil Grouting
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Riyadh).
+**Executive summary:** This article provides a structured engineering approach to **Correcting the Tilt of Towers and High-Rise Buildings Using Soil Grouting** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Dammam).  
+**Category:** Building Remediation & Cracks.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- In karstic carbonate environments, cavities can relate to water pathways. A robust solution combines geophysics, a staged grouting/strengthening plan, and water control.
-- A high-quality report links soil layers to decisions: foundation type, settlement limits, compaction/backfill, and whether improvement/grouting is needed.
+## Engineering context
+A practical guide that connects concept to execution: when to use it, how to execute safely, and what “quality” means.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Collect site data
+- Define a staged scope
+- Log pressure/takes/stages
+- Before/after evaluation
 
-## Quick practical example
-For an occupied building in **Riyadh**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Document mix and workability when needed
+- Monitor response
+- Final report and recommendations
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating without diagnosis
+- No pressure/staging limits
+- No acceptance criteria
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/soil-grouting](/en/services/soil-grouting)
-- Riyadh: [/en/locations/riyadh/soil-grouting](/en/locations/riyadh/soil-grouting)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "ما الفرق بين حقن التربة وحقن الخرسانة؟", answer: "حقن التربة يستهدف تحسين/ملء التربة والفراغات تحت الأساسات أو البلاطات، بينما حقن الخرسانة لمعالجة عيوب داخل العناصر الخرسانية." },
       { question: "هل الحقن يسبب رفع البلاط؟", answer: "قد يحدث رفع إذا كانت الضغوط غير مضبوطة. الحل: حقن مرحلي وحدود رفع ومراقبة مستمرة." },
@@ -5828,78 +8440,128 @@ For an occupied building in **Riyadh**, we start with near-surface checks for ut
     },
     content: `# تصدع الأرضيات الخرسانية في المستودعات والمصانع: الحلول بالحقن تحت البلاط
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **تصدع الأرضيات الخرسانية في المستودعات والمصانع: الحلول بالحقن تحت البلاط** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل تبوك).  
+**تصنيف المقال:** معالجة المباني والتشققات.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل المدينة المنورة).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+شرح عملي يربط الفكرة بالقرار التنفيذي: متى تستخدم، كيف تُنفذ بأمان، وما الذي يُعد جودة حقيقية.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- تحليل نمط التشقق (مائل/متدرج/شعري) مع قياسات زمنية هو مفتاح تحديد السبب (هبوط تفاضلي، تمدد حراري، تسرب مياه، ضعف تربة).
-- الـ Packer يضمن عزل القطاع داخل الحفرة ويمنح تحكمًا أفضل في الضغط والتدفق؛ الخطأ الشائع هو اختيار قطر/مطاط غير مناسب أو عدم التأكد من إحكام العزل مما يسبب تسريبًا سطحيًا.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- جمع بيانات الموقع
+- تحديد نطاق عمل مرحلي
+- تسجيل الضغط/الكميات/المراحل
+- تقييم ما قبل/بعد
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- توثيق الخلطة وقابلية التشغيل عند اللزوم
+- مراقبة استجابة الموقع
+- تقرير نهائي وتوصيات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **المدينة المنورة** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- البدء بالمعالجة دون تشخيص
+- عدم وجود حدود ضغط/مرحلية
+- غياب معايير قبول
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/soil-grouting](/ar/services/soil-grouting)
-- مدينة المدينة المنورة: [/ar/locations/madinah/soil-grouting](/ar/locations/madinah/soil-grouting)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# Cracking of Concrete Floors in Warehouses and Factories: Solutions with Under-Slab Grouting
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Madinah).
+**Executive summary:** This article provides a structured engineering approach to **Cracking of Concrete Floors in Warehouses and Factories: Solutions with Under-Slab Grouting** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Tabuk).  
+**Category:** Building Remediation & Cracks.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- Crack pattern analysis (diagonal/stepped/hairline) with time-based measurements is essential to identify root cause: differential settlement, thermal movement, leakage, or bearing issues.
-- A packer isolates the injection zone and improves control of pressure/flow. A common mistake is using the wrong diameter or poor sealing, leading to surface leakage and loss of effectiveness.
+## Engineering context
+A practical guide that connects concept to execution: when to use it, how to execute safely, and what “quality” means.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Collect site data
+- Define a staged scope
+- Log pressure/takes/stages
+- Before/after evaluation
 
-## Quick practical example
-For an occupied building in **Madinah**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Document mix and workability when needed
+- Monitor response
+- Final report and recommendations
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating without diagnosis
+- No pressure/staging limits
+- No acceptance criteria
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/soil-grouting](/en/services/soil-grouting)
-- Madinah: [/en/locations/madinah/soil-grouting](/en/locations/madinah/soil-grouting)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "ما الفرق بين حقن التربة وحقن الخرسانة؟", answer: "حقن التربة يستهدف تحسين/ملء التربة والفراغات تحت الأساسات أو البلاطات، بينما حقن الخرسانة لمعالجة عيوب داخل العناصر الخرسانية." },
       { question: "هل الحقن يسبب رفع البلاط؟", answer: "قد يحدث رفع إذا كانت الضغوط غير مضبوطة. الحل: حقن مرحلي وحدود رفع ومراقبة مستمرة." },
@@ -5937,78 +8599,128 @@ For an occupied building in **Madinah**, we start with near-surface checks for u
     },
     content: `# علامات تحذيرية تسبق انهيار المبنى: لا تتجاهل هذه المؤشرات
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **علامات تحذيرية تسبق انهيار المبنى: لا تتجاهل هذه المؤشرات** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل القصيم).  
+**تصنيف المقال:** معالجة المباني والتشققات.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل الخبر).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+شرح عملي يربط الفكرة بالقرار التنفيذي: متى تستخدم، كيف تُنفذ بأمان، وما الذي يُعد جودة حقيقية.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- اختبار اللزوجة يساعد في ضبط قابلية الضخ والاختراق داخل المسام/الشقوق؛ لزوجة أعلى تعني اختراق أقل وعادةً مناسبة لفراغات أكبر، بينما لزوجة أقل قد تناسب تربة أدق بشرط التحكم في النزف.
-- الضغط ليس هدفًا بحد ذاته؛ الهدف هو تحقيق ملء/تحسين بدون رفع (Heave) أو إحداث ضرر. لذلك نعتمد حقنًا مرحليًا وحدود رفع ومراقبة مستمرة.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- جمع بيانات الموقع
+- تحديد نطاق عمل مرحلي
+- تسجيل الضغط/الكميات/المراحل
+- تقييم ما قبل/بعد
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- توثيق الخلطة وقابلية التشغيل عند اللزوم
+- مراقبة استجابة الموقع
+- تقرير نهائي وتوصيات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **الخبر** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- البدء بالمعالجة دون تشخيص
+- عدم وجود حدود ضغط/مرحلية
+- غياب معايير قبول
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/foundation-strengthening](/ar/services/foundation-strengthening)
-- مدينة الخبر: [/ar/locations/khobar/foundation-strengthening](/ar/locations/khobar/foundation-strengthening)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# Warning Signs Preceding Building Collapse: Do Not Ignore These Indicators
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Khobar).
+**Executive summary:** This article provides a structured engineering approach to **Warning Signs Preceding Building Collapse: Do Not Ignore These Indicators** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Qassim).  
+**Category:** Building Remediation & Cracks.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- Viscosity helps tune pumpability and penetration. Higher viscosity tends to reduce penetration and fits larger voids; lower viscosity can suit finer soils if bleed is controlled.
-- Pressure is not the goal. The goal is filling/improvement without heave or damage—hence staged injection, strict heave limits, and continuous monitoring.
+## Engineering context
+A practical guide that connects concept to execution: when to use it, how to execute safely, and what “quality” means.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Collect site data
+- Define a staged scope
+- Log pressure/takes/stages
+- Before/after evaluation
 
-## Quick practical example
-For an occupied building in **Khobar**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Document mix and workability when needed
+- Monitor response
+- Final report and recommendations
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating without diagnosis
+- No pressure/staging limits
+- No acceptance criteria
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/foundation-strengthening](/en/services/foundation-strengthening)
-- Khobar: [/en/locations/khobar/foundation-strengthening](/en/locations/khobar/foundation-strengthening)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "متى أختار GPR ومتى أختار ERT؟", answer: "GPR للأهداف القريبة والشبكات، وERT للأعماق الأكبر أو التربة الرطبة." },
       { question: "هل هي بديل للجسات؟", answer: "ليست بديلًا مطلقًا؛ لكنها توجه الجسات وتقللها حسب الهدف." },
@@ -6046,78 +8758,128 @@ For an occupied building in **Khobar**, we start with near-surface checks for ut
     },
     content: `# دراسة حالة: إنقاذ مبنى سكني آيل للسقوط بسبب ضعف التربة
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **دراسة حالة: إنقاذ مبنى سكني آيل للسقوط بسبب ضعف التربة** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل جدة).  
+**تصنيف المقال:** معالجة المباني والتشققات.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل جدة).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+شرح عملي يربط الفكرة بالقرار التنفيذي: متى تستخدم، كيف تُنفذ بأمان، وما الذي يُعد جودة حقيقية.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- مراقبة التشققات قبل وأثناء وبعد المعالجة (Crack Monitoring) تقلل المخاطر وتثبت النجاح؛ يمكن استخدام مساطر شروخ/قراءات منسوب/محطات توتال حسب حساسية المشروع.
-- الـ Packer يضمن عزل القطاع داخل الحفرة ويمنح تحكمًا أفضل في الضغط والتدفق؛ الخطأ الشائع هو اختيار قطر/مطاط غير مناسب أو عدم التأكد من إحكام العزل مما يسبب تسريبًا سطحيًا.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- جمع بيانات الموقع
+- تحديد نطاق عمل مرحلي
+- تسجيل الضغط/الكميات/المراحل
+- تقييم ما قبل/بعد
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- توثيق الخلطة وقابلية التشغيل عند اللزوم
+- مراقبة استجابة الموقع
+- تقرير نهائي وتوصيات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **جدة** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- البدء بالمعالجة دون تشخيص
+- عدم وجود حدود ضغط/مرحلية
+- غياب معايير قبول
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/soil-grouting](/ar/services/soil-grouting)
-- مدينة جدة: [/ar/locations/jeddah/soil-grouting](/ar/locations/jeddah/soil-grouting)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# Case Study: Saving a Residential Building from Collapse Due to Weak Soil
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Jeddah).
+**Executive summary:** This article provides a structured engineering approach to **Case Study: Saving a Residential Building from Collapse Due to Weak Soil** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Jeddah).  
+**Category:** Building Remediation & Cracks.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- Crack/level monitoring before, during, and after treatment reduces risk and documents success—using crack gauges, level readings, or total-station where needed.
-- A packer isolates the injection zone and improves control of pressure/flow. A common mistake is using the wrong diameter or poor sealing, leading to surface leakage and loss of effectiveness.
+## Engineering context
+A practical guide that connects concept to execution: when to use it, how to execute safely, and what “quality” means.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Collect site data
+- Define a staged scope
+- Log pressure/takes/stages
+- Before/after evaluation
 
-## Quick practical example
-For an occupied building in **Jeddah**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Document mix and workability when needed
+- Monitor response
+- Final report and recommendations
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating without diagnosis
+- No pressure/staging limits
+- No acceptance criteria
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/soil-grouting](/en/services/soil-grouting)
-- Jeddah: [/en/locations/jeddah/soil-grouting](/en/locations/jeddah/soil-grouting)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "هل كل التشققات سببها التربة؟", answer: "لا. قد تكون إنشائية أو حرارية أو بسبب تسرب مياه. التشخيص يحدد الحل." },
       { question: "ما الفرق بين التدعيم والحقن؟", answer: "التدعيم قد يشمل underpinning وحلول إنشائية، بينما الحقن يحسن التربة/يملأ الفراغات." },
@@ -6155,78 +8917,128 @@ For an occupied building in **Jeddah**, we start with near-surface checks for ut
     },
     content: `# أضرار الحفريات المجاورة على سلامة مبناك وكيفية تدعيم التربة بالحقن
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **أضرار الحفريات المجاورة على سلامة مبناك وكيفية تدعيم التربة بالحقن** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل القصيم).  
+**تصنيف المقال:** معالجة المباني والتشققات.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل جدة).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+شرح عملي يربط الفكرة بالقرار التنفيذي: متى تستخدم، كيف تُنفذ بأمان، وما الذي يُعد جودة حقيقية.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- اختبار اللزوجة يساعد في ضبط قابلية الضخ والاختراق داخل المسام/الشقوق؛ لزوجة أعلى تعني اختراق أقل وعادةً مناسبة لفراغات أكبر، بينما لزوجة أقل قد تناسب تربة أدق بشرط التحكم في النزف.
-- الضغط ليس هدفًا بحد ذاته؛ الهدف هو تحقيق ملء/تحسين بدون رفع (Heave) أو إحداث ضرر. لذلك نعتمد حقنًا مرحليًا وحدود رفع ومراقبة مستمرة.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- جمع بيانات الموقع
+- تحديد نطاق عمل مرحلي
+- تسجيل الضغط/الكميات/المراحل
+- تقييم ما قبل/بعد
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- توثيق الخلطة وقابلية التشغيل عند اللزوم
+- مراقبة استجابة الموقع
+- تقرير نهائي وتوصيات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **جدة** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- البدء بالمعالجة دون تشخيص
+- عدم وجود حدود ضغط/مرحلية
+- غياب معايير قبول
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/soil-grouting](/ar/services/soil-grouting)
-- مدينة جدة: [/ar/locations/jeddah/soil-grouting](/ar/locations/jeddah/soil-grouting)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# The Impact of Adjacent Excavations on Building Safety and How to Stabilize Soil with Grouting
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Jeddah).
+**Executive summary:** This article provides a structured engineering approach to **The Impact of Adjacent Excavations on Building Safety and How to Stabilize Soil with Grouting** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Qassim).  
+**Category:** Building Remediation & Cracks.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- Viscosity helps tune pumpability and penetration. Higher viscosity tends to reduce penetration and fits larger voids; lower viscosity can suit finer soils if bleed is controlled.
-- Pressure is not the goal. The goal is filling/improvement without heave or damage—hence staged injection, strict heave limits, and continuous monitoring.
+## Engineering context
+A practical guide that connects concept to execution: when to use it, how to execute safely, and what “quality” means.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Collect site data
+- Define a staged scope
+- Log pressure/takes/stages
+- Before/after evaluation
 
-## Quick practical example
-For an occupied building in **Jeddah**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Document mix and workability when needed
+- Monitor response
+- Final report and recommendations
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating without diagnosis
+- No pressure/staging limits
+- No acceptance criteria
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/soil-grouting](/en/services/soil-grouting)
-- Jeddah: [/en/locations/jeddah/soil-grouting](/en/locations/jeddah/soil-grouting)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "ما الفرق بين حقن التربة وحقن الخرسانة؟", answer: "حقن التربة يستهدف تحسين/ملء التربة والفراغات تحت الأساسات أو البلاطات، بينما حقن الخرسانة لمعالجة عيوب داخل العناصر الخرسانية." },
       { question: "هل الحقن يسبب رفع البلاط؟", answer: "قد يحدث رفع إذا كانت الضغوط غير مضبوطة. الحل: حقن مرحلي وحدود رفع ومراقبة مستمرة." },
@@ -6264,78 +9076,128 @@ For an occupied building in **Jeddah**, we start with near-surface checks for ut
     },
     content: `# الصيانة الوقائية للأساسات: هل يمكن حقن التربة كإجراء احترازي؟
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **الصيانة الوقائية للأساسات: هل يمكن حقن التربة كإجراء احترازي؟** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل الرياض).  
+**تصنيف المقال:** معالجة المباني والتشققات.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل جدة).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+شرح عملي يربط الفكرة بالقرار التنفيذي: متى تستخدم، كيف تُنفذ بأمان، وما الذي يُعد جودة حقيقية.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- في البيئات الكارستية (صخور جيرية/دولومايت)، التكهفات قد تكون مرتبطة بمسارات مياه؛ الحل عادةً يجمع بين كشف جيوفيزيائي + خطة حقن/تدعيم + السيطرة على مصادر المياه.
-- تحليل نمط التشقق (مائل/متدرج/شعري) مع قياسات زمنية هو مفتاح تحديد السبب (هبوط تفاضلي، تمدد حراري، تسرب مياه، ضعف تربة).
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- جمع بيانات الموقع
+- تحديد نطاق عمل مرحلي
+- تسجيل الضغط/الكميات/المراحل
+- تقييم ما قبل/بعد
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- توثيق الخلطة وقابلية التشغيل عند اللزوم
+- مراقبة استجابة الموقع
+- تقرير نهائي وتوصيات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **جدة** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- البدء بالمعالجة دون تشخيص
+- عدم وجود حدود ضغط/مرحلية
+- غياب معايير قبول
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/soil-grouting](/ar/services/soil-grouting)
-- مدينة جدة: [/ar/locations/jeddah/soil-grouting](/ar/locations/jeddah/soil-grouting)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# Preventive Maintenance for Foundations: Can Soil Grouting Be Used as a Precautionary Measure?
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Jeddah).
+**Executive summary:** This article provides a structured engineering approach to **Preventive Maintenance for Foundations: Can Soil Grouting Be Used as a Precautionary Measure?** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Riyadh).  
+**Category:** Building Remediation & Cracks.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- In karstic carbonate environments, cavities can relate to water pathways. A robust solution combines geophysics, a staged grouting/strengthening plan, and water control.
-- Crack pattern analysis (diagonal/stepped/hairline) with time-based measurements is essential to identify root cause: differential settlement, thermal movement, leakage, or bearing issues.
+## Engineering context
+A practical guide that connects concept to execution: when to use it, how to execute safely, and what “quality” means.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Collect site data
+- Define a staged scope
+- Log pressure/takes/stages
+- Before/after evaluation
 
-## Quick practical example
-For an occupied building in **Jeddah**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Document mix and workability when needed
+- Monitor response
+- Final report and recommendations
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating without diagnosis
+- No pressure/staging limits
+- No acceptance criteria
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/soil-grouting](/en/services/soil-grouting)
-- Jeddah: [/en/locations/jeddah/soil-grouting](/en/locations/jeddah/soil-grouting)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "ما الفرق بين حقن التربة وحقن الخرسانة؟", answer: "حقن التربة يستهدف تحسين/ملء التربة والفراغات تحت الأساسات أو البلاطات، بينما حقن الخرسانة لمعالجة عيوب داخل العناصر الخرسانية." },
       { question: "هل الحقن يسبب رفع البلاط؟", answer: "قد يحدث رفع إذا كانت الضغوط غير مضبوطة. الحل: حقن مرحلي وحدود رفع ومراقبة مستمرة." },
@@ -6373,78 +9235,128 @@ For an occupied building in **Jeddah**, we start with near-surface checks for ut
     },
     content: `# تحليل التكلفة والعائد: هل الحقن الأسمنتي أوفر من استبدال التربة؟
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **تحليل التكلفة والعائد: هل الحقن الأسمنتي أوفر من استبدال التربة؟** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل الخبر).  
+**تصنيف المقال:** اقتصادي ومقارنات.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل الجبيل).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+شرح عملي يربط الفكرة بالقرار التنفيذي: متى تستخدم، كيف تُنفذ بأمان، وما الذي يُعد جودة حقيقية.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- عند مقارنة التكلفة، الأهم هو تكلفة المخاطر (إعادة أعمال، توقف تشغيل، تعويضات). الحل الأرخص قد يكون الأعلى تكلفة على المدى المتوسط إذا لم يعالج السبب الجذري.
-- الضغط ليس هدفًا بحد ذاته؛ الهدف هو تحقيق ملء/تحسين بدون رفع (Heave) أو إحداث ضرر. لذلك نعتمد حقنًا مرحليًا وحدود رفع ومراقبة مستمرة.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- جمع بيانات الموقع
+- تحديد نطاق عمل مرحلي
+- تسجيل الضغط/الكميات/المراحل
+- تقييم ما قبل/بعد
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- توثيق الخلطة وقابلية التشغيل عند اللزوم
+- مراقبة استجابة الموقع
+- تقرير نهائي وتوصيات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **الجبيل** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- البدء بالمعالجة دون تشخيص
+- عدم وجود حدود ضغط/مرحلية
+- غياب معايير قبول
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/soil-grouting](/ar/services/soil-grouting)
-- مدينة الجبيل: [/ar/locations/jubail/soil-grouting](/ar/locations/jubail/soil-grouting)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# Cost-Benefit Analysis: Is Cement Grouting More Economical Than Soil Replacement?
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Jubail).
+**Executive summary:** This article provides a structured engineering approach to **Cost-Benefit Analysis: Is Cement Grouting More Economical Than Soil Replacement?** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Khobar).  
+**Category:** Economics & Comparisons.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- When comparing cost, consider risk cost (rework, downtime, liabilities). The cheapest option can be most expensive long-term if it doesn’t address root causes.
-- Pressure is not the goal. The goal is filling/improvement without heave or damage—hence staged injection, strict heave limits, and continuous monitoring.
+## Engineering context
+A practical guide that connects concept to execution: when to use it, how to execute safely, and what “quality” means.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Collect site data
+- Define a staged scope
+- Log pressure/takes/stages
+- Before/after evaluation
 
-## Quick practical example
-For an occupied building in **Jubail**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Document mix and workability when needed
+- Monitor response
+- Final report and recommendations
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating without diagnosis
+- No pressure/staging limits
+- No acceptance criteria
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/soil-grouting](/en/services/soil-grouting)
-- Jubail: [/en/locations/jubail/soil-grouting](/en/locations/jubail/soil-grouting)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "ما الفرق بين حقن التربة وحقن الخرسانة؟", answer: "حقن التربة يستهدف تحسين/ملء التربة والفراغات تحت الأساسات أو البلاطات، بينما حقن الخرسانة لمعالجة عيوب داخل العناصر الخرسانية." },
       { question: "هل الحقن يسبب رفع البلاط؟", answer: "قد يحدث رفع إذا كانت الضغوط غير مضبوطة. الحل: حقن مرحلي وحدود رفع ومراقبة مستمرة." },
@@ -6482,78 +9394,128 @@ For an occupied building in **Jubail**, we start with near-surface checks for ut
     },
     content: `# العمر الافتراضي للمعالجة بالحقن الأسمنتي: هل هو حل دائم؟
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **العمر الافتراضي للمعالجة بالحقن الأسمنتي: هل هو حل دائم؟** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل القصيم).  
+**تصنيف المقال:** اقتصادي ومقارنات.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل الخبر).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+شرح عملي يربط الفكرة بالقرار التنفيذي: متى تستخدم، كيف تُنفذ بأمان، وما الذي يُعد جودة حقيقية.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- الضغط ليس هدفًا بحد ذاته؛ الهدف هو تحقيق ملء/تحسين بدون رفع (Heave) أو إحداث ضرر. لذلك نعتمد حقنًا مرحليًا وحدود رفع ومراقبة مستمرة.
-- تقنية GPR ممتازة للأهداف القريبة من السطح وتحديد مرافق تحت الأرض والفراغات الضحلة، لكن أداؤها يتأثر بالرطوبة العالية أو التربة الطينية.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- جمع بيانات الموقع
+- تحديد نطاق عمل مرحلي
+- تسجيل الضغط/الكميات/المراحل
+- تقييم ما قبل/بعد
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- توثيق الخلطة وقابلية التشغيل عند اللزوم
+- مراقبة استجابة الموقع
+- تقرير نهائي وتوصيات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **الخبر** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- البدء بالمعالجة دون تشخيص
+- عدم وجود حدود ضغط/مرحلية
+- غياب معايير قبول
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/soil-grouting](/ar/services/soil-grouting)
-- مدينة الخبر: [/ar/locations/khobar/soil-grouting](/ar/locations/khobar/soil-grouting)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# The Service Life of Cement Grouting: Is It a Permanent Solution?
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Khobar).
+**Executive summary:** This article provides a structured engineering approach to **The Service Life of Cement Grouting: Is It a Permanent Solution?** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Qassim).  
+**Category:** Economics & Comparisons.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- Pressure is not the goal. The goal is filling/improvement without heave or damage—hence staged injection, strict heave limits, and continuous monitoring.
-- GPR is excellent for near-surface targets, utilities, and shallow voids, but performance can degrade in wet/clayey soils.
+## Engineering context
+A practical guide that connects concept to execution: when to use it, how to execute safely, and what “quality” means.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Collect site data
+- Define a staged scope
+- Log pressure/takes/stages
+- Before/after evaluation
 
-## Quick practical example
-For an occupied building in **Khobar**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Document mix and workability when needed
+- Monitor response
+- Final report and recommendations
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating without diagnosis
+- No pressure/staging limits
+- No acceptance criteria
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/soil-grouting](/en/services/soil-grouting)
-- Khobar: [/en/locations/khobar/soil-grouting](/en/locations/khobar/soil-grouting)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "ما الفرق بين حقن التربة وحقن الخرسانة؟", answer: "حقن التربة يستهدف تحسين/ملء التربة والفراغات تحت الأساسات أو البلاطات، بينما حقن الخرسانة لمعالجة عيوب داخل العناصر الخرسانية." },
       { question: "هل الحقن يسبب رفع البلاط؟", answer: "قد يحدث رفع إذا كانت الضغوط غير مضبوطة. الحل: حقن مرحلي وحدود رفع ومراقبة مستمرة." },
@@ -6591,78 +9553,128 @@ For an occupied building in **Khobar**, we start with near-surface checks for ut
     },
     content: `# مقارنة بين الخوازيق (Piles) والحقن الأسمنتي في تدعيم المنشآت
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **مقارنة بين الخوازيق (Piles) والحقن الأسمنتي في تدعيم المنشآت** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل الجبيل).  
+**تصنيف المقال:** اقتصادي ومقارنات.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل المدينة المنورة).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+شرح عملي يربط الفكرة بالقرار التنفيذي: متى تستخدم، كيف تُنفذ بأمان، وما الذي يُعد جودة حقيقية.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- تحليل نمط التشقق (مائل/متدرج/شعري) مع قياسات زمنية هو مفتاح تحديد السبب (هبوط تفاضلي، تمدد حراري، تسرب مياه، ضعف تربة).
-- في البيئات الكارستية (صخور جيرية/دولومايت)، التكهفات قد تكون مرتبطة بمسارات مياه؛ الحل عادةً يجمع بين كشف جيوفيزيائي + خطة حقن/تدعيم + السيطرة على مصادر المياه.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- جمع بيانات الموقع
+- تحديد نطاق عمل مرحلي
+- تسجيل الضغط/الكميات/المراحل
+- تقييم ما قبل/بعد
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- توثيق الخلطة وقابلية التشغيل عند اللزوم
+- مراقبة استجابة الموقع
+- تقرير نهائي وتوصيات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **المدينة المنورة** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- البدء بالمعالجة دون تشخيص
+- عدم وجود حدود ضغط/مرحلية
+- غياب معايير قبول
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/soil-grouting](/ar/services/soil-grouting)
-- مدينة المدينة المنورة: [/ar/locations/madinah/soil-grouting](/ar/locations/madinah/soil-grouting)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# A Comparison Between Piles and Cement Grouting for Structural Support
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Madinah).
+**Executive summary:** This article provides a structured engineering approach to **A Comparison Between Piles and Cement Grouting for Structural Support** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Jubail).  
+**Category:** Economics & Comparisons.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- Crack pattern analysis (diagonal/stepped/hairline) with time-based measurements is essential to identify root cause: differential settlement, thermal movement, leakage, or bearing issues.
-- In karstic carbonate environments, cavities can relate to water pathways. A robust solution combines geophysics, a staged grouting/strengthening plan, and water control.
+## Engineering context
+A practical guide that connects concept to execution: when to use it, how to execute safely, and what “quality” means.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Collect site data
+- Define a staged scope
+- Log pressure/takes/stages
+- Before/after evaluation
 
-## Quick practical example
-For an occupied building in **Madinah**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Document mix and workability when needed
+- Monitor response
+- Final report and recommendations
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating without diagnosis
+- No pressure/staging limits
+- No acceptance criteria
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/soil-grouting](/en/services/soil-grouting)
-- Madinah: [/en/locations/madinah/soil-grouting](/en/locations/madinah/soil-grouting)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "ما الفرق بين حقن التربة وحقن الخرسانة؟", answer: "حقن التربة يستهدف تحسين/ملء التربة والفراغات تحت الأساسات أو البلاطات، بينما حقن الخرسانة لمعالجة عيوب داخل العناصر الخرسانية." },
       { question: "هل الحقن يسبب رفع البلاط؟", answer: "قد يحدث رفع إذا كانت الضغوط غير مضبوطة. الحل: حقن مرحلي وحدود رفع ومراقبة مستمرة." },
@@ -6700,78 +9712,128 @@ For an occupied building in **Madinah**, we start with near-surface checks for u
     },
     content: `# المواد المضافة للأسمنت (Admixtures): كيف تسرع التصلب وتقلل التكلفة؟
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **المواد المضافة للأسمنت (Admixtures): كيف تسرع التصلب وتقلل التكلفة؟** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل جدة).  
+**تصنيف المقال:** اقتصادي ومقارنات.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل جدة).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+شرح عملي يربط الفكرة بالقرار التنفيذي: متى تستخدم، كيف تُنفذ بأمان، وما الذي يُعد جودة حقيقية.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- عند مقارنة التكلفة، الأهم هو تكلفة المخاطر (إعادة أعمال، توقف تشغيل، تعويضات). الحل الأرخص قد يكون الأعلى تكلفة على المدى المتوسط إذا لم يعالج السبب الجذري.
-- الضغط ليس هدفًا بحد ذاته؛ الهدف هو تحقيق ملء/تحسين بدون رفع (Heave) أو إحداث ضرر. لذلك نعتمد حقنًا مرحليًا وحدود رفع ومراقبة مستمرة.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- جمع بيانات الموقع
+- تحديد نطاق عمل مرحلي
+- تسجيل الضغط/الكميات/المراحل
+- تقييم ما قبل/بعد
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- توثيق الخلطة وقابلية التشغيل عند اللزوم
+- مراقبة استجابة الموقع
+- تقرير نهائي وتوصيات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **جدة** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- البدء بالمعالجة دون تشخيص
+- عدم وجود حدود ضغط/مرحلية
+- غياب معايير قبول
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/soil-grouting](/ar/services/soil-grouting)
-- مدينة جدة: [/ar/locations/jeddah/soil-grouting](/ar/locations/jeddah/soil-grouting)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# Cement Admixtures: How to Accelerate Hardening and Reduce Cost
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Jeddah).
+**Executive summary:** This article provides a structured engineering approach to **Cement Admixtures: How to Accelerate Hardening and Reduce Cost** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Jeddah).  
+**Category:** Economics & Comparisons.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- When comparing cost, consider risk cost (rework, downtime, liabilities). The cheapest option can be most expensive long-term if it doesn’t address root causes.
-- Pressure is not the goal. The goal is filling/improvement without heave or damage—hence staged injection, strict heave limits, and continuous monitoring.
+## Engineering context
+A practical guide that connects concept to execution: when to use it, how to execute safely, and what “quality” means.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Collect site data
+- Define a staged scope
+- Log pressure/takes/stages
+- Before/after evaluation
 
-## Quick practical example
-For an occupied building in **Jeddah**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Document mix and workability when needed
+- Monitor response
+- Final report and recommendations
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating without diagnosis
+- No pressure/staging limits
+- No acceptance criteria
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/soil-grouting](/en/services/soil-grouting)
-- Jeddah: [/en/locations/jeddah/soil-grouting](/en/locations/jeddah/soil-grouting)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "ما الفرق بين حقن التربة وحقن الخرسانة؟", answer: "حقن التربة يستهدف تحسين/ملء التربة والفراغات تحت الأساسات أو البلاطات، بينما حقن الخرسانة لمعالجة عيوب داخل العناصر الخرسانية." },
       { question: "هل الحقن يسبب رفع البلاط؟", answer: "قد يحدث رفع إذا كانت الضغوط غير مضبوطة. الحل: حقن مرحلي وحدود رفع ومراقبة مستمرة." },
@@ -6809,78 +9871,128 @@ For an occupied building in **Jeddah**, we start with near-surface checks for ut
     },
     content: `# الحقن بالراتنجات (Resin Injection) مقابل الأسمنت: الفروقات في السعر والأداء
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **الحقن بالراتنجات (Resin Injection) مقابل الأسمنت: الفروقات في السعر والأداء** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل الجبيل).  
+**تصنيف المقال:** اقتصادي ومقارنات.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل الدمام).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+شرح عملي يربط الفكرة بالقرار التنفيذي: متى تستخدم، كيف تُنفذ بأمان، وما الذي يُعد جودة حقيقية.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- التقرير الاحترافي لا يكتفي بوصف طبقات التربة، بل يربط النتائج بالقرار التنفيذي: نوع الأساس، حدود الهبوط، توصيات الردم/الدمك، واحتياج تحسين/حقن.
-- الضغط ليس هدفًا بحد ذاته؛ الهدف هو تحقيق ملء/تحسين بدون رفع (Heave) أو إحداث ضرر. لذلك نعتمد حقنًا مرحليًا وحدود رفع ومراقبة مستمرة.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- جمع بيانات الموقع
+- تحديد نطاق عمل مرحلي
+- تسجيل الضغط/الكميات/المراحل
+- تقييم ما قبل/بعد
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- توثيق الخلطة وقابلية التشغيل عند اللزوم
+- مراقبة استجابة الموقع
+- تقرير نهائي وتوصيات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **الدمام** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- البدء بالمعالجة دون تشخيص
+- عدم وجود حدود ضغط/مرحلية
+- غياب معايير قبول
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/soil-grouting](/ar/services/soil-grouting)
-- مدينة الدمام: [/ar/locations/dammam/soil-grouting](/ar/locations/dammam/soil-grouting)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# Resin Injection vs. Cement: Differences in Price and Performance
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Dammam).
+**Executive summary:** This article provides a structured engineering approach to **Resin Injection vs. Cement: Differences in Price and Performance** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Jubail).  
+**Category:** Economics & Comparisons.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- A high-quality report links soil layers to decisions: foundation type, settlement limits, compaction/backfill, and whether improvement/grouting is needed.
-- Pressure is not the goal. The goal is filling/improvement without heave or damage—hence staged injection, strict heave limits, and continuous monitoring.
+## Engineering context
+A practical guide that connects concept to execution: when to use it, how to execute safely, and what “quality” means.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Collect site data
+- Define a staged scope
+- Log pressure/takes/stages
+- Before/after evaluation
 
-## Quick practical example
-For an occupied building in **Dammam**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Document mix and workability when needed
+- Monitor response
+- Final report and recommendations
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating without diagnosis
+- No pressure/staging limits
+- No acceptance criteria
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/soil-grouting](/en/services/soil-grouting)
-- Dammam: [/en/locations/dammam/soil-grouting](/en/locations/dammam/soil-grouting)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "ما الفرق بين حقن التربة وحقن الخرسانة؟", answer: "حقن التربة يستهدف تحسين/ملء التربة والفراغات تحت الأساسات أو البلاطات، بينما حقن الخرسانة لمعالجة عيوب داخل العناصر الخرسانية." },
       { question: "هل الحقن يسبب رفع البلاط؟", answer: "قد يحدث رفع إذا كانت الضغوط غير مضبوطة. الحل: حقن مرحلي وحدود رفع ومراقبة مستمرة." },
@@ -6918,78 +10030,128 @@ For an occupied building in **Dammam**, we start with near-surface checks for ut
     },
     content: `# الهندسة القيمية (Value Engineering) في أعمال الحقن: تحقيق الأمان بأقل تكلفة
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **الهندسة القيمية (Value Engineering) في أعمال الحقن: تحقيق الأمان بأقل تكلفة** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل الخبر).  
+**تصنيف المقال:** اقتصادي ومقارنات.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل جدة).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+شرح عملي يربط الفكرة بالقرار التنفيذي: متى تستخدم، كيف تُنفذ بأمان، وما الذي يُعد جودة حقيقية.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- عند مقارنة التكلفة، الأهم هو تكلفة المخاطر (إعادة أعمال، توقف تشغيل، تعويضات). الحل الأرخص قد يكون الأعلى تكلفة على المدى المتوسط إذا لم يعالج السبب الجذري.
-- الضغط ليس هدفًا بحد ذاته؛ الهدف هو تحقيق ملء/تحسين بدون رفع (Heave) أو إحداث ضرر. لذلك نعتمد حقنًا مرحليًا وحدود رفع ومراقبة مستمرة.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- جمع بيانات الموقع
+- تحديد نطاق عمل مرحلي
+- تسجيل الضغط/الكميات/المراحل
+- تقييم ما قبل/بعد
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- توثيق الخلطة وقابلية التشغيل عند اللزوم
+- مراقبة استجابة الموقع
+- تقرير نهائي وتوصيات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **جدة** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- البدء بالمعالجة دون تشخيص
+- عدم وجود حدود ضغط/مرحلية
+- غياب معايير قبول
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/soil-grouting](/ar/services/soil-grouting)
-- مدينة جدة: [/ar/locations/jeddah/soil-grouting](/ar/locations/jeddah/soil-grouting)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# Value Engineering in Grouting Works: Achieving Safety at the Lowest Cost
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Jeddah).
+**Executive summary:** This article provides a structured engineering approach to **Value Engineering in Grouting Works: Achieving Safety at the Lowest Cost** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Khobar).  
+**Category:** Economics & Comparisons.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- When comparing cost, consider risk cost (rework, downtime, liabilities). The cheapest option can be most expensive long-term if it doesn’t address root causes.
-- Pressure is not the goal. The goal is filling/improvement without heave or damage—hence staged injection, strict heave limits, and continuous monitoring.
+## Engineering context
+A practical guide that connects concept to execution: when to use it, how to execute safely, and what “quality” means.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Collect site data
+- Define a staged scope
+- Log pressure/takes/stages
+- Before/after evaluation
 
-## Quick practical example
-For an occupied building in **Jeddah**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Document mix and workability when needed
+- Monitor response
+- Final report and recommendations
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating without diagnosis
+- No pressure/staging limits
+- No acceptance criteria
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/soil-grouting](/en/services/soil-grouting)
-- Jeddah: [/en/locations/jeddah/soil-grouting](/en/locations/jeddah/soil-grouting)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "ما الفرق بين حقن التربة وحقن الخرسانة؟", answer: "حقن التربة يستهدف تحسين/ملء التربة والفراغات تحت الأساسات أو البلاطات، بينما حقن الخرسانة لمعالجة عيوب داخل العناصر الخرسانية." },
       { question: "هل الحقن يسبب رفع البلاط؟", answer: "قد يحدث رفع إذا كانت الضغوط غير مضبوطة. الحل: حقن مرحلي وحدود رفع ومراقبة مستمرة." },
@@ -7027,78 +10189,128 @@ For an occupied building in **Jeddah**, we start with near-surface checks for ut
     },
     content: `# العوامل المؤثرة في تسعير مشاريع الحقن الجيوتقني: تحليل شامل
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **العوامل المؤثرة في تسعير مشاريع الحقن الجيوتقني: تحليل شامل** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل جدة).  
+**تصنيف المقال:** اقتصادي ومقارنات.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل مكة المكرمة).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+شرح عملي يربط الفكرة بالقرار التنفيذي: متى تستخدم، كيف تُنفذ بأمان، وما الذي يُعد جودة حقيقية.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- عند مقارنة التكلفة، الأهم هو تكلفة المخاطر (إعادة أعمال، توقف تشغيل، تعويضات). الحل الأرخص قد يكون الأعلى تكلفة على المدى المتوسط إذا لم يعالج السبب الجذري.
-- اختبار اللزوجة يساعد في ضبط قابلية الضخ والاختراق داخل المسام/الشقوق؛ لزوجة أعلى تعني اختراق أقل وعادةً مناسبة لفراغات أكبر، بينما لزوجة أقل قد تناسب تربة أدق بشرط التحكم في النزف.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- جمع بيانات الموقع
+- تحديد نطاق عمل مرحلي
+- تسجيل الضغط/الكميات/المراحل
+- تقييم ما قبل/بعد
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- توثيق الخلطة وقابلية التشغيل عند اللزوم
+- مراقبة استجابة الموقع
+- تقرير نهائي وتوصيات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **مكة المكرمة** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- البدء بالمعالجة دون تشخيص
+- عدم وجود حدود ضغط/مرحلية
+- غياب معايير قبول
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/soil-grouting](/ar/services/soil-grouting)
-- مدينة مكة المكرمة: [/ar/locations/makkah/soil-grouting](/ar/locations/makkah/soil-grouting)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# Factors Influencing the Pricing of Geotechnical Grouting Projects: A Comprehensive Analysis
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Makkah).
+**Executive summary:** This article provides a structured engineering approach to **Factors Influencing the Pricing of Geotechnical Grouting Projects: A Comprehensive Analysis** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Jeddah).  
+**Category:** Economics & Comparisons.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- When comparing cost, consider risk cost (rework, downtime, liabilities). The cheapest option can be most expensive long-term if it doesn’t address root causes.
-- Viscosity helps tune pumpability and penetration. Higher viscosity tends to reduce penetration and fits larger voids; lower viscosity can suit finer soils if bleed is controlled.
+## Engineering context
+A practical guide that connects concept to execution: when to use it, how to execute safely, and what “quality” means.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Collect site data
+- Define a staged scope
+- Log pressure/takes/stages
+- Before/after evaluation
 
-## Quick practical example
-For an occupied building in **Makkah**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Document mix and workability when needed
+- Monitor response
+- Final report and recommendations
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating without diagnosis
+- No pressure/staging limits
+- No acceptance criteria
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/soil-grouting](/en/services/soil-grouting)
-- Makkah: [/en/locations/makkah/soil-grouting](/en/locations/makkah/soil-grouting)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "ما الفرق بين حقن التربة وحقن الخرسانة؟", answer: "حقن التربة يستهدف تحسين/ملء التربة والفراغات تحت الأساسات أو البلاطات، بينما حقن الخرسانة لمعالجة عيوب داخل العناصر الخرسانية." },
       { question: "هل الحقن يسبب رفع البلاط؟", answer: "قد يحدث رفع إذا كانت الضغوط غير مضبوطة. الحل: حقن مرحلي وحدود رفع ومراقبة مستمرة." },
@@ -7136,78 +10348,128 @@ For an occupied building in **Makkah**, we start with near-surface checks for ut
     },
     content: `# مقارنة بين الحقن النفاث (Jet Grouting) والتدعيم بالرص الاهتزازي (Vibro-Compaction)
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **مقارنة بين الحقن النفاث (Jet Grouting) والتدعيم بالرص الاهتزازي (Vibro-Compaction)** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل الخبر).  
+**تصنيف المقال:** اقتصادي ومقارنات.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل الدمام).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+شرح عملي يربط الفكرة بالقرار التنفيذي: متى تستخدم، كيف تُنفذ بأمان، وما الذي يُعد جودة حقيقية.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- في البيئات الكارستية (صخور جيرية/دولومايت)، التكهفات قد تكون مرتبطة بمسارات مياه؛ الحل عادةً يجمع بين كشف جيوفيزيائي + خطة حقن/تدعيم + السيطرة على مصادر المياه.
-- الـ Packer يضمن عزل القطاع داخل الحفرة ويمنح تحكمًا أفضل في الضغط والتدفق؛ الخطأ الشائع هو اختيار قطر/مطاط غير مناسب أو عدم التأكد من إحكام العزل مما يسبب تسريبًا سطحيًا.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- جمع بيانات الموقع
+- تحديد نطاق عمل مرحلي
+- تسجيل الضغط/الكميات/المراحل
+- تقييم ما قبل/بعد
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- توثيق الخلطة وقابلية التشغيل عند اللزوم
+- مراقبة استجابة الموقع
+- تقرير نهائي وتوصيات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **الدمام** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- البدء بالمعالجة دون تشخيص
+- عدم وجود حدود ضغط/مرحلية
+- غياب معايير قبول
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/soil-grouting](/ar/services/soil-grouting)
-- مدينة الدمام: [/ar/locations/dammam/soil-grouting](/ar/locations/dammam/soil-grouting)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# Comparison Between Jet Grouting and Vibro-Compaction
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Dammam).
+**Executive summary:** This article provides a structured engineering approach to **Comparison Between Jet Grouting and Vibro-Compaction** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Khobar).  
+**Category:** Economics & Comparisons.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- In karstic carbonate environments, cavities can relate to water pathways. A robust solution combines geophysics, a staged grouting/strengthening plan, and water control.
-- A packer isolates the injection zone and improves control of pressure/flow. A common mistake is using the wrong diameter or poor sealing, leading to surface leakage and loss of effectiveness.
+## Engineering context
+A practical guide that connects concept to execution: when to use it, how to execute safely, and what “quality” means.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Collect site data
+- Define a staged scope
+- Log pressure/takes/stages
+- Before/after evaluation
 
-## Quick practical example
-For an occupied building in **Dammam**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Document mix and workability when needed
+- Monitor response
+- Final report and recommendations
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating without diagnosis
+- No pressure/staging limits
+- No acceptance criteria
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/soil-grouting](/en/services/soil-grouting)
-- Dammam: [/en/locations/dammam/soil-grouting](/en/locations/dammam/soil-grouting)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "ما الفرق بين حقن التربة وحقن الخرسانة؟", answer: "حقن التربة يستهدف تحسين/ملء التربة والفراغات تحت الأساسات أو البلاطات، بينما حقن الخرسانة لمعالجة عيوب داخل العناصر الخرسانية." },
       { question: "هل الحقن يسبب رفع البلاط؟", answer: "قد يحدث رفع إذا كانت الضغوط غير مضبوطة. الحل: حقن مرحلي وحدود رفع ومراقبة مستمرة." },
@@ -7245,78 +10507,128 @@ For an occupied building in **Dammam**, we start with near-surface checks for ut
     },
     content: `# متطلبات الكود الإنشائي (SBC) في اختيار حلول تدعيم التربة وحمايتها
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **متطلبات الكود الإنشائي (SBC) في اختيار حلول تدعيم التربة وحمايتها** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل جدة).  
+**تصنيف المقال:** اقتصادي ومقارنات.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل مكة المكرمة).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+شرح عملي يربط الفكرة بالقرار التنفيذي: متى تستخدم، كيف تُنفذ بأمان، وما الذي يُعد جودة حقيقية.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- تقنية ERT مناسبة للأعماق الأكبر وتحديد مناطق ضعف/تكهف محتملة عبر فروقات المقاومة الكهربائية، وغالبًا ما تكون أكثر موثوقية في التربة الرطبة مقارنةً بـ GPR.
-- في البيئات الكارستية (صخور جيرية/دولومايت)، التكهفات قد تكون مرتبطة بمسارات مياه؛ الحل عادةً يجمع بين كشف جيوفيزيائي + خطة حقن/تدعيم + السيطرة على مصادر المياه.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- جمع بيانات الموقع
+- تحديد نطاق عمل مرحلي
+- تسجيل الضغط/الكميات/المراحل
+- تقييم ما قبل/بعد
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- توثيق الخلطة وقابلية التشغيل عند اللزوم
+- مراقبة استجابة الموقع
+- تقرير نهائي وتوصيات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **مكة المكرمة** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- البدء بالمعالجة دون تشخيص
+- عدم وجود حدود ضغط/مرحلية
+- غياب معايير قبول
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/soil-grouting](/ar/services/soil-grouting)
-- مدينة مكة المكرمة: [/ar/locations/makkah/soil-grouting](/ar/locations/makkah/soil-grouting)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# Saudi Building Code (SBC) Requirements for Selecting Soil Support and Protection Solutions
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Makkah).
+**Executive summary:** This article provides a structured engineering approach to **Saudi Building Code (SBC) Requirements for Selecting Soil Support and Protection Solutions** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Jeddah).  
+**Category:** Economics & Comparisons.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- ERT is suitable for deeper targets and mapping potential cavities via resistivity contrasts, often more reliable than GPR in wet conditions.
-- In karstic carbonate environments, cavities can relate to water pathways. A robust solution combines geophysics, a staged grouting/strengthening plan, and water control.
+## Engineering context
+A practical guide that connects concept to execution: when to use it, how to execute safely, and what “quality” means.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Collect site data
+- Define a staged scope
+- Log pressure/takes/stages
+- Before/after evaluation
 
-## Quick practical example
-For an occupied building in **Makkah**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Document mix and workability when needed
+- Monitor response
+- Final report and recommendations
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating without diagnosis
+- No pressure/staging limits
+- No acceptance criteria
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/soil-grouting](/en/services/soil-grouting)
-- Makkah: [/en/locations/makkah/soil-grouting](/en/locations/makkah/soil-grouting)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "هل كل التشققات سببها التربة؟", answer: "لا. قد تكون إنشائية أو حرارية أو بسبب تسرب مياه. التشخيص يحدد الحل." },
       { question: "ما الفرق بين التدعيم والحقن؟", answer: "التدعيم قد يشمل underpinning وحلول إنشائية، بينما الحقن يحسن التربة/يملأ الفراغات." },
@@ -7352,80 +10664,130 @@ For an occupied building in **Makkah**, we start with near-surface checks for ut
       creditUrl: '',
       license: 'TBD'
     },
-    content: `# دور \'جسر المراقبة\' (Crack Monitoring) في تحديد فعالية عملية الحقن
+    content: `# دور \\'جسر المراقبة\\' (Crack Monitoring) في تحديد فعالية عملية الحقن
+
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **دور \\'جسر المراقبة\\' (Crack Monitoring) في تحديد فعالية عملية الحقن** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل جدة).  
+**تصنيف المقال:** اقتصادي ومقارنات.
 
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل الجبيل).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+شرح عملي يربط الفكرة بالقرار التنفيذي: متى تستخدم، كيف تُنفذ بأمان، وما الذي يُعد جودة حقيقية.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- تحليل نمط التشقق (مائل/متدرج/شعري) مع قياسات زمنية هو مفتاح تحديد السبب (هبوط تفاضلي، تمدد حراري، تسرب مياه، ضعف تربة).
-- مراقبة التشققات قبل وأثناء وبعد المعالجة (Crack Monitoring) تقلل المخاطر وتثبت النجاح؛ يمكن استخدام مساطر شروخ/قراءات منسوب/محطات توتال حسب حساسية المشروع.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- جمع بيانات الموقع
+- تحديد نطاق عمل مرحلي
+- تسجيل الضغط/الكميات/المراحل
+- تقييم ما قبل/بعد
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- توثيق الخلطة وقابلية التشغيل عند اللزوم
+- مراقبة استجابة الموقع
+- تقرير نهائي وتوصيات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **الجبيل** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- البدء بالمعالجة دون تشخيص
+- عدم وجود حدود ضغط/مرحلية
+- غياب معايير قبول
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/soil-grouting](/ar/services/soil-grouting)
-- مدينة الجبيل: [/ar/locations/jubail/soil-grouting](/ar/locations/jubail/soil-grouting)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# The Role of Crack Monitoring in Determining Grouting Effectiveness
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Jubail).
+**Executive summary:** This article provides a structured engineering approach to **The Role of Crack Monitoring in Determining Grouting Effectiveness** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Jeddah).  
+**Category:** Economics & Comparisons.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- Crack pattern analysis (diagonal/stepped/hairline) with time-based measurements is essential to identify root cause: differential settlement, thermal movement, leakage, or bearing issues.
-- Crack/level monitoring before, during, and after treatment reduces risk and documents success—using crack gauges, level readings, or total-station where needed.
+## Engineering context
+A practical guide that connects concept to execution: when to use it, how to execute safely, and what “quality” means.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Collect site data
+- Define a staged scope
+- Log pressure/takes/stages
+- Before/after evaluation
 
-## Quick practical example
-For an occupied building in **Jubail**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Document mix and workability when needed
+- Monitor response
+- Final report and recommendations
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating without diagnosis
+- No pressure/staging limits
+- No acceptance criteria
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/soil-grouting](/en/services/soil-grouting)
-- Jubail: [/en/locations/jubail/soil-grouting](/en/locations/jubail/soil-grouting)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [
       { question: "ما الفرق بين حقن التربة وحقن الخرسانة؟", answer: "حقن التربة يستهدف تحسين/ملء التربة والفراغات تحت الأساسات أو البلاطات، بينما حقن الخرسانة لمعالجة عيوب داخل العناصر الخرسانية." },
       { question: "هل الحقن يسبب رفع البلاط؟", answer: "قد يحدث رفع إذا كانت الضغوط غير مضبوطة. الحل: حقن مرحلي وحدود رفع ومراقبة مستمرة." },
@@ -7456,78 +10818,128 @@ For an occupied building in **Jubail**, we start with near-surface checks for ut
     slug: 'soil-grouting-guide',
     content: `# دليل حقن التربة (حقن أسمنتي): متى تحتاجه وكيف نختار الحل
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **دليل حقن التربة (حقن أسمنتي): متى تحتاجه وكيف نختار الحل** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل المدينة المنورة).  
+**تصنيف المقال:** حقن التربة.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل الدمام).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+شرح عملي يربط الفكرة بالقرار التنفيذي: متى تستخدم، كيف تُنفذ بأمان، وما الذي يُعد جودة حقيقية.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- تقنية ERT مناسبة للأعماق الأكبر وتحديد مناطق ضعف/تكهف محتملة عبر فروقات المقاومة الكهربائية، وغالبًا ما تكون أكثر موثوقية في التربة الرطبة مقارنةً بـ GPR.
-- تقنية GPR ممتازة للأهداف القريبة من السطح وتحديد مرافق تحت الأرض والفراغات الضحلة، لكن أداؤها يتأثر بالرطوبة العالية أو التربة الطينية.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- جمع بيانات الموقع
+- تحديد نطاق عمل مرحلي
+- تسجيل الضغط/الكميات/المراحل
+- تقييم ما قبل/بعد
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- توثيق الخلطة وقابلية التشغيل عند اللزوم
+- مراقبة استجابة الموقع
+- تقرير نهائي وتوصيات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **الدمام** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- البدء بالمعالجة دون تشخيص
+- عدم وجود حدود ضغط/مرحلية
+- غياب معايير قبول
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/soil-grouting](/ar/services/soil-grouting)
-- مدينة الدمام: [/ar/locations/dammam/soil-grouting](/ar/locations/dammam/soil-grouting)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# Soil Grouting Guide: When to Use It and How to Choose the Right Approach
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Dammam).
+**Executive summary:** This article provides a structured engineering approach to **Soil Grouting Guide: When to Use It and How to Choose the Right Approach** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Madinah).  
+**Category:** Soil Grouting.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- ERT is suitable for deeper targets and mapping potential cavities via resistivity contrasts, often more reliable than GPR in wet conditions.
-- GPR is excellent for near-surface targets, utilities, and shallow voids, but performance can degrade in wet/clayey soils.
+## Engineering context
+A practical guide that connects concept to execution: when to use it, how to execute safely, and what “quality” means.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Collect site data
+- Define a staged scope
+- Log pressure/takes/stages
+- Before/after evaluation
 
-## Quick practical example
-For an occupied building in **Dammam**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Document mix and workability when needed
+- Monitor response
+- Final report and recommendations
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating without diagnosis
+- No pressure/staging limits
+- No acceptance criteria
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/soil-grouting](/en/services/soil-grouting)
-- Dammam: [/en/locations/dammam/soil-grouting](/en/locations/dammam/soil-grouting)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [{"question": "هل حقن التربة مناسب لكل حالات الهبوط؟", "answer": "ليس دائمًا. يعتمد القرار على سبب الهبوط وعمق/نطاق المشكلة. أحيانًا تكون تقوية الأساسات أو معالجة التسربات أولًا هي الأهم."}, {"question": "كم يستغرق التشخيص قبل بدء التنفيذ؟", "answer": "قد يبدأ بتقييم ميداني سريع، ثم تُحدد أدوات الفحص المناسبة (مثل GPR/ERT أو جسات) حسب المخاطر. بعض الحالات تُحسم خلال أيام، وأخرى تحتاج برنامج فحص أوسع."}, {"question": "ما أهم شيء بعد التنفيذ؟", "answer": "خطة تحقق (Validation) واضحة: توثيق، قراءات متابعة، ومخرجات تقرير نهائي يوضح ما تم وأثره."}, {"question": "هل يمكن تنفيذ العمل دون إيقاف المبنى؟", "answer": "غالبًا نعم حسب موقع العمل وحساسية المنشأة، ويتم ذلك بخطة مراحل وإجراءات سلامة."}],
     faqEn: [{"question": "Is soil grouting suitable for every settlement case?", "answer": "Not always. It depends on the root cause and the depth/extent of the problem. In some cases, underpinning or leak remediation is the priority."}, {"question": "How long does diagnosis take before execution?", "answer": "It may start with a quick site assessment, then the appropriate methods (GPR/ERT/boreholes) are selected based on risk. Some cases take days; others require a broader program."}, {"question": "What matters most after execution?", "answer": "A clear validation plan: logs, follow-up readings, and a final report documenting what was done and its impact."}, {"question": "Can the work be done without shutting down the building?", "answer": "Often yes, depending on access and sensitivity. Execution is staged with safety controls."}],
     image: {
@@ -7553,78 +10965,126 @@ For an occupied building in **Dammam**, we start with near-surface checks for ut
     slug: 'foundation-strengthening-guide',
     content: `# تقوية الأساسات (Underpinning): حلول عملية لمعالجة الهبوط
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **تقوية الأساسات (Underpinning): حلول عملية لمعالجة الهبوط** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل القصيم).  
+**تصنيف المقال:** تقوية الأساسات.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل الدمام).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+تشخيص الهبوط (كلي/تفاضلي) وتحديد إن كان نشطًا، ثم بناء نطاق معالجة متدرّج يقلل مخاطر الرفع.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- تقنية GPR ممتازة للأهداف القريبة من السطح وتحديد مرافق تحت الأرض والفراغات الضحلة، لكن أداؤها يتأثر بالرطوبة العالية أو التربة الطينية.
-- تحليل نمط التشقق (مائل/متدرج/شعري) مع قياسات زمنية هو مفتاح تحديد السبب (هبوط تفاضلي، تمدد حراري، تسرب مياه، ضعف تربة).
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- مسح مناسيب/Level survey وتحديد خريطة الهبوط
+- مراجعة التسربات ومصادر المياه
+- اختيار حقن/دمك حسب حالة التربة والفراغات
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- قياسات مناسيب متكررة
+- تسجيل كميات الحقن لكل مرحلة
+- مراقبة استجابة المنشأ (شقوق/أبواب)
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **الدمام** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- بدء المعالجة دون خريطة هبوط
+- تجاهل التسربات
+- رفع البلاطات بسبب ضغط زائد
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/foundation-strengthening](/ar/services/foundation-strengthening)
-- مدينة الدمام: [/ar/locations/dammam/foundation-strengthening](/ar/locations/dammam/foundation-strengthening)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# Foundation Strengthening (Underpinning): Practical Solutions for Settlement
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Dammam).
+**Executive summary:** This article provides a structured engineering approach to **Foundation Strengthening (Underpinning): Practical Solutions for Settlement** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Qassim).  
+**Category:** Foundation Strengthening.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- GPR is excellent for near-surface targets, utilities, and shallow voids, but performance can degrade in wet/clayey soils.
-- Crack pattern analysis (diagonal/stepped/hairline) with time-based measurements is essential to identify root cause: differential settlement, thermal movement, leakage, or bearing issues.
+## Engineering context
+Diagnose settlement (total/differential), confirm if it’s ongoing, then build a staged scope that controls heave.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Elevation mapping via level survey
+- Check leakage/moisture sources
+- Select grouting/compaction based on soil & voiding
 
-## Quick practical example
-For an occupied building in **Dammam**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Repeated elevation surveys
+- Stage-by-stage grout take logs
+- Monitor structural response (cracks/doors)
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating without a settlement map
+- Ignoring leakage
+- Slab heave from excessive pressure
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/foundation-strengthening](/en/services/foundation-strengthening)
-- Dammam: [/en/locations/dammam/foundation-strengthening](/en/locations/dammam/foundation-strengthening)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [{"question": "هل حقن التربة مناسب لكل حالات الهبوط؟", "answer": "ليس دائمًا. يعتمد القرار على سبب الهبوط وعمق/نطاق المشكلة. أحيانًا تكون تقوية الأساسات أو معالجة التسربات أولًا هي الأهم."}, {"question": "كم يستغرق التشخيص قبل بدء التنفيذ؟", "answer": "قد يبدأ بتقييم ميداني سريع، ثم تُحدد أدوات الفحص المناسبة (مثل GPR/ERT أو جسات) حسب المخاطر. بعض الحالات تُحسم خلال أيام، وأخرى تحتاج برنامج فحص أوسع."}, {"question": "ما أهم شيء بعد التنفيذ؟", "answer": "خطة تحقق (Validation) واضحة: توثيق، قراءات متابعة، ومخرجات تقرير نهائي يوضح ما تم وأثره."}, {"question": "هل يمكن تنفيذ العمل دون إيقاف المبنى؟", "answer": "غالبًا نعم حسب موقع العمل وحساسية المنشأة، ويتم ذلك بخطة مراحل وإجراءات سلامة."}],
     faqEn: [{"question": "Is soil grouting suitable for every settlement case?", "answer": "Not always. It depends on the root cause and the depth/extent of the problem. In some cases, underpinning or leak remediation is the priority."}, {"question": "How long does diagnosis take before execution?", "answer": "It may start with a quick site assessment, then the appropriate methods (GPR/ERT/boreholes) are selected based on risk. Some cases take days; others require a broader program."}, {"question": "What matters most after execution?", "answer": "A clear validation plan: logs, follow-up readings, and a final report documenting what was done and its impact."}, {"question": "Can the work be done without shutting down the building?", "answer": "Often yes, depending on access and sensitivity. Execution is staged with safety controls."}],
     image: {
@@ -7650,78 +11110,126 @@ For an occupied building in **Dammam**, we start with near-surface checks for ut
     slug: 'void-detection-guide',
     content: `# كشف الفراغات تحت المباني: مؤشرات الخطر وخطة الفحص
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **كشف الفراغات تحت المباني: مؤشرات الخطر وخطة الفحص** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل جدة).  
+**تصنيف المقال:** كشف الفراغات.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل الخبر).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+منهجية كشف الفراغات: اختيار التقنية، فهم حدود الدقة، ثم تحويل النتائج إلى نقاط تحقق ونطاق معالجة.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- اختبار اللزوجة يساعد في ضبط قابلية الضخ والاختراق داخل المسام/الشقوق؛ لزوجة أعلى تعني اختراق أقل وعادةً مناسبة لفراغات أكبر، بينما لزوجة أقل قد تناسب تربة أدق بشرط التحكم في النزف.
-- الضغط ليس هدفًا بحد ذاته؛ الهدف هو تحقيق ملء/تحسين بدون رفع (Heave) أو إحداث ضرر. لذلك نعتمد حقنًا مرحليًا وحدود رفع ومراقبة مستمرة.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- GPR عندما تكون التربة مناسبة
+- ERT/Resistivity للتربة الرطبة/الملحية
+- حفر تحقق لتثبيت التفسير
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- خرائط شذوذ + نقاط تحقق
+- تقرير تفسير مع نسبة ثقة
+- ربط الأعماق مع منسوب الأساسات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **الخبر** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- اعتبار كل شذوذ فراغًا مؤكدًا
+- تجاهل حدود الطريقة
+- حقن قبل التحقق
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/void-detection](/ar/services/void-detection)
-- مدينة الخبر: [/ar/locations/khobar/void-detection](/ar/locations/khobar/void-detection)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# Void Detection Under Buildings: Risk Signs and Inspection Plan
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Khobar).
+**Executive summary:** This article provides a structured engineering approach to **Void Detection Under Buildings: Risk Signs and Inspection Plan** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Jeddah).  
+**Category:** Void Detection.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- Viscosity helps tune pumpability and penetration. Higher viscosity tends to reduce penetration and fits larger voids; lower viscosity can suit finer soils if bleed is controlled.
-- Pressure is not the goal. The goal is filling/improvement without heave or damage—hence staged injection, strict heave limits, and continuous monitoring.
+## Engineering context
+A void detection workflow: select the method, state limitations, then translate results into verification and treatment scope.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- GPR where soil conditions allow
+- ERT/resistivity for wet/saline ground
+- Verification drilling to ground-truth anomalies
 
-## Quick practical example
-For an occupied building in **Khobar**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Anomaly maps + verification points
+- Interpretation with confidence notes
+- Depth correlation vs foundation levels
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating every anomaly as confirmed void
+- Ignoring method limits
+- Grouting before verification
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/void-detection](/en/services/void-detection)
-- Khobar: [/en/locations/khobar/void-detection](/en/locations/khobar/void-detection)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [{"question": "هل حقن التربة مناسب لكل حالات الهبوط؟", "answer": "ليس دائمًا. يعتمد القرار على سبب الهبوط وعمق/نطاق المشكلة. أحيانًا تكون تقوية الأساسات أو معالجة التسربات أولًا هي الأهم."}, {"question": "كم يستغرق التشخيص قبل بدء التنفيذ؟", "answer": "قد يبدأ بتقييم ميداني سريع، ثم تُحدد أدوات الفحص المناسبة (مثل GPR/ERT أو جسات) حسب المخاطر. بعض الحالات تُحسم خلال أيام، وأخرى تحتاج برنامج فحص أوسع."}, {"question": "ما أهم شيء بعد التنفيذ؟", "answer": "خطة تحقق (Validation) واضحة: توثيق، قراءات متابعة، ومخرجات تقرير نهائي يوضح ما تم وأثره."}, {"question": "هل يمكن تنفيذ العمل دون إيقاف المبنى؟", "answer": "غالبًا نعم حسب موقع العمل وحساسية المنشأة، ويتم ذلك بخطة مراحل وإجراءات سلامة."}],
     faqEn: [{"question": "Is soil grouting suitable for every settlement case?", "answer": "Not always. It depends on the root cause and the depth/extent of the problem. In some cases, underpinning or leak remediation is the priority."}, {"question": "How long does diagnosis take before execution?", "answer": "It may start with a quick site assessment, then the appropriate methods (GPR/ERT/boreholes) are selected based on risk. Some cases take days; others require a broader program."}, {"question": "What matters most after execution?", "answer": "A clear validation plan: logs, follow-up readings, and a final report documenting what was done and its impact."}, {"question": "Can the work be done without shutting down the building?", "answer": "Often yes, depending on access and sensitivity. Execution is staged with safety controls."}],
     image: {
@@ -7747,78 +11255,126 @@ For an occupied building in **Khobar**, we start with near-surface checks for ut
     slug: 'sinkhole-investigation-guide',
     content: `# دليل دراسة التكهفات والكهوف: التشخيص وتقليل المخاطر
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **دليل دراسة التكهفات والكهوف: التشخيص وتقليل المخاطر** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل المدينة المنورة).  
+**تصنيف المقال:** دراسة التكهفات.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل مكة المكرمة).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+منهجية كشف الفراغات: اختيار التقنية، فهم حدود الدقة، ثم تحويل النتائج إلى نقاط تحقق ونطاق معالجة.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- في البيئات الكارستية (صخور جيرية/دولومايت)، التكهفات قد تكون مرتبطة بمسارات مياه؛ الحل عادةً يجمع بين كشف جيوفيزيائي + خطة حقن/تدعيم + السيطرة على مصادر المياه.
-- الضغط ليس هدفًا بحد ذاته؛ الهدف هو تحقيق ملء/تحسين بدون رفع (Heave) أو إحداث ضرر. لذلك نعتمد حقنًا مرحليًا وحدود رفع ومراقبة مستمرة.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- GPR عندما تكون التربة مناسبة
+- ERT/Resistivity للتربة الرطبة/الملحية
+- حفر تحقق لتثبيت التفسير
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- خرائط شذوذ + نقاط تحقق
+- تقرير تفسير مع نسبة ثقة
+- ربط الأعماق مع منسوب الأساسات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **مكة المكرمة** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- اعتبار كل شذوذ فراغًا مؤكدًا
+- تجاهل حدود الطريقة
+- حقن قبل التحقق
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/void-detection](/ar/services/void-detection)
-- مدينة مكة المكرمة: [/ar/locations/makkah/void-detection](/ar/locations/makkah/void-detection)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# Sinkhole & Cavity Investigation Guide: Diagnosis and Risk Reduction
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Makkah).
+**Executive summary:** This article provides a structured engineering approach to **Sinkhole & Cavity Investigation Guide: Diagnosis and Risk Reduction** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Madinah).  
+**Category:** Sinkhole Investigation.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- In karstic carbonate environments, cavities can relate to water pathways. A robust solution combines geophysics, a staged grouting/strengthening plan, and water control.
-- Pressure is not the goal. The goal is filling/improvement without heave or damage—hence staged injection, strict heave limits, and continuous monitoring.
+## Engineering context
+A void detection workflow: select the method, state limitations, then translate results into verification and treatment scope.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- GPR where soil conditions allow
+- ERT/resistivity for wet/saline ground
+- Verification drilling to ground-truth anomalies
 
-## Quick practical example
-For an occupied building in **Makkah**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Anomaly maps + verification points
+- Interpretation with confidence notes
+- Depth correlation vs foundation levels
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating every anomaly as confirmed void
+- Ignoring method limits
+- Grouting before verification
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/void-detection](/en/services/void-detection)
-- Makkah: [/en/locations/makkah/void-detection](/en/locations/makkah/void-detection)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [{"question": "هل حقن التربة مناسب لكل حالات الهبوط؟", "answer": "ليس دائمًا. يعتمد القرار على سبب الهبوط وعمق/نطاق المشكلة. أحيانًا تكون تقوية الأساسات أو معالجة التسربات أولًا هي الأهم."}, {"question": "كم يستغرق التشخيص قبل بدء التنفيذ؟", "answer": "قد يبدأ بتقييم ميداني سريع، ثم تُحدد أدوات الفحص المناسبة (مثل GPR/ERT أو جسات) حسب المخاطر. بعض الحالات تُحسم خلال أيام، وأخرى تحتاج برنامج فحص أوسع."}, {"question": "ما أهم شيء بعد التنفيذ؟", "answer": "خطة تحقق (Validation) واضحة: توثيق، قراءات متابعة، ومخرجات تقرير نهائي يوضح ما تم وأثره."}, {"question": "هل يمكن تنفيذ العمل دون إيقاف المبنى؟", "answer": "غالبًا نعم حسب موقع العمل وحساسية المنشأة، ويتم ذلك بخطة مراحل وإجراءات سلامة."}],
     faqEn: [{"question": "Is soil grouting suitable for every settlement case?", "answer": "Not always. It depends on the root cause and the depth/extent of the problem. In some cases, underpinning or leak remediation is the priority."}, {"question": "How long does diagnosis take before execution?", "answer": "It may start with a quick site assessment, then the appropriate methods (GPR/ERT/boreholes) are selected based on risk. Some cases take days; others require a broader program."}, {"question": "What matters most after execution?", "answer": "A clear validation plan: logs, follow-up readings, and a final report documenting what was done and its impact."}, {"question": "Can the work be done without shutting down the building?", "answer": "Often yes, depending on access and sensitivity. Execution is staged with safety controls."}],
     image: {
@@ -7844,78 +11400,128 @@ For an occupied building in **Makkah**, we start with near-surface checks for ut
     slug: 'validation-criteria-grouting',
     content: `# معايير التحقق (Validation Criteria) لحقن التربة: ماذا نقيس؟
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **معايير التحقق (Validation Criteria) لحقن التربة: ماذا نقيس؟** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل مكة المكرمة).  
+**تصنيف المقال:** حقن التربة.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل مكة المكرمة).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+شرح عملي يربط الفكرة بالقرار التنفيذي: متى تستخدم، كيف تُنفذ بأمان، وما الذي يُعد جودة حقيقية.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- اختبار النزف (Bleed) مؤشر مهم لاستقرار الخلطة؛ نزف مرتفع قد يعني انفصال ماء/أسمنت ويضعف فعالية ملء الفراغات. المعالجة تكون بتعديل نسبة الماء أو استخدام إضافات مناسبة عند الحاجة.
-- عند مقارنة التكلفة، الأهم هو تكلفة المخاطر (إعادة أعمال، توقف تشغيل، تعويضات). الحل الأرخص قد يكون الأعلى تكلفة على المدى المتوسط إذا لم يعالج السبب الجذري.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- جمع بيانات الموقع
+- تحديد نطاق عمل مرحلي
+- تسجيل الضغط/الكميات/المراحل
+- تقييم ما قبل/بعد
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- توثيق الخلطة وقابلية التشغيل عند اللزوم
+- مراقبة استجابة الموقع
+- تقرير نهائي وتوصيات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **مكة المكرمة** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- البدء بالمعالجة دون تشخيص
+- عدم وجود حدود ضغط/مرحلية
+- غياب معايير قبول
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/soil-grouting](/ar/services/soil-grouting)
-- مدينة مكة المكرمة: [/ar/locations/makkah/soil-grouting](/ar/locations/makkah/soil-grouting)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# Grouting Validation Criteria: What Should Be Measured?
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Makkah).
+**Executive summary:** This article provides a structured engineering approach to **Grouting Validation Criteria: What Should Be Measured?** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Makkah).  
+**Category:** Soil Grouting.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- Bleed is a key stability indicator. High bleed can cause separation and reduce void filling quality. Mitigation includes adjusting water ratio or using suitable admixtures when needed.
-- When comparing cost, consider risk cost (rework, downtime, liabilities). The cheapest option can be most expensive long-term if it doesn’t address root causes.
+## Engineering context
+A practical guide that connects concept to execution: when to use it, how to execute safely, and what “quality” means.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Collect site data
+- Define a staged scope
+- Log pressure/takes/stages
+- Before/after evaluation
 
-## Quick practical example
-For an occupied building in **Makkah**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Document mix and workability when needed
+- Monitor response
+- Final report and recommendations
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating without diagnosis
+- No pressure/staging limits
+- No acceptance criteria
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/soil-grouting](/en/services/soil-grouting)
-- Makkah: [/en/locations/makkah/soil-grouting](/en/locations/makkah/soil-grouting)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [{"question": "ما المقصود بمعايير التحقق (Validation Criteria) للحقن؟", "answer": "هي مؤشرات/اختبارات متفق عليها مسبقًا لتأكيد تحقيق الهدف: مثل ثبات التشققات، تحسن قراءات/اختبارات، أو توافق النتائج مع مخطط المعالجة."}, {"question": "هل حقن التربة مناسب لكل حالات الهبوط؟", "answer": "ليس دائمًا. يعتمد القرار على سبب الهبوط وعمق/نطاق المشكلة. أحيانًا تكون تقوية الأساسات أو معالجة التسربات أولًا هي الأهم."}, {"question": "كم يستغرق التشخيص قبل بدء التنفيذ؟", "answer": "قد يبدأ بتقييم ميداني سريع، ثم تُحدد أدوات الفحص المناسبة (مثل GPR/ERT أو جسات) حسب المخاطر. بعض الحالات تُحسم خلال أيام، وأخرى تحتاج برنامج فحص أوسع."}, {"question": "ما أهم شيء بعد التنفيذ؟", "answer": "خطة تحقق (Validation) واضحة: توثيق، قراءات متابعة، ومخرجات تقرير نهائي يوضح ما تم وأثره."}, {"question": "هل يمكن تنفيذ العمل دون إيقاف المبنى؟", "answer": "غالبًا نعم حسب موقع العمل وحساسية المنشأة، ويتم ذلك بخطة مراحل وإجراءات سلامة."}],
     faqEn: [{"question": "What do grouting validation criteria mean?", "answer": "Pre-agreed indicators/tests that confirm objectives were met: stabilized cracks, improved test results, or post-work outcomes matching the method statement."}, {"question": "Is soil grouting suitable for every settlement case?", "answer": "Not always. It depends on the root cause and the depth/extent of the problem. In some cases, underpinning or leak remediation is the priority."}, {"question": "How long does diagnosis take before execution?", "answer": "It may start with a quick site assessment, then the appropriate methods (GPR/ERT/boreholes) are selected based on risk. Some cases take days; others require a broader program."}, {"question": "What matters most after execution?", "answer": "A clear validation plan: logs, follow-up readings, and a final report documenting what was done and its impact."}, {"question": "Can the work be done without shutting down the building?", "answer": "Often yes, depending on access and sensitivity. Execution is staged with safety controls."}],
     image: {
@@ -7941,78 +11547,126 @@ For an occupied building in **Makkah**, we start with near-surface checks for ut
     slug: 'gpr-vs-ert',
     content: `# GPR vs ERT: أيهما أفضل لكشف الفراغات؟
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **GPR vs ERT: أيهما أفضل لكشف الفراغات؟** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل الجبيل).  
+**تصنيف المقال:** الدراسات الجيوفيزيائية.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل المدينة المنورة).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+منهجية كشف الفراغات: اختيار التقنية، فهم حدود الدقة، ثم تحويل النتائج إلى نقاط تحقق ونطاق معالجة.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- تقنية GPR ممتازة للأهداف القريبة من السطح وتحديد مرافق تحت الأرض والفراغات الضحلة، لكن أداؤها يتأثر بالرطوبة العالية أو التربة الطينية.
-- تقنية ERT مناسبة للأعماق الأكبر وتحديد مناطق ضعف/تكهف محتملة عبر فروقات المقاومة الكهربائية، وغالبًا ما تكون أكثر موثوقية في التربة الرطبة مقارنةً بـ GPR.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- GPR عندما تكون التربة مناسبة
+- ERT/Resistivity للتربة الرطبة/الملحية
+- حفر تحقق لتثبيت التفسير
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- خرائط شذوذ + نقاط تحقق
+- تقرير تفسير مع نسبة ثقة
+- ربط الأعماق مع منسوب الأساسات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **المدينة المنورة** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- اعتبار كل شذوذ فراغًا مؤكدًا
+- تجاهل حدود الطريقة
+- حقن قبل التحقق
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/geophysical-surveys](/ar/services/geophysical-surveys)
-- مدينة المدينة المنورة: [/ar/locations/madinah/geophysical-surveys](/ar/locations/madinah/geophysical-surveys)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# GPR vs ERT: Which Is Better for Void Detection?
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Madinah).
+**Executive summary:** This article provides a structured engineering approach to **GPR vs ERT: Which Is Better for Void Detection?** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Jubail).  
+**Category:** Geophysical Surveys.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- GPR is excellent for near-surface targets, utilities, and shallow voids, but performance can degrade in wet/clayey soils.
-- ERT is suitable for deeper targets and mapping potential cavities via resistivity contrasts, often more reliable than GPR in wet conditions.
+## Engineering context
+A void detection workflow: select the method, state limitations, then translate results into verification and treatment scope.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- GPR where soil conditions allow
+- ERT/resistivity for wet/saline ground
+- Verification drilling to ground-truth anomalies
 
-## Quick practical example
-For an occupied building in **Madinah**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Anomaly maps + verification points
+- Interpretation with confidence notes
+- Depth correlation vs foundation levels
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating every anomaly as confirmed void
+- Ignoring method limits
+- Grouting before verification
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/geophysical-surveys](/en/services/geophysical-surveys)
-- Madinah: [/en/locations/madinah/geophysical-surveys](/en/locations/madinah/geophysical-surveys)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [{"question": "ما الفرق بين GPR و ERT؟", "answer": "GPR مناسب للمسح السريع قريب السطح وتحت البلاطات، بينما ERT مناسب لتحديد مناطق ضعف/فراغات أعمق عبر مقاومية التربة."}, {"question": "هل حقن التربة مناسب لكل حالات الهبوط؟", "answer": "ليس دائمًا. يعتمد القرار على سبب الهبوط وعمق/نطاق المشكلة. أحيانًا تكون تقوية الأساسات أو معالجة التسربات أولًا هي الأهم."}, {"question": "كم يستغرق التشخيص قبل بدء التنفيذ؟", "answer": "قد يبدأ بتقييم ميداني سريع، ثم تُحدد أدوات الفحص المناسبة (مثل GPR/ERT أو جسات) حسب المخاطر. بعض الحالات تُحسم خلال أيام، وأخرى تحتاج برنامج فحص أوسع."}, {"question": "ما أهم شيء بعد التنفيذ؟", "answer": "خطة تحقق (Validation) واضحة: توثيق، قراءات متابعة، ومخرجات تقرير نهائي يوضح ما تم وأثره."}, {"question": "هل يمكن تنفيذ العمل دون إيقاف المبنى؟", "answer": "غالبًا نعم حسب موقع العمل وحساسية المنشأة، ويتم ذلك بخطة مراحل وإجراءات سلامة."}],
     faqEn: [{"question": "What is the difference between GPR and ERT?", "answer": "GPR is great for fast near-surface/slab screening, while ERT is better for mapping deeper weakness/voids using soil resistivity."}, {"question": "Is soil grouting suitable for every settlement case?", "answer": "Not always. It depends on the root cause and the depth/extent of the problem. In some cases, underpinning or leak remediation is the priority."}, {"question": "How long does diagnosis take before execution?", "answer": "It may start with a quick site assessment, then the appropriate methods (GPR/ERT/boreholes) are selected based on risk. Some cases take days; others require a broader program."}, {"question": "What matters most after execution?", "answer": "A clear validation plan: logs, follow-up readings, and a final report documenting what was done and its impact."}, {"question": "Can the work be done without shutting down the building?", "answer": "Often yes, depending on access and sensitivity. Execution is staged with safety controls."}],
     image: {
@@ -8038,78 +11692,126 @@ For an occupied building in **Madinah**, we start with near-surface checks for u
     slug: 'cracks-settlement-guide',
     content: `# تشققات المباني والهبوط: كيف نفرّق بين السبب الإنشائي والجيوتكنيكي؟
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **تشققات المباني والهبوط: كيف نفرّق بين السبب الإنشائي والجيوتكنيكي؟** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل المدينة المنورة).  
+**تصنيف المقال:** معالجة التشققات.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل مكة المكرمة).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+إدارة التشققات كعرض وربطها بسبب جيوتكنيكي/إنشائي، مع مراقبة رقمية منضبطة قبل وأثناء وبعد المعالجة.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- تحليل نمط التشقق (مائل/متدرج/شعري) مع قياسات زمنية هو مفتاح تحديد السبب (هبوط تفاضلي، تمدد حراري، تسرب مياه، ضعف تربة).
-- في البيئات الكارستية (صخور جيرية/دولومايت)، التكهفات قد تكون مرتبطة بمسارات مياه؛ الحل عادةً يجمع بين كشف جيوفيزيائي + خطة حقن/تدعيم + السيطرة على مصادر المياه.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- تثبيت نقاط قياس للشقوق/الميل وربطها بشبكة محاور
+- تحديد خط أساس قبل أي تدخل
+- ربط كل قراءة بمرحلة التنفيذ والضغط/الكميات
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- قياسات اتساع الشقوق والميول
+- سجل مناسيب للأرضيات عند الهبوط التفاضلي
+- صور مقارنة بنفس الزوايا
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **مكة المكرمة** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- إغلاق الشق دون علاج السبب
+- غياب خط الأساس
+- الحقن بدون مراحل يرفع مخاطر الرفع/التشققات الجديدة
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/foundation-strengthening](/ar/services/foundation-strengthening)
-- مدينة مكة المكرمة: [/ar/locations/makkah/foundation-strengthening](/ar/locations/makkah/foundation-strengthening)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# Cracks & Settlement: Structural vs Geotechnical Root Causes
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Makkah).
+**Executive summary:** This article provides a structured engineering approach to **Cracks & Settlement: Structural vs Geotechnical Root Causes** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Madinah).  
+**Category:** Crack & Settlement.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- Crack pattern analysis (diagonal/stepped/hairline) with time-based measurements is essential to identify root cause: differential settlement, thermal movement, leakage, or bearing issues.
-- In karstic carbonate environments, cavities can relate to water pathways. A robust solution combines geophysics, a staged grouting/strengthening plan, and water control.
+## Engineering context
+Treat cracking as a symptom and tie it to geotechnical/structural causes using disciplined monitoring before/during/after intervention.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Install crack/tilt gauges tied to a reference grid
+- Establish a baseline before intervention
+- Correlate readings with stages, pressure and grout takes
 
-## Quick practical example
-For an occupied building in **Makkah**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Crack width & tilt readings
+- Floor level survey for differential settlement
+- Photo documentation from repeatable angles
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Sealing cracks without treating the cause
+- No baseline
+- Non-staged injection increases heave/new cracking risk
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/foundation-strengthening](/en/services/foundation-strengthening)
-- Makkah: [/en/locations/makkah/foundation-strengthening](/en/locations/makkah/foundation-strengthening)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [{"question": "هل حقن التربة مناسب لكل حالات الهبوط؟", "answer": "ليس دائمًا. يعتمد القرار على سبب الهبوط وعمق/نطاق المشكلة. أحيانًا تكون تقوية الأساسات أو معالجة التسربات أولًا هي الأهم."}, {"question": "كم يستغرق التشخيص قبل بدء التنفيذ؟", "answer": "قد يبدأ بتقييم ميداني سريع، ثم تُحدد أدوات الفحص المناسبة (مثل GPR/ERT أو جسات) حسب المخاطر. بعض الحالات تُحسم خلال أيام، وأخرى تحتاج برنامج فحص أوسع."}, {"question": "ما أهم شيء بعد التنفيذ؟", "answer": "خطة تحقق (Validation) واضحة: توثيق، قراءات متابعة، ومخرجات تقرير نهائي يوضح ما تم وأثره."}, {"question": "هل يمكن تنفيذ العمل دون إيقاف المبنى؟", "answer": "غالبًا نعم حسب موقع العمل وحساسية المنشأة، ويتم ذلك بخطة مراحل وإجراءات سلامة."}],
     faqEn: [{"question": "Is soil grouting suitable for every settlement case?", "answer": "Not always. It depends on the root cause and the depth/extent of the problem. In some cases, underpinning or leak remediation is the priority."}, {"question": "How long does diagnosis take before execution?", "answer": "It may start with a quick site assessment, then the appropriate methods (GPR/ERT/boreholes) are selected based on risk. Some cases take days; others require a broader program."}, {"question": "What matters most after execution?", "answer": "A clear validation plan: logs, follow-up readings, and a final report documenting what was done and its impact."}, {"question": "Can the work be done without shutting down the building?", "answer": "Often yes, depending on access and sensitivity. Execution is staged with safety controls."}],
     image: {
@@ -8135,78 +11837,128 @@ For an occupied building in **Makkah**, we start with near-surface checks for ut
     slug: 'soil-investigation-report-guide',
     content: `# تقرير فحص التربة: كيف تقرأه وما الذي يهمك كمالك أو مطور؟
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **تقرير فحص التربة: كيف تقرأه وما الذي يهمك كمالك أو مطور؟** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل الدمام).  
+**تصنيف المقال:** تقارير التربة.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل الدمام).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+شرح عملي يربط الفكرة بالقرار التنفيذي: متى تستخدم، كيف تُنفذ بأمان، وما الذي يُعد جودة حقيقية.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- التقرير الاحترافي لا يكتفي بوصف طبقات التربة، بل يربط النتائج بالقرار التنفيذي: نوع الأساس، حدود الهبوط، توصيات الردم/الدمك، واحتياج تحسين/حقن.
-- الـ Packer يضمن عزل القطاع داخل الحفرة ويمنح تحكمًا أفضل في الضغط والتدفق؛ الخطأ الشائع هو اختيار قطر/مطاط غير مناسب أو عدم التأكد من إحكام العزل مما يسبب تسريبًا سطحيًا.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- جمع بيانات الموقع
+- تحديد نطاق عمل مرحلي
+- تسجيل الضغط/الكميات/المراحل
+- تقييم ما قبل/بعد
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- توثيق الخلطة وقابلية التشغيل عند اللزوم
+- مراقبة استجابة الموقع
+- تقرير نهائي وتوصيات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **الدمام** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- البدء بالمعالجة دون تشخيص
+- عدم وجود حدود ضغط/مرحلية
+- غياب معايير قبول
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/soil-grouting](/ar/services/soil-grouting)
-- مدينة الدمام: [/ar/locations/dammam/soil-grouting](/ar/locations/dammam/soil-grouting)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# Soil Report: How to Read It (What Matters for Owners/Developers)
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Dammam).
+**Executive summary:** This article provides a structured engineering approach to **Soil Report: How to Read It (What Matters for Owners/Developers)** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Dammam).  
+**Category:** Soil Reports.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- A high-quality report links soil layers to decisions: foundation type, settlement limits, compaction/backfill, and whether improvement/grouting is needed.
-- A packer isolates the injection zone and improves control of pressure/flow. A common mistake is using the wrong diameter or poor sealing, leading to surface leakage and loss of effectiveness.
+## Engineering context
+A practical guide that connects concept to execution: when to use it, how to execute safely, and what “quality” means.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Collect site data
+- Define a staged scope
+- Log pressure/takes/stages
+- Before/after evaluation
 
-## Quick practical example
-For an occupied building in **Dammam**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Document mix and workability when needed
+- Monitor response
+- Final report and recommendations
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating without diagnosis
+- No pressure/staging limits
+- No acceptance criteria
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/soil-grouting](/en/services/soil-grouting)
-- Dammam: [/en/locations/dammam/soil-grouting](/en/locations/dammam/soil-grouting)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [{"question": "هل حقن التربة مناسب لكل حالات الهبوط؟", "answer": "ليس دائمًا. يعتمد القرار على سبب الهبوط وعمق/نطاق المشكلة. أحيانًا تكون تقوية الأساسات أو معالجة التسربات أولًا هي الأهم."}, {"question": "كم يستغرق التشخيص قبل بدء التنفيذ؟", "answer": "قد يبدأ بتقييم ميداني سريع، ثم تُحدد أدوات الفحص المناسبة (مثل GPR/ERT أو جسات) حسب المخاطر. بعض الحالات تُحسم خلال أيام، وأخرى تحتاج برنامج فحص أوسع."}, {"question": "ما أهم شيء بعد التنفيذ؟", "answer": "خطة تحقق (Validation) واضحة: توثيق، قراءات متابعة، ومخرجات تقرير نهائي يوضح ما تم وأثره."}, {"question": "هل يمكن تنفيذ العمل دون إيقاف المبنى؟", "answer": "غالبًا نعم حسب موقع العمل وحساسية المنشأة، ويتم ذلك بخطة مراحل وإجراءات سلامة."}],
     faqEn: [{"question": "Is soil grouting suitable for every settlement case?", "answer": "Not always. It depends on the root cause and the depth/extent of the problem. In some cases, underpinning or leak remediation is the priority."}, {"question": "How long does diagnosis take before execution?", "answer": "It may start with a quick site assessment, then the appropriate methods (GPR/ERT/boreholes) are selected based on risk. Some cases take days; others require a broader program."}, {"question": "What matters most after execution?", "answer": "A clear validation plan: logs, follow-up readings, and a final report documenting what was done and its impact."}, {"question": "Can the work be done without shutting down the building?", "answer": "Often yes, depending on access and sensitivity. Execution is staged with safety controls."}],
     image: {
@@ -8232,78 +11984,128 @@ For an occupied building in **Dammam**, we start with near-surface checks for ut
     slug: 'pre-construction-risk-guide',
     content: `# قبل البدء بالبناء: قائمة فحص مخاطر التربة والأساسات
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **قبل البدء بالبناء: قائمة فحص مخاطر التربة والأساسات** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل المدينة المنورة).  
+**تصنيف المقال:** استشارات هندسية.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل الخبر).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+شرح عملي يربط الفكرة بالقرار التنفيذي: متى تستخدم، كيف تُنفذ بأمان، وما الذي يُعد جودة حقيقية.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- عند مقارنة التكلفة، الأهم هو تكلفة المخاطر (إعادة أعمال، توقف تشغيل، تعويضات). الحل الأرخص قد يكون الأعلى تكلفة على المدى المتوسط إذا لم يعالج السبب الجذري.
-- مراقبة التشققات قبل وأثناء وبعد المعالجة (Crack Monitoring) تقلل المخاطر وتثبت النجاح؛ يمكن استخدام مساطر شروخ/قراءات منسوب/محطات توتال حسب حساسية المشروع.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- جمع بيانات الموقع
+- تحديد نطاق عمل مرحلي
+- تسجيل الضغط/الكميات/المراحل
+- تقييم ما قبل/بعد
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- توثيق الخلطة وقابلية التشغيل عند اللزوم
+- مراقبة استجابة الموقع
+- تقرير نهائي وتوصيات
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **الخبر** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- البدء بالمعالجة دون تشخيص
+- عدم وجود حدود ضغط/مرحلية
+- غياب معايير قبول
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/foundation-strengthening](/ar/services/foundation-strengthening)
-- مدينة الخبر: [/ar/locations/khobar/foundation-strengthening](/ar/locations/khobar/foundation-strengthening)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# Before Construction: Soil & Foundation Risk Checklist
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Khobar).
+**Executive summary:** This article provides a structured engineering approach to **Before Construction: Soil & Foundation Risk Checklist** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Madinah).  
+**Category:** Engineering Consulting.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- When comparing cost, consider risk cost (rework, downtime, liabilities). The cheapest option can be most expensive long-term if it doesn’t address root causes.
-- Crack/level monitoring before, during, and after treatment reduces risk and documents success—using crack gauges, level readings, or total-station where needed.
+## Engineering context
+A practical guide that connects concept to execution: when to use it, how to execute safely, and what “quality” means.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Collect site data
+- Define a staged scope
+- Log pressure/takes/stages
+- Before/after evaluation
 
-## Quick practical example
-For an occupied building in **Khobar**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Document mix and workability when needed
+- Monitor response
+- Final report and recommendations
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Treating without diagnosis
+- No pressure/staging limits
+- No acceptance criteria
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/foundation-strengthening](/en/services/foundation-strengthening)
-- Khobar: [/en/locations/khobar/foundation-strengthening](/en/locations/khobar/foundation-strengthening)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [{"question": "هل حقن التربة مناسب لكل حالات الهبوط؟", "answer": "ليس دائمًا. يعتمد القرار على سبب الهبوط وعمق/نطاق المشكلة. أحيانًا تكون تقوية الأساسات أو معالجة التسربات أولًا هي الأهم."}, {"question": "كم يستغرق التشخيص قبل بدء التنفيذ؟", "answer": "قد يبدأ بتقييم ميداني سريع، ثم تُحدد أدوات الفحص المناسبة (مثل GPR/ERT أو جسات) حسب المخاطر. بعض الحالات تُحسم خلال أيام، وأخرى تحتاج برنامج فحص أوسع."}, {"question": "ما أهم شيء بعد التنفيذ؟", "answer": "خطة تحقق (Validation) واضحة: توثيق، قراءات متابعة، ومخرجات تقرير نهائي يوضح ما تم وأثره."}, {"question": "هل يمكن تنفيذ العمل دون إيقاف المبنى؟", "answer": "غالبًا نعم حسب موقع العمل وحساسية المنشأة، ويتم ذلك بخطة مراحل وإجراءات سلامة."}],
     faqEn: [{"question": "Is soil grouting suitable for every settlement case?", "answer": "Not always. It depends on the root cause and the depth/extent of the problem. In some cases, underpinning or leak remediation is the priority."}, {"question": "How long does diagnosis take before execution?", "answer": "It may start with a quick site assessment, then the appropriate methods (GPR/ERT/boreholes) are selected based on risk. Some cases take days; others require a broader program."}, {"question": "What matters most after execution?", "answer": "A clear validation plan: logs, follow-up readings, and a final report documenting what was done and its impact."}, {"question": "Can the work be done without shutting down the building?", "answer": "Often yes, depending on access and sensitivity. Execution is staged with safety controls."}],
     image: {
@@ -8329,78 +12131,126 @@ For an occupied building in **Khobar**, we start with near-surface checks for ut
     slug: 'maintenance-monitoring-guide',
     content: `# مراقبة ما بعد المعالجة: متى نراقب التشققات وما الذي يعتبر نجاحًا؟
 
+**ملخص تنفيذي:** يقدّم هذا المقال إطارًا هندسيًا لاتخاذ قرار صحيح حول **مراقبة ما بعد المعالجة: متى نراقب التشققات وما الذي يعتبر نجاحًا؟** — من التشخيص وحتى التنفيذ وضبط الجودة — مع أمثلة واقعية على ظروف مشاريع السعودية (مثل تبوك).  
+**تصنيف المقال:** مراقبة التشققات.
+
 ## لماذا هذا الموضوع مهم؟
-في مشاريع ومعالجات التربة والأساسات، التفاصيل الصغيرة هي التي تصنع الفارق بين “حل مؤقت” و**حل جذري موثّق**. هذا المقال يشرح الفكرة الرئيسية المرتبطة بعنوانه بشكل عملي، مع ربطها بسياق التنفيذ الواقعي في السعودية (مثل المدينة المنورة).
+في مشاريع الحقن/المعالجة، الفارق الحقيقي ليس “كم أسمنت حقنّا”، بل **كيف شخّصنا، وكيف ضبطنا المخاطر، وكيف وثّقنا النتائج**.
 
-## متى تحتاج هذا النوع من المعرفة؟
-- عند ظهور **هبوط/تشققات** أو تغيّر ملحوظ في البلاطات أو الجدران.
-- قبل بدء حقن/تدعيم لتقليل المخاطر وتحديد المنهجية الصحيحة.
-- عند استلام تقارير أو مواصفات من استشاري وتحتاج فهم “ماذا يعني ذلك في التنفيذ؟”.
+## الخلفية الهندسية
+إدارة التشققات كعرض وربطها بسبب جيوتكنيكي/إنشائي، مع مراقبة رقمية منضبطة قبل وأثناء وبعد المعالجة.
 
-## نقاط فنية مرتبطة مباشرة بالعنوان
-- تحليل نمط التشقق (مائل/متدرج/شعري) مع قياسات زمنية هو مفتاح تحديد السبب (هبوط تفاضلي، تمدد حراري، تسرب مياه، ضعف تربة).
-- مراقبة التشققات قبل وأثناء وبعد المعالجة (Crack Monitoring) تقلل المخاطر وتثبت النجاح؛ يمكن استخدام مساطر شروخ/قراءات منسوب/محطات توتال حسب حساسية المشروع.
+## خطوات تنفيذية موصى بها
+1. **تشخيص السبب**: بيانات تربة/تاريخ تشققات أو هبوط/مصادر مياه/تقارير سابقة.  
+2. **تحديد الهدف**: إيقاف هبوط، ملء فراغات، تقوية تربة، أو علاج شقوق (حسب السبب).  
+3. **تصميم نطاق مرحلي**: نقاط/أعماق/مراحل وحدود ضغط وحجم لكل مرحلة.  
+4. **التنفيذ مع مراقبة**: تسجيل الضغط والكميات وملاحظة أي رفع/تشققات جديدة.  
+5. **إغلاق المشروع بتقرير**: ما تم، ولماذا، ومؤشرات النجاح، وخطة المتابعة.
 
-## منهجية إطلاق (ETLAQ) المقترحة لتنفيذ حل احترافي
-1) **تشخيص**: معاينة + مراجعة مخططات + تحديد نطاق المشكلة (موقع/اتساع/زمن).
-2) **فحوصات موجّهة**: (GPR/ERT أو جسات/اختبارات حسب الحالة) لتأكيد السبب الجذري.
-3) **تصميم خطة**: تحديد الخلطة، مراحل الحقن/التدعيم، الضغوط، وحدود الرفع، ومصفوفة QA/QC.
-4) **تنفيذ مرحلي**: حقن/تدعيم بجرعات محسوبة مع تسجيل الضغط/التدفق/الكميات لكل نقطة.
-5) **مراقبة وتحقق**: شروخ/مناسيب قبل–أثناء–بعد، ثم تقرير إغلاق وخرائط As‑Built.
+## نقاط فنية مرتبطة بالعنوان
+- تثبيت نقاط قياس للشقوق/الميل وربطها بشبكة محاور
+- تحديد خط أساس قبل أي تدخل
+- ربط كل قراءة بمرحلة التنفيذ والضغط/الكميات
 
-## أخطاء شائعة نراها في السوق (وكيف نتجنبها)
-- التنفيذ “على ضغط واحد” بدون مراحل أو حدود رفع واضحة.
-- حقن بدون تشخيص (عدم معرفة وجود مرافق/فراغات/طبقات حساسة).
-- تجاهل اختبارات الخلطة (اللزوجة/النزف/زمن الشك) عند وجود اشتراطات.
-- عدم توثيق سجل حقن لكل نقطة مما يصعّب إثبات الجودة لاحقًا.
+## ضبط الجودة QA/QC (اختبارات ومؤشرات)
+- قياسات اتساع الشقوق والميول
+- سجل مناسيب للأرضيات عند الهبوط التفاضلي
+- صور مقارنة بنفس الزوايا
 
-## مثال تطبيقي سريع
-لو كانت المشكلة في **المدينة المنورة** داخل مبنى قائم: نبدأ بنطاق فحص قريب من السطح لتحديد مرافق/فراغات، ثم ننتقل لعمق أكبر إذا لزم الأمر، وبعدها ننفّذ حقنًا مرحليًا بحدود رفع ومراقبة شروخ لحماية التشطيبات.
+**معايير قبول عملية (أمثلة):**
+- لا تظهر مؤشرات رفع غير مقبول أو تشققات جديدة مرتبطة بالتنفيذ.
+- تحسّن اتجاه القياسات (Trend) خلال فترة متابعة متفق عليها.
+- توثيق كامل يثبت الالتزام بالحدود المرحلية.
+
+## أخطاء شائعة
+- إغلاق الشق دون علاج السبب
+- غياب خط الأساس
+- الحقن بدون مراحل يرفع مخاطر الرفع/التشققات الجديدة
+
+## قائمة تحقق سريعة
+- هل السبب محدد (هبوط/تسرب/فراغ/ضعف تربة)؟
+- هل نطاق العمل محدد بخريطة/شبكة نقاط وأعماق؟
+- هل حدود الضغط/الحجم/الرفع متفق عليها؟
+- هل هناك نظام توثيق يومي ومؤشرات توقف (Stop criteria)؟
+- هل خطة المتابعة بعد التنفيذ واضحة؟
+
+## ما الذي نستلمه كعميل من شركة احترافية؟
+- خطة عمل مرحلية + حدود ضغط/مرحلية واضحة.  
+- سجلات تنفيذ يومية + صور + أي اختبارات لازمة.  
+- تقرير فني يشرح **ما الذي تغيّر** و**ما الذي يجب مراقبته** لاحقًا.
+
+## مراجع للاطلاع (إثراء)
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – أدلة ومذكرات عن تقنيات الحقن وتحسين التربة
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – التحكم في تشققات المنشآت الخرسانية
+- ASTM C939 – اختبار مخروط التدفق لقياس قابلية تشغيل الجراوت
 
 ---
 
-## روابط سريعة
-- صفحة الخدمة المرتبطة: [/ar/services/foundation-strengthening](/ar/services/foundation-strengthening)
-- مدينة المدينة المنورة: [/ar/locations/madinah/foundation-strengthening](/ar/locations/madinah/foundation-strengthening)
-- تواصل واتساب لتقييم مبدئي: [اضغط هنا](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### اطلب تقييمًا مبدئيًا
+أرسل موقع المشروع وصور/وصف مختصر، وسنقترح المسار الأنسب: **كشف/مسح/معالجة** بطريقة تقلل المخاطر وتزيد موثوقية النتيجة.`,
     contentEn: `# Post-Remediation Monitoring: When to Monitor Cracks and What Counts as Success?
 
-## Why this matters
-In soil/foundation remediation, small technical details often decide whether a solution is temporary or **root‑cause, documented, and safe**. This article explains the key concept behind the title in a practical way, aligned with real execution in Saudi Arabia (e.g., Madinah).
+**Executive summary:** This article provides a structured engineering approach to **Post-Remediation Monitoring: When to Monitor Cracks and What Counts as Success?** — from diagnosis to execution and QA/QC — reflecting common Saudi project conditions (e.g., Tabuk).  
+**Category:** Crack Monitoring.
 
-## When you should care
-- When you notice **settlement/cracking** or progressive movement.
-- Before starting grouting/strengthening to reduce risk and choose the correct method.
-- When reviewing consultant specs and you need a clear “what does this mean on site?” translation.
+## Why it matters
+In ground treatment projects, the real differentiator is not “how much grout was injected” but **how the problem was diagnosed, risks controlled, and results documented**.
 
-## Technical points directly tied to the title
-- Crack pattern analysis (diagonal/stepped/hairline) with time-based measurements is essential to identify root cause: differential settlement, thermal movement, leakage, or bearing issues.
-- Crack/level monitoring before, during, and after treatment reduces risk and documents success—using crack gauges, level readings, or total-station where needed.
+## Engineering context
+Treat cracking as a symptom and tie it to geotechnical/structural causes using disciplined monitoring before/during/after intervention.
 
-## ETLAQ recommended execution approach
-1) **Diagnosis**: site walkdown + drawings + define the problem extent.
-2) **Targeted diagnostics**: GPR/ERT or boreholes/tests as required to confirm root cause.
-3) **Plan design**: mix, staging, pressures, heave limits, and a QA/QC matrix.
-4) **Staged execution**: controlled injection/strengthening with per‑point logs.
-5) **Verification**: cracks/levels baseline and post checks, then a close‑out report and as‑built maps.
+## Recommended execution steps
+1. **Diagnose the cause**: GI data, history of settlement/cracks, water/leakage evidence, prior reports.  
+2. **Define the objective**: settlement control, void filling, soil strengthening, or crack remediation (based on cause).  
+3. **Design a staged scope**: points/depths/stages with pressure/volume limits per stage.  
+4. **Execute with monitoring**: log pressure/takes and watch for heave/new cracking.  
+5. **Close-out reporting**: what was done, why, success indicators, and monitoring plan.
 
-## Common market mistakes (and how we avoid them)
-- Single‑stage injection with no heave limits.
-- “Blind” grouting without diagnostics (utilities/voids/sensitive layers).
-- Ignoring mix QA (viscosity/bleed/set time) where required.
-- Missing documentation (no grout log per point → hard to prove quality).
+## Topic-specific technical points
+- Install crack/tilt gauges tied to a reference grid
+- Establish a baseline before intervention
+- Correlate readings with stages, pressure and grout takes
 
-## Quick practical example
-For an occupied building in **Madinah**, we start with near-surface checks for utilities/voids, expand depth if needed, and execute staged works with strict monitoring to protect finishes.
+## QA/QC checks (tests & indicators)
+- Crack width & tilt readings
+- Floor level survey for differential settlement
+- Photo documentation from repeatable angles
+
+**Practical acceptance examples**
+- No unacceptable heave or new cracks attributable to execution.
+- Improving measurement trends over an agreed monitoring window.
+- Complete documentation proving compliance with staged limits.
+
+## Common pitfalls
+- Sealing cracks without treating the cause
+- No baseline
+- Non-staged injection increases heave/new cracking risk
+
+## Quick checklist
+- Is the root cause identified (settlement/leakage/voids/weak soil)?
+- Is the scope mapped (grid/points and depths)?
+- Are pressure/volume/heave limits agreed?
+- Are daily logs and stop criteria defined?
+- Is post-work monitoring planned?
+
+## What you should receive from a professional contractor
+- A staged plan with clear limits.  
+- Daily logs + photos + required tests.  
+- A technical report explaining **what changed** and **what to monitor next**.
+
+## Suggested references
+- FHWA (GEC 13) – Ground Modification Methods Reference Manual (Volumes I–II)
+- ASCE Geo-Institute – references on grouting & ground improvement
+- EN 12715 – Execution of special geotechnical work: Grouting
+- ACI 224R – Control of Cracking in Concrete Structures
+- ASTM C939 – Flow cone method for grout consistency
 
 ---
 
-## Quick links
-- Related service: [/en/services/foundation-strengthening](/en/services/foundation-strengthening)
-- Madinah: [/en/locations/madinah/foundation-strengthening](/en/locations/madinah/foundation-strengthening)
-- WhatsApp for a quick assessment: [Click here](https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D9%85%D8%B4%D9%83%D9%84%D8%A9%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D8%A9/%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D8%A7%D8%AA%20%D9%88%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%AA%D9%82%D9%8A%D9%8A%D9%85%20%D9%85%D8%A8%D8%AF%D8%A6%D9%8A.%20%D9%87%D8%B0%D9%87%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A%3A)
-`,
+### Request an initial assessment
+Share your location and a short description/photos. We’ll recommend the safest path: **detection/survey/treatment** with clear scope and documentation.`,
     faqAr: [{"question": "هل حقن التربة مناسب لكل حالات الهبوط؟", "answer": "ليس دائمًا. يعتمد القرار على سبب الهبوط وعمق/نطاق المشكلة. أحيانًا تكون تقوية الأساسات أو معالجة التسربات أولًا هي الأهم."}, {"question": "كم يستغرق التشخيص قبل بدء التنفيذ؟", "answer": "قد يبدأ بتقييم ميداني سريع، ثم تُحدد أدوات الفحص المناسبة (مثل GPR/ERT أو جسات) حسب المخاطر. بعض الحالات تُحسم خلال أيام، وأخرى تحتاج برنامج فحص أوسع."}, {"question": "ما أهم شيء بعد التنفيذ؟", "answer": "خطة تحقق (Validation) واضحة: توثيق، قراءات متابعة، ومخرجات تقرير نهائي يوضح ما تم وأثره."}, {"question": "هل يمكن تنفيذ العمل دون إيقاف المبنى؟", "answer": "غالبًا نعم حسب موقع العمل وحساسية المنشأة، ويتم ذلك بخطة مراحل وإجراءات سلامة."}],
     faqEn: [{"question": "Is soil grouting suitable for every settlement case?", "answer": "Not always. It depends on the root cause and the depth/extent of the problem. In some cases, underpinning or leak remediation is the priority."}, {"question": "How long does diagnosis take before execution?", "answer": "It may start with a quick site assessment, then the appropriate methods (GPR/ERT/boreholes) are selected based on risk. Some cases take days; others require a broader program."}, {"question": "What matters most after execution?", "answer": "A clear validation plan: logs, follow-up readings, and a final report documenting what was done and its impact."}, {"question": "Can the work be done without shutting down the building?", "answer": "Often yes, depending on access and sensitivity. Execution is staged with safety controls."}],
     image: {
