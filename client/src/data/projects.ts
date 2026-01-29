@@ -41,12 +41,6 @@ export const projects: Project[] = [
       },
       outcome: { ar: "أظهرت القراءات الميدانية استقرارًا تدريجيًا ضمن حدود القبول المتفق عليها، مع تقليل احتمالية الهبوط/التشققات في المناطق المعالجة، وتوفير توثيق فني يدعم قرارات التشغيل والمتابعة.", en: "Field readings indicated progressive stabilization within agreed acceptance envelopes, reducing the likelihood of settlement/cracking in treated areas and providing documentation to support operations and follow‑up decisions." },
     },
-      deliverables: {
-        ar: ["خطة تنفيذ ومتابعة ميدانية حسب طبيعة الموقع.", "تنفيذ أعمال الحقن/التثبيت باستخدام معدات متخصصة.", "تقرير فني يلخص الأعمال المنفذة والملاحظات والتوصيات."],
-        en: ["Execution plan and on-site follow-up tailored to the site conditions.", "Grouting/stabilization works using specialized equipment.", "A technical report summarizing executed works, observations, and recommendations."],
-      },
-      outcome: { ar: "\u0627\u0644\u0645\u0633\u062a\u0647\u062f\u0641 \u0645\u0646 \u0627\u0644\u0645\u0639\u0627\u0644\u062c\u0629 \u0631\u0641\u0639 \u0645\u0633\u062a\u0648\u0649 \u0627\u0644\u0627\u0633\u062a\u0642\u0631\u0627\u0631 \u0648\u062a\u0642\u0644\u064a\u0644 \u0645\u062e\u0627\u0637\u0631 \u0627\u0644\u0647\u0628\u0648\u0637 \u0628\u0645\u0627 \u064a\u062e\u062f\u0645 \u0627\u0633\u062a\u062f\u0627\u0645\u0629 \u0627\u0644\u0645\u0634\u0631\u0648\u0639.", en: "The goal of the intervention is improved stability and reduced settlement risk to support long-term performance." },
-    },
   },
   {
     slug: "prince-abdulaziz-bin-mishaal-palace",
@@ -69,12 +63,6 @@ export const projects: Project[] = [
         en: ["Documented staged execution plan (points/depths/sequence) with QA/QC methodology.", "Detailed field logs (drilling/injection/surveys) plus an as‑built map of treated areas.", "Technical summary showing before/after indicators, acceptance envelopes, and monitoring zones.", "Operational monitoring recommendations and contingency steps for future indicators."],
       },
       outcome: { ar: "أظهرت القراءات الميدانية استقرارًا تدريجيًا ضمن حدود القبول المتفق عليها، مع تقليل احتمالية الهبوط/التشققات في المناطق المعالجة، وتوفير توثيق فني يدعم قرارات التشغيل والمتابعة.", en: "Field readings indicated progressive stabilization within agreed acceptance envelopes, reducing the likelihood of settlement/cracking in treated areas and providing documentation to support operations and follow‑up decisions." },
-    },
-      deliverables: {
-        ar: ["خطة تنفيذ ومتابعة ميدانية حسب طبيعة الموقع.", "تنفيذ أعمال الحقن/التثبيت باستخدام معدات متخصصة.", "تقرير فني يلخص الأعمال المنفذة والملاحظات والتوصيات."],
-        en: ["Execution plan and on-site follow-up tailored to the site conditions.", "Grouting/stabilization works using specialized equipment.", "A technical report summarizing executed works, observations, and recommendations."],
-      },
-      outcome: { ar: "\u0627\u0644\u0645\u0633\u062a\u0647\u062f\u0641 \u0645\u0646 \u0627\u0644\u0645\u0639\u0627\u0644\u062c\u0629 \u0631\u0641\u0639 \u0645\u0633\u062a\u0648\u0649 \u0627\u0644\u0627\u0633\u062a\u0642\u0631\u0627\u0631 \u0648\u062a\u0642\u0644\u064a\u0644 \u0645\u062e\u0627\u0637\u0631 \u0627\u0644\u0647\u0628\u0648\u0637 \u0628\u0645\u0627 \u064a\u062e\u062f\u0645 \u0627\u0633\u062a\u062f\u0627\u0645\u0629 \u0627\u0644\u0645\u0634\u0631\u0648\u0639.", en: "The goal of the intervention is improved stability and reduced settlement risk to support long-term performance." },
     },
   },
   {
@@ -99,12 +87,6 @@ export const projects: Project[] = [
       },
       outcome: { ar: "أظهرت القراءات الميدانية استقرارًا تدريجيًا ضمن حدود القبول المتفق عليها، مع تقليل احتمالية الهبوط/التشققات في المناطق المعالجة، وتوفير توثيق فني يدعم قرارات التشغيل والمتابعة.", en: "Field readings indicated progressive stabilization within agreed acceptance envelopes, reducing the likelihood of settlement/cracking in treated areas and providing documentation to support operations and follow‑up decisions." },
     },
-      deliverables: {
-        ar: ["خطة تنفيذ ومتابعة ميدانية حسب طبيعة الموقع.", "تنفيذ أعمال الحقن/التثبيت باستخدام معدات متخصصة.", "تقرير فني يلخص الأعمال المنفذة والملاحظات والتوصيات."],
-        en: ["Execution plan and on-site follow-up tailored to the site conditions.", "Grouting/stabilization works using specialized equipment.", "A technical report summarizing executed works, observations, and recommendations."],
-      },
-      outcome: { ar: "\u0627\u0644\u0645\u0633\u062a\u0647\u062f\u0641 \u0645\u0646 \u0627\u0644\u0645\u0639\u0627\u0644\u062c\u0629 \u0631\u0641\u0639 \u0645\u0633\u062a\u0648\u0649 \u0627\u0644\u0627\u0633\u062a\u0642\u0631\u0627\u0631 \u0648\u062a\u0642\u0644\u064a\u0644 \u0645\u062e\u0627\u0637\u0631 \u0627\u0644\u0647\u0628\u0648\u0637 \u0628\u0645\u0627 \u064a\u062e\u062f\u0645 \u0627\u0633\u062a\u062f\u0627\u0645\u0629 \u0627\u0644\u0645\u0634\u0631\u0648\u0639.", en: "The goal of the intervention is improved stability and reduced settlement risk to support long-term performance." },
-    },
   },
   {
     slug: "al-fakhiriya-mosque",
@@ -127,12 +109,6 @@ export const projects: Project[] = [
         en: ["Documented staged execution plan (points/depths/sequence) with QA/QC methodology.", "Detailed field logs (drilling/injection/surveys) plus an as‑built map of treated areas.", "Technical summary showing before/after indicators, acceptance envelopes, and monitoring zones.", "Operational monitoring recommendations and contingency steps for future indicators."],
       },
       outcome: { ar: "أظهرت القراءات الميدانية استقرارًا تدريجيًا ضمن حدود القبول المتفق عليها، مع تقليل احتمالية الهبوط/التشققات في المناطق المعالجة، وتوفير توثيق فني يدعم قرارات التشغيل والمتابعة.", en: "Field readings indicated progressive stabilization within agreed acceptance envelopes, reducing the likelihood of settlement/cracking in treated areas and providing documentation to support operations and follow‑up decisions." },
-    },
-      deliverables: {
-        ar: ["خطة تنفيذ ومتابعة ميدانية حسب طبيعة الموقع.", "تنفيذ أعمال الحقن/التثبيت باستخدام معدات متخصصة.", "تقرير فني يلخص الأعمال المنفذة والملاحظات والتوصيات."],
-        en: ["Execution plan and on-site follow-up tailored to the site conditions.", "Grouting/stabilization works using specialized equipment.", "A technical report summarizing executed works, observations, and recommendations."],
-      },
-      outcome: { ar: "\u0627\u0644\u0645\u0633\u062a\u0647\u062f\u0641 \u0645\u0646 \u0627\u0644\u0645\u0639\u0627\u0644\u062c\u0629 \u0631\u0641\u0639 \u0645\u0633\u062a\u0648\u0649 \u0627\u0644\u0627\u0633\u062a\u0642\u0631\u0627\u0631 \u0648\u062a\u0642\u0644\u064a\u0644 \u0645\u062e\u0627\u0637\u0631 \u0627\u0644\u0647\u0628\u0648\u0637 \u0628\u0645\u0627 \u064a\u062e\u062f\u0645 \u0627\u0633\u062a\u062f\u0627\u0645\u0629 \u0627\u0644\u0645\u0634\u0631\u0648\u0639.", en: "The goal of the intervention is improved stability and reduced settlement risk to support long-term performance." },
     },
   },
   {
@@ -157,12 +133,6 @@ export const projects: Project[] = [
       },
       outcome: { ar: "أظهرت القراءات الميدانية استقرارًا تدريجيًا ضمن حدود القبول المتفق عليها، مع تقليل احتمالية الهبوط/التشققات في المناطق المعالجة، وتوفير توثيق فني يدعم قرارات التشغيل والمتابعة.", en: "Field readings indicated progressive stabilization within agreed acceptance envelopes, reducing the likelihood of settlement/cracking in treated areas and providing documentation to support operations and follow‑up decisions." },
     },
-      deliverables: {
-        ar: ["خطة تنفيذ ومتابعة ميدانية حسب طبيعة الموقع.", "تنفيذ أعمال الحقن/التثبيت باستخدام معدات متخصصة.", "تقرير فني يلخص الأعمال المنفذة والملاحظات والتوصيات."],
-        en: ["Execution plan and on-site follow-up tailored to the site conditions.", "Grouting/stabilization works using specialized equipment.", "A technical report summarizing executed works, observations, and recommendations."],
-      },
-      outcome: { ar: "\u0627\u0644\u0645\u0633\u062a\u0647\u062f\u0641 \u0645\u0646 \u0627\u0644\u0645\u0639\u0627\u0644\u062c\u0629 \u0631\u0641\u0639 \u0645\u0633\u062a\u0648\u0649 \u0627\u0644\u0627\u0633\u062a\u0642\u0631\u0627\u0631 \u0648\u062a\u0642\u0644\u064a\u0644 \u0645\u062e\u0627\u0637\u0631 \u0627\u0644\u0647\u0628\u0648\u0637 \u0628\u0645\u0627 \u064a\u062e\u062f\u0645 \u0627\u0633\u062a\u062f\u0627\u0645\u0629 \u0627\u0644\u0645\u0634\u0631\u0648\u0639.", en: "The goal of the intervention is improved stability and reduced settlement risk to support long-term performance." },
-    },
   },
   {
     slug: "rainwater-drainage-networks",
@@ -185,12 +155,6 @@ export const projects: Project[] = [
         en: ["Documented staged execution plan (points/depths/sequence) with QA/QC methodology.", "Detailed field logs (drilling/injection/surveys) plus an as‑built map of treated areas.", "Technical summary showing before/after indicators, acceptance envelopes, and monitoring zones.", "Operational monitoring recommendations and contingency steps for future indicators."],
       },
       outcome: { ar: "أظهرت القراءات الميدانية استقرارًا تدريجيًا ضمن حدود القبول المتفق عليها، مع تقليل احتمالية الهبوط/التشققات في المناطق المعالجة، وتوفير توثيق فني يدعم قرارات التشغيل والمتابعة.", en: "Field readings indicated progressive stabilization within agreed acceptance envelopes, reducing the likelihood of settlement/cracking in treated areas and providing documentation to support operations and follow‑up decisions." },
-    },
-      deliverables: {
-        ar: ["خطة تنفيذ ومتابعة ميدانية حسب طبيعة الموقع.", "تنفيذ أعمال الحقن/التثبيت باستخدام معدات متخصصة.", "تقرير فني يلخص الأعمال المنفذة والملاحظات والتوصيات."],
-        en: ["Execution plan and on-site follow-up tailored to the site conditions.", "Grouting/stabilization works using specialized equipment.", "A technical report summarizing executed works, observations, and recommendations."],
-      },
-      outcome: { ar: "\u0627\u0644\u0645\u0633\u062a\u0647\u062f\u0641 \u0645\u0646 \u0627\u0644\u0645\u0639\u0627\u0644\u062c\u0629 \u0631\u0641\u0639 \u0645\u0633\u062a\u0648\u0649 \u0627\u0644\u0627\u0633\u062a\u0642\u0631\u0627\u0631 \u0648\u062a\u0642\u0644\u064a\u0644 \u0645\u062e\u0627\u0637\u0631 \u0627\u0644\u0647\u0628\u0648\u0637 \u0628\u0645\u0627 \u064a\u062e\u062f\u0645 \u0627\u0633\u062a\u062f\u0627\u0645\u0629 \u0627\u0644\u0645\u0634\u0631\u0648\u0639.", en: "The goal of the intervention is improved stability and reduced settlement risk to support long-term performance." },
     },
   },
   {
@@ -215,12 +179,6 @@ export const projects: Project[] = [
       },
       outcome: { ar: "أظهرت القراءات الميدانية استقرارًا تدريجيًا ضمن حدود القبول المتفق عليها، مع تقليل احتمالية الهبوط/التشققات في المناطق المعالجة، وتوفير توثيق فني يدعم قرارات التشغيل والمتابعة.", en: "Field readings indicated progressive stabilization within agreed acceptance envelopes, reducing the likelihood of settlement/cracking in treated areas and providing documentation to support operations and follow‑up decisions." },
     },
-      deliverables: {
-        ar: ["خطة تنفيذ ومتابعة ميدانية حسب طبيعة الموقع.", "تنفيذ أعمال الحقن/التثبيت باستخدام معدات متخصصة.", "تقرير فني يلخص الأعمال المنفذة والملاحظات والتوصيات."],
-        en: ["Execution plan and on-site follow-up tailored to the site conditions.", "Grouting/stabilization works using specialized equipment.", "A technical report summarizing executed works, observations, and recommendations."],
-      },
-      outcome: { ar: "\u0627\u0644\u0645\u0633\u062a\u0647\u062f\u0641 \u0645\u0646 \u0627\u0644\u0645\u0639\u0627\u0644\u062c\u0629 \u0631\u0641\u0639 \u0645\u0633\u062a\u0648\u0649 \u0627\u0644\u0627\u0633\u062a\u0642\u0631\u0627\u0631 \u0648\u062a\u0642\u0644\u064a\u0644 \u0645\u062e\u0627\u0637\u0631 \u0627\u0644\u0647\u0628\u0648\u0637 \u0628\u0645\u0627 \u064a\u062e\u062f\u0645 \u0627\u0633\u062a\u062f\u0627\u0645\u0629 \u0627\u0644\u0645\u0634\u0631\u0648\u0639.", en: "The goal of the intervention is improved stability and reduced settlement risk to support long-term performance." },
-    },
   },
   {
     slug: "boulevard-world",
@@ -243,12 +201,6 @@ export const projects: Project[] = [
         en: ["Documented staged execution plan (points/depths/sequence) with QA/QC methodology.", "Detailed field logs (drilling/injection/surveys) plus an as‑built map of treated areas.", "Technical summary showing before/after indicators, acceptance envelopes, and monitoring zones.", "Operational monitoring recommendations and contingency steps for future indicators."],
       },
       outcome: { ar: "أظهرت القراءات الميدانية استقرارًا تدريجيًا ضمن حدود القبول المتفق عليها، مع تقليل احتمالية الهبوط/التشققات في المناطق المعالجة، وتوفير توثيق فني يدعم قرارات التشغيل والمتابعة.", en: "Field readings indicated progressive stabilization within agreed acceptance envelopes, reducing the likelihood of settlement/cracking in treated areas and providing documentation to support operations and follow‑up decisions." },
-    },
-      deliverables: {
-        ar: ["خطة تنفيذ ومتابعة ميدانية حسب طبيعة الموقع.", "تنفيذ أعمال الحقن/التثبيت باستخدام معدات متخصصة.", "تقرير فني يلخص الأعمال المنفذة والملاحظات والتوصيات."],
-        en: ["Execution plan and on-site follow-up tailored to the site conditions.", "Grouting/stabilization works using specialized equipment.", "A technical report summarizing executed works, observations, and recommendations."],
-      },
-      outcome: { ar: "\u0627\u0644\u0645\u0633\u062a\u0647\u062f\u0641 \u0645\u0646 \u0627\u0644\u0645\u0639\u0627\u0644\u062c\u0629 \u0631\u0641\u0639 \u0645\u0633\u062a\u0648\u0649 \u0627\u0644\u0627\u0633\u062a\u0642\u0631\u0627\u0631 \u0648\u062a\u0642\u0644\u064a\u0644 \u0645\u062e\u0627\u0637\u0631 \u0627\u0644\u0647\u0628\u0648\u0637 \u0628\u0645\u0627 \u064a\u062e\u062f\u0645 \u0627\u0633\u062a\u062f\u0627\u0645\u0629 \u0627\u0644\u0645\u0634\u0631\u0648\u0639.", en: "The goal of the intervention is improved stability and reduced settlement risk to support long-term performance." },
     },
   },
   {
@@ -273,12 +225,6 @@ export const projects: Project[] = [
       },
       outcome: { ar: "أظهرت القراءات الميدانية استقرارًا تدريجيًا ضمن حدود القبول المتفق عليها، مع تقليل احتمالية الهبوط/التشققات في المناطق المعالجة، وتوفير توثيق فني يدعم قرارات التشغيل والمتابعة.", en: "Field readings indicated progressive stabilization within agreed acceptance envelopes, reducing the likelihood of settlement/cracking in treated areas and providing documentation to support operations and follow‑up decisions." },
     },
-      deliverables: {
-        ar: ["خطة تنفيذ ومتابعة ميدانية حسب طبيعة الموقع.", "تنفيذ أعمال الحقن/التثبيت باستخدام معدات متخصصة.", "تقرير فني يلخص الأعمال المنفذة والملاحظات والتوصيات."],
-        en: ["Execution plan and on-site follow-up tailored to the site conditions.", "Grouting/stabilization works using specialized equipment.", "A technical report summarizing executed works, observations, and recommendations."],
-      },
-      outcome: { ar: "\u0627\u0644\u0645\u0633\u062a\u0647\u062f\u0641 \u0645\u0646 \u0627\u0644\u0645\u0639\u0627\u0644\u062c\u0629 \u0631\u0641\u0639 \u0645\u0633\u062a\u0648\u0649 \u0627\u0644\u0627\u0633\u062a\u0642\u0631\u0627\u0631 \u0648\u062a\u0642\u0644\u064a\u0644 \u0645\u062e\u0627\u0637\u0631 \u0627\u0644\u0647\u0628\u0648\u0637 \u0628\u0645\u0627 \u064a\u062e\u062f\u0645 \u0627\u0633\u062a\u062f\u0627\u0645\u0629 \u0627\u0644\u0645\u0634\u0631\u0648\u0639.", en: "The goal of the intervention is improved stability and reduced settlement risk to support long-term performance." },
-    },
   },
   {
     slug: "saraya-al-narjis",
@@ -301,12 +247,6 @@ export const projects: Project[] = [
         en: ["Documented staged execution plan (points/depths/sequence) with QA/QC methodology.", "Detailed field logs (drilling/injection/surveys) plus an as‑built map of treated areas.", "Technical summary showing before/after indicators, acceptance envelopes, and monitoring zones.", "Operational monitoring recommendations and contingency steps for future indicators."],
       },
       outcome: { ar: "أظهرت القراءات الميدانية استقرارًا تدريجيًا ضمن حدود القبول المتفق عليها، مع تقليل احتمالية الهبوط/التشققات في المناطق المعالجة، وتوفير توثيق فني يدعم قرارات التشغيل والمتابعة.", en: "Field readings indicated progressive stabilization within agreed acceptance envelopes, reducing the likelihood of settlement/cracking in treated areas and providing documentation to support operations and follow‑up decisions." },
-    },
-      deliverables: {
-        ar: ["خطة تنفيذ ومتابعة ميدانية حسب طبيعة الموقع.", "تنفيذ أعمال الحقن/التثبيت باستخدام معدات متخصصة.", "تقرير فني يلخص الأعمال المنفذة والملاحظات والتوصيات."],
-        en: ["Execution plan and on-site follow-up tailored to the site conditions.", "Grouting/stabilization works using specialized equipment.", "A technical report summarizing executed works, observations, and recommendations."],
-      },
-      outcome: { ar: "\u0627\u0644\u0645\u0633\u062a\u0647\u062f\u0641 \u0645\u0646 \u0627\u0644\u0645\u0639\u0627\u0644\u062c\u0629 \u0631\u0641\u0639 \u0645\u0633\u062a\u0648\u0649 \u0627\u0644\u0627\u0633\u062a\u0642\u0631\u0627\u0631 \u0648\u062a\u0642\u0644\u064a\u0644 \u0645\u062e\u0627\u0637\u0631 \u0627\u0644\u0647\u0628\u0648\u0637 \u0628\u0645\u0627 \u064a\u062e\u062f\u0645 \u0627\u0633\u062a\u062f\u0627\u0645\u0629 \u0627\u0644\u0645\u0634\u0631\u0648\u0639.", en: "The goal of the intervention is improved stability and reduced settlement risk to support long-term performance." },
     },
   },
   {
@@ -331,12 +271,6 @@ export const projects: Project[] = [
       },
       outcome: { ar: "أظهرت القراءات الميدانية استقرارًا تدريجيًا ضمن حدود القبول المتفق عليها، مع تقليل احتمالية الهبوط/التشققات في المناطق المعالجة، وتوفير توثيق فني يدعم قرارات التشغيل والمتابعة.", en: "Field readings indicated progressive stabilization within agreed acceptance envelopes, reducing the likelihood of settlement/cracking in treated areas and providing documentation to support operations and follow‑up decisions." },
     },
-      deliverables: {
-        ar: ["خطة تنفيذ ومتابعة ميدانية حسب طبيعة الموقع.", "تنفيذ أعمال الحقن/التثبيت باستخدام معدات متخصصة.", "تقرير فني يلخص الأعمال المنفذة والملاحظات والتوصيات."],
-        en: ["Execution plan and on-site follow-up tailored to the site conditions.", "Grouting/stabilization works using specialized equipment.", "A technical report summarizing executed works, observations, and recommendations."],
-      },
-      outcome: { ar: "\u0627\u0644\u0645\u0633\u062a\u0647\u062f\u0641 \u0645\u0646 \u0627\u0644\u0645\u0639\u0627\u0644\u062c\u0629 \u0631\u0641\u0639 \u0645\u0633\u062a\u0648\u0649 \u0627\u0644\u0627\u0633\u062a\u0642\u0631\u0627\u0631 \u0648\u062a\u0642\u0644\u064a\u0644 \u0645\u062e\u0627\u0637\u0631 \u0627\u0644\u0647\u0628\u0648\u0637 \u0628\u0645\u0627 \u064a\u062e\u062f\u0645 \u0627\u0633\u062a\u062f\u0627\u0645\u0629 \u0627\u0644\u0645\u0634\u0631\u0648\u0639.", en: "The goal of the intervention is improved stability and reduced settlement risk to support long-term performance." },
-    },
   },
   {
     slug: "prince-saud-bin-faisal-palace",
@@ -359,12 +293,6 @@ export const projects: Project[] = [
         en: ["Documented staged execution plan (points/depths/sequence) with QA/QC methodology.", "Detailed field logs (drilling/injection/surveys) plus an as‑built map of treated areas.", "Technical summary showing before/after indicators, acceptance envelopes, and monitoring zones.", "Operational monitoring recommendations and contingency steps for future indicators."],
       },
       outcome: { ar: "أظهرت القراءات الميدانية استقرارًا تدريجيًا ضمن حدود القبول المتفق عليها، مع تقليل احتمالية الهبوط/التشققات في المناطق المعالجة، وتوفير توثيق فني يدعم قرارات التشغيل والمتابعة.", en: "Field readings indicated progressive stabilization within agreed acceptance envelopes, reducing the likelihood of settlement/cracking in treated areas and providing documentation to support operations and follow‑up decisions." },
-    },
-      deliverables: {
-        ar: ["خطة تنفيذ ومتابعة ميدانية حسب طبيعة الموقع.", "تنفيذ أعمال الحقن/التثبيت باستخدام معدات متخصصة.", "تقرير فني يلخص الأعمال المنفذة والملاحظات والتوصيات."],
-        en: ["Execution plan and on-site follow-up tailored to the site conditions.", "Grouting/stabilization works using specialized equipment.", "A technical report summarizing executed works, observations, and recommendations."],
-      },
-      outcome: { ar: "\u0627\u0644\u0645\u0633\u062a\u0647\u062f\u0641 \u0645\u0646 \u0627\u0644\u0645\u0639\u0627\u0644\u062c\u0629 \u0631\u0641\u0639 \u0645\u0633\u062a\u0648\u0649 \u0627\u0644\u0627\u0633\u062a\u0642\u0631\u0627\u0631 \u0648\u062a\u0642\u0644\u064a\u0644 \u0645\u062e\u0627\u0637\u0631 \u0627\u0644\u0647\u0628\u0648\u0637 \u0628\u0645\u0627 \u064a\u062e\u062f\u0645 \u0627\u0633\u062a\u062f\u0627\u0645\u0629 \u0627\u0644\u0645\u0634\u0631\u0648\u0639.", en: "The goal of the intervention is improved stability and reduced settlement risk to support long-term performance." },
     },
   },
   {
@@ -389,12 +317,6 @@ export const projects: Project[] = [
       },
       outcome: { ar: "أظهرت القراءات الميدانية استقرارًا تدريجيًا ضمن حدود القبول المتفق عليها، مع تقليل احتمالية الهبوط/التشققات في المناطق المعالجة، وتوفير توثيق فني يدعم قرارات التشغيل والمتابعة.", en: "Field readings indicated progressive stabilization within agreed acceptance envelopes, reducing the likelihood of settlement/cracking in treated areas and providing documentation to support operations and follow‑up decisions." },
     },
-      deliverables: {
-        ar: ["خطة تنفيذ ومتابعة ميدانية حسب طبيعة الموقع.", "تنفيذ أعمال الحقن/التثبيت باستخدام معدات متخصصة.", "تقرير فني يلخص الأعمال المنفذة والملاحظات والتوصيات."],
-        en: ["Execution plan and on-site follow-up tailored to the site conditions.", "Grouting/stabilization works using specialized equipment.", "A technical report summarizing executed works, observations, and recommendations."],
-      },
-      outcome: { ar: "\u0627\u0644\u0645\u0633\u062a\u0647\u062f\u0641 \u0645\u0646 \u0627\u0644\u0645\u0639\u0627\u0644\u062c\u0629 \u0631\u0641\u0639 \u0645\u0633\u062a\u0648\u0649 \u0627\u0644\u0627\u0633\u062a\u0642\u0631\u0627\u0631 \u0648\u062a\u0642\u0644\u064a\u0644 \u0645\u062e\u0627\u0637\u0631 \u0627\u0644\u0647\u0628\u0648\u0637 \u0628\u0645\u0627 \u064a\u062e\u062f\u0645 \u0627\u0633\u062a\u062f\u0627\u0645\u0629 \u0627\u0644\u0645\u0634\u0631\u0648\u0639.", en: "The goal of the intervention is improved stability and reduced settlement risk to support long-term performance." },
-    },
   },
   {
     slug: "al-maarefa-private-school",
@@ -417,12 +339,6 @@ export const projects: Project[] = [
         en: ["Documented staged execution plan (points/depths/sequence) with QA/QC methodology.", "Detailed field logs (drilling/injection/surveys) plus an as‑built map of treated areas.", "Technical summary showing before/after indicators, acceptance envelopes, and monitoring zones.", "Operational monitoring recommendations and contingency steps for future indicators."],
       },
       outcome: { ar: "أظهرت القراءات الميدانية استقرارًا تدريجيًا ضمن حدود القبول المتفق عليها، مع تقليل احتمالية الهبوط/التشققات في المناطق المعالجة، وتوفير توثيق فني يدعم قرارات التشغيل والمتابعة.", en: "Field readings indicated progressive stabilization within agreed acceptance envelopes, reducing the likelihood of settlement/cracking in treated areas and providing documentation to support operations and follow‑up decisions." },
-    },
-      deliverables: {
-        ar: ["خطة تنفيذ ومتابعة ميدانية حسب طبيعة الموقع.", "تنفيذ أعمال الحقن/التثبيت باستخدام معدات متخصصة.", "تقرير فني يلخص الأعمال المنفذة والملاحظات والتوصيات."],
-        en: ["Execution plan and on-site follow-up tailored to the site conditions.", "Grouting/stabilization works using specialized equipment.", "A technical report summarizing executed works, observations, and recommendations."],
-      },
-      outcome: { ar: "\u0627\u0644\u0645\u0633\u062a\u0647\u062f\u0641 \u0645\u0646 \u0627\u0644\u0645\u0639\u0627\u0644\u062c\u0629 \u0631\u0641\u0639 \u0645\u0633\u062a\u0648\u0649 \u0627\u0644\u0627\u0633\u062a\u0642\u0631\u0627\u0631 \u0648\u062a\u0642\u0644\u064a\u0644 \u0645\u062e\u0627\u0637\u0631 \u0627\u0644\u0647\u0628\u0648\u0637 \u0628\u0645\u0627 \u064a\u062e\u062f\u0645 \u0627\u0633\u062a\u062f\u0627\u0645\u0629 \u0627\u0644\u0645\u0634\u0631\u0648\u0639.", en: "The goal of the intervention is improved stability and reduced settlement risk to support long-term performance." },
     },
   },
   {
@@ -447,12 +363,6 @@ export const projects: Project[] = [
       },
       outcome: { ar: "أظهرت القراءات الميدانية استقرارًا تدريجيًا ضمن حدود القبول المتفق عليها، مع تقليل احتمالية الهبوط/التشققات في المناطق المعالجة، وتوفير توثيق فني يدعم قرارات التشغيل والمتابعة.", en: "Field readings indicated progressive stabilization within agreed acceptance envelopes, reducing the likelihood of settlement/cracking in treated areas and providing documentation to support operations and follow‑up decisions." },
     },
-      deliverables: {
-        ar: ["خطة تنفيذ ومتابعة ميدانية حسب طبيعة الموقع.", "تنفيذ أعمال الحقن/التثبيت باستخدام معدات متخصصة.", "تقرير فني يلخص الأعمال المنفذة والملاحظات والتوصيات."],
-        en: ["Execution plan and on-site follow-up tailored to the site conditions.", "Grouting/stabilization works using specialized equipment.", "A technical report summarizing executed works, observations, and recommendations."],
-      },
-      outcome: { ar: "\u0627\u0644\u0645\u0633\u062a\u0647\u062f\u0641 \u0645\u0646 \u0627\u0644\u0645\u0639\u0627\u0644\u062c\u0629 \u0631\u0641\u0639 \u0645\u0633\u062a\u0648\u0649 \u0627\u0644\u0627\u0633\u062a\u0642\u0631\u0627\u0631 \u0648\u062a\u0642\u0644\u064a\u0644 \u0645\u062e\u0627\u0637\u0631 \u0627\u0644\u0647\u0628\u0648\u0637 \u0628\u0645\u0627 \u064a\u062e\u062f\u0645 \u0627\u0633\u062a\u062f\u0627\u0645\u0629 \u0627\u0644\u0645\u0634\u0631\u0648\u0639.", en: "The goal of the intervention is improved stability and reduced settlement risk to support long-term performance." },
-    },
   },
   {
     slug: "obeikan-hills",
@@ -475,12 +385,6 @@ export const projects: Project[] = [
         en: ["Documented staged execution plan (points/depths/sequence) with QA/QC methodology.", "Detailed field logs (drilling/injection/surveys) plus an as‑built map of treated areas.", "Technical summary showing before/after indicators, acceptance envelopes, and monitoring zones.", "Operational monitoring recommendations and contingency steps for future indicators."],
       },
       outcome: { ar: "أظهرت القراءات الميدانية استقرارًا تدريجيًا ضمن حدود القبول المتفق عليها، مع تقليل احتمالية الهبوط/التشققات في المناطق المعالجة، وتوفير توثيق فني يدعم قرارات التشغيل والمتابعة.", en: "Field readings indicated progressive stabilization within agreed acceptance envelopes, reducing the likelihood of settlement/cracking in treated areas and providing documentation to support operations and follow‑up decisions." },
-    },
-      deliverables: {
-        ar: ["خطة تنفيذ ومتابعة ميدانية حسب طبيعة الموقع.", "تنفيذ أعمال الحقن/التثبيت باستخدام معدات متخصصة.", "تقرير فني يلخص الأعمال المنفذة والملاحظات والتوصيات."],
-        en: ["Execution plan and on-site follow-up tailored to the site conditions.", "Grouting/stabilization works using specialized equipment.", "A technical report summarizing executed works, observations, and recommendations."],
-      },
-      outcome: { ar: "\u0627\u0644\u0645\u0633\u062a\u0647\u062f\u0641 \u0645\u0646 \u0627\u0644\u0645\u0639\u0627\u0644\u062c\u0629 \u0631\u0641\u0639 \u0645\u0633\u062a\u0648\u0649 \u0627\u0644\u0627\u0633\u062a\u0642\u0631\u0627\u0631 \u0648\u062a\u0642\u0644\u064a\u0644 \u0645\u062e\u0627\u0637\u0631 \u0627\u0644\u0647\u0628\u0648\u0637 \u0628\u0645\u0627 \u064a\u062e\u062f\u0645 \u0627\u0633\u062a\u062f\u0627\u0645\u0629 \u0627\u0644\u0645\u0634\u0631\u0648\u0639.", en: "The goal of the intervention is improved stability and reduced settlement risk to support long-term performance." },
     },
   },
   {
@@ -505,12 +409,6 @@ export const projects: Project[] = [
       },
       outcome: { ar: "أظهرت القراءات الميدانية استقرارًا تدريجيًا ضمن حدود القبول المتفق عليها، مع تقليل احتمالية الهبوط/التشققات في المناطق المعالجة، وتوفير توثيق فني يدعم قرارات التشغيل والمتابعة.", en: "Field readings indicated progressive stabilization within agreed acceptance envelopes, reducing the likelihood of settlement/cracking in treated areas and providing documentation to support operations and follow‑up decisions." },
     },
-      deliverables: {
-        ar: ["خطة تنفيذ ومتابعة ميدانية حسب طبيعة الموقع.", "تنفيذ أعمال الحقن/التثبيت باستخدام معدات متخصصة.", "تقرير فني يلخص الأعمال المنفذة والملاحظات والتوصيات."],
-        en: ["Execution plan and on-site follow-up tailored to the site conditions.", "Grouting/stabilization works using specialized equipment.", "A technical report summarizing executed works, observations, and recommendations."],
-      },
-      outcome: { ar: "\u0627\u0644\u0645\u0633\u062a\u0647\u062f\u0641 \u0645\u0646 \u0627\u0644\u0645\u0639\u0627\u0644\u062c\u0629 \u0631\u0641\u0639 \u0645\u0633\u062a\u0648\u0649 \u0627\u0644\u0627\u0633\u062a\u0642\u0631\u0627\u0631 \u0648\u062a\u0642\u0644\u064a\u0644 \u0645\u062e\u0627\u0637\u0631 \u0627\u0644\u0647\u0628\u0648\u0637 \u0628\u0645\u0627 \u064a\u062e\u062f\u0645 \u0627\u0633\u062a\u062f\u0627\u0645\u0629 \u0627\u0644\u0645\u0634\u0631\u0648\u0639.", en: "The goal of the intervention is improved stability and reduced settlement risk to support long-term performance." },
-    },
   },
   {
     slug: "al-raie-juice-dairy-factory",
@@ -534,12 +432,6 @@ export const projects: Project[] = [
       },
       outcome: { ar: "أظهرت القراءات الميدانية استقرارًا تدريجيًا ضمن حدود القبول المتفق عليها، مع تقليل احتمالية الهبوط/التشققات في المناطق المعالجة، وتوفير توثيق فني يدعم قرارات التشغيل والمتابعة.", en: "Field readings indicated progressive stabilization within agreed acceptance envelopes, reducing the likelihood of settlement/cracking in treated areas and providing documentation to support operations and follow‑up decisions." },
     },
-      deliverables: {
-        ar: ["خطة تنفيذ ومتابعة ميدانية حسب طبيعة الموقع.", "تنفيذ أعمال الحقن/التثبيت باستخدام معدات متخصصة.", "تقرير فني يلخص الأعمال المنفذة والملاحظات والتوصيات."],
-        en: ["Execution plan and on-site follow-up tailored to the site conditions.", "Grouting/stabilization works using specialized equipment.", "A technical report summarizing executed works, observations, and recommendations."],
-      },
-      outcome: { ar: "\u0627\u0644\u0645\u0633\u062a\u0647\u062f\u0641 \u0645\u0646 \u0627\u0644\u0645\u0639\u0627\u0644\u062c\u0629 \u0631\u0641\u0639 \u0645\u0633\u062a\u0648\u0649 \u0627\u0644\u0627\u0633\u062a\u0642\u0631\u0627\u0631 \u0648\u062a\u0642\u0644\u064a\u0644 \u0645\u062e\u0627\u0637\u0631 \u0627\u0644\u0647\u0628\u0648\u0637 \u0628\u0645\u0627 \u064a\u062e\u062f\u0645 \u0627\u0633\u062a\u062f\u0627\u0645\u0629 \u0627\u0644\u0645\u0634\u0631\u0648\u0639.", en: "The goal of the intervention is improved stability and reduced settlement risk to support long-term performance." },
-    },
   },
   {
     slug: "aramco-stadium",
@@ -562,12 +454,6 @@ export const projects: Project[] = [
         en: ["Documented staged execution plan (points/depths/sequence) with QA/QC methodology.", "Detailed field logs (drilling/injection/surveys) plus an as‑built map of treated areas.", "Technical summary showing before/after indicators, acceptance envelopes, and monitoring zones.", "Operational monitoring recommendations and contingency steps for future indicators."],
       },
       outcome: { ar: "أظهرت القراءات الميدانية استقرارًا تدريجيًا ضمن حدود القبول المتفق عليها، مع تقليل احتمالية الهبوط/التشققات في المناطق المعالجة، وتوفير توثيق فني يدعم قرارات التشغيل والمتابعة.", en: "Field readings indicated progressive stabilization within agreed acceptance envelopes, reducing the likelihood of settlement/cracking in treated areas and providing documentation to support operations and follow‑up decisions." },
-    },
-      deliverables: {
-        ar: ["خطة تنفيذ ومتابعة ميدانية حسب طبيعة الموقع.", "تنفيذ أعمال الحقن/التثبيت باستخدام معدات متخصصة.", "تقرير فني يلخص الأعمال المنفذة والملاحظات والتوصيات."],
-        en: ["Execution plan and on-site follow-up tailored to the site conditions.", "Grouting/stabilization works using specialized equipment.", "A technical report summarizing executed works, observations, and recommendations."],
-      },
-      outcome: { ar: "\u0627\u0644\u0645\u0633\u062a\u0647\u062f\u0641 \u0645\u0646 \u0627\u0644\u0645\u0639\u0627\u0644\u062c\u0629 \u0631\u0641\u0639 \u0645\u0633\u062a\u0648\u0649 \u0627\u0644\u0627\u0633\u062a\u0642\u0631\u0627\u0631 \u0648\u062a\u0642\u0644\u064a\u0644 \u0645\u062e\u0627\u0637\u0631 \u0627\u0644\u0647\u0628\u0648\u0637 \u0628\u0645\u0627 \u064a\u062e\u062f\u0645 \u0627\u0633\u062a\u062f\u0627\u0645\u0629 \u0627\u0644\u0645\u0634\u0631\u0648\u0639.", en: "The goal of the intervention is improved stability and reduced settlement risk to support long-term performance." },
     },
   },
 ];
