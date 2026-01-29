@@ -3,7 +3,7 @@ import { useRoute, useLocation } from 'wouter';
 import { Badge } from '@/components/ui/badge';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { type ArticleContent } from '@/data/articles';
+import { articles, type ArticleContent } from '@/data/articles';
 import { SEO } from '@/components/SEO';
 import { Calendar, Clock, User, ArrowLeft, ArrowRight } from 'lucide-react';
 
@@ -105,7 +105,7 @@ export default function BlogPost() {
   const article = useMemo(() => {
     const slug = params?.slug;
     if (!slug) return null;
-    return [].find((a) => a.slug === slug) || null;
+    return articles.find((a) => a.slug === slug) || null;
   }, [params?.slug]);
 
   const title = useMemo(() => {
@@ -129,17 +129,20 @@ export default function BlogPost() {
 
   const readTime = useMemo(() => estimateReadTime(contentRaw, language), [contentRaw, language]);
   const pageUrl = useMemo(() => absUrl(`/blog/${article?.slug || ''}`), [article?.slug]);
-  const ogImage = absUrl(article.image?.url || '/og-image.webp');
-  const relatedSignals = [
-    title,
-    description,
-    article.category,
-    article.categoryEn,
-    ...(article.categoriesAr || []),
-    ...(article.categoriesEn || []),
-    // light content signal
-    contentRaw.slice(0, 300),
-  ].filter(Boolean) as string[];
+  const ogImage = absUrl(article?.image?.url || '/og-image.webp');
+  const relatedSignals = useMemo(() => {
+    if (!article) return [] as string[];
+    return [
+      title,
+      description,
+      article.category,
+      article.categoryEn,
+      ...(article.categoriesAr || []),
+      ...(article.categoriesEn || []),
+      // light content signal
+      contentRaw.slice(0, 300),
+    ].filter(Boolean) as string[];
+  }, [article, title, description, contentRaw]);
 
   const faqItems = useMemo(() => {
     if (!article) return [] as { question: string; answer: string }[];
@@ -190,7 +193,7 @@ const schema = useMemo(() => {
 
     // Keep the same sequence used by the blog listing ([] array order),
     // but only include items that have content in the current language.
-    const list = [].filter((a) => (language === 'ar' ? Boolean(a.title && a.content) : Boolean(a.titleEn && a.contentEn)));
+    const list = articles.filter((a) => (language === 'ar' ? Boolean(a.title && a.content) : Boolean(a.titleEn && a.contentEn)));
     const idx = list.findIndex((a) => a.slug === article.slug);
     return {
       prevArticle: idx > 0 ? list[idx - 1] : null,
