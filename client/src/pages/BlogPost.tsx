@@ -126,20 +126,30 @@ export default function BlogPost() {
     if (language === 'ar') return article.content || '';
     return normalizeEnglishContent(article.contentEn || article.content || '');
   }, [article, language]);
-
   const readTime = useMemo(() => estimateReadTime(contentRaw, language), [contentRaw, language]);
   const pageUrl = useMemo(() => absUrl(`/blog/${article?.slug || ''}`), [article?.slug]);
-  const ogImage = absUrl(article.image?.url || '/og-image.webp');
-  const relatedSignals = [
-    title,
-    description,
-    article.category,
-    article.categoryEn,
-    ...(article.categoriesAr || []),
-    ...(article.categoriesEn || []),
-    // light content signal
-    contentRaw.slice(0, 300),
-  ].filter(Boolean) as string[];
+
+  const ogImage = useMemo(() => {
+    const candidate =
+      article?.image?.url ||
+      (article?.slug ? `/article-images/hero/${article.slug}.svg` : '/og-image.webp');
+    return absUrl(candidate);
+  }, [article?.image?.url, article?.slug]);
+
+  const relatedSignals = useMemo(() => {
+    if (!article) return [title, description, contentRaw.slice(0, 200)].filter(Boolean) as string[];
+    return [
+      title,
+      description,
+      article.category,
+      article.categoryEn,
+      ...(article.categoriesAr || []),
+      ...(article.categoriesEn || []),
+      // light content signal
+      contentRaw.slice(0, 300),
+    ].filter(Boolean) as string[];
+  }, [article, title, description, contentRaw]);
+
 
   const faqItems = useMemo(() => {
     if (!article) return [] as { question: string; answer: string }[];
@@ -190,7 +200,9 @@ const schema = useMemo(() => {
 
     // Keep the same sequence used by the blog listing ([] array order),
     // but only include items that have content in the current language.
-    const list = [].filter((a) => (language === 'ar' ? Boolean(a.title && a.content) : Boolean(a.titleEn && a.contentEn)));
+    const list = articles.filter((a) => (language === 'ar' ? Boolean(a.title && a.content) : Boolean(a.titleEn && a.contentEn)));
+    // Keep a stable order
+    list.sort((a, b) => (a.id ?? 0) - (b.id ?? 0));
     const idx = list.findIndex((a) => a.slug === article.slug);
     return {
       prevArticle: idx > 0 ? list[idx - 1] : null,
@@ -324,7 +336,7 @@ const handleHeroError = () => {
       <div className="max-w-4xl mx-auto" ref={swipeRef}>
         <LocalizedLink href="/blog" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground mb-6">
             <ArrowLeft className="h-4 w-4" />
-            {language === 'ar' ? 'رجوع للمقالات' : 'Back to []'}
+            {language === 'ar' ? 'رجوع للمقالات' : 'Back to blog'}
           
         </LocalizedLink>
 
@@ -458,6 +470,22 @@ const handleHeroError = () => {
               remarkPlugins={[remarkGfm]}
               rehypePlugins={[rehypeRaw]}
               components={{
+                a: ({ href, children, ...props }) => {
+                  if (!href) return <a {...props}>{children}</a>;
+                  const isInternal = href.startsWith('/');
+                  if (isInternal) {
+                    return (
+                      <LocalizedLink href={href} className="text-primary underline underline-offset-4">
+                        {children}
+                      </LocalizedLink>
+                    );
+                  }
+                  return (
+                    <a href={href} target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-4" {...props}>
+                      {children}
+                    </a>
+                  );
+                },
                 table: ({ children, ...props }) => (
                   <div className="my-8 w-full overflow-x-auto rounded-lg border border-border">
                     <table className="w-full border-collapse" {...props}>
@@ -475,6 +503,28 @@ const handleHeroError = () => {
                     {children}
                   </td>
                 ),
+                a: ({ href, children, ...props }) => {
+                  const h = String(href || '');
+                  const isInternal = h.startsWith('/') && !h.startsWith('//');
+                  if (isInternal) {
+                    return (
+                      <LocalizedLink href={h} className="text-primary underline underline-offset-4">
+                        {children}
+                      </LocalizedLink>
+                    );
+                  }
+                  return (
+                    <a
+                      href={h}
+                      target={h.startsWith('http') ? '_blank' : undefined}
+                      rel={h.startsWith('http') ? 'noopener noreferrer' : undefined}
+                      className="text-primary underline underline-offset-4"
+                      {...props}
+                    >
+                      {children}
+                    </a>
+                  );
+                },
                 // Make images responsive
                 img: ({ ...props }) => <img className="rounded-xl border border-border" {...props} />,
                 // Prevent swipe on scrollable blocks
