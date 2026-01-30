@@ -74,11 +74,13 @@ function ArticleCard({
 }) {
   const title = language === 'ar' ? article.title : stripArabic(article.titleEn || '');
   const content = language === 'ar' ? article.content : stripArabic(article.contentEn || '');
-  const excerpt = stripMarkdown(content).slice(0, 220) + (stripMarkdown(content).length > 220 ? '…' : '');
+  const excerpt = language === 'ar'
+    ? (article.excerpt ?? (stripMarkdown(article.content).slice(0, 220) + (stripMarkdown(article.content).length > 220 ? '…' : '')))
+    : (article.excerptEn ?? (stripMarkdown(stripArabic(article.contentEn || '')).slice(0, 220) + (stripMarkdown(stripArabic(article.contentEn || '')).length > 220 ? '…' : '')));
 
   const cats = getCategories(article, language);
   const fallbackUrl = getFeaturedImageFallback(article);
-  const imgUrl = `/article-images/card/${article.slug}.webp`;
+  const imgUrl = `/article-images/card/${article.slug}.svg`;
 
   return (
     <Card className="group h-full overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:scale-[1.07]">

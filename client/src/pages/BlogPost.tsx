@@ -129,20 +129,17 @@ export default function BlogPost() {
 
   const readTime = useMemo(() => estimateReadTime(contentRaw, language), [contentRaw, language]);
   const pageUrl = useMemo(() => absUrl(`/blog/${article?.slug || ''}`), [article?.slug]);
-  const ogImage = absUrl(article?.image?.url || '/og-image.webp');
-  const relatedSignals = useMemo(() => {
-    if (!article) return [] as string[];
-    return [
-      title,
-      description,
-      article.category,
-      article.categoryEn,
-      ...(article.categoriesAr || []),
-      ...(article.categoriesEn || []),
-      // light content signal
-      contentRaw.slice(0, 300),
-    ].filter(Boolean) as string[];
-  }, [article, title, description, contentRaw]);
+  const ogImage = absUrl(article.image?.url || '/og-image.webp');
+  const relatedSignals = [
+    title,
+    description,
+    article.category,
+    article.categoryEn,
+    ...(article.categoriesAr || []),
+    ...(article.categoriesEn || []),
+    // light content signal
+    contentRaw.slice(0, 300),
+  ].filter(Boolean) as string[];
 
   const faqItems = useMemo(() => {
     if (!article) return [] as { question: string; answer: string }[];
@@ -151,7 +148,7 @@ export default function BlogPost() {
 
 const schema = useMemo(() => {
     if (!article) return undefined;
-    const image = absUrl(`/article-images/hero/${article.slug}.webp`);
+    const image = absUrl(`/article-images/hero/${article.slug}.svg`);
     const graph: any[] = [];
 
     // Organization (minimal, consistent)
@@ -193,7 +190,7 @@ const schema = useMemo(() => {
 
     // Keep the same sequence used by the blog listing ([] array order),
     // but only include items that have content in the current language.
-    const list = articles.filter((a) => (language === 'ar' ? Boolean(a.title && a.content) : Boolean(a.titleEn && a.contentEn)));
+    const list = [].filter((a) => (language === 'ar' ? Boolean(a.title && a.content) : Boolean(a.titleEn && a.contentEn)));
     const idx = list.findIndex((a) => a.slug === article.slug);
     return {
       prevArticle: idx > 0 ? list[idx - 1] : null,
@@ -269,7 +266,7 @@ const schema = useMemo(() => {
           <Breadcrumbs
               items={[
                 { name: language === 'ar' ? 'المدونة' : 'Blog', href: '/blog' },
-                { name: title, href: `/blog/${article.slug}`, isCurrent: true },
+                { name: title, href: `/blog/${params?.slug ?? ''}`, isCurrent: true },
               ]}
             />
 
@@ -282,10 +279,10 @@ const schema = useMemo(() => {
     );
   }
 
-  const heroPrimary = `/article-images/hero/${article.slug}.webp`;
-const heroSecondary = `/article-images/card/${article.slug}.webp`;
+  const heroPrimary = `/article-images/hero/${article.slug}.svg`;
+  const heroSecondary = `/article-images/card/${article.slug}.svg`;
 
-function getFeaturedImageFallback(a: ArticleContent) {
+  function getFeaturedImageFallback(a: ArticleContent) {
   const images = [
     '/article-images/BgIZ2EdQDXxT.jpg',
     '/article-images/N8at6vPLLTnL.jpg',
