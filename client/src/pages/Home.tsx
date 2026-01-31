@@ -2,12 +2,15 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { SEO } from '@/components/SEO';
 import TrustStats from '@/components/TrustStats';
-import { ImageSlideshow } from '@/components/ImageSlideshow';
+import { GALLERY_IMAGES, ImageSlideshow } from '@/components/ImageSlideshow';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useMemo, useState } from 'react';
 import {
   AlertTriangle,
   CheckCircle2,
   ArrowLeft,
+  ChevronLeft,
+  ChevronRight,
   Building2,
   ClipboardList,
   Drill,
@@ -23,6 +26,28 @@ import { trackEvent } from '@/lib/analytics';
 
 export default function Home() {
   const { language } = useLanguage();
+
+  // HERO slideshow is controlled here so the navigation controls can sit above the hero content
+  // (important for mobile where the hero text can overlap with the buttons).
+  const heroImages = useMemo(() => GALLERY_IMAGES, []);
+  const [heroIndex, setHeroIndex] = useState(0);
+  const heroCount = heroImages.length;
+  const goToHero = (idx: number) => {
+    if (!heroCount) return;
+    const normalized = ((idx % heroCount) + heroCount) % heroCount;
+    setHeroIndex(normalized);
+  };
+  const prevHero = () => goToHero(heroIndex - 1);
+  const nextHero = () => goToHero(heroIndex + 1);
+
+  const dotIndices = useMemo(() => {
+    const maxDots = 7;
+    if (!heroCount) return [] as number[];
+    const count = Math.min(maxDots, heroCount);
+    const half = Math.floor(count / 2);
+    const start = heroIndex - half;
+    return Array.from({ length: count }, (_, i) => ((start + i) % heroCount + heroCount) % heroCount);
+  }, [heroCount, heroIndex]);
 
   const services = [
     {
@@ -277,11 +302,57 @@ export default function Home() {
         {/* Full-width animated background (gallery slideshow) */}
         <div className="absolute inset-0 z-0">
           <ImageSlideshow
-            showControls
+            images={heroImages}
+            showControls={false}
             intervalMs={5000}
+            currentIndex={heroIndex}
+            onIndexChange={setHeroIndex}
             className="h-full w-full"
             overlayClassName="absolute inset-0 z-10 bg-gradient-to-b from-black/70 via-black/45 to-black/75"
           />
+        </div>
+
+        {/* Hero slider controls (kept above content so they stay clickable on mobile) */}
+        <div className="absolute inset-0 z-30 pointer-events-none">
+          <Button
+            variant="secondary"
+            size="icon"
+            className="pointer-events-auto absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 rounded-full h-10 w-10 bg-background/80 backdrop-blur"
+            onClick={prevHero}
+            aria-label={language === 'ar' ? 'الصورة السابقة' : 'Previous image'}
+            type="button"
+          >
+            <ChevronLeft className="h-5 w-5" />
+          </Button>
+
+          <Button
+            variant="secondary"
+            size="icon"
+            className="pointer-events-auto absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 rounded-full h-10 w-10 bg-background/80 backdrop-blur"
+            onClick={nextHero}
+            aria-label={language === 'ar' ? 'الصورة التالية' : 'Next image'}
+            type="button"
+          >
+            <ChevronRight className="h-5 w-5" />
+          </Button>
+
+          <div className="pointer-events-auto absolute bottom-5 sm:bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-2 rounded-full bg-black/30 px-3 py-2 backdrop-blur">
+            {dotIndices.map((idx) => (
+              <button
+                key={idx}
+                className={[
+                  'h-2 w-2 rounded-full transition-all',
+                  idx === heroIndex ? 'bg-white w-5' : 'bg-white/50 hover:bg-white/70',
+                ].join(' ')}
+                onClick={() => goToHero(idx)}
+                aria-label={(language === 'ar' ? 'الانتقال للصورة ' : 'Go to image ') + (idx + 1)}
+                type="button"
+              />
+            ))}
+            <span className="ml-2 rtl:ml-0 rtl:mr-2 text-xs text-white/85 tabular-nums">
+              {heroIndex + 1}/{heroImages.length}
+            </span>
+          </div>
         </div>
 
         <div className="container mx-auto px-4 py-10 md:py-16 relative z-20">

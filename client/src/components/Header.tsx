@@ -126,8 +126,11 @@ export default function Header() {
                   onClick={() => setThemeMenuOpen(false)}
                 />
 
-                {/* Desktop dropdown */}
-                <div className="hidden sm:block absolute right-0 mt-2 w-52 rounded-md border bg-popover p-1 shadow-lg z-[100] animate-in fade-in zoom-in duration-200">
+                {/* Dropdown (all sizes) - opens DOWN from the header button */}
+                <div className="absolute right-0 mt-2 w-[min(92vw,18rem)] sm:w-52 rounded-md border bg-popover p-1 shadow-lg z-[100] animate-in fade-in zoom-in duration-200 max-h-[60vh] overflow-auto">
+                  <div className="sm:hidden px-3 py-2 font-bold border-b">
+                    {language === 'ar' ? 'اختر ثيم' : 'Choose a theme'}
+                  </div>
                   {[
                     { id: 'blue', color: '#0ea5e9', ar: 'الأزرق الكلاسيكي', en: 'Classic Blue' },
                     { id: 'green', color: '#22c55e', ar: 'الأخضر الطبيعي', en: 'Natural Green' },
@@ -150,44 +153,6 @@ export default function Header() {
                       {language === 'ar' ? t.ar : t.en}
                     </button>
                   ))}
-                </div>
-
-                {/* Mobile bottom sheet */}
-                <div className="sm:hidden fixed bottom-0 left-0 right-0 z-[110] rounded-t-2xl border bg-popover shadow-2xl">
-                  <div className="px-4 pt-3 pb-2 flex items-center justify-between">
-                    <div className="font-bold">{language === 'ar' ? 'اختر ثيم' : 'Choose a theme'}</div>
-                    <button
-                      className="text-sm text-muted-foreground"
-                      onClick={() => setThemeMenuOpen(false)}
-                      type="button"
-                    >
-                      {language === 'ar' ? 'إغلاق' : 'Close'}
-                    </button>
-                  </div>
-                  <div className="px-4 pb-4 grid gap-2">
-                    {[
-                      { id: 'blue', color: '#0ea5e9', ar: 'الأزرق الكلاسيكي', en: 'Classic Blue' },
-                      { id: 'green', color: '#22c55e', ar: 'الأخضر الطبيعي', en: 'Natural Green' },
-                      { id: 'orange', color: '#f97316', ar: 'البرتقالي الحيوي', en: 'Vibrant Orange' },
-                      { id: 'purple', color: '#a855f7', ar: 'البنفسجي الملكي', en: 'Royal Purple' },
-                      { id: 'red', color: '#ef4444', ar: 'الأحمر القوي', en: 'Bold Red' },
-                    ].map((t) => (
-                      <button
-                        key={t.id}
-                        onClick={() => handleThemeChange(t.id as ColorTheme)}
-                        className={`flex w-full items-center gap-3 rounded-xl border px-4 py-3 text-sm transition-colors ${
-                          colorTheme === t.id ? 'bg-accent/50 font-bold text-primary' : 'bg-background'
-                        }`}
-                        type="button"
-                      >
-                        <div
-                          className="h-4 w-4 rounded-full border border-white/20 shadow-sm"
-                          style={{ backgroundColor: t.color }}
-                        />
-                        {language === 'ar' ? t.ar : t.en}
-                      </button>
-                    ))}
-                  </div>
                 </div>
               </>
             )}

@@ -7,12 +7,16 @@ type Props = {
   images?: string[];
   intervalMs?: number;
   showControls?: boolean;
+  /** Controlled index (optional). If provided, the slideshow becomes controlled. */
+  currentIndex?: number;
+  /** Controlled setter (optional). Required when currentIndex is provided. */
+  onIndexChange?: (index: number) => void;
   className?: string;
   /** Optional overlay layer (e.g., gradient) rendered above the image for readability */
   overlayClassName?: string;
 };
 
-const defaultImages = [
+export const GALLERY_IMAGES = [
   "/gallery/Etlaq (1).jpg",
   "/gallery/Etlaq (10).jpg",
   "/gallery/Etlaq (11).jpg",
@@ -70,10 +74,27 @@ const defaultImages = [
   "/gallery/Etlaq (9).jpg"
 ];
 
-export function ImageSlideshow({ images, intervalMs = 1800, showControls = true, className, overlayClassName }: Props) {
+export function ImageSlideshow({
+  images,
+  intervalMs = 1800,
+  showControls = true,
+  currentIndex,
+  onIndexChange,
+  className,
+  overlayClassName,
+}: Props) {
   const { language } = useLanguage();
-  const slides = useMemo(() => (images && images.length ? images : defaultImages), [images]);
-  const [current, setCurrent] = useState(0);
+  const slides = useMemo(() => (images && images.length ? images : GALLERY_IMAGES), [images]);
+  const [internalCurrent, setInternalCurrent] = useState(0);
+  const isControlled = typeof currentIndex === 'number' && typeof onIndexChange === 'function';
+  const current = isControlled ? (currentIndex as number) : internalCurrent;
+
+  const setCurrentSafe = (next: number | ((prev: number) => number)) => {
+    const resolved = typeof next === 'function' ? (next as (p: number) => number)(current) : next;
+    const normalized = ((resolved % slides.length) + slides.length) % slides.length;
+    if (isControlled) (onIndexChange as (i: number) => void)(normalized);
+    else setInternalCurrent(normalized);
+  };
   const [loaded, setLoaded] = useState<Record<number, boolean>>({});
   const timerRef = useRef<number | null>(null);
   const startXRef = useRef<number | null>(null);
@@ -98,8 +119,8 @@ export function ImageSlideshow({ images, intervalMs = 1800, showControls = true,
     };
   }, [slides]);
 
-  const prev = () => setCurrent((i) => (i - 1 + slides.length) % slides.length);
-  const next = () => setCurrent((i) => (i + 1) % slides.length);
+  const prev = () => setCurrentSafe((i) => (i - 1 + slides.length) % slides.length);
+  const next = () => setCurrentSafe((i) => (i + 1) % slides.length);
 
   // Auto advance (only switch when next is loaded)
   useEffect(() => {
@@ -108,7 +129,7 @@ export function ImageSlideshow({ images, intervalMs = 1800, showControls = true,
 
     timerRef.current = window.setInterval(() => {
       const nextIdx = (current + 1) % slides.length;
-      if (loaded[nextIdx]) setCurrent(nextIdx);
+      if (loaded[nextIdx]) setCurrentSafe(nextIdx);
     }, intervalMs);
 
     return () => {
@@ -186,7 +207,7 @@ export function ImageSlideshow({ images, intervalMs = 1800, showControls = true,
                   'h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full transition-all',
                   idx === current ? 'bg-white' : 'bg-white/50',
                 ].join(' ')}
-                onClick={() => setCurrent(idx)}
+                onClick={() => setCurrentSafe(idx)}
                 aria-label={`Go to slide ${idx + 1}`}
                 type="button"
               />
