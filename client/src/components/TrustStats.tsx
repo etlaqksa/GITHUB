@@ -1,7 +1,6 @@
 import { Counter } from '@/components/Counter';
 import { Badge } from '@/components/ui/badge';
 import { useLanguage } from '@/contexts/LanguageContext';
-import LocalizedLink from '@/components/LocalizedLink';
 
 type Props = {
   className?: string;
@@ -41,31 +40,18 @@ export default function TrustStats({ className = '', compact = false, variant = 
       </div>
 
       <div className="mt-6 flex flex-wrap items-center justify-center gap-2 text-center">
-        <LocalizedLink href="/locations">
-          <Badge
-            variant="secondary"
-            className={
-              variant === 'inverse'
-                ? 'text-sm bg-white/10 text-white border-white/20 cursor-pointer hover:bg-white/15'
-                : 'text-sm cursor-pointer hover:bg-secondary/80'
-            }
-          >
-            {language === 'ar' ? 'نعمل في جميع مناطق المملكة' : 'Serving all regions of KSA'}
-          </Badge>
-        </LocalizedLink>
-
-        <LocalizedLink href="/locations">
-          <Badge
-            variant="secondary"
-            className={
-              variant === 'inverse'
-                ? 'text-sm bg-white/10 text-white border-white/20 cursor-pointer hover:bg-white/15'
-                : 'text-sm cursor-pointer hover:bg-secondary/80'
-            }
-          >
-            {language === 'ar' ? '+20 مدينة' : '20+ cities'}
-          </Badge>
-        </LocalizedLink>
+        <Badge
+          variant="secondary"
+          className={variant === 'inverse' ? 'text-sm bg-white/10 text-white border-white/20' : 'text-sm'}
+        >
+          {language === 'ar' ? 'نعمل في جميع مناطق المملكة' : 'Serving all regions of KSA'}
+        </Badge>
+        <Badge
+          variant="secondary"
+          className={variant === 'inverse' ? 'text-sm bg-white/10 text-white border-white/20' : 'text-sm'}
+        >
+          {language === 'ar' ? '+20 مدينة' : '20+ cities'}
+        </Badge>
       </div>
     </section>
   );

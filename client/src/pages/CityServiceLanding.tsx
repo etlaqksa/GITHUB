@@ -7,10 +7,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import LocalizedLink from '@/components/LocalizedLink';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { findCity, findServiceLanding } from '@/data/seoLocations';
-import { buildCityServiceModel, isModelServiceSlug } from '@/data/cityServiceModels';
 import { buildLandingKeywords } from '@/lib/seoKeywords';
 import { absUrl, getSiteUrl } from '@/lib/siteUrl';
-import { buildLocalBusinessSchema, COMPANY } from '@/lib/companyProfile';
+import { COMPANY, buildLocalBusinessSchema } from '@/lib/companyProfile';
 import { buildBreadcrumbList } from '@/lib/schemaHelpers';
 import { CheckCircle2, ClipboardList, MapPin, ShieldCheck } from 'lucide-react';
 
@@ -21,7 +20,7 @@ type Props = {
   };
 };
 
-function buildFaqFallback(lang: 'ar' | 'en', serviceName: string, cityName: string) {
+function buildFaq(lang: 'ar' | 'en', serviceName: string, cityName: string) {
   if (lang === 'ar') {
     return [
       {
@@ -54,348 +53,11 @@ function buildFaqFallback(lang: 'ar' | 'en', serviceName: string, cityName: stri
   ];
 }
 
-function waLink(phoneE164: string, message: string) {
-  const digits = phoneE164.replace(/[^\d]/g, '');
-  return `https://wa.me/${digits}?text=${encodeURIComponent(message)}`;
-}
-
-function OgImageForService(serviceSlug?: string) {
-  const slug = serviceSlug || '';
-  if (slug.includes('soil-grouting')) return absUrl('/og-soil-grouting.webp');
-  if (slug.includes('void-detection')) return absUrl('/og-void-detection.webp');
-  if (slug.includes('geophysical-surveys')) return absUrl('/og-geophysical-surveys.webp');
-  if (slug.includes('foundation-strengthening')) return absUrl('/og-foundation-strengthening.webp');
-  return absUrl('/og-image.webp');
-}
-
-function ModelLanding(props: {
-  lang: 'ar' | 'en';
-  city: NonNullable<ReturnType<typeof findCity>>;
-  service: NonNullable<ReturnType<typeof findServiceLanding>>;
-}) {
-  const { lang, city, service } = props;
-
-  const cityName = lang === 'ar' ? city.ar : city.en;
-
-  const model = buildCityServiceModel({ lang, city, service });
-
-  const canonicalPath = `${lang === 'ar' ? '/ar' : '/en'}/locations/${city.slug}/${service.slug}`;
-  const canonical = absUrl(canonicalPath);
-  const ogImage = OgImageForService(service.slug);
-
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: model.faq.map((f) => ({
-      '@type': 'Question',
-      name: f.q,
-      acceptedAnswer: { '@type': 'Answer', text: f.a },
-    })),
-  };
-
-  const serviceSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
-    name: model.seoTitle,
-    description: model.seoDescription,
-    provider: buildLocalBusinessSchema({ url: getSiteUrl(), logoUrl: absUrl('/logo.png'), imageUrl: ogImage }),
-    areaServed: {
-      '@type': 'City',
-      name: cityName,
-      address: { '@type': 'PostalAddress', addressLocality: cityName, addressCountry: 'SA' },
-    },
-    serviceType: lang === 'ar' ? service.ar : service.en,
-    url: canonical,
-  };
-
-  const localBusinessSchema = buildLocalBusinessSchema({ url: getSiteUrl(), logoUrl: absUrl('/logo.png'), imageUrl: ogImage });
-
-  const breadcrumb = buildBreadcrumbList([
-    { name: lang === 'ar' ? 'الرئيسية' : 'Home', url: absUrl(`/${lang}/`) },
-    { name: lang === 'ar' ? 'المدن' : 'Locations', url: absUrl(`/${lang}/locations`) },
-    { name: cityName, url: absUrl(`/${lang}/locations/${city.slug}`) },
-    { name: model.h1, url: canonical },
-  ]);
-
-  const combinedSchema = {
-    '@context': 'https://schema.org',
-    '@graph': [localBusinessSchema, serviceSchema, faqSchema, breadcrumb],
-  };
-
-  const msg =
-    lang === 'ar'
-      ? `السلام عليكم، أريد طلب ${service.ar} في ${city.ar}. ممكن معاينة/تقييم مبدئي؟`
-      : `Hello, I would like to request ${service.en} in ${city.en}. Can we arrange a visit/quick assessment?`;
-
-  return (
-    <>
-      <SEO
-        title={model.seoTitle}
-        description={model.seoDescription}
-        keywords={buildLandingKeywords(lang, city, service)}
-        url={canonical}
-        image={ogImage}
-        schema={combinedSchema}
-      />
-
-      <section className="py-10 md:py-14">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto space-y-6">
-            <div className="flex flex-wrap items-center gap-2">
-              <span className="inline-flex items-center gap-2 rounded-full border bg-card/60 backdrop-blur px-4 py-2 text-sm">
-                <MapPin className="h-4 w-4 text-primary" />
-                <span className="text-muted-foreground">{cityName}</span>
-              </span>
-              <span className="inline-flex items-center gap-2 rounded-full border bg-card/60 backdrop-blur px-4 py-2 text-sm">
-                <ShieldCheck className="h-4 w-4 text-primary" />
-                <span className="text-muted-foreground">
-                  {lang === 'ar' ? 'خطة واضحة ومخرجات مفهومة' : 'Clear plan & deliverables'}
-                </span>
-              </span>
-            </div>
-
-            <Breadcrumbs
-              items={[
-                { name: lang === 'ar' ? 'المدن' : 'Locations', href: '/locations' },
-                { name: cityName, href: `/locations/${city.slug}` },
-                { name: model.h1, href: canonical, isCurrent: true },
-              ]}
-            />
-
-            <div className="rounded-3xl border bg-card/60 backdrop-blur p-6 md:p-8">
-              <p className="text-sm font-medium text-muted-foreground">{model.kicker}</p>
-              <h1 className="text-3xl md:text-5xl font-bold leading-tight mt-2">{model.h1}</h1>
-
-              <div className="mt-4 space-y-2">
-                {model.intro.map((p) => (
-                  <p key={p} className="text-muted-foreground leading-relaxed">
-                    {p}
-                  </p>
-                ))}
-              </div>
-
-              <div className="mt-5 flex flex-wrap gap-2">
-                {model.chips.map((c) => (
-                  <span key={c} className="inline-flex items-center rounded-full border bg-background/60 px-3 py-1 text-xs">
-                    {c}
-                  </span>
-                ))}
-              </div>
-
-              <div className="mt-6 flex flex-col sm:flex-row gap-3">
-                <a href={waLink(COMPANY.phoneE164, msg)} className="inline-flex w-full sm:w-auto">
-                  <Button className="w-full sm:w-auto">{lang === 'ar' ? 'اطلب معاينة الآن' : 'Request a site visit'}</Button>
-                </a>
-                <a href={`tel:${COMPANY.phoneE164}`} className="inline-flex w-full sm:w-auto">
-                  <Button variant="secondary" className="w-full sm:w-auto">
-                    {lang === 'ar' ? 'اتصال مباشر' : 'Call now'}
-                  </Button>
-                </a>
-                <LocalizedLink href="/contact" className="inline-flex w-full sm:w-auto">
-                  <Button variant="outline" className="w-full sm:w-auto">
-                    {lang === 'ar' ? 'نموذج تواصل' : 'Contact form'}
-                  </Button>
-                </LocalizedLink>
-              </div>
-            </div>
-
-            {/* Summary */}
-            <div className="grid lg:grid-cols-2 gap-6">
-              <Card className="h-full">
-                <CardHeader>
-                  <CardTitle className="text-xl">{model.whatIsTitle}</CardTitle>
-                  <CardDescription className="leading-relaxed">
-                    {lang === 'ar' ? 'شرح مبسط يساعدك على فهم الفكرة قبل القرار.' : 'A simple explanation before making a decision.'}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-2">
-                  {model.whatIsBody.map((p) => (
-                    <p key={p} className="text-sm text-muted-foreground leading-relaxed">
-                      {p}
-                    </p>
-                  ))}
-                </CardContent>
-              </Card>
-
-              <Card className="h-full">
-                <CardHeader>
-                  <CardTitle className="text-xl">{model.whenTitle}</CardTitle>
-                  <CardDescription className="leading-relaxed">
-                    {lang === 'ar' ? 'أعراض شائعة تساعد على تحديد المسار.' : 'Common indicators to help choose the right route.'}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2">
-                    {model.whenBullets.map((b) => (
-                      <li key={b} className="flex items-start gap-2 text-sm text-muted-foreground">
-                        <CheckCircle2 className="h-4 w-4 mt-0.5 text-primary" />
-                        <span className="leading-relaxed">{b}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            </div>
-
-            {/* Types */}
-            <div className="space-y-3">
-              <h2 className="text-2xl md:text-3xl font-bold">{model.typesTitle}</h2>
-              <div className="grid md:grid-cols-2 gap-6">
-                {model.types.map((t) => (
-                  <Card key={t.title} className="h-full">
-                    <CardHeader>
-                      <CardTitle className="text-lg">{t.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-sm text-muted-foreground leading-relaxed">{t.body}</p>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </div>
-
-            {/* Process + Deliverables */}
-            <div className="grid lg:grid-cols-2 gap-6">
-              <Card className="h-full">
-                <CardHeader>
-                  <CardTitle className="text-xl">{model.processTitle}</CardTitle>
-                  <CardDescription className="leading-relaxed">
-                    {lang === 'ar' ? 'خطوات عملية واضحة—بدون تعقيد.' : 'Practical steps—kept simple.'}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-3">
-                  {model.processSteps.map((s) => (
-                    <div key={s.title} className="rounded-xl border bg-card/60 backdrop-blur p-4">
-                      <div className="flex items-start gap-2">
-                        <ClipboardList className="h-4 w-4 mt-0.5 text-primary" />
-                        <div>
-                          <p className="text-sm font-medium">{s.title}</p>
-                          <p className="text-sm text-muted-foreground leading-relaxed">{s.body}</p>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </CardContent>
-              </Card>
-
-              <Card className="h-full">
-                <CardHeader>
-                  <CardTitle className="text-xl">{model.deliverablesTitle}</CardTitle>
-                  <CardDescription className="leading-relaxed">
-                    {lang === 'ar' ? 'مخرجات مفهومة تساعدك على المتابعة بثقة.' : 'Clear deliverables you can act on.'}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2">
-                    {model.deliverablesBullets.map((d) => (
-                      <li key={d} className="flex items-start gap-2 text-sm text-muted-foreground">
-                        <CheckCircle2 className="h-4 w-4 mt-0.5 text-primary" />
-                        <span className="leading-relaxed">{d}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  {service.servicePageHref ? (
-                    <div className="pt-4">
-                      <LocalizedLink href={service.servicePageHref} className="inline-flex">
-                        <Button variant="secondary" className="w-full sm:w-auto">
-                          {lang === 'ar' ? 'تفاصيل الخدمة العامة' : 'Service overview'}
-                        </Button>
-                      </LocalizedLink>
-                    </div>
-                  ) : null}
-                </CardContent>
-              </Card>
-            </div>
-
-            {/* Why early */}
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-xl">{model.whyEarlyTitle}</CardTitle>
-                <CardDescription className="leading-relaxed">
-                  {lang === 'ar' ? 'لماذا نُفضّل التحرك مبكرًا؟' : 'Why we recommend early action.'}
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="grid md:grid-cols-2 gap-2">
-                  {model.whyEarlyBullets.map((b) => (
-                    <li key={b} className="flex items-start gap-2 text-sm text-muted-foreground">
-                      <CheckCircle2 className="h-4 w-4 mt-0.5 text-primary" />
-                      <span className="leading-relaxed">{b}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-
-            {/* FAQ */}
-            <div className="space-y-3">
-              <h2 className="text-2xl md:text-3xl font-bold">{model.faqTitle}</h2>
-              <div className="space-y-3">
-                {model.faq.map((f) => (
-                  <details key={f.q} className="rounded-2xl border bg-card/50 backdrop-blur px-5 py-4">
-                    <summary className="cursor-pointer font-medium">{f.q}</summary>
-                    <p className="text-sm text-muted-foreground leading-relaxed mt-2">{f.a}</p>
-                  </details>
-                ))}
-              </div>
-
-              <div className="pt-2">
-                <LocalizedLink href={`/locations/${city.slug}`} className="text-sm text-primary hover:underline">
-                  {lang === 'ar' ? `العودة لصفحة ${cityName}` : `Back to ${cityName}`}
-                </LocalizedLink>
-              </div>
-            </div>
-
-            {/* CTA + Quick request */}
-            <div className="grid lg:grid-cols-2 gap-6 items-start">
-              <div className="rounded-2xl border bg-card/70 backdrop-blur p-6">
-                <h2 className="text-2xl font-bold">{model.footerTitle}</h2>
-                <p className="text-muted-foreground mt-2 leading-relaxed">{model.footerBody}</p>
-
-                <div className="mt-4 flex flex-col sm:flex-row gap-3">
-                  <a href={waLink(COMPANY.phoneE164, msg)} className="inline-flex w-full sm:w-auto">
-                    <Button className="w-full sm:w-auto">{lang === 'ar' ? 'واتساب' : 'WhatsApp'}</Button>
-                  </a>
-                  <a href={`tel:${COMPANY.phoneE164}`} className="inline-flex w-full sm:w-auto">
-                    <Button variant="secondary" className="w-full sm:w-auto">
-                      {lang === 'ar' ? 'اتصال' : 'Call'}
-                    </Button>
-                  </a>
-                  <LocalizedLink href="/contact" className="inline-flex w-full sm:w-auto">
-                    <Button variant="outline" className="w-full sm:w-auto">
-                      {lang === 'ar' ? 'نموذج تواصل' : 'Contact'}
-                    </Button>
-                  </LocalizedLink>
-                </div>
-
-                <div className="mt-6">
-                  <RelatedLinksHub signals={[lang === 'ar' ? 'مدن' : 'locations', cityName, lang === 'ar' ? 'خدمات' : 'services']} serviceSlug={service.slug} />
-                </div>
-              </div>
-
-              <QuickRequestCard formName="quick_assessment" />
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
-  );
-}
-
 export default function CityServiceLanding({ params }: Props) {
   const { language } = useLanguage();
   const city = params?.citySlug ? findCity(params.citySlug) : undefined;
   const service = params?.serviceSlug ? findServiceLanding(params.serviceSlug) : undefined;
 
-  // If this is one of the 3 core services, render the full model landing (applies to ALL cities).
-  if (city && service && isModelServiceSlug(service.slug)) {
-    return <ModelLanding lang={language} city={city} service={service} />;
-  }
-
-  // -----------------
-  // Generic fallback (for non-modeled services)
-  // -----------------
   const cityName = city ? (language === 'ar' ? city.ar : city.en) : (language === 'ar' ? 'المدينة' : 'City');
   const serviceName = service ? (language === 'ar' ? service.ar : service.en) : (language === 'ar' ? 'الخدمة' : 'Service');
 
@@ -411,9 +73,17 @@ export default function CityServiceLanding({ params }: Props) {
 
   const canonicalPath = `${language === 'ar' ? '/ar' : '/en'}/locations/${city?.slug || ''}/${service?.slug || ''}`;
   const canonical = absUrl(canonicalPath);
-  const ogImage = OgImageForService(service?.slug);
+  const ogImage = (() => {
+    const slug = service?.slug || '';
+    if (slug.includes('soil-grouting')) return absUrl('/og-soil-grouting.webp');
+    if (slug.includes('void-detection')) return absUrl('/og-void-detection.webp');
+    if (slug.includes('geophysical-surveys')) return absUrl('/og-geophysical-surveys.webp');
+    if (slug.includes('foundation-strengthening')) return absUrl('/og-foundation-strengthening.webp');
+    return absUrl('/og-image.webp');
+  })();
 
-  const faq = buildFaqFallback(language, serviceName, cityName);
+
+  const faq = buildFaq(language, serviceName, cityName);
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -551,7 +221,9 @@ export default function CityServiceLanding({ params }: Props) {
               <CardHeader>
                 <CardTitle className="text-xl">{language === 'ar' ? 'منهجية العمل' : 'How we work'}</CardTitle>
                 <CardDescription className="leading-relaxed">
-                  {language === 'ar' ? 'تشخيص أدق ثم تنفيذ منظم ثم تسليم نتائج واضحة.' : 'Sharper diagnosis, structured execution, and clear results.'}
+                  {language === 'ar'
+                    ? 'تشخيص أدق ثم تنفيذ منظم ثم تسليم نتائج واضحة.'
+                    : 'Sharper diagnosis, structured execution, and clear results.'}
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-3">
@@ -595,7 +267,7 @@ export default function CityServiceLanding({ params }: Props) {
               </CardContent>
             </Card>
           </div>
-
+        
           <div className="mt-10 grid lg:grid-cols-2 gap-6 items-start">
             <div className="rounded-2xl border bg-card/70 backdrop-blur p-6">
               <h2 className="text-2xl font-bold">{language === 'ar' ? 'طلب مختصر داخل المدينة' : 'Quick request in this city'}</h2>
@@ -613,7 +285,8 @@ export default function CityServiceLanding({ params }: Props) {
 
             <QuickRequestCard formName="quick_assessment" />
           </div>
-        </div>
+
+</div>
       </section>
     </>
   );

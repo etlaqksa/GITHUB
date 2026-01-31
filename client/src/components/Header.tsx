@@ -48,7 +48,7 @@ export default function Header() {
             <img 
               src="/logo.png?v=2" 
               alt="شركة إطلاق المتميزة" 
-              className="h-10 sm:h-12 w-auto object-contain hover-brightness"
+              className="h-12 w-auto object-contain hover-brightness"
               loading="eager"
               decoding="async"
             />
@@ -90,16 +90,14 @@ export default function Header() {
               </Button>
             </LocalizedLink>
           </div>
-          {/* Theme switcher (desktop dropdown + mobile bottom sheet) */}
-          <div className="relative">
-            {/* Desktop / tablet */}
-            <Button
-              variant="outline"
-              size="sm"
-              className="hidden sm:inline-flex gap-2 border-2 border-primary/50 hover:border-primary transition-colors"
+          {/* Custom Theme Switcher (hide on xs to prevent header overflow) */}
+          <div className="relative hidden sm:block">
+            <Button 
+              variant="outline" 
+              size="sm" 
+              className="gap-2 border-2 border-primary/50 hover:border-primary transition-colors"
               onClick={() => setThemeMenuOpen(!themeMenuOpen)}
-              aria-label={language === 'ar' ? 'تغيير الثيم' : 'Change theme'}
-              type="button"
+              aria-label="Toggle Theme Menu"
             >
               <Palette className="h-4 w-4 text-primary" />
               <span className="hidden md:inline font-bold">
@@ -107,30 +105,13 @@ export default function Header() {
               </span>
             </Button>
 
-            {/* Mobile (icon-only) */}
-            <Button
-              variant="outline"
-              size="icon"
-              className="sm:hidden border-2 border-primary/50 hover:border-primary"
-              onClick={() => setThemeMenuOpen(!themeMenuOpen)}
-              aria-label={language === 'ar' ? 'تغيير الثيم' : 'Change theme'}
-              type="button"
-            >
-              <Palette className="h-4 w-4 text-primary" />
-            </Button>
-
             {themeMenuOpen && (
               <>
-                <div
-                  className="fixed inset-0 z-[90] bg-black/30"
-                  onClick={() => setThemeMenuOpen(false)}
+                <div 
+                  className="fixed inset-0 z-[90]" 
+                  onClick={() => setThemeMenuOpen(false)} 
                 />
-
-                {/* Dropdown (all sizes) - opens DOWN from the header button */}
-                <div className="absolute right-0 mt-2 w-[min(92vw,18rem)] sm:w-52 rounded-md border bg-popover p-1 shadow-lg z-[100] animate-in fade-in zoom-in duration-200 max-h-[60vh] overflow-auto">
-                  <div className="sm:hidden px-3 py-2 font-bold border-b">
-                    {language === 'ar' ? 'اختر ثيم' : 'Choose a theme'}
-                  </div>
+                <div className="absolute right-0 mt-2 w-48 rounded-md border bg-popover p-1 shadow-lg z-[100] animate-in fade-in zoom-in duration-200">
                   {[
                     { id: 'blue', color: '#0ea5e9', ar: 'الأزرق الكلاسيكي', en: 'Classic Blue' },
                     { id: 'green', color: '#22c55e', ar: 'الأخضر الطبيعي', en: 'Natural Green' },
@@ -144,10 +125,9 @@ export default function Header() {
                       className={`flex w-full items-center gap-3 rounded-sm px-3 py-2 text-sm transition-colors hover:bg-accent hover:text-accent-foreground ${
                         colorTheme === t.id ? 'bg-accent/50 font-bold text-primary' : ''
                       }`}
-                      type="button"
                     >
-                      <div
-                        className="h-4 w-4 rounded-full border border-white/20 shadow-sm"
+                      <div 
+                        className="h-4 w-4 rounded-full border border-white/20 shadow-sm" 
                         style={{ backgroundColor: t.color }}
                       />
                       {language === 'ar' ? t.ar : t.en}

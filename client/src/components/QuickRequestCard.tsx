@@ -51,7 +51,10 @@ export default function QuickRequestCard({ formName = 'quick_assessment' }: { fo
     };
 
     try {
-      await fetch('/', {
+      const submitUrl = typeof window !== 'undefined' ? window.location.pathname : '/';
+
+
+      await fetch(submitUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: encode(payload),
@@ -76,6 +79,7 @@ export default function QuickRequestCard({ formName = 'quick_assessment' }: { fo
         <form
           name={formName}
           method="POST"
+                  encType="multipart/form-data"
           data-netlify="true"
           netlify-honeypot="bot-field"
           onSubmit={onSubmit}

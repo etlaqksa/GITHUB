@@ -58,11 +58,11 @@ export default function WhatsAppButton() {
           language,
         })
       }
-      className="fixed bottom-24 md:bottom-6 left-6 z-50 bg-[oklch(0.65_0.18_195)] text-white rounded-full p-4 shadow-lg transition-all duration-300 hover:scale-110 group"
+      className="fixed bottom-6 ltr:right-6 rtl:left-6 z-50 bg-[oklch(0.65_0.18_195)] text-white rounded-full p-4 shadow-lg transition-all duration-300 hover:scale-110 group"
       aria-label="Contact us on WhatsApp"
     >
       <MessageCircle className="h-7 w-7" />
-      <span className="absolute left-full top-1/2 -translate-y-1/2 ml-3 rounded-full bg-black/80 text-white text-xs px-3 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
+      <span className="absolute ltr:right-full rtl:left-full top-1/2 -translate-y-1/2 mx-3 rounded-full bg-black/80 text-white text-xs px-3 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
         WhatsApp
       </span>
     </a>

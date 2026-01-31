@@ -151,7 +151,12 @@ export default function RequestService() {
       }
 
 
-      await fetch('/', {
+      const submitUrl = typeof window !== 'undefined' ? window.location.pathname : '/';
+
+
+
+
+      await fetch(submitUrl, {
         method: 'POST',
         body: payload,
       });
