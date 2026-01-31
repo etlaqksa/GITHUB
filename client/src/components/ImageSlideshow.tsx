@@ -159,7 +159,7 @@ export function ImageSlideshow({ images, intervalMs = 1800, showControls = true,
           <Button
             variant="secondary"
             size="icon"
-            className="absolute top-1/2 -translate-y-1/2 left-4 z-30 pointer-events-auto"
+            className="absolute left-2 sm:left-4 top-[65%] sm:top-1/2 -translate-y-1/2 z-30 pointer-events-auto rounded-full h-9 w-9 sm:h-10 sm:w-10 bg-background/80 backdrop-blur"
             onClick={prev}
             aria-label="Previous"
             type="button"
@@ -170,7 +170,7 @@ export function ImageSlideshow({ images, intervalMs = 1800, showControls = true,
           <Button
             variant="secondary"
             size="icon"
-            className="absolute top-1/2 -translate-y-1/2 right-4 z-30 pointer-events-auto"
+            className="absolute right-2 sm:right-4 top-[65%] sm:top-1/2 -translate-y-1/2 z-30 pointer-events-auto rounded-full h-9 w-9 sm:h-10 sm:w-10 bg-background/80 backdrop-blur"
             onClick={next}
             aria-label="Next"
             type="button"
@@ -178,12 +178,12 @@ export function ImageSlideshow({ images, intervalMs = 1800, showControls = true,
             <ChevronRight className="h-5 w-5" />
           </Button>
 
-          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-30 pointer-events-auto">
+          <div className="absolute bottom-3 sm:bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-30 pointer-events-auto">
             {slides.map((_, idx) => (
               <button
                 key={idx}
                 className={[
-                  'h-2 w-2 rounded-full transition-all',
+                  'h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full transition-all',
                   idx === current ? 'bg-white' : 'bg-white/50',
                 ].join(' ')}
                 onClick={() => setCurrent(idx)}

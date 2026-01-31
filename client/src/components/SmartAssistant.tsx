@@ -103,7 +103,7 @@ export default function SmartAssistant() {
   }, [q, isAr]);
 
   return (
-    <div className="fixed bottom-5 right-5 z-50">
+    <div className="fixed bottom-24 md:bottom-5 right-6 z-50">
       <Dialog>
         <DialogTrigger asChild>
           <Button
