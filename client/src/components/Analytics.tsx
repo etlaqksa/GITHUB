@@ -8,31 +8,38 @@ const GA_ID = import.meta.env.VITE_GA_MEASUREMENT_ID as string | undefined;
 declare global {
   interface Window {
     gtag?: (...args: any[]) => void;
-    dataLayer?: unknown[];
+    dataLayer?: any[];
   }
+}
+
+function ensureGtag() {
+  if (typeof window === 'undefined') return;
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = window.gtag || ((...args: any[]) => window.dataLayer!.push(args));
 }
 
 function injectGA(id: string) {
   if (typeof document === 'undefined') return;
-  // Prevent duplicate injection
-  if (document.querySelector(`script[data-ga="${id}"]`)) return;
+  if (document.querySelector(`script[data-ga="${id}"]`)) {
+    ensureGtag();
+    return;
+  }
 
-  const s1 = document.createElement('script');
-  s1.async = true;
-  s1.src = `https://www.googletagmanager.com/gtag/js?id=${id}`;
-  s1.setAttribute('data-ga', id);
-  document.head.appendChild(s1);
+  ensureGtag();
 
-  const s2 = document.createElement('script');
-  s2.setAttribute('data-ga', id);
-  s2.innerHTML = `
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    window.gtag = gtag;
-    gtag('js', new Date());
-    gtag('config', '${id}', { send_page_view: false });
-  `;
-  document.head.appendChild(s2);
+  const s = document.createElement('script');
+  s.async = true;
+  s.src = `https://www.googletagmanager.com/gtag/js?id=${id}`;
+  s.setAttribute('data-ga', id);
+  s.onload = () => {
+    try {
+      window.gtag?.('js', new Date());
+      window.gtag?.('config', id, { send_page_view: false });
+    } catch {
+      // ignore
+    }
+  };
+  document.head.appendChild(s);
 }
 
 export default function Analytics() {
@@ -47,6 +54,7 @@ export default function Analytics() {
   // Track SPA page views.
   useEffect(() => {
     if (!GA_ID) return;
+    ensureGtag();
     try {
       window.gtag?.('event', 'page_view', {
         page_path: location,

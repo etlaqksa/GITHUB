@@ -13,7 +13,7 @@
     "format": "prettier --write .",
     "test": "vitest run",
     "db:push": "drizzle-kit generate && drizzle-kit migrate",
-    "prebuild": "node scripts/generate_gallery_list.mjs && node scripts/generate_sitemap.mjs"
+    "prebuild": "node scripts/generate_sitemap.mjs"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.693.0",

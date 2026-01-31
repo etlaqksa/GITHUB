@@ -8,6 +8,8 @@ import { useLocation } from 'wouter';
 import { articles as allArticles, type ArticleContent } from '@/data/articles';
 import ProtectedImage from '@/components/ProtectedImage';
 import LocalizedLink from '@/components/LocalizedLink';
+import { SEO } from '@/components/SEO';
+import { absUrl } from '@/lib/siteUrl';
 
 function stripMarkdown(md: string) {
   return md
@@ -99,7 +101,7 @@ function ArticleCard({
               type="button"
               onClick={(e) => {
                 e.stopPropagation();
-                window.location.href = `/blog?cat=${encodeURIComponent(c)}`;
+                onPickCategory(c);
               }}
               className="text-left"
               aria-label={language === 'ar' ? `تصفية حسب ${c}` : `Filter by ${c}`}
@@ -152,6 +154,8 @@ function ArticleCard({
 
 export default function Blog() {
   const { language } = useLanguage();
+  const canonical = absUrl(`/${language}/blog`);
+
   const [, setLocation] = useLocation();
 
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -206,7 +210,15 @@ export default function Blog() {
   };
 
   return (
-    <div className="min-h-screen py-12">
+    <>
+      <SEO
+        title={language === 'ar' ? 'المقالات التقنية - إطلاق' : 'Technical Articles - ETLAQ'}
+        description={language === 'ar' ? 'مقالات مبسطة وعملية عن حقن التربة، معالجة الهبوط، كشف الفراغات، وتقوية الأساسات.' : 'Practical, reader-friendly articles on soil grouting, settlement mitigation, void detection, and foundation strengthening.'}
+        url={canonical}
+        image={absUrl('/og-articles.webp')}
+        type="website"
+      />
+      <div className="min-h-screen py-12">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-8">
@@ -271,6 +283,7 @@ export default function Blog() {
           ))}
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 }

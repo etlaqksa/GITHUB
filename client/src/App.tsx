@@ -6,6 +6,7 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
+import SkipToContent from "./components/SkipToContent";
 import WhatsAppButton from "./components/WhatsAppButton";
 import StickyCTA from "./components/StickyCTA";
 import Analytics from "./components/Analytics";
@@ -29,6 +30,8 @@ const WhitePaper = lazy(() => import("./pages/WhitePaper"));
 const KeywordsAdmin = lazy(() => import("./pages/KeywordsAdmin"));
 const CaseStudies = lazy(() => import("./pages/CaseStudies"));
 const ContentStudio = lazy(() => import("./pages/ContentStudio"));
+
+const SmartAssistant = lazy(() => import("./components/SmartAssistant"));
 
 // SEO local landings (city/service)
 const Locations = lazy(() => import("./pages/Locations"));
@@ -57,8 +60,9 @@ function AppLayout() {
   return (
     <div className="flex flex-col min-h-screen app-background">
       <ScrollToTop />
+      <SkipToContent />
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <Suspense fallback={<RouteLoader />}>
           <Switch>
             <Route path="/about" component={About} />
@@ -97,6 +101,9 @@ function AppLayout() {
       <Footer />
       <WhatsAppButton />
       <StickyCTA />
+      <Suspense fallback={null}>
+        <SmartAssistant />
+      </Suspense>
     </div>
   );
 }

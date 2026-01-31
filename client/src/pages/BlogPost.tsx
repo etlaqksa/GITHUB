@@ -96,7 +96,6 @@ function normalizeEnglishContent(input: string) {
 
 export default function BlogPost() {
   const { language } = useLanguage();
-  // Convenience flag used across the UI. Must be defined to avoid runtime ReferenceError.
   const isArabic = language === 'ar';
   const [, params] = useRoute<{ slug: string }>('/blog/:slug');
   const [, setLocation] = useLocation();
@@ -129,7 +128,7 @@ export default function BlogPost() {
     return normalizeEnglishContent(article.contentEn || article.content || '');
   }, [article, language]);
   const readTime = useMemo(() => estimateReadTime(contentRaw, language), [contentRaw, language]);
-  const pageUrl = useMemo(() => absUrl(`/blog/${article?.slug || ''}`), [article?.slug]);
+  const pageUrl = useMemo(() => absUrl(`/${language}/blog/${article?.slug || ''}`), [language, article?.slug]);
 
   const ogImage = useMemo(() => {
     const candidate =
@@ -273,6 +272,48 @@ const schema = useMemo(() => {
     };
   }, [language, prevArticle, nextArticle]);
 
+  const slug = params?.slug ?? '';
+  const heroPrimary = slug ? `/article-images/hero/${slug}.svg` : '/og-image.webp';
+  const heroSecondary = slug ? `/article-images/card/${slug}.svg` : '/og-image.webp';
+
+  function getFeaturedImageFallback(a: ArticleContent) {
+    const images = [
+      '/article-images/BgIZ2EdQDXxT.jpg',
+      '/article-images/N8at6vPLLTnL.jpg',
+      '/article-images/hc80ziJxWYDl.jpg',
+      '/article-images/S9hx4uBY7U5n.jpg',
+      '/article-images/fjZxgrX7pS3N.jpg',
+      '/article-images/bgeXnZzqGuIE.jpg',
+      '/article-images/u66IptamGAlr.jpg',
+      '/article-images/KDvxyzgE6fPZ.webp',
+    ];
+
+    const cat = (a.categoryEn || a.category || '').toLowerCase();
+    if (cat.includes('grout') || cat.includes('حقن')) return images[0];
+    if (cat.includes('settlement') || cat.includes('هبوط')) return images[6];
+    if (cat.includes('cavity') || cat.includes('sinkhole') || cat.includes('تكهفات')) return images[2];
+    if (cat.includes('crack') || cat.includes('تشققات')) return images[5];
+    if (cat.includes('soil') || cat.includes('تربة')) return images[1];
+
+    const n = typeof a.id === 'number' ? a.id : (a.slug || '').length;
+    return images[n % images.length];
+  }
+
+  const fallbackHero = article ? getFeaturedImageFallback(article) : '/og-image.webp';
+  const [heroSrc, setHeroSrc] = useState<string>(heroPrimary);
+
+  useEffect(() => {
+    setHeroSrc(heroPrimary);
+  }, [heroPrimary]);
+
+  const handleHeroError = () => {
+    // try secondary size if hero missing, then curated fallback
+    if (heroSrc === heroPrimary) return setHeroSrc(heroSecondary);
+    if (heroSrc === heroSecondary) return setHeroSrc(fallbackHero);
+    return setHeroSrc('/og-image.webp');
+  };
+
+
   if (!article) {
     return (
       <div className="container mx-auto px-4 py-16">
@@ -292,45 +333,6 @@ const schema = useMemo(() => {
       </div>
     );
   }
-
-  const heroPrimary = `/article-images/hero/${article.slug}.svg`;
-  const heroSecondary = `/article-images/card/${article.slug}.svg`;
-
-  function getFeaturedImageFallback(a: ArticleContent) {
-  const images = [
-    '/article-images/BgIZ2EdQDXxT.jpg',
-    '/article-images/N8at6vPLLTnL.jpg',
-    '/article-images/hc80ziJxWYDl.jpg',
-    '/article-images/S9hx4uBY7U5n.jpg',
-    '/article-images/fjZxgrX7pS3N.jpg',
-    '/article-images/bgeXnZzqGuIE.jpg',
-    '/article-images/u66IptamGAlr.jpg',
-    '/article-images/KDvxyzgE6fPZ.webp',
-  ];
-
-  const cat = (a.categoryEn || a.category || '').toLowerCase();
-  if (cat.includes('grout') || cat.includes('حقن')) return images[0];
-  if (cat.includes('settlement') || cat.includes('هبوط')) return images[6];
-  if (cat.includes('cavity') || cat.includes('sinkhole') || cat.includes('تكهفات')) return images[2];
-  if (cat.includes('crack') || cat.includes('تشققات')) return images[5];
-  if (cat.includes('soil') || cat.includes('تربة')) return images[1];
-
-  // stable fallback based on id/slug
-  const n = typeof a.id === 'number' ? a.id : (a.slug || '').length;
-  return images[n % images.length];
-}
-
-const fallbackHero = getFeaturedImageFallback(article);
-const [heroSrc, setHeroSrc] = useState<string>(heroPrimary);
-
-useEffect(() => { setHeroSrc(heroPrimary); }, [heroPrimary]);
-
-const handleHeroError = () => {
-  // try secondary size if hero missing, then a curated fallback
-  if (heroSrc === heroPrimary) return setHeroSrc(heroSecondary);
-  if (heroSrc === heroSecondary) return setHeroSrc(fallbackHero);
-  if (heroSrc !== fallbackHero) return setHeroSrc(fallbackHero);
-};
 
   return (
     <div className="container mx-auto px-4 py-12">
@@ -412,6 +414,8 @@ const handleHeroError = () => {
                 alt={title}
                 className="w-full h-full object-cover"
                 loading="eager"
+                decoding="async"
+                fetchPriority="high"
                 draggable={false}
                 onContextMenu={(e) => e.preventDefault()}
                 onError={handleHeroError}
@@ -459,7 +463,7 @@ const handleHeroError = () => {
           {/* Content */}
           <article
             dir={language === 'ar' ? 'rtl' : 'ltr'}
-            language={language === 'ar' ? 'ar' : 'en'}
+            lang={language === 'ar' ? 'ar' : 'en'}
             className={`prose prose-slate dark:prose-invert max-w-none
               prose-headings:font-bold prose-headings:text-primary
               prose-p:text-muted-foreground prose-p:leading-relaxed prose-p:text-lg
@@ -472,22 +476,6 @@ const handleHeroError = () => {
               remarkPlugins={[remarkGfm]}
               rehypePlugins={[rehypeRaw]}
               components={{
-                a: ({ href, children, ...props }) => {
-                  if (!href) return <a {...props}>{children}</a>;
-                  const isInternal = href.startsWith('/');
-                  if (isInternal) {
-                    return (
-                      <LocalizedLink href={href} className="text-primary underline underline-offset-4">
-                        {children}
-                      </LocalizedLink>
-                    );
-                  }
-                  return (
-                    <a href={href} target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-4" {...props}>
-                      {children}
-                    </a>
-                  );
-                },
                 table: ({ children, ...props }) => (
                   <div className="my-8 w-full overflow-x-auto rounded-lg border border-border">
                     <table className="w-full border-collapse" {...props}>
@@ -528,10 +516,17 @@ const handleHeroError = () => {
                   );
                 },
                 // Make images responsive
-                img: ({ ...props }) => <img className="rounded-xl border border-border" {...props} />,
+                img: ({ ...props }) => (
+                  <img
+                    loading="lazy"
+                    decoding="async"
+                    className="rounded-xl border border-border max-w-full h-auto"
+                    {...props}
+                  />
+                ),
                 // Prevent swipe on scrollable blocks
                 pre: ({ children, ...props }) => (
-                  <pre data-swipe-ignore="true" className="overflow-x-auto" {...props}>
+                  <pre data-swipe-ignore="true" tabIndex={0} className="overflow-x-auto" {...props}>
                     {children}
                   </pre>
                 ),
@@ -568,78 +563,6 @@ const handleHeroError = () => {
               </Accordion>
             </section>
           )}
-
-          
-          {(prevArticle || nextArticle) && (
-            <section className="mt-10 border-t border-zinc-200/70 pt-8 dark:border-zinc-800/70">
-              <h2 className="text-lg font-semibold text-zinc-900 dark:text-white">
-                {isArabic ? "تابع القراءة" : "Keep reading"}
-              </h2>
-
-              <div className="mt-4 grid gap-4 md:grid-cols-2">
-                {prevArticle && (
-                  <LocalizedLink
-                    href={`/blog/${prevArticle.slug}`}
-                    className="group rounded-2xl border border-zinc-200/70 bg-white/60 p-4 shadow-sm transition hover:bg-white dark:border-zinc-800/70 dark:bg-zinc-900/40 dark:hover:bg-zinc-900/60"
-                  >
-                    <div className="flex items-start gap-4">
-                      <img
-                        src={`/article-images/card/${prevArticle.slug}.svg`}
-                        alt={isArabic ? prevArticle.title : prevArticle.titleEn}
-                        className="h-16 w-28 flex-none rounded-xl object-cover"
-                        loading="lazy"
-                        onError={(e) => {
-                          (e.currentTarget as HTMLImageElement).src = "/article-images/card/default.svg";
-                        }}
-                      />
-                      <div className="min-w-0">
-                        <p className="text-xs font-medium uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
-                          {isArabic ? "المقال السابق" : "Previous article"}
-                        </p>
-                        <p className="mt-1 line-clamp-2 text-sm font-semibold text-zinc-900 group-hover:underline dark:text-white">
-                          {isArabic ? prevArticle.title : prevArticle.titleEn}
-                        </p>
-                        <p className="mt-1 line-clamp-2 text-xs text-zinc-600 dark:text-zinc-300">
-                          {isArabic ? (prevArticle.excerpt ?? "") : (prevArticle.excerptEn ?? "")}
-                        </p>
-                      </div>
-                    </div>
-                  </LocalizedLink>
-                )}
-
-                {nextArticle && (
-                  <LocalizedLink
-                    href={`/blog/${nextArticle.slug}`}
-                    className="group rounded-2xl border border-zinc-200/70 bg-white/60 p-4 shadow-sm transition hover:bg-white dark:border-zinc-800/70 dark:bg-zinc-900/40 dark:hover:bg-zinc-900/60"
-                  >
-                    <div className="flex items-start gap-4">
-                      <img
-                        src={`/article-images/card/${nextArticle.slug}.svg`}
-                        alt={isArabic ? nextArticle.title : nextArticle.titleEn}
-                        className="h-16 w-28 flex-none rounded-xl object-cover"
-                        loading="lazy"
-                        onError={(e) => {
-                          (e.currentTarget as HTMLImageElement).src = "/article-images/card/default.svg";
-                        }}
-                      />
-                      <div className="min-w-0">
-                        <p className="text-xs font-medium uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
-                          {isArabic ? "المقال التالي" : "Next article"}
-                        </p>
-                        <p className="mt-1 line-clamp-2 text-sm font-semibold text-zinc-900 group-hover:underline dark:text-white">
-                          {isArabic ? nextArticle.title : nextArticle.titleEn}
-                        </p>
-                        <p className="mt-1 line-clamp-2 text-xs text-zinc-600 dark:text-zinc-300">
-                          {isArabic ? (nextArticle.excerpt ?? "") : (nextArticle.excerptEn ?? "")}
-                        </p>
-                      </div>
-                    </div>
-                  </LocalizedLink>
-                )}
-              </div>
-            </section>
-          )}
-
 
           <RelatedLinksHub signals={relatedSignals} />
         </div>

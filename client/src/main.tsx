@@ -7,9 +7,24 @@ import { HelmetProvider } from 'react-helmet-async';
 import superjson from "superjson";
 import App from "./App";
 import { getLoginUrl } from "./const";
+import { initVitals } from "@/lib/vitals";
 import "./index.css";
 
 const queryClient = new QueryClient();
+const logDev = (...args: any[]) => {
+  if (!import.meta.env.PROD) {
+    // eslint-disable-next-line no-console
+    console.log(...args);
+  }
+};
+
+const logError = (...args: any[]) => {
+  if (!import.meta.env.PROD) {
+    // eslint-disable-next-line no-console
+    console.error(...args);
+  }
+};
+
 
 const redirectToLoginIfUnauthorized = (error: unknown) => {
   if (!(error instanceof TRPCClientError)) return;
@@ -26,7 +41,7 @@ queryClient.getQueryCache().subscribe(event => {
   if (event.type === "updated" && event.action.type === "error") {
     const error = event.query.state.error;
     redirectToLoginIfUnauthorized(error);
-    console.error("[API Query Error]", error);
+    logError("[API Query Error]", error);
   }
 });
 
@@ -34,9 +49,20 @@ queryClient.getMutationCache().subscribe(event => {
   if (event.type === "updated" && event.action.type === "error") {
     const error = event.mutation.state.error;
     redirectToLoginIfUnauthorized(error);
-    console.error("[API Mutation Error]", error);
+    logError("[API Mutation Error]", error);
   }
 });
+
+// Global language bindings (legacy-safe).
+if (typeof window !== 'undefined') {
+  const l = (window.location.pathname || '/').startsWith('/en') ? 'en' : 'ar';
+  try {
+    (window as any).lang = l;
+    (window as any).language = l;
+    (globalThis as any).lang = l;
+    (globalThis as any).language = l;
+  } catch {}
+}
 
 const trpcClient = trpc.createClient({
   links: [
@@ -62,3 +88,19 @@ createRoot(document.getElementById("root")!).render(
     </trpc.Provider>
   </HelmetProvider>
 );
+
+
+// PWA registration (production only)
+if (import.meta.env.PROD && typeof window !== 'undefined' && 'serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js').catch(() => {
+      // ignore
+    });
+  });
+}
+
+// Basic vitals instrumentation (optional).
+// You can forward these values to your analytics provider if desired.
+if (typeof window !== 'undefined') {
+  initVitals();
+}
