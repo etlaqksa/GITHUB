@@ -8,6 +8,8 @@ type Props = {
   intervalMs?: number;
   showControls?: boolean;
   className?: string;
+  /** Optional overlay layer (e.g., gradient) rendered above the image for readability */
+  overlayClassName?: string;
 };
 
 const defaultImages = [
@@ -68,7 +70,7 @@ const defaultImages = [
   "/gallery/Etlaq (9).jpg"
 ];
 
-export function ImageSlideshow({ images, intervalMs = 1800, showControls = true, className }: Props) {
+export function ImageSlideshow({ images, intervalMs = 1800, showControls = true, className, overlayClassName }: Props) {
   const { language } = useLanguage();
   const slides = useMemo(() => (images && images.length ? images : defaultImages), [images]);
   const [current, setCurrent] = useState(0);
@@ -131,7 +133,7 @@ export function ImageSlideshow({ images, intervalMs = 1800, showControls = true,
   return (
     <div className={["relative w-full h-full overflow-hidden", className].filter(Boolean).join(' ')}>
       <div
-        className="absolute inset-0"
+        className="absolute inset-0 z-0"
         onContextMenu={(e) => e.preventDefault()}
         onDragStart={(e) => e.preventDefault()}
         onPointerDown={onPointerDown}
@@ -147,6 +149,10 @@ export function ImageSlideshow({ images, intervalMs = 1800, showControls = true,
           onError={() => setLoaded((p) => ({ ...p, [current]: true }))}
         />
       </div>
+
+      {overlayClassName && (
+        <div className={[overlayClassName, 'pointer-events-none'].filter(Boolean).join(' ')} />
+      )}
 
       {showControls && slides.length > 1 && (
         <>

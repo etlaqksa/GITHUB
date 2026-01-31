@@ -5,9 +5,10 @@ import { useLanguage } from '@/contexts/LanguageContext';
 type Props = {
   className?: string;
   compact?: boolean;
+  variant?: 'default' | 'inverse';
 };
 
-export default function TrustStats({ className = '', compact = false }: Props) {
+export default function TrustStats({ className = '', compact = false, variant = 'default' }: Props) {
   const { language } = useLanguage();
 
   const stats = [
@@ -25,16 +26,30 @@ export default function TrustStats({ className = '', compact = false }: Props) {
             <div className="text-3xl md:text-4xl font-bold">
               <Counter end={s.value} suffix={s.suffix} />
             </div>
-            <div className="text-sm md:text-base text-muted-foreground mt-1">{s.label}</div>
+            <div
+              className={
+                variant === 'inverse'
+                  ? 'text-sm md:text-base text-white/85 mt-1'
+                  : 'text-sm md:text-base text-muted-foreground mt-1'
+              }
+            >
+              {s.label}
+            </div>
           </div>
         ))}
       </div>
 
       <div className="mt-6 flex flex-wrap items-center justify-center gap-2 text-center">
-        <Badge variant="secondary" className="text-sm">
+        <Badge
+          variant="secondary"
+          className={variant === 'inverse' ? 'text-sm bg-white/10 text-white border-white/20' : 'text-sm'}
+        >
           {language === 'ar' ? 'نعمل في جميع مناطق المملكة' : 'Serving all regions of KSA'}
         </Badge>
-        <Badge variant="secondary" className="text-sm">
+        <Badge
+          variant="secondary"
+          className={variant === 'inverse' ? 'text-sm bg-white/10 text-white border-white/20' : 'text-sm'}
+        >
           {language === 'ar' ? '+20 مدينة' : '20+ cities'}
         </Badge>
       </div>

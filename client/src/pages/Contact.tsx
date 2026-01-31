@@ -322,6 +322,36 @@ export default function Contact() {
                       title={language === 'ar' ? 'موقع الشركة' : 'Company Location'}
                     />
                   </div>
+
+                  {/* Fallback links (in case embeds are blocked by extensions/corporate policies) */}
+                  <div className="mt-3 flex flex-col sm:flex-row gap-2">
+                    <a
+                      href="https://www.google.com/maps?q=24.7136,46.6753"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full sm:w-auto"
+                    >
+                      <Button variant="outline" className="w-full">
+                        {language === 'ar' ? 'افتح الخريطة على Google' : 'Open in Google Maps'}
+                      </Button>
+                    </a>
+                    <a
+                      href="https://www.openstreetmap.org/?mlat=24.7136&mlon=46.6753#map=15/24.7136/46.6753"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full sm:w-auto"
+                    >
+                      <Button variant="secondary" className="w-full">
+                        {language === 'ar' ? 'افتح الخريطة بديلًا' : 'Open map (alternative)'}
+                      </Button>
+                    </a>
+                  </div>
+
+                  <div className="mt-2 text-xs text-muted-foreground">
+                    {language === 'ar'
+                      ? 'إذا كانت الخريطة لا تظهر بسبب سياسة المتصفح/الشبكة، استخدم الأزرار أعلاه.'
+                      : 'If the embedded map is blocked by your network/browser, use the buttons above.'}
+                  </div>
                 </CardContent>
               </Card>
 

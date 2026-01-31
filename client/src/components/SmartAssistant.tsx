@@ -80,9 +80,19 @@ export default function SmartAssistant() {
 
     const list = articles
       .map((a: any) => {
-        const title = isAr ? a.titleAr : a.titleEn;
-        const cat = isAr ? a.categoryAr : a.categoryEn;
-        const s = scoreMatch(query, String(title)) + 0.5 * scoreMatch(query, String(cat));
+        // Our canonical article shape uses: title/titleEn, category/categoryEn, excerpt/excerptEn.
+        // (Older datasets used titleAr/categoryAr)
+        const title = isAr ? a.title : a.titleEn;
+        const cat = isAr ? a.category : a.categoryEn;
+        const excerpt = isAr ? a.excerpt : a.excerptEn;
+        const extraCats = isAr ? a.categoriesAr : a.categoriesEn;
+
+        let s = scoreMatch(query, String(title)) + 0.6 * scoreMatch(query, String(cat));
+        s += 0.25 * scoreMatch(query, String(excerpt || ''));
+        if (Array.isArray(extraCats)) {
+          for (const c of extraCats) s += 0.2 * scoreMatch(query, String(c));
+        }
+
         return { slug: a.slug, title: String(title), score: s };
       })
       .filter((x) => x.score > 0)

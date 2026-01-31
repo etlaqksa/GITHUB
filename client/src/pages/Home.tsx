@@ -273,29 +273,32 @@ export default function Home() {
       />
 
       {/* HERO */}
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden min-h-[70vh]">
         {/* Full-width animated background (gallery slideshow) */}
-        <div className="absolute inset-0 pointer-events-none">
-          <ImageSlideshow showControls={false} intervalMs={2000} className="h-full w-full" />
+        <div className="absolute inset-0 z-0">
+          <ImageSlideshow
+            showControls
+            intervalMs={5000}
+            className="h-full w-full"
+            overlayClassName="absolute inset-0 z-10 bg-gradient-to-b from-black/70 via-black/45 to-black/75"
+          />
         </div>
-        {/* Readability overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/70 to-background/95" />
 
-        <div className="container mx-auto px-4 py-10 md:py-16 relative">
-          <div className="max-w-3xl space-y-6">
-              <div className="inline-flex items-center gap-2 rounded-full border bg-background px-3 py-1 text-sm text-muted-foreground">
-                <span className="font-semibold text-foreground">{language === 'ar' ? 'حلول هندسية ميدانية' : 'Field engineering solutions'}</span>
+        <div className="container mx-auto px-4 py-10 md:py-16 relative z-20">
+          <div className="max-w-3xl space-y-6 text-white">
+              <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/30 backdrop-blur px-3 py-1 text-sm text-white/85">
+                <span className="font-semibold text-white">{language === 'ar' ? 'حلول هندسية ميدانية' : 'Field engineering solutions'}</span>
                 <span>•</span>
                 <span>{language === 'ar' ? 'حقن • كشف • جيوفيزياء' : 'Grouting • Detection • Geophysics'}</span>
               </div>
 
-              <h1 className="text-3xl md:text-5xl font-bold leading-tight">
+              <h1 className="text-3xl md:text-5xl font-bold leading-tight text-white">
                 {language === 'ar'
                   ? 'نثبت الأساسات ونكشف التكهفات قبل أن تتحول لمشكلة مكلفة'
                   : 'Stabilize foundations & detect voids before they become costly'}
               </h1>
 
-              <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+              <p className="text-base md:text-lg text-white/85 leading-relaxed">
                 {language === 'ar'
                   ? 'نساعد الأفراد والمطورين والمقاولين والجهات على تشخيص المشكلة بدقة، ثم تنفيذ المعالجة المناسبة (حقن/معالجة تكهفات) بخطة واضحة ومخرجات مفهومة.'
                   : 'We help individuals, developers, contractors, and authorities diagnose subsurface issues and execute fit remediation (grouting/void treatment) with clear deliverables.'}
@@ -335,8 +338,8 @@ export default function Home() {
                 </a>
               </div>
 
-              <div className="rounded-2xl border bg-card p-5">
-                <TrustStats compact />
+              <div className="rounded-2xl border border-white/20 bg-black/25 backdrop-blur p-5">
+                <TrustStats compact variant="inverse" />
               </div>
           </div>
         </div>
