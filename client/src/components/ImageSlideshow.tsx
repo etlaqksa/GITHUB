@@ -2,69 +2,14 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { GALLERY_IMAGES } from "@/data/galleryImages";
 
 type Props = {
   images?: string[];
   intervalMs?: number;
 };
 
-const defaultImages = [
-  "/gallery/Etlaq (1).jpg",
-  "/gallery/Etlaq (10).jpg",
-  "/gallery/Etlaq (11).jpg",
-  "/gallery/Etlaq (12).jpg",
-  "/gallery/Etlaq (13).jpg",
-  "/gallery/Etlaq (14).jpg",
-  "/gallery/Etlaq (15).jpg",
-  "/gallery/Etlaq (16).jpg",
-  "/gallery/Etlaq (17).jpg",
-  "/gallery/Etlaq (18).jpg",
-  "/gallery/Etlaq (19).jpg",
-  "/gallery/Etlaq (2).jpg",
-  "/gallery/Etlaq (20).jpg",
-  "/gallery/Etlaq (21).jpg",
-  "/gallery/Etlaq (22).jpg",
-  "/gallery/Etlaq (23).jpg",
-  "/gallery/Etlaq (24).jpg",
-  "/gallery/Etlaq (25).jpg",
-  "/gallery/Etlaq (26).jpg",
-  "/gallery/Etlaq (27).jpg",
-  "/gallery/Etlaq (28).jpg",
-  "/gallery/Etlaq (29).jpg",
-  "/gallery/Etlaq (3).jpg",
-  "/gallery/Etlaq (30).jpg",
-  "/gallery/Etlaq (31).jpg",
-  "/gallery/Etlaq (32).jpg",
-  "/gallery/Etlaq (33).jpg",
-  "/gallery/Etlaq (34).jpg",
-  "/gallery/Etlaq (35).jpg",
-  "/gallery/Etlaq (36).jpg",
-  "/gallery/Etlaq (37).jpg",
-  "/gallery/Etlaq (38).jpg",
-  "/gallery/Etlaq (39).jpg",
-  "/gallery/Etlaq (4).jpg",
-  "/gallery/Etlaq (40).jpg",
-  "/gallery/Etlaq (41).jpg",
-  "/gallery/Etlaq (42).jpg",
-  "/gallery/Etlaq (43).jpg",
-  "/gallery/Etlaq (44).jpg",
-  "/gallery/Etlaq (45).jpg",
-  "/gallery/Etlaq (46).jpg",
-  "/gallery/Etlaq (47).jpg",
-  "/gallery/Etlaq (48).jpg",
-  "/gallery/Etlaq (49).jpg",
-  "/gallery/Etlaq (5).jpg",
-  "/gallery/Etlaq (50).jpg",
-  "/gallery/Etlaq (51).jpg",
-  "/gallery/Etlaq (52).jpg",
-  "/gallery/Etlaq (53).jpg",
-  "/gallery/Etlaq (54).jpg",
-  "/gallery/Etlaq (55).jpg",
-  "/gallery/Etlaq (6).jpg",
-  "/gallery/Etlaq (7).jpg",
-  "/gallery/Etlaq (8).jpg",
-  "/gallery/Etlaq (9).jpg"
-];
+const defaultImages = GALLERY_IMAGES;
 
 export function ImageSlideshow({ images, intervalMs = 1800 }: Props) {
   const { language } = useLanguage();

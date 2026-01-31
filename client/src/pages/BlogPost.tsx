@@ -567,6 +567,78 @@ const handleHeroError = () => {
             </section>
           )}
 
+          
+          {(prevArticle || nextArticle) && (
+            <section className="mt-10 border-t border-zinc-200/70 pt-8 dark:border-zinc-800/70">
+              <h2 className="text-lg font-semibold text-zinc-900 dark:text-white">
+                {isArabic ? "تابع القراءة" : "Keep reading"}
+              </h2>
+
+              <div className="mt-4 grid gap-4 md:grid-cols-2">
+                {prevArticle && (
+                  <LocalizedLink
+                    href={`/blog/${prevArticle.slug}`}
+                    className="group rounded-2xl border border-zinc-200/70 bg-white/60 p-4 shadow-sm transition hover:bg-white dark:border-zinc-800/70 dark:bg-zinc-900/40 dark:hover:bg-zinc-900/60"
+                  >
+                    <div className="flex items-start gap-4">
+                      <img
+                        src={`/article-images/card/${prevArticle.slug}.svg`}
+                        alt={isArabic ? prevArticle.title : prevArticle.titleEn}
+                        className="h-16 w-28 flex-none rounded-xl object-cover"
+                        loading="lazy"
+                        onError={(e) => {
+                          (e.currentTarget as HTMLImageElement).src = "/article-images/card/default.svg";
+                        }}
+                      />
+                      <div className="min-w-0">
+                        <p className="text-xs font-medium uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
+                          {isArabic ? "المقال السابق" : "Previous article"}
+                        </p>
+                        <p className="mt-1 line-clamp-2 text-sm font-semibold text-zinc-900 group-hover:underline dark:text-white">
+                          {isArabic ? prevArticle.title : prevArticle.titleEn}
+                        </p>
+                        <p className="mt-1 line-clamp-2 text-xs text-zinc-600 dark:text-zinc-300">
+                          {isArabic ? (prevArticle.excerpt ?? "") : (prevArticle.excerptEn ?? "")}
+                        </p>
+                      </div>
+                    </div>
+                  </LocalizedLink>
+                )}
+
+                {nextArticle && (
+                  <LocalizedLink
+                    href={`/blog/${nextArticle.slug}`}
+                    className="group rounded-2xl border border-zinc-200/70 bg-white/60 p-4 shadow-sm transition hover:bg-white dark:border-zinc-800/70 dark:bg-zinc-900/40 dark:hover:bg-zinc-900/60"
+                  >
+                    <div className="flex items-start gap-4">
+                      <img
+                        src={`/article-images/card/${nextArticle.slug}.svg`}
+                        alt={isArabic ? nextArticle.title : nextArticle.titleEn}
+                        className="h-16 w-28 flex-none rounded-xl object-cover"
+                        loading="lazy"
+                        onError={(e) => {
+                          (e.currentTarget as HTMLImageElement).src = "/article-images/card/default.svg";
+                        }}
+                      />
+                      <div className="min-w-0">
+                        <p className="text-xs font-medium uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
+                          {isArabic ? "المقال التالي" : "Next article"}
+                        </p>
+                        <p className="mt-1 line-clamp-2 text-sm font-semibold text-zinc-900 group-hover:underline dark:text-white">
+                          {isArabic ? nextArticle.title : nextArticle.titleEn}
+                        </p>
+                        <p className="mt-1 line-clamp-2 text-xs text-zinc-600 dark:text-zinc-300">
+                          {isArabic ? (nextArticle.excerpt ?? "") : (nextArticle.excerptEn ?? "")}
+                        </p>
+                      </div>
+                    </div>
+                  </LocalizedLink>
+                )}
+              </div>
+            </section>
+          )}
+
+
           <RelatedLinksHub signals={relatedSignals} />
         </div>
       </div>
