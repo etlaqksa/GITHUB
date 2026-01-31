@@ -96,6 +96,8 @@ function normalizeEnglishContent(input: string) {
 
 export default function BlogPost() {
   const { language } = useLanguage();
+  // Convenience flag used across the UI. Must be defined to avoid runtime ReferenceError.
+  const isArabic = language === 'ar';
   const [, params] = useRoute<{ slug: string }>('/blog/:slug');
   const [, setLocation] = useLocation();
 
