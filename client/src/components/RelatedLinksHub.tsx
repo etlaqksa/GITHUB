@@ -53,13 +53,11 @@ export default function RelatedLinksHub({ signals = [], serviceSlug }: HubProps)
   const svcSlugs = serviceSlug ? [serviceSlug] : inferServices(signals);
   const svcSlug = svcSlugs[0] || 'soil-grouting';
   const svc = serviceLandings.find((x) => x.slug === svcSlug) || serviceLandings[0];
-  const serviceParam = (() => {
-    const h = (svc.servicePageHref || '').toLowerCase();
-    if (h.includes('grouting')) return 'grouting';
-    if (h.includes('cavity')) return 'cavity';
-    if (h.includes('geophysical')) return 'geophysical';
-    return 'grouting';
-  })();
+  // IMPORTANT:
+  // `serviceLandings.slug` values (e.g. soil-grouting) are SEO slugs used for /locations/* pages.
+  // Our actual service pages live at /services/grouting, /services/cavity, /services/geophysical.
+  // Therefore we must link using `servicePageHref` to avoid 404.
+  const svcPageHref = svc.servicePageHref || '/services';
   const svcName = lang === 'ar' ? svc.ar : svc.en;
 
   const citiesPicked = pickTopCities();
@@ -82,10 +80,11 @@ export default function RelatedLinksHub({ signals = [], serviceSlug }: HubProps)
             {svcSlugs.map((slug) => {
               const sItem = serviceLandings.find((x) => x.slug === slug) || serviceLandings[0];
               const name = lang === 'ar' ? sItem.ar : sItem.en;
+              const href = sItem.servicePageHref || '/services';
               return (
                 <LocalizedLink
                   key={slug}
-                  href={`/services/${slug}`}
+                  href={href}
                   className="text-xs rounded-full border px-3 py-1 bg-background hover:bg-accent"
                 >
                   {name}
@@ -115,7 +114,7 @@ export default function RelatedLinksHub({ signals = [], serviceSlug }: HubProps)
             ))}
           </div>
           <div>
-            <LocalizedLink href={`/services/${svcSlug}`} className="inline-flex">
+            <LocalizedLink href={svcPageHref} className="inline-flex">
               <Button variant="secondary" className="gap-2">
                 {lang === 'ar' ? 'صفحة الخدمة المرتبطة' : 'Service page'}
                 <ArrowRight className="w-4 h-4" />
