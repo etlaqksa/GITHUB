@@ -59,8 +59,7 @@ export default function Contact() {
         Array.from(attachments).forEach((file) => payload.append('attachments', file));
       }
 
-      const submitUrl = typeof window !== 'undefined' ? window.location.pathname : '/';
-await fetch(submitUrl, {
+      await fetch('/', {
         method: 'POST',
         body: payload,
       });

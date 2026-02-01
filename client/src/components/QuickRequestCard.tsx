@@ -51,8 +51,7 @@ export default function QuickRequestCard({ formName = 'quick_assessment' }: { fo
     };
 
     try {
-      const submitUrl = typeof window !== 'undefined' ? window.location.pathname : '/';
-await fetch(submitUrl, {
+      await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: encode(payload),
