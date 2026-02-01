@@ -48,7 +48,16 @@ export default function Footer() {
                 <span>•</span>
                 <span>{language === 'ar' ? '50+ معدة' : '50+ equipment'}</span>
               </div>
-              <div className="mt-1">{language === 'ar' ? 'نعمل في جميع مناطق المملكة (+20 مدينة)' : 'Serving all regions of KSA (20+ cities)'}</div>
+              <div className="mt-1 flex flex-wrap items-center gap-x-1 text-sm">
+                <LocalizedLink href="/locations" className="hover:underline opacity-90 hover:opacity-100">
+                  {language === 'ar' ? 'نعمل في جميع مناطق المملكة' : 'Serving all regions of KSA'}
+                </LocalizedLink>
+                <span className="opacity-90">(</span>
+                <LocalizedLink href="/locations" className="hover:underline opacity-90 hover:opacity-100">
+                  {language === 'ar' ? '+20 مدينة' : '20+ cities'}
+                </LocalizedLink>
+                <span className="opacity-90">)</span>
+              </div>
             </div>
 
           </div>

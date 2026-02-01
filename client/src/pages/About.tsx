@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Award, Eye, Heart, Target, Users } from 'lucide-react';
 import LocalizedLink from '@/components/LocalizedLink';
+import { cities } from '@/data/seoLocations';
 import { trackEvent } from '@/lib/analytics';
 
 export default function About() {
@@ -42,6 +43,8 @@ export default function About() {
           : 'We use the latest technologies and innovative methods in our engineering solutions',
     },
   ];
+
+  const featuredCitySlugs = ['riyadh', 'jeddah', 'dammam', 'madinah', 'makkah', 'taif', 'qassim', 'hail', 'abha', 'tabuk'];
 
   return (
     <div className="w-full">
@@ -200,11 +203,53 @@ export default function About() {
           <h2 className="text-3xl md:text-4xl font-bold">
             {language === 'ar' ? 'مناطق خدماتنا' : 'Our Service Areas'}
           </h2>
+
           <p className="text-lg md:text-xl opacity-90 max-w-3xl mx-auto">
-            {language === 'ar'
-              ? 'نخدم جميع أنحاء المملكة العربية السعودية: الرياض، جدة، الدمام، المدينة المنورة، مكة المكرمة، الطائف، القصيم، حائل، أبها، تبوك، وجميع المدن والمناطق الأخرى'
-              : 'We serve all regions of Saudi Arabia: Riyadh, Jeddah, Dammam, Madinah, Makkah, Taif, Qassim, Hail, Abha, Tabuk, and all other cities and regions'}
+            {language === 'ar' ? (
+              <>
+                نخدم مشاريع حقن التربة ومعالجة التكهفات في مختلف مناطق المملكة.{' '}
+                <LocalizedLink
+                  href="/locations"
+                  className="underline underline-offset-4 hover:opacity-100 opacity-95 font-medium"
+                >
+                  عرض جميع المدن
+                </LocalizedLink>
+                .
+              </>
+            ) : (
+              <>
+                We deliver soil grouting and cavity treatment services across Saudi Arabia.{' '}
+                <LocalizedLink
+                  href="/locations"
+                  className="underline underline-offset-4 hover:opacity-100 opacity-95 font-medium"
+                >
+                  View all cities
+                </LocalizedLink>
+                .
+              </>
+            )}
           </p>
+
+          <div className="flex flex-wrap justify-center gap-x-3 gap-y-2 text-base md:text-lg">
+            {featuredCitySlugs.map((slug, i) => {
+              const c = cities.find((x) => x.slug === slug);
+              if (!c) return null;
+              return (
+                <span key={slug} className="inline-flex items-center">
+                  <LocalizedLink href={`/locations/${slug}`} className="hover:underline font-semibold">
+                    {language === 'ar' ? c.ar : c.en}
+                  </LocalizedLink>
+                  {i < featuredCitySlugs.length - 1 ? <span className="mx-2 opacity-80">•</span> : null}
+                </span>
+              );
+            })}
+            <span className="inline-flex items-center">
+              <span className="mx-2 opacity-80">•</span>
+              <LocalizedLink href="/locations" className="hover:underline font-semibold">
+                {language === 'ar' ? 'وجميع المدن الأخرى' : 'and all other cities'}
+              </LocalizedLink>
+            </span>
+          </div>
         </div>
       </section>
     </div>

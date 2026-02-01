@@ -60,10 +60,7 @@ export default function Contact() {
       }
 
       const submitUrl = typeof window !== 'undefined' ? window.location.pathname : '/';
-
-
-
-      await fetch(submitUrl, {
+await fetch(submitUrl, {
         method: 'POST',
         body: payload,
       });
