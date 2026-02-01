@@ -59,13 +59,33 @@ export default function Contact() {
         Array.from(attachments).forEach((file) => payload.append('attachments', file));
       }
 
-      await fetch('/', {
+      const submitUrl = typeof window !== 'undefined' ? window.location.pathname : '/';
+      const res = await fetch(submitUrl, {
         method: 'POST',
         body: payload,
       });
 
+      if (!res.ok) throw new Error('Netlify form submit failed');
+
       toast.success(language === 'ar' ? 'تم إرسال رسالتك بنجاح' : 'Message sent successfully');
       trackEvent('form_submit_success', { form: 'contact', language });
+
+      // Conversion events (GA4)
+      trackEvent('lead_contact_form', {
+        language,
+        method: 'netlify',
+        page_path: typeof window !== 'undefined' ? window.location.pathname : undefined,
+        page_location: typeof window !== 'undefined' ? window.location.href : undefined,
+      });
+      trackEvent('generate_lead', {
+        lead_type: 'contact_form',
+        form_name: 'contact',
+        method: 'netlify',
+        language,
+        page_path: typeof window !== 'undefined' ? window.location.pathname : undefined,
+        page_location: typeof window !== 'undefined' ? window.location.href : undefined,
+      });
+
       setLocation(`/thank-you?form=contact`);
       setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
       setAttachments(null);

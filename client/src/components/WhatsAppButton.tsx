@@ -1,7 +1,6 @@
 import { MessageCircle } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useLocation } from 'wouter';
-import { trackEvent } from '@/lib/analytics';
 
 function buildWhatsAppUrl(opts: { phone: string; text: string }) {
   const base = `https://wa.me/${opts.phone}`;
@@ -52,12 +51,8 @@ export default function WhatsAppButton() {
       href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
-      onClick={() =>
-        trackEvent('whatsapp_click', {
-          page_path: location,
-          language,
-        })
-      }
+      data-ga-placement="floating"
+      data-ga-intent="general"
       className="fixed bottom-24 md:bottom-6 left-6 z-50 bg-[oklch(0.65_0.18_195)] text-white rounded-full p-4 shadow-lg transition-all duration-300 hover:scale-110 group"
       aria-label="Contact us on WhatsApp"
     >

@@ -57,6 +57,17 @@ export default function QuickRequestCard({ formName = 'quick_assessment' }: { fo
         body: encode(payload),
       });
       trackEvent('quick_request_submit_success', { language: lang });
+
+      // GA4 recommended conversion event
+      trackEvent('generate_lead', {
+        lead_type: 'quick_assessment',
+        form_name: formName,
+        method: 'netlify',
+        language: lang,
+        city: city || undefined,
+        page_path: typeof window !== 'undefined' ? window.location.pathname : undefined,
+        page_location: typeof window !== 'undefined' ? window.location.href : undefined,
+      });
       // redirect to thank you (localized)
       window.location.href = lang === 'ar' ? '/ar/thank-you' : '/en/thank-you';
     } catch (err) {

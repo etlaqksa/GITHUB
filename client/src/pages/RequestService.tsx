@@ -151,10 +151,13 @@ export default function RequestService() {
       }
 
 
-      await fetch('/', {
+      const submitUrl = typeof window !== 'undefined' ? window.location.pathname : '/';
+      const res = await fetch(submitUrl, {
         method: 'POST',
         body: payload,
       });
+
+      if (!res.ok) throw new Error('Netlify form submit failed');
 
       toast.success(t('request.success'));
       trackEvent('form_submit_success', {
@@ -162,6 +165,28 @@ export default function RequestService() {
         service: formData.service || 'unknown',
         projectType: formData.projectType || 'unknown',
         language,
+      });
+
+      // Conversion events (GA4)
+      trackEvent('lead_request_service', {
+        language,
+        method: 'netlify',
+        service: formData.service || 'unknown',
+        project_type: formData.projectType || 'unknown',
+        city: formData.city || 'unknown',
+        page_path: typeof window !== 'undefined' ? window.location.pathname : undefined,
+        page_location: typeof window !== 'undefined' ? window.location.href : undefined,
+      });
+      trackEvent('generate_lead', {
+        lead_type: 'service_request',
+        form_name: 'request-service',
+        method: 'netlify',
+        language,
+        service: formData.service || 'unknown',
+        project_type: formData.projectType || 'unknown',
+        city: formData.city || 'unknown',
+        page_path: typeof window !== 'undefined' ? window.location.pathname : undefined,
+        page_location: typeof window !== 'undefined' ? window.location.href : undefined,
       });
       setLocation(`/thank-you?form=request-service`);
       setFormData({

@@ -35,8 +35,8 @@ export default function StickyCTA() {
               size="lg"
               onClick={() =>
                 trackEvent('sticky_request_click', {
-                  page_path: location,
-                  language,
+                  placement: 'sticky',
+                  spa_location: location,
                 })
               }
             >
@@ -49,12 +49,8 @@ export default function StickyCTA() {
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            onClick={() =>
-              trackEvent('sticky_whatsapp_click', {
-                page_path: location,
-                language,
-              })
-            }
+            data-ga-placement="sticky"
+            data-ga-intent="request_service"
           >
             <Button className="w-full gap-2" size="lg" variant="secondary">
               <MessageCircle className="h-5 w-5" />
