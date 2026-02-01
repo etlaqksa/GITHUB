@@ -13,38 +13,61 @@ declare global {
   }
 }
 
+function isDebugMode() {
+  if (typeof window === 'undefined') return false;
+  try {
+    const p = new URLSearchParams(window.location.search);
+    return p.get('ga_debug') === '1' || p.get('ga_debug') === 'true';
+  } catch {
+    return false;
+  }
+}
+
 function ensureGtag() {
   if (typeof window === 'undefined') return;
   window.dataLayer = window.dataLayer || [];
+  // Stub gtag until the library loads; it will drain dataLayer afterward.
   window.gtag = window.gtag || ((...args: any[]) => window.dataLayer!.push(args));
+}
+
+function configureGA(id: string) {
+  ensureGtag();
+  const debug = isDebugMode();
+  try {
+    window.gtag?.('js', new Date());
+    // For SPA: we send page_view manually on route changes.
+    window.gtag?.('config', id, { send_page_view: false, debug_mode: debug });
+  } catch {
+    // ignore
+  }
 }
 
 function injectGA(id: string) {
   if (typeof document === 'undefined') return;
-  // If the tag is already in <head> (e.g. via index.html), don't inject again.
-  if (
+
+  // If the tag already exists in <head> (e.g. via index.html), just configure it.
+  const existing =
     document.querySelector(`script[src*="googletagmanager.com/gtag/js?id=${id}"]`) ||
-    document.querySelector(`script[data-ga="${id}"]`)
-  ) {
-    ensureGtag();
-    return;
-  }
+    document.querySelector(`script[data-ga="${id}"]`);
 
   ensureGtag();
+
+  if (existing) {
+    configureGA(id);
+    return;
+  }
 
   const s = document.createElement('script');
   s.async = true;
   s.src = `https://www.googletagmanager.com/gtag/js?id=${id}`;
   s.setAttribute('data-ga', id);
   s.onload = () => {
-    try {
-      window.gtag?.('js', new Date());
-      window.gtag?.('config', id, { send_page_view: false });
-    } catch {
-      // ignore
-    }
+    configureGA(id);
   };
   document.head.appendChild(s);
+
+  // Configure immediately as well (queued into dataLayer) so it works even if onload is delayed.
+  configureGA(id);
 }
 
 export default function Analytics() {
@@ -60,10 +83,13 @@ export default function Analytics() {
   useEffect(() => {
     if (!GA_ID) return;
     ensureGtag();
+
+    const debug = isDebugMode();
     try {
       window.gtag?.('event', 'page_view', {
         page_path: location,
         page_location: window.location.href,
+        debug_mode: debug,
       });
     } catch {
       // ignore
