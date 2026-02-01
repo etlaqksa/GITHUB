@@ -137,5 +137,5 @@
     Cross-Origin-Resource-Policy = "same-origin"
     # We embed Google Maps on /contact; COEP: require-corp breaks many third-party iframes.
     Cross-Origin-Embedder-Policy = "unsafe-none"
-    Content-Security-Policy = "default-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; object-src 'none'; frame-src 'self' https://www.google.com https://www.google.com/maps https://www.google.com/maps/embed https://maps.google.com https://www.openstreetmap.org; script-src 'self' 'sha256-vVuWSj0cTj62EEbftR1kwYjSMIOjwFshsFRKcM9gg1k=' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; connect-src 'self' https:; font-src 'self' data: https://fonts.gstatic.com; worker-src 'self'; manifest-src 'self'"
+    Content-Security-Policy = "default-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; object-src 'none'; frame-src 'self' https://www.google.com https://www.google.com/maps https://www.google.com/maps/embed https://maps.google.com https://www.openstreetmap.org; script-src 'self' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; connect-src 'self' https:; font-src 'self' data: https://fonts.gstatic.com; worker-src 'self'; manifest-src 'self'"
 
