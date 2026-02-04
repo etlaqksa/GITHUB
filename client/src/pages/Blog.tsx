@@ -199,7 +199,8 @@ export default function Blog() {
 
         return matchesCategory && matchesSearch;
       })
-      .sort((a, b) => (a.date < b.date ? 1 : -1));
+      // Display in encyclopedia order: Article 1 → Article N (stable across languages)
+      .sort((a, b) => (a.id ?? 0) - (b.id ?? 0));
   }, [language, selectedCategory, searchQuery]);
 
   const pickCategory = (cat: string) => {

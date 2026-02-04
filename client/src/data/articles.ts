@@ -34,7 +34,7 @@ export const articles: ArticleContent[] = [
   {
     id: 1,
     title: "ما هو حقن التربة؟ تعريف عملي يربط الآلية بالقرار الهندسي",
-    titleEn: "What Is Soil Grouting? A Practical Definition Linking Mechanism to Engineering Decision",
+    titleEn: "What Is Soil Grouting? A Practical Definition Linking Mechanism to Engineering Decisions",
     category: "حقن التربة",
     categoryEn: "Soil Grouting",
     categoriesAr: ["حقن التربة", "الهندسة الجيوتقنية", "موسوعة حقن التربة"],
@@ -132,7 +132,7 @@ export const articles: ArticleContent[] = [
   {
     id: 2,
     title: "تاريخ وتطور تقنيات حقن التربة في الهندسة المدنية",
-    titleEn: "History and Evolution of Soil Grouting Techniques in Civil Engineering",
+    titleEn: "The History and Evolution of Soil Grouting in Civil Engineering",
     category: "أساسات وهبوط",
     categoryEn: "Foundations & Settlement",
     categoriesAr: ["أساسات وهبوط", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -309,7 +309,7 @@ export const articles: ArticleContent[] = [
   {
     id: 3,
     title: "الفرق بين تحسين التربة (Ground Improvement) وتقوية التربة (Soil Stabilization)",
-    titleEn: "الفرق بين تحسين التربة (Ground Improvement) وتقوية التربة (Soil Stabilization)",
+    titleEn: "Ground Improvement vs Soil Stabilization: What's the Difference?",
     category: "كشف التكهفات",
     categoryEn: "Cavity Detection",
     categoriesAr: ["كشف التكهفات", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -439,7 +439,7 @@ export const articles: ArticleContent[] = [
   {
     id: 4,
     title: "فيزياء الحقن: كيف ينتشر الملاط داخل المسام والشقوق؟",
-    titleEn: "Physics of Grouting: How Does the Grout Spread Inside Pores and Cracks?",
+    titleEn: "The Physics of Grouting: How Grout Spreads Through Pores and Fractures",
     category: "حقن التربة",
     categoryEn: "Soil Grouting",
     categoriesAr: ["حقن التربة", "الهندسة الجيوتقنية", "موسوعة حقن التربة"],
@@ -612,7 +612,7 @@ export const articles: ArticleContent[] = [
   {
     id: 5,
     title: "دور المهندس الجيوتقني في تصميم برامج الحقن",
-    titleEn: "The Role of the Geotechnical Engineer in Designing Grouting Programs",
+    titleEn: "The Geotechnical Engineer’s Role in Designing Grouting Programs",
     category: "شقوق ومنشآت",
     categoryEn: "Cracks & Structures",
     categoriesAr: ["شقوق ومنشآت", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -768,7 +768,7 @@ export const articles: ArticleContent[] = [
   {
     id: 6,
     title: "المصطلحات الأساسية في عالم الحقن (نفاذية، لزوجة، ضغط، تدفق)",
-    titleEn: "Article 6",
+    titleEn: "Essential Grouting Terminology: Permeability, Viscosity, Pressure, and Flow",
     category: "اختبارات التربة",
     categoryEn: "Soil Testing",
     categoriesAr: ["اختبارات التربة", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -906,7 +906,7 @@ export const articles: ArticleContent[] = [
   {
     id: 7,
     title: "متى يكون الحقن هو الحل الأمثل؟ (دراسة الجدوى الفنية والاقتصادية)",
-    titleEn: "When is Grouting the Optimal Solution? (Technical and Economic Feasibility Study)",
+    titleEn: "When Is Grouting the Best Solution? Technical and Economic Feasibility",
     category: "المسح الجيوفيزيائي",
     categoryEn: "Geophysical Surveys",
     categoriesAr: ["المسح الجيوفيزيائي", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -1052,7 +1052,7 @@ export const articles: ArticleContent[] = [
   {
     id: 8,
     title: "معايير الجودة العالمية في أعمال الحقن (EN 12715 و ASTM)",
-    titleEn: "معايير الجودة العالمية في أعمال الحقن (EN 12715 و ASTM)",
+    titleEn: "Global Quality Standards in Grouting Works: EN 12715 and ASTM",
     category: "أساسات وهبوط",
     categoryEn: "Foundations & Settlement",
     categoriesAr: ["أساسات وهبوط", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -1180,7 +1180,7 @@ export const articles: ArticleContent[] = [
   {
     id: 9,
     title: "الفرق بين الحقن العلاجي (Remedial Grouting) والحقن الوقائي (Preventative Grouting)",
-    titleEn: "الفرق بين الحقن العلاجي (Remedial Grouting) والحقن الوقائي (Preventative Grouting)",
+    titleEn: "Remedial vs Preventive Grouting: Objectives, Triggers, and Selection",
     category: "شقوق ومنشآت",
     categoryEn: "Cracks & Structures",
     categoriesAr: ["شقوق ومنشآت", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -1414,7 +1414,7 @@ export const articles: ArticleContent[] = [
   {
     id: 11,
     title: "الحقن النفاذي (Permeation Grouting): الآلية والتطبيقات",
-    titleEn: "الحقن النفاذي (Permeation Grouting): الآلية والتطبيقات",
+    titleEn: "Permeation Grouting: Mechanism and Applications",
     category: "جيولوجيا/جيوتقنية السعودية",
     categoryEn: "Saudi Geotechnics",
     categoriesAr: ["جيولوجيا/جيوتقنية السعودية", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -1554,7 +1554,7 @@ export const articles: ArticleContent[] = [
   {
     id: 12,
     title: "الحقن الانضغاطي (Compaction Grouting): متى وكيف نستخدمه؟",
-    titleEn: "الحقن الانضغاطي (Compaction Grouting): متى وكيف نستخدمه؟",
+    titleEn: "Compaction Grouting: When and How to Use It",
     category: "تحسين التربة",
     categoryEn: "Ground Improvement",
     categoriesAr: ["تحسين التربة", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -1688,7 +1688,7 @@ export const articles: ArticleContent[] = [
   {
     id: 13,
     title: "الحقن النفاث (Jet Grouting): من فيزياء النفث إلى خصائص الأعمدة",
-    titleEn: "Jet Grouting: From Jet Physics to Column Properties",
+    titleEn: "Jet Grouting: From Jet Mechanics to Column Properties",
     category: "حقن التربة",
     categoryEn: "Soil Grouting",
     categoriesAr: ["حقن التربة", "الهندسة الجيوتقنية", "موسوعة حقن التربة"],
@@ -1852,7 +1852,7 @@ export const articles: ArticleContent[] = [
   {
     id: 14,
     title: "حقن الكسر الهيدروليكي (Fracture Grouting): التحكم في رفع المنشآت",
-    titleEn: "Fracture Grouting: Controlling Uplift of Structures",
+    titleEn: "Fracture Grouting: Controlling Uplift and Ground Heave",
     category: "أساسات ومياه جوفية",
     categoryEn: "Foundations & Groundwater",
     categoriesAr: ["أساسات ومياه جوفية", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -1970,7 +1970,7 @@ export const articles: ArticleContent[] = [
   {
     id: 15,
     title: "حقن الستارة (Curtain Grouting): فلسفة تقليل النفاذية في السدود",
-    titleEn: "Curtain Grouting: The Philosophy of Permeability Reduction in Dams",
+    titleEn: "Curtain Grouting: A Strategy for Permeability Reduction in Dams",
     category: "تقوية إنشائية",
     categoryEn: "Structural Strengthening",
     categoriesAr: ["تقوية إنشائية", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -2090,7 +2090,7 @@ export const articles: ArticleContent[] = [
   {
     id: 16,
     title: "الحقن التعويضي (Compensation Grouting): حماية المنشآت أثناء الحفر النفقي",
-    titleEn: "الحقن التعويضي (Compensation Grouting): حماية المنشآت أثناء الحفر النفقي",
+    titleEn: "Compensation Grouting: Protecting Structures During Tunneling and Excavation",
     category: "إدارة الأصول",
     categoryEn: "Asset Management",
     categoriesAr: ["إدارة الأصول", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -2211,7 +2211,7 @@ export const articles: ArticleContent[] = [
   {
     id: 17,
     title: "حقن الفراغات (Void Filling): معالجة التكهفات والجيوب الهوائية",
-    titleEn: "Void Filling: Treatment of Cavities and Air Voids",
+    titleEn: "Void Filling Grouting: Treating Cavities and Hidden Voids",
     category: "كشف/معالجة فراغات",
     categoryEn: "Cavities: Detection & Treatment",
     categoriesAr: ["كشف/معالجة فراغات", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -2434,7 +2434,7 @@ export const articles: ArticleContent[] = [
   {
     id: 18,
     title: "الحقن الكيميائي: استخدام الراتنجات والسيليكات",
-    titleEn: "Chemical Grouting: Use of Resins and Silicates",
+    titleEn: "Chemical Grouting: Resins, Silicates, and Their Use Cases",
     category: "تحسين التربة",
     categoryEn: "Ground Improvement",
     categoriesAr: ["تحسين التربة", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -2588,7 +2588,7 @@ export const articles: ArticleContent[] = [
   {
     id: 19,
     title: "حقن البولي يوريثان (Polyurethane Grouting): السرعة والكفاءة في منع التسرب",
-    titleEn: "حقن البولي يوريثان (Polyurethane Grouting): السرعة والكفاءة في منع التسرب",
+    titleEn: "Polyurethane Grouting: Fast, Effective Leak Stopping",
     category: "موسوعة الحقن والتحسين",
     categoryEn: "Grouting & Improvement Encyclopedia",
     categoriesAr: ["موسوعة الحقن والتحسين", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -2724,7 +2724,7 @@ export const articles: ArticleContent[] = [
   {
     id: 20,
     title: "الملاط الدقيق (Microfine Cement): اختراق التربة ذات النفاذية المنخفضة",
-    titleEn: "Microfine Cement: Penetrating Low-Permeability Soils",
+    titleEn: "Microfine Cement Grouting: Penetration in Low-Permeability Soils",
     category: "موسوعة الحقن والتحسين",
     categoryEn: "Grouting & Improvement Encyclopedia",
     categoriesAr: ["موسوعة الحقن والتحسين", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -2868,7 +2868,7 @@ export const articles: ArticleContent[] = [
   {
     id: 21,
     title: "الحقن أسفل اللبشة (Under-Raft Grouting): تحسين تفاعل التربة والأساس",
-    titleEn: "Under-Raft Grouting: Enhancing Soil-Foundation Interaction",
+    titleEn: "Under‑Raft Grouting: Improving Soil–Foundation Interaction",
     category: "موسوعة الحقن والتحسين",
     categoryEn: "Grouting & Improvement Encyclopedia",
     categoriesAr: ["موسوعة الحقن والتحسين", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -2990,7 +2990,7 @@ export const articles: ArticleContent[] = [
   {
     id: 22,
     title: "تقنيات الحقن في الصخور المتشققة والطبقات الكارستية",
-    titleEn: "Grouting Techniques in Fractured Rock and Karstic Formations",
+    titleEn: "Grouting in Fractured Rock and Karst Formations: Techniques and Risks",
     category: "موسوعة الحقن والتحسين",
     categoryEn: "Grouting & Improvement Encyclopedia",
     categoriesAr: ["موسوعة الحقن والتحسين", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -3180,7 +3180,7 @@ export const articles: ArticleContent[] = [
   {
     id: 23,
     title: "رولوجيا الملاط الإسمنتي: اللزوجة، الإجهاد الخاضع، والاتساق",
-    titleEn: "Rheology of Cement Grout: Viscosity, Shear Stress, and Consistency",
+    titleEn: "Cement Grout Rheology: Viscosity, Yield Stress, and Consistency",
     category: "موسوعة الحقن والتحسين",
     categoryEn: "Grouting & Improvement Encyclopedia",
     categoriesAr: ["موسوعة الحقن والتحسين", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -3336,7 +3336,7 @@ export const articles: ArticleContent[] = [
   {
     id: 24,
     title: "تأثير نسبة الماء إلى الإسمنت (W/C Ratio) على قوة وديمومة الحقن",
-    titleEn: "The Effect of Water-to-Cement Ratio (W/C Ratio) on Strength and Durability of Grouting",
+    titleEn: "How the Water‑to‑Cement Ratio Affects Strength and Durability",
     category: "موسوعة الحقن والتحسين",
     categoryEn: "Grouting & Improvement Encyclopedia",
     categoriesAr: ["موسوعة الحقن والتحسين", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -3492,7 +3492,7 @@ export const articles: ArticleContent[] = [
   {
     id: 25,
     title: "الإضافات الكيميائية للملاط: الملدنات، المسرعات، والمواد المانعة للنزف",
-    titleEn: "الإضافات الكيميائية للملاط: الملدنات، المسرعات، والمواد المانعة للنزف",
+    titleEn: "Chemical Admixtures for Grout: Superplasticizers, Accelerators, and Anti‑Bleed Agents",
     category: "موسوعة الحقن والتحسين",
     categoryEn: "Grouting & Improvement Encyclopedia",
     categoriesAr: ["موسوعة الحقن والتحسين", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -3618,7 +3618,7 @@ export const articles: ArticleContent[] = [
   {
     id: 26,
     title: "استخدام المواد البوزولانية (Fly Ash, Silica Fume) في خلطات الحقن",
-    titleEn: "Use of Pozzolanic Materials (Fly Ash, Silica Fume) in Grouting Mixtures",
+    titleEn: "Pozzolanic Materials in Grout Mixes: Fly Ash and Silica Fume",
     category: "موسوعة الحقن والتحسين",
     categoryEn: "Grouting & Improvement Encyclopedia",
     categoriesAr: ["موسوعة الحقن والتحسين", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -3768,7 +3768,7 @@ export const articles: ArticleContent[] = [
   {
     id: 27,
     title: "نزف الملاط (Bleeding) والانفصال الحبيبي: المخاطر والحلول",
-    titleEn: "Bleeding and Particle Separation in Grouting: Risks and Solutions",
+    titleEn: "Grout Bleeding and Segregation: Risks and Practical Mitigation",
     category: "موسوعة الحقن والتحسين",
     categoryEn: "Grouting & Improvement Encyclopedia",
     categoriesAr: ["موسوعة الحقن والتحسين", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -3926,7 +3926,7 @@ export const articles: ArticleContent[] = [
   {
     id: 28,
     title: "الإسمنت المقاوم للكبريتات: ضرورة هندسية في تربة الخليج العربي",
-    titleEn: "Sulfate-Resistant Cement: An Engineering Necessity in Arabian Gulf Soils",
+    titleEn: "Sulfate‑Resistant Cement: An Engineering Necessity in Gulf Soils",
     category: "موسوعة الحقن والتحسين",
     categoryEn: "Grouting & Improvement Encyclopedia",
     categoriesAr: ["موسوعة الحقن والتحسين", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -4045,7 +4045,7 @@ export const articles: ArticleContent[] = [
   {
     id: 29,
     title: "المواد الصديقة للبيئة في حقن التربة: التوجهات الحديثة",
-    titleEn: "Environmentally Friendly Materials in Soil Grouting: Recent Trends",
+    titleEn: "Eco‑Friendly Grouting Materials: Modern Trends and Considerations",
     category: "موسوعة الحقن والتحسين",
     categoryEn: "Grouting & Improvement Encyclopedia",
     categoriesAr: ["موسوعة الحقن والتحسين", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -4229,7 +4229,7 @@ export const articles: ArticleContent[] = [
   {
     id: 30,
     title: "اختبارات المختبر لمواد الحقن: قبل وأثناء التنفيذ",
-    titleEn: "Laboratory Testing of Grouting Materials: Pre-Construction and During Execution",
+    titleEn: "Laboratory Testing of Grouting Materials: Before and During Works",
     category: "موسوعة الحقن والتحسين",
     categoryEn: "Grouting & Improvement Encyclopedia",
     categoriesAr: ["موسوعة الحقن والتحسين", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -4349,7 +4349,7 @@ export const articles: ArticleContent[] = [
   {
     id: 31,
     title: "استقرار الملاط (Grout Stability): الفرق بين الملاط المستقر وغير المستقر",
-    titleEn: "استقرار الملاط (Grout Stability): الفرق بين الملاط المستقر وغير المستقر",
+    titleEn: "Grout Stability: Stable vs Unstable Mixes and Why It Matters",
     category: "موسوعة الحقن والتحسين",
     categoryEn: "Grouting & Improvement Encyclopedia",
     categoriesAr: ["موسوعة الحقن والتحسين", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -4481,7 +4481,7 @@ export const articles: ArticleContent[] = [
   {
     id: 32,
     title: "اختيار مادة الحقن بناءً على قطر حبيبات التربة (D10/D15)",
-    titleEn: "Selection of Grouting Material Based on Soil Particle Size (D10/D15)",
+    titleEn: "Selecting Grout Type Using Soil Gradation (D10/D15) Criteria",
     category: "موسوعة الحقن والتحسين",
     categoryEn: "Grouting & Improvement Encyclopedia",
     categoriesAr: ["موسوعة الحقن والتحسين", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -4598,7 +4598,7 @@ export const articles: ArticleContent[] = [
 
   {    id: 33,
       title: "حسابات تقريبية لانتشار الحقن: نصف قطر تأثير ولماذا يخطئ كثيرًا",
-      titleEn: "Back‑of‑Envelope Spread Estimates: Radius of Influence—and Why It Misleads",
+      titleEn: "Back‑of‑Envelope Grout Spread Calculations: Radius of Influence and Common Pitfalls",
       category: "موسوعة الحقن والتحسين",
       categoryEn: "Grouting & Improvement Encyclopedia",
       categoriesAr: ["موسوعة الحقن والتحسين", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -4668,7 +4668,7 @@ export const articles: ArticleContent[] = [
   {
     id: 34,
     title: "الهبوط التفاضلي (Differential Settlement): الكابوس الإنشائي وكيفية قراءته",
-    titleEn: "الهبوط التفاضلي (Differential Settlement): الكابوس الإنشائي وكيفية قراءته",
+    titleEn: "Differential Settlement: How to Read the ‘Structural Nightmare’",
     category: "موسوعة الحقن والتحسين",
     categoryEn: "Grouting & Improvement Encyclopedia",
     categoriesAr: ["موسوعة الحقن والتحسين", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -4788,7 +4788,7 @@ export const articles: ArticleContent[] = [
   {
     id: 35,
     title: "تحليل أنماط التشققات: هل هي إنشائية أم ناتجة عن هبوط التربة؟",
-    titleEn: "تحليل أنماط التشققات: هل هي إنشائية أم ناتجة عن هبوط التربة؟",
+    titleEn: "Crack Pattern Interpretation: Structural Cracks or Settlement‑Induced?",
     category: "موسوعة الحقن والتحسين",
     categoryEn: "Grouting & Improvement Encyclopedia",
     categoriesAr: ["موسوعة الحقن والتحسين", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -4912,7 +4912,7 @@ export const articles: ArticleContent[] = [
   {
     id: 36,
     title: "تأثير تسربات المياه (الخزانات والشبكات) على استقرار الأساسات",
-    titleEn: "Impact of Water Leakage (Reservoirs and Networks) on Foundation Stability",
+    titleEn: "How Water Leaks from Tanks and Utilities Undermine Foundations",
     category: "موسوعة الحقن والتحسين",
     categoryEn: "Grouting & Improvement Encyclopedia",
     categoriesAr: ["موسوعة الحقن والتحسين", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -5048,7 +5048,7 @@ export const articles: ArticleContent[] = [
   {
     id: 37,
     title: "التربة الانتفاخية (Expansive Soil): مشاكلها وحلول الحقن المقترحة",
-    titleEn: "التربة الانتفاخية (Expansive Soil): مشاكلها وحلول الحقن المقترحة",
+    titleEn: "Expansive Soils: Key Problems and Grouting‑Based Remedies",
     category: "موسوعة الحقن والتحسين",
     categoryEn: "Grouting & Improvement Encyclopedia",
     categoriesAr: ["موسوعة الحقن والتحسين", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -5176,7 +5176,7 @@ export const articles: ArticleContent[] = [
   {
     id: 38,
     title: "التربة الانهيارية (Collapsible Soil): مخاطر الغمر بالماء وكيفية معالجتها",
-    titleEn: "التربة الانهيارية (Collapsible Soil): مخاطر الغمر بالماء وكيفية معالجتها",
+    titleEn: "Collapsible Soils: Wetting Risks and Treatment Approaches",
     category: "موسوعة الحقن والتحسين",
     categoryEn: "Grouting & Improvement Encyclopedia",
     categoriesAr: ["موسوعة الحقن والتحسين", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -5321,7 +5321,7 @@ export const articles: ArticleContent[] = [
   {
     id: 39,
     title: "الفراغات تحت بلاطات الأرضيات: الأسباب، المخاطر، وطرق المعالجة",
-    titleEn: "الفراغات تحت بلاطات الأرضيات: الأسباب، المخاطر، وطرق المعالجة",
+    titleEn: "Voids Beneath Floor Slabs: Causes, Risks, and Repair Options",
     category: "موسوعة الحقن والتحسين",
     categoryEn: "Grouting & Improvement Encyclopedia",
     categoriesAr: ["موسوعة الحقن والتحسين", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -5471,7 +5471,7 @@ export const articles: ArticleContent[] = [
   {
     id: 40,
     title: "تأثير الأعمال الإنشائية المجاورة على استقرار المباني القائمة",
-    titleEn: "The Impact of Adjacent Construction Activities on the Stability of Existing Buildings",
+    titleEn: "Impact of Nearby Construction on Existing Building Stability",
     category: "موسوعة الحقن والتحسين",
     categoryEn: "Grouting & Improvement Encyclopedia",
     categoriesAr: ["موسوعة الحقن والتحسين", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -5685,7 +5685,7 @@ export const articles: ArticleContent[] = [
   {
     id: 41,
     title: "التكهفات الطبيعية (Sinkholes): كيف تتكون وكيف نكتشفها؟",
-    titleEn: "Natural Sinkholes: Formation Mechanisms and Detection Methods",
+    titleEn: "Natural Sinkholes: Formation Mechanisms and Detection",
     category: "موسوعة الحقن والتحسين",
     categoryEn: "Grouting & Improvement Encyclopedia",
     categoriesAr: ["موسوعة الحقن والتحسين", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -5853,7 +5853,7 @@ export const articles: ArticleContent[] = [
   {
     id: 42,
     title: "دور الرطوبة في تغيير خصائص التربة الطينية والرملية",
-    titleEn: "The Role of Moisture in Altering the Properties of Clayey and Sandy Soils",
+    titleEn: "How Moisture Changes the Behavior of Clayey and Sandy Soils",
     category: "موسوعة الحقن والتحسين",
     categoryEn: "Grouting & Improvement Encyclopedia",
     categoriesAr: ["موسوعة الحقن والتحسين", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -5973,7 +5973,7 @@ export const articles: ArticleContent[] = [
   {
     id: 43,
     title: "تقنيات كشف الفراغات: مقارنة دقة وإشارات كل تقنية",
-    titleEn: "Void Detection Techniques: Accuracy and Signal Comparison of Each Method",
+    titleEn: "Void Detection Methods Compared: Accuracy and Signal Characteristics",
     category: "موسوعة الحقن والتحسين",
     categoryEn: "Grouting & Improvement Encyclopedia",
     categoriesAr: ["موسوعة الحقن والتحسين", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -6141,7 +6141,7 @@ export const articles: ArticleContent[] = [
   {
     id: 44,
     title: "رادار الاختراق الأرضي (GPR): كيف يعمل، أين ينجح، وأين يخدعنا؟",
-    titleEn: "Ground Penetrating Radar (GPR): How It Works, Where It Excels, and Where It Can Mislead Us",
+    titleEn: "Ground‑Penetrating Radar (GPR): How It Works, Where It Excels, and Where It Misleads",
     category: "موسوعة الحقن والتحسين",
     categoryEn: "Grouting & Improvement Encyclopedia",
     categoriesAr: ["موسوعة الحقن والتحسين", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -6289,7 +6289,7 @@ export const articles: ArticleContent[] = [
   {
     id: 45,
     title: "المسح الكهربائي (ERT): رسم خرائط المقاومية للكشف عن المياه والفراغات",
-    titleEn: "المسح الكهربائي (ERT): رسم خرائط المقاومية للكشف عن المياه والفراغات",
+    titleEn: "Electrical Resistivity Tomography (ERT): Mapping Resistivity to Detect Water and Voids",
     category: "موسوعة الحقن والتحسين",
     categoryEn: "Grouting & Improvement Encyclopedia",
     categoriesAr: ["موسوعة الحقن والتحسين", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -6405,7 +6405,7 @@ export const articles: ArticleContent[] = [
   {
     id: 46,
     title: "الميكروغرافيتي (Microgravity): التقنية الأدق لكشف التكهفات العميقة",
-    titleEn: "الميكروغرافيتي (Microgravity): التقنية الأدق لكشف التكهفات العميقة",
+    titleEn: "Microgravity Surveys: High‑Sensitivity Detection of Deep Cavities",
     category: "موسوعة الحقن والتحسين",
     categoryEn: "Grouting & Improvement Encyclopedia",
     categoriesAr: ["موسوعة الحقن والتحسين", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -6525,7 +6525,7 @@ export const articles: ArticleContent[] = [
   {
     id: 47,
     title: "المسح السيزمي: قياس سرعة الموجات لتقييم صلابة التربة",
-    titleEn: "Seismic Survey: Measuring Wave Velocity for Soil Stiffness Assessment",
+    titleEn: "Seismic Surveys: Using Wave Velocity to Assess Soil Stiffness",
     category: "موسوعة الحقن والتحسين",
     categoryEn: "Grouting & Improvement Encyclopedia",
     categoriesAr: ["موسوعة الحقن والتحسين", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -6681,7 +6681,7 @@ export const articles: ArticleContent[] = [
   {
     id: 48,
     title: "دمج البيانات الجيوفيزيائية والجيوتقنية: الوصول إلى صورة كاملة للموقع",
-    titleEn: "Integration of Geophysical and Geotechnical Data: Achieving a Comprehensive Site Characterization",
+    titleEn: "Integrating Geophysical and Geotechnical Data for Full Site Characterization",
     category: "موسوعة الحقن والتحسين",
     categoryEn: "Grouting & Improvement Encyclopedia",
     categoriesAr: ["موسوعة الحقن والتحسين", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -6797,7 +6797,7 @@ export const articles: ArticleContent[] = [
   {
     id: 49,
     title: "حدود الدقة في الأجهزة الجيوفيزيائية: إدارة التوقعات",
-    titleEn: "Accuracy Limits in Geophysical Instruments: Managing Expectations",
+    titleEn: "Accuracy Limits in Geophysical Instruments: Setting Realistic Expectations",
     category: "موسوعة الحقن والتحسين",
     categoryEn: "Grouting & Improvement Encyclopedia",
     categoriesAr: ["موسوعة الحقن والتحسين", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -6941,7 +6941,7 @@ export const articles: ArticleContent[] = [
   {
     id: 50,
     title: "التحقق بالثقوب الاستكشافية بعد المسح: كيفية أخذ عينة قرار",
-    titleEn: "Verification by Exploratory Boreholes After Survey: How to Make a Sampling Decision",
+    titleEn: "Post‑Survey Verification Boreholes: How to Decide Where to Drill",
     category: "موسوعة الحقن والتحسين",
     categoryEn: "Grouting & Improvement Encyclopedia",
     categoriesAr: ["موسوعة الحقن والتحسين", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -7081,7 +7081,7 @@ export const articles: ArticleContent[] = [
   {
     id: 51,
     title: "استخدام الكاميرات داخل الثقوب (Borehole Camera) لمعاينة الفراغات",
-    titleEn: "Use of Borehole Cameras for Inspecting Subsurface Voids",
+    titleEn: "Borehole Cameras: Visual Inspection of Subsurface Voids",
     category: "موسوعة الحقن والتحسين",
     categoryEn: "Grouting & Improvement Encyclopedia",
     categoriesAr: ["موسوعة الحقن والتحسين", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -7221,7 +7221,7 @@ export const articles: ArticleContent[] = [
   {
     id: 52,
     title: "تفسير الشذوذ (Anomalies) في تقارير المسح: بين الواقع والخطأ التقني",
-    titleEn: "Article 52",
+    titleEn: "Interpreting Anomalies in Survey Reports: Real Features vs Technical Artifacts",
     category: "موسوعة الحقن والتحسين",
     categoryEn: "Grouting & Improvement Encyclopedia",
     categoriesAr: ["موسوعة الحقن والتحسين", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -7339,7 +7339,7 @@ export const articles: ArticleContent[] = [
   {
     id: 53,
     title: "معدات الحقن: من المضخات اليدوية إلى الأنظمة المحوسبة",
-    titleEn: "Injection Equipment: From Manual Pumps to Computerized Systems",
+    titleEn: "Grouting Equipment: From Hand Pumps to Computerized Systems",
     category: "موسوعة الحقن والتحسين",
     categoryEn: "Grouting & Improvement Encyclopedia",
     categoriesAr: ["موسوعة الحقن والتحسين", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -7465,7 +7465,7 @@ export const articles: ArticleContent[] = [
   {
     id: 54,
     title: "تصميم شبكة نقاط الحقن: المسافات، الأعماق، والتسلسل",
-    titleEn: "Design of Grout Injection Point Network: Spacing, Depths, and Sequencing",
+    titleEn: "Designing an Injection Grid: Spacing, Depth, and Sequencing",
     category: "موسوعة الحقن والتحسين",
     categoryEn: "Grouting & Improvement Encyclopedia",
     categoriesAr: ["موسوعة الحقن والتحسين", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -7591,7 +7591,7 @@ export const articles: ArticleContent[] = [
   {
     id: 55,
     title: "مراقبة ضغط الحقن: الحفاظ على توازن المنشأ",
-    titleEn: "مراقبة ضغط الحقن: الحفاظ على توازن المنشأ",
+    titleEn: "Monitoring Injection Pressure: Protecting Structural Balance",
     category: "موسوعة الحقن والتحسين",
     categoryEn: "Grouting & Improvement Encyclopedia",
     categoriesAr: ["موسوعة الحقن والتحسين", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -7732,7 +7732,7 @@ export const articles: ArticleContent[] = [
   {
     id: 56,
     title: "قياس معدل التدفق (Flow Rate) وأهميته في تحديد حجم الفراغات",
-    titleEn: "Measuring Flow Rate and Its Importance in Determining Void Volume",
+    titleEn: "Flow Rate Measurement: Estimating Void Volume and Ground Response",
     category: "موسوعة الحقن والتحسين",
     categoryEn: "Grouting & Improvement Encyclopedia",
     categoriesAr: ["موسوعة الحقن والتحسين", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -7864,7 +7864,7 @@ export const articles: ArticleContent[] = [
   {
     id: 57,
     title: "معايير التوقف عن الحقن (Refusal Criteria): متى ننهي العمل في النقطة؟",
-    titleEn: "معايير التوقف عن الحقن (Refusal Criteria): متى ننهي العمل في النقطة؟",
+    titleEn: "Refusal Criteria in Grouting: When to Stop at a Point",
     category: "موسوعة الحقن والتحسين",
     categoryEn: "Grouting & Improvement Encyclopedia",
     categoriesAr: ["موسوعة الحقن والتحسين", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -7990,7 +7990,7 @@ export const articles: ArticleContent[] = [
   {
     id: 58,
     title: "أهمية السجلات اليومية (Grouting Logs) في توثيق الجودة",
-    titleEn: "The Importance of Grouting Logs in Quality Documentation",
+    titleEn: "Why Grouting Logs Matter: Daily Records for Quality and Traceability",
     category: "موسوعة الحقن والتحسين",
     categoryEn: "Grouting & Improvement Encyclopedia",
     categoriesAr: ["موسوعة الحقن والتحسين", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -8112,7 +8112,7 @@ export const articles: ArticleContent[] = [
   {
     id: 59,
     title: "السلامة المهنية في مواقع أعمال الحقن والتعامل مع الضغوط العالية",
-    titleEn: "السلامة المهنية في مواقع أعمال الحقن والتعامل مع الضغوط العالية",
+    titleEn: "Site Safety in Grouting Works: Managing High‑Pressure Operations",
     category: "موسوعة الحقن والتحسين",
     categoryEn: "Grouting & Improvement Encyclopedia",
     categoriesAr: ["موسوعة الحقن والتحسين", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -8216,7 +8216,7 @@ export const articles: ArticleContent[] = [
   {
     id: 60,
     title: "إدارة الموقع وتنسيق العمل بين فريق الحقن والمقاول الرئيسي",
-    titleEn: "إدارة الموقع وتنسيق العمل بين فريق الحقن والمقاول الرئيسي",
+    titleEn: "Site Management: Coordinating the Grouting Crew with the Main Contractor",
     category: "موسوعة الحقن والتحسين",
     categoryEn: "Grouting & Improvement Encyclopedia",
     categoriesAr: ["موسوعة الحقن والتحسين", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -8334,7 +8334,7 @@ export const articles: ArticleContent[] = [
   {
     id: 61,
     title: "الأخطاء الشائعة في تنفيذ أعمال الحقن وكيفية تجنبها",
-    titleEn: "Common Mistakes in Soil Grouting Execution and How to Avoid Them",
+    titleEn: "Common Execution Mistakes in Grouting—and How to Avoid Them",
     category: "موسوعة الحقن والتحسين",
     categoryEn: "Grouting & Improvement Encyclopedia",
     categoriesAr: ["موسوعة الحقن والتحسين", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -8494,7 +8494,7 @@ export const articles: ArticleContent[] = [
   {
     id: 62,
     title: "صيانة معدات الحقن وأثرها على دقة النتائج",
-    titleEn: "Maintenance of Grouting Equipment and Its Impact on Result Accuracy",
+    titleEn: "Maintaining Grouting Equipment: How It Affects Accuracy and Outcomes",
     category: "موسوعة الحقن والتحسين",
     categoryEn: "Grouting & Improvement Encyclopedia",
     categoriesAr: ["موسوعة الحقن والتحسين", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -8604,7 +8604,7 @@ export const articles: ArticleContent[] = [
   {
     id: 63,
     title: "تقوية الأساسات (Underpinning): خريطة خيارات بين الحقن والخوازيق",
-    titleEn: "تقوية الأساسات (Underpinning): خريطة خيارات بين الحقن والخوازيق",
+    titleEn: "Underpinning Options: Grouting vs Micropiles and Other Solutions",
     category: "موسوعة الحقن والتحسين",
     categoryEn: "Grouting & Improvement Encyclopedia",
     categoriesAr: ["موسوعة الحقن والتحسين", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -8728,7 +8728,7 @@ export const articles: ArticleContent[] = [
   {
     id: 64,
     title: "حقن الإيبوكسي للشقوق الإنشائية: متى يكون إصلاحاً إنشائياً؟",
-    titleEn: "Epoxy Injection for Structural Cracks: When Is It a Structural Repair?",
+    titleEn: "Epoxy Injection for Structural Cracks: When It Counts as Structural Repair",
     category: "موسوعة الحقن والتحسين",
     categoryEn: "Grouting & Improvement Encyclopedia",
     categoriesAr: ["موسوعة الحقن والتحسين", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -8895,7 +8895,7 @@ export const articles: ArticleContent[] = [
   {
     id: 65,
     title: "تدعيم العناصر الإنشائية بالكربون فايبر (CFRP) بالتزامن مع حقن التربة",
-    titleEn: "Structural Strengthening using CFRP Concurrently with Soil Grouting",
+    titleEn: "CFRP Strengthening Alongside Soil Grouting: Integrated Repair Strategies",
     category: "موسوعة الحقن والتحسين",
     categoryEn: "Grouting & Improvement Encyclopedia",
     categoriesAr: ["موسوعة الحقن والتحسين", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -9044,7 +9044,7 @@ export const articles: ArticleContent[] = [
   {
     id: 66,
     title: "معالجة هبوط القواعد المنفصلة مقابل اللبشة المسلحة",
-    titleEn: "معالجة هبوط القواعد المنفصلة مقابل اللبشة المسلحة",
+    titleEn: "Settlement Remediation: Isolated Footings vs Raft Foundations",
     category: "موسوعة الحقن والتحسين",
     categoryEn: "Grouting & Improvement Encyclopedia",
     categoriesAr: ["موسوعة الحقن والتحسين", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -9154,7 +9154,7 @@ export const articles: ArticleContent[] = [
   {
     id: 67,
     title: "حماية المنشآت الأثرية والتاريخية باستخدام تقنيات الحقن الدقيق",
-    titleEn: "حماية المنشآت الأثرية والتاريخية باستخدام تقنيات الحقن الدقيق",
+    titleEn: "Protecting Heritage Structures with Micro‑Grouting Techniques",
     category: "موسوعة الحقن والتحسين",
     categoryEn: "Grouting & Improvement Encyclopedia",
     categoriesAr: ["موسوعة الحقن والتحسين", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -9290,7 +9290,7 @@ export const articles: ArticleContent[] = [
   {
     id: 68,
     title: "تقوية التربة تحت الطرق والمدارج: متطلبات خاصة وسرعة تنفيذ",
-    titleEn: "Soil Strengthening under Roads and Runways: Special Requirements and Rapid Execution",
+    titleEn: "Ground Improvement Under Roads and Runways: Special Requirements and Fast Delivery",
     category: "موسوعة الحقن والتحسين",
     categoryEn: "Grouting & Improvement Encyclopedia",
     categoriesAr: ["موسوعة الحقن والتحسين", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -9479,7 +9479,7 @@ export const articles: ArticleContent[] = [
   {
     id: 69,
     title: "التعامل مع مشاكل التربة في الأبراج العالية والمباني ذات الأحمال الكبيرة",
-    titleEn: "Addressing Soil Challenges in High-Rise Towers and Heavy-Load Buildings",
+    titleEn: "Grouting for High‑Rise Towers and Heavy‑Load Buildings: Key Considerations",
     category: "حقن التربة",
     categoryEn: "Soil Grouting",
     categoriesAr: ["حقن التربة", "الهندسة الجيوتقنية", "موسوعة حقن التربة"],
@@ -9591,7 +9591,7 @@ export const articles: ArticleContent[] = [
   {
     id: 70,
     title: "استعادة استقامة المباني المائلة (Structure Re-leveling) عبر الحقن",
-    titleEn: "استعادة استقامة المباني المائلة (Structure Re-leveling) عبر الحقن",
+    titleEn: "Re‑Leveling Tilted Structures Using Grouting Techniques",
     category: "أساسات وهبوط",
     categoryEn: "Foundations & Settlement",
     categoriesAr: ["أساسات وهبوط", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -9712,7 +9712,7 @@ export const articles: ArticleContent[] = [
   {
     id: 71,
     title: "كيف تقرأ تقرير جسات التربة؟ من الجداول إلى المخاطر التصميمية",
-    titleEn: "How to Read a Soil Investigation Report? From Tables to Design Risks",
+    titleEn: "How to Read a Geotechnical Investigation Report: From Tables to Design Risks",
     category: "كشف التكهفات",
     categoryEn: "Cavity Detection",
     categoriesAr: ["كشف التكهفات", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -9868,7 +9868,7 @@ export const articles: ArticleContent[] = [
   {
     id: 72,
     title: "تحليل الحساسية في قرارات الحقن: أي متغير يغير قرارك أكثر؟",
-    titleEn: "تحليل الحساسية في قرارات الحقن: أي متغير يغير قرارك أكثر؟",
+    titleEn: "Sensitivity Analysis for Grouting Decisions: Which Variable Changes the Answer Most?",
     category: "تكهفات/كارست",
     categoryEn: "Sinkholes & Karst",
     categoriesAr: ["تكهفات/كارست", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -10024,7 +10024,7 @@ export const articles: ArticleContent[] = [
   {
     id: 73,
     title: "مستقبل حقن التربة: الذكاء الاصطناعي والاستشعار عن بعد",
-    titleEn: "The Future of Soil Grouting: Artificial Intelligence and Remote Sensing",
+    titleEn: "The Future of Soil Grouting: AI, Sensors, and Remote Monitoring",
     category: "حقن التربة",
     categoryEn: "Soil Grouting",
     categoriesAr: ["حقن التربة", "الهندسة الجيوتقنية", "موسوعة حقن التربة"],
@@ -10158,7 +10158,7 @@ export const articles: ArticleContent[] = [
   {
     id: 74,
     title: "دراسة حالة: معالجة تكهف ضخم تحت منطقة سكنية (الدروس المستفادة)",
-    titleEn: "Case Study: Remediation of a Large Underground Cavity beneath a Residential Area (Lessons Learned)",
+    titleEn: "Case Study: Treating a Large Cavity Beneath a Residential Area—Lessons Learned",
     category: "المسح الجيوفيزيائي",
     categoryEn: "Geophysical Surveys",
     categoriesAr: ["المسح الجيوفيزيائي", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -10286,7 +10286,7 @@ export const articles: ArticleContent[] = [
   {
     id: 75,
     title: "دراسة حالة: وقف تسرب مياه جوفية في قبو مبنى تجاري",
-    titleEn: "Case Study: Stopping Groundwater Leakage in a Commercial Building Basement",
+    titleEn: "Case Study: Stopping Groundwater Leakage in a Commercial Basement",
     category: "شقوق ومنشآت",
     categoryEn: "Cracks & Structures",
     categoriesAr: ["شقوق ومنشآت", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -10406,7 +10406,7 @@ export const articles: ArticleContent[] = [
   {
     id: 76,
     title: "أهمية الفحص الدوري للمباني: مؤشرات مبكرة تمنع كوارث مستقبلية",
-    titleEn: "The Importance of Periodic Building Inspections: Early Indicators to Prevent Future Disasters",
+    titleEn: "Why Periodic Building Inspections Matter: Early Signs That Prevent Failures",
     category: "اختبارات التربة",
     categoryEn: "Soil Investigation",
     categoriesAr: ["اختبارات التربة", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -10560,7 +10560,7 @@ export const articles: ArticleContent[] = [
   {
     id: 77,
     title: "دليل المالك: كيف تختار مقاول الحقن المتخصص؟",
-    titleEn: "Owner's Guide: How to Choose a Specialized Soil Grouting Contractor?",
+    titleEn: "Owner’s Guide: How to Choose a Specialized Grouting Contractor",
     category: "إدارة مخاطر",
     categoryEn: "Risk Management",
     categoriesAr: ["إدارة مخاطر", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
@@ -10701,7 +10701,7 @@ export const articles: ArticleContent[] = [
   {
     id: 78,
     title: "الخلاصة: فلسفة الحقن كعلم يجمع بين الخبرة الميدانية والنظرية الهندسية",
-    titleEn: "Article 78",
+    titleEn: "Conclusion: Grouting as a Discipline Bridging Field Experience and Engineering Theory",
     category: "إدارة الأصول",
     categoryEn: "Asset Management",
     categoriesAr: ["إدارة الأصول", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
