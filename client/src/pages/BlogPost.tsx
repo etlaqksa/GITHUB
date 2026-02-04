@@ -466,11 +466,12 @@ const schema = useMemo(() => {
             lang={language === 'ar' ? 'ar' : 'en'}
             className={`prose prose-slate dark:prose-invert max-w-none
               prose-headings:font-bold prose-headings:text-primary
-              prose-p:text-muted-foreground prose-p:leading-relaxed prose-p:text-lg
+              prose-p:text-foreground/90 prose-p:leading-8 prose-p:text-base md:prose-p:text-lg
               prose-strong:text-foreground prose-strong:font-bold
               prose-ul:list-disc prose-ul:pl-5 prose-li:my-1
               prose-a:text-primary prose-a:no-underline hover:prose-a:underline
-              ${language === 'ar' ? 'rtl' : 'ltr'}`}
+              prose-table:w-full prose-th:whitespace-nowrap
+              ${language === 'ar' ? 'rtl prose-headings:text-right prose-p:text-right prose-li:text-right' : 'ltr'}`}
           >
             <ReactMarkdown
               remarkPlugins={[remarkGfm]}
