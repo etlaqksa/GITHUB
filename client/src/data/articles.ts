@@ -10816,5 +10816,266 @@ export const articles: ArticleContent[] = [
       { question: "How do you choose the mix and viscosity?", answer: "We base it on ground type, test results, and the treatment objective. In many cases, mixes are adjusted progressively to balance penetration and control." },
       { question: "How do I know the treatment worked?", answer: "Indicators include stabilized take patterns, improved monitoring results, and verification outputs (probing/tests) aligned with the project’s acceptance criteria." },
     ],
+  },
+
+  {
+    id: 79,
+    title: "دمج حقن التربة مع تدعيم CFRP: إطار عملي لاستقرار المنشآت ومعالجة الهبوط",
+    titleEn: "Combining Soil Grouting and CFRP Strengthening: A Practical Framework for Settlement Mitigation",
+    category: "موسوعة الحقن والتحسين",
+    categoryEn: "Grouting & Improvement Encyclopedia",
+    categoriesAr: ["موسوعة الحقن والتحسين", "الهندسة الجيوتقنية", "حقن التربة", "تدعيم المنشآت"],
+    categoriesEn: ["Grouting & Improvement Encyclopedia", "Geotechnical Engineering", "Soil Grouting", "Structural Strengthening"],
+    date: "2026-03-16",
+    readTime: "3 دقيقة",
+    readTimeEn: "3 min",
+    author: "فريق ETLAQ الهندسي",
+    slug: "cfrp-soil-grouting-framework",
+    image: {
+      url: "/article-images/hero/cfrp-soil-grouting-framework.svg",
+      alt: "دمج حقن التربة مع تدعيم CFRP: إطار عملي لاستقرار المنشآت ومعالجة الهبوط",
+      creditName: "ETLAQ (generated)",
+      creditUrl: "",
+      license: "Internal",
+    },
+    excerpt: "مقدمة تُعدّ عملية تدعيم العناصر الإنشائية باستخدام ألياف الكربون المعززة بالبلاستيك (CFRP) من أحدث التقنيات الهندسية التي تُستخدم لتحسين الأداء الإنشائي للعناصر المتعبة أو الضعيفة. عند دمج هذه التقنية مع حقن التربة (Soi…",
+    excerptEn: "Introduction Structural strengthening using Carbon Fiber Reinforced Polymer (CFRP) composites has emerged as a state-of-the-art engineering solution for enhancing the performance of weakened or aging structural elements…",
+    content: `### مقدمة  
+تُعدّ عملية تدعيم العناصر الإنشائية باستخدام ألياف الكربون المعززة بالبلاستيك (CFRP) من أحدث التقنيات الهندسية التي تُستخدم لتحسين الأداء الإنشائي للعناصر المتعبة أو الضعيفة. عند دمج هذه التقنية مع حقن التربة (Soil Grouting)، خصوصاً في المواقع التي تعاني من ضعف خواص التربة أو وجود فراغات تحت الأساسات، يُمكن تحقيق تحسين شامل في أداء المنشأ واستقراره. تتيح هذه الجمع بين التدعيم والتنشيط الأرضي حلولاً فعالة لدعم المباني القائمة والإنشاءات الجديدة على حد سواء.
+
+### تفاصيل تقنية التدعيم المتزامن (CFRP + Soil Grouting)  
+
+#### 1. مفهوم حقن التربة وأنواعه  
+حقن التربة هو عملية هندسية تستهدف تحسين خواص التربة الأساسية أسفل المنشآت بواسطة إدخال مواد ملء في الفراغات أو في المسام الناتجة عن ضعف التربة بهدف رفع قدرتها على التحمل وتقليل الهبوط. الأنواع الأساسية هي:
+
+- **حقن الأسمنت (Cement Grouting):** يُستخدم خليط أسمنت مائي لملء الفراغات وتصليب التربة.
+- **حقن النفث (Jet Grouting):** تقنية متقدمة تُستخدم فيها نفاثات عالية الضغط لتفتيت التربة وخلطها بالأسمنت.
+- **حقن المواد الكيميائية:** تستخدم مواد بوليمرية مثل البولي يوريثان عادة لإغلاق تسربات المياه أو تحسين خواص التربة الطينية.
+
+#### 2. تدعيم العناصر الإنشائية بألياف الكربون (CFRP)  
+ألياف الكربون المعززة بالبلاستيك CFRP هي مواد مركبة تتسم بخفة الوزن، مقاومة كيميائية عالية، وقوة شد ممتازة تتجاوز الفولاذ. تُستخدم للأغراض التالية:
+
+- زيادة قدرة التحمل للحوائط، الكمرات، الأعمدة والألواح.
+- إطالة العمر الافتراضي للمنشآت.
+- مقاومة التشققات وتأخير تدهور العناصر الإنشائية.
+
+تطبق عادةً على السطح الخارجي بعد تجهيز وتنظيف العنصر، وتُثبت بواسطة مواد لاصقة إيبوكسية عازلة.
+
+#### 3. الجمع بين التدعيم بالكربون فايبر وحقن التربة  
+في مواقع التربة الضعيفة أو التي تحوي فراغات، يُعدّ الجمع بين حقن التربة وتدعيم العناصر بالكربون فايبر نهجاً هندسياً متكاملاً:
+
+- **تحسين التربة:** الحقن يؤدي إلى تقوية التربة تحت الأساسات، تقليل الهبوط غير المتجانس، ومعالجة الفراغات.
+- **تدعيم العناصر الإنشائية:** تقوية النطاق الحامل وتحسين سلوك الانبعاج والقص في العناصر، خصوصاً إذا كانت قد تعرضت لتشققات.
+- **تخفيف تأثير الهبوط:** الحقن يقلل حركة التربة، والكربون فايبر يعزز قدرة العنصر على تحمل الإجهادات الناتجة.
+- **تكامل الأداء:** يتطلب التنسيق بين فريق الجيوتقني وفريق التدعيم لضمان نجاح العملية، مع مراقبة مستمرة لجودة الحقن وسلوك التشققات (مثلاً باستخدام جسر المراقبة للشقوق وفقاً لمعايير ASTM D7313).
+
+#### 4. المعايير الدولية والتوصيات  
+- **EN 12715:** مواصفات قوالب وألياف الكربون المستخدمة في تدعيم الخرسانة.
+- **ASTM D7313:** معايير مراقبة التشققات قبل وبعد التدعيم والحقن.
+- **FHWA:** توصيات لطرق حقن التربة والاختبارات اللازمة لضمان الاستقرار.
+
+#### 5. خطوات التنفيذ  
+1. **الفحص والجودة:** إجراء مسح جيولوجي وجيوتقني شامل (بما في ذلك استخدام رادار اختراق الأرض GPR لفحص الفراغات).
+2. **تصميم التدعيم والحقن:** بناء نموذج الأرض وتقدير الأحمال، واختيار نوع الحقن ونوعية CFRP والمادة اللاصقة.
+3. **تنفيذ الحقن:** حقن التربة تبعاً للبروتوكولات القياسية مع التحقق من الضغط والتدفق.
+4. **تدعيم العناصر:** تركيب ألياف الكربون بواسطة الإيبوكسي وفق نظم التنفيذ المعتمدة.
+5. **المراقبة والمتابعة:** فحص التشققات وقياس الهبوط لضمان نجاح العملية.
+
+### الخلاصة  
+يُعدّ تدعيم العناصر الإنشائية باستخدام ألياف الكربون بالتزامن مع حقن التربة حلاً هندسياً متكاملاً يعالج بفعالية مشاكل ضعف التربة والهياكل القائمة التي تعاني من التشققات أو الهبوط. عبر الجمع بين تحسين التربة عبر الحقن وتعزيز خصائص العناصر الإنشائية باستخدام CFRP، يمكن ضمان استدامة المنشآت وسلامتها لفترات أطول مع تقليل التكاليف والاضطرابات المرتبطة بأعمال الصيانة التقليدية.
+
+---
+
+---
+
+## روابط ذات صلة داخل موقعنا
+
+- [حقن التربة (الحقن الأسمنتي)](/services/grouting)
+- [كشف التكهفات والفراغات](/services/cavity)
+- [الاختبارات الجيوفيزيائية (GPR/ERT/MASW)](/services/geophysical)
+- [المدن التي نخدمها](/locations)
+- [خدماتنا في الرياض](/locations/riyadh)
+- [اطلب خدمة / تواصل معنا](/request-service)
+`,
+    contentEn: `### Introduction  
+Structural strengthening using Carbon Fiber Reinforced Polymer (CFRP) composites has emerged as a state-of-the-art engineering solution for enhancing the performance of weakened or aging structural elements. When combined with soil grouting, particularly in sites suffering from weak foundation soils or the presence of voids beneath foundations, this approach provides a comprehensive improvement in the stability and load-bearing capacity of the structure. The integration of these techniques enables effective support for both existing and new constructions.
+
+### Detailed Technical Content
+
+#### 1. Soil Grouting: Types and Principles  
+Soil grouting is a geoengineering process aimed at improving the mechanical properties of the soil beneath structures by injecting filling materials into voids or loose soil pores to increase bearing capacity and reduce settlement. The main types include:
+
+- **Cement Grouting:** Injection of cementitious slurry to fill voids and solidify soil.
+- **Jet Grouting:** Advanced high-pressure jetting to break and mix soil with cement slurry.
+- **Chemical Grouting:** Use of polymeric materials like polyurethane to seal leaks or improve fine soils.
+
+#### 2. CFRP Structural Strengthening  
+Carbon Fiber Reinforced Polymer (CFRP) composites are lightweight, corrosion-resistant materials exhibiting tensile strength exceeding that of steel. Applications include:
+
+- Enhancing load capacity of beams, columns, slabs, and walls.
+- Extending service life of structures.
+- Controlling crack propagation and mitigating degradation.
+
+CFRP laminates or sheets are bonded to prepared structural surfaces using epoxy adhesives to provide confinement and reinforcement.
+
+#### 3. Concurrent Use of CFRP and Soil Grouting  
+In weak or void-affected soil conditions, integrating soil grouting with CFRP strengthening offers a synergistic engineering solution:
+
+- **Soil Improvement:** Grouting strengthens the foundation soil, reduces differential settlement, and fills cavities.
+- **Structural Enhancement:** CFRP wraps or plates increase flexural and shear capacity, especially for cracked or damaged members.
+- **Settlement Mitigation:** Grouting minimizes soil movement, while CFRP enhances structural resilience to residual stresses.
+- **Process Coordination:** Collaboration between geotechnical and structural teams is critical, with continuous crack monitoring per ASTM D7313 guiding the intervention.
+
+#### 4. International Standards and Guidelines  
+- **EN 12715:** Standards for carbon fiber composite materials for concrete reinforcement.
+- **ASTM D7313:** Guidelines for crack monitoring during repair and grouting operations.
+- **FHWA Specifications:** Procedures and quality controls for soil grouting applications.
+
+#### 5. Implementation Workflow  
+1. **Site Investigation:** Comprehensive geotechnical survey, including Ground Penetrating Radar (GPR) to identify subsurface voids.
+2. **Design:** Development of soil-structure interaction models, selection of grouting type and CFRP system.
+3. **Grouting Execution:** Controlled injection with pressure and flow monitoring.
+4. **CFRP Application:** Surface preparation followed by epoxy bonding of CFRP laminates.
+5. **Monitoring:** Post-intervention assessments of crack widths and settlement levels to verify success.
+
+### Conclusion  
+The concurrent application of CFRP strengthening and soil grouting constitutes an integrated engineering approach that effectively addresses foundation soil weaknesses and remedial repair of structural members exhibiting distress or cracking. By improving soil support and enhancing the mechanical performance of structural elements, this combined methodology ensures long-term serviceability, safety, and economic efficiency of civil infrastructure.
+
+---
+
+---
+
+## Related links on our site
+
+- [Soil Grouting (Cement Injection)](/services/grouting)
+- [Void & Cavity Detection](/services/cavity)
+- [Geophysical Testing (GPR/ERT/MASW)](/services/geophysical)
+- [All cities we serve](/locations)
+- [Our services in Riyadh](/locations/riyadh)
+- [Request a service / Contact us](/request-service)
+`,
+    faqAr: [{"question": "متى نحتاج دمج حقن التربة مع تدعيم CFRP؟", "answer": "عندما يكون مصدر المشكلة مزدوجًا: ضعف/هبوط في التربة يسبب تشققات أو إجهادات إضافية على العناصر الإنشائية، ويستلزم علاج التربة مع تعزيز العناصر المتأثرة لتحسين الاستقرار العام."}, {"question": "هل يبدأ التنفيذ من التربة أم من العنصر الإنشائي؟", "answer": "في الغالب نُفضّل تثبيت/تحسين التربة أولًا لتقليل الحركة المستقبلية، ثم تنفيذ تدعيم CFRP على العناصر بعد استقرار السلوك أو بالتنسيق الزمني بين المرحلتين حسب الحالة."}, {"question": "هل تدعيم CFRP وحده يعالج الهبوط؟", "answer": "CFRP يحسن مقاومة العنصر الإنشائي لكنه لا يغيّر خصائص التربة. إذا كان الهبوط مستمرًا أو السبب جيوتقنيًا، فلابد من معالجة التربة (مثل الحقن) لوقف السبب الجذري."}, {"question": "ما المؤشرات العملية لنجاح الحل المزدوج؟", "answer": "تراجع أو توقف تطور التشققات، استقرار القراءات المساحية/الهبوط، وتحسن مؤشرات الأداء الإنشائي حسب خطة التقييم."}],
+    faqEn: [{"question": "When do you combine soil grouting with CFRP strengthening?", "answer": "When the issue is dual in nature: weak ground/settlement drives structural distress, so both the ground and the affected members should be treated to improve overall stability."}, {"question": "Do you start with the ground or the structure?", "answer": "Typically, ground improvement is performed first to reduce future movement, followed by CFRP strengthening once behavior stabilizes—or coordinated in sequence depending on the case."}, {"question": "Can CFRP alone fix settlement problems?", "answer": "CFRP improves member capacity but does not change soil properties. If settlement is ongoing or geotechnical in origin, ground treatment (e.g., grouting) is needed to address the root cause."}, {"question": "What are practical success indicators?", "answer": "Reduced crack progression, stable survey/settlement readings, and improved structural performance indicators as defined by the project’s evaluation plan."}],
+  },
+
+
+  {
+    id: 80,
+    title: "مواد ومعايير دمج CFRP مع حقن التربة: اختيار النظام المناسب وتقليل التشققات",
+    titleEn: "Materials and Standards for CFRP + Soil Grouting: Choosing the Right System and Reducing Cracking",
+    category: "موسوعة الحقن والتحسين",
+    categoryEn: "Grouting & Improvement Encyclopedia",
+    categoriesAr: ["موسوعة الحقن والتحسين", "الهندسة الجيوتقنية", "حقن التربة", "تدعيم المنشآت"],
+    categoriesEn: ["Grouting & Improvement Encyclopedia", "Geotechnical Engineering", "Soil Grouting", "Structural Strengthening"],
+    date: "2026-03-17",
+    readTime: "3 دقيقة",
+    readTimeEn: "3 min",
+    author: "فريق ETLAQ الهندسي",
+    slug: "cfrp-soil-grouting-materials-standards",
+    image: {
+      url: "/article-images/hero/cfrp-soil-grouting-materials-standards.svg",
+      alt: "مواد ومعايير دمج CFRP مع حقن التربة: اختيار النظام المناسب وتقليل التشققات",
+      creditName: "ETLAQ (generated)",
+      creditUrl: "",
+      license: "Internal",
+    },
+    excerpt: "المقدمة تُعتبر عمليات تدعيم العناصر الإنشائية ثمّةً جزءًا أساسيًا في صيانة المباني والمنشآت القائمة، خصوصًا عند مواجهة معوقات جيولوجية مثل ضعف التربة أو الهبوط غير المنتظم. أحد الحلول الهندسية المتقدمة يتمثل في الجمع بي…",
+    excerptEn: "Introduction Structural strengthening and ground improvement are critical in maintaining and rehabilitating existing buildings, especially when faced with geological challenges such as weak soils or differential settlem…",
+    content: `### المقدمة  
+تُعتبر عمليات تدعيم العناصر الإنشائية ثمّةً جزءًا أساسيًا في صيانة المباني والمنشآت القائمة، خصوصًا عند مواجهة معوقات جيولوجية مثل ضعف التربة أو الهبوط غير المنتظم. أحد الحلول الهندسية المتقدمة يتمثل في الجمع بين تقنيتين فعالتين: تدعيم العناصر الإنشائية بألياف الكربون المركبة (CFRP) وعملية حقن التربة (Soil Grouting). تهدف هذه الطريقة إلى تحسين أداء العناصر الإنشائية مع معالجة وتحسين خواص التربة الأساسية تحتها، بما يعزز الاستقرار الهيكلي ويحد من التشققات والهشاشة.
+
+### المحتوى الفني  
+#### 1. مقدمة عن CFRP وحقن التربة  
+- **ألياف الكربون المركبة (CFRP):** هي صفائح أو لفائف عالية القوة والصلابة، مقاومة للتآكل، ذات وزن خفيف جدًا مقارنة بالمواد التقليدية. تستخدم CFRP في تقوية الأعمدة والكمرات والجدران، حيث توفر مقاومة إنشائية كبيرة دون زيادة في الأوزان أو أبعاد العناصر.  
+- **حقن التربة (Soil Grouting):** تقنية هندسية تهدف إلى تحسين خصائص التربة مثل الكثافة، التماسكية، وقوة التحمل من خلال حقن مواد مختلفة مثل الملاط الأسمنتي أو البولي يوريثان أو السيليكات في التربة تحت الضغط.  
+
+#### 2. آلية الدمج بين CFRP وحقن التربة  
+تعتمد هذه التقنية على تقوية العناصر الإنشائية بتطبيق ألياف الكربون المركبة عليها بالتزامن مع عملية حقن التربة تحتها. الدمج يتم على النحو التالي:  
+- **تقييم شامل للتربة والإنشائي:** يجري فحص التربة والبنية الإنشائية باستخدام الفحوصات المخبرية والميدانية (مثل SPT، GPR، فحص الشقوق اللاصقة) لتحديد العيوب ونقاط الضعف.  
+- **تصميم خطة الحقن:** اختيار نوع الحقن الملائم (حقن أسمنتي، نفث، أو بولي يوريثان) ومدى الضغط والمعايير التقنية بما يتناسق مع طبيعة التربة والتحميلات.  
+- **تنفيذ الحقن:** يتم حقن التربة لتحسين قدرتها على تحمل الأحمال، تقليل الهبوط، ومنع تحرك التربة.  
+- **تدعيم العناصر بالكربون فايبر:** بعد أو أثناء الحقن، يتم تثبيت ألياف الكربون على السطوح الإنشائية المتأثرة (كالأعمدة، الكمرات، الجدران) باستخدام الراتنجات الإيبوكسية لتوفير مقاومة شد إضافية.  
+
+#### 3. المواد والمعايير المستخدمة  
+- **مواد CFRP:** يجب أن تستوفي المواصفات القياسية مثل ASTM D7264، EN 1462، التي تعالج متانة الألياف وقوة الالتصاق.  
+- **خرطوشة الحقن:** اعتماد مواد حقن تتوافق مع EN 12715:2000 القياسية لحقن التربة بالأسمنت.  
+- **الراتنج الإيبوكسي:** يفضل استخدام راتنجات عالية الأداء ذات مواصفات ASTM D3039 لضمان التماسك مع CFRP والخرسانة.  
+
+#### 4. الفوائد الفنية لهذه الطريقة  
+- تعزيز مقاومة العناصر ضد الشد والشد العرضي.  
+- تقليل خطر تطور التشققات الهيكلية بسبب الهبوط أو التحميل الزائد.  
+- تحسين خواص التربة الأساسية مما يقلل من الهبوط المستقبلي واضطرابات التشوه.  
+- تقنية غير جذرية تحفظ البنية التحتية وتسرع الإنجاز مقارنة بالحفر والتجديد التقليدي.  
+
+#### 5. الاستخدامات العملية المثلى  
+- تدعيم المباني القديمة المتأثرة بحركات التربة.  
+- معالجة الانخفاضات المتفاوتة في الأراضي التي تؤثر على استقرار الأعمدة.  
+- تقوية الهياكل التي تعرضت للتشققات الإنشائية نتيجة تحميلات غير متوقعة أو تغيرات جوفية.  
+
+### الخلاصة  
+يمثل دمج تقنية تدعيم الكربون فايبر مع حقن التربة نهجًا هندسيًا متكاملًا ومبتكرًا لعلاج مشاكل ضعف التربة والهياكل المتأثرة بها. هذا التكامل يرفع من أداء المنشآت ويمكن تنفيذه بكفاءة وفقًا للمعايير الدولية مثل ASTM وEN لضمان الجودة والسلامة. تؤدي هذه الطريقة إلى تعزيز متانة المنشآت وإطالة عمرها الافتراضي بطرق فعالة مستدامة.
+
+---
+
+---
+
+## روابط ذات صلة داخل موقعنا
+
+- [حقن التربة (الحقن الأسمنتي)](/services/grouting)
+- [كشف التكهفات والفراغات](/services/cavity)
+- [الاختبارات الجيوفيزيائية (GPR/ERT/MASW)](/services/geophysical)
+- [المدن التي نخدمها](/locations)
+- [خدماتنا في الرياض](/locations/riyadh)
+- [اطلب خدمة / تواصل معنا](/request-service)
+`,
+    contentEn: `### Introduction  
+Structural strengthening and ground improvement are critical in maintaining and rehabilitating existing buildings, especially when faced with geological challenges such as weak soils or differential settlement. An advanced engineering solution involves combining two highly effective techniques: Carbon Fiber Reinforced Polymer (CFRP) strengthening and soil grouting. This integrated approach aims to enhance structural performance while improving the underlying soil properties, thereby improving stability and reducing cracking and degradation.
+
+### Technical Content  
+#### 1. Overview of CFRP and Soil Grouting  
+- **Carbon Fiber Reinforced Polymer (CFRP):** CFRP consists of lightweight, high-strength composite laminates or wraps that are corrosion-resistant. These materials are used to strengthen columns, beams, and walls by providing significant tensile resistance without adding substantial weight or increasing structural dimensions.  
+- **Soil Grouting:** This geotechnical technique improves soil properties such as density, cohesion, and bearing capacity by injecting grout materials (cementitious, polyurethane, silicate, etc.) into the subsurface under controlled pressure.  
+
+#### 2. Mechanism of CFRP Strengthening Concurrent with Soil Grouting  
+The method integrates structural strengthening using CFRP application directly on structural elements while concurrently improving the soil through grouting beneath. The typical workflow:  
+- **Comprehensive Assessment:** Conduct laboratory and field testing (e.g., Standard Penetration Test (SPT), Ground Penetrating Radar (GPR), crack monitoring) to establish soil conditions and extent of structural distress.  
+- **Grouting Plan Design:** Select an appropriate grouting technique (compaction, permeation, jet grouting) with design pressures and material properties tailored to soil and load conditions.  
+- **Grout Injection:** Perform soil injection to enhance bearing capacity, reduce differential settlement, and stabilize soil mass.  
+- **CFRP Installation:** During or following grouting, apply CFRP laminates or wraps bonded with epoxy resin onto affected structural elements (columns, beams, walls) to restore or increase tensile capacity.  
+
+#### 3. Materials and Applicable Standards  
+- **CFRP Materials:** Must comply with standards such as ASTM D7264 for flexural properties or EN 1462 for fiber reinforced plastics.  
+- **Grout Materials:** Should meet EN 12715:2000 requirements for cementitious soil grouts.  
+- **Epoxy Resins:** High-performance epoxy adhesives conforming to ASTM D3039 ensure optimal bonding between CFRP and concrete substrate.  
+
+#### 4. Technical Benefits  
+- Enhances structural tensile and shear resistance.  
+- Mitigates the propagation of structural cracks due to settlement or overloading.  
+- Improves subsoil strength properties, reducing future settlement and deformation risks.  
+- Non-invasive technique that preserves existing infrastructure and accelerates construction compared to traditional excavation and underpinning methods.  
+
+#### 5. Practical Applications  
+- Strengthening older buildings affected by soil movement.  
+- Addressing differential settlement affecting load-bearing columns.  
+- Reinforcing structures exhibiting structural cracks from unexpected loads or subsurface changes.  
+
+### Conclusion  
+Combining CFRP strengthening with simultaneous soil grouting provides a comprehensive and innovative engineering approach to tackling weak soil and structurally compromised elements. When designed and executed in compliance with international standards such as ASTM and EN, this method significantly improves the durability and lifespan of structures in a cost-effective and sustainable manner.
+
+---
+
+---
+
+## Related links on our site
+
+- [Soil Grouting (Cement Injection)](/services/grouting)
+- [Void & Cavity Detection](/services/cavity)
+- [Geophysical Testing (GPR/ERT/MASW)](/services/geophysical)
+- [All cities we serve](/locations)
+- [Our services in Riyadh](/locations/riyadh)
+- [Request a service / Contact us](/request-service)
+`,
+    faqAr: [{"question": "ما الفرق بين شرائح CFRP وأقمشة CFRP؟", "answer": "الشرائح (Laminates) تعطي مقاومة شد عالية باتجاه محدد وتُستخدم غالبًا للانحناء/العزم، بينما الأقمشة (Wraps) مرنة وتناسب تغليف الأعمدة لتحسين الحصر والقص."}, {"question": "كيف تؤثر الرطوبة ودرجة الحرارة على الالتصاق؟", "answer": "الرطوبة العالية أو سطح غير مُحضّر يقللان من جودة الالتصاق بالإيبوكسي. يلزم تحضير السطح وضبط ظروف التطبيق وفق توصيات النظام المستخدم."}, {"question": "هل يمكن تنفيذ CFRP بالتزامن مع حقن التربة؟", "answer": "نعم، لكن يجب التخطيط للتسلسل لتجنب حركة غير مرغوبة أثناء الحقن. غالبًا يُنفذ الحقن أولًا ثم CFRP بعد استقرار أولي، حسب الحالة."}, {"question": "ما أهم المراجع والمعايير المستخدمة؟", "answer": "توجد مراجع لأنظمة CFRP مثل ACI/ASTM/EN، إضافة إلى إرشادات تحسين التربة والحقن. الاختيار يعتمد على نوع العنصر والهدف وبيئة الموقع."}],
+    faqEn: [{"question": "What’s the difference between CFRP laminates and wraps?", "answer": "Laminates provide high tensile capacity in a specific direction (often for flexure), while wraps are flexible fabrics used for confinement and shear enhancement."}, {"question": "How do moisture and temperature affect bonding?", "answer": "High moisture or poor surface preparation reduces epoxy bond quality. Proper substrate prep and suitable application conditions are essential per the CFRP system guidelines."}, {"question": "Can CFRP be applied concurrently with soil grouting?", "answer": "Yes, but sequencing must be planned to avoid undesirable movement during grouting. Often grouting is performed first, then CFRP after initial stabilization—depending on case conditions."}, {"question": "Which references typically govern design?", "answer": "Design commonly draws on ACI/ASTM/EN guidance for CFRP systems and recognized recommendations for grouting/ground improvement, tailored to member type, objective, and site environment."}],
   }
 ];
