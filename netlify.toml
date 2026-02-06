@@ -1,6 +1,10 @@
 [build]
   publish = "dist"
-  command = "npm install && npm run build"
+  command = "npm run build"
+
+[build.environment]
+  NODE_VERSION = "20"
+  SITE_URL = "https://etlaqksa.com"
 
 # Ensure Netlify parses static HTML forms (Netlify Forms detection)
 [build.processing]

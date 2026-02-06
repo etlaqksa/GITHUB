@@ -1,158 +1,183 @@
-#!/usr/bin/env node
+import fs from 'node:fs';
+import path from 'node:path';
+
 /**
- * Generate sitemap.xml from known routes + article slugs.
+ * Generates client/public/sitemap.xml
  *
- * Output:
- *  - client/public/sitemap.xml
- *
- * Configure base URL:
- *  - SITE_URL env var (recommended in Netlify)
- *  - fallback to https://etlaq1.netlify.app
+ * - Includes: core routes, /locations/* city/service landings, and /blog/* article pages for both languages.
+ * - Source of truth:
+ *   - client/src/data/seoLocations.ts (cities + serviceLandings)
+ *   - client/src/data/articles.ts (articles[].slug + articles[].date)
  */
-import fs from "node:fs";
-import path from "node:path";
 
-const SITE_URL = (process.env.SITE_URL || "https://etlaqksa.com").replace(/\/+$/, "");
+const PROJECT_ROOT = path.resolve(process.cwd());
+const CLIENT_PUBLIC = path.join(PROJECT_ROOT, 'client', 'public');
 
-const ROOT = process.cwd();
-const ARTICLES_TS = path.join(ROOT, "client", "src", "data", "articles.ts");
-const PROJECTS_TS = path.join(ROOT, "client", "src", "data", "projects.ts");
-const LOCATIONS_TS = path.join(ROOT, "client", "src", "data", "seoLocations.ts");
-const OUT = path.join(ROOT, "client", "public", "sitemap.xml");
+const SITE_URL = (
+  process.env.SITE_URL ||
+  process.env.URL ||
+  process.env.DEPLOY_PRIME_URL ||
+  'https://etlaqksa.com'
+).replace(/\/+$/, '');
 
-function readArticlesSlugs() {
-  const txt = fs.readFileSync(ARTICLES_TS, "utf8");
-  const slugs = new Set();
-  // slug: '...'
-  const reSlug = /slug:\s*['"]([^'"]+)['"]/g;
+function escapeXml(s) {
+  return String(s)
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;')
+    .replaceAll("'", '&apos;');
+}
+
+function readFile(p) {
+  return fs.readFileSync(p, 'utf8');
+}
+
+function extractStringArrayValues(tsText, arrayName) {
+  // Very small regex-based extractor (keeps build fast, avoids TS runtime).
+  // Works with patterns like: export const cities: City[] = [ { slug: 'riyadh', ... }, ...]
+  const blockMatch = tsText.match(new RegExp(`export\\s+const\\s+${arrayName}[^=]*=\\s*\\[([\\s\\S]*?)\\]\\s*;`, 'm'));
+  if (!blockMatch) return [];
+  const block = blockMatch[1];
+
+  // Grab slug: '...' or slug: "..."
+  const slugs = [];
+  const slugRe = /slug\s*:\s*(['"])(.*?)\1/g;
   let m;
-  while ((m = reSlug.exec(txt))) {
-    slugs.add(m[1]);
+  while ((m = slugRe.exec(block))) {
+    slugs.push(m[2]);
   }
-  return Array.from(slugs);
+  return Array.from(new Set(slugs)).filter(Boolean);
 }
 
-function readProjectSlugs() {
-  try {
-    const txt = fs.readFileSync(PROJECTS_TS, "utf8");
-    const slugs = new Set();
-    const reSlug = /slug:\s*['"]([^'"]+)['"]/g;
-    let m;
-    while ((m = reSlug.exec(txt))) {
-      slugs.add(m[1]);
+function extractArticleEntries(tsText) {
+  // Extract { slug: "...", date: "YYYY-MM-DD" }
+  const entries = [];
+  const re = /slug\s*:\s*(['"])(.*?)\1[\s\S]*?date\s*:\s*(['"])(.*?)\3/g;
+  let m;
+  while ((m = re.exec(tsText))) {
+    entries.push({ slug: m[2], date: m[4] });
+  }
+  // Fallback: if date not found near slug, still include slug.
+  if (!entries.length) {
+    const slugRe = /slug\s*:\s*(['"])(.*?)\1/g;
+    while ((m = slugRe.exec(tsText))) {
+      entries.push({ slug: m[2], date: undefined });
     }
-    return Array.from(slugs);
-  } catch {
-    return [];
   }
+  // Deduplicate by slug (keep earliest found)
+  const seen = new Set();
+  return entries.filter((e) => {
+    if (!e.slug || seen.has(e.slug)) return false;
+    seen.add(e.slug);
+    return true;
+  });
 }
 
-function readLocationSlugs() {
-  try {
-    const txt = fs.readFileSync(LOCATIONS_TS, "utf8");
-    // cities: { slug: 'riyadh', ... }
-    const citySlugs = new Set();
-    const serviceSlugs = new Set();
-    const reCity = /\{\s*slug:\s*['"]([^'"]+)['"][^\}]*\}/g;
-    let m;
-    // We'll parse all slug entries, then split by section heuristics
-    // by checking whether the preceding few chars contain 'cities' or 'serviceLandings'.
-    while ((m = reCity.exec(txt))) {
-      const slug = m[1];
-      const start = Math.max(0, m.index - 120);
-      const ctx = txt.slice(start, m.index);
-      if (ctx.includes('serviceLandings')) serviceSlugs.add(slug);
-      else if (ctx.includes('cities')) citySlugs.add(slug);
-    }
-    return {
-      cities: Array.from(citySlugs),
-      services: Array.from(serviceSlugs),
-    };
-  } catch {
-    return { cities: [], services: [] };
-  }
+function isoDate(d) {
+  // Keep only YYYY-MM-DD if provided; otherwise omit.
+  if (!d) return undefined;
+  const m = String(d).match(/^\d{4}-\d{2}-\d{2}$/);
+  return m ? m[0] : undefined;
 }
 
-
-function isoDate(d = new Date()) {
-  // YYYY-MM-DD
-  return d.toISOString().slice(0, 10);
+function url(pathname) {
+  if (!pathname.startsWith('/')) pathname = `/${pathname}`;
+  return `${SITE_URL}${pathname}`;
 }
 
-function urlNode(loc, lastmod) {
-  return [
-    "  <url>",
-    `    <loc>${loc}</loc>`,
-    lastmod ? `    <lastmod>${lastmod}</lastmod>` : null,
-    "  </url>",
-  ].filter(Boolean).join("\n");
+function makeUrlEntry(loc, lastmod) {
+  const lm = isoDate(lastmod);
+  return lm
+    ? `  <url>\n    <loc>${escapeXml(loc)}</loc>\n    <lastmod>${escapeXml(lm)}</lastmod>\n  </url>`
+    : `  <url>\n    <loc>${escapeXml(loc)}</loc>\n  </url>`;
+}
+
+function ensureDir(p) {
+  fs.mkdirSync(p, { recursive: true });
 }
 
 function main() {
-  const today = isoDate();
-  const staticRoutes = [
-    "/",
-    "/about",
-    "/services",
-    "/services/grouting",
-    "/services/cavity",
-    "/services/geophysical",
-    "/projects",
-    "/case-studies",
-    "/gallery",
-    "/faq",
-    "/contact",
-    "/request-service",
-    "/for/individuals",
-    "/for/developers",
-    "/for/contractors",
-    "/for/government",
-    "/blog",
-    "/locations",
-  ];
+  const seoLocationsPath = path.join(PROJECT_ROOT, 'client', 'src', 'data', 'seoLocations.ts');
+  const articlesPath = path.join(PROJECT_ROOT, 'client', 'src', 'data', 'articles.ts');
 
-  const slugs = readArticlesSlugs();
-  const projectSlugs = readProjectSlugs();
-  const loc = readLocationSlugs();
-  const urls = [];
+  const seoText = readFile(seoLocationsPath);
+  const articlesText = readFile(articlesPath);
+
+  const citySlugs = extractStringArrayValues(seoText, 'cities');
+  const serviceSlugs = extractStringArrayValues(seoText, 'serviceLandings');
+  const articleEntries = extractArticleEntries(articlesText);
 
   const langs = ['ar', 'en'];
-  const prefixed = (lang, route) => {
-    if (route === '/') return `/${lang}/`;
-    return `/${lang}${route.startsWith('/') ? route : `/${route}`}`;
-  };
+  const staticRoutes = [
+    '/',
+    '/about',
+    '/services',
+    '/services/grouting',
+    '/services/cavity',
+    '/services/geophysical',
+    '/projects',
+    '/case-studies',
+    '/gallery',
+    '/blog',
+    '/faq',
+    '/contact',
+    '/request-service',
+    '/thank-you',
+    '/locations'
+  ];
 
+  const urls = [];
+
+  // Core pages
   for (const lang of langs) {
     for (const r of staticRoutes) {
-      urls.push(urlNode(`${SITE_URL}${prefixed(lang, r)}`, today));
+      const p = r === '/' ? `/${lang}` : `/${lang}${r}`;
+      urls.push({ loc: url(p), lastmod: undefined });
     }
-    for (const slug of slugs) {
-      urls.push(urlNode(`${SITE_URL}${prefixed(lang, `/blog/${slug}`)}`, today));
-    }
-    for (const slug of projectSlugs) {
-      urls.push(urlNode(`${SITE_URL}${prefixed(lang, `/projects/${slug}`)}`, today));
-    }
+  }
 
-    // City and city-service landing pages
-    for (const city of loc.cities) {
-      urls.push(urlNode(`${SITE_URL}${prefixed(lang, `/locations/${city}`)}`, today));
-      for (const svc of loc.services) {
-        urls.push(urlNode(`${SITE_URL}${prefixed(lang, `/locations/${city}/${svc}`)}`, today));
+  // City landings
+  for (const lang of langs) {
+    for (const city of citySlugs) {
+      urls.push({ loc: url(`/${lang}/locations/${city}`), lastmod: undefined });
+      for (const service of serviceSlugs) {
+        urls.push({ loc: url(`/${lang}/locations/${city}/${service}`), lastmod: undefined });
       }
     }
   }
 
-  const xml =
-`<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urls.join("\n")}
-</urlset>
-`;
+  // Articles
+  for (const lang of langs) {
+    for (const a of articleEntries) {
+      urls.push({ loc: url(`/${lang}/blog/${a.slug}`), lastmod: a.date });
+    }
+  }
 
-  fs.mkdirSync(path.dirname(OUT), { recursive: true });
-  fs.writeFileSync(OUT, xml, "utf8");
-  console.log(`Generated: ${path.relative(ROOT, OUT)} (URLs: ${urls.length})`);
-  console.log(`Tip: set SITE_URL in Netlify to your custom domain for correct links.`);
+  // Dedup
+  const seen = new Set();
+  const deduped = urls.filter((u) => {
+    if (seen.has(u.loc)) return false;
+    seen.add(u.loc);
+    return true;
+  });
+
+  const xml = [
+    '<?xml version="1.0" encoding="UTF-8"?>',
+    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+    ...deduped.map((u) => makeUrlEntry(u.loc, u.lastmod)),
+    '</urlset>',
+    ''
+  ].join('\n');
+
+  ensureDir(CLIENT_PUBLIC);
+  const outPath = path.join(CLIENT_PUBLIC, 'sitemap.xml');
+  fs.writeFileSync(outPath, xml, 'utf8');
+
+  // eslint-disable-next-line no-console
+  console.log(`Generated: client/public/sitemap.xml (URLs: ${deduped.length})`);
+  // eslint-disable-next-line no-console
+  console.log('Tip: set SITE_URL in Netlify to your custom domain for correct links.');
 }
 
 main();

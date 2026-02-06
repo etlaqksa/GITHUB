@@ -5,7 +5,8 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Calendar, Clock, User, Search } from 'lucide-react';
 import { useMemo, useState, useEffect } from 'react';
 import { useLocation } from 'wouter';
-import { articles as allArticles, type ArticleContent } from '@/data/articles';
+import type { ArticleContent } from '@/data/articles';
+import { loadArticles } from '@/data/articlesLoader';
 import ProtectedImage from '@/components/ProtectedImage';
 import LocalizedLink from '@/components/LocalizedLink';
 import { SEO } from '@/components/SEO';
@@ -160,6 +161,27 @@ export default function Blog() {
 
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
+  // Lazy-load the large encyclopedia dataset.
+  const [allArticles, setAllArticles] = useState<ArticleContent[]>([]);
+  const [isLoadingArticles, setIsLoadingArticles] = useState(true);
+
+  useEffect(() => {
+    let alive = true;
+    setIsLoadingArticles(true);
+    loadArticles()
+      .then((a) => {
+        if (!alive) return;
+        setAllArticles(a);
+      })
+      .finally(() => {
+        if (!alive) return;
+        setIsLoadingArticles(false);
+      });
+    return () => {
+      alive = false;
+    };
+  }, []);
+
   const onCategoryClick = (c: string) => {
     setSelectedCategory(c);
     const params = new URLSearchParams(window.location.search);
@@ -183,7 +205,7 @@ export default function Blog() {
       list.forEach(c => cats.add(c));
     });
     return Array.from(cats).sort((a, b) => a.localeCompare(b));
-  }, [language]);
+  }, [language, allArticles]);
 
   const articles = useMemo(() => {
     const q = searchQuery.trim().toLowerCase();
@@ -201,7 +223,7 @@ export default function Blog() {
       })
       // Display in encyclopedia order: Article 1 → Article N (stable across languages)
       .sort((a, b) => (a.id ?? 0) - (b.id ?? 0));
-  }, [language, selectedCategory, searchQuery]);
+  }, [language, selectedCategory, searchQuery, allArticles]);
 
   const pickCategory = (cat: string) => {
     setSelectedCategory(cat);
@@ -278,11 +300,21 @@ export default function Blog() {
         </div>
 
         {/* Articles grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {articles.map(article => (
-            <ArticleCard key={article.id} article={article} language={language} onPickCategory={pickCategory} />
-          ))}
-        </div>
+        {isLoadingArticles && allArticles.length === 0 ? (
+          <div className="py-16 text-center text-muted-foreground">
+            {language === 'ar' ? 'جاري تحميل المقالات…' : 'Loading articles…'}
+          </div>
+        ) : articles.length === 0 ? (
+          <div className="py-16 text-center text-muted-foreground">
+            {language === 'ar' ? 'لا توجد نتائج مطابقة للبحث.' : 'No matching results.'}
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {articles.map((article) => (
+              <ArticleCard key={article.id} article={article} language={language} onPickCategory={pickCategory} />
+            ))}
+          </div>
+        )}
       </div>
       </div>
     </>

@@ -3,7 +3,8 @@ import { useRoute, useLocation } from 'wouter';
 import { Badge } from '@/components/ui/badge';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { articles, type ArticleContent } from '@/data/articles';
+import type { ArticleContent } from '@/data/articles';
+import { loadArticles } from '@/data/articlesLoader';
 import { SEO } from '@/components/SEO';
 import { Calendar, Clock, User, ArrowLeft, ArrowRight } from 'lucide-react';
 
@@ -100,14 +101,39 @@ export default function BlogPost() {
   const [, params] = useRoute<{ slug: string }>('/blog/:slug');
   const [, setLocation] = useLocation();
 
+  // Lazy-load the large encyclopedia dataset.
+  const [allArticles, setAllArticles] = useState<ArticleContent[]>([]);
+  const [isLoadingArticles, setIsLoadingArticles] = useState(true);
+
+  useEffect(() => {
+    let alive = true;
+    setIsLoadingArticles(true);
+    loadArticles()
+      .then((a) => {
+        if (!alive) return;
+        setAllArticles(Array.isArray(a) ? a : []);
+      })
+      .catch(() => {
+        if (!alive) return;
+        setAllArticles([]);
+      })
+      .finally(() => {
+        if (!alive) return;
+        setIsLoadingArticles(false);
+      });
+    return () => {
+      alive = false;
+    };
+  }, []);
+
   const swipeRef = useRef<HTMLDivElement | null>(null);
   const touchStart = useRef<{ x: number; y: number } | null>(null);
 
   const article = useMemo(() => {
     const slug = params?.slug;
     if (!slug) return null;
-    return articles.find((a) => a.slug === slug) || null;
-  }, [params?.slug]);
+    return allArticles.find((a) => a.slug === slug) || null;
+  }, [params?.slug, allArticles]);
 
   const title = useMemo(() => {
     if (!article) return '';
@@ -201,7 +227,7 @@ const schema = useMemo(() => {
 
     // Keep the same sequence used by the blog listing ([] array order),
     // but only include items that have content in the current language.
-    const list = articles.filter((a) => (language === 'ar' ? Boolean(a.title && a.content) : Boolean(a.titleEn && a.contentEn)));
+    const list = allArticles.filter((a) => (language === 'ar' ? Boolean(a.title && a.content) : Boolean(a.titleEn && a.contentEn)));
     // Keep a stable order
     list.sort((a, b) => (a.id ?? 0) - (b.id ?? 0));
     const idx = list.findIndex((a) => a.slug === article.slug);
@@ -209,7 +235,7 @@ const schema = useMemo(() => {
       prevArticle: idx > 0 ? list[idx - 1] : null,
       nextArticle: idx >= 0 && idx < list.length - 1 ? list[idx + 1] : null,
     };
-  }, [article, language]);
+  }, [article, language, allArticles]);
 
   const goPrev = () => {
     if (!prevArticle) return;
@@ -313,6 +339,16 @@ const schema = useMemo(() => {
     return setHeroSrc('/og-image.webp');
   };
 
+
+  if (isLoadingArticles) {
+    return (
+      <div className="container mx-auto px-4 py-16">
+        <div className="max-w-3xl mx-auto text-center text-muted-foreground">
+          {language === 'ar' ? 'جاري تحميل المقال…' : 'Loading article…'}
+        </div>
+      </div>
+    );
+  }
 
   if (!article) {
     return (

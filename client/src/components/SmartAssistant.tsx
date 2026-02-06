@@ -6,7 +6,8 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from 
 import { Badge } from '@/components/ui/badge';
 import { useLanguage } from '@/contexts/LanguageContext';
 import LocalizedLink from '@/components/LocalizedLink';
-import { articles } from '@/data/articles';
+import type { ArticleContent } from '@/data/articles';
+import { loadArticles } from '@/data/articlesLoader';
 
 type Intent = {
   key: string;
@@ -67,18 +68,35 @@ export default function SmartAssistant() {
   const [input, setInput] = useState('');
   const [q, setQ] = useState('');
   const [hasSearched, setHasSearched] = useState(false);
+  const [allArticles, setAllArticles] = useState<ArticleContent[] | null>(null);
+  const [isLoadingArticles, setIsLoadingArticles] = useState(false);
 
-  const runSearch = () => {
+  const runSearch = async () => {
     const next = input.trim();
     setQ(next);
     setHasSearched(true);
+
+    if (next.length < 2) return;
+    if (allArticles) return;
+    setIsLoadingArticles(true);
+    try {
+      const a = await loadArticles();
+      setAllArticles(Array.isArray(a) ? a : []);
+    } catch {
+      setAllArticles([]);
+    } finally {
+      setIsLoadingArticles(false);
+    }
   };
 
   const results = useMemo(() => {
     const query = q.trim();
     if (query.length < 2) return [] as { slug: string; title: string; score: number }[];
 
-    const list = articles
+    const src = allArticles || [];
+    if (src.length === 0) return [] as { slug: string; title: string; score: number }[];
+
+    const list = src
       .map((a: any) => {
         // Our canonical article shape uses: title/titleEn, category/categoryEn, excerpt/excerptEn.
         // (Older datasets used titleAr/categoryAr)
@@ -100,7 +118,7 @@ export default function SmartAssistant() {
       .slice(0, 6);
 
     return list;
-  }, [q, isAr]);
+  }, [q, isAr, allArticles]);
 
   return (
     <div className="fixed bottom-24 md:bottom-5 right-6 z-50">
@@ -184,7 +202,13 @@ export default function SmartAssistant() {
                 </div>
               </div>
 
-              {hasSearched && q.trim().length >= 2 && results.length === 0 && (
+              {hasSearched && isLoadingArticles && q.trim().length >= 2 && (
+                <div className="text-sm text-muted-foreground">
+                  {isAr ? 'جاري تحميل قاعدة المقالات…' : 'Loading articles dataset…'}
+                </div>
+              )}
+
+              {hasSearched && !isLoadingArticles && q.trim().length >= 2 && results.length === 0 && (
                 <div className="text-sm text-muted-foreground">
                   {isAr ? 'لم نجد نتائج مباشرة. جرّب كلمة أقصر أو مرادفًا.' : 'No direct results. Try a shorter keyword or a synonym.'}
                 </div>
