@@ -1,0 +1,146 @@
+[build]
+  publish = "dist"
+  command = "npm run build"
+
+[build.environment]
+  NODE_VERSION = "20"
+  SITE_URL = "https://etlaqksa.com"
+
+# Ensure Netlify parses static HTML forms (Netlify Forms detection)
+[build.processing]
+  ignore_html_forms = false
+
+# Language-prefixed SPA routing (matches public/_redirects)
+# NOTE: We intentionally do NOT force a trailing slash here to avoid redirect loops
+# if Netlify's trailing-slash setting is configured.
+
+[[redirects]]
+  from = "/"
+  to = "/ar"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ar"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/ar/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/en"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/en/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/assets/*"
+  to = "/assets/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/images/*"
+  to = "/images/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/gallery/*"
+  to = "/gallery/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/article-images/*"
+  to = "/article-images/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/favicon.png"
+  to = "/favicon.png"
+  status = 200
+
+[[redirects]]
+  from = "/logo.png"
+  to = "/logo.png"
+  status = 200
+
+[[redirects]]
+  from = "/manifest.json"
+  to = "/manifest.json"
+  status = 200
+
+[[redirects]]
+  from = "/robots.txt"
+  to = "/robots.txt"
+  status = 200
+
+[[redirects]]
+  from = "/sitemap.xml"
+  to = "/sitemap.xml"
+  status = 200
+
+[[redirects]]
+  from = "/company-profile.pdf"
+  to = "/company-profile.pdf"
+  status = 200
+
+[[redirects]]
+  from = "/og-image.jpg"
+  to = "/og-image.jpg"
+  status = 200
+
+[[redirects]]
+  from = "/og-image.webp"
+  to = "/og-image.webp"
+  status = 200
+
+[[redirects]]
+  from = "/__forms.html"
+  to = "/__forms.html"
+  status = 200
+
+[[redirects]]
+  from = "/api/*"
+  to = "/api/:splat"
+  status = 200
+
+# NOTE: We intentionally do NOT add a forced 301 to /ar/* here.
+# - For manual deploys, Netlify uses dist/_redirects.
+# - For repo-based deploys, we keep behavior consistent with _redirects
+#   by rewriting everything to /index.html (SPA) and letting the app
+#   canonicalize to /ar or /en via history.replaceState.
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+
+# Long cache for local gallery images (used in slideshow + articles fallbacks)
+[[headers]]
+  for = "/gallery/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Default security headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()"
+    Cross-Origin-Opener-Policy = "same-origin"
+    Cross-Origin-Resource-Policy = "same-origin"
+    # We embed Google Maps on /contact; COEP: require-corp breaks many third-party iframes.
+    Cross-Origin-Embedder-Policy = "unsafe-none"
+    # Allow the inline GA4 initializer via hash (avoid 'unsafe-inline' for scripts)
+    Content-Security-Policy = "default-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; object-src 'none'; frame-src 'self' https://www.google.com https://www.google.com/maps https://www.google.com/maps/embed https://maps.google.com https://www.openstreetmap.org; script-src 'self' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; connect-src 'self' https:; font-src 'self' data: https://fonts.gstatic.com; worker-src 'self'; manifest-src 'self'"
+
