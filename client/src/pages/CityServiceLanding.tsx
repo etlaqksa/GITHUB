@@ -9,6 +9,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import LocalizedLink from '@/components/LocalizedLink';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { findCity, findServiceLanding, getCitySlug, getServiceSlug } from '@/data/seoLocations';
+import { getNeighborhoodSlug, listNeighborhoodsForCity } from '@/data/neighborhoods';
 import { buildCityServiceModel, isModelServiceSlug } from '@/data/cityServiceModels';
 import { buildLandingKeywords } from '@/lib/seoKeywords';
 import { absUrl, getSiteUrl } from '@/lib/siteUrl';
@@ -166,8 +167,8 @@ function ModelLanding(props: {
             <Breadcrumbs
               items={[
                 { name: lang === 'ar' ? 'المدن' : 'Locations', href: '/locations' },
-                { name: cityName, href: `/locations/${city.slug}` },
-                { name: model.h1, href: canonical, isCurrent: true },
+                { name: cityName, href: `/locations/${localizedCitySlug}` },
+                { name: model.h1, href: `/locations/${localizedCitySlug}/${localizedServiceSlug}`, isCurrent: true },
               ]}
             />
 
@@ -350,7 +351,7 @@ function ModelLanding(props: {
               </div>
 
               <div className="pt-2">
-                <LocalizedLink href={`/locations/${city.slug}`} className="text-sm text-primary hover:underline">
+                <LocalizedLink href={`/locations/${localizedCitySlug}`} className="text-sm text-primary hover:underline">
                   {lang === 'ar' ? `العودة لصفحة ${cityName}` : `Back to ${cityName}`}
                 </LocalizedLink>
               </div>
@@ -615,13 +616,56 @@ export default function CityServiceLanding({ params }: Props) {
                   </div>
                 ))}
                 <div className="pt-2">
-                  <LocalizedLink href={`/locations/${city?.slug || ''}`} className="text-sm text-primary hover:underline">
+                  <LocalizedLink href={`/locations/${localizedCitySlug}`} className="text-sm text-primary hover:underline">
                     {language === 'ar' ? `العودة لصفحة ${cityName}` : `Back to ${cityName}`}
                   </LocalizedLink>
                 </div>
               </CardContent>
             </Card>
           </div>
+
+          {city?.slug === 'riyadh' && listNeighborhoodsForCity(city).length > 0 && (
+            <div className="mt-10 max-w-4xl mx-auto">
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-xl">{language === 'ar' ? 'أحياء نخدمها في الرياض' : 'Riyadh neighborhoods we cover'}</CardTitle>
+                  <CardDescription className="leading-relaxed">
+                    {language === 'ar'
+                      ? 'روابط مباشرة لبحث محلي (طويل الذيل). هذه الصفحات مرتبطة داخلياً وتحتوي على أسئلة شائعة وروابط للخدمات الأخرى داخل نفس الحي.'
+                      : 'Direct local long-tail links. These pages are internally linked and include FAQ + cross-links to other services in the same neighborhood.'}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                    {listNeighborhoodsForCity(city)
+                      .slice(0, 24)
+                      .map((n) => (
+                        <LocalizedLink
+                          key={n.slug}
+                          href={`/locations/${localizedCitySlug}/${localizedServiceSlug}/${getNeighborhoodSlug(n, language === 'ar' ? 'ar' : 'en')}`}
+                          className="block rounded-xl border bg-background p-4 hover:bg-accent transition"
+                        >
+                          <div className="font-medium">
+                            {language === 'ar'
+                              ? `${service?.slug === 'soil-grouting' ? 'حقن تربة' : serviceName} في ${n.ar}`
+                              : `${serviceName} in ${n.en}`}
+                          </div>
+                          <div className="text-sm text-muted-foreground mt-1">{language === 'ar' ? cityName : cityName}</div>
+                        </LocalizedLink>
+                      ))}
+                  </div>
+
+                  {listNeighborhoodsForCity(city).length > 24 && (
+                    <p className="text-sm text-muted-foreground mt-4">
+                      {language === 'ar'
+                        ? 'ملاحظة: يمكن توسيع القائمة تدريجياً مع إضافة محتوى أكثر تفصيلاً لكل حي حسب طلبات العملاء.'
+                        : 'Note: We can expand this list gradually with richer neighborhood-specific content based on real requests.'}
+                    </p>
+                  )}
+                </CardContent>
+              </Card>
+            </div>
+          )}
 
           <div className="mt-10 grid lg:grid-cols-2 gap-6 items-start">
             <div className="rounded-2xl border bg-card/70 backdrop-blur p-6">

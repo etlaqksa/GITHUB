@@ -99,6 +99,49 @@ function truncateSlugWords(slug, maxWords) {
   return parts.slice(0, Math.max(1, maxWords)).join('-');
 }
 
+
+// Riyadh neighborhoods used for local long-tail pages (kept moderate to avoid thin/doorway spam).
+const RIYADH_NEIGHBORHOODS = [
+  { ar: 'حي الياسمين', en: 'Al Yasmin' },
+  { ar: 'حي الملقا', en: 'Al Malqa' },
+  { ar: 'حي النرجس', en: 'An Narjis' },
+  { ar: 'حي الندى', en: 'An Nada' },
+  { ar: 'حي الصحافة', en: 'As Sahafah' },
+  { ar: 'حي العقيق', en: 'Al Aqiq' },
+  { ar: 'حي حطين', en: 'Hittin' },
+  { ar: 'حي النخيل', en: 'An Nakheel' },
+  { ar: 'حي العليا', en: 'Al Olaya' },
+  { ar: 'حي السليمانية', en: 'As Sulaymaniyah' },
+  { ar: 'حي الملز', en: 'Al Malaz' },
+  { ar: 'حي الربوة', en: 'Ar Rabwah' },
+  { ar: 'حي الروضة', en: 'Ar Rawdah' },
+  { ar: 'حي النهضة', en: 'An Nahdah' },
+  { ar: 'حي اليرموك', en: 'Al Yarmuk' },
+  { ar: 'حي النسيم', en: 'An Naseem' },
+  { ar: 'حي الشفا', en: 'Ash Shifa' },
+  { ar: 'حي العزيزية', en: 'Al Aziziyah' },
+  { ar: 'حي بدر', en: 'Badr' },
+  { ar: 'حي السويدي', en: 'As Suwaidi' },
+  { ar: 'حي طويق', en: 'Tuwaiq' },
+  { ar: 'حي لبن', en: 'Laban' },
+  { ar: 'حي العريجاء', en: 'Al Uraija' },
+  { ar: 'حي الحزم', en: 'Al Hazm' },
+  { ar: 'حي نمار', en: 'Namar' },
+  { ar: 'حي المونسية', en: 'Al Munsiyah' },
+  { ar: 'حي الخليج', en: 'Al Khaleej' },
+  { ar: 'حي الازدهار', en: 'Al Izdihar' },
+  { ar: 'حي الرائد', en: 'Ar Raid' },
+  { ar: 'حي المروج', en: 'Al Muruj' },
+  { ar: 'حي الورود', en: 'Al Woroud' },
+  { ar: 'حي الرحمانية', en: 'Ar Rahmaniyah' },
+  { ar: 'حي الربيع', en: 'Ar Rabie' },
+  { ar: 'حي القيروان', en: 'Al Qirawan' },
+  { ar: 'حي المهدية', en: 'Al Mahdiyah' },
+  { ar: 'حي ظهرة لبن', en: 'Dhahrat Laban' },
+  { ar: 'حي الرمال', en: 'Ar Rimal' },
+  { ar: 'حي قرطبة', en: 'Qurtubah' },
+  { ar: 'حي غرناطة', en: 'Ghirnatah' },
+];
 function extractArticlesForSitemap() {
   const articlesPath = path.join(process.cwd(), 'client', 'src', 'data', 'articles.ts');
   const t = readText(articlesPath);
@@ -156,7 +199,17 @@ function buildSitemap() {
     for (const s of services) {
       // Arabic city-service slug format: <service>-في-<city>
       addUrl(urls, `/ar/locations/${c.arSlug}/${s.arSlug}-في-${c.arSlug}`);
-      addUrl(urls, `/en/locations/${c.slug}/${s.slug}`);
+      addUrl(urls, `/en/locations/${c.slug}/${s.slug}-in-${c.slug}`);
+
+      // Neighborhood long-tail pages (Riyadh only, curated list)
+      if (c.slug === 'riyadh') {
+        for (const n of RIYADH_NEIGHBORHOODS) {
+          const hoodAr = slugifyAr(n.ar);
+          const hoodEn = slugifyEn(n.en);
+          addUrl(urls, `/ar/locations/${c.arSlug}/${s.arSlug}-في-${c.arSlug}/${hoodAr}`);
+          addUrl(urls, `/en/locations/${c.slug}/${s.slug}-in-${c.slug}/${hoodEn}`);
+        }
+      }
     }
   }
 

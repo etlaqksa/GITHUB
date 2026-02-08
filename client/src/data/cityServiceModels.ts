@@ -58,19 +58,19 @@ export function buildCityServiceModel(params: { lang: 'ar' | 'en'; city: City; s
   if (params.service.slug === 'soil-grouting') {
     const seoTitle = byLang(
       lang,
-      `حقن التربة في ${c} (الحقن الأسمنتي في ${c}) | ${brandAr}`,
+      `حقن تربة في ${c} (الحقن الأسمنتي في ${c}) | ${brandAr}`,
       `Soil Grouting in ${c} (Cement Grouting) | ${brandEn}`,
     );
     const seoDescription = byLang(
       lang,
-      `حقن التربة والحقن الأسمنتي في ${c} لمعالجة الهبوط والتشققات وملء الفراغات والتكهفات. معاينة ميدانية + خطة واضحة + تنفيذ احترافي وتقارير مفهومة من ${brandAr}.`,
+      `حقن تربة (حقن التربة) والحقن الأسمنتي في ${c} لمعالجة الهبوط والتشققات وملء الفراغات والتكهفات. معاينة ميدانية + خطة واضحة + تنفيذ احترافي وتقارير مفهومة من ${brandAr}.`,
       `Soil (cement) grouting in ${c} to address settlement, cracks and subsurface voids. Site visit + clear plan + professional execution with easy-to-read deliverables by ${brandEn}.`,
     );
 
     return {
       seoTitle,
       seoDescription,
-      h1: byLang(lang, `حقن التربة في ${c} (الحقن الأسمنتي في ${c})`, `Soil Grouting in ${c} (Cement Grouting)`),
+      h1: byLang(lang, `حقن تربة في ${c} (الحقن الأسمنتي في ${c})`, `Soil Grouting in ${c} (Cement Grouting)`),
       kicker: byLang(lang, `${brandAr} — حلول هندسية ميدانية`, `${brandEn} — Field‑proven engineering solutions`),
       chips: byLang(
         lang,

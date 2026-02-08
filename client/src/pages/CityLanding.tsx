@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import LocalizedLink from '@/components/LocalizedLink';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { findCity, serviceLandings, getCitySlug, getServiceSlug } from '@/data/seoLocations';
+import { getNeighborhoodSlug, listNeighborhoodsForCity } from '@/data/neighborhoods';
 import { buildLandingKeywords } from '@/lib/seoKeywords';
 import { absUrl } from '@/lib/siteUrl';
 import { MapPin, ArrowRight } from 'lucide-react';
@@ -113,6 +114,50 @@ export default function CityLanding({ params }: Props) {
               </Card>
             ))}
           </div>
+
+          {city?.slug === 'riyadh' && listNeighborhoodsForCity(city).length > 0 && (
+            <div className="mt-12 max-w-5xl mx-auto">
+              <Card className="border-dashed">
+                <CardHeader>
+                  <CardTitle className="text-xl">{language === 'ar' ? 'أحياء الرياض (بحث محلي طويل الذيل)' : 'Riyadh neighborhoods (local long-tail)'}</CardTitle>
+                  <CardDescription className="leading-relaxed">
+                    {language === 'ar'
+                      ? 'روابط مباشرة لصفحات محلية مرتبطة داخلياً — تساعد الزائر على الوصول بسرعة لما يحتاجه داخل الحي.'
+                      : 'Direct internally-linked local pages — helps visitors reach the right service fast.'}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  {(() => {
+                    const soil = serviceLandings.find((s) => s.slug === 'soil-grouting') || serviceLandings[0];
+                    const soilSlug = getServiceSlug(soil, language, city);
+                    return (
+                      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                        {listNeighborhoodsForCity(city)
+                          .slice(0, 28)
+                          .map((n) => (
+                            <LocalizedLink
+                              key={n.slug}
+                              href={`/locations/${citySlug}/${soilSlug}/${getNeighborhoodSlug(n, language === 'ar' ? 'ar' : 'en')}`}
+                              className="block rounded-xl border bg-background p-4 hover:bg-accent transition"
+                            >
+                              <div className="font-medium">
+                                {language === 'ar' ? `حقن تربة في ${n.ar}` : `Soil grouting in ${n.en}`}
+                              </div>
+                              <div className="text-sm text-muted-foreground mt-1">{cityName}</div>
+                            </LocalizedLink>
+                          ))}
+                      </div>
+                    );
+                  })()}
+                  <p className="text-xs text-muted-foreground mt-4">
+                    {language === 'ar'
+                      ? 'نقوم بتوسيع الصفحات المحلية تدريجياً بناءً على الطلب الفعلي. الهدف: قيمة للمستخدم وليس تكراراً آلياً.'
+                      : 'We expand local pages gradually based on real demand. The goal is user value—not automated duplication.'}
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          )}
         </div>
       </section>
     </>

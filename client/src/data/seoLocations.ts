@@ -27,7 +27,7 @@ export type ServiceLanding = {
   servicePageHref?: string;
 };
 
-import { slugifyAr, serviceSlugArWithCity } from '@/lib/slugify';
+import { slugifyAr, slugifyEn } from '@/lib/slugify';
 
 // Major cities/regions in Saudi Arabia (as provided by the user)
 export const cities: City[] = [
@@ -108,12 +108,21 @@ export function getCitySlug(city: City, lang: 'ar' | 'en') {
   return lang === 'ar' ? city.arSlug : city.slug;
 }
 
+export function serviceSlugEnWithCity(serviceEnSlug: string, cityEnSlug: string) {
+  const s = String(serviceEnSlug || '').replace(/^\/+|\/+$/g, '');
+  const c = String(cityEnSlug || '').replace(/^\/+|\/+$/g, '');
+  return `${s}-in-${c}`.replace(/-+/g, '-');
+}
+
 export function getServiceSlug(service: ServiceLanding, lang: 'ar' | 'en', city?: City) {
   if (lang === 'ar') {
     // City-service landings use service slug WITH city suffix for Arabic.
     return city ? serviceSlugArWithCity(service.arSlug, city.arSlug) : service.arSlug;
   }
-  return service.slug;
+
+  // English city/service pages are also more readable with "-in-<city>".
+  // We still support the legacy slug without the suffix.
+  return city ? serviceSlugEnWithCity(service.slug, city.slug) : service.slug;
 }
 
 export function normalizeServiceSlugParam(param: string, city?: City) {
@@ -148,7 +157,6 @@ export function normalizeServiceSlugParam(param: string, city?: City) {
     if (stripped) return stripped;
   }
 
-
   // Map legacy base slugs to the current canonical base slugs
   const legacyMap: Record<string, string> = {
     'حقن-التربة': 'حقن-تربة',
@@ -158,7 +166,31 @@ export function normalizeServiceSlugParam(param: string, city?: City) {
   };
   if (legacyMap[p]) return legacyMap[p];
 
-  // Otherwise return as-is
+  return p;
+}
+
+/** Normalizes English service slug params (supports "-in-<city>" and legacy without suffix). */
+export function normalizeEnServiceSlugParam(param: string, city?: City) {
+  const p = String(param || '').replace(/^\/+|\/+$/g, '');
+  if (!p) return p;
+
+  const stripForCity = (cityEnSlug: string) => {
+    const suffix = `-in-${cityEnSlug}`;
+    if (p.endsWith(suffix)) return p.slice(0, -suffix.length);
+    return undefined;
+  };
+
+  if (city?.slug) {
+    const stripped = stripForCity(city.slug);
+    if (stripped) return stripped;
+  }
+
+  // Try to strip for any known city slug.
+  for (const c of cities) {
+    const stripped = stripForCity(c.slug);
+    if (stripped) return stripped;
+  }
+
   return p;
 }
 
@@ -171,17 +203,21 @@ export function findServiceLanding(slugOrArSlugOrCitySuffix: string, city?: City
   const raw = String(slugOrArSlugOrCitySuffix || '').replace(/^\/+|\/+$/g, '');
   if (!raw) return undefined;
 
-  const normalized = normalizeServiceSlugParam(raw, city);
+  // English: allow "-in-<city>" suffix
+  const normalizedEn = normalizeEnServiceSlugParam(raw, city);
 
-  // Match English slug
-  const byEn = serviceLandings.find((s) => s.slug === raw || s.slug === normalized);
+  // Arabic: allow "-في-<city>" suffix and legacy mappings
+  const normalizedAr = normalizeServiceSlugParam(raw, city);
+
+  // Match English slug (raw or normalized)
+  const byEn = serviceLandings.find((s) => s.slug === raw || s.slug === normalizedEn || s.slug === normalizedAr);
   if (byEn) return byEn;
 
-  // Match Arabic base slug
-  const byAr = serviceLandings.find((s) => s.arSlug === raw || s.arSlug === normalized);
+  // Match Arabic base slug (raw or normalized)
+  const byAr = serviceLandings.find((s) => s.arSlug === raw || s.arSlug === normalizedAr);
   if (byAr) return byAr;
 
   // Last-resort: try slugifying Arabic name and matching
   const guess = slugifyAr(raw);
-  return serviceLandings.find((s) => s.arSlug === guess);
+  return serviceLandings.find((s) => s.arSlug === guess) || serviceLandings.find((s) => s.slug === slugifyEn(raw));
 }
