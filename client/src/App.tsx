@@ -36,6 +36,7 @@ const SmartAssistant = lazy(() => import("./components/SmartAssistant"));
 const Locations = lazy(() => import("./pages/Locations"));
 const CityLanding = lazy(() => import("./pages/CityLanding"));
 const CityServiceLanding = lazy(() => import("./pages/CityServiceLanding"));
+const CityServiceNeighborhoodLanding = lazy(() => import("./pages/CityServiceNeighborhoodLanding"));
 
 const ServiceGrouting = lazy(() => import("./pages/services/ServiceGrouting"));
 const ServiceCavity = lazy(() => import("./pages/services/ServiceCavity"));
@@ -81,6 +82,7 @@ function AppLayout() {
             <Route path="/for/:audience" component={Audience} />
 
             {/* SEO: city/service landing pages */}
+            <Route path="/locations/:citySlug/:serviceSlug/:hoodSlug" component={CityServiceNeighborhoodLanding} />
             <Route path="/locations/:citySlug/:serviceSlug" component={CityServiceLanding} />
             <Route path="/locations/:citySlug" component={CityLanding} />
             <Route path="/locations" component={Locations} />
