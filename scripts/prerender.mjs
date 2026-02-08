@@ -109,9 +109,91 @@ async function waitForPreviewReady(proc) {
 
 async function main() {
   const routes = readSitemapPaths().filter((r) => isHtmlPagePath(r.encodedPath));
-  const limit = Number(process.env.PRERENDER_LIMIT || 0);
-  const list = Number.isFinite(limit) && limit > 0 ? routes.slice(0, limit) : routes;
 
+// Netlify has a default build time limit (often ~15–20 minutes). Prerendering every
+// route can exceed that once you have hundreds of pages. So:
+// - On Netlify, we prerender a prioritized subset by default.
+// - You can override with PRERENDER_LIMIT (e.g. 779) if your build timeout is increased.
+const envLimit = Number(process.env.PRERENDER_LIMIT || 0);
+const defaultNetlifyLimit = 380; // safe default to avoid Netlify timeouts
+const limit =
+  Number.isFinite(envLimit) && envLimit > 0 ? envLimit : (IS_NETLIFY ? defaultNetlifyLimit : 0);
+
+const coreSet = new Set([
+  '/', '/home',
+  '/ar', '/en',
+  '/ar/about', '/en/about',
+  '/ar/services', '/en/services',
+  '/ar/projects', '/en/projects',
+  '/ar/case-studies', '/en/case-studies',
+  '/ar/gallery', '/en/gallery',
+  '/ar/blog', '/en/blog',
+  '/ar/faq', '/en/faq',
+  '/ar/contact', '/en/contact',
+  '/ar/request-service', '/en/request-service',
+  '/ar/locations', '/en/locations',
+  '/ar/sitemap', '/en/sitemap',
+]);
+
+const isCore = (p) => coreSet.has(p);
+
+const isNeighborhoodHub = (p) => p.endsWith('/احياء') || p.endsWith('/neighborhoods');
+const isCityLanding = (p) => /^\/(ar|en)\/locations\/[^\/]+$/.test(p);
+const isCityService = (p) => /^\/(ar|en)\/locations\/[^\/]+\/[^\/]+$/.test(p);
+const isNeighborhood = (p) => /^\/(ar|en)\/locations\/[^\/]+\/[^\/]+\/[^\/]+$/.test(p);
+const isBlogPost = (p) => /^\/(ar|en)\/blog\/[^\/]+$/.test(p);
+
+// Keep a balanced prioritized selection:
+const core = [];
+const cityLanding = [];
+const cityService = [];
+const hubs = [];
+const neighborhoods = [];
+const blogPosts = [];
+const other = [];
+
+for (const r of routes) {
+  const p = r.encodedPath;
+  if (isCore(p)) core.push(r);
+  else if (isNeighborhoodHub(p)) hubs.push(r);
+  else if (isCityLanding(p)) cityLanding.push(r);
+  else if (isCityService(p)) cityService.push(r);
+  else if (isBlogPost(p)) blogPosts.push(r);
+  else if (isNeighborhood(p)) neighborhoods.push(r);
+  else other.push(r);
+}
+
+// Prefer Riyadh neighborhoods first (most important long-tail)
+const riyadhNeighborhoods = neighborhoods.filter((r) => r.encodedPath.includes('/locations/') && (r.encodedPath.includes('%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6') || r.encodedPath.includes('/riyadh/')));
+const otherNeighborhoods = neighborhoods.filter((r) => !riyadhNeighborhoods.includes(r));
+
+// Sort blog posts to put non-generic slugs first (skip old geotech-encyclopedia-* priority)
+blogPosts.sort((a, b) => {
+  const score = (p) => (p.includes('geotech-encyclopedia') ? 1 : 0);
+  return score(a.encodedPath) - score(b.encodedPath) || a.encodedPath.localeCompare(b.encodedPath);
+});
+
+// Compose selection
+let list = [
+  ...core,
+  ...hubs,
+  ...cityLanding,
+  ...cityService,
+  ...riyadhNeighborhoods.slice(0, 24),   // top 24 Riyadh neighborhood pages
+  ...blogPosts.slice(0, 60),             // top 60 blog posts (includes both languages)
+  ...otherNeighborhoods.slice(0, 12),
+  ...other,
+];
+
+// De-dup preserving order
+const seen2 = new Set();
+list = list.filter((r) => {
+  if (seen2.has(r.encodedPath)) return false;
+  seen2.add(r.encodedPath);
+  return true;
+});
+
+if (Number.isFinite(limit) && limit > 0) list = list.slice(0, limit);
   if (list.length === 0) {
     console.log('[prerender] No routes found to prerender.');
     return;
@@ -160,7 +242,10 @@ async function main() {
 
   let ok = 0;
   let failed = 0;
-  console.log(`[prerender] Routes: ${list.length}`);
+  console.log(`[prerender] Routes selected: ${list.length}`);
+  if (IS_NETLIFY && !(Number(process.env.PRERENDER_LIMIT || 0) > 0)) {
+    console.log('[prerender] Tip: set PRERENDER_LIMIT to increase/decrease pages prerendered.');
+  }
 
   for (const r of list) {
     const url = base + r.encodedPath;
@@ -198,5 +283,6 @@ async function main() {
 
 main().catch((e) => {
   console.error('[prerender] Fatal:', e);
-  process.exit(1);
+  console.warn('[prerender] Prerender aborted. Continuing build without prerender output.');
+  process.exit(0);
 });
