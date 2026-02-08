@@ -87,8 +87,8 @@ export default function CityServiceNeighborhoodLanding() {
       // Exact-match pattern for local long-tail searches
       const base =
         service.slug === 'soil-grouting'
-          ? `حقن تربة في ${neighborhood.ar} بـ${city.ar}`
-          : `${service.ar} في ${neighborhood.ar} بـ${city.ar}`;
+          ? `حقن تربة في ${neighborhood.ar} في ${city.ar}`
+          : `${service.ar} في ${neighborhood.ar} في ${city.ar}`;
       return `${base} | شركة إطلاق المتميزة`;
     }
     const base = `${service.en} in ${neighborhood.en}, ${city.en}`;
@@ -98,7 +98,7 @@ export default function CityServiceNeighborhoodLanding() {
   const description = useMemo(() => {
     if (!city || !service || !neighborhood) return '';
     if (lang === 'ar') {
-      return `صفحة محلية لخدمة ${service.ar} في ${neighborhood.ar} بـ${city.ar}. معاينة هندسية، خطة تنفيذ واضحة، ومخرجات تشمل الفحوصات والتوثيق والتقرير النهائي.`;
+      return `صفحة محلية لخدمة ${service.ar} في ${neighborhood.ar} في ${city.ar}. معاينة هندسية، خطة تنفيذ واضحة، ومخرجات تشمل الفحوصات والتوثيق والتقرير النهائي.`;
     }
     return `Local landing page for ${service.en} in ${neighborhood.en}, ${city.en}. Site visit, clear execution plan, QA/QC, and final reporting.`;
   }, [city, service, neighborhood, lang]);
@@ -107,8 +107,8 @@ export default function CityServiceNeighborhoodLanding() {
     if (!city || !service || !neighborhood) return '';
     if (lang === 'ar') {
       return service.slug === 'soil-grouting'
-        ? `حقن تربة في ${neighborhood.ar} بـ${city.ar}`
-        : `${service.ar} في ${neighborhood.ar} بـ${city.ar}`;
+        ? `حقن تربة في ${neighborhood.ar} في ${city.ar}`
+        : `${service.ar} في ${neighborhood.ar} في ${city.ar}`;
     }
     return `${service.en} in ${neighborhood.en}, ${city.en}`;
   }, [city, service, neighborhood, lang]);
@@ -118,7 +118,7 @@ export default function CityServiceNeighborhoodLanding() {
     const arIntros = [
       `نخدم ${neighborhood.ar} ضمن نطاق ${city.ar} بخدمة ${service.ar} بمخرجات واضحة وخطة عمل واقعية تناسب الموقع.`,
       `إذا كانت لديك تشققات، هبوطات، أو اشتباه في فراغات تحت المبنى في ${neighborhood.ar}، نوفّر ${service.ar} مع توثيق كامل وQA/QC.`,
-      `صفحة محلية مخصصة لـ ${service.ar} في ${neighborhood.ar} بـ${city.ar} — الهدف: تسهيل الوصول لخدمة صحيحة وتنفيذ منضبط بدون فوضى بالموقع.`,
+      `صفحة محلية مخصصة لـ ${service.ar} في ${neighborhood.ar} في ${city.ar} — الهدف: تسهيل الوصول لخدمة صحيحة وتنفيذ منضبط بدون فوضى بالموقع.`,
     ];
     const enIntros = [
       `We serve ${neighborhood.en} in ${city.en} with ${service.en} and clear, documented deliverables.`,
@@ -155,8 +155,8 @@ export default function CityServiceNeighborhoodLanding() {
       { q: `Do you provide ${service.en} in ${neighborhood.en}?`, a: `Yes. We cover ${neighborhood.en} in ${city.en}. The exact method and scope are defined after a site assessment.` },
       { q: `How long does the work usually take in ${neighborhood.en}?`, a: `It depends on the root cause, the affected area, and the number of points. After assessment we share a clear schedule and stages.` },
     ];
-    const base = model.faq.slice(0, 6);
-    return lang === 'ar' ? [...arLocal, ...base] : [...enLocal, ...base];
+    const base = (Array.isArray(model.faq) ? model.faq : []).slice(0, 6);
+      return lang === 'ar' ? [...arLocal, ...base] : [...enLocal, ...base];
   }, [model, city, service, neighborhood, lang]);
 
   const related = useMemo(() => {
@@ -190,7 +190,7 @@ export default function CityServiceNeighborhoodLanding() {
       links.push({
         label:
           lang === 'ar'
-            ? `${s.ar} في ${hoodName} بـ${city.ar}`
+            ? `${s.ar} في ${hoodName} في ${city.ar}`
             : `${s.en} in ${hoodName}, ${city.en}`,
         href: `/locations/${localizedCitySlug}/${getServiceSlug(s, lang, city)}/${localizedHoodSlug}`,
       });
@@ -201,7 +201,7 @@ export default function CityServiceNeighborhoodLanding() {
       links.push({
         label:
           lang === 'ar'
-            ? `${service.slug === 'soil-grouting' ? 'حقن تربة' : service.ar} في ${n.ar} بـ${city.ar}`
+            ? `${service.slug === 'soil-grouting' ? 'حقن تربة' : service.ar} في ${n.ar} في ${city.ar}`
             : `${service.en} in ${n.en}, ${city.en}`,
         href: `/locations/${localizedCitySlug}/${localizedServiceSlug}/${getNeighborhoodSlug(n, lang)}`,
       });
@@ -273,8 +273,12 @@ export default function CityServiceNeighborhoodLanding() {
 
   const msg =
     lang === 'ar'
-      ? `السلام عليكم، أريد طلب ${service.ar} في ${neighborhood.ar} بـ${city.ar}. ممكن معاينة/تقييم مبدئي؟`
+      ? `السلام عليكم، أريد طلب ${service.ar} في ${neighborhood.ar} في ${city.ar}. ممكن معاينة/تقييم مبدئي؟`
       : `Hello, I'd like to request ${service.en} in ${neighborhood.en}, ${city.en}. Can we arrange a quick assessment?`;
+
+  // Defensive defaults (older bundles may cache and hit this page while models evolve)
+  const whenBullets = Array.isArray((model as any).whenBullets) ? (model as any).whenBullets : [];
+  const processSteps = Array.isArray((model as any).processSteps) ? (model as any).processSteps : [];
 
   return (
     <>
@@ -347,7 +351,7 @@ export default function CityServiceNeighborhoodLanding() {
               <div className="rounded-2xl border bg-card/60 backdrop-blur p-6 shadow-sm">
                 <h2 className="text-xl font-semibold">{lang === 'ar' ? 'متى تحتاج هذه الخدمة؟' : 'When do you need this?'}</h2>
                 <ul className="mt-4 space-y-2 text-muted-foreground list-disc ps-5">
-                  {model.useCases.slice(0, 6).map((u) => (
+                  {whenBullets.slice(0, 6).map((u) => (
                     <li key={u}>{u}</li>
                   ))}
                 </ul>
@@ -356,8 +360,8 @@ export default function CityServiceNeighborhoodLanding() {
               <div className="rounded-2xl border bg-card/60 backdrop-blur p-6 shadow-sm">
                 <h2 className="text-xl font-semibold">{lang === 'ar' ? 'خطوات العمل المختصرة' : 'Quick process'}</h2>
                 <ol className="mt-4 space-y-2 text-muted-foreground list-decimal ps-5">
-                  {model.process.slice(0, 6).map((p) => (
-                    <li key={p}>{p}</li>
+                  {processSteps.slice(0, 6).map((p) => (
+                    <li key={p.title}>{p.title}</li>
                   ))}
                 </ol>
               </div>
