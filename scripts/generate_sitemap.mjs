@@ -228,7 +228,7 @@ function buildSitemap() {
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>\n` +
     `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
-    uniqueUrls.map(u => `  <url><loc>${xmlEscape(u)}</loc><lastmod>${now}</lastmod></url>`).join('\n') +
+    uniqueUrls.map(u => `  <url><loc>${xmlEscape(encodeURI(u))}</loc><lastmod>${now}</lastmod></url>`).join('\n') +
     `\n</urlset>\n`;
 
   fs.mkdirSync(path.dirname(OUT_PATH), { recursive: true });

@@ -27,7 +27,7 @@ export type ServiceLanding = {
   servicePageHref?: string;
 };
 
-import { slugifyAr, slugifyEn } from '@/lib/slugify';
+import { slugifyAr, slugifyEn, serviceSlugArWithCity } from '@/lib/slugify';
 
 // Major cities/regions in Saudi Arabia (as provided by the user)
 export const cities: City[] = [

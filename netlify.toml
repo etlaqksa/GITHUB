@@ -84,6 +84,11 @@
   from = "/sitemap.xml"
   to = "/sitemap.xml"
   status = 200
+[[redirects]]
+  from = "/googleb9eafcb71ddde876.html"
+  to = "/googleb9eafcb71ddde876.html"
+  status = 200
+
 
 [[redirects]]
   from = "/company-profile.pdf"
