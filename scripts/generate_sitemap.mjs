@@ -187,7 +187,8 @@ function buildSitemap() {
     '/ar/faq', '/en/faq',
     '/ar/contact', '/en/contact',
     '/ar/request-service', '/en/request-service',
-    '/ar/locations', '/en/locations'
+    '/ar/locations', '/en/locations',
+    '/ar/sitemap', '/en/sitemap'
   ];
   core.forEach(p => addUrl(urls, p));
 
@@ -195,6 +196,12 @@ function buildSitemap() {
   for (const c of cities) {
     addUrl(urls, `/ar/locations/${c.arSlug}`);
     addUrl(urls, `/en/locations/${c.slug}`);
+
+    // City neighborhood hub (Riyadh only for now)
+    if (c.slug === 'riyadh') {
+      addUrl(urls, `/ar/locations/${c.arSlug}/احياء`);
+      addUrl(urls, `/en/locations/${c.slug}/neighborhoods`);
+    }
 
     for (const s of services) {
       // Arabic city-service slug format: <service>-في-<city>

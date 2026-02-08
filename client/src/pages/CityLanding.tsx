@@ -149,6 +149,15 @@ export default function CityLanding({ params }: Props) {
                       </div>
                     );
                   })()}
+
+                  <div className="mt-4">
+                    <LocalizedLink
+                      href={`/locations/${citySlug}/${language === 'ar' ? 'احياء' : 'neighborhoods'}`}
+                      className="text-sm text-primary hover:underline"
+                    >
+                      {language === 'ar' ? 'عرض جميع صفحات أحياء الرياض' : 'View all Riyadh neighborhood pages'}
+                    </LocalizedLink>
+                  </div>
                   <p className="text-xs text-muted-foreground mt-4">
                     {language === 'ar'
                       ? 'نقوم بتوسيع الصفحات المحلية تدريجياً بناءً على الطلب الفعلي. الهدف: قيمة للمستخدم وليس تكراراً آلياً.'

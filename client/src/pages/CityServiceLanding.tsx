@@ -655,6 +655,15 @@ export default function CityServiceLanding({ params }: Props) {
                       ))}
                   </div>
 
+                  <div className="mt-4">
+                    <LocalizedLink
+                      href={`/locations/${localizedCitySlug}/${language === 'ar' ? 'احياء' : 'neighborhoods'}`}
+                      className="text-sm text-primary hover:underline"
+                    >
+                      {language === 'ar' ? 'عرض جميع صفحات أحياء الرياض' : 'View all Riyadh neighborhood pages'}
+                    </LocalizedLink>
+                  </div>
+
                   {listNeighborhoodsForCity(city).length > 24 && (
                     <p className="text-sm text-muted-foreground mt-4">
                       {language === 'ar'

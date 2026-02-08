@@ -13,6 +13,7 @@ export default function Footer() {
     { name: language === 'ar' ? 'دراسات حالة' : 'Case studies', href: '/case-studies' },
     { name: t('nav.request'), href: '/request-service' },
     { name: language === 'ar' ? 'مدن التغطية' : 'Coverage cities', href: '/locations' },
+    { name: language === 'ar' ? 'خريطة الموقع' : 'Sitemap', href: '/sitemap' },
   ];
 
   const services = [

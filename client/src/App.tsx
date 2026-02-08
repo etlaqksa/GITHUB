@@ -37,6 +37,8 @@ const Locations = lazy(() => import("./pages/Locations"));
 const CityLanding = lazy(() => import("./pages/CityLanding"));
 const CityServiceLanding = lazy(() => import("./pages/CityServiceLanding"));
 const CityServiceNeighborhoodLanding = lazy(() => import("./pages/CityServiceNeighborhoodLanding"));
+const CityNeighborhoods = lazy(() => import("./pages/CityNeighborhoods"));
+const HtmlSitemap = lazy(() => import("./pages/HtmlSitemap"));
 
 const ServiceGrouting = lazy(() => import("./pages/services/ServiceGrouting"));
 const ServiceCavity = lazy(() => import("./pages/services/ServiceCavity"));
@@ -81,7 +83,13 @@ function AppLayout() {
             <Route path="/thank-you" component={ThankYou} />
             <Route path="/for/:audience" component={Audience} />
 
+            {/* HTML sitemap (helps crawl + internal linking) */}
+            <Route path="/sitemap" component={HtmlSitemap} />
+
             {/* SEO: city/service landing pages */}
+            {/* IMPORTANT: place neighborhood hub BEFORE generic service route to avoid treating it as a service slug */}
+            <Route path="/locations/:citySlug/احياء" component={CityNeighborhoods} />
+            <Route path="/locations/:citySlug/neighborhoods" component={CityNeighborhoods} />
             <Route path="/locations/:citySlug/:serviceSlug/:hoodSlug" component={CityServiceNeighborhoodLanding} />
             <Route path="/locations/:citySlug/:serviceSlug" component={CityServiceLanding} />
             <Route path="/locations/:citySlug" component={CityLanding} />
