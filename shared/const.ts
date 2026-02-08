@@ -1,9 +1,9 @@
-// Shared constants consumed by the client.
-// Keep this file tiny and dependency-free.
+// Shared constants used by both client and (optional) server parts of the project.
+// This project is deployed as a static site on Netlify, so these are kept minimal and safe.
 
-// Legacy constants referenced by some client modules.
-// They are safe defaults and can be adjusted if you already use a different cookie name.
-export const COOKIE_NAME = 'etlaq_lang';
-export const ONE_YEAR_MS = 365 * 24 * 60 * 60 * 1000;
+export const COOKIE_NAME = 'etlaq_session';
+export const ONE_YEAR_MS = 1000 * 60 * 60 * 24 * 365;
 
-export const UNAUTHED_ERR_MSG = 'Please login (10001)';
+// Used by the TRPC client to detect unauthorized errors and redirect to the login portal.
+// Keep this stable across environments.
+export const UNAUTHED_ERR_MSG = 'UNAUTHORIZED';

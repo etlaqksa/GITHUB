@@ -23,8 +23,6 @@ export interface ArticleContent {
   content: string;
   contentEn: string;
   slug: string;
-  slugAr?: string;
-  legacySlugs?: string[];
   faqAr?: { question: string; answer: string }[];
   faqEn?: { question: string; answer: string }[];
   image?: ArticleImage;
@@ -46,7 +44,6 @@ export const articles: ArticleContent[] = [
     readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
     slug: "what-is-soil-grouting",
-    slugAr: "ما-هو-حقن-التربة-تعريف-عملي-يربط-الالية-بالقرار-الهندسي",
     image: {
       url: "/article-images/hero/what-is-soil-grouting.svg",
       alt: "ما هو حقن التربة؟ تعريف عملي يربط الآلية بالقرار الهندسي",
@@ -145,7 +142,6 @@ export const articles: ArticleContent[] = [
     readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
     slug: "building-settlement-causes",
-    slugAr: "تاريخ-وتطور-تقنيات-حقن-التربة-في-الهندسة-المدنية",
     image: {
       url: "/article-images/hero/building-settlement-causes.svg",
       alt: "تاريخ وتطور تقنيات حقن التربة في الهندسة المدنية",
@@ -323,7 +319,6 @@ export const articles: ArticleContent[] = [
     readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
     slug: "cavity-detection-techniques",
-    slugAr: "الفرق-بين-تحسين-التربة-وتقوية-التربة",
     image: {
       url: "/article-images/hero/cavity-detection-techniques.svg",
       alt: "الفرق بين تحسين التربة (Ground Improvement) وتقوية التربة (Soil Stabilization)",
@@ -454,7 +449,6 @@ export const articles: ArticleContent[] = [
     readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
     slug: "cement-grouting-types",
-    slugAr: "فيزياء-الحقن-كيف-ينتشر-الملاط-داخل-المسام-والشقوق",
     image: {
       url: "/article-images/hero/cement-grouting-types.svg",
       alt: "فيزياء الحقن: كيف ينتشر الملاط داخل المسام والشقوق؟",
@@ -628,7 +622,6 @@ export const articles: ArticleContent[] = [
     readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
     slug: "building-cracks-solutions",
-    slugAr: "دور-المهندس-الجيوتقني-في-تصميم-برامج-الحقن",
     image: {
       url: "/article-images/hero/building-cracks-solutions.svg",
       alt: "دور المهندس الجيوتقني في تصميم برامج الحقن",
@@ -785,7 +778,6 @@ export const articles: ArticleContent[] = [
     readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
     slug: "soil-testing-importance",
-    slugAr: "المصطلحات-الاساسية-في-عالم-الحقن-نفاذية-لزوجة-ضغط-تدفق",
     image: {
       url: "/article-images/hero/soil-testing-importance.svg",
       alt: "المصطلحات الأساسية في عالم الحقن (نفاذية، لزوجة، ضغط، تدفق)",
@@ -924,7 +916,6 @@ export const articles: ArticleContent[] = [
     readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
     slug: "gpr-technology",
-    slugAr: "متى-يكون-الحقن-هو-الحل-الامثل-دراسة-الجدوى-الفنية-والاقتصادية",
     image: {
       url: "/article-images/hero/gpr-technology.svg",
       alt: "متى يكون الحقن هو الحل الأمثل؟ (دراسة الجدوى الفنية والاقتصادية)",
@@ -1071,7 +1062,6 @@ export const articles: ArticleContent[] = [
     readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
     slug: "concrete-slab-settlement",
-    slugAr: "معايير-الجودة-العالمية-في-اعمال-الحقن-12715-و",
     image: {
       url: "/article-images/hero/concrete-slab-settlement.svg",
       alt: "معايير الجودة العالمية في أعمال الحقن (EN 12715 و ASTM)",
@@ -1200,7 +1190,6 @@ export const articles: ArticleContent[] = [
     readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
     slug: "epoxy-injection-repair",
-    slugAr: "الفرق-بين-الحقن-العلاجي-والحقن-الوقايي",
     image: {
       url: "/article-images/hero/epoxy-injection-repair.svg",
       alt: "الفرق بين الحقن العلاجي (Remedial Grouting) والحقن الوقائي (Preventative Grouting)",
@@ -1305,7 +1294,6 @@ export const articles: ArticleContent[] = [
     readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
     slug: "foundation-strengthening",
-    slugAr: "تحديات-حقن-التربة-في-البييات-الصحراوية-والمناطق-الساحلية",
     image: {
       url: "/article-images/hero/foundation-strengthening.svg",
       alt: "تحديات حقن التربة في البيئات الصحراوية والمناطق الساحلية",
@@ -1436,7 +1424,6 @@ export const articles: ArticleContent[] = [
     readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
     slug: "geotechnical-problems-saudi",
-    slugAr: "الحقن-النفاذي-الالية-والتطبيقات",
     image: {
       url: "/article-images/hero/geotechnical-problems-saudi.svg",
       alt: "الحقن النفاذي (Permeation Grouting): الآلية والتطبيقات",
@@ -1577,7 +1564,6 @@ export const articles: ArticleContent[] = [
     readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
     slug: "jet-grouting-technology",
-    slugAr: "الحقن-الانضغاطي-متى-وكيف-نستخدمه",
     image: {
       url: "/article-images/hero/jet-grouting-technology.svg",
       alt: "الحقن الانضغاطي (Compaction Grouting): متى وكيف نستخدمه؟",
@@ -1712,7 +1698,6 @@ export const articles: ArticleContent[] = [
     readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
     slug: "choosing-grouting-technique",
-    slugAr: "الحقن-النفاث-من-فيزياء-النفث-الى-خصايص-الاعمدة",
     image: {
       url: "/article-images/hero/choosing-grouting-technique.svg",
       alt: "الحقن النفاث (Jet Grouting): من فيزياء النفث إلى خصائص الأعمدة",
@@ -1877,7 +1862,6 @@ export const articles: ArticleContent[] = [
     readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
     slug: "foundation-water-leakage",
-    slugAr: "حقن-الكسر-الهيدروليكي-التحكم-في-رفع-المنشات",
     image: {
       url: "/article-images/hero/foundation-water-leakage.svg",
       alt: "حقن الكسر الهيدروليكي (Fracture Grouting): التحكم في رفع المنشآت",
@@ -1996,7 +1980,6 @@ export const articles: ArticleContent[] = [
     readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
     slug: "carbon-fiber-reinforcement",
-    slugAr: "حقن-الستارة-فلسفة-تقليل-النفاذية-في-السدود",
     image: {
       url: "/article-images/hero/carbon-fiber-reinforcement.svg",
       alt: "حقن الستارة (Curtain Grouting): فلسفة تقليل النفاذية في السدود",
@@ -2117,7 +2100,6 @@ export const articles: ArticleContent[] = [
     readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
     slug: "periodic-building-inspection",
-    slugAr: "الحقن-التعويضي-حماية-المنشات-اثناء-الحفر-النفقي",
     image: {
       url: "/article-images/hero/periodic-building-inspection.svg",
       alt: "الحقن التعويضي (Compensation Grouting): حماية المنشآت أثناء الحفر النفقي",
@@ -2239,7 +2221,6 @@ export const articles: ArticleContent[] = [
     readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
     slug: "rock-cavities-solutions",
-    slugAr: "حقن-الفراغات-معالجة-التكهفات-والجيوب-الهوايية",
     image: {
       url: "/article-images/hero/rock-cavities-solutions.svg",
       alt: "حقن الفراغات (Void Filling): معالجة التكهفات والجيوب الهوائية",
@@ -2463,7 +2444,6 @@ export const articles: ArticleContent[] = [
     readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
     slug: "soil-improvement-techniques",
-    slugAr: "الحقن-الكيميايي-استخدام-الراتنجات-والسيليكات",
     image: {
       url: "/article-images/hero/soil-improvement-techniques.svg",
       alt: "الحقن الكيميائي: استخدام الراتنجات والسيليكات",
@@ -2617,9 +2597,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "polyurethane-grouting-fast-effective-leak-stopping",
-    slugAr: "حقن-البولي-يوريثان-السرعة-والكفاءة-في-منع-التسرب",
-    legacySlugs: ["geotech-encyclopedia-01"],
+    slug: "geotech-encyclopedia-01",
     image: {
       url: "/article-images/hero/geotech-encyclopedia-01.svg",
       alt: "حقن البولي يوريثان (Polyurethane Grouting): السرعة والكفاءة في منع التسرب",
@@ -2755,9 +2733,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "microfine-cement-grouting-penetration-in-low-permeability-soils",
-    slugAr: "الملاط-الدقيق-اختراق-التربة-ذات-النفاذية-المنخفضة",
-    legacySlugs: ["geotech-encyclopedia-02"],
+    slug: "geotech-encyclopedia-02",
     image: {
       url: "/article-images/hero/geotech-encyclopedia-02.svg",
       alt: "الملاط الدقيق (Microfine Cement): اختراق التربة ذات النفاذية المنخفضة",
@@ -2901,9 +2877,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "under-raft-grouting-improving-soil-foundation-interaction",
-    slugAr: "الحقن-اسفل-اللبشة-تحسين-تفاعل-التربة-والاساس",
-    legacySlugs: ["geotech-encyclopedia-03"],
+    slug: "geotech-encyclopedia-03",
     image: {
       url: "/article-images/hero/geotech-encyclopedia-03.svg",
       alt: "الحقن أسفل اللبشة (Under-Raft Grouting): تحسين تفاعل التربة والأساس",
@@ -3025,9 +2999,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "grouting-in-fractured-rock-and-karst-formations-techniques-and-risks",
-    slugAr: "تقنيات-الحقن-في-الصخور-المتشققة-والطبقات-الكارستية",
-    legacySlugs: ["geotech-encyclopedia-04"],
+    slug: "geotech-encyclopedia-04",
     image: {
       url: "/article-images/hero/geotech-encyclopedia-04.svg",
       alt: "تقنيات الحقن في الصخور المتشققة والطبقات الكارستية",
@@ -3217,9 +3189,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "cement-grout-rheology-viscosity-yield-stress-and-consistency",
-    slugAr: "رولوجيا-الملاط-الاسمنتي-اللزوجة-الاجهاد-الخاضع-والاتساق",
-    legacySlugs: ["geotech-encyclopedia-05"],
+    slug: "geotech-encyclopedia-05",
     image: {
       url: "/article-images/hero/geotech-encyclopedia-05.svg",
       alt: "رولوجيا الملاط الإسمنتي: اللزوجة، الإجهاد الخاضع، والاتساق",
@@ -3375,9 +3345,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "how-the-water-to-cement-ratio-affects-strength-and-durability",
-    slugAr: "تاثير-نسبة-الماء-الى-الاسمنت-على-قوة-وديمومة-الحقن",
-    legacySlugs: ["geotech-encyclopedia-06"],
+    slug: "geotech-encyclopedia-06",
     image: {
       url: "/article-images/hero/geotech-encyclopedia-06.svg",
       alt: "تأثير نسبة الماء إلى الإسمنت (W/C Ratio) على قوة وديمومة الحقن",
@@ -3533,9 +3501,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "chemical-admixtures-for-grout-superplasticizers-accelerators-and-anti",
-    slugAr: "الاضافات-الكيميايية-للملاط-الملدنات-المسرعات-والمواد-المانعة-للنزف",
-    legacySlugs: ["geotech-encyclopedia-07"],
+    slug: "geotech-encyclopedia-07",
     image: {
       url: "/article-images/hero/geotech-encyclopedia-07.svg",
       alt: "الإضافات الكيميائية للملاط: الملدنات، المسرعات، والمواد المانعة للنزف",
@@ -3661,9 +3627,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "pozzolanic-materials-in-grout-mixes-fly-ash-and-silica-fume",
-    slugAr: "استخدام-المواد-البوزولانية-في-خلطات-الحقن",
-    legacySlugs: ["geotech-encyclopedia-08"],
+    slug: "geotech-encyclopedia-08",
     image: {
       url: "/article-images/hero/geotech-encyclopedia-08.svg",
       alt: "استخدام المواد البوزولانية (Fly Ash, Silica Fume) في خلطات الحقن",
@@ -3813,9 +3777,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "grout-bleeding-and-segregation-risks-and-practical-mitigation",
-    slugAr: "نزف-الملاط-والانفصال-الحبيبي-المخاطر-والحلول",
-    legacySlugs: ["geotech-encyclopedia-09"],
+    slug: "geotech-encyclopedia-09",
     image: {
       url: "/article-images/hero/geotech-encyclopedia-09.svg",
       alt: "نزف الملاط (Bleeding) والانفصال الحبيبي: المخاطر والحلول",
@@ -3973,9 +3935,7 @@ export const articles: ArticleContent[] = [
     readTime: "2 دقيقة",
     readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "sulfate-resistant-cement-an-engineering-necessity-in-gulf-soils",
-    slugAr: "الاسمنت-المقاوم-للكبريتات-ضرورة-هندسية-في-تربة-الخليج-العربي",
-    legacySlugs: ["geotech-encyclopedia-10"],
+    slug: "geotech-encyclopedia-10",
     image: {
       url: "/article-images/hero/geotech-encyclopedia-10.svg",
       alt: "الإسمنت المقاوم للكبريتات: ضرورة هندسية في تربة الخليج العربي",
@@ -4094,9 +4054,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "eco-friendly-grouting-materials-modern-trends-and-considerations",
-    slugAr: "المواد-الصديقة-للبيية-في-حقن-التربة-التوجهات-الحديثة",
-    legacySlugs: ["geotech-encyclopedia-11"],
+    slug: "geotech-encyclopedia-11",
     image: {
       url: "/article-images/hero/geotech-encyclopedia-11.svg",
       alt: "المواد الصديقة للبيئة في حقن التربة: التوجهات الحديثة",
@@ -4280,9 +4238,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "laboratory-testing-of-grouting-materials-before-and-during-works",
-    slugAr: "اختبارات-المختبر-لمواد-الحقن-قبل-واثناء-التنفيذ",
-    legacySlugs: ["geotech-encyclopedia-12"],
+    slug: "geotech-encyclopedia-12",
     image: {
       url: "/article-images/hero/geotech-encyclopedia-12.svg",
       alt: "اختبارات المختبر لمواد الحقن: قبل وأثناء التنفيذ",
@@ -4402,9 +4358,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "grout-stability-stable-vs-unstable-mixes-and-why-it-matters",
-    slugAr: "استقرار-الملاط-الفرق-بين-الملاط-المستقر-وغير-المستقر",
-    legacySlugs: ["geotech-encyclopedia-13"],
+    slug: "geotech-encyclopedia-13",
     image: {
       url: "/article-images/hero/geotech-encyclopedia-13.svg",
       alt: "استقرار الملاط (Grout Stability): الفرق بين الملاط المستقر وغير المستقر",
@@ -4536,9 +4490,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "selecting-grout-type-using-soil-gradation-d10-d15-criteria",
-    slugAr: "اختيار-مادة-الحقن-بناء-على-قطر-حبيبات-التربة-10-15",
-    legacySlugs: ["geotech-encyclopedia-14"],
+    slug: "geotech-encyclopedia-14",
     image: {
       url: "/article-images/hero/geotech-encyclopedia-14.svg",
       alt: "اختيار مادة الحقن بناءً على قطر حبيبات التربة (D10/D15)",
@@ -4655,9 +4607,7 @@ export const articles: ArticleContent[] = [
       readTime: "4 دقائق",
       readTimeEn: "4 min",
       author: "فريق ETLAQ الهندسي",
-      slug: "back-of-envelope-grout-spread-calculations-radius-of-influence-and",
-    slugAr: "حسابات-تقريبية-لانتشار-الحقن-نصف-قطر-تاثير-ولماذا-يخطي-كثيرا",
-    legacySlugs: ["geotech-encyclopedia-15"],
+      slug: "geotech-encyclopedia-15",
       image: {
         url: "/article-images/hero/geotech-encyclopedia-15.svg",
         alt: "حسابات تقريبية لانتشار الحقن: نصف قطر تأثير ولماذا يخطئ كثيرًا",
@@ -4727,9 +4677,7 @@ export const articles: ArticleContent[] = [
     readTime: "2 دقيقة",
     readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "differential-settlement-how-to-read-the-structural-nightmare",
-    slugAr: "الهبوط-التفاضلي-الكابوس-الانشايي-وكيفية-قراءته",
-    legacySlugs: ["geotech-encyclopedia-16"],
+    slug: "geotech-encyclopedia-16",
     image: {
       url: "/article-images/hero/geotech-encyclopedia-16.svg",
       alt: "الهبوط التفاضلي (Differential Settlement): الكابوس الإنشائي وكيفية قراءته",
@@ -4849,9 +4797,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "crack-pattern-interpretation-structural-cracks-or-settlement-induced",
-    slugAr: "تحليل-انماط-التشققات-هل-هي-انشايية-ام-ناتجة-عن-هبوط-التربة",
-    legacySlugs: ["geotech-encyclopedia-17"],
+    slug: "geotech-encyclopedia-17",
     image: {
       url: "/article-images/hero/geotech-encyclopedia-17.svg",
       alt: "تحليل أنماط التشققات: هل هي إنشائية أم ناتجة عن هبوط التربة؟",
@@ -4975,9 +4921,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "how-water-leaks-from-tanks-and-utilities-undermine-foundations",
-    slugAr: "تاثير-تسربات-المياه-الخزانات-والشبكات-على-استقرار-الاساسات",
-    legacySlugs: ["geotech-encyclopedia-18"],
+    slug: "geotech-encyclopedia-18",
     image: {
       url: "/article-images/hero/geotech-encyclopedia-18.svg",
       alt: "تأثير تسربات المياه (الخزانات والشبكات) على استقرار الأساسات",
@@ -5113,9 +5057,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "expansive-soils-key-problems-and-grouting-based-remedies",
-    slugAr: "التربة-الانتفاخية-مشاكلها-وحلول-الحقن-المقترحة",
-    legacySlugs: ["geotech-encyclopedia-19"],
+    slug: "geotech-encyclopedia-19",
     image: {
       url: "/article-images/hero/geotech-encyclopedia-19.svg",
       alt: "التربة الانتفاخية (Expansive Soil): مشاكلها وحلول الحقن المقترحة",
@@ -5243,9 +5185,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "collapsible-soils-wetting-risks-and-treatment-approaches",
-    slugAr: "التربة-الانهيارية-مخاطر-الغمر-بالماء-وكيفية-معالجتها",
-    legacySlugs: ["geotech-encyclopedia-20"],
+    slug: "geotech-encyclopedia-20",
     image: {
       url: "/article-images/hero/geotech-encyclopedia-20.svg",
       alt: "التربة الانهيارية (Collapsible Soil): مخاطر الغمر بالماء وكيفية معالجتها",
@@ -5390,9 +5330,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "voids-beneath-floor-slabs-causes-risks-and-repair-options",
-    slugAr: "الفراغات-تحت-بلاطات-الارضيات-الاسباب-المخاطر-وطرق-المعالجة",
-    legacySlugs: ["geotech-encyclopedia-21"],
+    slug: "geotech-encyclopedia-21",
     image: {
       url: "/article-images/hero/geotech-encyclopedia-21.svg",
       alt: "الفراغات تحت بلاطات الأرضيات: الأسباب، المخاطر، وطرق المعالجة",
@@ -5542,9 +5480,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "impact-of-nearby-construction-on-existing-building-stability",
-    slugAr: "تاثير-الاعمال-الانشايية-المجاورة-على-استقرار-المباني-القايمة",
-    legacySlugs: ["geotech-encyclopedia-22"],
+    slug: "geotech-encyclopedia-22",
     image: {
       url: "/article-images/hero/geotech-encyclopedia-22.svg",
       alt: "تأثير الأعمال الإنشائية المجاورة على استقرار المباني القائمة",
@@ -5758,9 +5694,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "natural-sinkholes-formation-mechanisms-and-detection",
-    slugAr: "التكهفات-الطبيعية-كيف-تتكون-وكيف-نكتشفها",
-    legacySlugs: ["geotech-encyclopedia-23"],
+    slug: "geotech-encyclopedia-23",
     image: {
       url: "/article-images/hero/geotech-encyclopedia-23.svg",
       alt: "التكهفات الطبيعية (Sinkholes): كيف تتكون وكيف نكتشفها؟",
@@ -5928,9 +5862,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "how-moisture-changes-the-behavior-of-clayey-and-sandy-soils",
-    slugAr: "دور-الرطوبة-في-تغيير-خصايص-التربة-الطينية-والرملية",
-    legacySlugs: ["geotech-encyclopedia-24"],
+    slug: "geotech-encyclopedia-24",
     image: {
       url: "/article-images/hero/geotech-encyclopedia-24.svg",
       alt: "دور الرطوبة في تغيير خصائص التربة الطينية والرملية",
@@ -6050,9 +5982,7 @@ export const articles: ArticleContent[] = [
     readTime: "4 دقيقة",
     readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "void-detection-methods-compared-accuracy-and-signal-characteristics",
-    slugAr: "تقنيات-كشف-الفراغات-مقارنة-دقة-واشارات-كل-تقنية",
-    legacySlugs: ["geotech-encyclopedia-25"],
+    slug: "geotech-encyclopedia-25",
     image: {
       url: "/article-images/hero/geotech-encyclopedia-25.svg",
       alt: "تقنيات كشف الفراغات: مقارنة دقة وإشارات كل تقنية",
@@ -6220,9 +6150,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "ground-penetrating-radar-gpr-how-it-works-where-it-excels-and-where-it",
-    slugAr: "رادار-الاختراق-الارضي-كيف-يعمل-اين-ينجح-واين-يخدعنا",
-    legacySlugs: ["geotech-encyclopedia-26"],
+    slug: "geotech-encyclopedia-26",
     image: {
       url: "/article-images/hero/geotech-encyclopedia-26.svg",
       alt: "رادار الاختراق الأرضي (GPR): كيف يعمل، أين ينجح، وأين يخدعنا؟",
@@ -6370,9 +6298,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "electrical-resistivity-tomography-ert-mapping-resistivity-to-detect",
-    slugAr: "المسح-الكهربايي-رسم-خرايط-المقاومية-للكشف-عن-المياه-والفراغات",
-    legacySlugs: ["geotech-encyclopedia-27"],
+    slug: "geotech-encyclopedia-27",
     image: {
       url: "/article-images/hero/geotech-encyclopedia-27.svg",
       alt: "المسح الكهربائي (ERT): رسم خرائط المقاومية للكشف عن المياه والفراغات",
@@ -6488,9 +6414,7 @@ export const articles: ArticleContent[] = [
     readTime: "2 دقيقة",
     readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "microgravity-surveys-high-sensitivity-detection-of-deep-cavities",
-    slugAr: "الميكروغرافيتي-التقنية-الادق-لكشف-التكهفات-العميقة",
-    legacySlugs: ["geotech-encyclopedia-28"],
+    slug: "geotech-encyclopedia-28",
     image: {
       url: "/article-images/hero/geotech-encyclopedia-28.svg",
       alt: "الميكروغرافيتي (Microgravity): التقنية الأدق لكشف التكهفات العميقة",
@@ -6610,9 +6534,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "seismic-surveys-using-wave-velocity-to-assess-soil-stiffness",
-    slugAr: "المسح-السيزمي-قياس-سرعة-الموجات-لتقييم-صلابة-التربة",
-    legacySlugs: ["geotech-encyclopedia-29"],
+    slug: "geotech-encyclopedia-29",
     image: {
       url: "/article-images/hero/geotech-encyclopedia-29.svg",
       alt: "المسح السيزمي: قياس سرعة الموجات لتقييم صلابة التربة",
@@ -6768,9 +6690,7 @@ export const articles: ArticleContent[] = [
     readTime: "2 دقيقة",
     readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "integrating-geophysical-and-geotechnical-data-for-full-site",
-    slugAr: "دمج-البيانات-الجيوفيزيايية-والجيوتقنية-الوصول-الى-صورة-كاملة-للموقع",
-    legacySlugs: ["geotech-encyclopedia-30"],
+    slug: "geotech-encyclopedia-30",
     image: {
       url: "/article-images/hero/geotech-encyclopedia-30.svg",
       alt: "دمج البيانات الجيوفيزيائية والجيوتقنية: الوصول إلى صورة كاملة للموقع",
@@ -6886,9 +6806,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "accuracy-limits-in-geophysical-instruments-setting-realistic",
-    slugAr: "حدود-الدقة-في-الاجهزة-الجيوفيزيايية-ادارة-التوقعات",
-    legacySlugs: ["geotech-encyclopedia-31"],
+    slug: "geotech-encyclopedia-31",
     image: {
       url: "/article-images/hero/geotech-encyclopedia-31.svg",
       alt: "حدود الدقة في الأجهزة الجيوفيزيائية: إدارة التوقعات",
@@ -7032,9 +6950,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "post-survey-verification-boreholes-how-to-decide-where-to-drill",
-    slugAr: "التحقق-بالثقوب-الاستكشافية-بعد-المسح-كيفية-اخذ-عينة-قرار",
-    legacySlugs: ["geotech-encyclopedia-32"],
+    slug: "geotech-encyclopedia-32",
     image: {
       url: "/article-images/hero/geotech-encyclopedia-32.svg",
       alt: "التحقق بالثقوب الاستكشافية بعد المسح: كيفية أخذ عينة قرار",
@@ -7174,9 +7090,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "borehole-cameras-visual-inspection-of-subsurface-voids",
-    slugAr: "استخدام-الكاميرات-داخل-الثقوب-لمعاينة-الفراغات",
-    legacySlugs: ["geotech-encyclopedia-33"],
+    slug: "geotech-encyclopedia-33",
     image: {
       url: "/article-images/hero/geotech-encyclopedia-33.svg",
       alt: "استخدام الكاميرات داخل الثقوب (Borehole Camera) لمعاينة الفراغات",
@@ -7316,9 +7230,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "interpreting-anomalies-in-survey-reports-real-features-vs-technical",
-    slugAr: "تفسير-الشذوذ-في-تقارير-المسح-بين-الواقع-والخطا-التقني",
-    legacySlugs: ["geotech-encyclopedia-34"],
+    slug: "geotech-encyclopedia-34",
     image: {
       url: "/article-images/hero/geotech-encyclopedia-34.svg",
       alt: "تفسير الشذوذ (Anomalies) في تقارير المسح: بين الواقع والخطأ التقني",
@@ -7436,9 +7348,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "grouting-equipment-from-hand-pumps-to-computerized-systems",
-    slugAr: "معدات-الحقن-من-المضخات-اليدوية-الى-الانظمة-المحوسبة",
-    legacySlugs: ["geotech-encyclopedia-35"],
+    slug: "geotech-encyclopedia-35",
     image: {
       url: "/article-images/hero/geotech-encyclopedia-35.svg",
       alt: "معدات الحقن: من المضخات اليدوية إلى الأنظمة المحوسبة",
@@ -7564,9 +7474,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "designing-an-injection-grid-spacing-depth-and-sequencing",
-    slugAr: "تصميم-شبكة-نقاط-الحقن-المسافات-الاعماق-والتسلسل",
-    legacySlugs: ["geotech-encyclopedia-36"],
+    slug: "geotech-encyclopedia-36",
     image: {
       url: "/article-images/hero/geotech-encyclopedia-36.svg",
       alt: "تصميم شبكة نقاط الحقن: المسافات، الأعماق، والتسلسل",
@@ -7692,9 +7600,7 @@ export const articles: ArticleContent[] = [
     readTime: "2 دقيقة",
     readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "monitoring-injection-pressure-protecting-structural-balance",
-    slugAr: "مراقبة-ضغط-الحقن-الحفاظ-على-توازن-المنشا",
-    legacySlugs: ["geotech-encyclopedia-37"],
+    slug: "geotech-encyclopedia-37",
     image: {
       url: "/article-images/hero/geotech-encyclopedia-37.svg",
       alt: "مراقبة ضغط الحقن: الحفاظ على توازن المنشأ",
@@ -7835,9 +7741,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "flow-rate-measurement-estimating-void-volume-and-ground-response",
-    slugAr: "قياس-معدل-التدفق-واهميته-في-تحديد-حجم-الفراغات",
-    legacySlugs: ["geotech-encyclopedia-38"],
+    slug: "geotech-encyclopedia-38",
     image: {
       url: "/article-images/hero/geotech-encyclopedia-38.svg",
       alt: "قياس معدل التدفق (Flow Rate) وأهميته في تحديد حجم الفراغات",
@@ -7969,9 +7873,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "refusal-criteria-in-grouting-when-to-stop-at-a-point",
-    slugAr: "معايير-التوقف-عن-الحقن-متى-ننهي-العمل-في-النقطة",
-    legacySlugs: ["geotech-encyclopedia-39"],
+    slug: "geotech-encyclopedia-39",
     image: {
       url: "/article-images/hero/geotech-encyclopedia-39.svg",
       alt: "معايير التوقف عن الحقن (Refusal Criteria): متى ننهي العمل في النقطة؟",
@@ -8097,9 +7999,7 @@ export const articles: ArticleContent[] = [
     readTime: "2 دقيقة",
     readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "why-grouting-logs-matter-daily-records-for-quality-and-traceability",
-    slugAr: "اهمية-السجلات-اليومية-في-توثيق-الجودة",
-    legacySlugs: ["geotech-encyclopedia-40"],
+    slug: "geotech-encyclopedia-40",
     image: {
       url: "/article-images/hero/geotech-encyclopedia-40.svg",
       alt: "أهمية السجلات اليومية (Grouting Logs) في توثيق الجودة",
@@ -8221,9 +8121,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "site-safety-in-grouting-works-managing-high-pressure-operations",
-    slugAr: "السلامة-المهنية-في-مواقع-اعمال-الحقن-والتعامل-مع-الضغوط-العالية",
-    legacySlugs: ["geotech-encyclopedia-41"],
+    slug: "geotech-encyclopedia-41",
     image: {
       url: "/article-images/hero/geotech-encyclopedia-41.svg",
       alt: "السلامة المهنية في مواقع أعمال الحقن والتعامل مع الضغوط العالية",
@@ -8327,9 +8225,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "site-management-coordinating-the-grouting-crew-with-the-main",
-    slugAr: "ادارة-الموقع-وتنسيق-العمل-بين-فريق-الحقن-والمقاول-الرييسي",
-    legacySlugs: ["geotech-encyclopedia-42"],
+    slug: "geotech-encyclopedia-42",
     image: {
       url: "/article-images/hero/geotech-encyclopedia-42.svg",
       alt: "إدارة الموقع وتنسيق العمل بين فريق الحقن والمقاول الرئيسي",
@@ -8447,9 +8343,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "common-execution-mistakes-in-grouting-and-how-to-avoid-them",
-    slugAr: "الاخطاء-الشايعة-في-تنفيذ-اعمال-الحقن-وكيفية-تجنبها",
-    legacySlugs: ["geotech-encyclopedia-43"],
+    slug: "geotech-encyclopedia-43",
     image: {
       url: "/article-images/hero/geotech-encyclopedia-43.svg",
       alt: "الأخطاء الشائعة في تنفيذ أعمال الحقن وكيفية تجنبها",
@@ -8609,9 +8503,7 @@ export const articles: ArticleContent[] = [
     readTime: "2 دقيقة",
     readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "maintaining-grouting-equipment-how-it-affects-accuracy-and-outcomes",
-    slugAr: "صيانة-معدات-الحقن-واثرها-على-دقة-النتايج",
-    legacySlugs: ["geotech-encyclopedia-44"],
+    slug: "geotech-encyclopedia-44",
     image: {
       url: "/article-images/hero/geotech-encyclopedia-44.svg",
       alt: "صيانة معدات الحقن وأثرها على دقة النتائج",
@@ -8721,9 +8613,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "underpinning-options-grouting-vs-micropiles-and-other-solutions",
-    slugAr: "تقوية-الاساسات-خريطة-خيارات-بين-الحقن-والخوازيق",
-    legacySlugs: ["geotech-encyclopedia-45"],
+    slug: "geotech-encyclopedia-45",
     image: {
       url: "/article-images/hero/geotech-encyclopedia-45.svg",
       alt: "تقوية الأساسات (Underpinning): خريطة خيارات بين الحقن والخوازيق",
@@ -8847,9 +8737,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "epoxy-injection-for-structural-cracks-when-it-counts-as-structural",
-    slugAr: "حقن-الايبوكسي-للشقوق-الانشايية-متى-يكون-اصلاحا-انشاييا",
-    legacySlugs: ["geotech-encyclopedia-46"],
+    slug: "geotech-encyclopedia-46",
     image: {
       url: "/article-images/hero/geotech-encyclopedia-46.svg",
       alt: "حقن الإيبوكسي للشقوق الإنشائية: متى يكون إصلاحاً إنشائياً؟",
@@ -9016,9 +8904,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "cfrp-strengthening-alongside-soil-grouting-integrated-repair",
-    slugAr: "تدعيم-العناصر-الانشايية-بالكربون-فايبر-بالتزامن-مع-حقن-التربة",
-    legacySlugs: ["geotech-encyclopedia-47"],
+    slug: "geotech-encyclopedia-47",
     image: {
       url: "/article-images/hero/geotech-encyclopedia-47.svg",
       alt: "تدعيم العناصر الإنشائية بالكربون فايبر (CFRP) بالتزامن مع حقن التربة",
@@ -9167,9 +9053,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "settlement-remediation-isolated-footings-vs-raft-foundations",
-    slugAr: "معالجة-هبوط-القواعد-المنفصلة-مقابل-اللبشة-المسلحة",
-    legacySlugs: ["geotech-encyclopedia-48"],
+    slug: "geotech-encyclopedia-48",
     image: {
       url: "/article-images/hero/geotech-encyclopedia-48.svg",
       alt: "معالجة هبوط القواعد المنفصلة مقابل اللبشة المسلحة",
@@ -9279,9 +9163,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "protecting-heritage-structures-with-micro-grouting-techniques",
-    slugAr: "حماية-المنشات-الاثرية-والتاريخية-باستخدام-تقنيات-الحقن-الدقيق",
-    legacySlugs: ["geotech-encyclopedia-49"],
+    slug: "geotech-encyclopedia-49",
     image: {
       url: "/article-images/hero/geotech-encyclopedia-49.svg",
       alt: "حماية المنشآت الأثرية والتاريخية باستخدام تقنيات الحقن الدقيق",
@@ -9417,9 +9299,7 @@ export const articles: ArticleContent[] = [
     readTime: "4 دقيقة",
     readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "ground-improvement-under-roads-and-runways-special-requirements-and",
-    slugAr: "تقوية-التربة-تحت-الطرق-والمدارج-متطلبات-خاصة-وسرعة-تنفيذ",
-    legacySlugs: ["geotech-encyclopedia-50"],
+    slug: "geotech-encyclopedia-50",
     image: {
       url: "/article-images/hero/geotech-encyclopedia-50.svg",
       alt: "تقوية التربة تحت الطرق والمدارج: متطلبات خاصة وسرعة تنفيذ",
@@ -9609,7 +9489,6 @@ export const articles: ArticleContent[] = [
     readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
     slug: "soil-grouting-guide",
-    slugAr: "التعامل-مع-مشاكل-التربة-في-الابراج-العالية-والمباني-ذات-الاحمال-الكبيرة",
     image: {
       url: "/article-images/hero/soil-grouting-guide.svg",
       alt: "التعامل مع مشاكل التربة في الأبراج العالية والمباني ذات الأحمال الكبيرة",
@@ -9722,7 +9601,6 @@ export const articles: ArticleContent[] = [
     readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
     slug: "foundation-strengthening-guide",
-    slugAr: "استعادة-استقامة-المباني-المايلة-عبر-الحقن",
     image: {
       url: "/article-images/hero/foundation-strengthening-guide.svg",
       alt: "استعادة استقامة المباني المائلة (Structure Re-leveling) عبر الحقن",
@@ -9844,7 +9722,6 @@ export const articles: ArticleContent[] = [
     readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
     slug: "void-detection-guide",
-    slugAr: "كيف-تقرا-تقرير-جسات-التربة-من-الجداول-الى-المخاطر-التصميمية",
     image: {
       url: "/article-images/hero/void-detection-guide.svg",
       alt: "كيف تقرأ تقرير جسات التربة؟ من الجداول إلى المخاطر التصميمية",
@@ -10001,7 +9878,6 @@ export const articles: ArticleContent[] = [
     readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
     slug: "sinkhole-investigation-guide",
-    slugAr: "تحليل-الحساسية-في-قرارات-الحقن-اي-متغير-يغير-قرارك-اكثر",
     image: {
       url: "/article-images/hero/sinkhole-investigation-guide.svg",
       alt: "تحليل الحساسية في قرارات الحقن: أي متغير يغير قرارك أكثر؟",
@@ -10158,7 +10034,6 @@ export const articles: ArticleContent[] = [
     readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
     slug: "validation-criteria-grouting",
-    slugAr: "مستقبل-حقن-التربة-الذكاء-الاصطناعي-والاستشعار-عن-بعد",
     image: {
       url: "/article-images/hero/validation-criteria-grouting.svg",
       alt: "مستقبل حقن التربة: الذكاء الاصطناعي والاستشعار عن بعد",
@@ -10293,7 +10168,6 @@ export const articles: ArticleContent[] = [
     readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
     slug: "gpr-vs-ert",
-    slugAr: "دراسة-حالة-معالجة-تكهف-ضخم-تحت-منطقة-سكنية-الدروس-المستفادة",
     image: {
       url: "/article-images/hero/gpr-vs-ert.svg",
       alt: "دراسة حالة: معالجة تكهف ضخم تحت منطقة سكنية (الدروس المستفادة)",
@@ -10422,7 +10296,6 @@ export const articles: ArticleContent[] = [
     readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
     slug: "cracks-settlement-guide",
-    slugAr: "دراسة-حالة-وقف-تسرب-مياه-جوفية-في-قبو-مبنى-تجاري",
     image: {
       url: "/article-images/hero/cracks-settlement-guide.svg",
       alt: "دراسة حالة: وقف تسرب مياه جوفية في قبو مبنى تجاري",
@@ -10543,7 +10416,6 @@ export const articles: ArticleContent[] = [
     readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
     slug: "soil-investigation-report-guide",
-    slugAr: "اهمية-الفحص-الدوري-للمباني-موشرات-مبكرة-تمنع-كوارث-مستقبلية",
     image: {
       url: "/article-images/hero/soil-investigation-report-guide.svg",
       alt: "أهمية الفحص الدوري للمباني: مؤشرات مبكرة تمنع كوارث مستقبلية",
@@ -10698,7 +10570,6 @@ export const articles: ArticleContent[] = [
     readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
     slug: "pre-construction-risk-guide",
-    slugAr: "دليل-المالك-كيف-تختار-مقاول-الحقن-المتخصص",
     image: {
       url: "/article-images/hero/pre-construction-risk-guide.svg",
       alt: "دليل المالك: كيف تختار مقاول الحقن المتخصص؟",
@@ -10840,7 +10711,6 @@ export const articles: ArticleContent[] = [
     readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
     slug: "maintenance-monitoring-guide",
-    slugAr: "الخلاصة-فلسفة-الحقن-كعلم-يجمع-بين-الخبرة-الميدانية-والنظرية-الهندسية",
     image: {
       url: "/article-images/hero/maintenance-monitoring-guide.svg",
       alt: "الخلاصة: فلسفة الحقن كعلم يجمع بين الخبرة الميدانية والنظرية الهندسية",
@@ -10961,7 +10831,6 @@ export const articles: ArticleContent[] = [
     readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
     slug: "cfrp-soil-grouting-framework",
-    slugAr: "دمج-حقن-التربة-مع-تدعيم-اطار-عملي-لاستقرار-المنشات-ومعالجة-الهبوط",
     image: {
       url: "/article-images/hero/cfrp-soil-grouting-framework.svg",
       alt: "دمج حقن التربة مع تدعيم CFRP: إطار عملي لاستقرار المنشآت ومعالجة الهبوط",
@@ -11103,7 +10972,6 @@ The concurrent application of CFRP strengthening and soil grouting constitutes a
     readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
     slug: "cfrp-soil-grouting-materials-standards",
-    slugAr: "مواد-ومعايير-دمج-مع-حقن-التربة-اختيار-النظام-المناسب-وتقليل-التشققات",
     image: {
       url: "/article-images/hero/cfrp-soil-grouting-materials-standards.svg",
       alt: "مواد ومعايير دمج CFRP مع حقن التربة: اختيار النظام المناسب وتقليل التشققات",

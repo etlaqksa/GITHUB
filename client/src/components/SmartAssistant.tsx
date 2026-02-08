@@ -111,8 +111,7 @@ export default function SmartAssistant() {
           for (const c of extraCats) s += 0.2 * scoreMatch(query, String(c));
         }
 
-        const hrefSlug = isAr ? (a.slugAr || a.slug) : a.slug;
-        return { slug: hrefSlug, title: String(title), score: s };
+        return { slug: a.slug, title: String(title), score: s };
       })
       .filter((x) => x.score > 0)
       .sort((a, b) => b.score - a.score)

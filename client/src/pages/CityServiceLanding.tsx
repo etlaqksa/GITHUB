@@ -1,4 +1,6 @@
 import { SEO } from '@/components/SEO';
+import { useEffect } from 'react';
+import { useLocation } from 'wouter';
 import RelatedLinksHub from '@/components/RelatedLinksHub';
 import QuickRequestCard from '@/components/QuickRequestCard';
 import Breadcrumbs from '@/components/Breadcrumbs';
@@ -6,7 +8,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import LocalizedLink from '@/components/LocalizedLink';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { findCity, findServiceLanding } from '@/data/seoLocations';
+import { findCity, findServiceLanding, getCitySlug, getServiceSlug } from '@/data/seoLocations';
 import { buildCityServiceModel, isModelServiceSlug } from '@/data/cityServiceModels';
 import { buildLandingKeywords } from '@/lib/seoKeywords';
 import { absUrl, getSiteUrl } from '@/lib/siteUrl';
@@ -79,7 +81,10 @@ function ModelLanding(props: {
 
   const model = buildCityServiceModel({ lang, city, service });
 
-  const canonicalPath = `${lang === 'ar' ? '/ar' : '/en'}/locations/${city.slug}/${service.slug}`;
+  const localizedCitySlug = getCitySlug(city, lang);
+  const localizedServiceSlug = getServiceSlug(service, lang, city);
+
+  const canonicalPath = `${lang === 'ar' ? '/ar' : '/en'}/locations/${localizedCitySlug}/${localizedServiceSlug}`;
   const canonical = absUrl(canonicalPath);
   const ogImage = OgImageForService(service.slug);
 
@@ -113,7 +118,7 @@ function ModelLanding(props: {
   const breadcrumb = buildBreadcrumbList([
     { name: lang === 'ar' ? 'الرئيسية' : 'Home', url: absUrl(`/${lang}/`) },
     { name: lang === 'ar' ? 'المدن' : 'Locations', url: absUrl(`/${lang}/locations`) },
-    { name: cityName, url: absUrl(`/${lang}/locations/${city.slug}`) },
+    { name: cityName, url: absUrl(`/${lang}/locations/${localizedCitySlug}`) },
     { name: model.h1, url: canonical },
   ]);
 
@@ -136,6 +141,10 @@ function ModelLanding(props: {
         url={canonical}
         image={ogImage}
         schema={combinedSchema}
+        alternateUrls={{
+          ar: absUrl(`/ar/locations/${getCitySlug(city, 'ar')}/${getServiceSlug(service, 'ar', city)}`),
+          en: absUrl(`/en/locations/${getCitySlug(city, 'en')}/${getServiceSlug(service, 'en', city)}`),
+        }}
       />
 
       <section className="py-10 md:py-14">
@@ -384,9 +393,23 @@ function ModelLanding(props: {
 }
 
 export default function CityServiceLanding({ params }: Props) {
+  const [location, setLocation] = useLocation();
   const { language } = useLanguage();
   const city = params?.citySlug ? findCity(params.citySlug) : undefined;
-  const service = params?.serviceSlug ? findServiceLanding(params.serviceSlug) : undefined;
+  const service = params?.serviceSlug ? findServiceLanding(params.serviceSlug, city) : undefined;
+
+  const localizedCitySlug = city ? getCitySlug(city, language) : '';
+  const localizedServiceSlug = city && service ? getServiceSlug(service, language, city) : (service ? getServiceSlug(service, language) : '');
+
+  useEffect(() => {
+    if (!city || !service) return;
+    const currentCity = params?.citySlug || '';
+    const currentService = params?.serviceSlug || '';
+
+    if (currentCity === localizedCitySlug && currentService === localizedServiceSlug) return;
+
+    setLocation(`/locations/${localizedCitySlug}/${localizedServiceSlug}`, { replace: true });
+  }, [city, service, params?.citySlug, params?.serviceSlug, localizedCitySlug, localizedServiceSlug]);
 
   // If this is one of the 3 core services, render the full model landing (applies to ALL cities).
   if (city && service && isModelServiceSlug(service.slug)) {
@@ -409,7 +432,7 @@ export default function CityServiceLanding({ params }: Props) {
       ? `حلول ${serviceName} في ${cityName} تشمل تقييم سريع، خطة تنفيذ منظمة، ومخرجات واضحة (تقارير/نتائج/توصيات) لتقليل المخاطر ودعم القرار.`
       : `${serviceName} in ${cityName} with a quick assessment, structured execution plan, and clear deliverables (results/recommendations) to reduce risk and support decisions.`;
 
-  const canonicalPath = `${language === 'ar' ? '/ar' : '/en'}/locations/${city?.slug || ''}/${service?.slug || ''}`;
+  const canonicalPath = `${language === 'ar' ? '/ar' : '/en'}/locations/${localizedCitySlug}/${localizedServiceSlug}`;
   const canonical = absUrl(canonicalPath);
   const ogImage = OgImageForService(service?.slug);
 
@@ -446,7 +469,7 @@ export default function CityServiceLanding({ params }: Props) {
   const breadcrumb = buildBreadcrumbList([
     { name: language === 'ar' ? 'الرئيسية' : 'Home', url: absUrl(`/${language}/`) },
     { name: language === 'ar' ? 'المدن' : 'Locations', url: absUrl(`/${language}/locations`) },
-    { name: cityName, url: absUrl(`/${language}/locations/${params?.citySlug || city?.slug || ''}`) },
+    { name: cityName, url: absUrl(`/${language}/locations/${localizedCitySlug}`) },
     { name: serviceName, url: canonical },
   ]);
 
@@ -484,6 +507,10 @@ export default function CityServiceLanding({ params }: Props) {
         url={canonical}
         image={ogImage}
         schema={combinedSchema}
+        alternateUrls={{
+          ar: absUrl(`/ar/locations/${getCitySlug(city, 'ar')}/${getServiceSlug(service, 'ar', city)}`),
+          en: absUrl(`/en/locations/${getCitySlug(city, 'en')}/${getServiceSlug(service, 'en', city)}`),
+        }}
       />
 
       <section className="py-10 md:py-14">
@@ -503,7 +530,7 @@ export default function CityServiceLanding({ params }: Props) {
             <Breadcrumbs
               items={[
                 { name: language === 'ar' ? 'المدن' : 'Locations', href: '/locations' },
-                { name: cityName, href: `/locations/${params?.citySlug || city?.slug || ''}` },
+                { name: cityName, href: `/locations/${localizedCitySlug}` },
                 { name: serviceName, href: canonical, isCurrent: true },
               ]}
             />

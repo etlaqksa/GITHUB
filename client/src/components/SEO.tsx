@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { getLangFromPathname, stripLangPrefix } from '@/lib/localizePath';
+import { mapPathToLang } from '@/lib/mapPathToLang';
 
 interface SEOProps {
   title?: string;
@@ -7,11 +8,10 @@ interface SEOProps {
   keywords?: string;
   image?: string;
   url?: string;
-  alternateAr?: string;
-  alternateEn?: string;
   type?: string;
   schema?: object;
   noIndex?: boolean;
+  alternateUrls?: { ar?: string; en?: string };
 }
 
 export function SEO({
@@ -24,6 +24,7 @@ export function SEO({
   type = 'website',
   noIndex = false,
   schema,
+  alternateUrls,
 }: SEOProps) {
   const BASE_URL = (import.meta as any).env?.VITE_SITE_URL || 'https://etlaqksa.com';
   const base = String(BASE_URL).replace(/\/+$/, '');
@@ -31,8 +32,18 @@ export function SEO({
   const langFromPath = getLangFromPathname(path) || 'ar';
   const strippedPath = stripLangPrefix(path);
   const canonicalUrl = url || `${base}${path}`;
-  const altAr = `${base}/ar${strippedPath === '/' ? '/' : strippedPath}`;
-  const altEn = `${base}/en${strippedPath === '/' ? '/' : strippedPath}`;
+
+  const toAbs = (u: string) => {
+    const s = String(u || '');
+    if (!s) return base;
+    if (s.startsWith('http://') || s.startsWith('https://')) return s;
+    return `${base}${s.startsWith('/') ? s : `/${s}`}`;
+  };
+
+  const altArPath = alternateUrls?.ar ? alternateUrls.ar : mapPathToLang(path, 'ar');
+  const altEnPath = alternateUrls?.en ? alternateUrls.en : mapPathToLang(path, 'en');
+  const altAr = toAbs(altArPath);
+  const altEn = toAbs(altEnPath);
 
   const defaultSchema = {
     '@context': 'https://schema.org',

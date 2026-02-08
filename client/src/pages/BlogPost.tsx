@@ -17,6 +17,8 @@ import { buildLocalBusinessSchema } from '@/lib/companyProfile';
 import { buildBreadcrumbList } from '@/lib/schemaHelpers';
 import RelatedLinksHub from '@/components/RelatedLinksHub';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import { findArticleByAnySlug, getArticleUrlSlug } from '@/lib/articleUrl';
+import { localizeBarePathToLang } from '@/lib/mapPathToLang';
 
 function stripMarkdown(md: string) {
   return md
@@ -100,7 +102,6 @@ export default function BlogPost() {
   const isArabic = language === 'ar';
   const [, params] = useRoute<{ slug: string }>('/blog/:slug');
   const [, setLocation] = useLocation();
-  const slugParam = params?.slug ?? '';
 
   // Lazy-load the large encyclopedia dataset.
   const [allArticles, setAllArticles] = useState<ArticleContent[]>([]);
@@ -131,12 +132,10 @@ export default function BlogPost() {
   const touchStart = useRef<{ x: number; y: number } | null>(null);
 
   const article = useMemo(() => {
-    if (!slugParam) return null;
-    return (
-      allArticles.find((a) => a.slug === slugParam || a.slugAr === slugParam || (a.legacySlugs && a.legacySlugs.includes(slugParam))) ||
-      null
-    );
-  }, [slugParam, allArticles]);
+    const slug = params?.slug;
+    if (!slug) return null;
+    return findArticleByAnySlug(slug, allArticles);
+  }, [params?.slug, allArticles]);
 
   const title = useMemo(() => {
     if (!article) return '';
@@ -157,28 +156,17 @@ export default function BlogPost() {
     return normalizeEnglishContent(article.contentEn || article.content || '');
   }, [article, language]);
   const readTime = useMemo(() => estimateReadTime(contentRaw, language), [contentRaw, language]);
+  const canonicalSlug = useMemo(() => (article ? getArticleUrlSlug(article, language) : ''), [article, language]);
+  const pageUrl = useMemo(() => absUrl(`/${language}/blog/${canonicalSlug || (params?.slug || '')}`), [language, canonicalSlug, params?.slug]);
 
-  const pageSlug = useMemo(() => {
-    if (!article) return '';
-    return isArabic ? (article.slugAr || article.slug) : article.slug;
-  }, [article, isArabic]);
-
-  // Ensure the URL slug matches the active language (helps when coming from legacy/other-language slugs).
+  // Canonicalize URL (supports legacy slugs and cross-language slugs).
   useEffect(() => {
     if (!article) return;
-    const desiredSlug = isArabic ? (article.slugAr || article.slug) : article.slug;
-    if (slugParam && desiredSlug && slugParam !== desiredSlug) {
-      try {
-        // wouter supports replace option in newer versions; keep fallback safe.
-        (setLocation as any)(`/blog/${desiredSlug}`, { replace: true });
-      } catch {
-        setLocation(`/blog/${desiredSlug}`);
-      }
-    }
-  }, [article, isArabic, slugParam, setLocation]);
-  const pageUrl = useMemo(() => absUrl(`/${language}/blog/${pageSlug}`), [language, pageSlug]);
-  const alternateArUrl = useMemo(() => (article ? `/ar/blog/${article.slugAr || article.slug}` : '/ar/blog'), [article]);
-  const alternateEnUrl = useMemo(() => (article ? `/en/blog/${article.slug}` : '/en/blog'), [article]);
+    if (!params?.slug) return;
+    if (!canonicalSlug) return;
+    if (params.slug === canonicalSlug) return;
+    setLocation(`/blog/${canonicalSlug}`, { replace: true } as any);
+  }, [article, params?.slug, canonicalSlug, setLocation]);
 
   const ogImage = useMemo(() => {
     const candidate =
@@ -209,7 +197,7 @@ export default function BlogPost() {
 
 const schema = useMemo(() => {
     if (!article) return undefined;
-    const image = ogImage;
+    const image = absUrl(`/article-images/hero/${article.slug}.svg`);
     const graph: any[] = [];
 
     // Organization (minimal, consistent)
@@ -254,7 +242,7 @@ const schema = useMemo(() => {
     const list = allArticles.filter((a) => (language === 'ar' ? Boolean(a.title && a.content) : Boolean(a.titleEn && a.contentEn)));
     // Keep a stable order
     list.sort((a, b) => (a.id ?? 0) - (b.id ?? 0));
-        const idx = list.findIndex((a) => a.id === article.id);
+    const idx = list.findIndex((a) => a.id === article.id);
     return {
       prevArticle: idx > 0 ? list[idx - 1] : null,
       nextArticle: idx >= 0 && idx < list.length - 1 ? list[idx + 1] : null,
@@ -263,14 +251,12 @@ const schema = useMemo(() => {
 
   const goPrev = () => {
     if (!prevArticle) return;
-        const s = isArabic ? (prevArticle.slugAr || prevArticle.slug) : prevArticle.slug;
-    setLocation(`/blog/${s}`);
+    setLocation(`/blog/${getArticleUrlSlug(prevArticle, language)}`);
   };
 
   const goNext = () => {
     if (!nextArticle) return;
-        const s = isArabic ? (nextArticle.slugAr || nextArticle.slug) : nextArticle.slug;
-    setLocation(`/blog/${s}`);
+    setLocation(`/blog/${getArticleUrlSlug(nextArticle, language)}`);
   };
 
   // Swipe navigation (mobile): ignore vertical scroll and ignore swipes that start inside horizontally scrollable areas.
@@ -324,13 +310,9 @@ const schema = useMemo(() => {
     };
   }, [language, prevArticle, nextArticle]);
 
-  const imageKey = useMemo(() => {
-    const heroUrl = article?.image?.url || '';
-    return heroUrl ? (heroUrl.split('/').pop()?.replace('.svg', '') || '') : (article?.slug || '');
-  }, [article?.image?.url, article?.slug]);
-
-  const heroPrimary = article?.image?.url || (imageKey ? `/article-images/hero/${imageKey}.svg` : '/og-image.webp');
-  const heroSecondary = imageKey ? `/article-images/card/${imageKey}.svg` : '/og-image.webp';
+  const slug = params?.slug ?? '';
+  const heroPrimary = slug ? `/article-images/hero/${slug}.svg` : '/og-image.webp';
+  const heroSecondary = slug ? `/article-images/card/${slug}.svg` : '/og-image.webp';
 
   function getFeaturedImageFallback(a: ArticleContent) {
     const images = [
@@ -387,7 +369,7 @@ const schema = useMemo(() => {
           <Breadcrumbs
               items={[
                 { name: language === 'ar' ? 'المدونة' : 'Blog', href: '/blog' },
-                { name: title, href: `/blog/${slugParam}`, isCurrent: true },
+                { name: title, href: `/blog/${params?.slug ?? ''}`, isCurrent: true },
               ]}
             />
 
@@ -402,7 +384,22 @@ const schema = useMemo(() => {
 
   return (
     <div className="container mx-auto px-4 py-12">
-      <SEO title={title} description={description} image={ogImage} url={pageUrl} alternateAr={alternateArUrl} alternateEn={alternateEnUrl} type="article" schema={schema} />
+      <SEO
+        title={title}
+        description={description}
+        image={ogImage}
+        url={pageUrl}
+        type="article"
+        schema={schema}
+        alternateUrls={
+          article
+            ? {
+                ar: absUrl(`/ar/blog/${getArticleUrlSlug(article, 'ar')}`),
+                en: absUrl(`/en/blog/${getArticleUrlSlug(article, 'en')}`),
+              }
+            : undefined
+        }
+      />
       <div className="max-w-4xl mx-auto" ref={swipeRef}>
         <LocalizedLink href="/blog" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground mb-6">
             <ArrowLeft className="h-4 w-4" />
@@ -564,8 +561,9 @@ const schema = useMemo(() => {
                   const h = String(href || '');
                   const isInternal = h.startsWith('/') && !h.startsWith('//');
                   if (isInternal) {
+                    const localized = localizeBarePathToLang(h, language);
                     return (
-                      <LocalizedLink href={h} className="text-primary underline underline-offset-4">
+                      <LocalizedLink href={localized} className="text-primary underline underline-offset-4">
                         {children}
                       </LocalizedLink>
                     );

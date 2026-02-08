@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { mapPathToLang } from '@/lib/mapPathToLang';
 import { useTheme, ColorTheme } from '@/contexts/ThemeContext';
 import { Menu, X, Palette } from 'lucide-react';
 import { useState } from 'react';
@@ -30,39 +31,15 @@ export default function Header() {
     { name: t('nav.contact'), href: '/contact' },
   ];
 
-  const toggleLanguage = async () => {
+  const toggleLanguage = () => {
     const next = language === 'ar' ? 'en' : 'ar';
-
-    // Blog posts have different slugs per language (slug vs slugAr).
-    if (location.startsWith('/blog/')) {
-      const currentSlug = location.split('/')[2] || '';
-      try {
-        const { loadArticles } = await import('@/data/articlesLoader');
-        const all = await loadArticles();
-        const currentArticle =
-          all.find(
-            (a) =>
-              a.slug === currentSlug ||
-              a.slugAr === currentSlug ||
-              (a.legacySlugs && a.legacySlugs.includes(currentSlug))
-          ) || null;
-
-        if (currentArticle) {
-          const targetSlug = next === 'ar' ? (currentArticle.slugAr || currentArticle.slug) : currentArticle.slug;
-          setLanguage(next);
-          window.location.assign(`/${next}/blog/${targetSlug}`);
-          return;
-        }
-      } catch {
-        // Fall back to the generic path swap.
-      }
-    }
-
-    // Keep user on the same page but swap /ar <-> /en.
-    // We use a hard navigation to avoid Router base prefixing issues.
-    const target = `/${next}${location === '/' ? '' : location}`;
+    // Keep user on the same semantic page while switching language.
+    const pathname = window.location.pathname || '/';
+    const search = window.location.search || '';
+    const hash = window.location.hash || '';
+    const targetPath = mapPathToLang(pathname, next as any);
     setLanguage(next);
-    window.location.assign(target);
+    window.location.assign(`${targetPath}${search}${hash}`);
   };
 
   return (

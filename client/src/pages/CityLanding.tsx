@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import LocalizedLink from '@/components/LocalizedLink';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { findCity, serviceLandings } from '@/data/seoLocations';
+import { findCity, serviceLandings, getCitySlug, getServiceSlug } from '@/data/seoLocations';
 import { buildLandingKeywords } from '@/lib/seoKeywords';
 import { absUrl } from '@/lib/siteUrl';
 import { MapPin, ArrowRight } from 'lucide-react';
@@ -17,6 +17,7 @@ type Props = {
 export default function CityLanding({ params }: Props) {
   const { language } = useLanguage();
   const city = params?.citySlug ? findCity(params.citySlug) : undefined;
+  const citySlug = city ? getCitySlug(city, language) : (params?.citySlug || '');
 
   const cityName = city ? (language === 'ar' ? city.ar : city.en) : (language === 'ar' ? 'المدينة' : 'City');
 
@@ -30,7 +31,7 @@ export default function CityLanding({ params }: Props) {
       ? `نقدم خدمات حقن التربة (حقن أسمنتي) وكشف الفراغات/التكهفات والدراسات الجيوفيزيائية في ${cityName}. اطلب تقييم سريع وخطة خطوة تالية واضحة.`
       : `We provide soil grouting (cement injection), void/cavity detection and geophysical surveys in ${cityName}. Request a quick assessment and clear next steps.`;
 
-  const canonical = absUrl(`${language === 'ar' ? '/ar' : '/en'}/locations/${city?.slug || ''}`);
+  const canonical = absUrl(`${language === 'ar' ? '/ar' : '/en'}/locations/${citySlug}`);
 
   const schema = {
     '@context': 'https://schema.org',
@@ -99,10 +100,15 @@ export default function CityLanding({ params }: Props) {
                       ? `تشمل كلمات مرتبطة: ${s.arSynonyms.slice(0, 3).join('، ')}.`
                       : `Related terms: ${s.enSynonyms.slice(0, 3).join(', ')}.`}
                   </div>
-                  <LocalizedLink href={`/locations/${city?.slug}/${s.slug}`} className="inline-flex items-center gap-2 text-primary hover:underline">
-                    {language === 'ar' ? 'عرض صفحة الخدمة في هذه المدينة' : 'View city-specific service page'}
-                    <ArrowRight className="h-4 w-4" />
-                  </LocalizedLink>
+                  {(() => {
+                    const serviceSlug = getServiceSlug(s, language, city);
+                    return (
+                      <LocalizedLink href={`/locations/${citySlug}/${serviceSlug}`} className="inline-flex items-center gap-2 text-primary hover:underline">
+                        {language === 'ar' ? 'عرض تفاصيل الخدمة' : 'View service details'}
+                        <ArrowRight className="h-4 w-4" />
+                      </LocalizedLink>
+                    );
+                  })()}
                 </CardContent>
               </Card>
             ))}

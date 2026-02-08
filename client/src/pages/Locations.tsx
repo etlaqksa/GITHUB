@@ -2,7 +2,7 @@ import { SEO } from '@/components/SEO';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import LocalizedLink from '@/components/LocalizedLink';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { cities, serviceLandings } from '@/data/seoLocations';
+import { cities, serviceLandings, getCitySlug, getServiceSlug } from '@/data/seoLocations';
 import { buildSiteKeywords } from '@/lib/seoKeywords';
 import { absUrl } from '@/lib/siteUrl';
 
@@ -36,8 +36,10 @@ export default function Locations() {
           </div>
 
           <div className="mt-10 grid md:grid-cols-3 gap-6">
-            {cities.map((c) => (
-              <Card key={c.slug} className="h-full">
+            {cities.map((c) => {
+              const citySlug = getCitySlug(c, language);
+              return (
+                <Card key={c.slug} className="h-full">
                 <CardHeader>
                   <CardTitle className="text-xl">{language === 'ar' ? c.ar : c.en}</CardTitle>
                   <CardDescription>
@@ -47,24 +49,28 @@ export default function Locations() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-2">
-                  {serviceLandings.slice(0, 3).map((s) => (
+                  {serviceLandings.slice(0, 3).map((s) => {
+                    const serviceSlug = getServiceSlug(s, language, c);
+                    return (
                     <LocalizedLink
                       key={`${c.slug}-${s.slug}`}
-                      href={`/locations/${c.slug}/${s.slug}`}
+                      href={`/locations/${citySlug}/${serviceSlug}`}
                       className="block text-sm text-primary hover:underline"
                     >
                       {language === 'ar' ? s.ar : s.en}
                     </LocalizedLink>
-                  ))}
+                    );
+                  })}
 
                   <div className="pt-3">
-                    <LocalizedLink href={`/locations/${c.slug}`} className="text-sm font-medium hover:underline">
+                    <LocalizedLink href={`/locations/${citySlug}`} className="text-sm font-medium hover:underline">
                       {language === 'ar' ? 'عرض كل التفاصيل' : 'View details'}
                     </LocalizedLink>
                   </div>
                 </CardContent>
               </Card>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
