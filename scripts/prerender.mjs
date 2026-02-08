@@ -115,7 +115,7 @@ async function main() {
 // - On Netlify, we prerender a prioritized subset by default.
 // - You can override with PRERENDER_LIMIT (e.g. 779) if your build timeout is increased.
 const envLimit = Number(process.env.PRERENDER_LIMIT || 0);
-const defaultNetlifyLimit = 380; // safe default to avoid Netlify timeouts
+const defaultNetlifyLimit = 200; // default to 200 on Netlify to avoid build timeouts (override with PRERENDER_LIMIT)
 const limit =
   Number.isFinite(envLimit) && envLimit > 0 ? envLimit : (IS_NETLIFY ? defaultNetlifyLimit : 0);
 
@@ -164,8 +164,62 @@ for (const r of routes) {
 }
 
 // Prefer Riyadh neighborhoods first (most important long-tail)
-const riyadhNeighborhoods = neighborhoods.filter((r) => r.encodedPath.includes('/locations/') && (r.encodedPath.includes('%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6') || r.encodedPath.includes('/riyadh/')));
+const riyadhNeighborhoods = neighborhoods.filter((r) =>
+  r.encodedPath.includes('/locations/') &&
+  (r.encodedPath.includes('%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6') || r.encodedPath.includes('/riyadh/'))
+);
 const otherNeighborhoods = neighborhoods.filter((r) => !riyadhNeighborhoods.includes(r));
+
+// Identify top-city service pages so a small prerender budget still covers the biggest markets.
+const TOP_CITIES_AR = new Set([
+  'الرياض',
+  'جدة',
+  'الدمام',
+  'الخبر',
+  'المدينة-المنورة',
+  'مكة-المكرمة',
+  'الطائف',
+  'القصيم',
+  'أبها',
+  'تبوك',
+]);
+const TOP_CITIES_EN = new Set([
+  'riyadh',
+  'jeddah',
+  'dammam',
+  'khobar',
+  'madinah',
+  'makkah',
+  'taif',
+  'qassim',
+  'abha',
+  'tabuk',
+]);
+
+function getParts(decodedPath) {
+  return String(decodedPath || '')
+    .split('/')
+    .filter(Boolean);
+}
+
+function isTopCityServiceRoute(r) {
+  const parts = getParts(r.decodedPath);
+  // [lang, 'locations', citySlug, serviceSlug]
+  if (parts.length !== 4) return false;
+  if (parts[1] !== 'locations') return false;
+  const lang = parts[0];
+  const citySlug = parts[2];
+  return lang === 'ar' ? TOP_CITIES_AR.has(citySlug) : TOP_CITIES_EN.has(citySlug);
+}
+
+const topCityServices = cityService.filter(isTopCityServiceRoute);
+const otherCityServices = cityService.filter((r) => !topCityServices.includes(r));
+
+// Focus Riyadh neighborhoods for the highest-intent query (soil grouting).
+const riyadhGroutingNeighborhoods = riyadhNeighborhoods.filter((r) =>
+  r.decodedPath.includes('/locations/الرياض/حقن-تربة-في-الرياض/') ||
+  r.decodedPath.includes('/locations/riyadh/soil-grouting-in-riyadh/')
+);
 
 // Sort blog posts to put non-generic slugs first (skip old geotech-encyclopedia-* priority)
 blogPosts.sort((a, b) => {
@@ -178,10 +232,15 @@ let list = [
   ...core,
   ...hubs,
   ...cityLanding,
-  ...cityService,
-  ...riyadhNeighborhoods.slice(0, 24),   // top 24 Riyadh neighborhood pages
-  ...blogPosts.slice(0, 60),             // top 60 blog posts (includes both languages)
-  ...otherNeighborhoods.slice(0, 12),
+  // Cover the biggest cities' service pages first
+  ...topCityServices,
+  // Long-tail intent: Riyadh soil grouting neighborhoods
+  ...riyadhGroutingNeighborhoods.slice(0, 30),
+  // A small set of content pages (avoid encyclopedia-first)
+  ...blogPosts.slice(0, 12),
+  // Fill remaining budget with other city services and a tiny neighborhood sample
+  ...otherCityServices,
+  ...otherNeighborhoods.slice(0, 8),
   ...other,
 ];
 
@@ -227,16 +286,19 @@ if (Number.isFinite(limit) && limit > 0) list = list.slice(0, limit);
   const page = await browser.newPage();
   await page.setViewport({ width: 1365, height: 768, deviceScaleFactor: 1 });
 
-  // Speed: block analytics/ads requests during prerender
+  // Speed: block analytics + heavy assets during prerender
   await page.setRequestInterception(true);
   page.on('request', (req) => {
     const url = req.url();
+    const type = req.resourceType();
     const blocked =
       url.includes('googletagmanager.com') ||
       url.includes('google-analytics.com') ||
       url.includes('g.doubleclick.net') ||
       url.includes('stats.g.doubleclick.net');
     if (blocked) return req.abort();
+    // Prerender does not need images/fonts/media/stylesheets.
+    if (type === 'image' || type === 'font' || type === 'media' || type === 'stylesheet') return req.abort();
     return req.continue();
   });
 
@@ -250,14 +312,15 @@ if (Number.isFinite(limit) && limit > 0) list = list.slice(0, limit);
   for (const r of list) {
     const url = base + r.encodedPath;
     try {
-      await page.goto(url, { waitUntil: 'networkidle2', timeout: 120000 });
+      // Faster than networkidle2 and more stable with many routes.
+      await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 90000 });
       // Ensure main container is present (app mounted)
-      await page.waitForSelector('#main-content', { timeout: 60000 });
+      await page.waitForSelector('#main-content', { timeout: 45000 });
       // Small settle for any lazy sections
       if (typeof page.waitForTimeout === 'function') {
-        await page.waitForTimeout(150);
+        await page.waitForTimeout(80);
       } else {
-        await sleep(150);
+        await sleep(80);
       }
 
       const html = await page.content();
