@@ -40,6 +40,9 @@ const CityServiceNeighborhoodLanding = lazy(() => import("./pages/CityServiceNei
 const CityNeighborhoods = lazy(() => import("./pages/CityNeighborhoods"));
 const HtmlSitemap = lazy(() => import("./pages/HtmlSitemap"));
 
+const Terms = lazy(() => import("./pages/Terms"));
+const Privacy = lazy(() => import("./pages/Privacy"));
+
 const ServiceGrouting = lazy(() => import("./pages/services/ServiceGrouting"));
 const ServiceCavity = lazy(() => import("./pages/services/ServiceCavity"));
 const ServiceGeophysical = lazy(() => import("./pages/services/ServiceGeophysical"));
@@ -85,6 +88,9 @@ function AppLayout() {
 
             {/* HTML sitemap (helps crawl + internal linking) */}
             <Route path="/sitemap" component={HtmlSitemap} />
+
+            <Route path="/terms" component={Terms} />
+            <Route path="/privacy" component={Privacy} />
 
             {/* SEO: city/service landing pages */}
             {/* IMPORTANT: place neighborhood hub BEFORE generic service route to avoid treating it as a service slug */}
@@ -142,7 +148,7 @@ function App() {
   useEffect(() => {
     const p = window.location.pathname || "/";
     const isPrefixed = p === "/ar" || p.startsWith("/ar/") || p === "/en" || p.startsWith("/en/");
-    const isAsset = p.startsWith("/assets/") || p.startsWith("/images/") || p.startsWith("/gallery/") || p.startsWith("/article-images/") || p.endsWith(".pdf") || p === "/robots.txt" || p === "/sitemap.xml" || p === "/manifest.json" || p === "/favicon.png" || p === "/logo.png" || p === "/__forms.html";
+    const isAsset = p.startsWith("/assets/") || p.startsWith("/images/") || p.startsWith("/gallery/") || p.startsWith("/article-images/") || p.endsWith(".pdf") || p === "/robots.txt" || p === "/sitemap.xml" || p === "/sitemap-priority.xml" || p === "/sitemap-full.xml" || p === "/manifest.json" || p === "/favicon.png" || p === "/logo.png" || p === "/__forms.html";
     if (!isPrefixed && !isAsset) {
       // Default language is ALWAYS Arabic for legacy/unprefixed links.
       // (User requirement: Arabic is the default site experience.)

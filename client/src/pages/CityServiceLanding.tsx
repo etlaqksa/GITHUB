@@ -631,8 +631,8 @@ export default function CityServiceLanding({ params }: Props) {
                   <CardTitle className="text-xl">{language === 'ar' ? 'أحياء نخدمها في الرياض' : 'Riyadh neighborhoods we cover'}</CardTitle>
                   <CardDescription className="leading-relaxed">
                     {language === 'ar'
-                      ? 'روابط مباشرة لبحث محلي (طويل الذيل). هذه الصفحات مرتبطة داخلياً وتحتوي على أسئلة شائعة وروابط للخدمات الأخرى داخل نفس الحي.'
-                      : 'Direct local long-tail links. These pages are internally linked and include FAQ + cross-links to other services in the same neighborhood.'}
+                      ? 'روابط مباشرة لأحياء الرياض لمساعدتك في الوصول لخدمتنا داخل الحي.'
+                      : 'Direct neighborhood pages in Riyadh to help you reach the service quickly.'}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -667,8 +667,8 @@ export default function CityServiceLanding({ params }: Props) {
                   {listNeighborhoodsForCity(city).length > 24 && (
                     <p className="text-sm text-muted-foreground mt-4">
                       {language === 'ar'
-                        ? 'ملاحظة: يمكن توسيع القائمة تدريجياً مع إضافة محتوى أكثر تفصيلاً لكل حي حسب طلبات العملاء.'
-                        : 'Note: We can expand this list gradually with richer neighborhood-specific content based on real requests.'}
+                        ? 'إذا لم تجد حيّك هنا، تواصل معنا وسنوجّهك سريعاً للخيار الأنسب.'
+                        : "If you can't find your neighborhood here, contact us and we'll guide you to the best option."}
                     </p>
                   )}
                 </CardContent>

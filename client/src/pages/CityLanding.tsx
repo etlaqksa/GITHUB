@@ -119,11 +119,11 @@ export default function CityLanding({ params }: Props) {
             <div className="mt-12 max-w-5xl mx-auto">
               <Card className="border-dashed">
                 <CardHeader>
-                  <CardTitle className="text-xl">{language === 'ar' ? 'أحياء الرياض (بحث محلي طويل الذيل)' : 'Riyadh neighborhoods (local long-tail)'}</CardTitle>
+                  <CardTitle className="text-xl">{language === 'ar' ? 'أحياء الرياض' : 'Riyadh neighborhoods'}</CardTitle>
                   <CardDescription className="leading-relaxed">
                     {language === 'ar'
-                      ? 'روابط مباشرة لصفحات محلية مرتبطة داخلياً — تساعد الزائر على الوصول بسرعة لما يحتاجه داخل الحي.'
-                      : 'Direct internally-linked local pages — helps visitors reach the right service fast.'}
+                      ? 'روابط مباشرة لصفحات الأحياء لمساعدتك في الوصول بسرعة إلى الخدمة المناسبة داخل الحي.'
+                      : 'Direct neighborhood pages to help you quickly reach the right service for your area.'}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -158,11 +158,6 @@ export default function CityLanding({ params }: Props) {
                       {language === 'ar' ? 'عرض جميع صفحات أحياء الرياض' : 'View all Riyadh neighborhood pages'}
                     </LocalizedLink>
                   </div>
-                  <p className="text-xs text-muted-foreground mt-4">
-                    {language === 'ar'
-                      ? 'نقوم بتوسيع الصفحات المحلية تدريجياً بناءً على الطلب الفعلي. الهدف: قيمة للمستخدم وليس تكراراً آلياً.'
-                      : 'We expand local pages gradually based on real demand. The goal is user value—not automated duplication.'}
-                  </p>
                 </CardContent>
               </Card>
             </div>

@@ -10,11 +10,11 @@ import { absUrl } from '@/lib/siteUrl';
 export default function HtmlSitemap() {
   const { language } = useLanguage();
 
-  const title = language === 'ar' ? 'خريطة الموقع | شركة إطلاق المتميزة' : 'HTML Sitemap | ETLAQ';
+  const title = language === 'ar' ? 'خريطة الموقع | شركة إطلاق المتميزة' : 'Site Map | ETLAQ';
   const description =
     language === 'ar'
-      ? 'خريطة الموقع (HTML) لتسهيل التنقل الداخلي والزحف السريع: صفحات المدن والخدمات والأحياء والمقالات.'
-      : 'HTML sitemap to speed up internal navigation and crawling: cities, services, neighborhoods, and articles.';
+      ? 'خريطة الموقع لتسهيل الوصول إلى أهم الصفحات: الخدمات، المدن، الأحياء، والمدونة.'
+      : 'A simple site map to help you reach key pages: services, cities, neighborhoods, and the blog.';
 
   const canonical = absUrl(`/${language}/sitemap`);
 
@@ -25,11 +25,13 @@ export default function HtmlSitemap() {
     { ar: 'مشاريعنا', en: 'Projects', href: '/projects' },
     { ar: 'دراسات حالة', en: 'Case studies', href: '/case-studies' },
     { ar: 'المعرض', en: 'Gallery', href: '/gallery' },
-    { ar: 'المقالات التقنية', en: 'Blog', href: '/blog' },
+    { ar: 'المدونة', en: 'Blog', href: '/blog' },
     { ar: 'الأسئلة الشائعة', en: 'FAQ', href: '/faq' },
     { ar: 'اتصل بنا', en: 'Contact', href: '/contact' },
     { ar: 'طلب خدمة', en: 'Request service', href: '/request-service' },
     { ar: 'مدن التغطية', en: 'Locations', href: '/locations' },
+    { ar: 'الشروط والأحكام', en: 'Terms & Conditions', href: '/terms' },
+    { ar: 'سياسة الخصوصية', en: 'Privacy Policy', href: '/privacy' },
   ];
 
   return (
@@ -43,8 +45,8 @@ export default function HtmlSitemap() {
             <p className="text-muted-foreground mt-3 leading-relaxed">{description}</p>
             <p className="text-sm text-muted-foreground mt-2">
               {language === 'ar'
-                ? 'ملاحظة: ملف sitemap.xml متاح هنا أيضاً: '
-                : 'Note: The XML sitemap is also available here: '}
+                ? 'ملف خريطة الموقع بصيغة XML: '
+                : 'XML sitemap file: '}
               <a className="text-primary hover:underline" href="/sitemap.xml">
                 sitemap.xml
               </a>
@@ -68,8 +70,8 @@ export default function HtmlSitemap() {
                 <h2 className="text-xl font-semibold">{language === 'ar' ? 'صفحات المدن والخدمات' : 'Cities & services'}</h2>
                 <p className="text-sm text-muted-foreground mt-2">
                   {language === 'ar'
-                    ? 'روابط مباشرة لكل مدينة وخدماتها الأساسية. هذه الصفحات هي أهم Hubs للفهرسة.'
-                    : 'Direct links for each city and its core services. These are your main indexing hubs.'}
+                    ? 'روابط مباشرة لكل مدينة وخدماتها الأساسية.'
+                    : 'Direct links for each city and its core services.'}
                 </p>
 
                 <div className="mt-5 space-y-6">
@@ -113,8 +115,8 @@ export default function HtmlSitemap() {
                           <div className="mt-3">
                             <p className="text-xs text-muted-foreground">
                               {language === 'ar'
-                                ? 'روابط مختارة لأحياء الرياض (طويل الذيل).'
-                                : 'Selected Riyadh neighborhood long-tail pages.'}
+                                ? 'روابط مختارة لأحياء الرياض.'
+                                : 'Selected Riyadh neighborhood pages.'}
                             </p>
                             <ul className="mt-2 grid sm:grid-cols-2 lg:grid-cols-3 gap-2">
                               {neighborhoods.slice(0, 18).map((n) => {
@@ -142,7 +144,7 @@ export default function HtmlSitemap() {
               </div>
 
               <div className="rounded-2xl border bg-card/60 backdrop-blur p-6">
-                <h2 className="text-xl font-semibold">{language === 'ar' ? 'المقالات التقنية' : 'Articles'}</h2>
+                <h2 className="text-xl font-semibold">{language === 'ar' ? 'المدونة' : 'Blog'}</h2>
                 <p className="text-sm text-muted-foreground mt-2">
                   {language === 'ar'
                     ? 'روابط مباشرة لكل المقالات (80 مقال).'

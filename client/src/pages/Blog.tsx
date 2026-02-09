@@ -237,7 +237,7 @@ export default function Blog() {
   return (
     <>
       <SEO
-        title={language === 'ar' ? 'المقالات التقنية - إطلاق' : 'Technical Articles - ETLAQ'}
+        title={language === 'ar' ? 'المدونة - إطلاق' : 'Blog - ETLAQ'}
         description={language === 'ar' ? 'مقالات مبسطة وعملية عن حقن التربة، معالجة الهبوط، كشف الفراغات، وتقوية الأساسات.' : 'Practical, reader-friendly articles on soil grouting, settlement mitigation, void detection, and foundation strengthening.'}
         url={canonical}
         image={absUrl('/og-articles.webp')}
@@ -247,7 +247,7 @@ export default function Blog() {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold mb-2">{language === 'ar' ? 'المقالات التقنية' : 'Technical Articles'}</h1>
+          <h1 className="text-3xl font-bold mb-2">{language === 'ar' ? 'المدونة' : 'Blog'}</h1>
           <p className="text-muted-foreground">
             {language === 'ar'
               ? 'مقالات هندسية مختصرة وعملية في الجيوتقنية وحقن التربة والأساسات.'

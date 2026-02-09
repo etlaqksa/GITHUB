@@ -158,6 +158,19 @@ export default function Footer() {
               ? `© ${new Date().getFullYear()} شركة إطلاق المتميزة المحدودة. جميع الحقوق محفوظة.`
               : `© ${new Date().getFullYear()} ETLAQ Distinguished Company Ltd. All rights reserved.`}
           </p>
+          <div className="mt-3 flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
+            <LocalizedLink href="/terms">
+              <span className="hover:underline cursor-pointer">
+                {language === 'ar' ? 'الشروط والأحكام' : 'Terms & Conditions'}
+              </span>
+            </LocalizedLink>
+            <span className="opacity-60">•</span>
+            <LocalizedLink href="/privacy">
+              <span className="hover:underline cursor-pointer">
+                {language === 'ar' ? 'سياسة الخصوصية' : 'Privacy Policy'}
+              </span>
+            </LocalizedLink>
+          </div>
         </div>
       </div>
     </footer>

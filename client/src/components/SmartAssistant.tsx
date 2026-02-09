@@ -1,241 +1,226 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
+import { useLocation } from 'wouter';
 import { Bot, Search, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { Badge } from '@/components/ui/badge';
 import { useLanguage } from '@/contexts/LanguageContext';
-import LocalizedLink from '@/components/LocalizedLink';
-import type { ArticleContent } from '@/data/articles';
 import { loadArticles } from '@/data/articlesLoader';
+import LocalizedLink from '@/components/LocalizedLink';
+import { getArticleUrlSlug } from '@/lib/articleUrl';
 
-type Intent = {
-  key: string;
-  label: { ar: string; en: string };
-  hint: { ar: string; en: string };
-  link: string;
-};
+type Result = { urlSlug: string; title: string; score: number };
 
-const INTENTS: Intent[] = [
+const INTENTS = [
   {
-    key: 'settlement_cracks',
-    label: { ar: 'هبوط وتشققات', en: 'Settlement & cracking' },
-    hint: {
-      ar: 'تثبيت التربة وتقليل الهبوط عبر الحقن الأسمنتي أو الحقن الدقيق حسب الحالة.',
-      en: 'Stabilize soils and reduce settlement using cementitious or microfine grouting depending on the case.',
-    },
-    link: '/services/grouting',
+    id: 'grouting',
+    ar: 'حقن التربة',
+    en: 'Soil grouting',
+    href: '/services/grouting',
   },
   {
-    key: 'voids_cavities',
-    label: { ar: 'فراغات وتجاويف', en: 'Voids & cavities' },
-    hint: {
-      ar: 'كشف الفراغات والتأكد من امتدادها ثم معالجتها بالحقن المناسب.',
-      en: 'Detect voids, confirm their extent, then treat with the appropriate grouting system.',
-    },
-    link: '/services/cavity',
+    id: 'cavities',
+    ar: 'كشف التكهفات',
+    en: 'Cavity detection',
+    href: '/services/cavity',
   },
   {
-    key: 'unknown_subsurface',
-    label: { ar: 'تحريات تحت السطح', en: 'Subsurface investigation' },
-    hint: {
-      ar: 'عند عدم وضوح السبب: نبدأ بمسح جيوفيزيائي/تحريات لتحديد أماكن الضعف والفراغات.',
-      en: 'When root cause is unclear: start with geophysical scanning/investigation to locate weak zones and voids.',
-    },
-    link: '/services/geophysical',
+    id: 'geophysics',
+    ar: 'الاختبارات الجيوفيزيائية',
+    en: 'Geophysical tests',
+    href: '/services/geophysical',
+  },
+  {
+    id: 'request',
+    ar: 'طلب خدمة',
+    en: 'Request service',
+    href: '/request-service',
+  },
+  {
+    id: 'contact',
+    ar: 'تواصل معنا',
+    en: 'Contact',
+    href: '/contact',
   },
 ];
-
-function scoreMatch(query: string, target: string) {
-  const q = query.trim().toLowerCase();
-  if (!q) return 0;
-  const t = target.toLowerCase();
-  if (t === q) return 100;
-  if (t.startsWith(q)) return 70;
-  if (t.includes(q)) return 40;
-  // token scoring
-  const parts = q.split(/\s+/).filter(Boolean);
-  let s = 0;
-  for (const p of parts) {
-    if (t.includes(p)) s += 12;
-  }
-  return s;
-}
 
 export default function SmartAssistant() {
   const { language } = useLanguage();
   const isAr = language === 'ar';
+
+  const [open, setOpen] = useState(false);
+  const [location] = useLocation();
+
   const [input, setInput] = useState('');
-  const [q, setQ] = useState('');
-  const [hasSearched, setHasSearched] = useState(false);
-  const [allArticles, setAllArticles] = useState<ArticleContent[] | null>(null);
-  const [isLoadingArticles, setIsLoadingArticles] = useState(false);
+  const [allArticles, setAllArticles] = useState<any[]>([]);
+  const [loading, setLoading] = useState(false);
 
-  const runSearch = async () => {
-    const next = input.trim();
-    setQ(next);
-    setHasSearched(true);
+  // Auto-close the assistant when route changes (e.g., user clicks a result).
+  useEffect(() => {
+    if (!open) return;
+    setOpen(false);
+    // Keep the query so the user can reopen quickly if needed.
+  }, [location]); // eslint-disable-line react-hooks/exhaustive-deps
 
-    if (next.length < 2) return;
-    if (allArticles) return;
-    setIsLoadingArticles(true);
-    try {
-      const a = await loadArticles();
-      setAllArticles(Array.isArray(a) ? a : []);
-    } catch {
-      setAllArticles([]);
-    } finally {
-      setIsLoadingArticles(false);
-    }
-  };
+  useEffect(() => {
+    let alive = true;
+    setLoading(true);
+    loadArticles()
+      .then((a) => {
+        if (!alive) return;
+        setAllArticles(Array.isArray(a) ? a : []);
+      })
+      .catch(() => {
+        if (!alive) return;
+        setAllArticles([]);
+      })
+      .finally(() => {
+        if (!alive) return;
+        setLoading(false);
+      });
+    return () => {
+      alive = false;
+    };
+  }, []);
 
-  const results = useMemo(() => {
-    const query = q.trim();
-    if (query.length < 2) return [] as { slug: string; title: string; score: number }[];
+  const results = useMemo((): Result[] => {
+    const q = input.trim().toLowerCase();
+    if (q.length < 2) return [];
 
     const src = allArticles || [];
-    if (src.length === 0) return [] as { slug: string; title: string; score: number }[];
+    if (!src.length) return [];
 
-    const list = src
-      .map((a: any) => {
-        // Our canonical article shape uses: title/titleEn, category/categoryEn, excerpt/excerptEn.
-        // (Older datasets used titleAr/categoryAr)
-        const title = isAr ? a.title : a.titleEn;
-        const cat = isAr ? a.category : a.categoryEn;
-        const excerpt = isAr ? a.excerpt : a.excerptEn;
-        const extraCats = isAr ? a.categoriesAr : a.categoriesEn;
+    // Simple weighted match (title, category, content excerpt).
+    const scored = src
+      .map((a) => {
+        const title = isAr ? String(a.title || '') : String(a.titleEn || a.title || '');
+        const cats = isAr
+          ? (a.categoriesAr || [a.category].filter(Boolean)).join(' ')
+          : (a.categoriesEn || [a.categoryEn].filter(Boolean)).join(' ');
+        const excerpt = isAr ? String(a.content || '').slice(0, 600) : String(a.contentEn || a.content || '').slice(0, 600);
 
-        let s = scoreMatch(query, String(title)) + 0.6 * scoreMatch(query, String(cat));
-        s += 0.25 * scoreMatch(query, String(excerpt || ''));
-        if (Array.isArray(extraCats)) {
-          for (const c of extraCats) s += 0.2 * scoreMatch(query, String(c));
+        const hay = `${title} ${cats} ${excerpt}`.toLowerCase();
+
+        let s = 0;
+        if (title.toLowerCase().includes(q)) s += 6;
+        if (cats.toLowerCase().includes(q)) s += 2;
+        if (hay.includes(q)) s += 1;
+
+        // Token match boost (for acronyms like GPR/ERT)
+        const tokens = q.split(/\s+/).filter(Boolean);
+        for (const t of tokens) {
+          if (t.length < 2) continue;
+          if (title.toLowerCase().includes(t)) s += 2;
+          else if (hay.includes(t)) s += 0.5;
         }
 
-        return { slug: a.slug, title: String(title), score: s };
+        // IMPORTANT:
+        // Do NOT use the dataset's legacy `slug` field for routing (it is only for assets).
+        // Always build the canonical URL slug (title-based + trailing ID).
+        const urlSlug = getArticleUrlSlug(a, isAr ? 'ar' : 'en');
+
+        return { urlSlug, title, score: s };
       })
       .filter((x) => x.score > 0)
       .sort((a, b) => b.score - a.score)
-      .slice(0, 6);
+      .slice(0, 8);
 
-    return list;
-  }, [q, isAr, allArticles]);
+    // De-duplicate (just in case)
+    const seen = new Set<string>();
+    const out: Result[] = [];
+    for (const r of scored) {
+      if (seen.has(r.urlSlug)) continue;
+      seen.add(r.urlSlug);
+      out.push(r);
+    }
+    return out;
+  }, [input, allArticles, isAr]);
 
   return (
-    <div className="fixed bottom-24 md:bottom-5 right-6 z-50">
-      <Dialog>
+    <div className="fixed bottom-5 right-5 z-[60]">
+      <Dialog open={open} onOpenChange={setOpen}>
         <DialogTrigger asChild>
           <Button
-            className="rounded-full shadow-lg h-12 w-12 p-0"
+            size="lg"
+            className="rounded-full shadow-lg gap-2"
             aria-label={isAr ? 'مساعد الموقع' : 'Site assistant'}
+            type="button"
           >
             <Bot className="h-5 w-5" />
+            <span className="hidden sm:inline">{isAr ? 'اسأل مساعد إطلاق' : 'Ask ETLAQ'}</span>
           </Button>
         </DialogTrigger>
 
-        <DialogContent className="max-w-lg">
+        <DialogContent className="max-w-xl w-[95vw] sm:w-full">
           <DialogHeader>
             <DialogTitle className="flex items-center gap-2">
-              <Sparkles className="h-4 w-4" />
+              <Sparkles className="h-5 w-5 text-primary" />
               {isAr ? 'مساعد إطلاق الذكي' : 'ETLAQ Smart Assistant'}
             </DialogTitle>
           </DialogHeader>
 
           <div className="space-y-4">
-            <div className="rounded-lg border border-border bg-muted/40 p-4">
-              <div className="text-sm text-muted-foreground">
-                {isAr
-                  ? 'اختر موضوعًا سريعًا أو ابحث داخل المقالات...'
-                  : 'Pick a quick topic or search inside our articles...'}
-              </div>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              {isAr
+                ? 'ابحث داخل موسوعة المقالات أو اختر ما تريد بسرعة. عند فتح صفحة، سيُغلق المساعد تلقائياً.'
+                : 'Search the knowledge base or jump to key pages. The assistant closes automatically after navigation.'}
+            </p>
 
-              <div className="mt-3 flex flex-wrap gap-2">
-                {INTENTS.map((it) => (
-                  <LocalizedLink key={it.key} href={it.link}>
-                    <Badge className="cursor-pointer">
-                      {isAr ? it.label.ar : it.label.en}
-                    </Badge>
-                  </LocalizedLink>
-                ))}
-              </div>
+            <div className="flex flex-wrap gap-2">
+              {INTENTS.map((i) => (
+                <LocalizedLink key={i.id} href={i.href} onClick={() => setOpen(false)}>
+                  <Badge className="cursor-pointer hover:opacity-90">
+                    {isAr ? i.ar : i.en}
+                  </Badge>
+                </LocalizedLink>
+              ))}
             </div>
 
-            <div className="grid gap-2">
-              <div className="flex items-center gap-2">
-                <Search className="h-4 w-4 text-muted-foreground" />
-                <span className="text-sm font-medium">{isAr ? 'بحث في المقالات' : 'Search articles'}</span>
+            <div className="flex items-center gap-2">
+              <Search className="h-4 w-4 text-muted-foreground" />
+              <Input
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                placeholder={isAr ? 'اكتب كلمة مثل: GPR أو حقن التربة...' : 'Type a keyword like: GPR or soil grouting...'}
+              />
+            </div>
+
+            {loading && (
+              <p className="text-sm text-muted-foreground">{isAr ? 'جاري تحميل المحتوى...' : 'Loading content...'}</p>
+            )}
+
+            {!loading && input.trim().length >= 2 && (
+              <div className="rounded-xl border bg-card/60 backdrop-blur p-4">
+                {results.length === 0 ? (
+                  <p className="text-sm text-muted-foreground">
+                    {isAr ? 'لا توجد نتائج واضحة. جرّب كلمة مختلفة.' : 'No clear results. Try a different keyword.'}
+                  </p>
+                ) : (
+                  <ul className="space-y-3">
+                    {results.map((r) => (
+                      <li key={r.urlSlug}>
+                        <LocalizedLink
+                          href={`/blog/${r.urlSlug}`}
+                          className="block rounded-lg p-2 hover:bg-accent transition"
+                          onClick={() => setOpen(false)}
+                        >
+                          <div className="font-medium leading-snug">{r.title}</div>
+                          <div className="text-xs text-muted-foreground mt-1">
+                            {isAr ? 'عرض المقال' : 'Open article'}
+                          </div>
+                        </LocalizedLink>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
+            )}
 
-              <div className="grid gap-2">
-                <Input
-                  value={input}
-                  onChange={(e) => setInput(e.target.value)}
-                  onKeyDown={(e) => {
-                    if (e.key === 'Enter') {
-                      e.preventDefault();
-                      runSearch();
-                    }
-                  }}
-                  placeholder={isAr ? 'مثال: حقن التربة، فراغات، هبوط...' : 'e.g. grouting, voids, settlement...'}
-                  dir={isAr ? 'rtl' : 'ltr'}
-                />
-                <div className="flex flex-wrap gap-2">
-                  <Button
-                    size="sm"
-                    onClick={runSearch}
-                    disabled={input.trim().length < 2}
-                    className="gap-2"
-                  >
-                    <Search className="h-4 w-4" />
-                    {isAr ? 'ابدأ البحث' : 'Search'}
-                  </Button>
-                  <Button
-                    size="sm"
-                    variant="outline"
-                    onClick={() => {
-                      setInput('');
-                      setQ('');
-                      setHasSearched(false);
-                    }}
-                  >
-                    {isAr ? 'مسح' : 'Clear'}
-                  </Button>
-                </div>
-              </div>
-
-              {hasSearched && isLoadingArticles && q.trim().length >= 2 && (
-                <div className="text-sm text-muted-foreground">
-                  {isAr ? 'جاري تحميل قاعدة المقالات…' : 'Loading articles dataset…'}
-                </div>
-              )}
-
-              {hasSearched && !isLoadingArticles && q.trim().length >= 2 && results.length === 0 && (
-                <div className="text-sm text-muted-foreground">
-                  {isAr ? 'لم نجد نتائج مباشرة. جرّب كلمة أقصر أو مرادفًا.' : 'No direct results. Try a shorter keyword or a synonym.'}
-                </div>
-              )}
-
-              {results.length > 0 && (
-                <div className="rounded-lg border border-border divide-y">
-                  {results.map((r) => (
-                    <LocalizedLink
-                      key={r.slug}
-                      href={`/blog/${r.slug}`}
-                      className="block px-3 py-2 hover:bg-muted/60"
-                    >
-                      <div className="text-sm font-medium">{r.title}</div>
-                    </LocalizedLink>
-                  ))}
-                </div>
-              )}
-
-              <div className="flex flex-wrap items-center gap-2 pt-2">
-                <LocalizedLink href="/request-service">
-                  <Button size="sm">{isAr ? 'اطلب خدمة/استشارة' : 'Request a service'}</Button>
-                </LocalizedLink>
-                <LocalizedLink href="/contact">
-                  <Button variant="outline" size="sm">{isAr ? 'تواصل معنا' : 'Contact us'}</Button>
-                </LocalizedLink>
-              </div>
+            <div className="flex gap-2 justify-end">
+              <Button variant="outline" onClick={() => setOpen(false)} type="button">
+                {isAr ? 'إغلاق' : 'Close'}
+              </Button>
             </div>
           </div>
         </DialogContent>
