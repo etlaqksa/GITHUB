@@ -115,7 +115,9 @@ async function main() {
 // - On Netlify, we prerender a prioritized subset by default.
 // - You can override with PRERENDER_LIMIT (e.g. 779) if your build timeout is increased.
 const envLimit = Number(process.env.PRERENDER_LIMIT || 0);
-const defaultNetlifyLimit = 200; // default to 200 on Netlify to avoid build timeouts (override with PRERENDER_LIMIT)
+// IMPORTANT: Keep this low enough to fit Netlify's build time limits.
+// You can always override from Netlify UI with PRERENDER_LIMIT.
+const defaultNetlifyLimit = 100; // default to 100 on Netlify (override with PRERENDER_LIMIT)
 const limit =
   Number.isFinite(envLimit) && envLimit > 0 ? envLimit : (IS_NETLIFY ? defaultNetlifyLimit : 0);
 
@@ -270,10 +272,18 @@ if (Number.isFinite(limit) && limit > 0) list = list.slice(0, limit);
   const previewArgs = IS_WIN
     ? ['/d', '/s', '/c', `npx vite preview --port ${port} --strictPort --host 127.0.0.1`]
     : ['vite', 'preview', '--port', String(port), '--strictPort', '--host', '127.0.0.1'];
+  // Run preview in its own process group on Linux so we can reliably terminate
+  // the entire tree (npx -> node -> vite). If we only kill the parent, the
+  // child server can keep the Node event loop alive and Netlify will time out
+  // AFTER prerender prints "Done".
   const preview = spawn(previewCmd, previewArgs, {
     stdio: ['ignore', 'pipe', 'pipe'],
     env: { ...process.env },
+    detached: !IS_WIN,
   });
+  // Allow Node to exit even if the preview process misbehaves after we're done.
+  // (We still kill it explicitly at the end.)
+  if (!IS_WIN) preview.unref();
 
   await waitForPreviewReady(preview);
   const base = `http://127.0.0.1:${port}`;
@@ -335,13 +345,55 @@ if (Number.isFinite(limit) && limit > 0) list = list.slice(0, limit);
 
   await page.close();
   await browser.close();
-  preview.kill('SIGTERM');
+
+  // Ensure preview server is fully terminated so the build command can exit.
+  const stopPreview = async () => {
+    const sleep2 = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+    if (!preview?.pid) return;
+    let exited = false;
+    const exitedP = new Promise((resolve) => {
+      preview.once('exit', () => {
+        exited = true;
+        resolve();
+      });
+    });
+
+    try {
+      if (IS_WIN) {
+        preview.kill('SIGTERM');
+      } else {
+        // Kill the whole process group.
+        process.kill(-preview.pid, 'SIGTERM');
+      }
+    } catch {
+      // ignore
+    }
+
+    await Promise.race([exitedP, sleep2(2500)]);
+    if (!exited) {
+      try {
+        if (IS_WIN) preview.kill('SIGKILL');
+        else process.kill(-preview.pid, 'SIGKILL');
+      } catch {
+        // ignore
+      }
+      await Promise.race([exitedP, sleep2(1500)]);
+    }
+
+    try { preview.stdout?.destroy(); } catch {}
+    try { preview.stderr?.destroy(); } catch {}
+  };
+
+  await stopPreview();
 
   console.log(`[prerender] Done. OK=${ok}, Failed=${failed}`);
   if (failed > 0) {
     // Don't fail build on a few pages; keep deployable.
     console.warn('[prerender] Some routes failed to prerender. Site build will still succeed.');
   }
+
+  // Be explicit: no dangling handles should keep the build alive.
+  process.exit(0);
 }
 
 main().catch((e) => {
