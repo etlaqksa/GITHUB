@@ -121,130 +121,132 @@ const defaultNetlifyLimit = 100; // default to 100 on Netlify (override with PRE
 const limit =
   Number.isFinite(envLimit) && envLimit > 0 ? envLimit : (IS_NETLIFY ? defaultNetlifyLimit : 0);
 
-const coreSet = new Set([
-  '/', '/home',
-  '/ar', '/en',
-  '/ar/about', '/en/about',
-  '/ar/services', '/en/services',
-  '/ar/projects', '/en/projects',
-  '/ar/case-studies', '/en/case-studies',
-  '/ar/gallery', '/en/gallery',
-  '/ar/blog', '/en/blog',
-  '/ar/faq', '/en/faq',
-  '/ar/contact', '/en/contact',
-  '/ar/request-service', '/en/request-service',
-  '/ar/locations', '/en/locations',
-  '/ar/sitemap', '/en/sitemap',
-]);
+  // --- Route selection priority (Netlify prerender budget) ---
+  // User preference:
+  // 1) Arabic core pages
+  // 2) Services: Soil Grouting, Cavity Detection, Foundation Strengthening
+  // 3) Major cities (Arabic) landings
+  // 4) For each service -> for each major city (Arabic) city-service pages
+  // 5) A small set of Riyadh neighborhood pages (Arabic)
+  // 6) Fill remaining budget with other Arabic pages, then anything else.
 
-const isCore = (p) => coreSet.has(p);
+  const norm = (p) => {
+    const s = String(p || '').replace(/\/+$/, '') || '/';
+    return s;
+  };
 
-const isNeighborhoodHub = (p) => p.endsWith('/احياء') || p.endsWith('/neighborhoods');
-const isCityLanding = (p) => /^\/(ar|en)\/locations\/[^\/]+$/.test(p);
-const isCityService = (p) => /^\/(ar|en)\/locations\/[^\/]+\/[^\/]+$/.test(p);
-const isNeighborhood = (p) => /^\/(ar|en)\/locations\/[^\/]+\/[^\/]+\/[^\/]+$/.test(p);
-const isBlogPost = (p) => /^\/(ar|en)\/blog\/[^\/]+$/.test(p);
+  // Index routes by decoded path (best for Arabic slugs)
+  const byDecoded = new Map();
+  for (const r of routes) byDecoded.set(norm(r.decodedPath), r);
 
-// Keep a balanced prioritized selection:
-const core = [];
-const cityLanding = [];
-const cityService = [];
-const hubs = [];
-const neighborhoods = [];
-const blogPosts = [];
-const other = [];
+  const pick = (decodedPath) => byDecoded.get(norm(decodedPath));
 
-for (const r of routes) {
-  const p = r.encodedPath;
-  if (isCore(p)) core.push(r);
-  else if (isNeighborhoodHub(p)) hubs.push(r);
-  else if (isCityLanding(p)) cityLanding.push(r);
-  else if (isCityService(p)) cityService.push(r);
-  else if (isBlogPost(p)) blogPosts.push(r);
-  else if (isNeighborhood(p)) neighborhoods.push(r);
-  else other.push(r);
-}
+  const picked = [];
+  const pushIf = (decodedPath) => {
+    const r = pick(decodedPath);
+    if (r) picked.push(r);
+  };
 
-// Prefer Riyadh neighborhoods first (most important long-tail)
-const riyadhNeighborhoods = neighborhoods.filter((r) =>
-  r.encodedPath.includes('/locations/') &&
-  (r.encodedPath.includes('%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6') || r.encodedPath.includes('/riyadh/'))
-);
-const otherNeighborhoods = neighborhoods.filter((r) => !riyadhNeighborhoods.includes(r));
+  // 1) Arabic core
+  const AR_CORE = [
+    '/ar',
+    '/ar/about',
+    '/ar/services',
+    '/ar/projects',
+    '/ar/case-studies',
+    '/ar/gallery',
+    '/ar/blog',
+    '/ar/faq',
+    '/ar/contact',
+    '/ar/request-service',
+    '/ar/locations',
+    '/ar/sitemap',
+  ];
+  for (const p of AR_CORE) pushIf(p);
 
-// Identify top-city service pages so a small prerender budget still covers the biggest markets.
-const TOP_CITIES_AR = new Set([
-  'الرياض',
-  'جدة',
-  'الدمام',
-  'الخبر',
-  'المدينة-المنورة',
-  'مكة-المكرمة',
-  'الطائف',
-  'القصيم',
-  'أبها',
-  'تبوك',
-]);
-const TOP_CITIES_EN = new Set([
-  'riyadh',
-  'jeddah',
-  'dammam',
-  'khobar',
-  'madinah',
-  'makkah',
-  'taif',
-  'qassim',
-  'abha',
-  'tabuk',
-]);
+  // 2) Services (Arabic)
+  // Dedicated pages exist for grouting/cavity; foundation strengthening routes to request-service.
+  const AR_SERVICE_PAGES = [
+    '/ar/services/grouting',
+    '/ar/services/cavity',
+    '/ar/request-service',
+  ];
+  for (const p of AR_SERVICE_PAGES) pushIf(p);
 
-function getParts(decodedPath) {
-  return String(decodedPath || '')
-    .split('/')
-    .filter(Boolean);
-}
+  // 3) Major cities (Arabic) landings
+  const MAJOR_CITIES_AR = [
+    'الرياض',
+    'الدمام',
+    'الخبر',
+    'الظهران',
+    'جدة',
+    'المدينة-المنورة',
+    'القصيم',
+    'أبها',
+    'مكة-المكرمة',
+    'الطائف',
+  ];
+  for (const cityAr of MAJOR_CITIES_AR) pushIf(`/ar/locations/${cityAr}`);
 
-function isTopCityServiceRoute(r) {
-  const parts = getParts(r.decodedPath);
-  // [lang, 'locations', citySlug, serviceSlug]
-  if (parts.length !== 4) return false;
-  if (parts[1] !== 'locations') return false;
-  const lang = parts[0];
-  const citySlug = parts[2];
-  return lang === 'ar' ? TOP_CITIES_AR.has(citySlug) : TOP_CITIES_EN.has(citySlug);
-}
+  // 4) City-service pages: choose service then city
+  const serviceSlugArWithCityLocal = (serviceArSlug, cityArSlug) => {
+    const s = String(serviceArSlug || '').replace(/^\/+|\/+$/g, '');
+    const c = String(cityArSlug || '').replace(/^\/+|\/+$/g, '');
+    return `${s}-في-${c}`.replace(/-+/g, '-');
+  };
 
-const topCityServices = cityService.filter(isTopCityServiceRoute);
-const otherCityServices = cityService.filter((r) => !topCityServices.includes(r));
+  const SERVICES_AR_BASE = [
+    { key: 'grouting', base: 'حقن-تربة' },
+    { key: 'cavity', base: 'كشف-تكهفات' },
+    { key: 'foundation', base: 'تقوية-أساسات' },
+  ];
 
-// Focus Riyadh neighborhoods for the highest-intent query (soil grouting).
-const riyadhGroutingNeighborhoods = riyadhNeighborhoods.filter((r) =>
-  r.decodedPath.includes('/locations/الرياض/حقن-تربة-في-الرياض/') ||
-  r.decodedPath.includes('/locations/riyadh/soil-grouting-in-riyadh/')
-);
+  for (const s of SERVICES_AR_BASE) {
+    for (const cityAr of MAJOR_CITIES_AR) {
+      const serviceWithCity = serviceSlugArWithCityLocal(s.base, cityAr);
+      pushIf(`/ar/locations/${cityAr}/${serviceWithCity}`);
+    }
+  }
 
-// Sort blog posts to put non-generic slugs first (skip old geotech-encyclopedia-* priority)
-blogPosts.sort((a, b) => {
-  const score = (p) => (p.includes('geotech-encyclopedia') ? 1 : 0);
-  return score(a.encodedPath) - score(b.encodedPath) || a.encodedPath.localeCompare(b.encodedPath);
-});
+  // 5) Riyadh neighborhoods (Arabic) – prefer soil grouting first
+  const RIYADH_HOODS = [
+    'الياسمين', 'النرجس', 'الرمال', 'العارض', 'القيروان', 'الصحافة', 'الملقا', 'حطين', 'النخيل', 'المونسية',
+    'الندى', 'العقيق',
+  ];
+  const toHoodSlugAr = (name) => `حي-${String(name || '').trim().replace(/\s+/g, '-')}`.replace(/-+/g, '-');
+  const riyadhService = serviceSlugArWithCityLocal('حقن-تربة', 'الرياض');
+  for (const hood of RIYADH_HOODS) {
+    const hoodSlug = toHoodSlugAr(hood);
+    pushIf(`/ar/locations/الرياض/${riyadhService}/${hoodSlug}`);
+  }
 
-// Compose selection
-let list = [
-  ...core,
-  ...hubs,
-  ...cityLanding,
-  // Cover the biggest cities' service pages first
-  ...topCityServices,
-  // Long-tail intent: Riyadh soil grouting neighborhoods
-  ...riyadhGroutingNeighborhoods.slice(0, 30),
-  // A small set of content pages (avoid encyclopedia-first)
-  ...blogPosts.slice(0, 12),
-  // Fill remaining budget with other city services and a tiny neighborhood sample
-  ...otherCityServices,
-  ...otherNeighborhoods.slice(0, 8),
-  ...other,
-];
+  // 6) Fill remaining budget: prefer Arabic pages first (avoid encyclopedia-first)
+  const already = new Set();
+  for (const r of picked) already.add(r.encodedPath);
+
+  const isAr = (r) => r.decodedPath === '/ar' || String(r.decodedPath).startsWith('/ar/');
+  const isBlogPost = (p) => /^\/(ar|en)\/blog\/[^\/]+$/.test(p);
+
+  const arFirst = [...routes].sort((a, b) => {
+    const aAr = isAr(a) ? 0 : 1;
+    const bAr = isAr(b) ? 0 : 1;
+    if (aAr !== bAr) return aAr - bAr;
+    const aEnc = a.encodedPath;
+    const bEnc = b.encodedPath;
+    // Push encyclopedia-style blog slugs later
+    const score = (x) => (x.includes('geotech-encyclopedia') ? 1 : 0);
+    return score(aEnc) - score(bEnc) || aEnc.localeCompare(bEnc);
+  });
+
+  for (const r of arFirst) {
+    if (already.has(r.encodedPath)) continue;
+    // Include blog posts, city pages, etc. Anything indexable is fine.
+    picked.push(r);
+    already.add(r.encodedPath);
+    if (Number.isFinite(limit) && limit > 0 && picked.length >= limit) break;
+  }
+
+  let list = picked;
 
 // De-dup preserving order
 const seen2 = new Set();

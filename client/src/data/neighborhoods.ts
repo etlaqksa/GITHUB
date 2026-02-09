@@ -23,6 +23,7 @@ export const riyadhNeighborhoods: Neighborhood[] = [
   { citySlug: 'riyadh', ar: 'حي الياسمين', en: 'Al Yasmin', arSlug: slugifyAr('حي الياسمين'), slug: slugifyEn('al yasmin') },
   { citySlug: 'riyadh', ar: 'حي الملقا', en: 'Al Malqa', arSlug: slugifyAr('حي الملقا'), slug: slugifyEn('al malqa') },
   { citySlug: 'riyadh', ar: 'حي النرجس', en: 'An Narjis', arSlug: slugifyAr('حي النرجس'), slug: slugifyEn('an narjis') },
+  { citySlug: 'riyadh', ar: 'حي العارض', en: 'Al Aarid', arSlug: slugifyAr('حي العارض'), slug: slugifyEn('al aarid') },
   { citySlug: 'riyadh', ar: 'حي الندى', en: 'An Nada', arSlug: slugifyAr('حي الندى'), slug: slugifyEn('an nada') },
   { citySlug: 'riyadh', ar: 'حي الصحافة', en: 'As Sahafah', arSlug: slugifyAr('حي الصحافة'), slug: slugifyEn('as sahafah') },
   { citySlug: 'riyadh', ar: 'حي العقيق', en: 'Al Aqiq', arSlug: slugifyAr('حي العقيق'), slug: slugifyEn('al aqiq') },
