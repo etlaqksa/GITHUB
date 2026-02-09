@@ -1,247 +1,327 @@
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import LocalizedLink from '@/components/LocalizedLink';
+import QuickRequestCard from '@/components/QuickRequestCard';
 import { SEO } from '@/components/SEO';
 import TrustStats from '@/components/TrustStats';
-import QuickRequestCard from '@/components/QuickRequestCard';
-import Breadcrumbs from '@/components/Breadcrumbs';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { CheckCircle2, ClipboardList, Drill, Radar, ShieldCheck, Sparkles } from 'lucide-react';
-import { trackEvent } from '@/lib/analytics';
-import LocalizedLink from '@/components/LocalizedLink';
-import { absUrl } from '@/lib/siteUrl';
 import { buildBreadcrumbList } from '@/lib/schemaHelpers';
+import { trackEvent } from '@/lib/analytics';
+import { absUrl } from '@/lib/siteUrl';
+import { cities } from '@/data/seoLocations';
+import { CheckCircle2, ClipboardList, Drill, MapPin, Radar, ShieldCheck, Timer } from 'lucide-react';
 
 export default function Services() {
   const { language } = useLanguage();
+  const lang = language === 'en' ? 'en' : 'ar';
 
-  const servicesSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'OfferCatalog',
-    name: language === 'ar' ? 'خدمات شركة إطلاق المتميزة' : 'Etlaq Services',
-    itemListElement: [
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: language === 'ar' ? 'حقن التربة' : 'Soil Grouting',
-          description:
-            language === 'ar'
-              ? 'حلول حقن مناسبة للحالة لتقوية التربة، معالجة التكهفات، وتقليل مخاطر الهبوط والتشققات.'
-              : 'Fit-for-case grouting to strengthen soil, treat cavities, and reduce settlement/crack risks.',
-          url: absUrl(`${language === 'ar' ? '/ar' : '/en'}/services/grouting`),
-        },
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: language === 'ar' ? 'كشف التكهفات' : 'Cavity Detection',
-          description:
-            language === 'ar'
-              ? 'كشف التكهفات المحتملة بالموقع لتقليل المخاطر ودعم قرار المعالجة.'
-              : 'Detect subsurface cavities to reduce risk and guide remediation decisions.',
-          url: absUrl(`${language === 'ar' ? '/ar' : '/en'}/services/cavity`),
-        },
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: language === 'ar' ? 'الدراسات الجيوفيزيائية' : 'Geophysical Surveys',
-          description:
-            language === 'ar'
-              ? 'دراسات جيوفيزيائية للموقع لدعم التشخيص وخطة التنفيذ.'
-              : 'Geophysical site surveys supporting diagnosis and planning.',
-          url: absUrl(`${language === 'ar' ? '/ar' : '/en'}/services/geophysical`),
-        },
-      },
-    ],
+  const canonical = absUrl(`/${lang}/services`);
+
+  const hero = {
+    title: lang === 'ar' ? 'خدماتنا الهندسية' : 'Our engineering services',
+    subtitle:
+      lang === 'ar'
+        ? 'حقن التربة • كشف التكهفات • الدراسات الجيوفيزيائية — حلول ميدانية ترفع الاستقرار وتقلل المخاطر. نبدأ بتشخيص واضح ثم تنفيذ على مراحل ومخرجات مفهومة.'
+        : 'Soil grouting • Cavity detection • Geophysical surveys — field solutions that improve stability and reduce risk. We start with clear diagnosis, then phased execution and practical deliverables.',
   };
 
   const services = [
     {
+      key: 'grouting',
       icon: Drill,
-      key: 'grouting' as const,
-      title: language === 'ar' ? 'حقن التربة' : 'Soil Grouting',
-      desc:
-        language === 'ar'
-          ? 'حلول حقن مناسبة للحالة لتقوية التربة ومعالجة التكهفات وتقليل مخاطر الهبوط والتشققات.'
-          : 'Fit-for-case grouting to strengthen soil, treat cavities, and reduce settlement/crack risks.',
+      title: lang === 'ar' ? 'حقن التربة (Cement Grouting)' : 'Soil grouting (cement grouting)',
       href: '/services/grouting',
+      short:
+        lang === 'ar'
+          ? 'تقوية التربة أسفل الأساسات، معالجة مناطق الضعف/الفراغات، وتقليل الهبوط والتشققات. نطبق حقنًا مناسبًا للحالة وبمراحل لضبط الجودة.'
+          : 'Strengthen soil under foundations, treat weak zones/voids, and reduce settlement/crack risks. We use fit-for-case grouting and staged execution for control.',
+      bestFor:
+        lang === 'ar'
+          ? ['هبوط أو تشققات ناتجة عن ضعف تحت السطح', 'تجهيز الموقع قبل مراحل تنفيذ حساسة', 'معالجة بعد تسربات مياه أو تغيّر حالة التربة']
+          : ['Settlement/cracks driven by subsurface weakness', 'Preparing a site before critical construction stages', 'Remediation after water leakage or soil condition changes'],
       deliverables:
-        language === 'ar'
-          ? ['تقييم مبدئي للحالة وخطة تنفيذ واضحة', 'تنفيذ على مراحل حسب موقع المشكلة', 'مخرجات وتوصيات للمسار التالي']
-          : ['Initial assessment + clear execution plan', 'Phased execution based on the affected zone', 'Outputs and recommendations for next steps'],
+        lang === 'ar'
+          ? ['خطة تنفيذ واضحة (Method) حسب الحالة', 'تنفيذ مرحلي وتوثيق ميداني', 'تقرير يلخص ما تم وتوصيات الخطوة التالية']
+          : ['Clear execution method tailored to the case', 'Phased execution with field documentation', 'Report summarizing works and next-step recommendations'],
+      startHint:
+        lang === 'ar'
+          ? 'إذا كان سبب المشكلة غير واضح: نوصي عادةً ببدء كشف/جيوفيزياء ثم حقن موجّه.'
+          : 'If the cause is unclear: we often recommend detection/surveys first, then targeted grouting.',
     },
     {
+      key: 'cavity',
       icon: Radar,
-      key: 'cavity' as const,
-      title: language === 'ar' ? 'كشف التكهفات' : 'Cavity Detection',
-      desc:
-        language === 'ar'
-          ? 'تشخيص مبكر للتكهفات المحتملة لتقليل المخاطر وتحديد مسار المعالجة المناسب.'
-          : 'Early diagnosis of potential cavities to reduce risk and choose the right remediation route.',
+      title: lang === 'ar' ? 'كشف التكهفات والفراغات' : 'Cavity / void detection',
       href: '/services/cavity',
+      short:
+        lang === 'ar'
+          ? 'كشف مبكر لمؤشرات التكهفات قبل أن تتحول لهبوط مفاجئ. نخرج بنتائج تساعدك تختار المعالجة الصحيحة وتحدد نطاقها.'
+          : 'Early detection of potential cavities before they turn into sudden settlement. Results help you choose the right remediation route and define scope.',
+      bestFor:
+        lang === 'ar'
+          ? ['اشتباه تكهف/فراغات بالموقع', 'هبوط موضعي أو تكرار شروخ في نفس المنطقة', 'قبل أعمال الحفر أو تمديدات حساسة']
+          : ['Suspected cavities/voids', 'Localized settlement or recurring cracks in the same zone', 'Before excavation or sensitive utility works'],
       deliverables:
-        language === 'ar'
-          ? ['تحديد مؤشرات التكهفات وامتدادها المحتمل', 'توصية بمسار المعالجة (حقن/متابعة/اختبار)', 'تقرير مختصر يساعد في اتخاذ القرار']
-          : ['Indications of potential cavity zones', 'Recommended route (grouting / monitoring / testing)', 'Concise report to support decisions'],
+        lang === 'ar'
+          ? ['تحديد مناطق الاشتباه ومؤشرات الخطر', 'تقرير مختصر يدعم القرار', 'توصية بمسار المعالجة (حقن/متابعة/اختبار إضافي)']
+          : ['Suspected zones and risk indicators', 'Concise decision-support report', 'Recommended route (grouting / monitoring / additional testing)'],
+      startHint:
+        lang === 'ar'
+          ? 'الكشف قبل الحقن يقلل المخاطر ويمنع “الحقن العشوائي”.'
+          : 'Detection before grouting reduces risk and prevents “blind grouting”.',
     },
     {
+      key: 'geophysical',
       icon: ShieldCheck,
-      key: 'geophysical' as const,
-      title: language === 'ar' ? 'الدراسات الجيوفيزيائية' : 'Geophysical Surveys',
-      desc:
-        language === 'ar'
-          ? 'دعم قرار المعالجة عبر فهم أدق للطبقات تحت السطح وامتداد المشكلة قبل التنفيذ.'
-          : 'Support remediation decisions with clearer subsurface understanding before execution.',
+      title: lang === 'ar' ? 'الدراسات والاختبارات الجيوفيزيائية' : 'Geophysical surveys',
       href: '/services/geophysical',
+      short:
+        lang === 'ar'
+          ? 'عندما تحتاج صورة أوضح لما تحت السطح قبل قرار مكلف. نستخدم أدوات مناسبة للحالة (مثل GPR/ERT/MASW) لتحديد مناطق الأولوية.'
+          : 'When you need a clearer subsurface picture before costly decisions. We use fit tools (e.g., GPR/ERT/MASW) to identify priority zones.',
+      bestFor:
+        lang === 'ar'
+          ? ['تحديد نطاق المشكلة قبل المعالجة', 'تقييم مخاطر موقع كبير أو حساس', 'تقليل عدم اليقين قبل تنفيذ مكلف']
+          : ['Defining scope before remediation', 'Assessing a large or sensitive site', 'Reducing uncertainty ahead of costly execution'],
       deliverables:
-        language === 'ar'
-          ? ['قراءات ومسح للموقع حسب الحالة', 'مؤشرات للمناطق ذات الخطورة الأعلى', 'نتائج تساعد في تحديد نطاق العمل']
-          : ['Site readings & survey per case', 'Indications of higher-risk zones', 'Results that help define scope of work'],
+        lang === 'ar'
+          ? ['مسح/قراءات حسب الحالة', 'مؤشرات للمناطق ذات الخطورة الأعلى', 'نتائج وتوصيات عملية لتحديد نطاق العمل']
+          : ['Survey readings tailored to the case', 'Indications of higher-risk zones', 'Practical results and recommendations to define scope'],
+      startHint:
+        lang === 'ar'
+          ? 'الجيوفيزياء ليست هدفًا بذاتها—هي أداة لتقليل المخاطر وتوجيه القرار.'
+          : 'Geophysics isn’t the goal—it’s a tool to reduce risk and guide decisions.',
     },
-  ];
+  ] as const;
 
   const chooser = [
     {
-      title: language === 'ar' ? 'تشققات أو هبوط ملحوظ' : 'Cracks or noticeable settlement',
+      icon: AlertIcon,
+      title: lang === 'ar' ? 'تشققات أو هبوط ملحوظ' : 'Cracks or noticeable settlement',
       desc:
-        language === 'ar'
-          ? 'غالبًا تحتاج تقييم سريع وتحديد المسار (كشف/حقن) حسب سبب المشكلة.'
-          : 'Start with a quick assessment and choose the route (detection/grouting) based on the cause.',
+        lang === 'ar'
+          ? 'ابدأ بتقييم سريع. قد نوصي بالكشف/الجيوفيزياء أولاً ثم حقن موجّه حسب السبب.'
+          : 'Start with a quick assessment. We may recommend detection/surveys first, then targeted grouting.',
       href: '/request-service?service=grouting',
     },
     {
-      title: language === 'ar' ? 'اشتباه تكهفات بالموقع' : 'Suspected cavities on site',
+      icon: Radar,
+      title: lang === 'ar' ? 'اشتباه تكهفات بالموقع' : 'Suspected cavities on site',
       desc:
-        language === 'ar'
-          ? 'ابدأ بكشف التكهفات لتقليل المخاطر قبل أي معالجة.'
-          : 'Begin with cavity detection to reduce risk before remediation.',
+        lang === 'ar'
+          ? 'الكشف المبكر يقلل المخاطر ويحدد نطاق المعالجة بدل التخمين.'
+          : 'Early detection reduces risk and defines scope instead of guessing.',
       href: '/request-service?service=cavity',
     },
     {
-      title: language === 'ar' ? 'قبل التنفيذ أو للحسم' : 'Before execution / for certainty',
+      icon: ClipboardList,
+      title: lang === 'ar' ? 'قبل تنفيذ/للحسم' : 'Before execution / for certainty',
       desc:
-        language === 'ar'
-          ? 'الدراسة الجيوفيزيائية تساعد في فهم أدق لما تحت السطح وتحديد نطاق العمل.'
-          : 'Geophysical surveys provide clearer subsurface insight and help define scope.',
+        lang === 'ar'
+          ? 'إذا لديك موقع كبير أو قرار مكلف: الدراسة الجيوفيزيائية توضح الصورة وتوجه المعالجة.'
+          : 'For a large site or costly decision: geophysical surveys clarify and guide remediation.',
       href: '/request-service?service=geophysical',
     },
   ];
 
-  const vision =
-    language === 'ar'
-      ? 'مرجع في كشف التكهفات وحقن التربة داخل المملكة—بدقة وسلامة واستدامة.'
-      : 'A reference for cavity detection and grouting across KSA—built on accuracy, safety, and sustainability.';
-
-  const mission =
-    language === 'ar'
-      ? 'تشخيص أدق + تنفيذ ميداني منظم + مخرجات مفهومة تساعد على اتخاذ قرار سريع وواثق.'
-      : 'Sharper diagnosis + structured field execution + clear deliverables to help clients decide quickly and confidently.';
-
-  const pillars = [
-    {
-      icon: ShieldCheck,
-      title: language === 'ar' ? 'السلامة أولاً' : 'Safety-first',
-      desc: language === 'ar' ? 'نوصي بالمسار الأقل مخاطرة عند عدم وضوح السبب.' : 'We recommend the lowest-risk route when the cause is unclear.',
-    },
-    {
-      icon: Sparkles,
-      title: language === 'ar' ? 'دقة وابتكار' : 'Precision & innovation',
-      desc: language === 'ar' ? 'أدوات ومنهجية مناسبة للحالة لقراءة ما تحت السطح.' : 'Fit-for-case tools and methodology to read the subsurface.',
-    },
+  const workflow = [
     {
       icon: ClipboardList,
-      title: language === 'ar' ? 'مخرجات واضحة' : 'Clear deliverables',
-      desc: language === 'ar' ? 'خطة/نتائج/توصيات للخطوة التالية.' : 'Plan, results, and next-step recommendations.',
+      title: lang === 'ar' ? 'مراجعة سريعة للمعلومات' : 'Quick information review',
+      desc:
+        lang === 'ar'
+          ? 'نجمع تفاصيل الحالة (الموقع، أعراض المشكلة، المخططات/التقارير إن وجدت) لتحديد المسار.'
+          : 'We collect case details (location, symptoms, drawings/reports if available) to pick the right route.',
+    },
+    {
+      icon: Radar,
+      title: lang === 'ar' ? 'تشخيص مناسب للحالة' : 'Fit-for-case diagnosis',
+      desc:
+        lang === 'ar'
+          ? 'قد يبدأ العمل بكشف/جيوفيزياء لتحديد نطاق المشكلة قبل أي معالجة.'
+          : 'Work may start with detection/surveys to define scope before remediation.',
+    },
+    {
+      icon: Drill,
+      title: lang === 'ar' ? 'تنفيذ مرحلي وتحكم بالجودة' : 'Phased execution & QC',
+      desc:
+        lang === 'ar'
+          ? 'تنفيذ الحقن/المعالجة بخطة مراحل للسيطرة على النتائج وتقليل التعطيل.'
+          : 'Execute remediation in stages for better control and lower disruption.',
+    },
+    {
+      icon: Timer,
+      title: lang === 'ar' ? 'تقرير مخرجات وخطوة تالية' : 'Deliverables & next step',
+      desc:
+        lang === 'ar'
+          ? 'تسليم مخرجات مفهومة تساعدك على قرار واضح (إكمال/متابعة/اختبارات إضافية).' 
+          : 'Deliverables that support a clear decision (proceed / monitor / additional tests).',
     },
   ];
+
+  const faq = [
+    {
+      id: 'faq-1',
+      q: lang === 'ar' ? 'هل أبدأ بحقن التربة مباشرة؟' : 'Should I start with grouting right away?',
+      a:
+        lang === 'ar'
+          ? 'إذا كان سبب المشكلة غير واضح، الأفضل عادةً بدء كشف/جيوفيزياء لتحديد نطاق المشكلة ثم حقن موجّه. هذا يقلل المخاطر ويمنع تنفيذ غير ضروري.'
+          : 'If the cause is unclear, it’s often better to start with detection/surveys, then targeted grouting. This reduces risk and avoids unnecessary work.',
+    },
+    {
+      id: 'faq-2',
+      q: lang === 'ar' ? 'هل الحقن يوقف التشققات دائمًا؟' : 'Will grouting permanently stop cracks?',
+      a:
+        lang === 'ar'
+          ? 'الحقن يعالج السبب المرتبط بالتربة/الفراغات في كثير من الحالات، لكن النتيجة تعتمد على السبب الحقيقي، نطاق المشكلة، وحالة المبنى. لذلك نركز على التشخيص أولاً.'
+          : 'Grouting can address soil/void-driven causes in many cases, but outcomes depend on root cause, scope, and building condition. That’s why diagnosis comes first.',
+    },
+    {
+      id: 'faq-3',
+      q: lang === 'ar' ? 'كم يستغرق تنفيذ العمل؟' : 'How long does it take?',
+      a:
+        lang === 'ar'
+          ? 'المدة تتغير حسب المساحة، عدد النقاط، عمق المعالجة، وقيود الموقع. بعد مراجعة المعلومات نعطيك خطة زمنية واقعية.'
+          : 'Duration depends on area, number of points, treatment depth, and site constraints. After reviewing details, we provide a realistic schedule.',
+    },
+    {
+      id: 'faq-4',
+      q: lang === 'ar' ? 'ما المعلومات التي تحتاجونها قبل البدء؟' : 'What information do you need to start?',
+      a:
+        lang === 'ar'
+          ? 'موقع المشروع، وصف المشكلة (تشققات/هبوط/تسرب)، صور إن أمكن، وأي مخططات أو تقارير سابقة إن وجدت. هذا يساعدنا نحدد المسار الأسرع والأقل مخاطرة.'
+          : 'Project location, symptom description (cracks/settlement/leakage), photos if possible, and any drawings or prior reports. This helps pick the fastest, lowest-risk route.',
+    },
+    {
+      id: 'faq-5',
+      q: lang === 'ar' ? 'هل تعملون داخل المباني؟' : 'Do you work inside buildings?',
+      a:
+        lang === 'ar'
+          ? 'نعم حسب الحالة واشتراطات السلامة وإمكانية الوصول. نُفضل دائمًا الحل الأقل تعطيلًا للمستخدمين مع الالتزام بإجراءات السلامة.'
+          : 'Yes, depending on case, safety requirements, and access. We always aim for the lowest-disruption approach while complying with safety procedures.',
+    },
+  ];
+
+  const servicesSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'OfferCatalog',
+    name: lang === 'ar' ? 'خدمات شركة إطلاق المتميزة' : 'Etlaq Services',
+    itemListElement: services.map((s) => ({
+      '@type': 'Offer',
+      itemOffered: {
+        '@type': 'Service',
+        name: s.title,
+        description: s.short,
+        url: absUrl(`${lang === 'ar' ? '/ar' : '/en'}${s.href}`),
+      },
+    })),
+  };
 
   const schema = {
     '@context': 'https://schema.org',
     '@graph': [
-      { '@type': 'WebPage', name: language === 'ar' ? 'الخدمات' : 'Services', url: absUrl(`/${language}/services`) },
+      { '@type': 'WebPage', name: lang === 'ar' ? 'الخدمات' : 'Services', url: canonical },
       buildBreadcrumbList([
-        { name: language === 'ar' ? 'الرئيسية' : 'Home', url: absUrl(`/${language}/`) },
-        { name: language === 'ar' ? 'الخدمات' : 'Services', url: absUrl(`/${language}/services`) },
+        { name: lang === 'ar' ? 'الرئيسية' : 'Home', url: absUrl(`/${lang}/`) },
+        { name: lang === 'ar' ? 'الخدمات' : 'Services', url: canonical },
       ]),
+      servicesSchema,
     ],
   };
+
+  const topCities = (() => {
+    const priority = ['riyadh', 'jeddah', 'dammam', 'khobar', 'makkah', 'madinah', 'taif', 'jubail'];
+    const picked = priority
+      .map((s) => cities.find((c) => c.slug === s))
+      .filter(Boolean) as typeof cities;
+    return picked.length ? picked : cities.slice(0, 8);
+  })();
 
   return (
     <>
       <SEO
-        title={language === 'ar' ? 'الخدمات | شركة إطلاق المتميزة' : 'Services | Etlaq'}
+        title={lang === 'ar' ? 'الخدمات | شركة إطلاق المتميزة' : 'Services | Etlaq'}
         description={
-          language === 'ar'
-            ? 'حقن التربة، كشف التكهفات، والدراسات الجيوفيزيائية. نعمل في جميع مناطق المملكة (+20 مدينة).'
-            : 'Soil grouting, cavity detection, and geophysical surveys across KSA (20+ cities).'
+          lang === 'ar'
+            ? 'خدمات حقن التربة، كشف التكهفات، والدراسات الجيوفيزيائية في المملكة. منهجية واضحة، تنفيذ مرحلي، ومخرجات تساعد على اتخاذ القرار بثقة.'
+            : 'Soil grouting, cavity detection, and geophysical surveys across KSA. Clear methodology, phased execution, and deliverables that support confident decisions.'
         }
         image={absUrl('/og-image.webp')}
+        url={canonical}
         schema={schema}
       />
 
+      {/* HERO */}
       <section className="py-10 md:py-14">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center space-y-3">
-            <Breadcrumbs items={[{ name: language === 'ar' ? 'الخدمات' : 'Services', href: '/services', isCurrent: true }]} />
+          <div className="max-w-4xl mx-auto text-center space-y-4">
+            <Breadcrumbs items={[{ name: lang === 'ar' ? 'الخدمات' : 'Services', href: '/services', isCurrent: true }]} />
 
-        <h1 className="text-3xl md:text-5xl font-bold">{language === 'ar' ? 'خدماتنا' : 'Our services'}</h1>
-            <p className="text-muted-foreground leading-relaxed">
-              {language === 'ar'
-                ? 'نركز على خدمات محددة تؤثر مباشرة على سلامة الأساسات وتقليل المخاطر: حقن التربة، كشف التكهفات، والدراسات الجيوفيزيائية (عند الحاجة للتشخيص الأدق).'
-                : 'We focus on high-impact subsurface services: grouting, cavity detection, and geophysical surveys when deeper diagnosis is needed.'}
-            </p>
+            <h1 className="text-3xl md:text-5xl font-bold">{hero.title}</h1>
+            <p className="text-muted-foreground leading-relaxed whitespace-pre-line">{hero.subtitle}</p>
+
+            <div className="mt-6 rounded-2xl border bg-card/70 backdrop-blur p-6">
+              <TrustStats />
+            </div>
+
+            <div className="mt-4 flex flex-col sm:flex-row gap-3 justify-center">
+              <LocalizedLink href="/request-service" className="inline-flex">
+                <Button className="w-full sm:w-auto" onClick={() => trackEvent('services_hero_request', { language: lang })}>
+                  {lang === 'ar' ? 'اطلب تقييم' : 'Request an assessment'}
+                </Button>
+              </LocalizedLink>
+              <a
+                href="https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D9%85%D9%84%D9%81%20%D8%A8%D8%B1%D9%88%D9%81%D8%A7%D9%8A%D9%84%20%D8%B4%D8%B1%D9%83%D8%A9%20%D8%A5%D8%B7%D9%84%D8%A7%D9%82%20%D8%A7%D9%84%D9%85%D8%AA%D9%85%D9%8A%D8%B2%D8%A9%20%28Company%20Profile%29%20%D9%85%D9%86%20%D9%81%D8%B6%D9%84%D9%83."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex"
+                onClick={() => trackEvent('services_hero_whatsapp_profile', { language: lang })}
+              >
+                <Button variant="secondary" className="w-full sm:w-auto">
+                  {lang === 'ar' ? 'اطلب ملف الشركة' : 'Request company profile'}
+                </Button>
+              </a>
+            </div>
           </div>
+        </div>
+      </section>
 
-          <div className="mt-8 rounded-2xl border bg-card/70 backdrop-blur p-6">
-            <TrustStats />
-          </div>
+      {/* CHOOSER + QUICK REQUEST */}
+      <section className="py-12 md:py-16 bg-muted/20">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-[1.4fr_0.9fr] gap-6 items-start">
+            <div>
+              <div className="max-w-3xl space-y-2">
+                <h2 className="text-2xl md:text-4xl font-bold">{lang === 'ar' ? 'اختر نقطة البداية' : 'Choose your starting point'}</h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  {lang === 'ar'
+                    ? 'إذا كنت غير متأكد من المسار، ابدأ بتقييم مختصر وسنوجهك للخطوة الأقل مخاطرة.'
+                    : 'If you’re unsure, start with a short assessment and we’ll guide you to the lowest-risk next step.'}
+                </p>
+              </div>
 
-          <div className="mt-4 flex flex-col sm:flex-row gap-3 justify-center">
-            <a
-              href="https://wa.me/966534145922?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D9%85%D9%84%D9%81%20%D8%A8%D8%B1%D9%88%D9%81%D8%A7%D9%8A%D9%84%20%D8%B4%D8%B1%D9%83%D8%A9%20%D8%A5%D8%B7%D9%84%D8%A7%D9%82%20%D8%A7%D9%84%D9%85%D8%AA%D9%85%D9%8A%D8%B2%D8%A9%20%28Company%20Profile%29%20%D9%85%D9%86%20%D9%81%D8%B6%D9%84%D9%83."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex"
-              onClick={() => trackEvent('services_profile_download', { language })}
-            >
-              <Button variant="secondary" className="w-full sm:w-auto">
-                {language === 'ar' ? 'اطلب ملف الشركة' : 'Request company profile'}
-              </Button>
-            </a>
-            <LocalizedLink href="/request-service" className="inline-flex">
-              <Button className="w-full sm:w-auto" onClick={() => trackEvent('services_request_click', { language })}>
-                {language === 'ar' ? 'اطلب خدمة' : 'Request service'}
-              </Button>
-            </LocalizedLink>
-          </div>
-
-          
-          {/* Conversion: short form */}
-          <div className="mt-10 grid lg:grid-cols-2 gap-6 items-start">
-            <div className="rounded-2xl border bg-card/70 backdrop-blur p-6">
-              <h2 className="text-2xl font-bold">{language === 'ar' ? 'اختر المسار المناسب خلال دقيقة' : 'Choose the right path in one minute'}</h2>
-              <p className="text-muted-foreground mt-2 leading-relaxed">
-                {language === 'ar'
-                  ? 'أجب على وصف مختصر وسنرد بخطوة تالية واضحة: تقييم، فحص (GPR/ERT)، أو خطة تنفيذ. بدون تعقيد.'
-                  : 'Send a short description and we’ll reply with clear next steps: assessment, inspection (GPR/ERT), or an execution plan.'}
-              </p>
-              <div className="mt-4 grid gap-3">
+              <div className="grid md:grid-cols-3 gap-4 mt-6">
                 {chooser.map((c) => (
-                  <Card key={c.title}>
-                    <CardHeader>
-                      <CardTitle className="text-base flex items-center gap-2">
-                        <CheckCircle2 className="w-5 h-5" />
-                        {c.title}
-                      </CardTitle>
+                  <Card key={c.title} className="h-full border-border/60 bg-card/70 backdrop-blur">
+                    <CardHeader className="space-y-3">
+                      <div className="h-12 w-12 rounded-2xl border bg-background flex items-center justify-center">
+                        <c.icon className="h-6 w-6 text-primary" />
+                      </div>
+                      <CardTitle className="text-lg">{c.title}</CardTitle>
                       <CardDescription className="leading-relaxed">{c.desc}</CardDescription>
                     </CardHeader>
-                    <CardContent>
-                      <LocalizedLink href={c.href} className="inline-flex">
-                        <Button variant="secondary" onClick={() => trackEvent('services_path_pick', { language, title: c.title })}>
-                          {language === 'ar' ? 'ابدأ الآن' : 'Start'}
+                    <CardContent className="pt-0">
+                      <LocalizedLink href={c.href}>
+                        <Button variant="outline" className="w-full" onClick={() => trackEvent('services_start_point', { language: lang, choice: c.title })}>
+                          {lang === 'ar' ? 'ابدأ' : 'Start'}
                         </Button>
                       </LocalizedLink>
                     </CardContent>
@@ -250,131 +330,228 @@ export default function Services() {
               </div>
             </div>
 
-            <QuickRequestCard formName="quick_assessment" />
+            <div>
+              <QuickRequestCard formName="services_quick_assessment" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SERVICES TABS */}
+      <section className="py-12 md:py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center space-y-2">
+            <h2 className="text-2xl md:text-4xl font-bold">{lang === 'ar' ? 'خدماتنا الأساسية' : 'Core services'}</h2>
+            <p className="text-muted-foreground leading-relaxed">
+              {lang === 'ar'
+                ? 'كل خدمة مصممة لتقليل المخاطر وتحسين الاستقرار—مع مخرجات تساعدك على قرار واضح.'
+                : 'Each service is designed to reduce risk and improve stability—with deliverables that support clear decisions.'}
+            </p>
           </div>
 
-{/* Method & trust pillars (from company profile) */}
-          <div className="mt-6 rounded-2xl border bg-card/70 backdrop-blur p-6">
-            <div className="grid lg:grid-cols-2 gap-6">
-              <Card className="h-full">
-                <CardHeader>
-                  <CardTitle>{language === 'ar' ? 'رؤيتنا' : 'Our vision'}</CardTitle>
-                  <CardDescription className="leading-relaxed">{vision}</CardDescription>
-                </CardHeader>
-              </Card>
-              <Card className="h-full">
-                <CardHeader>
-                  <CardTitle>{language === 'ar' ? 'رسالتنا' : 'Our mission'}</CardTitle>
-                  <CardDescription className="leading-relaxed">{mission}</CardDescription>
-                </CardHeader>
-              </Card>
-            </div>
+          <div className="mt-8">
+            <Tabs defaultValue="grouting" className="w-full">
+              <div className="flex justify-center">
+                <TabsList className="grid grid-cols-3 w-full max-w-2xl">
+                  <TabsTrigger value="grouting">{lang === 'ar' ? 'حقن التربة' : 'Grouting'}</TabsTrigger>
+                  <TabsTrigger value="cavity">{lang === 'ar' ? 'كشف التكهفات' : 'Detection'}</TabsTrigger>
+                  <TabsTrigger value="geophysical">{lang === 'ar' ? 'جيوفيزياء' : 'Geophysics'}</TabsTrigger>
+                </TabsList>
+              </div>
 
-            <div className="grid md:grid-cols-3 gap-4 mt-6">
-              {pillars.map((p) => (
-                <Card key={p.title} className="h-full">
-                  <CardHeader>
-                    <div className="h-12 w-12 rounded-2xl border bg-background/70 backdrop-blur flex items-center justify-center">
-                      <p.icon className="h-6 w-6 text-primary" />
-                    </div>
-                    <CardTitle className="text-lg mt-3">{p.title}</CardTitle>
-                    <CardDescription className="leading-relaxed">{p.desc}</CardDescription>
-                  </CardHeader>
-                </Card>
+              {services.map((s) => (
+                <TabsContent key={s.key} value={s.key} className="mt-6">
+                  <Card className="rounded-3xl border bg-card/70 backdrop-blur">
+                    <CardContent className="p-6 md:p-8">
+                      <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-6 items-start">
+                        <div className="space-y-4">
+                          <div className="flex items-start gap-3">
+                            <div className="h-12 w-12 rounded-2xl border bg-background flex items-center justify-center">
+                              <s.icon className="h-6 w-6 text-primary" />
+                            </div>
+                            <div>
+                              <h3 className="text-xl md:text-2xl font-bold">{s.title}</h3>
+                              <p className="text-muted-foreground mt-1 leading-relaxed whitespace-pre-line">{s.short}</p>
+                              <p className="text-sm text-muted-foreground mt-3">{s.startHint}</p>
+                            </div>
+                          </div>
+
+                          <div className="grid md:grid-cols-2 gap-4">
+                            <div className="rounded-2xl border bg-background/50 p-4">
+                              <p className="font-semibold mb-3">{lang === 'ar' ? 'مناسب لـ' : 'Best for'}</p>
+                              <ul className="space-y-2">
+                                {s.bestFor.map((b) => (
+                                  <li key={b} className="flex items-start gap-2 text-sm text-muted-foreground">
+                                    <CheckCircle2 className="h-4 w-4 mt-0.5 text-primary" />
+                                    <span className="leading-relaxed">{b}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                            <div className="rounded-2xl border bg-background/50 p-4">
+                              <p className="font-semibold mb-3">{lang === 'ar' ? 'ماذا تستلم؟' : 'What you get'}</p>
+                              <ul className="space-y-2">
+                                {s.deliverables.map((d) => (
+                                  <li key={d} className="flex items-start gap-2 text-sm text-muted-foreground">
+                                    <CheckCircle2 className="h-4 w-4 mt-0.5 text-primary" />
+                                    <span className="leading-relaxed">{d}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="space-y-3">
+                          <LocalizedLink href={s.href}>
+                            <Button variant="outline" className="w-full" onClick={() => trackEvent('services_tab_details', { language: lang, service: s.key })}>
+                              {lang === 'ar' ? 'تفاصيل الخدمة' : 'Service details'}
+                            </Button>
+                          </LocalizedLink>
+                          <LocalizedLink href={`/request-service?service=${s.key}`}>
+                            <Button className="w-full" onClick={() => trackEvent('services_tab_request', { language: lang, service: s.key })}>
+                              {lang === 'ar' ? 'اطلب الخدمة' : 'Request this service'}
+                            </Button>
+                          </LocalizedLink>
+                          <LocalizedLink href="/contact">
+                            <Button variant="secondary" className="w-full" onClick={() => trackEvent('services_tab_contact', { language: lang, service: s.key })}>
+                              {lang === 'ar' ? 'استشارة سريعة' : 'Quick consult'}
+                            </Button>
+                          </LocalizedLink>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </TabsContent>
               ))}
-            </div>
+            </Tabs>
+          </div>
+        </div>
+      </section>
+
+      {/* WORKFLOW */}
+      <section className="py-12 md:py-16 bg-muted/20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center space-y-2">
+            <h2 className="text-2xl md:text-4xl font-bold">{lang === 'ar' ? 'كيف ننفّذ' : 'How we execute'}</h2>
+            <p className="text-muted-foreground leading-relaxed">
+              {lang === 'ar'
+                ? 'منهجية واضحة تقلل المخاطر: تشخيص مناسب للحالة، تنفيذ مرحلي، وتوثيق مخرجات.'
+                : 'A clear method that reduces risk: fit diagnosis, phased execution, and documented deliverables.'}
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 mt-10">
-            {services.map((s) => (
-              <Card key={s.href} className="h-full">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
+            {workflow.map((w) => (
+              <Card key={w.title} className="h-full border-border/60 bg-card/70 backdrop-blur">
                 <CardHeader>
-                  <div className="flex items-center gap-3">
-                    <div className="h-12 w-12 rounded-2xl border bg-background/70 backdrop-blur flex items-center justify-center">
-                      <s.icon className="h-6 w-6 text-primary" />
-                    </div>
-                    <div>
-                      <CardTitle className="text-xl">{s.title}</CardTitle>
-                      <CardDescription>{language === 'ar' ? 'تفاصيل + مخرجات واضحة' : 'Details + clear outputs'}</CardDescription>
-                    </div>
+                  <div className="h-12 w-12 rounded-2xl border bg-background flex items-center justify-center">
+                    <w.icon className="h-6 w-6 text-primary" />
                   </div>
+                  <CardTitle className="text-lg mt-3">{w.title}</CardTitle>
+                  <CardDescription className="leading-relaxed">{w.desc}</CardDescription>
                 </CardHeader>
-                <CardContent className="space-y-5">
-                  <p className="text-muted-foreground leading-relaxed">{s.desc}</p>
-
-                  <div className="rounded-xl border bg-card/60 backdrop-blur p-4">
-                    <p className="text-sm font-medium mb-3">{language === 'ar' ? 'ماذا تستلم؟' : 'What you get'}</p>
-                    <ul className="space-y-2">
-                      {s.deliverables.map((d) => (
-                        <li key={d} className="flex items-start gap-2 text-sm text-muted-foreground">
-                          <CheckCircle2 className="h-4 w-4 mt-0.5 text-primary" />
-                          <span className="leading-relaxed">{d}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="flex flex-col gap-2">
-                    <LocalizedLink href={s.href}>
-                      <Button variant="outline" className="w-full">
-                        {language === 'ar' ? 'استعرض التفاصيل' : 'View details'}
-                      </Button>
-                    </LocalizedLink>
-                    <LocalizedLink href={`/request-service?service=${s.key}`}>
-                      <Button
-                        className="w-full"
-                        onClick={() => trackEvent('services_request_click', { language, service: s.key })}
-                      >
-                        {language === 'ar' ? 'اطلب الخدمة' : 'Request service'}
-                      </Button>
-                    </LocalizedLink>
-                  </div>
-                </CardContent>
               </Card>
             ))}
           </div>
+        </div>
+      </section>
 
-          <div className="mt-12 rounded-2xl border bg-card/70 backdrop-blur p-6">
-            <div className="max-w-3xl mx-auto text-center space-y-2">
-              <h2 className="text-2xl md:text-3xl font-bold">{language === 'ar' ? 'متى تختار أي خدمة؟' : 'Which service should you choose?'}</h2>
+      {/* COVERAGE */}
+      <section className="py-12 md:py-16">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-6 items-start">
+            <div className="space-y-3">
+              <h2 className="text-2xl md:text-4xl font-bold">{lang === 'ar' ? 'نخدم مدن المملكة' : 'Serving cities across KSA'}</h2>
               <p className="text-muted-foreground leading-relaxed">
-                {language === 'ar'
-                  ? 'اختر الحالة الأقرب لديك وسنأخذك مباشرة للنموذج مع تعبئة الخدمة المناسبة لتقليل الوقت وزيادة دقة الطلب.'
-                  : 'Pick the closest scenario and we will take you to the request form with the right service preselected.'}
+                {lang === 'ar'
+                  ? 'نغطي معظم مناطق المملكة حسب احتياج المشروع. اختر مدينة لفتح خدماتها.'
+                  : 'We cover most regions across KSA depending on project needs. Pick a city to view its service pages.'}
               </p>
+
+              <div className="flex flex-wrap gap-2 pt-2">
+                {topCities.map((c) => (
+                  <LocalizedLink
+                    key={c.slug}
+                    href={`/locations/${c.slug}`}
+                    className="text-sm rounded-full border px-3 py-1 bg-background hover:bg-accent"
+                    onClick={() => trackEvent('services_city_click', { language: lang, city: c.slug })}
+                  >
+                    <span className="inline-flex items-center gap-2">
+                      <MapPin className="h-4 w-4 text-primary" />
+                      <span>{lang === 'ar' ? c.ar : c.en}</span>
+                    </span>
+                  </LocalizedLink>
+                ))}
+              </div>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-4 mt-6">
-              {chooser.map((c) => (
-                <Card key={c.href}>
-                  <CardHeader>
-                    <CardTitle className="text-lg">{c.title}</CardTitle>
-                    <CardDescription className="leading-relaxed">{c.desc}</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <LocalizedLink href={c.href}>
-                      <Button
-                        className="w-full"
-                        onClick={() => trackEvent('services_chooser_start', { language, scenario: c.title })}
-                      >
-                        {language === 'ar' ? 'ابدأ الآن' : 'Start now'}
-                      </Button>
-                    </LocalizedLink>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+            <Card className="rounded-3xl border bg-card/70 backdrop-blur">
+              <CardHeader>
+                <CardTitle className="text-lg">{lang === 'ar' ? 'مسار سريع' : 'Quick path'}</CardTitle>
+                <CardDescription className="leading-relaxed">
+                  {lang === 'ar'
+                    ? 'إذا لديك تشققات/هبوط أو اشتباه تكهفات—أرسل التفاصيل وسنقترح الخطوة التالية.'
+                    : 'If you have cracks/settlement or suspected cavities—share details and we’ll suggest the next step.'}
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                <LocalizedLink href="/request-service">
+                  <Button className="w-full" onClick={() => trackEvent('services_quickpath_request', { language: lang })}>
+                    {lang === 'ar' ? 'اطلب تقييم' : 'Request assessment'}
+                  </Button>
+                </LocalizedLink>
+                <LocalizedLink href="/contact">
+                  <Button variant="outline" className="w-full" onClick={() => trackEvent('services_quickpath_contact', { language: lang })}>
+                    {lang === 'ar' ? 'تواصل معنا' : 'Contact'}
+                  </Button>
+                </LocalizedLink>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-12 md:py-16 bg-muted/20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center space-y-2">
+            <h2 className="text-2xl md:text-4xl font-bold">{lang === 'ar' ? 'أسئلة شائعة' : 'FAQ'}</h2>
+            <p className="text-muted-foreground leading-relaxed">
+              {lang === 'ar'
+                ? 'إجابات مختصرة لأكثر الأسئلة تكرارًا قبل بدء أي عمل ميداني.'
+                : 'Quick answers to common questions before any field work starts.'}
+            </p>
           </div>
 
-          <div className="mt-10 text-center">
-            <LocalizedLink href="/request-service">
-              <Button size="lg" onClick={() => trackEvent('services_assessment_cta', { language })}>
-                {language === 'ar' ? 'اطلب تقييم هندسي' : 'Request an assessment'}
-              </Button>
-            </LocalizedLink>
+          <div className="max-w-4xl mx-auto mt-8">
+            <Card className="rounded-3xl border bg-card/70 backdrop-blur">
+              <CardContent className="p-6 md:p-8">
+                <Accordion type="single" collapsible className="w-full">
+                  {faq.map((item) => (
+                    <AccordionItem key={item.id} value={item.id}>
+                      <AccordionTrigger className="text-left">{item.q}</AccordionTrigger>
+                      <AccordionContent className="text-muted-foreground leading-relaxed">{item.a}</AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
     </>
+  );
+}
+
+function AlertIcon(props: React.SVGProps<SVGSVGElement>) {
+  // A lightweight alert icon built from lucide primitives would require importing another icon.
+  // We use the existing ShieldCheck/ClipboardList/Radar elsewhere; this avoids adding a new import here.
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+      <line x1="12" y1="9" x2="12" y2="13" />
+      <line x1="12" y1="17" x2="12.01" y2="17" />
+    </svg>
   );
 }

@@ -160,8 +160,8 @@ export default function KeywordsAdmin() {
           </h1>
           <p className="text-muted-foreground mt-1">
             {lang === 'ar'
-              ? 'هذه الصفحة غير مفهرسة (noindex) ومخصصة للفريق لتصدير صفحات المدن/الخدمات وكلمات الحملات.'
-              : 'This page is noindex and intended for internal use: export city/service landings & campaign keywords.'}
+              ? 'صفحة داخلية مخصصة للفريق لإدارة الكلمات وتصدير ملفات CSV للصفحات والحملات.'
+              : 'Internal dashboard for the team to manage keywords and export CSV files for pages and campaigns.'}
           </p>
         </div>
 

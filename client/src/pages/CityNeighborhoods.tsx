@@ -24,13 +24,13 @@ export default function CityNeighborhoods({ params }: Props) {
 
   const title =
     language === 'ar'
-      ? `أحياء ${cityName} | صفحات خدمات محلية | شركة إطلاق المتميزة`
-      : `${cityName} neighborhoods | Local service pages | Etlaq`;
+      ? `أحياء ${cityName} | شركة إطلاق المتميزة`
+      : `${cityName} neighborhoods | Etlaq`;
 
   const description =
     language === 'ar'
-      ? `صفحات محلية مرتبطة داخلياً لخدماتنا في ${cityName} (حقن التربة، كشف التكهفات، الاختبارات الجيوفيزيائية). تساعدك على الوصول لأقرب صفحة مناسبة داخل الحي بسرعة.`
-      : `Internally-linked local pages for our services in ${cityName} (soil grouting, cavity detection, geophysical surveys). Find the right neighborhood page quickly.`;
+      ? `صفحات مخصصة حسب الأحياء لخدماتنا في ${cityName} (حقن التربة، كشف التكهفات، الدراسات الجيوفيزيائية). اختر الحي للوصول للصفحة الأنسب بسرعة.`
+      : `Neighborhood-based pages for our services in ${cityName} (soil grouting, cavity detection, geophysical surveys). Pick a neighborhood to reach the most relevant page quickly.`;
 
   const canonical = absUrl(`/${language}/locations/${citySlug}/${language === 'ar' ? 'احياء' : 'neighborhoods'}`);
 
@@ -46,7 +46,7 @@ export default function CityNeighborhoods({ params }: Props) {
           <div className="max-w-3xl mx-auto text-center space-y-3">
             <div className="inline-flex items-center gap-2 rounded-full border bg-card/60 backdrop-blur px-4 py-2 text-sm">
               <MapPin className="h-4 w-4 text-primary" />
-              <span className="text-muted-foreground">{language === 'ar' ? 'بحث محلي داخل المدينة' : 'Local search within the city'}</span>
+              <span className="text-muted-foreground">{language === 'ar' ? 'تصفح حسب الحي' : 'Browse by neighborhood'}</span>
             </div>
 
             <h1 className="text-3xl md:text-5xl font-bold">{language === 'ar' ? `أحياء ${cityName}` : `${cityName} neighborhoods`}</h1>
