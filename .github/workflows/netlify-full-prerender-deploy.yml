@@ -1,0 +1,42 @@
+name: Netlify Full Prerender Deploy
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+concurrency:
+  group: netlify-prod
+  cancel-in-progress: true
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install deps
+        run: npm ci
+
+      # لو prerender.mjs عندك يشتغل دائمًا في postbuild، هذا السطر يكفي
+      # لكن نضيف متغيرات لضمان "Full prerender"
+      - name: Build (Full prerender)
+        env:
+          PRERENDER: "1"
+          PRERENDER_LIMIT: "0"
+        run: npm run build
+
+      - name: Deploy to Netlify (no Netlify build)
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        run: npx netlify deploy --prod --dir=dist --site=$NETLIFY_SITE_ID --auth=$NETLIFY_AUTH_TOKEN --message "GH Actions deploy (full prerender)"
