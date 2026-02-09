@@ -10,7 +10,6 @@ export default function Footer() {
     { name: t('nav.about'), href: '/about' },
     { name: t('nav.services'), href: '/services' },
     { name: t('nav.projects'), href: '/projects' },
-    { name: language === 'ar' ? 'دراسات حالة' : 'Case studies', href: '/case-studies' },
     { name: t('nav.request'), href: '/request-service' },
     { name: language === 'ar' ? 'مدن التغطية' : 'Coverage cities', href: '/locations' },
     { name: language === 'ar' ? 'خريطة الموقع' : 'Sitemap', href: '/sitemap' },

@@ -259,7 +259,7 @@ export default function Blog() {
                   {language === 'ar' ? 'استكشف الخدمات' : 'Explore services'}
                 </Button>
               </LocalizedLink>
-              <LocalizedLink href="/case-studies" className="inline-flex">
+              <LocalizedLink href="/projects" className="inline-flex">
                 <Button variant="outline" className="w-full sm:w-auto">
                   {language === 'ar' ? 'شاهد دراسات الحالة' : 'See case studies'}
                 </Button>

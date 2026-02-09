@@ -23,7 +23,7 @@ export default function HtmlSitemap() {
     { ar: 'من نحن', en: 'About', href: '/about' },
     { ar: 'خدماتنا', en: 'Services', href: '/services' },
     { ar: 'مشاريعنا', en: 'Projects', href: '/projects' },
-    { ar: 'دراسات حالة', en: 'Case studies', href: '/case-studies' },
+    { ar: 'دراسات الحالة', en: 'Case studies', href: '/projects' },
     { ar: 'المعرض', en: 'Gallery', href: '/gallery' },
     { ar: 'المدونة', en: 'Blog', href: '/blog' },
     { ar: 'الأسئلة الشائعة', en: 'FAQ', href: '/faq' },

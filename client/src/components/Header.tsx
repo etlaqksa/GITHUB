@@ -24,7 +24,6 @@ export default function Header() {
     { name: t('nav.about'), href: '/about' },
     { name: t('nav.services'), href: '/services' },
     { name: t('nav.projects'), href: '/projects' },
-    { name: language === 'ar' ? 'دراسات حالة' : 'Case studies', href: '/case-studies' },
     { name: t('nav.gallery'), href: '/gallery' },
     { name: t('nav.blog'), href: '/blog' },
     { name: t('nav.faq'), href: '/faq' },

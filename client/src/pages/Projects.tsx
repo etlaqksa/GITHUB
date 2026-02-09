@@ -64,9 +64,9 @@ export default function Projects() {
                 : 'Field experience turned into measurable outcomes—browse selected work with structured, case-study style summaries.'}
             </p>
             <div className="mt-4 flex flex-col sm:flex-row gap-3">
-              <LocalizedLink href="/case-studies" className="inline-flex">
+              <LocalizedLink href="/projects" className="inline-flex">
                 <Button variant="secondary" className="w-full sm:w-auto">
-                  {language === 'ar' ? 'عرض دراسات الحالة المنظمة' : 'View structured case studies'}
+                  {language === 'ar' ? 'دراسات الحالة' : 'Case studies'}
                 </Button>
               </LocalizedLink>
               <LocalizedLink href="/request-service" className="inline-flex">

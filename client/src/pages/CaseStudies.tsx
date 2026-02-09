@@ -1,196 +1,57 @@
+import { useEffect } from 'react';
+import { useLocation } from 'wouter';
 import { SEO } from '@/components/SEO';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { projects } from '@/data/projects';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import TrustStats from '@/components/TrustStats';
-import LocalizedLink from '@/components/LocalizedLink';
 import { absUrl } from '@/lib/siteUrl';
-import { buildBreadcrumbList } from '@/lib/schemaHelpers';
-import { ArrowRight, Filter, MapPin } from 'lucide-react';
-import { useMemo, useState } from 'react';
+import { Button } from '@/components/ui/button';
+import LocalizedLink from '@/components/LocalizedLink';
 
-type FilterKey = 'all' | 'riyadh' | 'jeddah' | 'dammam' | 'eastern' | 'western' | 'central';
-
-function regionOf(city: unknown) {
-  const c = String(city ?? '').toLowerCase();
-  if (['الرياض','riyadh','المجمعة','الزلفي','الرس','بريدة','عنيزة','القصيم','qassim','zulfi','majmaah'].some((x) => c.includes(x))) return 'central';
-  if (['جدة','jeddah','مكة','makkah','الطائف','taif','ينبع','yanbu','المدينة','madinah','المدينة المنورة'].some((x) => c.includes(x))) return 'western';
-  if (['الدمام','dammam','الخبر','khobar','الجبيل','jubail','الظهران','dhahran','القطيف','qatif','الهفوف','hofuf'].some((x) => c.includes(x))) return 'eastern';
-  return 'all';
-}
-
+/**
+ * Case studies are merged into the Projects section.
+ * We keep this route for legacy links, but canonicalize (and navigate) to /projects.
+ */
 export default function CaseStudies() {
   const { language } = useLanguage();
+  const [, setLocation] = useLocation();
   const lang = language === 'en' ? 'en' : 'ar';
-  const [filter, setFilter] = useState<FilterKey>('all');
 
-  const items = useMemo(() => {
-    const mapped = projects.map((p) => {
-      const title = lang === 'ar' ? p.title.ar : p.title.en;
-      const city = lang === 'ar' ? p.location.ar : p.location.en;
-      const summary = lang === 'ar' ? p.summary.ar : p.summary.en;
-      const category = lang === 'ar' ? p.categoryLabel.ar : p.categoryLabel.en;
-      const year = p.year;
-
-      // lightweight tag set from serviceKey/category + city
-      const tags = [
-        category,
-        p.serviceKey === 'grouting' ? (lang === 'ar' ? 'حقن التربة' : 'Soil grouting') : null,
-        p.serviceKey === 'cavity' ? (lang === 'ar' ? 'كشف الفراغات' : 'Void detection') : null,
-        p.serviceKey === 'geophysical' ? (lang === 'ar' ? 'مسوحات جيوفيزيائية' : 'Geophysics') : null,
-        city,
-        year,
-      ].filter(Boolean) as string[];
-
-      return {
-        slug: p.slug,
-        title,
-        city,
-        tags,
-        summary,
-        year,
-        region: regionOf(city),
-      };
-    });
-
-    if (filter === 'all') return mapped;
-
-    const lower = (v: unknown) => String(v ?? '').toLowerCase();
-
-    if (filter === 'riyadh') return mapped.filter((x) => lower(x.city).includes('الرياض') || lower(x.city).includes('riyadh'));
-    if (filter === 'jeddah') return mapped.filter((x) => lower(x.city).includes('جدة') || lower(x.city).includes('jeddah'));
-    if (filter === 'dammam') return mapped.filter((x) => lower(x.city).includes('الدمام') || lower(x.city).includes('dammam'));
-
-    return mapped.filter((x) => x.region === filter);
-  }, [lang, filter]);
-
-  const schema = useMemo(() => {
-    const pageUrl = absUrl(`/${lang}/case-studies`);
-    const graph: any[] = [
-      {
-        '@type': 'Organization',
-        name: 'شركة إطلاق المتميزة المحدودة (ETLAQ)',
-        url: absUrl('/'),
-        logo: absUrl('/logo.png'),
-      },
-      {
-        '@type': 'CollectionPage',
-        name: lang === 'ar' ? 'دراسات حالة ومشاريع' : 'Case Studies & Projects',
-        url: pageUrl,
-      },
-      {
-        '@type': 'ItemList',
-        itemListElement: items.slice(0, 25).map((it, idx) => ({
-          '@type': 'ListItem',
-          position: idx + 1,
-          url: absUrl(`/${lang}/projects/${it.slug}`),
-          name: it.title,
-        })),
-      },
-    ];
-    return { '@context': 'https://schema.org', '@graph': graph };
-  }, [items, lang]);
-
-  const filters: { key: FilterKey; labelAr: string; labelEn: string }[] = [
-    { key: 'all', labelAr: 'الكل', labelEn: 'All' },
-    { key: 'riyadh', labelAr: 'الرياض', labelEn: 'Riyadh' },
-    { key: 'jeddah', labelAr: 'جدة', labelEn: 'Jeddah' },
-    { key: 'dammam', labelAr: 'الدمام', labelEn: 'Dammam' },
-    { key: 'central', labelAr: 'الوسطى', labelEn: 'Central' },
-    { key: 'western', labelAr: 'الغربية', labelEn: 'Western' },
-    { key: 'eastern', labelAr: 'الشرقية', labelEn: 'Eastern' },
-  ];
+  useEffect(() => {
+    // Client-side navigation (SPA). Netlify also issues a server-side redirect.
+    setLocation('/projects');
+  }, [setLocation]);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen py-16">
       <SEO
-        title={lang === 'ar' ? 'دراسات حالة ومشاريع | شركة إطلاق المتميزة' : 'Case Studies & Projects | Etlaq'}
+        title={lang === 'ar' ? 'دراسات الحالة | شركة إطلاق المتميزة' : 'Case studies | ETLAQ'}
         description={
           lang === 'ar'
-            ? 'دراسات حالة مختصرة: المشكلة → التشخيص → المنهجية → النتائج. أمثلة من مشاريع حقن التربة وكشف الفراغات وتقوية الأساسات داخل المملكة.'
-            : 'Concise case studies: problem → diagnosis → approach → results. Examples across KSA.'
+            ? 'تم دمج دراسات الحالة داخل صفحة المشاريع. سيتم تحويلك تلقائياً.'
+            : 'Case studies are now part of the Projects page. You will be redirected automatically.'
         }
-        image={absUrl('/og-image.webp')}
-        schema={schema}
+        // Prevent indexing of the legacy route.
+        noIndex
+        // Canonicalize to projects for both languages.
+        url={absUrl(`/${lang}/projects`)}
+        alternateUrls={{ ar: '/ar/projects', en: '/en/projects' }}
       />
 
-      <section className="py-10 md:py-14">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center space-y-3">
-            <Breadcrumbs items={[{ name: lang === 'ar' ? 'دراسات حالة' : 'Case studies', href: '/case-studies', isCurrent: true }]} />
+      <div className="container mx-auto px-4">
+        <div className="max-w-xl mx-auto rounded-2xl border bg-card/70 backdrop-blur p-8 text-center space-y-4">
+          <h1 className="text-2xl font-bold">
+            {lang === 'ar' ? 'تم دمج دراسات الحالة ضمن المشاريع' : 'Case studies are merged into Projects'}
+          </h1>
+          <p className="text-muted-foreground">
+            {lang === 'ar'
+              ? 'أي دراسة حالة أصبحت داخل صفحة المشروع نفسها. إذا لم يتم تحويلك تلقائياً، استخدم الزر أدناه.'
+              : 'Each case study now lives inside its project page. If you are not redirected automatically, use the button below.'}
+          </p>
 
-        <h1 className="text-3xl md:text-5xl font-bold">{lang === 'ar' ? 'دراسات حالة ومشاريع' : 'Case studies & projects'}</h1>
-            <p className="text-muted-foreground leading-relaxed">
-              {lang === 'ar'
-                ? 'نحوّل الخبرة الميدانية إلى قصة واضحة تساعد على اتخاذ القرار: المشكلة → التشخيص → المنهجية → النتائج.'
-                : 'We turn field experience into a decision-ready story: problem → diagnosis → approach → results.'}
-            </p>
-          </div>
-
-          <div className="mt-8 rounded-2xl border bg-card/70 backdrop-blur p-6">
-            <TrustStats />
-          </div>
-
-          <div className="mt-6 flex flex-wrap items-center gap-2 justify-center">
-            <Filter className="w-4 h-4 text-muted-foreground" />
-            {filters.map((f) => (
-              <Button
-                key={f.key}
-                size="sm"
-                variant={filter === f.key ? 'default' : 'outline'}
-                onClick={() => setFilter(f.key)}
-              >
-                {lang === 'ar' ? f.labelAr : f.labelEn}
-              </Button>
-            ))}
-          </div>
-
-          <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {items.map((it) => (
-              <Card key={it.slug} className="rounded-2xl h-full flex flex-col">
-                <CardHeader>
-                  <CardTitle className="text-lg">{it.title}</CardTitle>
-                  <CardDescription className="flex items-center gap-2">
-                    <MapPin className="w-4 h-4" />
-                    <span>{it.city}</span>
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="flex-1 flex flex-col">
-                  <p className="text-sm text-muted-foreground leading-relaxed line-clamp-4">{it.summary}</p>
-
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    {it.tags.slice(0, 5).map((t) => (
-                      <Badge key={t} variant="secondary">
-                        {t}
-                      </Badge>
-                    ))}
-                  </div>
-
-                  <div className="mt-6">
-                    <LocalizedLink href={`/projects/${it.slug}`} className="inline-flex">
-                      <Button variant="secondary" className="w-full">
-                        {lang === 'ar' ? 'عرض دراسة الحالة' : 'View case study'}
-                        <ArrowRight className="w-4 h-4 ms-2" />
-                      </Button>
-                    </LocalizedLink>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          <div className="mt-10 text-center">
-            <LocalizedLink href="/request-service" className="inline-flex">
-              <Button>
-                {lang === 'ar' ? 'اطلب تقييم سريع لموقعك' : 'Request a quick assessment'}
-              </Button>
-            </LocalizedLink>
-          </div>
+          <LocalizedLink href="/projects" className="inline-flex">
+            <Button>{lang === 'ar' ? 'الانتقال إلى المشاريع' : 'Go to Projects'}</Button>
+          </LocalizedLink>
         </div>
-      </section>
+      </div>
     </div>
   );
 }

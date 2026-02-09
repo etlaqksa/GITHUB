@@ -254,7 +254,6 @@ const coreBare = [
   '/services/cavity',
   '/services/geophysical',
   '/projects',
-  '/case-studies',
   '/gallery',
   '/blog',
   '/faq',

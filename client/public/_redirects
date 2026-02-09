@@ -2,6 +2,12 @@
 # We serve the SPA entry for both /ar and /ar/* (same for /en).
 # This avoids infinite redirects if the Netlify site has a trailing-slash setting.
 /        /ar           301!
+
+# --- Legacy case-studies route is merged into /projects ---
+# Must be BEFORE the /ar/* and /en/* SPA rewrites.
+/ar/case-studies   /ar/projects   301!
+/en/case-studies   /en/projects   301!
+
 /ar     /index.html   200
 /ar/*   /index.html   200
 /en     /index.html   200
