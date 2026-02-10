@@ -52,7 +52,7 @@ export default function ClientLogosWall({
                     alt={label}
                     loading="lazy"
                     decoding="async"
-                    className="max-h-12 w-auto max-w-full opacity-80 grayscale transition duration-200 group-hover:opacity-100 group-hover:grayscale-0"
+                    className="max-h-12 w-auto max-w-full opacity-90 transition duration-200 group-hover:opacity-100"
                   />
                   <span className="sr-only">{label}</span>
                 </LocalizedLink>
