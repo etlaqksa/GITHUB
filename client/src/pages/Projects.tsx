@@ -196,21 +196,13 @@ export default function Projects() {
                     <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
                       <div className="flex items-center gap-2">
                         {logo ? (
-                          <span
-                            className={
-                              logo.darkBg
-                                ? 'inline-flex h-6 items-center justify-center rounded-md bg-black/90 px-2'
-                                : 'inline-flex h-6 items-center justify-center'
-                            }
-                          >
-                            <img
-                              src={`/media/clients/${encodeURIComponent(logo.fileName)}`}
-                              alt={language === 'ar' ? logo.name.ar : logo.name.en || logo.name.ar}
-                              loading="lazy"
-                              decoding="async"
-                              className="h-4 w-auto max-w-[72px] rounded-sm opacity-95"
-                            />
-                          </span>
+                          <img
+                            src={`/media/clients/${encodeURIComponent(logo.fileName)}`}
+                            alt={language === 'ar' ? logo.name.ar : logo.name.en || logo.name.ar}
+                            loading="lazy"
+                            decoding="async"
+                            className="h-5 w-auto max-w-[72px] rounded-sm opacity-90"
+                          />
                         ) : (
                           <Building2 className="h-4 w-4" />
                         )}
