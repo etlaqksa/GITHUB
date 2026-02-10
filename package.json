@@ -20,7 +20,8 @@
     "format": "prettier --write .",
     "test": "vitest run",
     "gen:images": "node scripts/generate_article_images.mjs",
-    "build:netlify": "node scripts/generate_sitemap.mjs && vite build"
+    "build:netlify": "node scripts/generate_sitemap.mjs && vite build",
+    "publish:images": "npm run gen:images && git add client/public/article-images && (git commit -m \"Update article images\" || echo \"No changes to commit\") && git push"
   },
   "dependencies": {
     "@fontsource/ibm-plex-sans-arabic": "^5.2.6",
