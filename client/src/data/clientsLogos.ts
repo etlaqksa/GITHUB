@@ -6,18 +6,18 @@ export type ClientLogo = {
 };
 
 export const clientLogos: ClientLogo[] = [
-  { name: { ar: "أرامكو السعودية", en: "Saudi Aramco" }, fileName: "أرامكو السعودية.webp" },
-  { name: { ar: "الشركة العربية للمختبرات والتربة", en: "Arab Lab & Soil" }, fileName: "الشركة العربية للمختبرات والتربة.png" },
-  { name: { ar: "العبيكان القابضة", en: "Obeikan Holding" }, fileName: "العبيكان القابضة.jpg" },
-  { name: { ar: "شركة اتحاد البواني", en: "Ittihad Al-Bawani Company" }, fileName: "شركة اتحاد البواني.png" },
-  { name: { ar: "شركة التربة والأساسات المحدودة - سفكو", en: "SAFCO - Soil & Foundation Company" }, fileName: "شركة التربة والأساسات المحدودة - سفكو.png" },
-  { name: { ar: "شركة العسيس للمقاولات", en: "Al-Asees Contracting" }, fileName: "شركة العسيس للمقاولات.png" },
-  { name: { ar: "شركة دار وإعمار للاستثمار والتطوير العقاري", en: "Dar & Emaar Investment & Real Estate Development" }, fileName: "شركة دار وإعمار للاستثمار والتطوير العقاري.svg" },
-  { name: { ar: "شركة ركين العقارية", en: "Rakeen Real Estate Company" }, fileName: "شركة ركين العقارية.png" },
-  { name: { ar: "شركة فاست", en: "FAST Company" }, fileName: "شركة فاست.jpg" },
-  { name: { ar: "شركة فرسينيه", en: "Freyssinet Company" }, fileName: "شركة فرسينيه.jpg" },
-  { name: { ar: "شركة يوكسال إنشاءات السعودية", en: "Yuksel Construction Saudi Arabia" }, fileName: "شركة يوكسال إنشاءات السعودية.svg" },
-  { name: { ar: "مصنع الري للعصائر والألبان", en: "Al-Raie Juice & Dairy Factory" }, fileName: "مصنع الري للعصائر والألبان.png" },
+  { name: { ar: "أرامكو السعودية", en: "Saudi Aramco" }, fileName: "saudi-aramco.webp" },
+  { name: { ar: "الشركة العربية للمختبرات والتربة", en: "Arab Lab & Soil" }, fileName: "arab-lab-and-soil.png" },
+  { name: { ar: "العبيكان القابضة", en: "Obeikan Holding" }, fileName: "obeikan-holding.jpg" },
+  { name: { ar: "شركة اتحاد البواني", en: "Ittihad Al-Bawani Company" }, fileName: "ittihad-al-bawani-company.png" },
+  { name: { ar: "شركة التربة والأساسات المحدودة - سفكو", en: "SAFCO - Soil & Foundation Company" }, fileName: "safco-soil-and-foundation-company.png" },
+  { name: { ar: "شركة العسيس للمقاولات", en: "Al-Asees Contracting" }, fileName: "al-asees-contracting.png" },
+  { name: { ar: "شركة دار وإعمار للاستثمار والتطوير العقاري", en: "Dar & Emaar Investment & Real Estate Development" }, fileName: "dar-and-emaar-investment-and-real-estate-development.svg" },
+  { name: { ar: "شركة ركين العقارية", en: "Rakeen Real Estate Company" }, fileName: "rakeen-real-estate-company.png" },
+  { name: { ar: "شركة فاست", en: "FAST Company" }, fileName: "fast-company.jpg" },
+  { name: { ar: "شركة فرسينيه", en: "Freyssinet Company" }, fileName: "freyssinet-company.jpg" },
+  { name: { ar: "شركة يوكسال إنشاءات السعودية", en: "Yuksel Construction Saudi Arabia" }, fileName: "yuksel-construction-saudi-arabia.svg" },
+  { name: { ar: "مصنع الري للعصائر والألبان", en: "Al-Raie Juice & Dairy Factory" }, fileName: "al-raie-juice-and-dairy-factory.png" },
 ];
 
 // Return a logo entry for a client name (AR). Supports composite client strings separated by '/'.

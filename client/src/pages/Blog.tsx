@@ -46,25 +46,7 @@ function getCategories(article: ArticleContent, language: 'ar' | 'en') {
 }
 
 function getFeaturedImageFallback(article: any) {
-  const images = [
-    '/article-images/BgIZ2EdQDXxT.jpg',
-    '/article-images/N8at6vPLLTnL.jpg',
-    '/article-images/hc80ziJxWYDl.jpg',
-    '/article-images/S9hx4uBY7U5n.jpg',
-    '/article-images/fjZxgrX7pS3N.jpg',
-    '/article-images/bgeXnZzqGuIE.jpg',
-    '/article-images/u66IptamGAlr.jpg',
-    '/article-images/KDvxyzgE6fPZ.webp'
-  ];
-  
-  const cat = (article.categoryEn || article.category || '').toLowerCase();
-  if (cat.includes('grout') || cat.includes('حقن')) return images[0];
-  if (cat.includes('settlement') || cat.includes('هبوط')) return images[6];
-  if (cat.includes('cavity') || cat.includes('تكهفات')) return images[2];
-  if (cat.includes('crack') || cat.includes('تشققات')) return images[5];
-  if (cat.includes('soil') || cat.includes('تربة')) return images[1];
-  
-  return images[article.id % images.length];
+  return '/og-image.webp';
 }
 
 function ArticleCard({
@@ -84,7 +66,7 @@ function ArticleCard({
 
   const cats = getCategories(article, language);
   const fallbackUrl = getFeaturedImageFallback(article);
-  const imgUrl = `/article-images/card/${article.slug}.svg`;
+  const imgUrl = `/article-images/card/${language}/${article.slug}.webp`;
   const postSlug = getArticleUrlSlug(article, language);
 
   return (
@@ -240,7 +222,7 @@ export default function Blog() {
         title={language === 'ar' ? 'المدونة - إطلاق' : 'Blog - ETLAQ'}
         description={language === 'ar' ? 'مقالات مبسطة وعملية عن حقن التربة، معالجة الهبوط، كشف الفراغات، وتقوية الأساسات.' : 'Practical, reader-friendly articles on soil grouting, settlement mitigation, void detection, and foundation strengthening.'}
         url={canonical}
-        image={absUrl('/og-articles.webp')}
+        image={absUrl('/og-image.webp')}
         type="website"
       />
       <div className="min-h-screen py-12">

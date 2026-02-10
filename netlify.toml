@@ -89,12 +89,6 @@
   to = "/googleb9eafcb71ddde876.html"
   status = 200
 
-
-[[redirects]]
-  from = "/company-profile.pdf"
-  to = "/company-profile.pdf"
-  status = 200
-
 [[redirects]]
   from = "/og-image.jpg"
   to = "/og-image.jpg"

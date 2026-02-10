@@ -12,7 +12,7 @@
     "dev": "vite",
     "dev:client": "vite",
     "dev:static": "vite",
-    "prebuild": "node scripts/generate_sitemap.mjs",
+    "prebuild": "node scripts/generate_article_images.mjs && node scripts/generate_sitemap.mjs",
     "build": "vite build",
     "postbuild": "node scripts/prerender.mjs",
     "preview": "vite preview --port 4173 --strictPort",
@@ -21,6 +21,8 @@
     "test": "vitest run"
   },
   "dependencies": {
+    "@fontsource/ibm-plex-sans-arabic": "^5.2.6",
+    "@fontsource/inter": "^5.2.5",
     "@aws-sdk/client-s3": "3.693.0",
     "@aws-sdk/s3-request-presigner": "3.693.0",
     "@radix-ui/react-accordion": "^1.2.12",

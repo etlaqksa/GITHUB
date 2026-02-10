@@ -157,7 +157,7 @@ export default function Privacy() {
 
   return (
     <>
-      <SEO title={title} description={description} url={canonical} image={absUrl('/og-default.webp')} type="website" />
+      <SEO title={title} description={description} url={canonical} image={absUrl('/og-image.webp')} type="website" />
 
       <section className="py-12">
         <div className="container mx-auto px-4">

@@ -169,11 +169,9 @@ export default function BlogPost() {
   }, [article, params?.slug, canonicalSlug, setLocation]);
 
   const ogImage = useMemo(() => {
-    const candidate =
-      article?.image?.url ||
-      (article?.slug ? `/article-images/hero/${article.slug}.svg` : '/og-image.webp');
+    const candidate = article?.slug ? `/article-images/hero/${language}/${article.slug}.webp` : '/og-image.webp';
     return absUrl(candidate);
-  }, [article?.image?.url, article?.slug]);
+  }, [article?.slug, language]);
 
   const relatedSignals = useMemo(() => {
     if (!article) return [title, description, contentRaw.slice(0, 200)].filter(Boolean) as string[];
@@ -197,7 +195,7 @@ export default function BlogPost() {
 
 const schema = useMemo(() => {
     if (!article) return undefined;
-    const image = absUrl(`/article-images/hero/${article.slug}.svg`);
+    const image = absUrl(`/article-images/hero/${language}/${article.slug}.webp`);
     const graph: any[] = [];
 
     // Organization (minimal, consistent)
@@ -310,31 +308,15 @@ const schema = useMemo(() => {
     };
   }, [language, prevArticle, nextArticle]);
 
-  const slug = params?.slug ?? '';
-  const heroPrimary = slug ? `/article-images/hero/${slug}.svg` : '/og-image.webp';
-  const heroSecondary = slug ? `/article-images/card/${slug}.svg` : '/og-image.webp';
+  // IMPORTANT:
+  // The route param (params.slug) can be a language-specific URL slug (e.g. derived from title)
+  // and may NOT match the stable internal article.slug used to generate images.
+  // Use article.slug (when available) so every post gets its correct hero/card image.
+  const heroPrimary = article?.slug ? `/article-images/hero/${language}/${article.slug}.webp` : '/og-image.webp';
+  const heroSecondary = article?.slug ? `/article-images/card/${language}/${article.slug}.webp` : '/og-image.webp';
 
   function getFeaturedImageFallback(a: ArticleContent) {
-    const images = [
-      '/article-images/BgIZ2EdQDXxT.jpg',
-      '/article-images/N8at6vPLLTnL.jpg',
-      '/article-images/hc80ziJxWYDl.jpg',
-      '/article-images/S9hx4uBY7U5n.jpg',
-      '/article-images/fjZxgrX7pS3N.jpg',
-      '/article-images/bgeXnZzqGuIE.jpg',
-      '/article-images/u66IptamGAlr.jpg',
-      '/article-images/KDvxyzgE6fPZ.webp',
-    ];
-
-    const cat = (a.categoryEn || a.category || '').toLowerCase();
-    if (cat.includes('grout') || cat.includes('حقن')) return images[0];
-    if (cat.includes('settlement') || cat.includes('هبوط')) return images[6];
-    if (cat.includes('cavity') || cat.includes('sinkhole') || cat.includes('تكهفات')) return images[2];
-    if (cat.includes('crack') || cat.includes('تشققات')) return images[5];
-    if (cat.includes('soil') || cat.includes('تربة')) return images[1];
-
-    const n = typeof a.id === 'number' ? a.id : (a.slug || '').length;
-    return images[n % images.length];
+    return '/og-image.webp';
   }
 
   const fallbackHero = article ? getFeaturedImageFallback(article) : '/og-image.webp';
@@ -580,15 +562,10 @@ const schema = useMemo(() => {
                     </a>
                   );
                 },
-                // Make images responsive
-                img: ({ ...props }) => (
-                  <img
-                    loading="lazy"
-                    decoding="async"
-                    className="rounded-xl border border-border max-w-full h-auto"
-                    {...props}
-                  />
-                ),
+                // We intentionally suppress inline images inside article markdown.
+                // Old embedded images were removed from the repo to keep size small,
+                // and we don't want a global fallback (og-image.webp) to show repeatedly.
+                img: () => null,
                 // Prevent swipe on scrollable blocks
                 pre: ({ children, ...props }) => (
                   <pre data-swipe-ignore="true" tabIndex={0} className="overflow-x-auto" {...props}>
