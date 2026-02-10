@@ -39,11 +39,14 @@ export default function ClientLogosWall({
             {clientLogos.map((logo) => {
               const label = language === 'ar' ? logo.name.ar : logo.name.en || logo.name.ar;
               const href = `/projects?client=${encodeURIComponent(logo.name.ar)}`;
+              const containerClass = logo.darkBg
+                ? 'bg-black/90 border-white/10'
+                : 'bg-background/60';
               return (
                 <LocalizedLink
                   key={logo.fileName}
                   href={href}
-                  className="group relative flex h-20 items-center justify-center rounded-xl border bg-background/60 p-3 transition hover:-translate-y-0.5 hover:shadow-sm"
+                  className={`group relative flex h-20 items-center justify-center rounded-xl border p-3 transition hover:-translate-y-0.5 hover:shadow-sm ${containerClass}`}
                   aria-label={label}
                   title={label}
                 >
@@ -52,7 +55,7 @@ export default function ClientLogosWall({
                     alt={label}
                     loading="lazy"
                     decoding="async"
-                    className="max-h-12 w-auto max-w-full opacity-80 grayscale transition duration-200 group-hover:opacity-100 group-hover:grayscale-0"
+                    className="max-h-12 w-auto max-w-full opacity-85 grayscale transition duration-200 group-hover:opacity-100 group-hover:grayscale-0"
                   />
                   <span className="sr-only">{label}</span>
                 </LocalizedLink>
