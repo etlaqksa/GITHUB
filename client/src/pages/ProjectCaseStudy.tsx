@@ -6,6 +6,7 @@ import RelatedLinksHub from '@/components/RelatedLinksHub';
 import TrustStats from '@/components/TrustStats';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { projects } from '@/data/projects';
+import { getClientLogoByArName } from '@/data/clientsLogos';
 import { ArrowLeft, Building2, Calendar, MapPin, CheckCircle2 } from 'lucide-react';
 import { useMemo } from 'react';
 import { useRoute } from 'wouter';
@@ -53,6 +54,7 @@ export default function ProjectCaseStudy() {
   const title = language === 'ar' ? project.title.ar : project.title.en;
   const client = language === 'ar' ? project.client.ar : project.client.en;
   const location = language === 'ar' ? project.location.ar : project.location.en;
+  const logo = getClientLogoByArName(project.client.ar);
   const summary = language === 'ar' ? project.summary.ar : project.summary.en;
   const badge = language === 'ar' ? project.categoryLabel.ar : project.categoryLabel.en;
 

@@ -6,8 +6,10 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import TrustStats from '@/components/TrustStats';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { projects as allProjects, type ServiceKey } from '@/data/projects';
+import { getClientLogoByArName } from '@/data/clientsLogos';
 import { Building2, Calendar, MapPin, ArrowRight } from 'lucide-react';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
+import { useLocation } from 'wouter';
 import LocalizedLink from '@/components/LocalizedLink';
 
 type FilterKey = 'all' | ServiceKey;
@@ -16,6 +18,14 @@ export default function Projects() {
   const { language } = useLanguage();
 
   const [filter, setFilter] = useState<FilterKey>('all');
+  const [clientFilter, setClientFilter] = useState<string | null>(null);
+  const [location, setLocation] = useLocation();
+
+  useEffect(() => {
+    const qs = new URLSearchParams(window.location.search);
+    const c = qs.get('client');
+    setClientFilter(c ? decodeURIComponent(c) : null);
+  }, [location]);
 
   const filterOptions = useMemo(() => {
     const counts: Record<ServiceKey, number> = { grouting: 0, cavity: 0, geophysical: 0 };
@@ -36,9 +46,16 @@ export default function Projects() {
   }, [language]);
 
   const projects = useMemo(() => {
-    if (filter === 'all') return allProjects;
-    return allProjects.filter((p) => p.serviceKey === filter);
-  }, [filter]);
+    const byService = filter === 'all' ? allProjects : allProjects.filter((p) => p.serviceKey === filter);
+    if (!clientFilter) return byService;
+
+    const wanted = clientFilter.trim();
+    return byService.filter((p) => {
+      const ar = p.client?.ar || '';
+      const parts = ar.split('/').map((x) => x.trim()).filter(Boolean);
+      return parts.includes(wanted) || ar.includes(wanted);
+    });
+  }, [filter, clientFilter]);
 
   return (
     <div className="min-h-screen">
@@ -131,6 +148,24 @@ export default function Projects() {
                 )}
               </Button>
             ))}
+            {clientFilter && (
+              <div className="flex items-center gap-2 rounded-full border bg-background px-3 py-1 text-sm">
+                <span className="text-muted-foreground">{language === 'ar' ? 'العميل:' : 'Client:'}</span>
+                <span className="font-medium">{clientFilter}</span>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setClientFilter(null);
+                    setLocation('/projects');
+                  }}
+                  className="ml-1 inline-flex h-6 w-6 items-center justify-center rounded-full hover:bg-muted"
+                  aria-label={language === 'ar' ? 'إزالة الفلتر' : 'Clear filter'}
+                  title={language === 'ar' ? 'إزالة الفلتر' : 'Clear filter'}
+                >
+                  ×
+                </button>
+              </div>
+            )}
           </div>
         </div>
       </section>
@@ -145,6 +180,7 @@ export default function Projects() {
               const location = language === 'ar' ? p.location.ar : p.location.en;
               const summary = language === 'ar' ? p.summary.ar : p.summary.en;
               const badge = language === 'ar' ? p.categoryLabel.ar : p.categoryLabel.en;
+              const logo = getClientLogoByArName(p.client.ar);
 
               return (
                 <Card key={p.slug} className="group h-full border-border/60 bg-card/70 backdrop-blur transition hover:bg-card/80">
@@ -159,7 +195,17 @@ export default function Projects() {
 
                     <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
                       <div className="flex items-center gap-2">
-                        <Building2 className="h-4 w-4" />
+                        {logo ? (
+                          <img
+                            src={`/media/clients/${encodeURIComponent(logo.fileName)}`}
+                            alt={language === 'ar' ? logo.name.ar : logo.name.en || logo.name.ar}
+                            loading="lazy"
+                            decoding="async"
+                            className="h-5 w-auto max-w-[72px] rounded-sm opacity-90"
+                          />
+                        ) : (
+                          <Building2 className="h-4 w-4" />
+                        )}
                         <span className="line-clamp-1">{client}</span>
                       </div>
                       <div className="flex items-center gap-2">

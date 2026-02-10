@@ -3,6 +3,7 @@ import { useMemo, useState } from 'react';
 import LocalizedLink from '@/components/LocalizedLink';
 import { SEO } from '@/components/SEO';
 import TrustStats from '@/components/TrustStats';
+import ClientLogosWall from '@/components/ClientLogosWall';
 import { GALLERY_IMAGES, ImageSlideshow } from '@/components/ImageSlideshow';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -211,14 +212,6 @@ export default function Home() {
           : 'Decision-ready outputs that lead directly to the next step.',
     },
   ];
-
-  const featuredProjects = useMemo(() => {
-    // prefer recent projects for credibility. We keep it simple (sort by year desc).
-    const sorted = [...projects]
-      .filter((p) => Boolean(p?.slug))
-      .sort((a, b) => (Number(b.year) || 0) - (Number(a.year) || 0));
-    return sorted.slice(0, 6);
-  }, []);
 
   const topCities = useMemo(() => {
     const priority = ['riyadh', 'jeddah', 'dammam', 'khobar', 'makkah', 'madinah', 'taif', 'jubail', 'yanbu', 'qassim'];
@@ -561,62 +554,16 @@ export default function Home() {
       </section>
 
       {/* FEATURED PROJECTS */}
-      <section className="py-12 md:py-16 bg-muted/20">
+      
+      <ClientLogosWall />
+
+<section className="py-12 md:py-16 bg-muted/20">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
             <div className="space-y-2">
-              <h2 className="text-2xl md:text-4xl font-bold">{language === 'ar' ? 'مشاريع مختارة' : 'Selected projects'}</h2>
-              <p className="text-muted-foreground">
-                {language === 'ar'
-                  ? 'نماذج من أعمالنا عبر مشاريع مختلفة داخل المملكة.'
-                  : 'Examples of our work across different project types in KSA.'}
-              </p>
-            </div>
-            <LocalizedLink href="/projects">
-              <Button variant="outline">{language === 'ar' ? 'عرض كل المشاريع' : 'View all projects'}</Button>
-            </LocalizedLink>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
-            {featuredProjects.map((p) => (
-              <Card key={p.slug} className="h-full">
-                <CardHeader>
-                  <div className="flex items-start justify-between gap-3">
-                    <div className="space-y-1">
-                      <CardTitle className="text-lg">{language === 'ar' ? p.title.ar : p.title.en}</CardTitle>
-                      <CardDescription>
-                        {language === 'ar'
-                          ? `${p.location.ar} • ${p.year}`
-                          : `${p.location.en} • ${p.year}`}
-                      </CardDescription>
-                    </div>
-                    <div className="text-xs rounded-full border bg-background px-3 py-1">
-                      {language === 'ar' ? p.categoryLabel.ar : p.categoryLabel.en}
-                    </div>
-                  </div>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {language === 'ar' ? p.summary.ar : p.summary.en}
-                  </p>
-                  <LocalizedLink href={`/projects/${p.slug}`}>
-                    <Button variant="secondary" className="w-full">
-                      {language === 'ar' ? 'تفاصيل المشروع' : 'Project details'}
-                    </Button>
-                  </LocalizedLink>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* COVERAGE */}
-      <section className="py-12 md:py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-8 items-start">
-            <div className="space-y-3">
-              <h2 className="text-2xl md:text-4xl font-bold">{language === 'ar' ? 'نخدم جميع مناطق المملكة' : 'Serving all regions of KSA'}</h2>
+              <h2 className="text-2xl md:text-4xl font-bold">
+                {language === 'ar' ? 'نغطي مناطق المملكة' : 'Serving all regions of KSA'}
+              </h2>
               <p className="text-muted-foreground leading-relaxed">
                 {language === 'ar'
                   ? 'فرق ميدانية وخطط تنفيذ قابلة للتوسع حسب حجم المشروع. يمكنك البدء من صفحة مدينتك أو طلب تقييم مباشر.'
