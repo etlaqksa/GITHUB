@@ -11,7 +11,8 @@ export default function Header() {
   const { colorTheme, setColorTheme } = useTheme();
   const [location, setLocation] = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [forceCompactHeader, setForceCompactHeader] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const [isDesktopModeMobile, setIsDesktopModeMobile] = useState(false);
   const [themeMenuOpen, setThemeMenuOpen] = useState(false);
 
   // Horizontal-scroll nav helpers (used when "Desktop site" is enabled on mobile).
@@ -43,16 +44,26 @@ export default function Header() {
     setLanguage(next);
     window.location.assign(`${targetPath}${search}${hash}`);
   };
-  // Force "mobile header" on touch devices even if the browser is in "Desktop site" mode
-  // This prevents header items from being clipped/hidden due to desktop breakpoints on narrow screens.
+  // Responsive behavior:
+  // - True mobile (small screens): show only logo + hamburger; all actions live inside menu.
+  // - "Desktop site" on mobile (touch device reporting ~980px): show horizontal-scroll nav + hamburger at end.
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
     const mq = window.matchMedia?.('(pointer: coarse)');
+
     const compute = () => {
       const isTouch = mq ? mq.matches : false;
-      const isNarrow = window.innerWidth < 1100; // desktop-mode phones often report ~980px
-      setForceCompactHeader(isTouch && isNarrow);
+      const w = window.innerWidth || 0;
+
+      const mobile = w < 768;
+      const desktopModeMobile = isTouch && w >= 768 && w < 1100;
+
+      setIsMobile(mobile);
+      setIsDesktopModeMobile(desktopModeMobile);
+
+      // Close menus when switching modes
+      if (!mobile && !desktopModeMobile) setMobileMenuOpen(false);
     };
 
     compute();
@@ -93,13 +104,15 @@ export default function Header() {
         */}
         <div
           className={
-            forceCompactHeader
+            isMobile
+              ? "hidden"
+              : isDesktopModeMobile
               ? "relative flex flex-1 min-w-0 items-center"
               : "hidden md:flex flex-1 items-center justify-center"
           }
           aria-label={language === 'ar' ? 'التنقل الرئيسي' : 'Main navigation'}
         >
-          {forceCompactHeader ? (
+          {isDesktopModeMobile ? (
               <nav className="flex-1 min-w-0">
                 <div className="flex items-center gap-1">
                   <div className="flex-1 overflow-x-auto [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
@@ -123,15 +136,18 @@ export default function Header() {
                       })}
                     </div>
                   </div>
+                  {isDesktopModeMobile && (
+
 
                   <button
                     type="button"
                     aria-label="Menu"
-                    onClick={() => setMobileMenuOpen(true)}
+                    onClick={() => setMobileMenuOpen((v) => !v)}
                     className="shrink-0 inline-flex items-center justify-center rounded-full border border-border bg-background/80 px-3 py-2 text-sm hover:bg-muted"
                   >
                     <Menu className="h-4 w-4" />
                   </button>
+                  )}
                 </div>
               </nav>
             ) : (
@@ -164,14 +180,17 @@ export default function Header() {
         {/* Primary CTA + Theme & Language Switcher & Mobile Menu Button */}
         <div className="flex items-center gap-1 sm:gap-2 relative shrink-0">
           {/* Request Service CTA */}
-          <div className={forceCompactHeader ? "block" : "hidden md:block"}>
+          {(!isMobile && !isDesktopModeMobile) && (
+          <div className="hidden md:block">
             <LocalizedLink href="/request-service">
               <Button className="gap-2 font-bold shadow-hover-soft">
                 {t('nav.request')}
               </Button>
             </LocalizedLink>
           </div>
+          )}
           {/* Theme switcher (desktop dropdown + mobile bottom sheet) */}
+          {(!isMobile && !isDesktopModeMobile) && (
           <div className="relative">
             {/* Desktop / tablet */}
             <Button
@@ -238,7 +257,9 @@ export default function Header() {
               </>
             )}
           </div>
+          )}
 
+          {(!isMobile && !isDesktopModeMobile) && (
           <Button
             variant="outline"
             size="sm"
@@ -249,12 +270,13 @@ export default function Header() {
             <span className="hidden sm:inline">{language === 'ar' ? 'EN' : 'العربية'}</span>
             <span className="sm:hidden">{language === 'ar' ? 'EN' : 'AR'}</span>
           </Button>
+          )}
 
           {/* Mobile Menu Button */}
           <Button
             variant="ghost"
             size="icon"
-            className={forceCompactHeader ? "hidden" : "md:hidden"}
+            className={isMobile ? "" : "hidden"}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -263,8 +285,8 @@ export default function Header() {
       </nav>
 
       {/* Mobile Navigation (only for true mobile, not desktop-mode phones) */}
-      {mobileMenuOpen && !forceCompactHeader && (
-        <div className={`${forceCompactHeader ? "" : "md:hidden"} border-t bg-background`}>
+      {mobileMenuOpen && (
+        <div className={`${isMobile ? "" : "hidden"} border-t bg-background`}>
           <div className="container py-4 space-y-2">
             <LocalizedLink href="/request-service">
               <Button className="w-full justify-start text-base font-bold" onClick={() => setMobileMenuOpen(false)}>
@@ -297,6 +319,73 @@ export default function Header() {
                 </LocalizedLink>
               )
             )}
+          </div>
+        </div>
+      )}
+
+
+      {/* Desktop-mode mobile menu (touch device in "Desktop site" mode) */}
+      {mobileMenuOpen && isDesktopModeMobile && (
+        <div className="border-t bg-background">
+          <div className="container py-4 space-y-2">
+            <LocalizedLink href="/request-service">
+              <Button className="w-full justify-start text-base font-bold" onClick={() => setMobileMenuOpen(false)}>
+                {t('nav.request')}
+              </Button>
+            </LocalizedLink>
+
+            {navigation.map((item) =>
+              item.external ? (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block rounded-lg px-3 py-2 text-base font-medium hover:bg-muted"
+                >
+                  {item.name}
+                </a>
+              ) : (
+                <LocalizedLink
+                  key={item.href}
+                  href={item.href}
+                  className="block rounded-lg px-3 py-2 text-base font-medium hover:bg-muted"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {item.name}
+                </LocalizedLink>
+              )
+            )}
+
+            <div className="pt-2 border-t flex flex-col gap-2">
+              <Button variant="outline" className="w-full justify-start" onClick={toggleLanguage}>
+                {language === 'ar' ? 'English' : 'العربية'}
+              </Button>
+
+              <div className="w-full">
+                <Button
+                  variant="outline"
+                  className="w-full justify-start"
+                  onClick={() => setThemeMenuOpen((v) => !v)}
+                >
+                  <Palette className="h-4 w-4 mr-2" /> {t('nav.theme')}
+                </Button>
+                {themeMenuOpen && (
+                  <div className="mt-2 grid grid-cols-2 gap-2">
+                    {(['sand', 'ocean', 'emerald', 'crimson'] as ColorTheme[]).map((th) => (
+                      <Button
+                        key={th}
+                        variant={colorTheme === th ? 'default' : 'outline'}
+                        onClick={() => handleThemeChange(th)}
+                      >
+                        {th}
+                      </Button>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </div>
           </div>
         </div>
       )}
