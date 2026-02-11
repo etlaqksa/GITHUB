@@ -85,13 +85,14 @@ export default function Header() {
       const max = el.scrollWidth - el.clientWidth;
       const hasOverflow = max > 4;
       setNavHasOverflow(hasOverflow);
-      setNavCanLeft(hasOverflow && el.scrollLeft > 2);
-      setNavCanRight(hasOverflow && el.scrollLeft < max - 2);
+      // Keep setters aligned with declared state to avoid runtime ReferenceError.
+      setNavCanScrollLeft(hasOverflow && el.scrollLeft > 2);
+      setNavCanScrollRight(hasOverflow && el.scrollLeft < max - 2);
     };
 
     update();
     const onScroll = () => {
-      setNavInteracted(true);
+      setNavUserScrolled(true);
       update();
     };
 
@@ -186,7 +187,7 @@ export default function Header() {
               {navHasOverflow && (
                 <>
                   {/* Hint pill (shown until the user scrolls once) */}
-                  {!navInteracted && (
+                  {!navUserScrolled && (
                     <button
                       type="button"
                       onClick={() => scrollNavBy(language === 'ar' ? 'left' : 'right')}
@@ -203,7 +204,7 @@ export default function Header() {
                     onClick={() => scrollNavBy('left')}
                     className={
                       "absolute left-1 top-1/2 -translate-y-1/2 h-9 w-9 rounded-full border bg-background/90 backdrop-blur shadow-sm transition-opacity hover:bg-background " +
-                      (navCanLeft || (!navInteracted && language === 'ar') ? "opacity-100" : "opacity-0 pointer-events-none")
+                      (navCanScrollLeft || (!navUserScrolled && language === 'ar') ? "opacity-100" : "opacity-0 pointer-events-none")
                     }
                   >
                     <ChevronLeft className="h-4 w-4 mx-auto" />
@@ -216,7 +217,7 @@ export default function Header() {
                     onClick={() => scrollNavBy('right')}
                     className={
                       "absolute right-1 top-1/2 -translate-y-1/2 h-9 w-9 rounded-full border bg-background/90 backdrop-blur shadow-sm transition-opacity hover:bg-background " +
-                      (navCanRight || (!navInteracted && language !== 'ar') ? "opacity-100" : "opacity-0 pointer-events-none")
+                      (navCanScrollRight || (!navUserScrolled && language !== 'ar') ? "opacity-100" : "opacity-0 pointer-events-none")
                     }
                   >
                     <ChevronRight className="h-4 w-4 mx-auto" />
