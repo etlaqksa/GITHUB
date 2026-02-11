@@ -209,7 +209,7 @@ export default function FAQ() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-6 w-full">
             <Card className="text-center hover:shadow-lg transition-shadow">
               <CardContent className="p-6 space-y-4">
                 <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto">

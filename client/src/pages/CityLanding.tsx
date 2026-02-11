@@ -116,7 +116,7 @@ export default function CityLanding({ params }: Props) {
           </div>
 
           {city?.slug === 'riyadh' && listNeighborhoodsForCity(city).length > 0 && (
-            <div className="mt-12 max-w-5xl mx-auto">
+            <div className="mt-12 w-full">
               <Card className="border-dashed">
                 <CardHeader>
                   <CardTitle className="text-xl">{language === 'ar' ? 'أحياء الرياض' : 'Riyadh neighborhoods'}</CardTitle>

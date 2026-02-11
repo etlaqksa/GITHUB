@@ -244,7 +244,11 @@ html[data-theme='red'] {
     .container {
       padding-left: 2rem; /* 32px - desktop padding */
       padding-right: 2rem;
-      max-width: 1280px; /* Standard content width */
+      /*
+        Use full viewport width across the whole site (avoid large empty gutters),
+        while keeping comfortable padding for readability.
+      */
+      max-width: none;
     }
   }
 }
