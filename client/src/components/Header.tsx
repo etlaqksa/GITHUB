@@ -177,20 +177,16 @@ export default function Header() {
           )}
         </div>
 
-        {/* Primary CTA + Theme & Language Switcher & Mobile Menu Button */}
+        {/* Primary actions: Request Service + Theme + Language (always visible) + Mobile Menu Button */}
         <div className="flex items-center gap-1 sm:gap-2 relative shrink-0">
-          {/* Request Service CTA */}
-          {(!isMobile && !isDesktopModeMobile) && (
-          <div className="hidden md:block">
-            <LocalizedLink href="/request-service">
-              <Button className="gap-2 font-bold shadow-hover-soft">
-                {t('nav.request')}
-              </Button>
-            </LocalizedLink>
-          </div>
-          )}
-          {/* Theme switcher (desktop dropdown + mobile bottom sheet) */}
-          {(!isMobile && !isDesktopModeMobile) && (
+          {/* Request Service CTA (always visible; compact on mobile) */}
+          <LocalizedLink href="/request-service" className="shrink-0">
+            <Button className="gap-2 font-bold shadow-hover-soft whitespace-nowrap">
+              <span className="hidden sm:inline">{t('nav.request')}</span>
+              <span className="sm:hidden">{language === 'ar' ? 'اطلب' : 'Request'}</span>
+            </Button>
+          </LocalizedLink>
+          {/* Theme switcher (always visible) */}
           <div className="relative">
             {/* Desktop / tablet */}
             <Button
@@ -257,22 +253,21 @@ export default function Header() {
               </>
             )}
           </div>
-          )}
 
-          {(!isMobile && !isDesktopModeMobile) && (
+          {/* Language toggle (always visible) */}
           <Button
             variant="outline"
             size="sm"
             onClick={toggleLanguage}
             className="font-medium shadow-hover-soft whitespace-nowrap"
             aria-label={language === 'ar' ? 'Switch to English' : 'التبديل إلى العربية'}
+            type="button"
           >
             <span className="hidden sm:inline">{language === 'ar' ? 'EN' : 'العربية'}</span>
             <span className="sm:hidden">{language === 'ar' ? 'EN' : 'AR'}</span>
           </Button>
-          )}
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button (true mobile only) */}
           <Button
             variant="ghost"
             size="icon"
@@ -284,15 +279,10 @@ export default function Header() {
         </div>
       </nav>
 
-      {/* Mobile Navigation (only for true mobile, not desktop-mode phones) */}
+      {/* Mobile Navigation (true mobile): only nav items inside hamburger (actions stay in header) */}
       {mobileMenuOpen && (
         <div className={`${isMobile ? "" : "hidden"} border-t bg-background`}>
           <div className="container py-4 space-y-2">
-            <LocalizedLink href="/request-service">
-              <Button className="w-full justify-start text-base font-bold" onClick={() => setMobileMenuOpen(false)}>
-                {t('nav.request')}
-              </Button>
-            </LocalizedLink>
             {navigation.map((item) =>
               item.external ? (
                 <a
@@ -324,16 +314,10 @@ export default function Header() {
       )}
 
 
-      {/* Desktop-mode mobile menu (touch device in "Desktop site" mode) */}
+      {/* Desktop-mode mobile menu (touch device in "Desktop site" mode): nav only */}
       {mobileMenuOpen && isDesktopModeMobile && (
         <div className="border-t bg-background">
           <div className="container py-4 space-y-2">
-            <LocalizedLink href="/request-service">
-              <Button className="w-full justify-start text-base font-bold" onClick={() => setMobileMenuOpen(false)}>
-                {t('nav.request')}
-              </Button>
-            </LocalizedLink>
-
             {navigation.map((item) =>
               item.external ? (
                 <a
@@ -358,34 +342,6 @@ export default function Header() {
               )
             )}
 
-            <div className="pt-2 border-t flex flex-col gap-2">
-              <Button variant="outline" className="w-full justify-start" onClick={toggleLanguage}>
-                {language === 'ar' ? 'English' : 'العربية'}
-              </Button>
-
-              <div className="w-full">
-                <Button
-                  variant="outline"
-                  className="w-full justify-start"
-                  onClick={() => setThemeMenuOpen((v) => !v)}
-                >
-                  <Palette className="h-4 w-4 mr-2" /> {t('nav.theme')}
-                </Button>
-                {themeMenuOpen && (
-                  <div className="mt-2 grid grid-cols-2 gap-2">
-                    {(['sand', 'ocean', 'emerald', 'crimson'] as ColorTheme[]).map((th) => (
-                      <Button
-                        key={th}
-                        variant={colorTheme === th ? 'default' : 'outline'}
-                        onClick={() => handleThemeChange(th)}
-                      >
-                        {th}
-                      </Button>
-                    ))}
-                  </div>
-                )}
-              </div>
-            </div>
           </div>
         </div>
       )}
