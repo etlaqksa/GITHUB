@@ -228,8 +228,7 @@ html[data-theme='red'] {
    */
   .container {
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    margin-inline: auto;
     padding-left: 1rem; /* 16px - mobile padding */
     padding-right: 1rem;
   }
@@ -254,6 +253,14 @@ html[data-theme='red'] {
 html {
   scroll-behavior: smooth;
 }
+
+/* Prevent horizontal overflow and keep layout centered even in "Desktop site" mobile mode */
+html, body, #root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 
 /* Global Hover Effects */
 @layer utilities {
