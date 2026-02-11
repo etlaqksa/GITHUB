@@ -86,35 +86,47 @@ export default function Header() {
           </div>
         </LocalizedLink>
 
-        {/* Desktop Navigation */}
-        <div className={forceCompactHeader ? "hidden" : "hidden md:flex items-center space-x-1 rtl:space-x-reverse"}>
-          {navigation.map((item) =>
-            item.external ? (
-              <a key={item.href} href={item.href} target="_blank" rel="noopener noreferrer" className="inline-flex">
-                <Button
-                  variant="ghost"
-                  className="text-base font-bold hover:scale-110 transition-all duration-300 hover:text-primary relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary hover:after:w-full after:transition-all"
-                >
-                  {item.name}
-                </Button>
-              </a>
-            ) : (
-              <LocalizedLink key={item.href} href={item.href}>
-                <Button
-                  variant={location === item.href ? 'default' : 'ghost'}
-                  className="text-base font-bold hover:scale-110 transition-all duration-300 hover:text-primary relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary hover:after:w-full after:transition-all"
-                >
-                  {item.name}
-                </Button>
-              </LocalizedLink>
-            )
-          )}
+        {/* Navigation
+            Option B (requested): when the browser is in "Desktop site" mode on a narrow touch device,
+            keep the full navigation visible and allow horizontal scrolling instead of hiding items.
+        */}
+        <div
+          className={
+            forceCompactHeader
+              ? "flex flex-1 min-w-0 items-center overflow-x-auto [-webkit-overflow-scrolling:touch]"
+              : "hidden md:flex flex-1 items-center justify-center"
+          }
+          aria-label={language === 'ar' ? 'التنقل الرئيسي' : 'Main navigation'}
+        >
+          <div className={forceCompactHeader ? "flex items-center gap-1 whitespace-nowrap px-2" : "flex items-center space-x-1 rtl:space-x-reverse"}>
+            {navigation.map((item) =>
+              item.external ? (
+                <a key={item.href} href={item.href} target="_blank" rel="noopener noreferrer" className="inline-flex">
+                  <Button
+                    variant="ghost"
+                    className="text-base font-bold hover:scale-110 transition-all duration-300 hover:text-primary relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary hover:after:w-full after:transition-all"
+                  >
+                    {item.name}
+                  </Button>
+                </a>
+              ) : (
+                <LocalizedLink key={item.href} href={item.href}>
+                  <Button
+                    variant={location === item.href ? 'default' : 'ghost'}
+                    className="text-base font-bold hover:scale-110 transition-all duration-300 hover:text-primary relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary hover:after:w-full after:transition-all"
+                  >
+                    {item.name}
+                  </Button>
+                </LocalizedLink>
+              )
+            )}
+          </div>
         </div>
 
         {/* Primary CTA + Theme & Language Switcher & Mobile Menu Button */}
         <div className="flex items-center gap-1 sm:gap-2 relative shrink-0">
-          {/* Request Service CTA (desktop) */}
-          <div className={forceCompactHeader ? "hidden" : "hidden md:block"}>
+          {/* Request Service CTA */}
+          <div className={forceCompactHeader ? "block" : "hidden md:block"}>
             <LocalizedLink href="/request-service">
               <Button className="gap-2 font-bold shadow-hover-soft">
                 {t('nav.request')}
@@ -204,7 +216,7 @@ export default function Header() {
           <Button
             variant="ghost"
             size="icon"
-            className={forceCompactHeader ? "" : "md:hidden"}
+            className={forceCompactHeader ? "hidden" : "md:hidden"}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -212,8 +224,8 @@ export default function Header() {
         </div>
       </nav>
 
-      {/* Mobile Navigation */}
-      {mobileMenuOpen && (
+      {/* Mobile Navigation (only for true mobile, not desktop-mode phones) */}
+      {mobileMenuOpen && !forceCompactHeader && (
         <div className={`${forceCompactHeader ? "" : "md:hidden"} border-t bg-background`}>
           <div className="container py-4 space-y-2">
             <LocalizedLink href="/request-service">
