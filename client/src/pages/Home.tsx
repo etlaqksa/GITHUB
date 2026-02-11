@@ -267,7 +267,7 @@ export default function Home() {
         />
 
 
-        <div className="container mx-auto px-4 py-10 md:py-16 relative z-20">
+        <div className="w-full px-4 py-10 md:py-16 relative z-20">
           <div className="max-w-3xl space-y-6 text-white">
             <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/30 backdrop-blur px-3 py-1 text-sm text-white/85">
               <span className="font-semibold text-white">
@@ -322,7 +322,7 @@ export default function Home() {
 
       {/* QUICK PATHS */}
       <section className="py-12 md:py-16">
-        <div className="container mx-auto px-4">
+        <div className="w-full px-4">
           <div className="max-w-3xl mx-auto text-center space-y-3">
             <h2 className="text-2xl md:text-4xl font-bold">
               {language === 'ar' ? 'اختر حالتك — وخذ خطوة واضحة' : 'Pick your case — get a clear next step'}
@@ -362,7 +362,7 @@ export default function Home() {
 
       {/* SERVICES */}
       <section id="services" className="py-12 md:py-16 bg-muted/20">
-        <div className="container mx-auto px-4">
+        <div className="w-full px-4">
           <div className="max-w-3xl mx-auto text-center space-y-3">
             <h2 className="text-2xl md:text-4xl font-bold">{language === 'ar' ? 'خدماتنا الأساسية' : 'Core services'}</h2>
             <p className="text-muted-foreground">
@@ -423,7 +423,7 @@ export default function Home() {
 
       {/* APPROACH + VALUE */}
       <section className="py-12 md:py-16">
-        <div className="container mx-auto px-4">
+        <div className="w-full px-4">
           <div className="grid lg:grid-cols-2 gap-8 items-start">
             <div className="space-y-4">
               <h2 className="text-2xl md:text-4xl font-bold">{language === 'ar' ? 'منهجية عمل تقلل المخاطر' : 'A method that reduces risk'}</h2>
@@ -492,7 +492,7 @@ export default function Home() {
       <ClientLogosWall />
 
 <section className="py-12 md:py-16 bg-muted/20">
-        <div className="container mx-auto px-4">
+        <div className="w-full px-4">
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
             <div className="space-y-2">
               <h2 className="text-2xl md:text-4xl font-bold">
@@ -551,7 +551,7 @@ export default function Home() {
 
       {/* FAQ */}
       <section className="py-12 md:py-16 bg-muted/20">
-        <div className="container mx-auto px-4">
+        <div className="w-full px-4">
           <div className="max-w-3xl mx-auto text-center space-y-3">
             <h2 className="text-2xl md:text-4xl font-bold">{language === 'ar' ? 'أسئلة شائعة' : 'FAQ'}</h2>
             <p className="text-muted-foreground">
@@ -580,7 +580,7 @@ export default function Home() {
 
       {/* FINAL CTA */}
       <section className="py-12 md:py-16">
-        <div className="container mx-auto px-4">
+        <div className="w-full px-4">
           <div className="rounded-3xl border bg-card p-8 md:p-12">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div className="space-y-3">

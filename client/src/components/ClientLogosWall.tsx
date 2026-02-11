@@ -26,7 +26,7 @@ export default function ClientLogosWall({
 
   return (
     <section className={titleVariant === 'home' ? 'py-10 md:py-14' : 'py-8 md:py-12'}>
-      <div className="mx-auto max-w-6xl px-4">
+      <div className="w-full px-4">
         <div className="mb-6 md:mb-8">
           <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">{title}</h2>
           <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground md:text-base">
