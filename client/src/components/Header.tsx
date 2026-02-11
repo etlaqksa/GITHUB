@@ -105,20 +105,20 @@ export default function Header() {
                   <div className="flex-1 overflow-x-auto [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
                     <div className="flex items-center gap-1 whitespace-nowrap px-1">
                       {navigation.map((item) => {
-                        const active = location.pathname === item.href;
-                        return (
-                          <Link
-                            key={item.href}
-                            to={item.href}
-                            className={cn(
-                              'rounded-full px-3 py-2 text-sm font-medium transition-colors',
-                              active
-                                ? 'bg-primary text-primary-foreground'
-                                : 'text-foreground/80 hover:bg-muted hover:text-foreground'
-                            )}
-                          >
+                        const active = location === item.href;
+                        const cls = `rounded-full px-3 py-2 text-sm font-medium transition-colors ${
+                          active
+                            ? 'bg-primary text-primary-foreground'
+                            : 'text-foreground/80 hover:bg-muted hover:text-foreground'
+                        }`;
+                        return item.external ? (
+                          <a key={item.href} href={item.href} target="_blank" rel="noopener noreferrer" className={cls}>
                             {item.name}
-                          </Link>
+                          </a>
+                        ) : (
+                          <LocalizedLink key={item.href} href={item.href} className={cls}>
+                            {item.name}
+                          </LocalizedLink>
                         );
                       })}
                     </div>
