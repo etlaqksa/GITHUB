@@ -3,7 +3,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { mapPathToLang } from '@/lib/mapPathToLang';
 import { useTheme, ColorTheme } from '@/contexts/ThemeContext';
 import { Menu, X, Palette } from 'lucide-react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useLocation } from 'wouter';
 import LocalizedLink from '@/components/LocalizedLink';
 export default function Header() {
@@ -11,6 +11,7 @@ export default function Header() {
   const { colorTheme, setColorTheme } = useTheme();
   const [location, setLocation] = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [forceCompactHeader, setForceCompactHeader] = useState(false);
   const [themeMenuOpen, setThemeMenuOpen] = useState(false);
 
   const handleThemeChange = (theme: ColorTheme) => {
@@ -40,6 +41,34 @@ export default function Header() {
     setLanguage(next);
     window.location.assign(`${targetPath}${search}${hash}`);
   };
+  // Force "mobile header" on touch devices even if the browser is in "Desktop site" mode
+  // This prevents header items from being clipped/hidden due to desktop breakpoints on narrow screens.
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const mq = window.matchMedia?.('(pointer: coarse)');
+    const compute = () => {
+      const isTouch = mq ? mq.matches : false;
+      const isNarrow = window.innerWidth < 1100; // desktop-mode phones often report ~980px
+      setForceCompactHeader(isTouch && isNarrow);
+    };
+
+    compute();
+
+    window.addEventListener('resize', compute);
+    if (mq?.addEventListener) mq.addEventListener('change', compute);
+    // Safari fallback
+    // @ts-ignore
+    else if (mq?.addListener) mq.addListener(compute);
+
+    return () => {
+      window.removeEventListener('resize', compute);
+      if (mq?.removeEventListener) mq.removeEventListener('change', compute);
+      // @ts-ignore
+      else if (mq?.removeListener) mq.removeListener(compute);
+    };
+  }, []);
+
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -58,7 +87,7 @@ export default function Header() {
         </LocalizedLink>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-1 rtl:space-x-reverse">
+        <div className={forceCompactHeader ? "hidden" : "hidden md:flex items-center space-x-1 rtl:space-x-reverse"}>
           {navigation.map((item) =>
             item.external ? (
               <a key={item.href} href={item.href} target="_blank" rel="noopener noreferrer" className="inline-flex">
@@ -85,7 +114,7 @@ export default function Header() {
         {/* Primary CTA + Theme & Language Switcher & Mobile Menu Button */}
         <div className="flex items-center gap-1 sm:gap-2 relative shrink-0">
           {/* Request Service CTA (desktop) */}
-          <div className="hidden md:block">
+          <div className={forceCompactHeader ? "hidden" : "hidden md:block"}>
             <LocalizedLink href="/request-service">
               <Button className="gap-2 font-bold shadow-hover-soft">
                 {t('nav.request')}
@@ -175,7 +204,7 @@ export default function Header() {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden"
+            className={forceCompactHeader ? "" : "md:hidden"}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -185,7 +214,7 @@ export default function Header() {
 
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-t bg-background">
+        <div className={`${forceCompactHeader ? "" : "md:hidden"} border-t bg-background`}>
           <div className="container py-4 space-y-2">
             <LocalizedLink href="/request-service">
               <Button className="w-full justify-start text-base font-bold" onClick={() => setMobileMenuOpen(false)}>
