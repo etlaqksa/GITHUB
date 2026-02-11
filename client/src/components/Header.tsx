@@ -2,8 +2,8 @@ import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { mapPathToLang } from '@/lib/mapPathToLang';
 import { useTheme, ColorTheme } from '@/contexts/ThemeContext';
-import { Menu, X, Palette, ChevronLeft, ChevronRight } from 'lucide-react';
-import { useEffect, useRef, useState } from 'react';
+import { Menu, X, Palette } from 'lucide-react';
+import { useEffect, useState } from 'react';
 import { useLocation } from 'wouter';
 import LocalizedLink from '@/components/LocalizedLink';
 export default function Header() {
@@ -15,11 +15,6 @@ export default function Header() {
   const [themeMenuOpen, setThemeMenuOpen] = useState(false);
 
   // Horizontal-scroll nav helpers (used when "Desktop site" is enabled on mobile).
-  const navScrollRef = useRef<HTMLDivElement | null>(null);
-  const [navHasOverflow, setNavHasOverflow] = useState(false);
-  const [navCanScrollLeft, setNavCanScrollLeft] = useState(false);
-  const [navCanScrollRight, setNavCanScrollRight] = useState(false);
-  const [navUserScrolled, setNavUserScrolled] = useState(false);
 
   const handleThemeChange = (theme: ColorTheme) => {
     console.log(`Changing theme to: ${theme}`);
@@ -76,46 +71,6 @@ export default function Header() {
     };
   }, []);
 
-  // Track whether the nav row can scroll left/right in compact (desktop-mode-on-mobile) header.
-  useEffect(() => {
-    const el = navScrollRef.current;
-    if (!forceCompactHeader || !el) return;
-
-    const update = () => {
-      const max = el.scrollWidth - el.clientWidth;
-      const hasOverflow = max > 4;
-      setNavHasOverflow(hasOverflow);
-      // Keep setters aligned with declared state to avoid runtime ReferenceError.
-      setNavCanScrollLeft(hasOverflow && el.scrollLeft > 2);
-      setNavCanScrollRight(hasOverflow && el.scrollLeft < max - 2);
-    };
-
-    update();
-    const onScroll = () => {
-      setNavUserScrolled(true);
-      update();
-    };
-
-    el.addEventListener('scroll', onScroll, { passive: true });
-    window.addEventListener('resize', update);
-
-    return () => {
-      el.removeEventListener('scroll', onScroll);
-      window.removeEventListener('resize', update);
-    };
-  }, [forceCompactHeader, language]);
-
-  const scrollNavBy = (dir: 'left' | 'right') => {
-    const el = navScrollRef.current;
-    if (!el) return;
-    const step = 240;
-    const isRTL = language === 'ar';
-    const delta = dir === 'left' ? -step : step;
-    // In RTL, we invert so the arrows feel natural.
-    el.scrollBy({ left: isRTL ? -delta : delta, behavior: 'smooth' });
-  };
-
-
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <nav className="container flex h-20 items-center justify-between gap-2 min-w-0">
@@ -145,88 +100,42 @@ export default function Header() {
           aria-label={language === 'ar' ? 'التنقل الرئيسي' : 'Main navigation'}
         >
           {forceCompactHeader ? (
-            <>
-              <div
-                ref={navScrollRef}
-                className="flex w-full items-center gap-1 whitespace-nowrap overflow-x-auto scroll-smooth [-webkit-overflow-scrolling:touch] px-10"
-              >
-                {navigation.map((item) =>
-                  item.external ? (
-                    <a key={item.href} href={item.href} target="_blank" rel="noopener noreferrer" className="inline-flex">
-                      <Button
-                        variant={location === item.href ? "default" : "ghost"}
-                        className={
-                          location === item.href
-                            ? "bg-primary text-primary-foreground shadow"
-                            : "hover:bg-primary/10"
-                        }
-                        size="sm"
-                      >
-                        {item.label}
-                      </Button>
-                    </a>
-                  ) : (
-                    <LocalizedLink key={item.href} href={item.href}>
-                      <Button
-                        variant={location === item.href ? "default" : "ghost"}
-                        className={
-                          location === item.href
-                            ? "bg-primary text-primary-foreground shadow"
-                            : "hover:bg-primary/10"
-                        }
-                        size="sm"
-                      >
-                        {item.label}
-                      </Button>
-                    </LocalizedLink>
-                  )
-                )}
-              </div>
+              <nav className="flex-1 min-w-0">
+                <div className="flex items-center gap-1">
+                  <div className="flex-1 overflow-x-auto [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+                    <div className="flex items-center gap-1 whitespace-nowrap px-1">
+                      {navigation.map((item) => {
+                        const active = location.pathname === item.href;
+                        return (
+                          <Link
+                            key={item.href}
+                            to={item.href}
+                            className={cn(
+                              'rounded-full px-3 py-2 text-sm font-medium transition-colors',
+                              active
+                                ? 'bg-primary text-primary-foreground'
+                                : 'text-foreground/80 hover:bg-muted hover:text-foreground'
+                            )}
+                          >
+                            {item.name}
+                          </Link>
+                        );
+                      })}
+                    </div>
+                  </div>
 
-              {/* Scroll affordance + arrows */}
-              {navHasOverflow && (
-                <>
-                  {/* Hint pill (shown until the user scrolls once) */}
-                  {!navUserScrolled && (
-                    <button
-                      type="button"
-                      onClick={() => scrollNavBy(language === 'ar' ? 'left' : 'right')}
-                      className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 rounded-full border bg-background/90 backdrop-blur px-3 py-1 text-xs font-medium shadow-sm hover:bg-background"
-                    >
-                      {language === 'ar' ? '⇆ اسحب للتنقل' : '↔ Scroll nav'}
-                    </button>
-                  )}
-
-                  {/* Left */}
                   <button
                     type="button"
-                    aria-label={language === 'ar' ? 'تمرير لليسار' : 'Scroll left'}
-                    onClick={() => scrollNavBy('left')}
-                    className={
-                      "absolute left-1 top-1/2 -translate-y-1/2 h-9 w-9 rounded-full border bg-background/90 backdrop-blur shadow-sm transition-opacity hover:bg-background " +
-                      (navCanScrollLeft || (!navUserScrolled && language === 'ar') ? "opacity-100" : "opacity-0 pointer-events-none")
-                    }
+                    aria-label="Menu"
+                    onClick={() => setMobileMenuOpen(true)}
+                    className="shrink-0 inline-flex items-center justify-center rounded-full border border-border bg-background/80 px-3 py-2 text-sm hover:bg-muted"
                   >
-                    <ChevronLeft className="h-4 w-4 mx-auto" />
+                    <Menu className="h-4 w-4" />
                   </button>
-
-                  {/* Right */}
-                  <button
-                    type="button"
-                    aria-label={language === 'ar' ? 'تمرير لليمين' : 'Scroll right'}
-                    onClick={() => scrollNavBy('right')}
-                    className={
-                      "absolute right-1 top-1/2 -translate-y-1/2 h-9 w-9 rounded-full border bg-background/90 backdrop-blur shadow-sm transition-opacity hover:bg-background " +
-                      (navCanScrollRight || (!navUserScrolled && language !== 'ar') ? "opacity-100" : "opacity-0 pointer-events-none")
-                    }
-                  >
-                    <ChevronRight className="h-4 w-4 mx-auto" />
-                  </button>
-                </>
-              )}
-            </>
-          ) : (
-            <div className="flex items-center space-x-1 rtl:space-x-reverse">
+                </div>
+              </nav>
+            ) : (
+              <div className="flex items-center space-x-1 rtl:space-x-reverse">
               {navigation.map((item) =>
               item.external ? (
                 <a key={item.href} href={item.href} target="_blank" rel="noopener noreferrer" className="inline-flex">
