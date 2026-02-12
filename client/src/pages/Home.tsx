@@ -279,7 +279,11 @@ export default function Home() {
   // - Normal: full collage
   // - Mobile "Desktop site" mode: use a wider/shorter crop to avoid visible gaps.
   const collageBgUrl = isDesktopModeMobile ? '/hero/home-collage-desktop-mobile.webp' : '/hero/home-collage.webp';
-  // Note: user requested NO dark overlay on the collage background.
+  // Keep overlay subtle: enough contrast for white typography without making the collage look too dark.
+  // (User feedback: previous overlay was too strong.)
+  const collageOverlayGradient = isDesktopModeMobile
+    ? 'from-black/30 via-black/10 to-black/35'
+    : 'from-black/35 via-black/12 to-black/38';
 
   return (
     <>
@@ -312,8 +316,11 @@ export default function Home() {
           style={{ backgroundImage: `url(${collageBgUrl})` }}
           aria-hidden="true"
         />
-
-
+        <div
+          className={`absolute inset-0 z-10 bg-gradient-to-b ${collageOverlayGradient}`}
+          aria-hidden="true"
+        />
+        
 
         <div
           className={
@@ -322,7 +329,7 @@ export default function Home() {
           }
         >
           <div className="max-w-3xl space-y-6 text-white">
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/18 backdrop-blur px-3 py-1 text-sm text-white/85">
+            <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/30 backdrop-blur px-3 py-1 text-sm text-white/85">
               <span className="font-semibold text-white">
                 {language === 'ar' ? 'حلول هندسية ميدانية' : 'Field engineering solutions'}
               </span>
@@ -366,7 +373,7 @@ export default function Home() {
               </a>
             </div>
 
-            <div className="rounded-2xl border border-white/20 bg-black/18 backdrop-blur p-5">
+            <div className="rounded-2xl border border-white/20 bg-black/25 backdrop-blur p-5">
               <TrustStats compact variant="inverse" />
             </div>
           </div>
