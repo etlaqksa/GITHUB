@@ -13,6 +13,7 @@ import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import LocalizedLink from '@/components/LocalizedLink';
 import { absUrl } from '@/lib/siteUrl';
+import { getArticleImageName } from '@/data/articleImageMap';
 import { buildLocalBusinessSchema } from '@/lib/companyProfile';
 import { buildBreadcrumbList } from '@/lib/schemaHelpers';
 import RelatedLinksHub from '@/components/RelatedLinksHub';
@@ -168,10 +169,12 @@ export default function BlogPost() {
     setLocation(`/blog/${canonicalSlug}`, { replace: true } as any);
   }, [article, params?.slug, canonicalSlug, setLocation]);
 
+  const imageName = useMemo(() => (article?.slug ? getArticleImageName(article.slug) : ''), [article?.slug]);
+
   const ogImage = useMemo(() => {
-    const candidate = article?.slug ? `/article-images/hero/${language}/${article.slug}.webp` : '/og-image.webp';
+    const candidate = imageName ? `/article-images/hero/${language}/${imageName}.webp` : '/og-image.webp';
     return absUrl(candidate);
-  }, [article?.slug, language]);
+  }, [imageName, language]);
 
   const relatedSignals = useMemo(() => {
     if (!article) return [title, description, contentRaw.slice(0, 200)].filter(Boolean) as string[];
@@ -193,9 +196,9 @@ export default function BlogPost() {
     return (language === 'ar' ? (article.faqAr || []) : (article.faqEn || [])) as { question: string; answer: string }[];
   }, [article, language]);
 
-const schema = useMemo(() => {
+		const schema = useMemo(() => {
     if (!article) return undefined;
-    const image = absUrl(`/article-images/hero/${language}/${article.slug}.webp`);
+		    const image = absUrl(`/article-images/hero/${language}/${imageName || article.slug}.webp`);
     const graph: any[] = [];
 
     // Organization (minimal, consistent)
@@ -309,17 +312,13 @@ const schema = useMemo(() => {
   }, [language, prevArticle, nextArticle]);
 
   // IMPORTANT:
-  // The route param (params.slug) can be a language-specific URL slug (e.g. derived from title)
-  // and may NOT match the stable internal article.slug used to generate images.
-  // Use article.slug (when available) so every post gets its correct hero/card image.
-  const heroPrimary = article?.slug ? `/article-images/hero/${language}/${article.slug}.webp` : '/og-image.webp';
-  const heroSecondary = article?.slug ? `/article-images/card/${language}/${article.slug}.webp` : '/og-image.webp';
+  // The route param (params.slug) can be a language-specific URL slug (derived from the title)
+  // and may NOT match the stable internal article.slug used across the site.
+  // Always use the internal article.slug (mapped when needed) for image filenames.
+  const imageNameForArticle = article?.slug ? getArticleImageName(article.slug) : '';
+  const heroPrimary = imageNameForArticle ? `/article-images/hero/${language}/${imageNameForArticle}.webp` : '/og-image.webp';
+  const heroSecondary = imageNameForArticle ? `/article-images/card/${language}/${imageNameForArticle}.webp` : '/og-image.webp';
 
-  function getFeaturedImageFallback(a: ArticleContent) {
-    return '/og-image.webp';
-  }
-
-  const fallbackHero = article ? getFeaturedImageFallback(article) : '/og-image.webp';
   const [heroSrc, setHeroSrc] = useState<string>(heroPrimary);
 
   useEffect(() => {
@@ -327,10 +326,8 @@ const schema = useMemo(() => {
   }, [heroPrimary]);
 
   const handleHeroError = () => {
-    // try secondary size if hero missing, then curated fallback
+    // Try the secondary size if the primary hero is missing. No global fallback.
     if (heroSrc === heroPrimary) return setHeroSrc(heroSecondary);
-    if (heroSrc === heroSecondary) return setHeroSrc(fallbackHero);
-    return setHeroSrc('/og-image.webp');
   };
 
 

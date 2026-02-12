@@ -12,6 +12,7 @@ import LocalizedLink from '@/components/LocalizedLink';
 import { SEO } from '@/components/SEO';
 import { absUrl } from '@/lib/siteUrl';
 import { getArticleUrlSlug } from '@/lib/articleUrl';
+import { getArticleImageName } from '@/data/articleImageMap';
 
 function stripMarkdown(md: string) {
   return md
@@ -65,15 +66,14 @@ function ArticleCard({
     : (article.excerptEn ?? (stripMarkdown(stripArabic(article.contentEn || '')).slice(0, 220) + (stripMarkdown(stripArabic(article.contentEn || '')).length > 220 ? '…' : '')));
 
   const cats = getCategories(article, language);
-  const fallbackUrl = getFeaturedImageFallback(article);
-  const imgUrl = `/article-images/card/${language}/${article.slug}.webp`;
+  const imgUrl = `/article-images/card/${language}/${getArticleImageName(article.slug)}.webp`;
   const postSlug = getArticleUrlSlug(article, language);
 
   return (
     <Card className="group h-full overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:scale-[1.07]">
       <LocalizedLink href={`/blog/${postSlug}`} className="block relative" aria-label={title}>
           <div className="aspect-[16/9] w-full bg-muted">
-            <img src={imgUrl} alt={title} className="w-full h-full object-cover" loading="lazy" draggable={false} onContextMenu={(e) => e.preventDefault()} onError={(e) => { (e.currentTarget as HTMLImageElement).src = fallbackUrl; }} />
+            <img src={imgUrl} alt={title} className="w-full h-full object-cover" loading="lazy" draggable={false} onContextMenu={(e) => e.preventDefault()} />
           </div>
         
       </LocalizedLink>

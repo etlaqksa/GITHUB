@@ -108,8 +108,6 @@ temp/
 
 # Generated article images
 client/public/article-images/original/
-client/public/article-images/card/
-client/public/article-images/hero/
 
 # allow generated article images (required for Netlify)
 !client/public/article-images/**
