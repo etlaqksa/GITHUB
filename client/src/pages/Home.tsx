@@ -280,9 +280,9 @@ export default function Home() {
   // - Mobile "Desktop site" mode: use a wider/shorter crop to avoid visible gaps.
   const collageBgUrl = isDesktopModeMobile ? '/hero/home-collage-desktop-mobile.webp' : '/hero/home-collage.webp';
   const collageOverlayGradient = isDesktopModeMobile
-    ? 'from-black/45 via-black/20 to-black/55'
-    : 'from-black/55 via-black/30 to-black/60';
-  const collageVeil = isDesktopModeMobile ? 'bg-black/20' : 'bg-black/25';
+    ? 'from-black/25 via-black/10 to-black/30'
+    : 'from-black/30 via-black/12 to-black/35';
+  const collageVeil = isDesktopModeMobile ? 'bg-black/10' : 'bg-black/12';
 
   return (
     <>
@@ -329,7 +329,7 @@ export default function Home() {
           }
         >
           <div className="max-w-3xl space-y-6 text-white">
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/30 backdrop-blur px-3 py-1 text-sm text-white/85">
+            <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/18 backdrop-blur px-3 py-1 text-sm text-white/85">
               <span className="font-semibold text-white">
                 {language === 'ar' ? 'حلول هندسية ميدانية' : 'Field engineering solutions'}
               </span>
@@ -373,7 +373,7 @@ export default function Home() {
               </a>
             </div>
 
-            <div className="rounded-2xl border border-white/20 bg-black/25 backdrop-blur p-5">
+            <div className="rounded-2xl border border-white/20 bg-black/18 backdrop-blur p-5">
               <TrustStats compact variant="inverse" />
             </div>
           </div>
