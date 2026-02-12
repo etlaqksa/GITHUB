@@ -279,11 +279,6 @@ export default function Home() {
   // - Normal: full collage
   // - Mobile "Desktop site" mode: use a wider/shorter crop to avoid visible gaps.
   const collageBgUrl = isDesktopModeMobile ? '/hero/home-collage-desktop-mobile.webp' : '/hero/home-collage.webp';
-  // Keep overlay subtle: enough contrast for white typography without making the collage look too dark.
-  // (User feedback: previous overlay was too strong.)
-  const collageOverlayGradient = isDesktopModeMobile
-    ? 'from-black/30 via-black/10 to-black/35'
-    : 'from-black/35 via-black/12 to-black/38';
 
   return (
     <>
@@ -316,13 +311,7 @@ export default function Home() {
           style={{ backgroundImage: `url(${collageBgUrl})` }}
           aria-hidden="true"
         />
-        <div
-          className={`absolute inset-0 z-10 bg-gradient-to-b ${collageOverlayGradient}`}
-          aria-hidden="true"
-        />
-        
-
-        <div
+<div
           className={
             'w-full px-4 relative z-20 ' +
             (isCoarsePointer ? 'py-8' : 'py-10 md:py-16')
