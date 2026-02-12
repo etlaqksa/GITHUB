@@ -311,7 +311,21 @@ export default function Home() {
           style={{ backgroundImage: `url(${collageBgUrl})` }}
           aria-hidden="true"
         />
-<div
+
+        {/* Subtle contrast layer so hero text stays readable without a heavy overlay */}
+        <div
+          className={
+            'absolute inset-0 z-10 pointer-events-none bg-gradient-to-b ' +
+            (isDesktopModeMobile
+              ? 'from-black/22 via-black/8 to-black/22'
+              : isCoarsePointer
+                ? 'from-black/18 via-black/6 to-black/18'
+                : 'from-black/14 via-black/5 to-black/14')
+          }
+          aria-hidden="true"
+        />
+
+        <div
           className={
             'w-full px-4 relative z-20 ' +
             (isCoarsePointer ? 'py-8' : 'py-10 md:py-16')
