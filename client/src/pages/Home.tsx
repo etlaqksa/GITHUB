@@ -40,20 +40,32 @@ export default function Home() {
   // but the device is still a phone (coarse pointer). Use this signal to prevent the
   // collage hero from becoming too tall on mobile.
   const [isCoarsePointer, setIsCoarsePointer] = useState(false);
+  // "Desktop site" mode on mobile browsers: wide viewport, but still coarse pointer.
+  // We use a slightly different collage crop to avoid visible gaps in the collage background.
+  const [isDesktopModeMobile, setIsDesktopModeMobile] = useState(false);
   useEffect(() => {
     if (typeof window === 'undefined' || !window.matchMedia) return;
     const mq = window.matchMedia('(pointer: coarse)');
+    const mqDesktopMode = window.matchMedia('(pointer: coarse) and (min-width: 768px)');
+
     const onChange = () => setIsCoarsePointer(!!mq.matches);
+    const onChangeDesktopMode = () => setIsDesktopModeMobile(!!mqDesktopMode.matches);
+
     onChange();
+    onChangeDesktopMode();
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (mq as any).addEventListener?.('change', onChange);
+    (mqDesktopMode as any).addEventListener?.('change', onChangeDesktopMode);
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (mq as any).addListener?.(onChange);
+    (mqDesktopMode as any).addListener?.(onChangeDesktopMode);
     return () => {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       (mq as any).removeEventListener?.('change', onChange);
+      (mqDesktopMode as any).removeEventListener?.('change', onChangeDesktopMode);
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       (mq as any).removeListener?.(onChange);
+      (mqDesktopMode as any).removeListener?.(onChangeDesktopMode);
     };
   }, []);
 
@@ -263,6 +275,15 @@ export default function Home() {
     },
   ];
 
+  // Collage background selection:
+  // - Normal: full collage
+  // - Mobile "Desktop site" mode: use a wider/shorter crop to avoid visible gaps.
+  const collageBgUrl = isDesktopModeMobile ? '/hero/home-collage-desktop-mobile.webp' : '/hero/home-collage.webp';
+  const collageOverlayGradient = isDesktopModeMobile
+    ? 'from-black/45 via-black/20 to-black/55'
+    : 'from-black/55 via-black/30 to-black/60';
+  const collageVeil = isDesktopModeMobile ? 'bg-black/20' : 'bg-black/25';
+
   return (
     <>
       <SEO
@@ -279,9 +300,11 @@ export default function Home() {
       <section
         className={
           `relative overflow-hidden ` +
-          (isCoarsePointer
-            ? 'min-h-[58vh] max-h-[680px]'
-            : 'min-h-[72vh] md:min-h-[78vh] max-h-[900px]')
+          (isDesktopModeMobile
+            ? 'min-h-[52vh] max-h-[560px]'
+            : isCoarsePointer
+              ? 'min-h-[58vh] max-h-[680px]'
+              : 'min-h-[72vh] md:min-h-[78vh] max-h-[900px]')
         }
       >
         <div
@@ -289,13 +312,14 @@ export default function Home() {
             'absolute inset-0 z-0 bg-center bg-cover bg-no-repeat bg-scroll ' +
             (isCoarsePointer ? '' : 'md:bg-fixed')
           }
-          style={{ backgroundImage: "url('/hero/home-collage.webp')" }}
+          style={{ backgroundImage: `url(${collageBgUrl})` }}
           aria-hidden="true"
         />
         <div
-          className="absolute inset-0 z-10 bg-gradient-to-b from-black/70 via-black/45 to-black/75"
+          className={`absolute inset-0 z-10 bg-gradient-to-b ${collageOverlayGradient}`}
           aria-hidden="true"
         />
+        <div className={`absolute inset-0 z-10 ${collageVeil}`} aria-hidden="true" />
 
 
         <div
