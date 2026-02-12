@@ -312,15 +312,15 @@ export default function Home() {
           aria-hidden="true"
         />
 
-        {/* Subtle contrast layer so hero text stays readable without a heavy overlay */}
+        {/* Contrast layer so hero text stays readable */}
         <div
           className={
             'absolute inset-0 z-10 pointer-events-none bg-gradient-to-b ' +
             (isDesktopModeMobile
-              ? 'from-black/22 via-black/8 to-black/22'
+              ? 'from-black/42 via-black/22 to-black/42'
               : isCoarsePointer
-                ? 'from-black/18 via-black/6 to-black/18'
-                : 'from-black/14 via-black/5 to-black/14')
+                ? 'from-black/34 via-black/18 to-black/34'
+                : 'from-black/28 via-black/16 to-black/28')
           }
           aria-hidden="true"
         />
@@ -332,7 +332,7 @@ export default function Home() {
           }
         >
           <div className="max-w-3xl space-y-6 text-white">
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/30 backdrop-blur px-3 py-1 text-sm text-white/85">
+            <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/55 px-3 py-1 text-sm text-white/85">
               <span className="font-semibold text-white">
                 {language === 'ar' ? 'حلول هندسية ميدانية' : 'Field engineering solutions'}
               </span>
@@ -376,7 +376,7 @@ export default function Home() {
               </a>
             </div>
 
-            <div className="rounded-2xl border border-white/20 bg-black/25 backdrop-blur p-5">
+            <div className="rounded-2xl border border-white/20 bg-black/55 p-5">
               <TrustStats compact variant="inverse" />
             </div>
           </div>
