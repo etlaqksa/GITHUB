@@ -169,7 +169,10 @@ export default function BlogPost() {
   }, [article, params?.slug, canonicalSlug, setLocation]);
 
   const ogImage = useMemo(() => {
-    const candidate = article?.slug ? `/article-images/hero/${language}/${article.slug}.webp` : '/og-image.webp';
+    // Use the article-defined image when available; otherwise fall back to the
+    // global OG image. We avoid per-article generated OG images in the static build
+    // to prevent broken/mismatched assets.
+    const candidate = article?.image?.url || '/og-image.webp';
     return absUrl(candidate);
   }, [article?.slug, language]);
 
@@ -195,7 +198,7 @@ export default function BlogPost() {
 
 const schema = useMemo(() => {
     if (!article) return undefined;
-    const image = absUrl(`/article-images/hero/${language}/${article.slug}.webp`);
+    const image = absUrl(article.image?.url || '/og-image.webp');
     const graph: any[] = [];
 
     // Organization (minimal, consistent)
