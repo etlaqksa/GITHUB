@@ -54,5 +54,6 @@ export const IMAGE_BASENAME_BY_SLUG: Record<string, string> = {
 };
 
 export function getArticleImageName(slug: string): string {
-  return (ARTICLE_IMAGE_NAME_BY_SLUG as Record<string, string>)[slug] ?? slug;
+  // Prefer the mapped base-name; fallback to the slug itself.
+  return IMAGE_BASENAME_BY_SLUG[slug] ?? slug;
 }
