@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 
 import LocalizedLink from '@/components/LocalizedLink';
 import { SEO } from '@/components/SEO';
@@ -35,6 +35,27 @@ import {
 
 export default function Home() {
   const { language } = useLanguage();
+
+  // "Desktop mode" on mobile browsers can report a wide viewport (so md/lg styles apply),
+  // but the device is still a phone (coarse pointer). Use this signal to prevent the
+  // collage hero from becoming too tall on mobile.
+  const [isCoarsePointer, setIsCoarsePointer] = useState(false);
+  useEffect(() => {
+    if (typeof window === 'undefined' || !window.matchMedia) return;
+    const mq = window.matchMedia('(pointer: coarse)');
+    const onChange = () => setIsCoarsePointer(!!mq.matches);
+    onChange();
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    (mq as any).addEventListener?.('change', onChange);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    (mq as any).addListener?.(onChange);
+    return () => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (mq as any).removeEventListener?.('change', onChange);
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (mq as any).removeListener?.(onChange);
+    };
+  }, []);
 
   const services = [
     {
@@ -255,9 +276,19 @@ export default function Home() {
       />
 
       {/* HERO */}
-      <section className="relative overflow-hidden min-h-[72vh]">
+      <section
+        className={
+          `relative overflow-hidden ` +
+          (isCoarsePointer
+            ? 'min-h-[58vh] max-h-[680px]'
+            : 'min-h-[72vh] md:min-h-[78vh] max-h-[900px]')
+        }
+      >
         <div
-          className="absolute inset-0 z-0 bg-center bg-cover bg-no-repeat bg-scroll md:bg-fixed"
+          className={
+            'absolute inset-0 z-0 bg-center bg-cover bg-no-repeat bg-scroll ' +
+            (isCoarsePointer ? '' : 'md:bg-fixed')
+          }
           style={{ backgroundImage: "url('/hero/home-collage.webp')" }}
           aria-hidden="true"
         />
@@ -267,7 +298,12 @@ export default function Home() {
         />
 
 
-        <div className="w-full px-4 py-10 md:py-16 relative z-20">
+        <div
+          className={
+            'w-full px-4 relative z-20 ' +
+            (isCoarsePointer ? 'py-8' : 'py-10 md:py-16')
+          }
+        >
           <div className="max-w-3xl space-y-6 text-white">
             <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/30 backdrop-blur px-3 py-1 text-sm text-white/85">
               <span className="font-semibold text-white">
