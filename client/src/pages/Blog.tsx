@@ -66,9 +66,7 @@ function ArticleCard({
 
   const cats = getCategories(article, language);
   const fallbackUrl = getFeaturedImageFallback(article);
-  // Use the article image when available. We intentionally avoid per-article
-  // generated OG/card images on the static build to keep the site stable.
-  const imgUrl = article.image?.url || '/og-image.webp';
+  const imgUrl = `/article-images/card/${language}/${article.slug}.webp`;
   const postSlug = getArticleUrlSlug(article, language);
 
   return (
