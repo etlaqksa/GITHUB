@@ -389,14 +389,14 @@ export default function Home() {
               {language === 'ar' ? (
                 <span className="whitespace-nowrap">
                   <span className="font-bold text-white drop-shadow-[0_3px_12px_rgba(0,0,0,0.8)]">
-                    حلول هندسية ميدانية
+                    حلول هندسية
                   </span>
                   {' • حقن تربة • كشف تكهفات • حلول جيوفيزيائية'}
                 </span>
               ) : (
                 <span className="whitespace-nowrap">
                   <span className="font-bold text-white drop-shadow-[0_3px_12px_rgba(0,0,0,0.8)]">
-                    Field engineering solutions
+                    Engineering solutions
                   </span>
                   {' • Soil Grouting • Cavity Detection • Geophysical Solutions'}
                 </span>
@@ -427,13 +427,13 @@ export default function Home() {
                 : 'Soil Grouting • Cavity Detection • Geophysical Solutions'}
             </div>
 
-            <p className="text-base md:text-lg text-white/95 font-medium leading-relaxed drop-shadow-[0_8px_26px_rgba(0,0,0,0.9)]">
+            <p className="text-base md:text-lg text-white/95 font-medium leading-relaxed text-justify drop-shadow-[0_8px_26px_rgba(0,0,0,0.9)]">
               {language === 'ar'
                 ? 'في شركة إطلاق المتميزة نوفّر حلولًا لمعالجة الهبوطات والتشققات والتكهفات في الرياض وجميع مدن المملكة، عبر تثبيت الأساسات بحقن التربة، وكشف التكهفات بالتخريم (Cavity Probing) أو الحلول الجيوفيزيائية، ثم معالجة وملء التكهفات بالحقن الأسمنتي.'
                 : 'At ETLAQ Distinguished Company, we provide solutions to address settlement, cracks, and cavities across Riyadh and all cities of the Kingdom—by stabilizing foundations with soil grouting, detecting cavities via Cavity Probing or geophysical solutions, then treating and filling cavities with cement grouting.'}
             </p>
 
-            <p className="text-base md:text-lg text-white/95 font-medium leading-relaxed drop-shadow-[0_8px_26px_rgba(0,0,0,0.9)]">
+            <p className="text-base md:text-lg text-white/95 font-medium leading-relaxed text-justify drop-shadow-[0_8px_26px_rgba(0,0,0,0.9)]">
               {language === 'ar' ? (
                 <span className="font-semibold">
                   نركّز على الحل المبكر لأنه يحقق:{' '}
@@ -456,30 +456,10 @@ export default function Home() {
             </p>
 
             <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3">
-              <LocalizedLink href="/request-service">
+<a href="#services" className="w-full sm:w-auto">
                 <Button
                   size="lg"
-                  className="w-full sm:w-auto bg-orange-600 hover:bg-orange-700 text-white font-semibold shadow-[0_12px_32px_rgba(0,0,0,0.35)]"
-                  onClick={() => trackEvent('home_hero_request_click', { language })}
-                >
-                  {language === 'ar' ? 'اطلب تقييم هندسي' : 'Request an assessment'}
-                </Button>
-              </LocalizedLink>
-
-              <LocalizedLink href="/request-service?service=grouting">
-                <Button
-                  size="lg"
-                  className="w-full sm:w-auto bg-white/90 hover:bg-white text-black font-semibold shadow-[0_12px_32px_rgba(0,0,0,0.35)]"
-                  onClick={() => trackEvent('home_hero_request_service_click', { language })}
-                >
-                  {language === 'ar' ? 'إطلب خدمة' : 'Request a service'}
-                </Button>
-              </LocalizedLink>
-
-              <a href="#services" className="w-full sm:w-auto">
-                <Button
-                  size="lg"
-                  className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-semibold shadow-[0_12px_32px_rgba(0,0,0,0.35)]"
+                  className="w-full sm:w-auto bg-secondary hover:bg-secondary/80 text-secondary-foreground font-semibold shadow-[0_12px_32px_rgba(0,0,0,0.35)]"
                   onClick={() => trackEvent('home_hero_explore_services', { language })}
                 >
                   {language === 'ar' ? 'استعرض الخدمات' : 'Explore services'}
