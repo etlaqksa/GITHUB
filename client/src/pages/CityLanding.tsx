@@ -25,7 +25,7 @@ export default function CityLanding({ params }: Props) {
   const title =
     language === 'ar'
       ? `خدمات حقن التربة وكشف التكهفات في ${cityName} | شركة إطلاق المتميزة`
-      : `Soil Grouting & Void Detection in ${cityName} | Etlaq`;
+      : `Soil Grouting & Cavity Detection in ${cityName} | Etlaq`;
 
   const description =
     language === 'ar'

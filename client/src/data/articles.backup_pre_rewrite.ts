@@ -21122,7 +21122,7 @@ Because k and E_s are not spatial constants. Any model must accept heterogeneity
   {
     id: 71,
     title: 'دليل كشف الفراغات: برنامج تقصي يوازن المخاطر والتكلفة والدقة',
-    titleEn: 'Void Detection Guide: A Risk‑Balanced Investigation Program',
+    titleEn: 'Cavity Detection Guide: A Risk‑Balanced Investigation Program',
     category: 'كشف التكهفات',
     categoryEn: 'Cavity Detection',
     categoriesAr: ['كشف التكهفات', 'الهندسة الجيوتقنية', 'موسوعة حقن التربة'],
@@ -21140,7 +21140,7 @@ Because k and E_s are not spatial constants. Any model must accept heterogeneity
       license: 'Internal',
     },
     excerpt: '# دليل كشف الفراغات: برنامج تقصي يوازن المخاطر والتكلفة والدقة هذا المدخل يشرح **دليل كشف الفراغات: برنامج تقصي يوازن المخاطر والتكلفة والدقة** بمنظور يعتمد على *النموذج المفاهيمي* وقراءة البيانات، وليس على الوصفات الجاهزة. ## لماذا هذا الموضوع محوري؟ في بيئة…',
-    excerptEn: '# Void Detection Guide: A Risk‑Balanced Investigation Program This article builds a mental map for **Void Detection Guide: A Risk‑Balanced Investigation Program**: governing variables, how they translate to behavior, and how they become a treatment choice. ## Why this matters…',
+    excerptEn: '# Cavity Detection Guide: A Risk‑Balanced Investigation Program This article builds a mental map for **Cavity Detection Guide: A Risk‑Balanced Investigation Program**: governing variables, how they translate to behavior, and how they become a treatment choice. ## Why this matters…',
     content: `# دليل كشف الفراغات: برنامج تقصي يوازن المخاطر والتكلفة والدقة
 
 هذا المدخل يشرح **دليل كشف الفراغات: برنامج تقصي يوازن المخاطر والتكلفة والدقة** بمنظور يعتمد على *النموذج المفاهيمي* وقراءة البيانات، وليس على الوصفات الجاهزة.
@@ -21272,12 +21272,12 @@ GPR قد يكون ممتازًا في طبقات جافة وقريبة من ال
 - ما حد عدم اليقين المقبول؟
 - ما أقل تدخل يحقق أكبر خفض للمخاطر؟
 `,
-    contentEn: `# Void Detection Guide: A Risk‑Balanced Investigation Program
+    contentEn: `# Cavity Detection Guide: A Risk‑Balanced Investigation Program
 
-This article builds a mental map for **Void Detection Guide: A Risk‑Balanced Investigation Program**: governing variables, how they translate to behavior, and how they become a treatment choice.
+This article builds a mental map for **Cavity Detection Guide: A Risk‑Balanced Investigation Program**: governing variables, how they translate to behavior, and how they become a treatment choice.
 
 ## Why this matters
-In grouting and ground improvement, decisions are often made under **limited data** and strong spatial variability. The goal here is to turn Void Detection Guide: A Risk‑Balanced Investigation Program into a measurable, defensible decision—not a catchy headline.
+In grouting and ground improvement, decisions are often made under **limited data** and strong spatial variability. The goal here is to turn Cavity Detection Guide: A Risk‑Balanced Investigation Program into a measurable, defensible decision—not a catchy headline.
 
 ## Engineering quick takeaways
 - The goal is not “more volume,” but **changing a specific property** in a specific medium.

@@ -134,11 +134,11 @@ export default function ServiceCavity() {
   return (
     <>
       <SEO
-        title={language === 'ar' ? 'كشف التكهفات | شركة إطلاق المتميزة' : 'Cavity & Void Detection | Etlaq'}
+        title={language === 'ar' ? 'كشف التكهفات | شركة إطلاق المتميزة' : 'Cavity Detection | Etlaq'}
         description={
           language === 'ar'
             ? 'كشف التكهفات باستخدام تقنيات جيوفيزيائية مثل GPR وERT لتقييم المخاطر ووضع توصيات علاجية.'
-            : 'Cavity and void detection using geophysical methods (GPR, ERT) to assess risk and recommend remediation.'
+            : 'Cavity detection using geophysical methods (GPR, ERT) to assess risk and recommend remediation.'
         }
         url="https://etlaqksa.com/services/cavity"
       />

@@ -343,16 +343,16 @@ export default function Home() {
             <h1 className="text-3xl md:text-5xl font-extrabold leading-[1.08] tracking-tight text-white drop-shadow-[0_10px_34px_rgba(0,0,0,0.92)]">
               {language === 'ar' ? (
                 <>
-                  نحن نقوّي أساساتك ...
+                  نحن نقوّي أساساتك
                   <span className="mt-2 block text-base md:text-xl font-semibold text-white/95">
                     شركة إطلاق المتميزة (حقن تربة - كشف تكهفات - حلول جيوفيزيائية)
                   </span>
                 </>
               ) : (
                 <>
-                  We Strengthen Your Foundations
-                  <span className="mt-2 block text-base md:text-xl font-semibold text-white/95">
-                    ETLAQ Distinguished Company (Soil Grouting - Void Detection - Geophysical Solutions)
+                  <span className="whitespace-nowrap">We Strengthen Your Foundations</span>
+                  <span className="mt-2 block text-base md:text-xl font-semibold text-white/95 whitespace-nowrap">
+                    ETLAQ Distinguished Company (Soil Grouting - Cavity Detection - Geophysical Solutions)
                   </span>
                 </>
               )}
@@ -361,13 +361,13 @@ export default function Home() {
             <div className="text-sm md:text-base font-semibold text-white/95 drop-shadow-[0_8px_24px_rgba(0,0,0,0.9)]">
               {language === 'ar'
                 ? 'حقن تربة • كشف تكهفات • حلول جيوفيزيائية (GPR / ERT / MASW)'
-                : 'Soil Grouting • Void Detection • Geophysical Solutions (GPR / ERT / MASW)'}
+                : 'Soil Grouting • Cavity Detection • Geophysical Solutions (GPR / ERT / MASW)'}
             </div>
 
             <p className="text-base md:text-lg text-white/95 font-medium leading-relaxed drop-shadow-[0_8px_26px_rgba(0,0,0,0.9)]">
               {language === 'ar'
-                ? 'في شركة إطلاق المتميزة نوفّر حلولًا ميدانية دقيقة لحماية المباني والبنية التحتية والأراضي في الرياض وجميع مدن المملكة العربية السعودية، عبر تثبيت الأساسات من خلال حقن التربة لمعالجة الهبوطات والتشققات، وكشف التكهفات عبر التخريم (Probing) أو الحلول الجيوفيزيائية المتقدمة (GPR / ERT / MASW)، ثم معالجة وملء التكهفات بالحقن الأسمنتي وفق خطة واضحة ومخرجات مفهومة.'
-                : 'At ETLAQ Distinguished Company, we deliver precise, field-proven solutions to protect buildings, infrastructure, and land across Riyadh and all cities in the Kingdom of Saudi Arabia. We stabilize foundations through soil grouting to address settlement and cracking, detect voids and cavities using probing or advanced geophysical methods (GPR / ERT / MASW), and then treat and fill cavities with cement grouting—following a clear plan with easy-to-understand deliverables.'}
+                ? 'في شركة إطلاق المتميزة نوفّر حلولًا ميدانية دقيقة لحماية المباني والبنية التحتية والأراضي في الرياض وجميع مدن المملكة، عبر تثبيت الأساسات من خلال حقن التربة لمعالجة الهبوطات والتشققات، وكشف التكهفات عبر التخريم (Cavity Probing) أو الحلول الجيوفيزيائية المتقدمة (GPR / ERT / MASW)، ثم معالجة وملء التكهفات بالحقن الأسمنتي.'
+                : 'At ETLAQ Distinguished Company, we provide precise on-site solutions to protect buildings, infrastructure, and land across Riyadh and all cities of the Kingdom—by stabilizing foundations through soil grouting to treat settlement and cracks, detecting cavities through Cavity Probing or advanced geophysical solutions (GPR / ERT / MASW), then treating and filling cavities with cement grouting.'}
             </p>
 
             <div className="space-y-2 text-white/95 drop-shadow-[0_8px_26px_rgba(0,0,0,0.9)]">
@@ -376,23 +376,18 @@ export default function Home() {
                   ? 'نركّز على الحل المبكر، لأن علاج المشكلة في بدايتها يعني:'
                   : 'We focus on early intervention, because fixing the problem at the beginning means:'}
               </div>
-              <ul className="list-disc ps-5 space-y-1 font-semibold">
-                {language === 'ar' ? (
-                  <>
-                    <li>تكلفة أقل</li>
-                    <li>وقت أقل</li>
-                    <li>مخاطرة أقل على المبنى</li>
-                    <li>نتائج أكثر استقرارًا على المدى الطويل</li>
-                  </>
-                ) : (
-                  <>
-                    <li>Lower cost</li>
-                    <li>Less time</li>
-                    <li>Lower risk to the structure</li>
-                    <li>More stable long-term results</li>
-                  </>
-                )}
-              </ul>
+              {language === 'ar' ? (
+                <div className="font-semibold whitespace-nowrap">
+                  تكلفة أقل • وقت أقل • مخاطرة أقل على المبنى • نتائج أكثر استقرارًا على المدى الطويل
+                </div>
+              ) : (
+                <ul className="list-disc ps-5 space-y-1 font-semibold">
+                  <li>Lower cost</li>
+                  <li>Less time</li>
+                  <li>Lower risk to the structure</li>
+                  <li>More stable long-term results</li>
+                </ul>
+              )}
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3">

@@ -308,7 +308,7 @@ function buildHtml({
       <div class="meta">
         <span class="mark"><b>${isAr ? 'شركة إطلاق المتميزة' : 'ETLAQ Distinguished Company'}</b></span>
         <span class="sep">•</span>
-        <span>${isAr ? 'Grouting • Void Detection • Geophysics' : 'Grouting • Void Detection • Geophysics'}</span>
+        <span>${isAr ? 'Grouting • Cavity Detection • Geophysics' : 'Grouting • Cavity Detection • Geophysics'}</span>
       </div>
     </div>
     <div class="footer">

@@ -93,7 +93,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Home page
     'home.title': 'شركة إطلاق المتميزة المحدودة',
     'home.subtitle': 'خبراء في حقن التربة ومعالجة التكهفات في السعودية',
-    'home.tagline': 'نحن نقوي أساساتك',
+    'home.tagline': 'نحن نقوّي أساساتك',
     'home.cta': 'احصل على استشارة مجانية',
     'home.experience': 'أكثر من 15 عاماً من الخبرة',
     
@@ -176,8 +176,8 @@ const translations: Record<Language, Record<string, string>> = {
     'services.settlement.desc': 'Diagnosis and treatment of foundation and building settlement using the latest engineering techniques',
     'services.cracks': 'Wall Crack Repair',
     'services.cracks.desc': 'Professional treatment for all types of structural and surface cracks',
-    'services.cavity': 'Cavity and Void Detection',
-    'services.cavity.desc': 'Using the latest geophysical detection techniques to identify underground voids',
+    'services.cavity': 'Cavity Detection',
+    'services.cavity.desc': 'Using advanced geophysical techniques to identify underground cavities and voids',
     'services.geophysical': 'Geophysical Surveys',
     'services.geophysical.desc': 'Geophysical surveys to locate voids/weak zones and support better engineering decisions',
 
