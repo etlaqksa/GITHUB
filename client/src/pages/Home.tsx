@@ -344,9 +344,9 @@ export default function Home() {
         className={
           `relative overflow-hidden ` +
           (isDesktopModeMobile
-            ? 'min-h-[52vh] max-h-[560px]'
+            ? 'min-h-[52vh]'
             : isCoarsePointer
-              ? 'min-h-[58vh] max-h-[680px]'
+              ? 'min-h-[58vh]'
               : 'min-h-[72vh] md:min-h-[78vh] max-h-[900px]')
         }
       >
@@ -375,10 +375,10 @@ export default function Home() {
         <div
           className={
             'w-full px-4 relative z-20 ' +
-            (isCoarsePointer ? 'py-8' : 'py-10 md:py-16')
+            (isCoarsePointer ? 'py-6 sm:py-8' : 'py-10 md:py-16')
           }
         >
-          <div className="max-w-3xl space-y-6 text-white">
+          <div className="max-w-3xl space-y-4 md:space-y-6 text-white">
             <div
               className={
                 language === 'ar'
@@ -500,7 +500,7 @@ export default function Home() {
               </a>
             </div>
 
-            <div className="rounded-2xl border border-white/20 bg-black/55 p-5">
+            <div className="rounded-2xl border border-white/20 bg-black/55 p-4 md:p-5">
               <TrustStats compact variant="inverse" />
             </div>
           </div>
