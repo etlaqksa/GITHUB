@@ -407,24 +407,36 @@ export default function Home() {
               {language === 'ar' ? (
                 <>
                   نحن نقوّي أساساتك
-                  <span className="mt-2 block text-base md:text-xl font-semibold text-white/95">
-                    شركة إطلاق المتميزة ‏<RotatingText items={['حقن تربة', 'كشف تكهفات', 'حلول جيوفيزيائية GPR/ERT/MASW']} intervalMs={2200} className="text-secondary font-extrabold" />‏
-                  </span>
                 </>
               ) : (
                 <>
                   <span className="whitespace-nowrap">We Strengthen Your Foundations</span>
-                  <span className="mt-2 block text-base md:text-xl font-semibold text-white/95 whitespace-nowrap">
-                    ETLAQ Distinguished Company <RotatingText items={['Soil Grouting', 'Cavity Detection', 'Geophysical Solutions GPR/ERT/MASW']} intervalMs={2200} className="text-secondary font-extrabold" />
-                  </span>
                 </>
               )}
             </h1>
 
             <div className="text-sm md:text-base font-semibold text-white/95 drop-shadow-[0_8px_24px_rgba(0,0,0,0.9)]">
-              {language === 'ar'
-                ? 'حقن تربة • كشف تكهفات • حلول جيوفيزيائية'
-                : 'Soil Grouting • Cavity Detection • Geophysical Solutions'}
+              {language === 'ar' ? (
+                <span className="whitespace-nowrap">
+                  <span className="text-white/90">(</span>
+                  <RotatingText
+                    items={['حقن تربة', 'كشف تكهفات', 'جيوفيزياء GPR/ERT/MASW']}
+                    intervalMs={2200}
+                    className="text-secondary font-extrabold"
+                  />
+                  <span className="text-white/90">)</span>
+                </span>
+              ) : (
+                <span className="whitespace-nowrap">
+                  <span className="text-white/90">(</span>
+                  <RotatingText
+                    items={['Soil Grouting', 'Cavity Detection', 'Geophysics GPR/ERT/MASW']}
+                    intervalMs={2200}
+                    className="text-secondary font-extrabold"
+                  />
+                  <span className="text-white/90">)</span>
+                </span>
+              )}
             </div>
 
             <p className="text-base md:text-lg text-white/95 font-medium leading-relaxed text-justify drop-shadow-[0_8px_26px_rgba(0,0,0,0.9)]">
