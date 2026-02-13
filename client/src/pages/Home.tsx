@@ -408,14 +408,14 @@ export default function Home() {
                 <>
                   نحن نقوّي أساساتك
                   <span className="mt-2 block text-base md:text-xl font-semibold text-white/95">
-                    شركة إطلاق المتميزة (‏<RotatingText items={['حقن تربة', 'كشف تكهفات', 'حلول جيوفيزيائية']} intervalMs={2200} className="text-secondary font-extrabold" />‏)
+                    شركة إطلاق المتميزة ‏<RotatingText items={['حقن تربة،', 'كشف تكهفات،', 'حلول جيوفيزيائية (GPR / ERT / MASW)']} intervalMs={2200} className="text-secondary font-extrabold" />‏
                   </span>
                 </>
               ) : (
                 <>
                   <span className="whitespace-nowrap">We Strengthen Your Foundations</span>
                   <span className="mt-2 block text-base md:text-xl font-semibold text-white/95 whitespace-nowrap">
-                    ETLAQ Distinguished Company (<RotatingText items={['Soil Grouting', 'Cavity Detection', 'Geophysical Solutions']} intervalMs={2200} className="text-secondary font-extrabold" />)
+                    ETLAQ Distinguished Company <RotatingText items={['Soil Grouting,', 'Cavity Detection,', 'Geophysical Solutions (GPR / ERT / MASW)']} intervalMs={2200} className="text-secondary font-extrabold" />
                   </span>
                 </>
               )}
@@ -423,35 +423,35 @@ export default function Home() {
 
             <div className="text-sm md:text-base font-semibold text-white/95 drop-shadow-[0_8px_24px_rgba(0,0,0,0.9)]">
               {language === 'ar'
-                ? 'حقن تربة • كشف تكهفات • حلول جيوفيزيائية (GPR / ERT / MASW)'
-                : 'Soil Grouting • Cavity Detection • Geophysical Solutions (GPR / ERT / MASW)'}
+                ? 'حقن تربة • كشف تكهفات • حلول جيوفيزيائية'
+                : 'Soil Grouting • Cavity Detection • Geophysical Solutions'}
             </div>
 
             <p className="text-base md:text-lg text-white/95 font-medium leading-relaxed drop-shadow-[0_8px_26px_rgba(0,0,0,0.9)]">
+              {language === 'ar'
+                ? 'في شركة إطلاق المتميزة نوفّر حلولًا لمعالجة الهبوطات والتشققات والتكهفات في الرياض وجميع مدن المملكة، عبر تثبيت الأساسات بحقن التربة، وكشف التكهفات بالتخريم (Cavity Probing) أو الحلول الجيوفيزيائية، ثم معالجة وملء التكهفات بالحقن الأسمنتي.'
+                : 'At ETLAQ Distinguished Company, we provide solutions to address settlement, cracks, and cavities across Riyadh and all cities of the Kingdom—by stabilizing foundations with soil grouting, detecting cavities via Cavity Probing or geophysical solutions, then treating and filling cavities with cement grouting.'}
+            </p>
+
+            <p className="text-base md:text-lg text-white/95 font-medium leading-relaxed drop-shadow-[0_8px_26px_rgba(0,0,0,0.9)]">
               {language === 'ar' ? (
-                <>
-                  في شركة إطلاق المتميزة نوفّر حلولًا لمعالجة الهبوطات والتشققات والتكهفات في الرياض وجميع مدن المملكة، عبر تثبيت الأساسات بحقن التربة، وكشف التكهفات بالتخريم (Cavity Probing) أو الحلول الجيوفيزيائية (GPR / ERT / MASW)، ثم معالجة وملء التكهفات بالحقن الأسمنتي.{' '}
-                  <span className="font-semibold">
-                    نركّز على الحل المبكر لأنه يحقق:{' '}
-                    <RotatingText
-                      items={['تكلفة أقل', 'وقت أقل', 'مخاطرة أقل', 'نتائج أكثر استقرارًا']}
-                      intervalMs={2000}
-                      className="text-secondary font-extrabold"
-                    />
-                  </span>
-                </>
+                <span className="font-semibold">
+                  نركّز على الحل المبكر لأنه يحقق:{' '}
+                  <RotatingText
+                    items={['تكلفة أقل', 'وقت أقل', 'مخاطرة أقل', 'نتائج أكثر استقرارًا']}
+                    intervalMs={2000}
+                    className="text-secondary font-extrabold"
+                  />
+                </span>
               ) : (
-                <>
-                  At ETLAQ Distinguished Company, we provide solutions to address settlement, cracks, and cavities across Riyadh and all cities of the Kingdom—by stabilizing foundations with soil grouting, detecting cavities via Cavity Probing or geophysical solutions (GPR / ERT / MASW), then treating and filling cavities with cement grouting.{' '}
-                  <span className="font-semibold">
-                    We focus on early intervention because it delivers:{' '}
-                    <RotatingText
-                      items={['Lower cost', 'Less time', 'Lower risk', 'More stable results']}
-                      intervalMs={2000}
-                      className="text-secondary font-extrabold"
-                    />
-                  </span>
-                </>
+                <span className="font-semibold">
+                  We focus on early intervention because it delivers:{' '}
+                  <RotatingText
+                    items={['Lower cost', 'Less time', 'Lower risk', 'More stable results']}
+                    intervalMs={2000}
+                    className="text-secondary font-extrabold"
+                  />
+                </span>
               )}
             </p>
 
