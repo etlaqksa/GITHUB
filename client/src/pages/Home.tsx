@@ -27,6 +27,7 @@ import {
   Drill,
   HardHat,
   MapPin,
+  MessageCircle,
   Radar,
   ShieldCheck,
   Sparkles,
@@ -35,6 +36,19 @@ import {
 
 export default function Home() {
   const { language } = useLanguage();
+
+  const whatsappNumber = '966534145922';
+  const heroWhatsAppUrl = useMemo(() => {
+    const pageUrl = typeof window !== 'undefined' ? window.location.href : absUrl('/');
+    const text =
+      language === 'ar'
+        ? `السلام عليكم، أود طلب خدمة من شركة إطلاق المتميزة.\nرابط الصفحة: ${pageUrl}`
+        : `Hello, I would like to request a service from ETLAQ Distinguished Company.\nPage: ${pageUrl}`;
+
+    const base = `https://wa.me/${whatsappNumber}`;
+    const q = new URLSearchParams({ text });
+    return `${base}?${q.toString()}`;
+  }, [language]);
 
   // "Desktop mode" on mobile browsers can report a wide viewport (so md/lg styles apply),
   // but the device is still a phone (coarse pointer). Use this signal to prevent the
@@ -332,12 +346,28 @@ export default function Home() {
           }
         >
           <div className="max-w-3xl space-y-6 text-white">
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-black/60 px-3 py-1 text-sm text-white/90 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
-              <span className="font-bold text-white drop-shadow-[0_3px_12px_rgba(0,0,0,0.8)]">
-                {language === 'ar' ? 'حلول هندسية ميدانية' : 'Field engineering solutions'}
-              </span>
-              <span>•</span>
-              <span>{language === 'ar' ? 'حقن • كشف • جيوفيزياء' : 'Grouting • Detection • Geophysics'}</span>
+            <div
+              className={
+                language === 'ar'
+                  ? 'flex flex-col items-center gap-1 rounded-full border border-white/25 bg-black/60 px-3 py-1 text-sm text-white/90 shadow-[0_10px_30px_rgba(0,0,0,0.35)]'
+                  : 'inline-flex items-center gap-2 rounded-full border border-white/25 bg-black/60 px-3 py-1 text-sm text-white/90 shadow-[0_10px_30px_rgba(0,0,0,0.35)]'
+              }
+            >
+              {language === 'ar' ? (
+                <span className="whitespace-nowrap">
+                  <span className="font-bold text-white drop-shadow-[0_3px_12px_rgba(0,0,0,0.8)]">
+                    حلول هندسية ميدانية
+                  </span>
+                  {' • حقن تربة • كشف تكهفات • حلول جيوفيزيائية'}
+                </span>
+              ) : (
+                <span className="whitespace-nowrap">
+                  <span className="font-bold text-white drop-shadow-[0_3px_12px_rgba(0,0,0,0.8)]">
+                    Field engineering solutions
+                  </span>
+                  {' • Soil Grouting • Cavity Detection • Geophysical Solutions'}
+                </span>
+              )}
             </div>
 
             <h1 className="text-3xl md:text-5xl font-extrabold leading-[1.08] tracking-tight text-white drop-shadow-[0_10px_34px_rgba(0,0,0,0.92)]">
@@ -366,31 +396,23 @@ export default function Home() {
 
             <p className="text-base md:text-lg text-white/95 font-medium leading-relaxed drop-shadow-[0_8px_26px_rgba(0,0,0,0.9)]">
               {language === 'ar'
-                ? 'في شركة إطلاق المتميزة نوفّر حلولًا ميدانية دقيقة لحماية المباني والبنية التحتية والأراضي في الرياض وجميع مدن المملكة، عبر تثبيت الأساسات من خلال حقن التربة لمعالجة الهبوطات والتشققات، وكشف التكهفات عبر التخريم (Cavity Probing) أو الحلول الجيوفيزيائية المتقدمة (GPR / ERT / MASW)، ثم معالجة وملء التكهفات بالحقن الأسمنتي.'
-                : 'At ETLAQ Distinguished Company, we provide precise on-site solutions to protect buildings, infrastructure, and land across Riyadh and all cities of the Kingdom—by stabilizing foundations through soil grouting to treat settlement and cracks, detecting cavities through Cavity Probing or advanced geophysical solutions (GPR / ERT / MASW), then treating and filling cavities with cement grouting.'}
+                ? 'في شركة إطلاق المتميزة نوفّر حلولًا ميدانية دقيقة لحماية المباني والبنية التحتية والأراضي في الرياض وجميع مدن المملكة، عبر تثبيت الأساسات من خلال حقن التربة لمعالجة الهبوطات والتشققات، وكشف التكهفات عبر التخريم (Cavity Probing) أو الحلول الجيوفيزيائية المتقدمة (GPR / ERT / MASW)، ثم معالجة وملء التكهفات بالحقن الأسمنتي. نركّز على الحل المبكر، لأن علاج المشكلة في بدايتها يعني:'
+                : 'At ETLAQ Distinguished Company, we provide precise on-site solutions to protect buildings, infrastructure, and land across Riyadh and all cities of the Kingdom—by stabilizing foundations through soil grouting to treat settlement and cracks, detecting cavities through Cavity Probing or advanced geophysical solutions (GPR / ERT / MASW), then treating and filling cavities with cement grouting. We focus on early intervention, because fixing the problem at the beginning means:'}
             </p>
 
-            <div className="space-y-2 text-white/95 drop-shadow-[0_8px_26px_rgba(0,0,0,0.9)]">
-              <div className="font-bold">
-                {language === 'ar'
-                  ? 'نركّز على الحل المبكر، لأن علاج المشكلة في بدايتها يعني:'
-                  : 'We focus on early intervention, because fixing the problem at the beginning means:'}
-              </div>
+            <div className="text-white/95 drop-shadow-[0_8px_26px_rgba(0,0,0,0.9)]">
               {language === 'ar' ? (
                 <div className="font-semibold whitespace-nowrap">
                   تكلفة أقل • وقت أقل • مخاطرة أقل على المبنى • نتائج أكثر استقرارًا على المدى الطويل
                 </div>
               ) : (
-                <ul className="list-disc ps-5 space-y-1 font-semibold">
-                  <li>Lower cost</li>
-                  <li>Less time</li>
-                  <li>Lower risk to the structure</li>
-                  <li>More stable long-term results</li>
-                </ul>
+                <div className="font-semibold whitespace-nowrap">
+                  Lower cost • Less time • Lower risk to the structure • More stable long-term results
+                </div>
               )}
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-3">
+            <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3">
               <LocalizedLink href="/request-service">
                 <Button
                   size="lg"
@@ -401,15 +423,40 @@ export default function Home() {
                 </Button>
               </LocalizedLink>
 
+              <LocalizedLink href="/request-service?service=grouting">
+                <Button
+                  size="lg"
+                  className="w-full sm:w-auto bg-white/90 hover:bg-white text-black font-semibold shadow-[0_12px_32px_rgba(0,0,0,0.35)]"
+                  onClick={() => trackEvent('home_hero_request_service_click', { language })}
+                >
+                  {language === 'ar' ? 'إطلب خدمة' : 'Request a service'}
+                </Button>
+              </LocalizedLink>
+
               <a href="#services" className="w-full sm:w-auto">
                 <Button
                   size="lg"
-                  variant="outline"
-                  className="w-full sm:w-auto border-white/60 text-white hover:bg-white/10 font-semibold"
+                  className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-semibold shadow-[0_12px_32px_rgba(0,0,0,0.35)]"
                   onClick={() => trackEvent('home_hero_explore_services', { language })}
                 >
                   {language === 'ar' ? 'استعرض الخدمات' : 'Explore services'}
                   <ArrowLeft className={language === 'ar' ? 'mr-2 h-4 w-4 rotate-180' : 'ml-2 h-4 w-4'} />
+                </Button>
+              </a>
+
+              <a
+                href={heroWhatsAppUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto"
+              >
+                <Button
+                  size="lg"
+                  className="w-full sm:w-auto bg-green-600 hover:bg-green-700 text-white font-semibold shadow-[0_12px_32px_rgba(0,0,0,0.35)] gap-2"
+                  onClick={() => trackEvent('home_hero_whatsapp_click', { language })}
+                >
+                  <MessageCircle className="h-4 w-4" />
+                  {language === 'ar' ? 'تواصل واتساب' : 'WhatsApp'}
                 </Button>
               </a>
             </div>
