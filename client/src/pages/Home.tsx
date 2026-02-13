@@ -312,15 +312,15 @@ export default function Home() {
           aria-hidden="true"
         />
 
-        {/* Contrast layer so hero text stays readable */}
+        {/* Contrast layer so hero text stays readable (no blur) */}
         <div
           className={
             'absolute inset-0 z-10 pointer-events-none bg-gradient-to-b ' +
             (isDesktopModeMobile
-              ? 'from-black/42 via-black/22 to-black/42'
+              ? 'from-black/58 via-black/30 to-black/58'
               : isCoarsePointer
-                ? 'from-black/34 via-black/18 to-black/34'
-                : 'from-black/28 via-black/16 to-black/28')
+                ? 'from-black/48 via-black/26 to-black/48'
+                : 'from-black/42 via-black/22 to-black/42')
           }
           aria-hidden="true"
         />
@@ -332,21 +332,21 @@ export default function Home() {
           }
         >
           <div className="max-w-3xl space-y-6 text-white">
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/55 px-3 py-1 text-sm text-white/85">
-              <span className="font-semibold text-white">
+            <div className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-black/60 px-3 py-1 text-sm text-white/90 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
+              <span className="font-bold text-white drop-shadow-[0_3px_12px_rgba(0,0,0,0.8)]">
                 {language === 'ar' ? 'حلول هندسية ميدانية' : 'Field engineering solutions'}
               </span>
               <span>•</span>
               <span>{language === 'ar' ? 'حقن • كشف • جيوفيزياء' : 'Grouting • Detection • Geophysics'}</span>
             </div>
 
-            <h1 className="text-3xl md:text-5xl font-bold leading-tight text-white">
+            <h1 className="text-3xl md:text-5xl font-extrabold leading-[1.08] tracking-tight text-white drop-shadow-[0_8px_28px_rgba(0,0,0,0.9)]">
               {language === 'ar'
                 ? 'ثبّت الأساسات… واكتشف التكهفات قبل أن تتحول لمشكلة مكلفة'
                 : 'Stabilize foundations & detect voids before they become costly'}
             </h1>
 
-            <p className="text-base md:text-lg text-white/85 leading-relaxed">
+            <p className="text-base md:text-lg text-white/95 font-medium leading-relaxed drop-shadow-[0_6px_20px_rgba(0,0,0,0.85)]">
               {language === 'ar'
                 ? 'نبدأ بتقييم واقعي، ثم نختار المسار الأنسب: كشف/دراسة/حقن — بخطة واضحة وتنفيذ منظم ومخرجات تساعدك على اتخاذ القرار بثقة.'
                 : 'We start with a realistic assessment, then choose the right route: detection/surveys/grouting — with clear planning, structured execution, and decision-ready deliverables.'}
@@ -356,7 +356,7 @@ export default function Home() {
               <LocalizedLink href="/request-service">
                 <Button
                   size="lg"
-                  className="w-full sm:w-auto"
+                  className="w-full sm:w-auto bg-orange-600 hover:bg-orange-700 text-white font-semibold shadow-[0_12px_32px_rgba(0,0,0,0.35)]"
                   onClick={() => trackEvent('home_hero_request_click', { language })}
                 >
                   {language === 'ar' ? 'اطلب تقييم هندسي' : 'Request an assessment'}
@@ -367,7 +367,7 @@ export default function Home() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="w-full sm:w-auto"
+                  className="w-full sm:w-auto border-white/60 text-white hover:bg-white/10 font-semibold"
                   onClick={() => trackEvent('home_hero_explore_services', { language })}
                 >
                   {language === 'ar' ? 'استعرض الخدمات' : 'Explore services'}
