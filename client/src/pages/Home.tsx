@@ -312,15 +312,15 @@ export default function Home() {
           aria-hidden="true"
         />
 
-        {/* Contrast layer so hero text stays readable (no blur) */}
+        {/* Contrast layer so hero text stays readable (no top/bottom bands) */}
         <div
           className={
-            'absolute inset-0 z-10 pointer-events-none bg-gradient-to-b ' +
+            'absolute inset-0 z-10 pointer-events-none ' +
             (isDesktopModeMobile
-              ? 'from-black/58 via-black/30 to-black/58'
+              ? 'bg-black/60'
               : isCoarsePointer
-                ? 'from-black/48 via-black/26 to-black/48'
-                : 'from-black/42 via-black/22 to-black/42')
+                ? 'bg-black/52'
+                : 'bg-black/46')
           }
           aria-hidden="true"
         />
@@ -340,17 +340,60 @@ export default function Home() {
               <span>{language === 'ar' ? 'حقن • كشف • جيوفيزياء' : 'Grouting • Detection • Geophysics'}</span>
             </div>
 
-            <h1 className="text-3xl md:text-5xl font-extrabold leading-[1.08] tracking-tight text-white drop-shadow-[0_8px_28px_rgba(0,0,0,0.9)]">
-              {language === 'ar'
-                ? 'ثبّت الأساسات… واكتشف التكهفات قبل أن تتحول لمشكلة مكلفة'
-                : 'Stabilize foundations & detect voids before they become costly'}
+            <h1 className="text-3xl md:text-5xl font-extrabold leading-[1.08] tracking-tight text-white drop-shadow-[0_10px_34px_rgba(0,0,0,0.92)]">
+              {language === 'ar' ? (
+                <>
+                  نحن نقوّي أساساتك ...
+                  <span className="mt-2 block text-base md:text-xl font-semibold text-white/95">
+                    شركة إطلاق المتميزة (حقن تربة - كشف تكهفات - حلول جيوفيزيائية)
+                  </span>
+                </>
+              ) : (
+                <>
+                  We Strengthen Your Foundations
+                  <span className="mt-2 block text-base md:text-xl font-semibold text-white/95">
+                    ETLAQ Distinguished Company (Soil Grouting - Void Detection - Geophysical Solutions)
+                  </span>
+                </>
+              )}
             </h1>
 
-            <p className="text-base md:text-lg text-white/95 font-medium leading-relaxed drop-shadow-[0_6px_20px_rgba(0,0,0,0.85)]">
+            <div className="text-sm md:text-base font-semibold text-white/95 drop-shadow-[0_8px_24px_rgba(0,0,0,0.9)]">
               {language === 'ar'
-                ? 'نبدأ بتقييم واقعي، ثم نختار المسار الأنسب: كشف/دراسة/حقن — بخطة واضحة وتنفيذ منظم ومخرجات تساعدك على اتخاذ القرار بثقة.'
-                : 'We start with a realistic assessment, then choose the right route: detection/surveys/grouting — with clear planning, structured execution, and decision-ready deliverables.'}
+                ? 'حقن تربة • كشف تكهفات • حلول جيوفيزيائية (GPR / ERT / MASW)'
+                : 'Soil Grouting • Void Detection • Geophysical Solutions (GPR / ERT / MASW)'}
+            </div>
+
+            <p className="text-base md:text-lg text-white/95 font-medium leading-relaxed drop-shadow-[0_8px_26px_rgba(0,0,0,0.9)]">
+              {language === 'ar'
+                ? 'في شركة إطلاق المتميزة نوفّر حلولًا ميدانية دقيقة لحماية المباني والبنية التحتية والأراضي في الرياض وجميع مدن المملكة العربية السعودية، عبر تثبيت الأساسات من خلال حقن التربة لمعالجة الهبوطات والتشققات، وكشف التكهفات عبر التخريم (Probing) أو الحلول الجيوفيزيائية المتقدمة (GPR / ERT / MASW)، ثم معالجة وملء التكهفات بالحقن الأسمنتي وفق خطة واضحة ومخرجات مفهومة.'
+                : 'At ETLAQ Distinguished Company, we deliver precise, field-proven solutions to protect buildings, infrastructure, and land across Riyadh and all cities in the Kingdom of Saudi Arabia. We stabilize foundations through soil grouting to address settlement and cracking, detect voids and cavities using probing or advanced geophysical methods (GPR / ERT / MASW), and then treat and fill cavities with cement grouting—following a clear plan with easy-to-understand deliverables.'}
             </p>
+
+            <div className="space-y-2 text-white/95 drop-shadow-[0_8px_26px_rgba(0,0,0,0.9)]">
+              <div className="font-bold">
+                {language === 'ar'
+                  ? 'نركّز على الحل المبكر، لأن علاج المشكلة في بدايتها يعني:'
+                  : 'We focus on early intervention, because fixing the problem at the beginning means:'}
+              </div>
+              <ul className="list-disc ps-5 space-y-1 font-semibold">
+                {language === 'ar' ? (
+                  <>
+                    <li>تكلفة أقل</li>
+                    <li>وقت أقل</li>
+                    <li>مخاطرة أقل على المبنى</li>
+                    <li>نتائج أكثر استقرارًا على المدى الطويل</li>
+                  </>
+                ) : (
+                  <>
+                    <li>Lower cost</li>
+                    <li>Less time</li>
+                    <li>Lower risk to the structure</li>
+                    <li>More stable long-term results</li>
+                  </>
+                )}
+              </ul>
+            </div>
 
             <div className="flex flex-col sm:flex-row gap-3">
               <LocalizedLink href="/request-service">
