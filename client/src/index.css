@@ -171,6 +171,11 @@ html[data-theme='red'] {
   body {
     @apply bg-background text-foreground;
     font-family: 'Roboto', 'Almarai', sans-serif;
+
+    /* Global typography polish: justified text across the site (AR/EN) */
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
   }
 
   /* App background: subtle, professional color wash (applied on the root wrapper) */
@@ -193,6 +198,11 @@ html[data-theme='red'] {
     font-family: 'Almarai', 'Roboto', sans-serif;
     font-size: 1.05rem;
     line-height: 1.7;
+    text-align-last: right;
+  }
+
+  [dir="ltr"] body {
+    text-align-last: left;
   }
   [dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3, [dir="rtl"] h4, [dir="rtl"] h5, [dir="rtl"] h6 {
     font-family: 'IBM Plex Sans Arabic', 'Montserrat', sans-serif;
