@@ -418,23 +418,27 @@ export default function Home() {
             <div className="text-sm md:text-base font-semibold text-white/95 drop-shadow-[0_8px_24px_rgba(0,0,0,0.9)]">
               {language === 'ar' ? (
                 <span className="whitespace-nowrap">
-                  <span className="text-white/90">(</span>
+                  <span className="font-bold text-white drop-shadow-[0_3px_12px_rgba(0,0,0,0.8)]">
+                    شركة إطلاق المتميزة
+                  </span>
+                  <span className="text-white/70">{' — '}</span>
                   <RotatingText
                     items={['حقن تربة', 'كشف تكهفات', 'جيوفيزياء GPR/ERT/MASW']}
                     intervalMs={2200}
                     className="text-secondary font-extrabold"
                   />
-                  <span className="text-white/90">)</span>
                 </span>
               ) : (
                 <span className="whitespace-nowrap">
-                  <span className="text-white/90">(</span>
+                  <span className="font-bold text-white drop-shadow-[0_3px_12px_rgba(0,0,0,0.8)]">
+                    ETLAQ Distinguished Company
+                  </span>
+                  <span className="text-white/70">{' — '}</span>
                   <RotatingText
                     items={['Soil Grouting', 'Cavity Detection', 'Geophysics GPR/ERT/MASW']}
                     intervalMs={2200}
                     className="text-secondary font-extrabold"
                   />
-                  <span className="text-white/90">)</span>
                 </span>
               )}
             </div>
