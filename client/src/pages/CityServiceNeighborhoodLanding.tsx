@@ -73,7 +73,7 @@ export default function CityServiceNeighborhoodLanding() {
     return buildCityServiceModel({ lang, city, service });
   }, [city, service, lang]);
 
-  const ogImage = useMemo(() => (service ? OgImageForService(service.slug) : absUrl('/og-image.webp')), [service]);
+  const ogImage = useMemo(() => (service ? OgImageForService(service.slug) : absUrl('/favicon.png')), [service]);
 
   const seed = useMemo(() => hashString(`${lang}:${localizedCitySlug}:${localizedServiceSlug}:${localizedHoodSlug}`), [
     lang,

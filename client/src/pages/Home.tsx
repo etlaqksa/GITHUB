@@ -388,7 +388,7 @@ export default function Home() {
                 name: 'شركة إطلاق المتميزة المحدودة',
                 url: absUrl('/ar'),
                 logo: absUrl('/logo.png'),
-                image: absUrl('/og-image.webp'),
+                image: absUrl('/favicon.png'),
                 telephone: '+966534145922',
                 areaServed: { '@type': 'Country', name: 'Saudi Arabia' },
                 serviceType: ['حقن التربة', 'كشف التكهفات', 'حلول جيوفيزيائية'],
@@ -399,13 +399,13 @@ export default function Home() {
                 name: 'ETLAQ Distinguished Company',
                 url: absUrl('/en'),
                 logo: absUrl('/logo.png'),
-                image: absUrl('/og-image.webp'),
+                image: absUrl('/favicon.png'),
                 telephone: '+966534145922',
                 areaServed: { '@type': 'Country', name: 'Saudi Arabia' },
                 serviceType: ['Soil grouting', 'Cavity detection', 'Geophysical surveys'],
               }
         }
-        image={absUrl('/og-image.webp')}
+        image={absUrl('/favicon.png')}
       />
 
       {/* HERO */}

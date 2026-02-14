@@ -3,16 +3,9 @@ import { absUrl } from './siteUrl';
 /**
  * Open Graph image helper.
  *
- * NOTE: This project currently uses a default OG image. If/when you add
- * per-service OG images under `client/public/og/`, update the mapping below.
+ * We use a single universal sharing image for now.
+ * (If you later add dedicated OG images, you can reintroduce a mapping here.)
  */
-const SERVICE_OG_MAP: Record<string, string> = {
-  // City services
-  'soil-grouting': '/og/soil-grouting.webp',
-  'cavity-detection': '/og/cavity-detection.webp',
-  'geophysical-testing': '/og/geophysical-testing.webp',
-};
-
-export function OgImageForService(serviceSlug: string): string {
-  return absUrl(SERVICE_OG_MAP[serviceSlug] ?? '/og-image.webp');
+export function OgImageForService(_serviceSlug: string): string {
+  return absUrl('/favicon.png');
 }

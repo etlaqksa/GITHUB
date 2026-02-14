@@ -173,7 +173,7 @@ export default function BlogPost() {
   const imageName = useMemo(() => (article?.slug ? getArticleImageName(article.slug) : ''), [article?.slug]);
 
   const ogImage = useMemo(() => {
-    const candidate = imageName ? `/article-images/hero/${language}/${imageName}.webp` : '/og-image.webp';
+    const candidate = imageName ? `/article-images/hero/${language}/${imageName}.webp` : '/favicon.png';
     return absUrl(candidate);
   }, [imageName, language]);
 
@@ -317,8 +317,8 @@ export default function BlogPost() {
   // and may NOT match the stable internal article.slug used across the site.
   // Always use the internal article.slug (mapped when needed) for image filenames.
   const imageNameForArticle = article?.slug ? getArticleImageName(article.slug) : '';
-  const heroPrimary = imageNameForArticle ? `/article-images/hero/${language}/${imageNameForArticle}.webp` : '/og-image.webp';
-  const heroSecondary = imageNameForArticle ? `/article-images/card/${language}/${imageNameForArticle}.webp` : '/og-image.webp';
+  const heroPrimary = imageNameForArticle ? `/article-images/hero/${language}/${imageNameForArticle}.webp` : '/favicon.png';
+  const heroSecondary = imageNameForArticle ? `/article-images/card/${language}/${imageNameForArticle}.webp` : '/favicon.png';
 
   const [heroSrc, setHeroSrc] = useState<string>(heroPrimary);
 
@@ -562,7 +562,7 @@ export default function BlogPost() {
                 },
                 // We intentionally suppress inline images inside article markdown.
                 // Old embedded images were removed from the repo to keep size small,
-                // and we don't want a global fallback (og-image.webp) to show repeatedly.
+                // and we don't want a global fallback (favicon.png) to show repeatedly.
                 img: () => null,
                 // Prevent swipe on scrollable blocks
                 pre: ({ children, ...props }) => (

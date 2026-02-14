@@ -254,7 +254,7 @@ export default function Services() {
             ? 'خدمات حقن التربة، كشف التكهفات، والدراسات الجيوفيزيائية في المملكة. منهجية واضحة، تنفيذ مرحلي، ومخرجات تساعد على اتخاذ القرار بثقة.'
             : 'Soil grouting, cavity detection, and geophysical surveys across KSA. Clear methodology, phased execution, and deliverables that support confident decisions.'
         }
-        image={absUrl('/og-image.webp')}
+        image={absUrl('/favicon.png')}
         url={canonical}
         schema={schema}
       />

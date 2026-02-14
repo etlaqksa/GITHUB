@@ -69,7 +69,7 @@ function OgImageForService(serviceSlug?: string) {
   if (slug.includes('void-detection')) return absUrl('/og-void-detection.webp');
   if (slug.includes('geophysical-surveys')) return absUrl('/og-geophysical-surveys.webp');
   if (slug.includes('foundation-strengthening')) return absUrl('/og-foundation-strengthening.webp');
-  return absUrl('/og-image.webp');
+  return absUrl('/favicon.png');
 }
 
 function ModelLanding(props: {
