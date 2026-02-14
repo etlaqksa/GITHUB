@@ -380,6 +380,31 @@ export default function Home() {
             ? 'حلول حقن التربة وكشف التكهفات والدراسات الجيوفيزيائية. خبرة ميدانية ومخرجات واضحة تساعد على اتخاذ القرار بثقة. نخدم جميع مناطق المملكة.'
             : 'Soil grouting, cavity/void detection, and geophysical surveys. Field-proven execution and clear deliverables to help you decide with confidence across KSA.'
         }
+        schema={
+          language === 'ar'
+            ? {
+                '@context': 'https://schema.org',
+                '@type': 'ProfessionalService',
+                name: 'شركة إطلاق المتميزة المحدودة',
+                url: absUrl('/ar'),
+                logo: absUrl('/logo.png'),
+                image: absUrl('/og-image.webp'),
+                telephone: '+966534145922',
+                areaServed: { '@type': 'Country', name: 'Saudi Arabia' },
+                serviceType: ['حقن التربة', 'كشف التكهفات', 'حلول جيوفيزيائية'],
+              }
+            : {
+                '@context': 'https://schema.org',
+                '@type': 'ProfessionalService',
+                name: 'ETLAQ Distinguished Company',
+                url: absUrl('/en'),
+                logo: absUrl('/logo.png'),
+                image: absUrl('/og-image.webp'),
+                telephone: '+966534145922',
+                areaServed: { '@type': 'Country', name: 'Saudi Arabia' },
+                serviceType: ['Soil grouting', 'Cavity detection', 'Geophysical surveys'],
+              }
+        }
         image={absUrl('/og-image.webp')}
       />
 
