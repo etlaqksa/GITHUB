@@ -950,3 +950,7 @@ img {
     padding-bottom: max(env(safe-area-inset-bottom), 5rem);
   }
 }
+
+
+/* Prevent layout shift when the scrollbar appears/disappears (reduces CLS) */
+html { scrollbar-gutter: stable; }

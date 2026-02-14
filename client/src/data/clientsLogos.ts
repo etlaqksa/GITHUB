@@ -7,17 +7,17 @@ export type ClientLogo = {
 
 export const clientLogos: ClientLogo[] = [
   { name: { ar: "أرامكو السعودية", en: "Saudi Aramco" }, fileName: "saudi-aramco.webp" },
-  { name: { ar: "الشركة العربية للمختبرات والتربة", en: "Arab Lab & Soil" }, fileName: "arab-lab-and-soil.png" },
-  { name: { ar: "العبيكان القابضة", en: "Obeikan Holding" }, fileName: "obeikan-holding.jpg" },
-  { name: { ar: "شركة اتحاد البواني", en: "Ittihad Al-Bawani Company" }, fileName: "ittihad-al-bawani-company.png" },
-  { name: { ar: "شركة التربة والأساسات المحدودة - سفكو", en: "SAFCO - Soil & Foundation Company" }, fileName: "safco-soil-and-foundation-company.png" },
-  { name: { ar: "شركة العسيس للمقاولات", en: "Al-Asees Contracting" }, fileName: "al-asees-contracting.png" },
+  { name: { ar: "الشركة العربية للمختبرات والتربة", en: "Arab Lab & Soil" }, fileName: "arab-lab-and-soil.webp" },
+  { name: { ar: "العبيكان القابضة", en: "Obeikan Holding" }, fileName: "obeikan-holding.webp" },
+  { name: { ar: "شركة اتحاد البواني", en: "Ittihad Al-Bawani Company" }, fileName: "ittihad-al-bawani-company.webp" },
+  { name: { ar: "شركة التربة والأساسات المحدودة - سفكو", en: "SAFCO - Soil & Foundation Company" }, fileName: "safco-soil-and-foundation-company.webp" },
+  { name: { ar: "شركة العسيس للمقاولات", en: "Al-Asees Contracting" }, fileName: "al-asees-contracting.webp" },
   { name: { ar: "شركة دار وإعمار للاستثمار والتطوير العقاري", en: "Dar & Emaar Investment & Real Estate Development" }, fileName: "dar-and-emaar-investment-and-real-estate-development.svg" },
-  { name: { ar: "شركة ركين العقارية", en: "Rakeen Real Estate Company" }, fileName: "rakeen-real-estate-company.png" },
-  { name: { ar: "شركة فاست", en: "FAST Company" }, fileName: "fast-company.jpg" },
-  { name: { ar: "شركة فرسينيه", en: "Freyssinet Company" }, fileName: "freyssinet-company.jpg" },
+  { name: { ar: "شركة ركين العقارية", en: "Rakeen Real Estate Company" }, fileName: "rakeen-real-estate-company.webp" },
+  { name: { ar: "شركة فاست", en: "FAST Company" }, fileName: "fast-company.webp" },
+  { name: { ar: "شركة فرسينيه", en: "Freyssinet Company" }, fileName: "freyssinet-company.webp" },
   { name: { ar: "شركة يوكسال إنشاءات السعودية", en: "Yuksel Construction Saudi Arabia" }, fileName: "yuksel-construction-saudi-arabia.svg" },
-  { name: { ar: "مصنع الري للعصائر والألبان", en: "Al-Raie Juice & Dairy Factory" }, fileName: "al-raie-juice-and-dairy-factory.png" },
+  { name: { ar: "مصنع الري للعصائر والألبان", en: "Al-Raie Juice & Dairy Factory" }, fileName: "al-raie-juice-and-dairy-factory.webp" },
 ];
 
 // Return a logo entry for a client name (AR). Supports composite client strings separated by '/'.

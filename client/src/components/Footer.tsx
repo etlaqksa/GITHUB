@@ -31,6 +31,9 @@ export default function Footer() {
             <img 
               src="/logo.png?v=2" 
               alt="شركة إطلاق المتميزة" 
+              
+              width="624"
+              height="312"
               className="h-16 w-auto object-contain brightness-0 invert"
               loading="lazy"
               decoding="async"

@@ -91,6 +91,9 @@ export default function Header() {
             <img 
               src="/logo.png?v=2" 
               alt="شركة إطلاق المتميزة" 
+              
+              width="624"
+              height="312"
               className="h-10 sm:h-12 w-auto object-contain hover-brightness"
               loading="eager"
               decoding="async"

@@ -73,7 +73,7 @@ export default function Home() {
   // Hero collage parallax (mobile-friendly). We animate the collage background with scroll
   // using transforms (instead of CSS background-attachment: fixed, which is unreliable on mobile).
   const heroRef = useRef<HTMLElement | null>(null);
-  const collageRef = useRef<HTMLDivElement | null>(null);
+  const collageRef = useRef<HTMLImageElement | null>(null);
 
   const whatsappNumber = '966534145922';
   const heroWhatsAppUrl = useMemo(() => {
@@ -330,7 +330,11 @@ export default function Home() {
   // Collage background selection:
   // - Normal: full collage
   // - Mobile "Desktop site" mode: use a wider/shorter crop to avoid visible gaps.
-  const collageBgUrl = isDesktopModeMobile ? '/hero/home-collage-desktop-mobile.webp' : '/hero/home-collage.webp';
+  const collageBgUrl = isDesktopModeMobile ? '/hero/home-collage-desktop-mobile-1280.webp' : '/hero/home-collage-1280.webp';
+const collageSrcSet = isDesktopModeMobile
+  ? '/hero/home-collage-desktop-mobile-1280.webp 1280w, /hero/home-collage-desktop-mobile.webp 1920w'
+  : '/hero/home-collage-960.webp 960w, /hero/home-collage-1280.webp 1280w, /hero/home-collage.webp 1920w';
+
 
   useEffect(() => {
     const heroEl = heroRef.current;
@@ -420,15 +424,19 @@ export default function Home() {
               : 'min-h-[72vh] md:min-h-[78vh] max-h-[900px]')
         }
       >
-        <div
-          ref={collageRef}
-          className={
-            // Oversize the background a bit to avoid any visible edges while translating.
-            'absolute -inset-10 md:-inset-16 z-0 bg-center bg-cover bg-no-repeat'
-          }
-          style={{ backgroundImage: `url(${collageBgUrl})`, willChange: 'transform' }}
-          aria-hidden="true"
-        />
+        <img
+  ref={collageRef}
+  src={collageBgUrl}
+  srcSet={collageSrcSet}
+  sizes="100vw"
+  fetchPriority="high"
+  loading="eager"
+  decoding="async"
+  className="absolute inset-0 z-0 h-full w-full object-cover object-center"
+  style={{ willChange: 'transform', transform: 'translate3d(0, 0, 0) scale(1.08)' }}
+  alt=""
+  aria-hidden="true"
+/>
 
         {/* Contrast layer so hero text stays readable (no top/bottom bands) */}
         <div

@@ -57,7 +57,7 @@ export function Counter({ end, suffix = '', duration = 2000 }: CounterProps) {
   }, [isVisible, end, duration]);
 
   return (
-    <div ref={counterRef} className="text-4xl md:text-5xl font-bold">
+    <div ref={counterRef} className="text-4xl md:text-5xl font-bold tabular-nums min-w-[6ch] text-center leading-none">
       {count}{suffix}
     </div>
   );

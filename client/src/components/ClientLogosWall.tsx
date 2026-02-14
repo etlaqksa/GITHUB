@@ -47,13 +47,17 @@ export default function ClientLogosWall({
                   aria-label={label}
                   title={label}
                 >
-                  <img
-                    src={logoSrc(logo.fileName)}
-                    alt={label}
-                    loading="lazy"
-                    decoding="async"
-                    className="max-h-12 w-auto max-w-full opacity-90 transition duration-200 group-hover:opacity-100"
-                  />
+                  <div className="h-12 w-[160px] sm:w-[180px] flex items-center justify-center">
+  <img
+    src={logoSrc(logo.fileName)}
+    alt={label}
+    width={180}
+    height={48}
+    loading="lazy"
+    decoding="async"
+    className="h-full w-full object-contain opacity-90 transition duration-200 group-hover:opacity-100"
+  />
+</div>
                   <span className="sr-only">{label}</span>
                 </LocalizedLink>
               );
