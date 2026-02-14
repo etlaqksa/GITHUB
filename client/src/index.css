@@ -904,3 +904,33 @@ img {
 .tabs a:hover {
     transform: scale(1.1); /* Slight hover effect for better interaction */
 }
+
+/* --- Surgical Fix Animations (Tailwind v4-safe) --- */
+/* Define keyframes outside layers for maximum compatibility */
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Utility classes */
+@layer utilities {
+  .animate-shimmer {
+    animation: shimmer 1.5s infinite;
+  }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 0.3s ease-out both;
+  }
+}
