@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 
 import LocalizedLink from '@/components/LocalizedLink';
 import { SEO } from '@/components/SEO';
@@ -69,6 +69,11 @@ function RotatingText({ items, intervalMs = 2400, className = '' }: RotatingText
 
 export default function Home() {
   const { language } = useLanguage();
+
+  // Hero collage parallax (mobile-friendly). We animate the collage background with scroll
+  // using transforms (instead of CSS background-attachment: fixed, which is unreliable on mobile).
+  const heroRef = useRef<HTMLElement | null>(null);
+  const collageRef = useRef<HTMLDivElement | null>(null);
 
   const whatsappNumber = '966534145922';
   const heroWhatsAppUrl = useMemo(() => {
@@ -327,6 +332,45 @@ export default function Home() {
   // - Mobile "Desktop site" mode: use a wider/shorter crop to avoid visible gaps.
   const collageBgUrl = isDesktopModeMobile ? '/hero/home-collage-desktop-mobile.webp' : '/hero/home-collage.webp';
 
+  useEffect(() => {
+    const heroEl = heroRef.current;
+    const bgEl = collageRef.current;
+    if (!heroEl || !bgEl) return;
+    if (typeof window === 'undefined') return;
+
+    let raf = 0;
+
+    const update = () => {
+      raf = 0;
+      const rect = heroEl.getBoundingClientRect();
+      const vh = window.innerHeight || 1;
+      // Progress from 0..1 as the hero moves through the viewport.
+      const total = vh + rect.height;
+      const progress = Math.min(1, Math.max(0, (vh - rect.top) / total));
+
+      // Keep motion subtle to avoid distracting the user.
+      const isMobile = window.matchMedia?.('(max-width: 768px)')?.matches ?? false;
+      const amplitude = isMobile ? 34 : 56; // px
+      const translateY = (progress - 0.5) * amplitude;
+
+      bgEl.style.transform = `translate3d(0, ${translateY}px, 0) scale(1.08)`;
+    };
+
+    const onScroll = () => {
+      if (raf) return;
+      raf = window.requestAnimationFrame(update);
+    };
+
+    update();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    return () => {
+      window.removeEventListener('scroll', onScroll as unknown as EventListener);
+      window.removeEventListener('resize', onScroll as unknown as EventListener);
+      if (raf) window.cancelAnimationFrame(raf);
+    };
+  }, [collageBgUrl]);
+
   return (
     <>
       <SEO
@@ -341,6 +385,7 @@ export default function Home() {
 
       {/* HERO */}
       <section
+        ref={heroRef}
         className={
           `relative overflow-hidden ` +
           (isDesktopModeMobile
@@ -351,11 +396,12 @@ export default function Home() {
         }
       >
         <div
+          ref={collageRef}
           className={
-            'absolute inset-0 z-0 bg-center bg-cover bg-no-repeat bg-scroll ' +
-            (isCoarsePointer ? '' : 'md:bg-fixed')
+            // Oversize the background a bit to avoid any visible edges while translating.
+            'absolute -inset-10 md:-inset-16 z-0 bg-center bg-cover bg-no-repeat'
           }
-          style={{ backgroundImage: `url(${collageBgUrl})` }}
+          style={{ backgroundImage: `url(${collageBgUrl})`, willChange: 'transform' }}
           aria-hidden="true"
         />
 
