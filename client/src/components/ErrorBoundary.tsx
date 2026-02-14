@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import { AlertTriangle, RotateCcw } from "lucide-react";
 import { Component, ReactNode } from "react";
+import { attemptSelfHealReload } from "@/utils/autoReload";
 
 interface Props {
   children: ReactNode;
@@ -19,6 +20,16 @@ class ErrorBoundary extends Component<Props, State> {
 
   static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error) {
+    // Always log in production for debugging via browser console.
+    // eslint-disable-next-line no-console
+    console.error("[Etlaq ErrorBoundary]", error);
+
+    // If this is a deployment chunk error, try to self-heal immediately.
+    // If throttled, the in-app banner will guide the user.
+    attemptSelfHealReload(error);
   }
 
   render() {
@@ -54,7 +65,12 @@ class ErrorBoundary extends Component<Props, State> {
             )}
 
             <button
-              onClick={() => window.location.reload()}
+              onClick={() => {
+                // Prefer the same cache-busting reload used by our self-heal handler.
+                if (!attemptSelfHealReload(this.state.error ?? undefined)) {
+                  window.location.reload();
+                }
+              }}
               className={cn(
                 "flex items-center gap-2 px-4 py-2 rounded-lg",
                 "bg-primary text-primary-foreground",

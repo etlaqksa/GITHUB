@@ -1,6 +1,7 @@
 import { RefreshCcw, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { attemptSelfHealReload } from "@/utils/autoReload";
 
 /**
  * Shows a small banner when the app detects a missing chunk after a deployment
@@ -40,7 +41,11 @@ export default function UpdateAvailableBanner() {
 
             <div className="mt-3 flex items-center gap-2">
               <button
-                onClick={() => window.location.reload()}
+                onClick={() => {
+                  if (!attemptSelfHealReload("manual-refresh")) {
+                    window.location.reload();
+                  }
+                }}
                 className="inline-flex items-center gap-2 rounded-xl bg-primary px-3 py-2 text-primary-foreground text-sm font-semibold hover:opacity-90"
                 aria-label={isAr ? "تحديث الصفحة" : "Refresh page"}
               >
