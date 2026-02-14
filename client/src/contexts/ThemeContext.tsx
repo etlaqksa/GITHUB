@@ -14,13 +14,21 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [mode, setMode] = useState<Mode>(() => {
-    const stored = localStorage.getItem("theme-mode");
-    return (stored as Mode) || "light";
+    try {
+      const stored = localStorage.getItem("theme-mode");
+      return (stored as Mode) || "light";
+    } catch {
+      return "light";
+    }
   });
 
   const [colorTheme, setColorThemeState] = useState<ColorTheme>(() => {
-    const stored = localStorage.getItem("color-theme");
-    return (stored as ColorTheme) || "blue";
+    try {
+      const stored = localStorage.getItem("color-theme");
+      return (stored as ColorTheme) || "blue";
+    } catch {
+      return "blue";
+    }
   });
 
   useEffect(() => {
@@ -32,12 +40,20 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     } else {
       html.classList.remove("dark");
     }
-    localStorage.setItem("theme-mode", mode);
+    try {
+      localStorage.setItem("theme-mode", mode);
+    } catch {
+      // ignore
+    }
 
     // Handle Color Theme - Apply to HTML element specifically
     console.log(`Applying theme attribute: data-theme="${colorTheme}"`);
     html.setAttribute("data-theme", colorTheme);
-    localStorage.setItem("color-theme", colorTheme);
+    try {
+      localStorage.setItem("color-theme", colorTheme);
+    } catch {
+      // ignore
+    }
     
     // Force a small style recalculation if needed
     html.style.display = 'none';

@@ -92,8 +92,13 @@ export function attemptSelfHealReload(reason?: unknown): boolean {
   }
 
   sessionStorage.setItem(STORAGE_KEY, String(now));
-  void clearClientCachesBestEffort();
-  navigateWithCacheBust();
+
+  // IMPORTANT: wait a moment for Service Worker unregister + CacheStorage cleanup.
+  // If we navigate immediately, the same stale SW cache can serve the broken assets again.
+  const timeout = new Promise<void>((resolve) => setTimeout(resolve, 800));
+  Promise.race([clearClientCachesBestEffort(), timeout]).finally(() => {
+    navigateWithCacheBust();
+  });
   return true;
 }
 

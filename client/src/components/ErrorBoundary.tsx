@@ -36,7 +36,10 @@ class ErrorBoundary extends Component<Props, State> {
     if (this.state.hasError) {
       const lang = (globalThis as any).lang === 'en' ? 'en' : 'ar';
       const isAr = lang === 'ar';
-      const showDetails = !import.meta.env.PROD;
+      // Show debug details in dev, or in production if the URL includes ?debug=1
+      const showDetails =
+        !import.meta.env.PROD ||
+        (typeof window !== 'undefined' && new URLSearchParams(window.location.search).get('debug') === '1');
 
       return (
         <div className="flex items-center justify-center min-h-screen p-8 bg-background">
@@ -59,8 +62,21 @@ class ErrorBoundary extends Component<Props, State> {
             {showDetails && (
               <div className="p-4 w-full rounded bg-muted overflow-auto mb-6 text-left">
                 <pre className="text-sm text-muted-foreground whitespace-break-spaces">
+                  {this.state.error?.message}
+                  {"\n\n"}
                   {this.state.error?.stack}
                 </pre>
+
+                <div className="mt-4 space-y-1 text-[11px] text-muted-foreground">
+                  <div><span className="font-semibold">URL:</span> {typeof window !== 'undefined' ? window.location.href : ''}</div>
+                  <div><span className="font-semibold">UA:</span> {typeof navigator !== 'undefined' ? navigator.userAgent : ''}</div>
+                  <div>
+                    <span className="font-semibold">Service Worker:</span>{' '}
+                    {typeof navigator !== 'undefined' && 'serviceWorker' in navigator
+                      ? (navigator.serviceWorker.controller ? 'controlled' : 'not-controlled')
+                      : 'not-supported'}
+                  </div>
+                </div>
               </div>
             )}
 

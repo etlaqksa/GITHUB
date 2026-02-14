@@ -138,6 +138,17 @@
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
 
+# Ensure the Service Worker is always updated promptly
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/manifest.json"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
 [[headers]]
   for = "/ar"
   [headers.values]
