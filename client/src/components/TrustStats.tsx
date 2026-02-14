@@ -21,23 +21,17 @@ export default function TrustStats({ className = '', compact = false, variant = 
 
   return (
     <section className={className}>
-      <div
-        className={
-          compact
-            ? 'grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6'
-            : 'grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8'
-        }
-      >
+      <div className={compact ? 'grid grid-cols-2 md:grid-cols-4 gap-6' : 'grid grid-cols-2 md:grid-cols-4 gap-8'}>
         {stats.map((s) => (
           <div key={s.label} className="text-center">
-            <div className="text-2xl sm:text-3xl md:text-4xl font-bold">
+            <div className="text-3xl md:text-4xl font-bold">
               <Counter end={s.value} suffix={s.suffix} />
             </div>
             <div
               className={
                 variant === 'inverse'
-                  ? 'text-xs sm:text-sm md:text-base text-white/85 mt-0.5 md:mt-1'
-                  : 'text-xs sm:text-sm md:text-base text-muted-foreground mt-0.5 md:mt-1'
+                  ? 'text-sm md:text-base text-white/85 mt-1'
+                  : 'text-sm md:text-base text-muted-foreground mt-1'
               }
             >
               {s.label}
@@ -46,14 +40,14 @@ export default function TrustStats({ className = '', compact = false, variant = 
         ))}
       </div>
 
-      <div className="mt-4 md:mt-6 flex flex-wrap items-center justify-center gap-2 text-center">
+      <div className="mt-6 flex flex-wrap items-center justify-center gap-2 text-center">
         <LocalizedLink href="/locations">
           <Badge
             variant="secondary"
             className={
               variant === 'inverse'
-                ? 'text-xs md:text-sm bg-white/10 text-white border-white/20 cursor-pointer hover:bg-white/15 px-2 py-0.5'
-                : 'text-xs md:text-sm cursor-pointer hover:bg-secondary/80 px-2 py-0.5'
+                ? 'text-sm bg-white/10 text-white border-white/20 cursor-pointer hover:bg-white/15'
+                : 'text-sm cursor-pointer hover:bg-secondary/80'
             }
           >
             {language === 'ar' ? 'نعمل في جميع مناطق المملكة' : 'Serving all regions of KSA'}
@@ -65,8 +59,8 @@ export default function TrustStats({ className = '', compact = false, variant = 
             variant="secondary"
             className={
               variant === 'inverse'
-                ? 'text-xs md:text-sm bg-white/10 text-white border-white/20 cursor-pointer hover:bg-white/15 px-2 py-0.5'
-                : 'text-xs md:text-sm cursor-pointer hover:bg-secondary/80 px-2 py-0.5'
+                ? 'text-sm bg-white/10 text-white border-white/20 cursor-pointer hover:bg-white/15'
+                : 'text-sm cursor-pointer hover:bg-secondary/80'
             }
           >
             {language === 'ar' ? '+20 مدينة' : '20+ cities'}

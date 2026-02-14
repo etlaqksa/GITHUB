@@ -8,6 +8,7 @@ import { getNeighborhoodSlug, listNeighborhoodsForCity } from '@/data/neighborho
 import { buildLandingKeywords } from '@/lib/seoKeywords';
 import { absUrl } from '@/lib/siteUrl';
 import { MapPin, ArrowRight } from 'lucide-react';
+import AutoLinkedText from '@/components/AutoLinkedText';
 
 type Props = {
   params: {
@@ -68,7 +69,9 @@ export default function CityLanding({ params }: Props) {
             <h1 className="text-3xl md:text-5xl font-bold">
               {language === 'ar' ? `خدماتنا في ${cityName}` : `Our services in ${cityName}`}
             </h1>
-            <p className="text-muted-foreground leading-relaxed">{description}</p>
+            <p className="text-muted-foreground leading-relaxed">
+              <AutoLinkedText text={description} />
+            </p>
           </div>
 
           <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
@@ -90,9 +93,13 @@ export default function CityLanding({ params }: Props) {
                 <CardHeader>
                   <CardTitle className="text-xl">{language === 'ar' ? s.ar : s.en}</CardTitle>
                   <CardDescription className="leading-relaxed">
-                    {language === 'ar'
-                      ? `حلول مناسبة للحالة داخل ${cityName} مع مخرجات واضحة وخطة خطوة تالية.`
-                      : `Fit-for-case solutions in ${cityName} with clear deliverables and next steps.`}
+                    <AutoLinkedText
+                      text={
+                        language === 'ar'
+                          ? `حلول مناسبة للحالة داخل ${cityName} مع مخرجات واضحة وخطة خطوة تالية.`
+                          : `Fit-for-case solutions in ${cityName} with clear deliverables and next steps.`
+                      }
+                    />
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-3">

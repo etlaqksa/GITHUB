@@ -6,6 +6,7 @@ import TrustStats from '@/components/TrustStats';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { CheckCircle, ClipboardList, Drill, FileText, Shield, Timer } from 'lucide-react';
 import LocalizedLink from '@/components/LocalizedLink';
+import AutoLinkedText from '@/components/AutoLinkedText';
 
 export default function ServiceGrouting() {
   const { language, t } = useLanguage();
@@ -179,9 +180,13 @@ export default function ServiceGrouting() {
                 <h1 className="text-4xl md:text-5xl font-bold">{t('services.grouting')}</h1>
               </div>
               <p className="text-xl text-muted-foreground">
-                {language === 'ar'
-                  ? 'ننفذ حقن تربة احترافي (حقن أسمنتي) لتقوية التربة وملء التكهفات وتحسين الاستقرار—بخطة هندسية واضحة وتنفيذ منظم.'
-                  : 'Professional soil grouting (cement injection) to strengthen soil, fill voids, and improve stability—with a clear engineering plan and structured execution.'}
+                <AutoLinkedText
+                  text={
+                    language === 'ar'
+                      ? 'ننفذ حقن تربة احترافي (حقن أسمنتي) لتقوية التربة وملء التكهفات وتحسين الاستقرار—بخطة هندسية واضحة وتنفيذ منظم.'
+                      : 'Professional soil grouting (cement injection) to strengthen soil, fill voids, and improve stability—with a clear engineering plan and structured execution.'
+                  }
+                />
               </p>
               <div className="flex flex-col sm:flex-row gap-3 pt-2">
                 <LocalizedLink href="/request-service?service=grouting" className="inline-flex">
@@ -208,9 +213,13 @@ export default function ServiceGrouting() {
                 <CardHeader>
                   <CardTitle className="text-2xl">{language === 'ar' ? 'متى نوصي بحقن التربة؟' : 'When is grouting recommended?'}</CardTitle>
                   <CardDescription>
-                    {language === 'ar'
-                      ? 'عند وجود هبوط/تكهفات/ضعف بالتربة أو الحاجة لرفع معامل الأمان قبل تنفيذ أو بعد ظهور مؤشرات خطر.'
-                      : 'When you suspect settlement/voids/weak soil, or need to increase safety before execution or after risk indicators appear.'}
+                    <AutoLinkedText
+                      text={
+                        language === 'ar'
+                          ? 'عند وجود هبوط/تكهفات/ضعف بالتربة أو الحاجة لرفع معامل الأمان قبل تنفيذ أو بعد ظهور مؤشرات خطر.'
+                          : 'When you suspect settlement/voids/weak soil, or need to increase safety before execution or after risk indicators appear.'
+                      }
+                    />
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-6">
@@ -223,7 +232,9 @@ export default function ServiceGrouting() {
                       {methodSteps.map((b, i) => (
                         <li key={i} className="flex items-start gap-2">
                           <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                          <span>{b}</span>
+                          <span>
+                            <AutoLinkedText text={b} />
+                          </span>
                         </li>
                       ))}
                     </ul>
@@ -235,7 +246,9 @@ export default function ServiceGrouting() {
                       {benefits.map((b, i) => (
                         <li key={i} className="flex items-start gap-2">
                           <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                          <span>{b}</span>
+                          <span>
+                            <AutoLinkedText text={b} />
+                          </span>
                         </li>
                       ))}
                     </ul>
@@ -247,7 +260,9 @@ export default function ServiceGrouting() {
                       {techniques.map((b, i) => (
                         <li key={i} className="flex items-start gap-2">
                           <div className="w-2 h-2 rounded-full bg-accent mt-2 flex-shrink-0" />
-                          <span>{b}</span>
+                          <span>
+                            <AutoLinkedText text={b} />
+                          </span>
                         </li>
                       ))}
                     </ul>
@@ -259,7 +274,9 @@ export default function ServiceGrouting() {
                       {whenNotIdeal.map((b, i) => (
                         <li key={i} className="flex items-start gap-2">
                           <div className="w-2 h-2 rounded-full bg-accent mt-2 flex-shrink-0" />
-                          <span className="text-muted-foreground">{b}</span>
+                          <span className="text-muted-foreground">
+                            <AutoLinkedText text={b} />
+                          </span>
                         </li>
                       ))}
                     </ul>
@@ -274,7 +291,9 @@ export default function ServiceGrouting() {
                     {language === 'ar' ? 'مخرجات العمل' : 'Deliverables'}
                   </CardTitle>
                   <CardDescription>
-                    {language === 'ar' ? 'لتعزيز الثقة وتوثيق التنفيذ.' : 'To build trust and document execution.'}
+                    <AutoLinkedText
+                      text={language === 'ar' ? 'لتعزيز الثقة وتوثيق التنفيذ.' : 'To build trust and document execution.'}
+                    />
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -282,7 +301,9 @@ export default function ServiceGrouting() {
                     {deliverables.map((d, i) => (
                       <li key={i} className="flex items-start gap-2">
                         <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                        <span>{d}</span>
+                        <span>
+                          <AutoLinkedText text={d} />
+                        </span>
                       </li>
                     ))}
                   </ul>
@@ -300,23 +321,33 @@ export default function ServiceGrouting() {
                 <CardHeader>
                   <CardTitle className="text-2xl">{language === 'ar' ? 'منهجية العمل' : 'Methodology'}</CardTitle>
                   <CardDescription>
-                    {language === 'ar'
-                      ? 'خطوات واضحة تقلل المخاطر وتساعدك على اتخاذ قرار سريع وواثق.'
-                      : 'Clear steps that reduce risk and help you decide with confidence.'}
+                    <AutoLinkedText
+                      text={
+                        language === 'ar'
+                          ? 'خطوات واضحة تقلل المخاطر وتساعدك على اتخاذ قرار سريع وواثق.'
+                          : 'Clear steps that reduce risk and help you decide with confidence.'
+                      }
+                    />
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   {processSteps.map((s, idx) => (
                     <div key={idx} className="rounded-2xl border bg-card/60 backdrop-blur p-4">
                       <div className="font-semibold">{idx + 1}. {s.title}</div>
-                      <div className="text-sm text-muted-foreground leading-relaxed mt-1">{s.desc}</div>
+                      <div className="text-sm text-muted-foreground leading-relaxed mt-1">
+                        <AutoLinkedText text={s.desc} />
+                      </div>
                     </div>
                   ))}
 
                   <div className="text-sm text-muted-foreground">
-                    {language === 'ar'
-                      ? 'ملاحظة: نحدد الأسلوب والمواد وخطة التنفيذ بناءً على معطيات الموقع—وقد نوصي بخطوة تشخيص إضافية عند الحاجة.'
-                      : 'Note: we choose method, materials, and plan based on site data—additional diagnosis may be recommended when needed.'}
+                    <AutoLinkedText
+                      text={
+                        language === 'ar'
+                          ? 'ملاحظة: نحدد الأسلوب والمواد وخطة التنفيذ بناءً على معطيات الموقع—وقد نوصي بخطوة تشخيص إضافية عند الحاجة.'
+                          : 'Note: we choose method, materials, and plan based on site data—additional diagnosis may be recommended when needed.'
+                      }
+                    />
                   </div>
                 </CardContent>
               </Card>
@@ -325,7 +356,7 @@ export default function ServiceGrouting() {
                 <CardHeader>
                   <CardTitle className="text-2xl">{language === 'ar' ? 'متى نختار مسارًا آخر؟' : 'When to take a different route'}</CardTitle>
                   <CardDescription>
-                    {language === 'ar' ? 'شفافية تساعد على بناء الثقة.' : 'Transparency builds trust.'}
+                    <AutoLinkedText text={language === 'ar' ? 'شفافية تساعد على بناء الثقة.' : 'Transparency builds trust.'} />
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -333,7 +364,9 @@ export default function ServiceGrouting() {
                     {whenNotRecommended.map((d, i) => (
                       <li key={i} className="flex items-start gap-2">
                         <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                        <span className="text-sm leading-relaxed">{d}</span>
+                        <span className="text-sm leading-relaxed">
+                          <AutoLinkedText text={d} />
+                        </span>
                       </li>
                     ))}
                   </ul>
@@ -364,7 +397,9 @@ export default function ServiceGrouting() {
                       <AccordionItem key={i} value={`item-${i}`}>
                         <AccordionTrigger>{f.q}</AccordionTrigger>
                         <AccordionContent>
-                          <div className="text-muted-foreground leading-relaxed">{f.a}</div>
+                          <div className="text-muted-foreground leading-relaxed">
+                            <AutoLinkedText text={f.a} />
+                          </div>
                         </AccordionContent>
                       </AccordionItem>
                     ))}

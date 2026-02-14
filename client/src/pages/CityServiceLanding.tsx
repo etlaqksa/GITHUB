@@ -16,6 +16,7 @@ import { absUrl, getSiteUrl } from '@/lib/siteUrl';
 import { buildLocalBusinessSchema, COMPANY } from '@/lib/companyProfile';
 import { buildBreadcrumbList } from '@/lib/schemaHelpers';
 import { CheckCircle2, ClipboardList, MapPin, ShieldCheck } from 'lucide-react';
+import AutoLinkedText from '@/components/AutoLinkedText';
 
 type Props = {
   params: {
@@ -179,7 +180,7 @@ function ModelLanding(props: {
               <div className="mt-4 space-y-2">
                 {model.intro.map((p) => (
                   <p key={p} className="text-muted-foreground leading-relaxed">
-                    {p}
+                    <AutoLinkedText text={p} />
                   </p>
                 ))}
               </div>

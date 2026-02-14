@@ -6,6 +6,7 @@ import TrustStats from '@/components/TrustStats';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { CheckCircle, FileText, Radar, SlidersHorizontal, Timer } from 'lucide-react';
 import LocalizedLink from '@/components/LocalizedLink';
+import AutoLinkedText from '@/components/AutoLinkedText';
 
 export default function ServiceGeophysical() {
   const { language, t } = useLanguage();
@@ -138,9 +139,13 @@ export default function ServiceGeophysical() {
                 <h1 className="text-4xl md:text-5xl font-bold">{t('services.geophysical')}</h1>
               </div>
               <p className="text-xl text-muted-foreground">
-                {language === 'ar'
-                  ? 'نقدم مسوحات ودراسات جيوفيزيائية تساعد على فهم ما تحت سطح الأرض بدقة—لتقليل المخاطر واتخاذ قرار هندسي صحيح.'
-                  : 'Geophysical surveys to understand subsurface conditions—reducing risk and enabling the right engineering decision.'}
+                <AutoLinkedText
+                  text={
+                    language === 'ar'
+                      ? 'نقدم مسوحات ودراسات جيوفيزيائية تساعد على فهم ما تحت سطح الأرض بدقة—لتقليل المخاطر واتخاذ قرار هندسي صحيح.'
+                      : 'Geophysical surveys to understand subsurface conditions—reducing risk and enabling the right engineering decision.'
+                  }
+                />
               </p>
               <div className="flex flex-col sm:flex-row gap-3 pt-2">
                 <LocalizedLink href="/request-service?service=geophysical" className="inline-flex">
@@ -173,9 +178,13 @@ export default function ServiceGeophysical() {
                 <CardHeader>
                   <CardTitle className="text-2xl">{language === 'ar' ? 'متى تحتاج دراسة جيوفيزيائية؟' : 'When do you need geophysics?'}</CardTitle>
                   <CardDescription>
-                    {language === 'ar'
-                      ? 'قبل اتخاذ قرار معالجات مكلفة، أو عندما تكون المؤشرات غير واضحة وتحتاج تشخيص علمي مدعوم بالبيانات.'
-                      : 'Before expensive remediation decisions, or when indicators are unclear and you need data-driven diagnosis.'}
+                    <AutoLinkedText
+                      text={
+                        language === 'ar'
+                          ? 'قبل اتخاذ قرار معالجات مكلفة، أو عندما تكون المؤشرات غير واضحة وتحتاج تشخيص علمي مدعوم بالبيانات.'
+                          : 'Before expensive remediation decisions, or when indicators are unclear and you need data-driven diagnosis.'
+                      }
+                    />
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-6">
@@ -185,7 +194,9 @@ export default function ServiceGeophysical() {
                       {useCases.map((b, i) => (
                         <li key={i} className="flex items-start gap-2">
                           <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                          <span>{b}</span>
+                          <span>
+                            <AutoLinkedText text={b} />
+                          </span>
                         </li>
                       ))}
                     </ul>
@@ -197,7 +208,9 @@ export default function ServiceGeophysical() {
                       {methods.map((b, i) => (
                         <li key={i} className="flex items-start gap-2">
                           <div className="w-2 h-2 rounded-full bg-accent mt-2 flex-shrink-0" />
-                          <span>{b}</span>
+                          <span>
+                            <AutoLinkedText text={b} />
+                          </span>
                         </li>
                       ))}
                     </ul>
@@ -209,7 +222,9 @@ export default function ServiceGeophysical() {
                 <CardHeader>
                   <CardTitle className="text-2xl">{language === 'ar' ? 'مخرجات الدراسة' : 'Deliverables'}</CardTitle>
                   <CardDescription>
-                    {language === 'ar' ? 'مخرجات قابلة للاستخدام في القرار والتنفيذ.' : 'Actionable outputs for decisions and execution.'}
+                    <AutoLinkedText
+                      text={language === 'ar' ? 'مخرجات قابلة للاستخدام في القرار والتنفيذ.' : 'Actionable outputs for decisions and execution.'}
+                    />
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -217,7 +232,9 @@ export default function ServiceGeophysical() {
                     {deliverables.map((d, i) => (
                       <li key={i} className="flex items-start gap-2">
                         <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                        <span>{d}</span>
+                        <span>
+                          <AutoLinkedText text={d} />
+                        </span>
                       </li>
                     ))}
                   </ul>
@@ -235,9 +252,13 @@ export default function ServiceGeophysical() {
                 <CardHeader>
                   <CardTitle className="text-2xl">{language === 'ar' ? 'كيف نُجري الدراسة' : 'How we run the survey'}</CardTitle>
                   <CardDescription>
-                    {language === 'ar'
-                      ? 'منهجية بسيطة وواضحة لإخراج قرار مدعوم بالبيانات.'
-                      : 'A simple, clear method to reach a data-backed decision.'}
+                    <AutoLinkedText
+                      text={
+                        language === 'ar'
+                          ? 'منهجية بسيطة وواضحة لإخراج قرار مدعوم بالبيانات.'
+                          : 'A simple, clear method to reach a data-backed decision.'
+                      }
+                    />
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
@@ -246,14 +267,20 @@ export default function ServiceGeophysical() {
                       <div className="font-semibold">
                         {idx + 1}. {s.title}
                       </div>
-                      <div className="text-sm text-muted-foreground leading-relaxed mt-1">{s.desc}</div>
+                      <div className="text-sm text-muted-foreground leading-relaxed mt-1">
+                        <AutoLinkedText text={s.desc} />
+                      </div>
                     </div>
                   ))}
 
                   <div className="text-sm text-muted-foreground">
-                    {language === 'ar'
-                      ? 'نهدف إلى تقليل عدم اليقين قبل اتخاذ قرار مكلف—وقد يكون الناتج توصية بكشف مركز أو خطة حقن/معالجة.'
-                      : 'Goal: reduce uncertainty before costly action—outputs can include focused detection or a grouting/treatment plan.'}
+                    <AutoLinkedText
+                      text={
+                        language === 'ar'
+                          ? 'نهدف إلى تقليل عدم اليقين قبل اتخاذ قرار مكلف—وقد يكون الناتج توصية بكشف مركز أو خطة حقن/معالجة.'
+                          : 'Goal: reduce uncertainty before costly action—outputs can include focused detection or a grouting/treatment plan.'
+                      }
+                    />
                   </div>
                 </CardContent>
               </Card>
@@ -262,16 +289,24 @@ export default function ServiceGeophysical() {
                 <CardHeader>
                   <CardTitle className="text-2xl">{language === 'ar' ? 'ربط النتائج بالحل' : 'Connect results to action'}</CardTitle>
                   <CardDescription>
-                    {language === 'ar'
-                      ? 'الدراسة لا تنتهي عند الخرائط—بل عند توصية عملية.'
-                      : 'Not just maps—actionable recommendations.'}
+                    <AutoLinkedText
+                      text={
+                        language === 'ar'
+                          ? 'الدراسة لا تنتهي عند الخرائط—بل عند توصية عملية.'
+                          : 'Not just maps—actionable recommendations.'
+                      }
+                    />
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-3">
                   <div className="text-sm text-muted-foreground leading-relaxed">
-                    {language === 'ar'
-                      ? 'قد ننصح بكشف التكهفات لتحديد نقاط حساسة، أو حقن التربة لتقوية التربة/معالجة التكهفات بحسب النتائج.'
-                      : 'We may recommend focused detection, or grouting/treatment depending on the findings.'}
+                    <AutoLinkedText
+                      text={
+                        language === 'ar'
+                          ? 'قد ننصح بكشف التكهفات لتحديد نقاط حساسة، أو حقن التربة لتقوية التربة/معالجة التكهفات بحسب النتائج.'
+                          : 'We may recommend focused detection, or grouting/treatment depending on the findings.'
+                      }
+                    />
                   </div>
                   <LocalizedLink href="/services/cavity" className="inline-flex w-full">
                     <Button variant="outline" className="w-full">{language === 'ar' ? 'كشف التكهفات' : 'Cavity detection'}</Button>
@@ -291,9 +326,13 @@ export default function ServiceGeophysical() {
                 <CardHeader>
                   <CardTitle className="text-2xl">{language === 'ar' ? 'أسئلة شائعة' : 'FAQ'}</CardTitle>
                   <CardDescription>
-                    {language === 'ar'
-                      ? 'إجابات تساعدك تفهم متى نحتاج الجيوفيزياء وكيف نستفيد منها.'
-                      : 'Answers on when geophysics helps and how to use it.'}
+                    <AutoLinkedText
+                      text={
+                        language === 'ar'
+                          ? 'إجابات تساعدك تفهم متى نحتاج الجيوفيزياء وكيف نستفيد منها.'
+                          : 'Answers on when geophysics helps and how to use it.'
+                      }
+                    />
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -302,7 +341,9 @@ export default function ServiceGeophysical() {
                       <AccordionItem key={i} value={`item-${i}`}>
                         <AccordionTrigger>{f.q}</AccordionTrigger>
                         <AccordionContent>
-                          <div className="text-muted-foreground leading-relaxed">{f.a}</div>
+                          <div className="text-muted-foreground leading-relaxed">
+                            <AutoLinkedText text={f.a} />
+                          </div>
                         </AccordionContent>
                       </AccordionItem>
                     ))}
@@ -318,9 +359,13 @@ export default function ServiceGeophysical() {
             <div className="max-w-4xl mx-auto text-center space-y-4">
               <h2 className="text-3xl font-bold">{language === 'ar' ? 'ابدأ بخطوة صحيحة' : 'Start with the right step'}</h2>
               <p className="text-muted-foreground text-lg">
-                {language === 'ar'
-                  ? 'شارك موقع المشروع ووصف الحالة—وسنحدد لك أفضل طريقة مسح وخطوة تالية.'
-                  : 'Share project location and case description—then we recommend the best survey method and next step.'}
+                <AutoLinkedText
+                  text={
+                    language === 'ar'
+                      ? 'شارك موقع المشروع ووصف الحالة—وسنحدد لك أفضل طريقة مسح وخطوة تالية.'
+                      : 'Share project location and case description—then we recommend the best survey method and next step.'
+                  }
+                />
               </p>
               <LocalizedLink href="/request-service?service=geophysical" className="inline-flex">
                 <Button size="lg">{t('nav.request')}</Button>

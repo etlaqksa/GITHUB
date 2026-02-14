@@ -12,6 +12,7 @@ import StickyCTA from "./components/StickyCTA";
 import Analytics from "./components/Analytics";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { LanguageProvider } from "./contexts/LanguageContext";
+import { InternalLinkingProvider } from "./contexts/InternalLinkingContext";
 
 const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
@@ -68,8 +69,9 @@ function AppLayout() {
       <SkipToContent />
       <Header />
       <main id="main-content" className="flex-1">
-        <Suspense fallback={<RouteLoader />}>
-          <Switch>
+        <InternalLinkingProvider>
+          <Suspense fallback={<RouteLoader />}>
+            <Switch>
             <Route path="/about" component={About} />
             <Route path="/services/grouting" component={ServiceGrouting} />
             <Route path="/services/cavity" component={ServiceCavity} />
@@ -109,8 +111,9 @@ function AppLayout() {
             {/* IMPORTANT: keep Home last to avoid "/" greedily matching other routes */}
             <Route path="/" component={Home} />
             <Route component={NotFound} />
-          </Switch>
-        </Suspense>
+            </Switch>
+          </Suspense>
+        </InternalLinkingProvider>
       </main>
       <Footer />
       <WhatsAppButton />

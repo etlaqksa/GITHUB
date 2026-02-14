@@ -7,6 +7,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import LocalizedLink from '@/components/LocalizedLink';
+import AutoLinkedText from '@/components/AutoLinkedText';
 
 import { absUrl, getSiteUrl } from '@/lib/siteUrl';
 import { OgImageForService } from '@/lib/og';
@@ -323,10 +324,14 @@ export default function CityServiceNeighborhoodLanding() {
 
             <div className="rounded-2xl border bg-card/60 backdrop-blur p-6 md:p-8 shadow-sm">
               <h1 className="text-3xl md:text-4xl font-bold tracking-tight">{h1}</h1>
-              <p className="mt-4 text-base md:text-lg text-muted-foreground">{intro}</p>
+              <p className="mt-4 text-base md:text-lg text-muted-foreground">
+                <AutoLinkedText text={intro} />
+              </p>
               <div className="mt-4 space-y-2 text-muted-foreground">
                 {extraNotes.map((t, idx) => (
-                  <p key={idx}>{t}</p>
+                  <p key={idx}>
+                    <AutoLinkedText text={t} />
+                  </p>
                 ))}
               </div>
 
@@ -352,7 +357,9 @@ export default function CityServiceNeighborhoodLanding() {
                 <h2 className="text-xl font-semibold">{lang === 'ar' ? 'متى تحتاج هذه الخدمة؟' : 'When do you need this?'}</h2>
                 <ul className="mt-4 space-y-2 text-muted-foreground list-disc ps-5">
                   {whenBullets.slice(0, 6).map((u) => (
-                    <li key={u}>{u}</li>
+                    <li key={u}>
+                      <AutoLinkedText text={u} />
+                    </li>
                   ))}
                 </ul>
               </div>
@@ -361,7 +368,9 @@ export default function CityServiceNeighborhoodLanding() {
                 <h2 className="text-xl font-semibold">{lang === 'ar' ? 'خطوات العمل المختصرة' : 'Quick process'}</h2>
                 <ol className="mt-4 space-y-2 text-muted-foreground list-decimal ps-5">
                   {processSteps.slice(0, 6).map((p) => (
-                    <li key={p.title}>{p.title}</li>
+                    <li key={p.title}>
+                      <AutoLinkedText text={p.title} />
+                    </li>
                   ))}
                 </ol>
               </div>

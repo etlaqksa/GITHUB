@@ -10,6 +10,7 @@ import { Calendar, Clock, User, ArrowLeft, ArrowRight } from 'lucide-react';
 
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import remarkInternalLinks from '@/lib/internalLinking/remarkInternalLinks';
 import rehypeRaw from 'rehype-raw';
 import LocalizedLink from '@/components/LocalizedLink';
 import { absUrl } from '@/lib/siteUrl';
@@ -516,7 +517,7 @@ export default function BlogPost() {
               ${language === 'ar' ? 'rtl prose-headings:text-right prose-p:text-right prose-li:text-right' : 'ltr'}`}
           >
             <ReactMarkdown
-              remarkPlugins={[remarkGfm]}
+              remarkPlugins={[remarkGfm, [remarkInternalLinks as any, { lang: language }]]}
               rehypePlugins={[rehypeRaw]}
               components={{
                 table: ({ children, ...props }) => (

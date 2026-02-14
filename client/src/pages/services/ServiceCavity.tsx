@@ -6,6 +6,7 @@ import TrustStats from '@/components/TrustStats';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { CheckCircle, FileText, Search, ShieldAlert, Timer } from 'lucide-react';
 import LocalizedLink from '@/components/LocalizedLink';
+import AutoLinkedText from '@/components/AutoLinkedText';
 
 export default function ServiceCavity() {
   const { language, t } = useLanguage();
@@ -158,9 +159,13 @@ export default function ServiceCavity() {
                 <h1 className="text-4xl md:text-5xl font-bold">{t('services.cavity')}</h1>
               </div>
               <p className="text-xl text-muted-foreground">
-                {language === 'ar'
-                  ? 'نساعدك على كشف التكهفات تحت سطح الأرض قبل أن تتحول لمشكلة مكلفة—بمسح جيوفيزيائي مدروس ومخرجات واضحة.'
-                  : 'We help you detect subsurface cavities before they turn into costly issues—through planned geophysical surveys and clear deliverables.'}
+                <AutoLinkedText
+                  text={
+                    language === 'ar'
+                      ? 'نساعدك على كشف التكهفات تحت سطح الأرض قبل أن تتحول لمشكلة مكلفة—بمسح جيوفيزيائي مدروس ومخرجات واضحة.'
+                      : 'We help you detect subsurface cavities before they turn into costly issues—through planned geophysical surveys and clear deliverables.'
+                  }
+                />
               </p>
               <div className="flex flex-col sm:flex-row gap-3 pt-2">
                 <LocalizedLink href="/request-service?service=cavity" className="inline-flex">
@@ -187,9 +192,13 @@ export default function ServiceCavity() {
                 <CardHeader>
                   <CardTitle className="text-2xl">{language === 'ar' ? 'متى نوصي بالكشف؟' : 'When should you run detection?'} </CardTitle>
                   <CardDescription>
-                    {language === 'ar'
-                      ? 'عند ظهور هبوط مفاجئ، أو قبل أعمال حفر/تحميل، أو عند الشك بوجود تكهفات بسبب تسربات أو طبيعة الموقع.'
-                      : 'When there is sudden settlement, before excavation/loading, or when cavities are suspected due to leaks or site conditions.'}
+                    <AutoLinkedText
+                      text={
+                        language === 'ar'
+                          ? 'عند ظهور هبوط مفاجئ، أو قبل أعمال حفر/تحميل، أو عند الشك بوجود تكهفات بسبب تسربات أو طبيعة الموقع.'
+                          : 'When there is sudden settlement, before excavation/loading, or when cavities are suspected due to leaks or site conditions.'
+                      }
+                    />
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-6">
@@ -199,7 +208,9 @@ export default function ServiceCavity() {
                       {benefits.map((b, i) => (
                         <li key={i} className="flex items-start gap-2">
                           <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                          <span>{b}</span>
+                          <span>
+                            <AutoLinkedText text={b} />
+                          </span>
                         </li>
                       ))}
                     </ul>
@@ -211,7 +222,9 @@ export default function ServiceCavity() {
                       {techniques.map((b, i) => (
                         <li key={i} className="flex items-start gap-2">
                           <div className="w-2 h-2 rounded-full bg-accent mt-2 flex-shrink-0" />
-                          <span>{b}</span>
+                          <span>
+                            <AutoLinkedText text={b} />
+                          </span>
                         </li>
                       ))}
                     </ul>
@@ -226,7 +239,7 @@ export default function ServiceCavity() {
                     {language === 'ar' ? 'مخرجات العمل' : 'Deliverables'}
                   </CardTitle>
                   <CardDescription>
-                    {language === 'ar' ? 'لتوضيح المخاطر قبل اتخاذ قرار المعالجة.' : 'Clear outputs before remediation decisions.'}
+                    <AutoLinkedText text={language === 'ar' ? 'لتوضيح المخاطر قبل اتخاذ قرار المعالجة.' : 'Clear outputs before remediation decisions.'} />
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -234,7 +247,9 @@ export default function ServiceCavity() {
                     {deliverables.map((d, i) => (
                       <li key={i} className="flex items-start gap-2">
                         <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                        <span>{d}</span>
+                        <span>
+                          <AutoLinkedText text={d} />
+                        </span>
                       </li>
                     ))}
                   </ul>
@@ -252,9 +267,13 @@ export default function ServiceCavity() {
                 <CardHeader>
                   <CardTitle className="text-2xl">{language === 'ar' ? 'منهجية الكشف' : 'Detection methodology'}</CardTitle>
                   <CardDescription>
-                    {language === 'ar'
-                      ? 'خطوات واضحة لإخراج نتيجة مفهومة وتوصية عملية بالخطوة التالية.'
-                      : 'Clear steps that produce understandable outputs and an actionable next step.'}
+                    <AutoLinkedText
+                      text={
+                        language === 'ar'
+                          ? 'خطوات واضحة لإخراج نتيجة مفهومة وتوصية عملية بالخطوة التالية.'
+                          : 'Clear steps that produce understandable outputs and an actionable next step.'
+                      }
+                    />
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
@@ -263,14 +282,20 @@ export default function ServiceCavity() {
                       <div className="font-semibold">
                         {idx + 1}. {s.title}
                       </div>
-                      <div className="text-sm text-muted-foreground leading-relaxed mt-1">{s.desc}</div>
+                      <div className="text-sm text-muted-foreground leading-relaxed mt-1">
+                        <AutoLinkedText text={s.desc} />
+                      </div>
                     </div>
                   ))}
 
                   <div className="text-sm text-muted-foreground">
-                    {language === 'ar'
-                      ? 'نختار الطريقة/المزيج الأنسب حسب طبيعة الموقع، وقد نوصي بتحقق إضافي عند حساسية الحالة.'
-                      : 'We select the best method/mix based on the site, with optional extra verification for sensitive cases.'}
+                    <AutoLinkedText
+                      text={
+                        language === 'ar'
+                          ? 'نختار الطريقة/المزيج الأنسب حسب طبيعة الموقع، وقد نوصي بتحقق إضافي عند حساسية الحالة.'
+                          : 'We select the best method/mix based on the site, with optional extra verification for sensitive cases.'
+                      }
+                    />
                   </div>
                 </CardContent>
               </Card>
@@ -279,16 +304,24 @@ export default function ServiceCavity() {
                 <CardHeader>
                   <CardTitle className="text-2xl">{language === 'ar' ? 'بعد الكشف… ما التالي؟' : 'After detection — what next?'}</CardTitle>
                   <CardDescription>
-                    {language === 'ar'
-                      ? 'نربط النتائج بالمعالجة المناسبة لتقليل المخاطر.'
-                      : 'We connect results to the right remediation path to reduce risk.'}
+                    <AutoLinkedText
+                      text={
+                        language === 'ar'
+                          ? 'نربط النتائج بالمعالجة المناسبة لتقليل المخاطر.'
+                          : 'We connect results to the right remediation path to reduce risk.'
+                      }
+                    />
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-3">
                   <div className="text-sm text-muted-foreground leading-relaxed">
-                    {language === 'ar'
-                      ? 'إذا كانت هناك مناطق اشتباه، نقترح مسارًا واضحًا: حقن تربة/معالجة أو تحقق إضافي عند الحاجة.'
-                      : 'When risk zones exist, we recommend a clear route: grouting/treatment or extra verification when needed.'}
+                    <AutoLinkedText
+                      text={
+                        language === 'ar'
+                          ? 'إذا كانت هناك مناطق اشتباه، نقترح مسارًا واضحًا: حقن تربة/معالجة أو تحقق إضافي عند الحاجة.'
+                          : 'When risk zones exist, we recommend a clear route: grouting/treatment or extra verification when needed.'
+                      }
+                    />
                   </div>
                   <LocalizedLink href="/services/grouting" className="inline-flex w-full">
                     <Button variant="outline" className="w-full">{language === 'ar' ? 'اطلع على حقن التربة' : 'View grouting'}</Button>
@@ -305,9 +338,13 @@ export default function ServiceCavity() {
                 <CardHeader>
                   <CardTitle className="text-2xl">{language === 'ar' ? 'أسئلة شائعة' : 'FAQ'}</CardTitle>
                   <CardDescription>
-                    {language === 'ar'
-                      ? 'إجابات سريعة على الأسئلة الأكثر تكرارًا قبل طلب الخدمة.'
-                      : 'Quick answers to common questions before requesting the service.'}
+                    <AutoLinkedText
+                      text={
+                        language === 'ar'
+                          ? 'إجابات سريعة على الأسئلة الأكثر تكرارًا قبل طلب الخدمة.'
+                          : 'Quick answers to common questions before requesting the service.'
+                      }
+                    />
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -316,7 +353,9 @@ export default function ServiceCavity() {
                       <AccordionItem key={i} value={`item-${i}`}>
                         <AccordionTrigger>{f.q}</AccordionTrigger>
                         <AccordionContent>
-                          <div className="text-muted-foreground leading-relaxed">{f.a}</div>
+                          <div className="text-muted-foreground leading-relaxed">
+                            <AutoLinkedText text={f.a} />
+                          </div>
                         </AccordionContent>
                       </AccordionItem>
                     ))}
@@ -332,9 +371,13 @@ export default function ServiceCavity() {
             <div className="max-w-4xl mx-auto text-center space-y-4">
               <h2 className="text-3xl font-bold">{language === 'ar' ? 'خطوتك التالية' : 'Your next step'}</h2>
               <p className="text-muted-foreground text-lg">
-                {language === 'ar'
-                  ? 'أرسل موقعك ووصف الحالة—ونقترح عليك أفضل أسلوب كشف وخطوة تالية.'
-                  : 'Send your site and case description—then we recommend the best detection approach and next step.'}
+                <AutoLinkedText
+                  text={
+                    language === 'ar'
+                      ? 'أرسل موقعك ووصف الحالة—ونقترح عليك أفضل أسلوب كشف وخطوة تالية.'
+                      : 'Send your site and case description—then we recommend the best detection approach and next step.'
+                  }
+                />
               </p>
               <LocalizedLink href="/request-service?service=cavity" className="inline-flex">
                 <Button size="lg">{t('nav.request')}</Button>
