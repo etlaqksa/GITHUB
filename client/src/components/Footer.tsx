@@ -1,6 +1,7 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Mail, MapPin, Phone } from 'lucide-react';
 import LocalizedLink from '@/components/LocalizedLink';
+import { COMPANY_INFO } from '@/config/company';
 
 export default function Footer() {
   const { t, language } = useLanguage();
