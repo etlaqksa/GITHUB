@@ -414,9 +414,9 @@ export default function Home() {
         className={
           `relative overflow-hidden ` +
           (isDesktopModeMobile
-            ? 'min-h-[52vh] max-h-[560px]'
+            ? 'min-h-[52vh] max-h-none'
             : isCoarsePointer
-              ? 'min-h-[58vh] max-h-[680px]'
+              ? 'min-h-[58vh] max-h-none'
               : 'min-h-[72vh] md:min-h-[78vh] max-h-[900px]')
         }
       >
@@ -453,8 +453,8 @@ export default function Home() {
             <div
               className={
                 language === 'ar'
-                  ? 'flex flex-col items-center gap-1 rounded-full border border-white/25 bg-black/60 px-3 py-1 text-sm text-white/90 shadow-[0_10px_30px_rgba(0,0,0,0.35)]'
-                  : 'inline-flex items-center gap-2 rounded-full border border-white/25 bg-black/60 px-3 py-1 text-sm text-white/90 shadow-[0_10px_30px_rgba(0,0,0,0.35)]'
+                  ? 'flex flex-col items-center gap-1 rounded-full border border-white/25 bg-black/60 px-3 py-1 text-[15px] md:text-base font-semibold text-white/90 shadow-[0_10px_30px_rgba(0,0,0,0.35)]'
+                  : 'inline-flex items-center gap-2 rounded-full border border-white/25 bg-black/60 px-3 py-1 text-[15px] md:text-base font-semibold text-white/90 shadow-[0_10px_30px_rgba(0,0,0,0.35)]'
               }
             >
               {language === 'ar' ? (
@@ -486,7 +486,7 @@ export default function Home() {
               )}
             </h1>
 
-            <div className="text-sm md:text-base font-semibold text-white/95 drop-shadow-[0_8px_24px_rgba(0,0,0,0.9)]">
+            <div className="text-base md:text-lg font-bold text-white/95 drop-shadow-[0_8px_24px_rgba(0,0,0,0.9)]">
               {language === 'ar' ? (
                 <span className="whitespace-nowrap">
                   <span className="font-bold text-white drop-shadow-[0_3px_12px_rgba(0,0,0,0.8)]">
