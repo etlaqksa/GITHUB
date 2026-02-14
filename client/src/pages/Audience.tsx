@@ -138,7 +138,7 @@ export default function Audience() {
           <div className="mt-8">
             <LocalizedLink href="/">
               <Button className="rounded-full" variant="secondary">
-                <ArrowLeft className="h-4 w-4 me-2" />
+                <ArrowLeft className="h-4 w-4 me-2 rtl:rotate-180" />
                 {language === 'ar' ? 'الرئيسية' : 'Home'}
               </Button>
             </LocalizedLink>
@@ -165,7 +165,7 @@ export default function Audience() {
           <div className="mb-6">
             <LocalizedLink href="/">
               <Button variant="secondary" className="rounded-full">
-                <ArrowLeft className="h-4 w-4 me-2" />
+                <ArrowLeft className="h-4 w-4 me-2 rtl:rotate-180" />
                 {language === 'ar' ? 'العودة للرئيسية' : 'Back to home'}
               </Button>
             </LocalizedLink>

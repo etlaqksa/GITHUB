@@ -382,7 +382,7 @@ export default function BlogPost() {
       />
       <div className="max-w-4xl mx-auto" ref={swipeRef}>
         <LocalizedLink href="/blog" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground mb-6">
-            <ArrowLeft className="h-4 w-4" />
+            <ArrowLeft className="h-4 w-4 rtl:rotate-180" />
             {language === 'ar' ? 'رجوع للمقالات' : 'Back to blog'}
           
         </LocalizedLink>
@@ -399,7 +399,7 @@ export default function BlogPost() {
                   className="fixed left-6 top-1/2 -translate-y-1/2 z-50 rounded-full bg-primary text-primary-foreground shadow-2xl px-4 py-3 flex items-center gap-2 transition-all duration-200 hover:scale-105 hover:shadow-[0_18px_45px_rgba(0,0,0,0.25)] focus:outline-none focus:ring-2 focus:ring-primary/40"
                   aria-label={language === 'ar' ? 'المقال السابق' : 'Previous article'}
                 >
-                  <ArrowLeft className="h-5 w-5" />
+                  <ArrowLeft className="h-5 w-5 rtl:rotate-180" />
                   <span className="hidden lg:inline font-semibold">{language === 'ar' ? 'المقال السابق' : 'Previous'}</span>
                 </button>
               ) : null}
@@ -412,7 +412,7 @@ export default function BlogPost() {
                   aria-label={language === 'ar' ? 'المقال التالي' : 'Next article'}
                 >
                   <span className="hidden lg:inline font-semibold">{language === 'ar' ? 'المقال التالي' : 'Next'}</span>
-                  <ArrowRight className="h-5 w-5" />
+                  <ArrowRight className="h-5 w-5 rtl:rotate-180" />
                 </button>
               ) : null}
             </div>

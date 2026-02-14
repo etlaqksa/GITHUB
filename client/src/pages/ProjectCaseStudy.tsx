@@ -39,7 +39,7 @@ export default function ProjectCaseStudy() {
               <div className="mt-8">
                 <LocalizedLink href="/projects">
                   <Button className="rounded-full" variant="secondary">
-                    <ArrowLeft className="h-4 w-4 me-2" />
+                    <ArrowLeft className="h-4 w-4 me-2 rtl:rotate-180" />
                     {language === 'ar' ? 'العودة إلى المشاريع' : 'Back to projects'}
                   </Button>
                 </LocalizedLink>
@@ -76,7 +76,7 @@ export default function ProjectCaseStudy() {
           <div className="mb-6">
             <LocalizedLink href="/projects">
               <Button variant="secondary" className="rounded-full">
-                <ArrowLeft className="h-4 w-4 me-2" />
+                <ArrowLeft className="h-4 w-4 me-2 rtl:rotate-180" />
                 {language === 'ar' ? 'المشاريع' : 'Projects'}
               </Button>
             </LocalizedLink>

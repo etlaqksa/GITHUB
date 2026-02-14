@@ -262,7 +262,7 @@ export default function CityServiceNeighborhoodLanding() {
           <div className="mt-6">
             <LocalizedLink href="/locations">
               <Button variant="outline">
-                <ArrowLeft className="h-4 w-4 me-2" />
+                <ArrowLeft className="h-4 w-4 me-2 rtl:rotate-180" />
                 {lang === 'ar' ? 'العودة للمدن' : 'Back to locations'}
               </Button>
             </LocalizedLink>

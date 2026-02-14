@@ -138,6 +138,13 @@
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
 
+
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
 # Ensure the Service Worker is always updated promptly
 [[headers]]
   for = "/sw.js"
@@ -190,4 +197,4 @@
     # Allow the inline GA4 initializer via hash (avoid 'unsafe-inline' for scripts)
     Content-Security-Policy = "default-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; object-src 'none'; frame-src 'self' https://www.google.com https://www.google.com/maps https://www.google.com/maps/embed https://maps.google.com https://www.openstreetmap.org; script-src 'self' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; connect-src 'self' https:; font-src 'self' data: https://fonts.gstatic.com; worker-src 'self'; manifest-src 'self'"
 
-    X-Powered-By = "Etlaq"
+    X-Powered-By = "Etlaq Tech"
