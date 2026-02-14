@@ -66,7 +66,7 @@ function RouteLoader() {
 
 function AppLayout() {
   return (
-    <div className="flex flex-col min-h-screen app-background">
+    <div className="flex flex-col min-h-screen app-background pb-24 md:pb-0">
       <ScrollToTop />
       <SkipToContent />
       <UpdateAvailableBanner />

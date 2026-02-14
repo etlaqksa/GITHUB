@@ -229,7 +229,7 @@ export default function Projects() {
 
                       <span className="inline-flex items-center gap-2 text-sm text-muted-foreground transition group-hover:text-foreground">
                         {language === 'ar' ? 'دراسة حالة مختصرة' : 'Short case study'}
-                        <ArrowRight className="h-4 w-4" />
+                        <ArrowRight className="h-4 w-4 rtl:rotate-180" />
                       </span>
                     </div>
                   </CardContent>

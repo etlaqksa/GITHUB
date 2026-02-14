@@ -113,7 +113,7 @@ export default function CityLanding({ params }: Props) {
                     return (
                       <LocalizedLink href={`/locations/${citySlug}/${serviceSlug}`} className="inline-flex items-center gap-2 text-primary hover:underline">
                         {language === 'ar' ? 'عرض تفاصيل الخدمة' : 'View service details'}
-                        <ArrowRight className="h-4 w-4" />
+                        <ArrowRight className="h-4 w-4 rtl:rotate-180" />
                       </LocalizedLink>
                     );
                   })()}

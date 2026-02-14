@@ -157,6 +157,22 @@ export default function Footer() {
               ? `© ${new Date().getFullYear()} شركة إطلاق المتميزة المحدودة. جميع الحقوق محفوظة.`
               : `© ${new Date().getFullYear()} ETLAQ Distinguished Company Ltd. All rights reserved.`}
           </p>
+
+          {(COMPANY_INFO.commercialRegister || COMPANY_INFO.vatNumber) && (
+            <div className="mt-3 text-xs opacity-80 flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
+              {COMPANY_INFO.commercialRegister && (
+                <span>
+                  {language === 'ar' ? 'السجل التجاري:' : 'CR:'} {COMPANY_INFO.commercialRegister}
+                </span>
+              )}
+              {COMPANY_INFO.vatNumber && (
+                <span>
+                  {language === 'ar' ? 'الرقم الضريبي:' : 'VAT:'} {COMPANY_INFO.vatNumber}
+                </span>
+              )}
+            </div>
+          )}
+
           <div className="mt-3 flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
             <LocalizedLink href="/terms">
               <span className="hover:underline cursor-pointer">
