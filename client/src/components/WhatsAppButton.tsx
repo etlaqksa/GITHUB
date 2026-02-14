@@ -39,6 +39,7 @@ Please advise the next step (assessment / visit / quote).
 export default function WhatsAppButton() {
   const { language } = useLanguage();
   const [location] = useLocation();
+  const isAr = language === 'ar';
 
   const whatsappNumber = '966534145922';
   const pageUrl = typeof window !== 'undefined' ? window.location.href : `https://etlaqksa.com${location}`;
@@ -54,11 +55,12 @@ export default function WhatsAppButton() {
       data-ga-placement="floating"
       data-ga-intent="general"
       className="fixed bottom-24 md:bottom-6 left-6 z-50 bg-[oklch(0.65_0.18_195)] text-white rounded-full p-4 shadow-lg transition-all duration-300 hover:scale-110 group"
-      aria-label="Contact us on WhatsApp"
+      aria-label={isAr ? "تواصل معنا عبر واتساب" : "Contact us on WhatsApp"}
+      title={isAr ? "واتساب" : "WhatsApp"}
     >
       <MessageCircle className="h-7 w-7" />
       <span className="absolute left-full top-1/2 -translate-y-1/2 ml-3 rounded-full bg-black/80 text-white text-xs px-3 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
-        WhatsApp
+        {isAr ? "واتساب" : "WhatsApp"}
       </span>
     </a>
   );

@@ -23,21 +23,35 @@ class ErrorBoundary extends Component<Props, State> {
 
   render() {
     if (this.state.hasError) {
+      const lang = (globalThis as any).lang === 'en' ? 'en' : 'ar';
+      const isAr = lang === 'ar';
+      const showDetails = !import.meta.env.PROD;
+
       return (
         <div className="flex items-center justify-center min-h-screen p-8 bg-background">
-          <div className="flex flex-col items-center w-full max-w-2xl p-8">
+          <div className="flex flex-col items-center w-full max-w-2xl p-8 text-center">
             <AlertTriangle
               size={48}
               className="text-destructive mb-6 flex-shrink-0"
             />
 
-            <h2 className="text-xl mb-4">An unexpected error occurred.</h2>
+            <h2 className="text-xl mb-2 font-bold">
+              {isAr ? "حدث خطأ غير متوقع" : "An unexpected error occurred"}
+            </h2>
 
-            <div className="p-4 w-full rounded bg-muted overflow-auto mb-6">
-              <pre className="text-sm text-muted-foreground whitespace-break-spaces">
-                {this.state.error?.stack}
-              </pre>
-            </div>
+            <p className="text-sm text-muted-foreground mb-6 max-w-prose">
+              {isAr
+                ? "قد يكون السبب تحديثًا جديدًا للموقع أو انقطاعًا مؤقتًا في الاتصال. جرّب تحديث الصفحة للحصول على أحدث نسخة." 
+                : "This may be caused by a recent site update or a temporary connection issue. Please refresh to load the latest version."}
+            </p>
+
+            {showDetails && (
+              <div className="p-4 w-full rounded bg-muted overflow-auto mb-6 text-left">
+                <pre className="text-sm text-muted-foreground whitespace-break-spaces">
+                  {this.state.error?.stack}
+                </pre>
+              </div>
+            )}
 
             <button
               onClick={() => window.location.reload()}
@@ -48,7 +62,7 @@ class ErrorBoundary extends Component<Props, State> {
               )}
             >
               <RotateCcw size={16} />
-              Reload Page
+              {isAr ? "تحديث الصفحة" : "Reload page"}
             </button>
           </div>
         </div>

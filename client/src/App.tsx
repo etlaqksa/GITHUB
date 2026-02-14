@@ -10,9 +10,11 @@ import SkipToContent from "./components/SkipToContent";
 import WhatsAppButton from "./components/WhatsAppButton";
 import StickyCTA from "./components/StickyCTA";
 import Analytics from "./components/Analytics";
+import UpdateAvailableBanner from "./components/UpdateAvailableBanner";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import { InternalLinkingProvider } from "./contexts/InternalLinkingContext";
+import SkeletonLoader from "@/components/ui/skeleton-loader";
 
 const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
@@ -52,11 +54,11 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 function RouteLoader() {
   return (
     <div className="container mx-auto px-4 py-10">
-      <div className="max-w-xl mx-auto rounded-xl border bg-card p-6 backdrop-blur-md ring-1 ring-black/5">
-        <div className="h-4 w-40 bg-muted rounded mb-4 animate-pulse" />
-        <div className="h-3 w-full bg-muted rounded mb-2 animate-pulse" />
-        <div className="h-3 w-5/6 bg-muted rounded mb-2 animate-pulse" />
-        <div className="h-3 w-2/3 bg-muted rounded animate-pulse" />
+      <div className="max-w-xl mx-auto rounded-2xl border bg-card p-6 backdrop-blur-md ring-1 ring-black/5">
+        <SkeletonLoader className="w-40 mb-4" />
+        <SkeletonLoader className="w-full mb-2" />
+        <SkeletonLoader className="w-5/6 mb-2" />
+        <SkeletonLoader className="w-2/3" />
       </div>
     </div>
   );
@@ -67,6 +69,7 @@ function AppLayout() {
     <div className="flex flex-col min-h-screen app-background">
       <ScrollToTop />
       <SkipToContent />
+      <UpdateAvailableBanner />
       <Header />
       <main id="main-content" className="flex-1">
         <InternalLinkingProvider>

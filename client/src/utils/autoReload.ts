@@ -20,6 +20,13 @@ export function registerGlobalPreloadErrorHandler() {
     if (!last || now - Number(last) > THRESHOLD_MS) {
       sessionStorage.setItem(STORAGE_KEY, String(now));
       window.location.reload();
+    } else {
+      // Avoid infinite loops: if we already reloaded very recently, surface a user-friendly prompt.
+      try {
+        window.dispatchEvent(new CustomEvent("etlaq:preload-error"));
+      } catch {
+        // ignore
+      }
     }
   });
 }
