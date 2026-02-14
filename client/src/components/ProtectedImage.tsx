@@ -35,6 +35,15 @@ export default function ProtectedImage({
   const ref = useRef<HTMLDivElement | null>(null);
   const [inView, setInView] = useState(false);
 
+  const absSrc = (() => {
+    try {
+      // Make background-image URLs absolute so Clarity playback can load them correctly.
+      return new URL(src, window.location.origin).href;
+    } catch {
+      return src;
+    }
+  })();
+
   useEffect(() => {
     const el = ref.current;
     if (!el) return;

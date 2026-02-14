@@ -137,7 +137,7 @@
     Cache-Control = "public, max-age=31536000, immutable"
 
 # Ensure HTML entrypoints are always revalidated (prevents stale index.html loops)
-
+    Cross-Origin-Resource-Policy = "cross-origin"
 [[headers]]
   for = "/"
   [headers.values]
@@ -192,6 +192,7 @@
     Cache-Control = "public, max-age=31536000, immutable"
 
 # Default security headers
+    Cross-Origin-Resource-Policy = "cross-origin"
 [[headers]]
   for = "/*"
   [headers.values]
