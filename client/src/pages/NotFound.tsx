@@ -1,49 +1,80 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { AlertCircle, Home } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { ArrowLeft, Home, PhoneCall, Wrench } from "lucide-react";
 import { useLocation } from "wouter";
 
 export default function NotFound() {
+  const { language } = useLanguage();
+  const isAr = language !== "en";
   const [, setLocation] = useLocation();
 
-  const handleGoHome = () => {
-    setLocation("/");
-  };
+  const go = (path: string) => setLocation(path);
 
   return (
-    <div className="min-h-screen w-full flex items-center justify-center bg-gradient-to-br from-slate-50 to-slate-100">
-      <Card className="w-full max-w-lg mx-4 shadow-lg border-0 bg-white/80 backdrop-blur-sm">
-        <CardContent className="pt-8 pb-8 text-center">
-          <div className="flex justify-center mb-6">
-            <div className="relative">
-              <div className="absolute inset-0 bg-red-100 rounded-full animate-pulse" />
-              <AlertCircle className="relative h-16 w-16 text-red-500" />
+    <div className="min-h-screen w-full flex items-center justify-center app-background px-4 py-12">
+      <Card className="w-full max-w-2xl shadow-xl border bg-white/85 backdrop-blur-md rounded-2xl">
+        <CardContent className="p-6 sm:p-10">
+          <div className="flex items-center justify-between gap-4 mb-6">
+            <div className="flex items-center gap-3">
+              <img
+                src="/logo.png"
+                alt="ETLAQ"
+                className="h-10 w-auto"
+                loading="eager"
+                decoding="async"
+              />
+              <div className="leading-tight">
+                <div className="text-sm font-semibold text-foreground">
+                  {isAr ? "شركة إطلاق المتميزة" : "ETLAQ Distinguished Company"}
+                </div>
+                <div className="text-xs text-muted-foreground">
+                  {isAr ? "حقن التربة • سبر التكهفات • حلول جيوفيزيائية" : "Soil Grouting • Cavity Probing • Geophysics"}
+                </div>
+              </div>
             </div>
+
+            <Button
+              variant="ghost"
+              className="gap-2"
+              onClick={() => go("/")}
+            >
+              <ArrowLeft className={isAr ? "rtl:rotate-180" : ""} size={16} />
+              {isAr ? "رجوع" : "Back"}
+            </Button>
           </div>
 
-          <h1 className="text-4xl font-bold text-slate-900 mb-2">404</h1>
+          <div className="text-center">
+            <div className="text-6xl font-extrabold tracking-tight text-foreground">404</div>
+            <h1 className="mt-3 text-2xl sm:text-3xl font-bold text-foreground">
+              {isAr ? "الصفحة غير موجودة" : "Page Not Found"}
+            </h1>
+            <p className="mt-3 text-muted-foreground leading-relaxed">
+              {isAr
+                ? "يبدو أن الرابط غير صحيح أو أن الصفحة تم نقلها. جرّب العودة للرئيسية أو تصفّح أهم الصفحات."
+                : "The link may be incorrect or the page has been moved. Try the homepage or visit key pages below."}
+            </p>
 
-          <h2 className="text-xl font-semibold text-slate-700 mb-4">
-            Page Not Found
-          </h2>
+            <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <Button className="gap-2" onClick={() => go("/")}>
+                <Home size={16} />
+                {isAr ? "الرئيسية" : "Home"}
+              </Button>
 
-          <p className="text-slate-600 mb-8 leading-relaxed">
-            Sorry, the page you are looking for doesn't exist.
-            <br />
-            It may have been moved or deleted.
-          </p>
+              <Button variant="secondary" className="gap-2" onClick={() => go("/services")}>
+                <Wrench size={16} />
+                {isAr ? "الخدمات" : "Services"}
+              </Button>
 
-          <div
-            id="not-found-button-group"
-            className="flex flex-col sm:flex-row gap-3 justify-center"
-          >
-            <Button
-              onClick={handleGoHome}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg"
-            >
-              <Home className="w-4 h-4 mr-2" />
-              Go Home
-            </Button>
+              <Button variant="secondary" className="gap-2" onClick={() => go("/contact")}>
+                <PhoneCall size={16} />
+                {isAr ? "تواصل معنا" : "Contact"}
+              </Button>
+            </div>
+
+            <div className="mt-6 text-xs text-muted-foreground">
+              {isAr ? "أو جرّب من قائمة الموقع بالأعلى." : "You can also use the top navigation menu."}
+            </div>
           </div>
         </CardContent>
       </Card>

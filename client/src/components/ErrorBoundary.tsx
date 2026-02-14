@@ -2,6 +2,7 @@ import { cn } from "@/lib/utils";
 import { AlertTriangle, RotateCcw } from "lucide-react";
 import { Component, ReactNode } from "react";
 import { attemptSelfHealReload } from "@/utils/autoReload";
+import { reportClientError } from "@/utils/reportClientError";
 
 interface Props {
   children: ReactNode;
@@ -26,6 +27,7 @@ class ErrorBoundary extends Component<Props, State> {
     // Always log in production for debugging via browser console.
     // eslint-disable-next-line no-console
     console.error("[Etlaq ErrorBoundary]", error);
+    reportClientError({ type: "errorboundary", message: error?.message || "ErrorBoundary", stack: error?.stack || "" });
 
     // If this is a deployment chunk error, try to self-heal immediately.
     // If throttled, the in-app banner will guide the user.

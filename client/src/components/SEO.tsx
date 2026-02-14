@@ -18,7 +18,7 @@ export function SEO({
   title = 'شركة إطلاق المتميزة | حقن التربة وكشف التكهفات في السعودية',
   description = 'منصة هندسية متخصصة في حقن التربة (حقن أسمنتي) وكشف التكهفات، مع دراسات جيوفيزيائية (GPR/ERT/Seismic) عند الحاجة في جميع مناطق المملكة. اطلب تقييم مختصر وخطة خطوة تالية واضحة.',
   keywords = 'حقن أسمنتي, حقن التربة, حقن تربة, حقن الخرسانة, تقوية الأساسات, معالجة الهبوط, معالجة التشققات, كشف فراغات, كشف التكهفات, دراسة التكهفات, فحص الكهوف, فحص تربة, تقارير تربة, تقارير جيوتقنية, استشارات هندسية, جيوتكنيك, Cement grouting, Soil grouting, Soil injection, Concrete injection, Foundation strengthening, Underpinning, Settlement remediation, Crack repair, Void detection, Cavity detection, Sinkhole investigation, Geophysical surveys, GPR, ERT, Seismic survey, Riyadh, Jeddah, Dammam, Khobar, Madinah, Makkah, Taif, Jubail, Qatif, Dhahran, etlaqksa, ETLAQ DISTINGUISHED COMPANY, شركة إطلاق المتميزة',
-  image = 'https://etlaqksa.com/favicon.png',
+  image = 'https://etlaqksa.com/og-share.png',
   url,
 
   type = 'website',
@@ -127,7 +127,7 @@ export function SEO({
         </>
       )}
       <link rel="canonical" href={canonicalUrl} />
-      <link rel="alternate" hrefLang="ar" href={altAr} />
+      <link rel="alternate" hrefLang="ar-SA" href={altAr} />
       <link rel="alternate" hrefLang="en" href={altEn} />
       <link rel="alternate" hrefLang="x-default" href={altAr} />
 
@@ -137,6 +137,9 @@ export function SEO({
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
+      <meta property="og:image:type" content="image/png" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
       <meta property="og:site_name" content="شركة إطلاق المتميزة" />
       <meta property="og:locale" content={langFromPath === 'ar' ? 'ar_SA' : 'en_US'} />
       <meta property="og:locale:alternate" content="en_US" />

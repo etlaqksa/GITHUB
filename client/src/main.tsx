@@ -10,10 +10,33 @@ import { getLoginUrl } from "./const";
 import { initVitals } from "@/lib/vitals";
 import "./index.css";
 import { registerGlobalPreloadErrorHandler } from "./utils/autoReload";
+import { reportClientError } from "./utils/reportClientError";
 
 
 // Self-heal after deployments: if a hashed chunk preload fails, reload once.
 registerGlobalPreloadErrorHandler();
+
+// Basic client-side monitoring (Netlify Forms)
+if (typeof window !== "undefined") {
+  window.addEventListener("error", (e: any) => {
+    const err = e?.error;
+    reportClientError({
+      type: "error",
+      message: String(err?.message || e?.message || "Unknown error"),
+      stack: String(err?.stack || `${e?.filename || ""}:${e?.lineno || ""}:${e?.colno || ""}`),
+    });
+  });
+
+  window.addEventListener("unhandledrejection", (e: any) => {
+    const r = e?.reason;
+    reportClientError({
+      type: "unhandledrejection",
+      message: String(r?.message || r || "Unhandled promise rejection"),
+      stack: String(r?.stack || ""),
+    });
+  });
+}
+
 
 const queryClient = new QueryClient();
 const logDev = (...args: any[]) => {

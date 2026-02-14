@@ -14,7 +14,7 @@
 <link href="/favicon.png?v=2" rel="shortcut icon"/>
 <link href="/manifest.json" rel="manifest"/>
 <title>شركة إطلاق المتميزة | حقن التربة وكشف الفراغات</title>
-<meta content="شركة إطلاق المتميزة: حلول حقن التربة وكشف التكهفات (Cavity Probing) والدراسات الجيوفيزيائية في الرياض وجميع مدن المملكة. تواصل معنا للحصول على تقييم هندسي." name="description"/><link href="https://etlaqksa.com/" rel="canonical"/>
+<meta content="شركة إطلاق المتميزة: حلول حقن التربة وكشف التكهفات (Cavity Probing) والدراسات الجيوفيزيائية في الرياض وجميع مدن المملكة. تواصل معنا للحصول على تقييم هندسي." name="description"/><link href="https://etlaqksa.com/" rel="canonical"/><link rel="alternate" hreflang="ar-SA" href="https://etlaqksa.com/ar"/><link rel="alternate" hreflang="en" href="https://etlaqksa.com/en"/><link rel="alternate" hreflang="x-default" href="https://etlaqksa.com/ar"/>
 <!-- Google tag (gtag.js) - GA4 -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-LWFKJ1J1HY"></script>
 <script defer="" src="/ga-init.js"></script>
@@ -38,9 +38,46 @@
     "حلول جيوفيزيائية"
   ]
 }</script>
-<meta content="website" property="og:type"/><meta content="ar_SA" property="og:locale"/><meta content="شركة إطلاق المتميزة" property="og:site_name"/><meta content="شركة إطلاق المتميزة | حقن التربة وكشف الفراغات" property="og:title"/><meta content="شركة إطلاق المتميزة: حلول حقن التربة وكشف التكهفات (Cavity Probing) والدراسات الجيوفيزيائية في الرياض وجميع مدن المملكة. تواصل معنا للحصول على تقييم هندسي." property="og:description"/><meta content="https://etlaqksa.com/" property="og:url"/><meta content="https://etlaqksa.com/favicon.png" property="og:image"/><meta content="image/png" property="og:image:type"/><meta content="summary_large_image" name="twitter:card"/><meta content="شركة إطلاق المتميزة | حقن التربة وكشف الفراغات" name="twitter:title"/><meta content="شركة إطلاق المتميزة: حلول حقن التربة وكشف التكهفات (Cavity Probing) والدراسات الجيوفيزيائية في الرياض وجميع مدن المملكة. تواصل معنا للحصول على تقييم هندسي." name="twitter:description"/><meta content="https://etlaqksa.com/favicon.png" name="twitter:image"/></head>
+<meta content="website" property="og:type"/><meta content="ar_SA" property="og:locale"/><meta content="شركة إطلاق المتميزة" property="og:site_name"/><meta content="شركة إطلاق المتميزة | حقن التربة وكشف الفراغات" property="og:title"/><meta content="شركة إطلاق المتميزة: حلول حقن التربة وكشف التكهفات (Cavity Probing) والدراسات الجيوفيزيائية في الرياض وجميع مدن المملكة. تواصل معنا للحصول على تقييم هندسي." property="og:description"/><meta content="https://etlaqksa.com/" property="og:url"/><meta content="https://etlaqksa.com/og-share.png" property="og:image"/><meta content="image/png" property="og:image:type"/><meta content="1200" property="og:image:width"/><meta content="630" property="og:image:height"/><meta content="summary_large_image" name="twitter:card"/><meta content="شركة إطلاق المتميزة | حقن التربة وكشف الفراغات" name="twitter:title"/><meta content="شركة إطلاق المتميزة: حلول حقن التربة وكشف التكهفات (Cavity Probing) والدراسات الجيوفيزيائية في الرياض وجميع مدن المملكة. تواصل معنا للحصول على تقييم هندسي." name="twitter:description"/><meta content="https://etlaqksa.com/og-share.png" name="twitter:image"/></head>
 <body>
+<form name="client-error" method="POST" data-netlify="true" hidden>
+  <input type="hidden" name="form-name" value="client-error" />
+  <input type="text" name="type" />
+  <input type="text" name="message" />
+  <textarea name="stack"></textarea>
+  <input type="text" name="url" />
+  <input type="text" name="ua" />
+  <input type="text" name="ts" />
+</form>
 <div id="root"></div>
+<script>
+(function(){
+  try {
+    var KEY='etlaq_err_reported_v1';
+    function enc(o){return Object.keys(o).map(function(k){return encodeURIComponent(k)+'='+encodeURIComponent(o[k]);}).join('&');}
+    function report(type, info){
+      try{
+        if (sessionStorage.getItem(KEY)==='1') return;
+        sessionStorage.setItem(KEY,'1');
+        var msg = (info && (info.message || info.toString && info.toString())) || 'Unknown error';
+        var stack = (info && info.stack) ? String(info.stack) : '';
+        var payload = {
+          'form-name':'client-error',
+          type: type,
+          message: msg,
+          stack: stack,
+          url: location.href,
+          ua: navigator.userAgent,
+          ts: new Date().toISOString()
+        };
+        fetch('/ar', {method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body: enc(payload)}).catch(function(){});
+      }catch(e){}
+    }
+    window.addEventListener('error', function(e){ report('error', e.error || {message: e.message, stack: (e.filename+':'+e.lineno+':'+e.colno)}); });
+    window.addEventListener('unhandledrejection', function(e){ report('unhandledrejection', e.reason || {message: 'Unhandled promise rejection'}); });
+  } catch(e) {}
+})();
+</script>
 <script src="/src/main.tsx" type="module"></script>
 </body>
 </html>
