@@ -9,6 +9,11 @@ import App from "./App";
 import { getLoginUrl } from "./const";
 import { initVitals } from "@/lib/vitals";
 import "./index.css";
+import { registerGlobalPreloadErrorHandler } from "./utils/autoReload";
+
+
+// Self-heal after deployments: if a hashed chunk preload fails, reload once.
+registerGlobalPreloadErrorHandler();
 
 const queryClient = new QueryClient();
 const logDev = (...args: any[]) => {
