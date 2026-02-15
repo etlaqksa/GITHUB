@@ -154,7 +154,7 @@ export default function Header() {
                 </div>
               </nav>
             ) : (
-              <div className="flex items-center space-x-1 rtl:space-x-reverse">
+              <div className="flex items-center gap-1 whitespace-nowrap flex-nowrap overflow-x-auto [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden px-1">
               {navigation.map((item) =>
               item.external ? (
                 <a key={item.href} href={item.href} target="_blank" rel="noopener noreferrer" className="inline-flex">
