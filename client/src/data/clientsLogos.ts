@@ -12,11 +12,11 @@ export const clientLogos: ClientLogo[] = [
   { name: { ar: "شركة اتحاد البواني", en: "Ittihad Al-Bawani Company" }, fileName: "ittihad-al-bawani-company.webp" },
   { name: { ar: "شركة التربة والأساسات المحدودة - سفكو", en: "SAFCO - Soil & Foundation Company" }, fileName: "safco-soil-and-foundation-company.webp" },
   { name: { ar: "شركة العسيس للمقاولات", en: "Al-Asees Contracting" }, fileName: "al-asees-contracting.webp" },
-  { name: { ar: "شركة دار وإعمار للاستثمار والتطوير العقاري", en: "Dar & Emaar Investment & Real Estate Development" }, fileName: "dar-and-emaar-investment-and-real-estate-development.svg" },
+  { name: { ar: "شركة دار وإعمار للاستثمار والتطوير العقاري", en: "Dar & Emaar Investment & Real Estate Development" }, fileName: "dar-and-emaar-investment-and-real-estate-development.webp" },
   { name: { ar: "شركة ركين العقارية", en: "Rakeen Real Estate Company" }, fileName: "rakeen-real-estate-company.webp" },
   { name: { ar: "شركة فاست", en: "FAST Company" }, fileName: "fast-company.webp" },
   { name: { ar: "شركة فرسينيه", en: "Freyssinet Company" }, fileName: "freyssinet-company.webp" },
-  { name: { ar: "شركة يوكسال إنشاءات السعودية", en: "Yuksel Construction Saudi Arabia" }, fileName: "yuksel-construction-saudi-arabia.svg" },
+  { name: { ar: "شركة يوكسال إنشاءات السعودية", en: "Yuksel Construction Saudi Arabia" }, fileName: "yuksel-construction-saudi-arabia.webp" },
   { name: { ar: "مصنع الري للعصائر والألبان", en: "Al-Raie Juice & Dairy Factory" }, fileName: "al-raie-juice-and-dairy-factory.webp" },
 ];
 
