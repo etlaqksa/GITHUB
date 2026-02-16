@@ -6,8 +6,8 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { absUrl } from '@/lib/siteUrl';
 
 const LAST_UPDATED = {
-  ar: '10 فبراير 2026',
-  en: 'February 10, 2026',
+  ar: '17 فبراير 2026',
+  en: 'February 17, 2026',
 };
 
 type Section = {
@@ -62,6 +62,8 @@ export default function Privacy() {
           items: [
             'قد يستخدم الموقع ملفات تعريف الارتباط لتحسين الأداء وقياس الاستخدام.',
             'يمكنك التحكم بالكوكيز من إعدادات المتصفح، وقد يؤثر تعطيلها على بعض وظائف الموقع.',
+            'نستخدم Microsoft Clarity وMicrosoft Advertising لالتقاط كيفية استخدامك وتفاعلك مع الموقع عبر مقاييس سلوكية وخرائط حرارية وتسجيلات جلسات (Session Replay) لتحسين خدماتنا وتسويقها. يتم جمع بيانات الاستخدام عبر ملفات تعريف ارتباط وتقنيات تتبع أخرى لأغراض تحسين الموقع والأمان/مكافحة الاحتيال والإعلانات. لمزيد من المعلومات عن كيفية جمع Microsoft للبيانات واستخدامها، راجع بيان خصوصية Microsoft: https://www.microsoft.com/privacy/privacystatement',
+          
           ],
         },
         {
@@ -126,6 +128,8 @@ export default function Privacy() {
           items: [
             'The website may use cookies to improve performance and measure usage.',
             'You can control cookies via your browser settings; disabling them may affect certain site features.',
+            'We partner with Microsoft Clarity and Microsoft Advertising to capture how you use and interact with our website through behavioral metrics, heatmaps, and session replay to improve and market our services. Website usage data is captured using first- and third-party cookies and other tracking technologies for site optimization, fraud/security, and advertising. For more information about how Microsoft collects and uses your data, visit the Microsoft Privacy Statement: https://www.microsoft.com/privacy/privacystatement',
+          
           ],
         },
         {

@@ -177,6 +177,29 @@ export default function Footer() {
             </div>
           )}
 
+          
+<div className="mt-3 max-w-4xl mx-auto text-center text-xs leading-relaxed opacity-80">
+  {language === 'ar' ? (
+    <>
+      نحن نُحسّن خدماتنا وتجربة الموقع باستخدام Microsoft Clarity لفهم كيفية استخدامك لموقعنا.
+      باستخدامك للموقع، فإنك توافق على أن نقوم نحن وMicrosoft بجمع هذه البيانات واستخدامها.
+      لمزيد من التفاصيل، راجع{' '}
+      <LocalizedLink href="/privacy">
+        <span className="underline underline-offset-2 hover:opacity-90 cursor-pointer">سياسة الخصوصية</span>
+      </LocalizedLink>.
+    </>
+  ) : (
+    <>
+      We improve our services and website experience by using Microsoft Clarity to understand how you use our site.
+      By using our site, you agree that we and Microsoft can collect and use this data.
+      Learn more in our{' '}
+      <LocalizedLink href="/privacy">
+        <span className="underline underline-offset-2 hover:opacity-90 cursor-pointer">Privacy Policy</span>
+      </LocalizedLink>.
+    </>
+  )}
+</div>
+
           <div className="mt-3 flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
             <LocalizedLink href="/terms">
               <span className="hover:underline cursor-pointer">
