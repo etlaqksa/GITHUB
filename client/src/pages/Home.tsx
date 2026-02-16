@@ -330,10 +330,11 @@ export default function Home() {
   // Collage background selection:
   // - Normal: full collage
   // - Mobile "Desktop site" mode: use a wider/shorter crop to avoid visible gaps.
-  const collageBgUrl = isDesktopModeMobile ? '/hero/home-collage-desktop-mobile-1280.webp' : '/hero/home-collage-1280.webp';
-const collageSrcSet = isDesktopModeMobile
-  ? '/hero/home-collage-desktop-mobile-1280.webp 1280w, /hero/home-collage-desktop-mobile.webp 1920w'
-  : '/hero/home-collage-960.webp 960w, /hero/home-collage-1280.webp 1280w, /hero/home-collage.webp 1920w';
+  // Use smaller defaults to reduce LCP on mobile while keeping high-res options via srcset.
+  const collageBgUrl = isDesktopModeMobile ? '/hero/home-collage-desktop-mobile-960.webp' : '/hero/home-collage-960.webp';
+  const collageSrcSet = isDesktopModeMobile
+    ? '/hero/home-collage-desktop-mobile-640.webp 640w, /hero/home-collage-desktop-mobile-960.webp 960w, /hero/home-collage-desktop-mobile-1280.webp 1280w, /hero/home-collage-desktop-mobile.webp 1920w'
+    : '/hero/home-collage-640.webp 640w, /hero/home-collage-960.webp 960w, /hero/home-collage-1280.webp 1280w, /hero/home-collage.webp 1920w';
 
 
   useEffect(() => {
@@ -425,18 +426,20 @@ const collageSrcSet = isDesktopModeMobile
         }
       >
         <img
-  ref={collageRef}
-  src={collageBgUrl}
-  srcSet={collageSrcSet}
-  sizes="100vw"
-  fetchPriority="high"
-  loading="eager"
-  decoding="async"
-  className="absolute inset-0 z-0 h-full w-full object-cover object-center"
-  style={{ willChange: 'transform', transform: 'translate3d(0, 0, 0) scale(1.08)' }}
-  alt=""
-  aria-hidden="true"
-/>
+          ref={collageRef}
+          src={collageBgUrl}
+          srcSet={collageSrcSet}
+          sizes="100vw"
+          width={1920}
+          height={isDesktopModeMobile ? 640 : 1080}
+          fetchPriority="high"
+          loading="eager"
+          decoding="async"
+          className="absolute inset-0 z-0 h-full w-full object-cover object-center"
+          style={{ willChange: 'transform', transform: 'translate3d(0, 0, 0) scale(1.08)' }}
+          alt=""
+          aria-hidden="true"
+        />
 
         {/* Contrast layer so hero text stays readable (no top/bottom bands) */}
         <div

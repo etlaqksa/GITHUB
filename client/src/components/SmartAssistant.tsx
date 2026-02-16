@@ -45,16 +45,17 @@ const INTENTS = [
   },
 ];
 
-export default function SmartAssistant() {
+export default function SmartAssistant({ initialOpen = false }: { initialOpen?: boolean }) {
   const { language } = useLanguage();
   const isAr = language === 'ar';
 
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(Boolean(initialOpen));
   const [location] = useLocation();
 
   const [input, setInput] = useState('');
   const [allArticles, setAllArticles] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
+  const [hasLoaded, setHasLoaded] = useState(false);
 
   // Auto-close the assistant when route changes (e.g., user clicks a result).
   useEffect(() => {
@@ -63,9 +64,17 @@ export default function SmartAssistant() {
     // Keep the query so the user can reopen quickly if needed.
   }, [location]); // eslint-disable-line react-hooks/exhaustive-deps
 
+  // Load the articles only when the assistant is actually opened.
+  // This avoids downloading/parsing a large dataset during initial page load
+  // (one of the main reasons PageSpeed scores remain low on mobile).
   useEffect(() => {
+    if (!open) return;
+    if (hasLoaded) return;
+
     let alive = true;
+    setHasLoaded(true);
     setLoading(true);
+
     loadArticles()
       .then((a) => {
         if (!alive) return;
@@ -79,10 +88,11 @@ export default function SmartAssistant() {
         if (!alive) return;
         setLoading(false);
       });
+
     return () => {
       alive = false;
     };
-  }, []);
+  }, [open, hasLoaded]);
 
   const results = useMemo((): Result[] => {
     const q = input.trim().toLowerCase();

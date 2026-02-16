@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import React, { createContext, useContext, useState, useLayoutEffect, ReactNode } from 'react';
 import { getLangFromPathname } from '@/lib/localizePath';
 
 type Language = 'ar' | 'en';
@@ -33,13 +33,15 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
     document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
   };
 
-  useEffect(() => {
+  // Use layout effect to avoid a first-paint mismatch (e.g. /en briefly in RTL),
+  // which can create a large CLS in Lighthouse/PageSpeed.
+  useLayoutEffect(() => {
     document.documentElement.setAttribute('lang', language);
     document.documentElement.setAttribute('dir', language === 'ar' ? 'rtl' : 'ltr');
   }, [language]);
 
   // Keep language state in sync if user navigates directly to /ar or /en
-  useEffect(() => {
+  useLayoutEffect(() => {
     const onPop = () => {
       const fromPath = getLangFromPathname(window.location.pathname);
       if (fromPath && fromPath !== language) {

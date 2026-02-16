@@ -9,6 +9,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import SkipToContent from "./components/SkipToContent";
 import WhatsAppButton from "./components/WhatsAppButton";
 import StickyCTA from "./components/StickyCTA";
+import SmartAssistantLauncher from "./components/SmartAssistantLauncher";
 import Analytics from "./components/Analytics";
 import UpdateAvailableBanner from "./components/UpdateAvailableBanner";
 import { ThemeProvider } from "./contexts/ThemeContext";
@@ -33,7 +34,7 @@ const KeywordsAdmin = lazy(() => import("./pages/KeywordsAdmin"));
 const CaseStudies = lazy(() => import("./pages/CaseStudies"));
 const ContentStudio = lazy(() => import("./pages/ContentStudio"));
 
-const SmartAssistant = lazy(() => import("./components/SmartAssistant"));
+// Smart assistant is loaded only after user interaction (see SmartAssistantLauncher)
 
 // SEO local landings (city/service)
 const Locations = lazy(() => import("./pages/Locations"));
@@ -121,9 +122,7 @@ function AppLayout() {
       <Footer />
       <WhatsAppButton />
       <StickyCTA />
-      <Suspense fallback={null}>
-        <SmartAssistant />
-      </Suspense>
+      <SmartAssistantLauncher />
     </div>
   );
 }
