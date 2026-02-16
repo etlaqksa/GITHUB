@@ -173,6 +173,34 @@ const limit =
   ];
   for (const p of AR_SERVICE_PAGES) pushIf(p);
 
+  // 2.5) English core (ensure /en landings are prerendered too for CLS/LCP)
+  const EN_CORE = [
+    '/en',
+    '/en/about',
+    '/en/services',
+    '/en/projects',
+    '/en/case-studies',
+    '/en/gallery',
+    '/en/blog',
+    '/en/faq',
+    '/en/contact',
+    '/en/request-service',
+    '/en/locations',
+    '/en/sitemap',
+    '/en/privacy',
+    '/en/terms',
+  ];
+  for (const p of EN_CORE) pushIf(p);
+
+  // English service pages
+  const EN_SERVICE_PAGES = [
+    '/en/services/grouting',
+    '/en/services/cavity',
+    '/en/services/geophysical',
+    '/en/request-service',
+  ];
+  for (const p of EN_SERVICE_PAGES) pushIf(p);
+
   // 3) Major cities (Arabic) landings
   const MAJOR_CITIES_AR = [
     'الرياض',

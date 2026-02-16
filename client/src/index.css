@@ -3,12 +3,10 @@
 
 /* Local fonts (self-hosted via @fontsource) */
 @import "@fontsource/inter/400.css";
-@import "@fontsource/inter/500.css";
 @import "@fontsource/inter/600.css";
 @import "@fontsource/inter/700.css";
-@import "@fontsource/inter/800.css";
+
 @import "@fontsource/ibm-plex-sans-arabic/400.css";
-@import "@fontsource/ibm-plex-sans-arabic/500.css";
 @import "@fontsource/ibm-plex-sans-arabic/600.css";
 @import "@fontsource/ibm-plex-sans-arabic/700.css";
 
@@ -213,11 +211,11 @@ html[data-theme='red'] {
       radial-gradient(1000px circle at 90% 0%, oklch(0.65 0.18 195 / 0.12), transparent 55%),
       radial-gradient(900px circle at 50% 110%, oklch(0.68 0.22 45 / 0.10), transparent 60%),
       linear-gradient(180deg, oklch(0.99 0 0), oklch(0.96 0.005 250));
-    background-attachment: fixed;
+    background-attachment: scroll;
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Inter', 'IBM Plex Sans Arabic', ui-sans-serif, system-ui, sans-serif;
-    font-weight: 800;
+    font-weight: 700;
     letter-spacing: -0.02em;
     line-height: 1.2;
   }
@@ -233,7 +231,7 @@ html[data-theme='red'] {
   }
   [dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3, [dir="rtl"] h4, [dir="rtl"] h5, [dir="rtl"] h6 {
     font-family: 'IBM Plex Sans Arabic', 'Inter', ui-sans-serif, system-ui, sans-serif;
-    font-weight: 900;
+    font-weight: 700;
     letter-spacing: 0;
   }
   button:not(:disabled),
@@ -973,3 +971,10 @@ img {
 
 /* Prevent layout shift when the scrollbar appears/disappears (reduces CLS) */
 html { scrollbar-gutter: stable; }
+
+
+@media (min-width: 768px) {
+  .app-background {
+    background-attachment: fixed;
+  }
+}

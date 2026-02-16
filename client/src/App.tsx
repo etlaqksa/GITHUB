@@ -1,17 +1,12 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Route, Switch, Router as WouterRouter } from "wouter";
-import { Suspense, lazy, useEffect, useMemo, useState } from "react";
+import { Suspense, lazy, useEffect, useMemo, useState, type ReactNode } from "react";
 import ErrorBoundary from "./components/ErrorBoundary";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import SkipToContent from "./components/SkipToContent";
-import WhatsAppButton from "./components/WhatsAppButton";
-import StickyCTA from "./components/StickyCTA";
-import SmartAssistantLauncher from "./components/SmartAssistantLauncher";
-import Analytics from "./components/Analytics";
-import UpdateAvailableBanner from "./components/UpdateAvailableBanner";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import { InternalLinkingProvider } from "./contexts/InternalLinkingContext";
@@ -52,6 +47,58 @@ const ServiceCavity = lazy(() => import("./pages/services/ServiceCavity"));
 const ServiceGeophysical = lazy(() => import("./pages/services/ServiceGeophysical"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
+// Defer non-critical UI/analytics to improve LCP/TBT
+const LazyWhatsAppButton = lazy(() => import("./components/WhatsAppButton"));
+const LazyStickyCTA = lazy(() => import("./components/StickyCTA"));
+const LazySmartAssistantLauncher = lazy(() => import("./components/SmartAssistantLauncher"));
+const LazyAnalytics = lazy(() => import("./components/Analytics"));
+const LazyUpdateAvailableBanner = lazy(() => import("./components/UpdateAvailableBanner"));
+
+function DeferredMount({
+  children,
+  timeoutMs = 1200,
+}: {
+  children: ReactNode;
+  timeoutMs?: number;
+}) {
+  const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    let cancelled = false;
+    const reveal = () => {
+      if (cancelled) return;
+      setShow(true);
+    };
+
+    const t = window.setTimeout(reveal, timeoutMs);
+
+    let idleId: any = null;
+    try {
+      if ('requestIdleCallback' in window) {
+        // @ts-ignore
+        idleId = window.requestIdleCallback(reveal, { timeout: timeoutMs });
+      }
+    } catch {
+      // ignore
+    }
+
+    return () => {
+      cancelled = true;
+      try {
+        if (idleId && 'cancelIdleCallback' in window) {
+          // @ts-ignore
+          window.cancelIdleCallback(idleId);
+        }
+      } catch {
+        // ignore
+      }
+      window.clearTimeout(t);
+    };
+  }, [timeoutMs]);
+
+  return show ? <>{children}</> : null;
+}
+
 function RouteLoader() {
   return (
     <div className="container mx-auto px-4 py-10">
@@ -70,7 +117,11 @@ function AppLayout() {
     <div className="flex flex-col min-h-screen app-background pb-24 md:pb-0">
       <ScrollToTop />
       <SkipToContent />
-      <UpdateAvailableBanner />
+      <Suspense fallback={null}>
+        <DeferredMount timeoutMs={600}>
+          <LazyUpdateAvailableBanner />
+        </DeferredMount>
+      </Suspense>
       <Header />
       <main id="main-content" className="flex-1">
         <InternalLinkingProvider>
@@ -120,9 +171,18 @@ function AppLayout() {
         </InternalLinkingProvider>
       </main>
       <Footer />
-      <WhatsAppButton />
-      <StickyCTA />
-      <SmartAssistantLauncher />
+      <Suspense fallback={null}>
+        <DeferredMount timeoutMs={1200}>
+          <LazyWhatsAppButton />
+        </DeferredMount>
+        <DeferredMount timeoutMs={1400}>
+          <LazyStickyCTA />
+        </DeferredMount>
+        <DeferredMount timeoutMs={1600}>
+          <LazySmartAssistantLauncher />
+        </DeferredMount>
+      </Suspense>
+
     </div>
   );
 }
@@ -175,7 +235,11 @@ function App() {
         <LanguageProvider>
           <TooltipProvider>
             <Toaster />
-            <Analytics />
+            <Suspense fallback={null}>
+              <DeferredMount timeoutMs={900}>
+                <LazyAnalytics />
+              </DeferredMount>
+            </Suspense>
             <WouterRouter base={base}>
               <AppLayout />
             </WouterRouter>

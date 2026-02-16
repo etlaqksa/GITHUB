@@ -46,6 +46,12 @@ function RotatingText({ items, intervalMs = 2400, className = '' }: RotatingText
   const [index, setIndex] = useState(0);
   const [visible, setVisible] = useState(true);
 
+  // Reserve width to reduce CLS when the text rotates (especially on the hero).
+  const maxLen = useMemo(
+    () => safeItems.reduce((m, t) => Math.max(m, (t || '').length), 0),
+    [safeItems]
+  );
+
   useEffect(() => {
     if (safeItems.length <= 1) return;
 
@@ -61,7 +67,7 @@ function RotatingText({ items, intervalMs = 2400, className = '' }: RotatingText
   }, [safeItems.length, intervalMs]);
 
   return (
-    <span className={`inline-block transition-opacity duration-300 ${visible ? 'opacity-100' : 'opacity-0'} ${className}`}>
+    <span style={{ minWidth: `${Math.max(4, maxLen)}ch` }} className={`inline-block transition-opacity duration-300 ${visible ? 'opacity-100' : 'opacity-0'} ${className}`}>
       {safeItems[index]}
     </span>
   );
