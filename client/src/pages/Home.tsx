@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
 
 import LocalizedLink from '@/components/LocalizedLink';
 import { SEO } from '@/components/SEO';
@@ -72,6 +72,16 @@ function RotatingText({ items, intervalMs = 2400, className = '' }: RotatingText
     </span>
   );
 }
+
+const accentStyle = (rgb: string): CSSProperties => ({ ['--accent-rgb' as any]: rgb });
+
+const QUICK_PATH_ACCENTS = ['37 99 235', '245 158 11', '16 185 129', '168 85 247'];
+const SERVICE_ACCENTS: Record<'grouting' | 'cavity' | 'geophysical', string> = {
+  grouting: '37 99 235',
+  cavity: '245 158 11',
+  geophysical: '16 185 129',
+};
+const PILLAR_ACCENTS = ['16 185 129', '37 99 235', '245 158 11', '168 85 247'];
 
 export default function Home() {
   const { language } = useLanguage();
@@ -610,11 +620,15 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
-            {quickPaths.map((p) => (
-              <Card key={p.title} className="h-full border-border/60 bg-card/70 backdrop-blur">
+            {quickPaths.map((p, idx) => (
+              <Card
+                key={p.title}
+                className="h-full etlaq-accent-card"
+                style={accentStyle(QUICK_PATH_ACCENTS[idx % QUICK_PATH_ACCENTS.length])}
+              >
                 <CardHeader className="space-y-3">
-                  <div className="h-12 w-12 rounded-2xl border bg-background flex items-center justify-center">
-                    <p.icon className="h-6 w-6 text-primary" />
+                  <div className="h-12 w-12 rounded-2xl etlaq-accent-icon flex items-center justify-center">
+                    <p.icon className="h-6 w-6" />
                   </div>
                   <CardTitle className="text-xl">{p.title}</CardTitle>
                   <CardDescription className="leading-relaxed">{p.desc}</CardDescription>
@@ -649,11 +663,15 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-6 mt-10">
             {services.map((s) => (
-              <Card key={s.href} className="h-full">
+              <Card
+                key={s.href}
+                className="h-full etlaq-accent-card"
+                style={accentStyle(SERVICE_ACCENTS[s.key])}
+              >
                 <CardHeader>
                   <div className="flex items-center gap-3">
-                    <div className="h-12 w-12 rounded-2xl border bg-background flex items-center justify-center">
-                      <s.icon className="h-6 w-6 text-primary" />
+                    <div className="h-12 w-12 rounded-2xl etlaq-accent-icon flex items-center justify-center">
+                      <s.icon className="h-6 w-6" />
                     </div>
                     <div>
                       <CardTitle className="text-xl">{s.title}</CardTitle>
@@ -709,11 +727,15 @@ export default function Home() {
               </p>
 
               <div className="grid sm:grid-cols-2 gap-4 pt-2">
-                {valuePillars.map((p) => (
-                  <Card key={p.title} className="border-border/60 bg-card/70 backdrop-blur">
+                {valuePillars.map((p, idx) => (
+                  <Card
+                    key={p.title}
+                    className="etlaq-accent-card"
+                    style={accentStyle(PILLAR_ACCENTS[idx % PILLAR_ACCENTS.length])}
+                  >
                     <CardHeader className="space-y-2">
-                      <div className="h-11 w-11 rounded-2xl border bg-background flex items-center justify-center">
-                        <p.icon className="h-6 w-6 text-primary" />
+                      <div className="h-11 w-11 rounded-2xl etlaq-accent-icon flex items-center justify-center">
+                        <p.icon className="h-6 w-6" />
                       </div>
                       <CardTitle className="text-lg">{p.title}</CardTitle>
                       <CardDescription className="leading-relaxed">{p.desc}</CardDescription>
