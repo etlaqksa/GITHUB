@@ -121,6 +121,49 @@
   }
 }
 
+/* Accent scrollbar (global + helper class) */
+:root {
+  --etlaq-scrollbar-thumb: rgb(var(--etlaq-accent-rgb, 37 99 235) / 0.55);
+  --etlaq-scrollbar-thumb-hover: rgb(var(--etlaq-accent-rgb, 37 99 235) / 0.78);
+  --etlaq-scrollbar-track: rgb(0 0 0 / 0.06);
+}
+
+/* Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--etlaq-scrollbar-thumb) var(--etlaq-scrollbar-track);
+}
+
+/* WebKit (Chrome/Edge/Safari) */
+@supports selector(::-webkit-scrollbar) {
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--etlaq-scrollbar-track);
+    border-radius: 999px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--etlaq-scrollbar-thumb);
+    border-radius: 999px;
+    border: 3px solid transparent;
+    background-clip: padding-box;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--etlaq-scrollbar-thumb-hover);
+    background-clip: padding-box;
+  }
+}
+
+/* Optional: make scrollbars a touch clearer for assistant/large panels */
+.etlaq-scrollbar {
+  scrollbar-gutter: stable;
+}
+
 html { font-family: var(--font-sans); }
 body { font-family: var(--font-sans); }
 

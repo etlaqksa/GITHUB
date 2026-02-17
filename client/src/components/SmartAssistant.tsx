@@ -257,7 +257,7 @@ export default function SmartAssistant({ initialOpen = false }: { initialOpen?: 
             </DialogHeader>
           </div>
 
-          <div className="px-6 pb-5 flex-1 min-h-0 overflow-y-auto overscroll-contain space-y-4">
+          <div className="px-6 pb-5 flex-1 min-h-0 overflow-y-auto overscroll-contain space-y-4 etlaq-scrollbar">
             <p className="text-sm text-muted-foreground leading-relaxed">
               {isAr
                 ? 'ابحث داخل موسوعة المقالات أو اختر ما تريد بسرعة. عند فتح صفحة، سيُغلق المساعد تلقائياً.'
