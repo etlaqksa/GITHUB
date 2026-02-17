@@ -42,9 +42,9 @@ export function ThemeProvider({
   useEffect(() => {
     const html = document.documentElement;
 
-    // Ensure legacy static themes don't interfere with the new page-accent system.
-    if (html.hasAttribute("data-theme")) html.removeAttribute("data-theme");
-    
+    // Apply the selected static color theme globally across all pages.
+    html.setAttribute("data-theme", colorTheme);
+
     // Handle Light/Dark Mode
     if (mode === "dark") {
       html.classList.add("dark");
@@ -57,8 +57,7 @@ export function ThemeProvider({
       // ignore
     }
 
-    // Persist the user's preferred color family (used as a global accent seed).
-    // NOTE: We do NOT apply a static data-theme now. Accents are page-specific.
+    // Persist the user's preferred color family.
     try {
       localStorage.setItem("color-theme", colorTheme);
     } catch {

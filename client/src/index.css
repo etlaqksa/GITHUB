@@ -64,8 +64,8 @@
 @layer components {
   /* Duplicate selector increases specificity to override Radix/shadcn defaults. */
   .etlaq-tab.etlaq-tab {
-    --accent-rgb: var(--page-accent-rgb, 37 99 235);
-    --accent2-rgb: var(--page-accent2-rgb, 14 165 233);
+    --accent-rgb: var(--etlaq-accent-rgb, 37 99 235);
+    --accent2-rgb: var(--etlaq-accent2-rgb, 14 165 233);
 
     height: auto;
     padding: 0.9rem 1rem;
@@ -76,6 +76,29 @@
     box-shadow: 0 10px 26px rgb(0 0 0 / 0.10);
     transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease, filter 200ms ease;
     will-change: transform;
+  }
+
+  .etlaq-tab-shell.etlaq-tab-shell {
+    /* Larger outer rectangle that hosts the tab trigger */
+    --accent-rgb: var(--accent-rgb, var(--etlaq-accent-rgb, 37 99 235));
+    --accent2-rgb: var(--accent2-rgb, var(--etlaq-accent2-rgb, 14 165 233));
+
+    border-radius: 1.25rem;
+    border: 1px solid rgb(var(--accent-rgb) / 0.18);
+    background:
+      radial-gradient(900px 420px at 10% 0%, rgb(var(--accent-rgb) / 0.10), transparent 60%),
+      radial-gradient(700px 360px at 92% 10%, rgb(var(--accent2-rgb) / 0.07), transparent 55%),
+      linear-gradient(180deg, rgb(255 255 255 / 0.55), rgb(255 255 255 / 0.35));
+    box-shadow: 0 10px 28px rgb(0 0 0 / 0.08);
+    transition: box-shadow 200ms ease, border-color 200ms ease, filter 200ms ease;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .etlaq-tab-shell.etlaq-tab-shell:hover {
+      border-color: rgb(var(--accent-rgb) / 0.34);
+      box-shadow: 0 16px 44px rgb(0 0 0 / 0.12);
+      filter: saturate(1.02);
+    }
   }
 
   .etlaq-tab.etlaq-tab[data-state="active"] {
@@ -128,26 +151,41 @@ html[lang="en"] {
 html[data-theme='blue'] {
   --primary: oklch(0.60 0.25 250) !important;
   --ring: oklch(0.60 0.25 250) !important;
+
+  --etlaq-accent-rgb: 37 99 235 !important;
+  --etlaq-accent2-rgb: 14 165 233 !important;
 }
 
 html[data-theme='green'] {
   --primary: oklch(0.62 0.18 145) !important;
   --ring: oklch(0.62 0.18 145) !important;
+
+  --etlaq-accent-rgb: 34 197 94 !important;
+  --etlaq-accent2-rgb: 16 185 129 !important;
 }
 
 html[data-theme='orange'] {
   --primary: oklch(0.68 0.22 45) !important;
   --ring: oklch(0.68 0.22 45) !important;
+
+  --etlaq-accent-rgb: 249 115 22 !important;
+  --etlaq-accent2-rgb: 245 158 11 !important;
 }
 
 html[data-theme='purple'] {
   --primary: oklch(0.62 0.24 290) !important;
   --ring: oklch(0.62 0.24 290) !important;
+
+  --etlaq-accent-rgb: 168 85 247 !important;
+  --etlaq-accent2-rgb: 99 102 241 !important;
 }
 
 html[data-theme='red'] {
   --primary: oklch(0.60 0.25 25) !important;
   --ring: oklch(0.60 0.25 25) !important;
+
+  --etlaq-accent-rgb: 239 68 68 !important;
+  --etlaq-accent2-rgb: 244 63 94 !important;
 }
 
 :root {
@@ -243,8 +281,8 @@ html[data-theme='red'] {
 
   /* App background: subtle, professional color wash (applied on the root wrapper) */
   .app-background {
-    --pa: var(--page-accent-rgb, 37 99 235);
-    --pa2: var(--page-accent2-rgb, 14 165 233);
+    --pa: var(--etlaq-accent-rgb, 37 99 235);
+    --pa2: var(--etlaq-accent2-rgb, 14 165 233);
     background-color: var(--background);
     background-image:
       radial-gradient(1200px circle at 15% -10%, rgb(var(--pa) / 0.13), transparent 55%),
@@ -365,7 +403,7 @@ html, body, #root {
   }
   
   .hover-glow:hover {
-    box-shadow: 0 0 20px rgb(var(--page-accent-rgb, 14 165 233) / 0.40);
+    box-shadow: 0 0 20px rgb(var(--etlaq-accent-rgb, 14 165 233) / 0.40);
     transform: translateY(-4px);
   }
 
@@ -391,7 +429,7 @@ html, body, #root {
   
   .card-hover:hover {
     transform: translateY(-12px) scale(1.02);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12), 0 0 0 1px rgb(var(--page-accent-rgb, 14 165 233) / 0.12);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12), 0 0 0 1px rgb(var(--etlaq-accent-rgb, 14 165 233) / 0.12);
   }
 
   .card-hover::before {
@@ -533,7 +571,7 @@ html, body, #root {
   }
 
   .shadow-hover-glow:hover {
-    box-shadow: 0 0 30px rgb(var(--page-accent-rgb, 14 165 233) / 0.55), 0 10px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 30px rgb(var(--etlaq-accent-rgb, 14 165 233) / 0.55), 0 10px 25px rgba(0, 0, 0, 0.1);
     transform: translateY(-6px);
   }
 
@@ -550,8 +588,8 @@ html, body, #root {
     border-radius: inherit;
     background: linear-gradient(
       135deg,
-      rgb(var(--page-accent-rgb, 14 165 233) / 1),
-      rgb(var(--page-accent2-rgb, 168 85 247) / 1)
+      rgb(var(--etlaq-accent-rgb, 14 165 233) / 1),
+      rgb(var(--etlaq-accent2-rgb, 168 85 247) / 1)
     ) border-box;
     -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
@@ -1029,8 +1067,8 @@ html { scrollbar-gutter: stable; }
   /* Duplicate selector increases specificity so it overrides shadcn/tailwind utilities. */
   .etlaq-card.etlaq-card {
     /* Default accent comes from the current page (can still be overridden per element via inline --accent-rgb). */
-    --accent-rgb: var(--page-accent-rgb, 37 99 235);
-    --accent2-rgb: var(--page-accent2-rgb, 14 165 233);
+    --accent-rgb: var(--etlaq-accent-rgb, 37 99 235);
+    --accent2-rgb: var(--etlaq-accent2-rgb, 14 165 233);
 
     position: relative;
     overflow: hidden;
@@ -1092,8 +1130,8 @@ html { scrollbar-gutter: stable; }
   /* Duplicate selector increases specificity so it overrides shadcn/tailwind utilities. */
   .etlaq-accent-card.etlaq-accent-card {
     /* Default accent comes from the current page (overridden per-card via inline --accent-rgb when needed). */
-    --accent-rgb: var(--page-accent-rgb, 37 99 235);
-    --accent2-rgb: var(--page-accent2-rgb, 14 165 233);
+    --accent-rgb: var(--etlaq-accent-rgb, 37 99 235);
+    --accent2-rgb: var(--etlaq-accent2-rgb, 14 165 233);
 
     position: relative;
     overflow: hidden;

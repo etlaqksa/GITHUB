@@ -18,12 +18,15 @@ import { trackEvent } from '@/lib/analytics';
 import { absUrl } from '@/lib/siteUrl';
 import { cities } from '@/data/seoLocations';
 import { ArrowRight, CheckCircle2, ClipboardList, Drill, MapPin, MessageCircle, PhoneCall, Radar, ShieldCheck, Timer } from 'lucide-react';
+import { useState } from 'react';
 
 export default function Services() {
   const { language } = useLanguage();
   const lang = language === 'en' ? 'en' : 'ar';
 
   const canonical = absUrl(`/${lang}/services`);
+
+  const [activeService, setActiveService] = useState<'grouting' | 'cavity' | 'geophysical'>('grouting');
 
   const hero = {
     title: lang === 'ar' ? 'خدماتنا الهندسية' : 'Our engineering services',
@@ -350,33 +353,57 @@ export default function Services() {
           </div>
 
           <div className="mt-8">
-            <Tabs defaultValue="grouting" className="w-full">
+            <Tabs value={activeService} onValueChange={(v) => setActiveService(v as any)} className="w-full">
               <div className="flex justify-center">
                 <TabsList
                   dir={lang === 'ar' ? 'rtl' : 'ltr'}
-                  className="w-full max-w-3xl p-2 rounded-2xl bg-muted/25 backdrop-blur-sm border border-primary/15 shadow-sm flex items-stretch gap-2"
+                  className="w-full max-w-4xl p-2 rounded-3xl bg-muted/25 backdrop-blur-sm border border-primary/15 shadow-sm flex items-stretch gap-3"
                 >
-                  <TabsTrigger
-                    value="grouting"
-                    className="etlaq-tab flex-1 text-base sm:text-lg font-extrabold tracking-tight"
+                  {/* Each trigger is wrapped in a larger rectangle card (hover switches tab content automatically). */}
+                  <div
+                    className="etlaq-tab-shell flex-1 rounded-2xl p-1.5"
                     style={{ ['--accent-rgb' as any]: '34 197 94', ['--accent2-rgb' as any]: '16 185 129' }}
+                    onMouseEnter={() => setActiveService('grouting')}
+                    onFocus={() => setActiveService('grouting')}
                   >
-                    {lang === 'ar' ? 'حقن التربة' : 'Soil Grouting'}
-                  </TabsTrigger>
-                  <TabsTrigger
-                    value="cavity"
-                    className="etlaq-tab flex-1 text-base sm:text-lg font-extrabold tracking-tight"
+                    <TabsTrigger
+                      value="grouting"
+                      className="etlaq-tab w-full h-full text-base sm:text-lg md:text-xl font-extrabold tracking-tight"
+                      style={{ ['--accent-rgb' as any]: '34 197 94', ['--accent2-rgb' as any]: '16 185 129' }}
+                    >
+                      {lang === 'ar' ? 'حقن التربة' : 'Soil Grouting'}
+                    </TabsTrigger>
+                  </div>
+
+                  <div
+                    className="etlaq-tab-shell flex-1 rounded-2xl p-1.5"
                     style={{ ['--accent-rgb' as any]: '249 115 22', ['--accent2-rgb' as any]: '245 158 11' }}
+                    onMouseEnter={() => setActiveService('cavity')}
+                    onFocus={() => setActiveService('cavity')}
                   >
-                    {lang === 'ar' ? 'كشف التكهفات' : 'Cavity Probing'}
-                  </TabsTrigger>
-                  <TabsTrigger
-                    value="geophysical"
-                    className="etlaq-tab flex-1 text-base sm:text-lg font-extrabold tracking-tight"
-                    style={{ ['--accent-rgb' as any]: '168 85 247', ['--accent2-rgb' as any]: '99 102 241' }}
+                    <TabsTrigger
+                      value="cavity"
+                      className="etlaq-tab w-full h-full text-base sm:text-lg md:text-xl font-extrabold tracking-tight"
+                      style={{ ['--accent-rgb' as any]: '249 115 22', ['--accent2-rgb' as any]: '245 158 11' }}
+                    >
+                      {lang === 'ar' ? 'كشف التكهفات' : 'Cavity Probing'}
+                    </TabsTrigger>
+                  </div>
+
+                  <div
+                    className="etlaq-tab-shell flex-1 rounded-2xl p-1.5"
+                    style={{ ['--accent-rgb' as any]: '99 102 241', ['--accent2-rgb' as any]: '168 85 247' }}
+                    onMouseEnter={() => setActiveService('geophysical')}
+                    onFocus={() => setActiveService('geophysical')}
                   >
-                    {lang === 'ar' ? 'جيوفيزياء' : 'Geophysics'}
-                  </TabsTrigger>
+                    <TabsTrigger
+                      value="geophysical"
+                      className="etlaq-tab w-full h-full text-base sm:text-lg md:text-xl font-extrabold tracking-tight"
+                      style={{ ['--accent-rgb' as any]: '99 102 241', ['--accent2-rgb' as any]: '168 85 247' }}
+                    >
+                      {lang === 'ar' ? 'جيوفيزياء' : 'Geophysics'}
+                    </TabsTrigger>
+                  </div>
                 </TabsList>
               </div>
 

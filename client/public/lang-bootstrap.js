@@ -43,71 +43,17 @@
       document.head.appendChild(link);
     }
 
-    // ---- Page-level accent bootstrap (runs before React mounts) ----
-    // Goal: reduce first-paint mismatch for colors (and keep UI feeling cohesive).
-    // We compute a deterministic accent from the semantic route (strip /ar or /en).
-    function stripLangPrefix(path) {
-      if (!path) return '/';
-      var p2 = String(path);
-      if (p2 === '/ar' || p2 === '/en') return '/';
-      if (p2.indexOf('/ar/') === 0) return p2.slice(3);
-      if (p2.indexOf('/en/') === 0) return p2.slice(3);
-      return p2;
-    }
+    
 
-    function hashString(input) {
-      var h = 0;
-      for (var i = 0; i < input.length; i++) {
-        h = (h * 31 + input.charCodeAt(i)) >>> 0;
+    // Theme bootstrap (optional): apply stored color theme early to avoid flash.
+    try {
+      var t = localStorage.getItem('color-theme');
+      if (t && (t === 'blue' || t === 'green' || t === 'orange' || t === 'purple' || t === 'red')) {
+        html.setAttribute('data-theme', t);
       }
-      return h;
+    } catch (e3) {
+      // ignore
     }
-
-    function hslToRgb(h, s, l) {
-      var c = (1 - Math.abs(2 * l - 1)) * s;
-      var hp = h / 60;
-      var x = c * (1 - Math.abs((hp % 2) - 1));
-      var r1 = 0, g1 = 0, b1 = 0;
-      if (hp >= 0 && hp < 1) { r1 = c; g1 = x; b1 = 0; }
-      else if (hp >= 1 && hp < 2) { r1 = x; g1 = c; b1 = 0; }
-      else if (hp >= 2 && hp < 3) { r1 = 0; g1 = c; b1 = x; }
-      else if (hp >= 3 && hp < 4) { r1 = 0; g1 = x; b1 = c; }
-      else if (hp >= 4 && hp < 5) { r1 = x; g1 = 0; b1 = c; }
-      else if (hp >= 5 && hp < 6) { r1 = c; g1 = 0; b1 = x; }
-      var m = l - c / 2;
-      var r = Math.round((r1 + m) * 255);
-      var g = Math.round((g1 + m) * 255);
-      var b = Math.round((b1 + m) * 255);
-      return [r, g, b];
-    }
-
-    var theme = null;
-    try { theme = localStorage.getItem('color-theme'); } catch (e2) { theme = null; }
-    var offsets = { blue: 0, green: 120, orange: 35, purple: 275, red: 10 };
-    var offset = offsets[theme] || 0;
-
-    var semantic = stripLangPrefix(clean);
-    semantic = (semantic || '/').replace(/\/+$/, '') || '/';
-    var key = semantic === '' ? '/' : semantic;
-
-    var hue = (hashString(key) % 360 + offset + 360) % 360;
-    var hue2 = (hue + 28) % 360;
-
-    var isDark = html.classList.contains('dark');
-    var l1 = isDark ? 0.58 : 0.46;
-    var l2 = isDark ? 0.54 : 0.50;
-    var s1 = 0.88;
-    var s2 = 0.86;
-
-    var rgb1 = hslToRgb(hue, s1, l1);
-    var rgb2 = hslToRgb(hue2, s2, l2);
-
-    html.style.setProperty('--page-accent-h', String(hue));
-    html.style.setProperty('--page-accent-rgb', rgb1[0] + ' ' + rgb1[1] + ' ' + rgb1[2]);
-    html.style.setProperty('--page-accent2-rgb', rgb2[0] + ' ' + rgb2[1] + ' ' + rgb2[2]);
-    html.style.setProperty('--primary', 'rgb(' + rgb1[0] + ' ' + rgb1[1] + ' ' + rgb1[2] + ')');
-    html.style.setProperty('--ring', 'rgb(' + rgb1[0] + ' ' + rgb1[1] + ' ' + rgb1[2] + ')');
-    html.style.setProperty('--accent', 'rgb(' + rgb1[0] + ' ' + rgb1[1] + ' ' + rgb1[2] + ' / 0.12)');
   } catch (e) {
     // ignore
   }

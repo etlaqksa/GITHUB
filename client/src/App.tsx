@@ -7,7 +7,6 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import SkipToContent from "./components/SkipToContent";
-import PageAccent from "./components/PageAccent";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import { InternalLinkingProvider } from "./contexts/InternalLinkingContext";
@@ -116,8 +115,7 @@ function RouteLoader() {
 function AppLayout() {
   return (
     <div className="flex flex-col min-h-screen app-background pb-24 md:pb-0">
-      <PageAccent />
-      <ScrollToTop />
+            <ScrollToTop />
       <SkipToContent />
       <Suspense fallback={null}>
         <DeferredMount timeoutMs={600}>
