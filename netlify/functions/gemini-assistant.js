@@ -180,6 +180,12 @@ async function callGemini({ question, language }) {
 
 exports.handler = async (event) => {
   try {
+    // Enable Gemini assistant ONLY on Production deploys.
+    // Netlify sets CONTEXT to: production | deploy-preview | branch-deploy | dev
+    const context = process.env.CONTEXT || "";
+    if (context !== "production") {
+      return json(403, { ok: false, error: "Assistant is enabled only on production." });
+    }
     if (event.httpMethod !== "POST") {
       return json(405, { error: "Method not allowed" }, { Allow: "POST" });
     }
