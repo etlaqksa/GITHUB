@@ -17,7 +17,7 @@ import { buildBreadcrumbList } from '@/lib/schemaHelpers';
 import { trackEvent } from '@/lib/analytics';
 import { absUrl } from '@/lib/siteUrl';
 import { cities } from '@/data/seoLocations';
-import { CheckCircle2, ClipboardList, Drill, MapPin, Radar, ShieldCheck, Timer } from 'lucide-react';
+import { ArrowRight, CheckCircle2, ClipboardList, Drill, MapPin, MessageCircle, PhoneCall, Radar, ShieldCheck, Timer } from 'lucide-react';
 
 export default function Services() {
   const { language } = useLanguage();
@@ -352,20 +352,41 @@ export default function Services() {
           <div className="mt-8">
             <Tabs defaultValue="grouting" className="w-full">
               <div className="flex justify-center">
-                <TabsList className="grid grid-cols-3 w-full max-w-2xl">
-                  <TabsTrigger value="grouting">{lang === 'ar' ? 'حقن التربة' : 'Grouting'}</TabsTrigger>
-                  <TabsTrigger value="cavity">{lang === 'ar' ? 'كشف التكهفات' : 'Detection'}</TabsTrigger>
-                  <TabsTrigger value="geophysical">{lang === 'ar' ? 'جيوفيزياء' : 'Geophysics'}</TabsTrigger>
+                <TabsList
+                  dir={lang === 'ar' ? 'rtl' : 'ltr'}
+                  className="w-full max-w-3xl p-2 rounded-2xl bg-muted/25 backdrop-blur-sm border border-primary/15 shadow-sm flex items-stretch gap-2"
+                >
+                  <TabsTrigger
+                    value="grouting"
+                    className="etlaq-tab flex-1 text-base sm:text-lg font-extrabold tracking-tight"
+                    style={{ ['--accent-rgb' as any]: '34 197 94', ['--accent2-rgb' as any]: '16 185 129' }}
+                  >
+                    {lang === 'ar' ? 'حقن التربة' : 'Soil Grouting'}
+                  </TabsTrigger>
+                  <TabsTrigger
+                    value="cavity"
+                    className="etlaq-tab flex-1 text-base sm:text-lg font-extrabold tracking-tight"
+                    style={{ ['--accent-rgb' as any]: '249 115 22', ['--accent2-rgb' as any]: '245 158 11' }}
+                  >
+                    {lang === 'ar' ? 'كشف التكهفات' : 'Cavity Probing'}
+                  </TabsTrigger>
+                  <TabsTrigger
+                    value="geophysical"
+                    className="etlaq-tab flex-1 text-base sm:text-lg font-extrabold tracking-tight"
+                    style={{ ['--accent-rgb' as any]: '168 85 247', ['--accent2-rgb' as any]: '99 102 241' }}
+                  >
+                    {lang === 'ar' ? 'جيوفيزياء' : 'Geophysics'}
+                  </TabsTrigger>
                 </TabsList>
               </div>
 
               {services.map((s) => (
                 <TabsContent key={s.key} value={s.key} className="mt-6">
                   <Card className="rounded-3xl border bg-card/70 backdrop-blur">
-                    <CardContent className="p-6 md:p-8">
-                      <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-6 items-start">
+                    <CardContent dir={lang === 'ar' ? 'rtl' : 'ltr'} className="p-6 md:p-8">
+                      <div className="space-y-6">
                         <div className="space-y-4">
-                          <div className="flex items-start gap-3">
+                          <div className="flex items-start gap-3 rtl:flex-row-reverse rtl:text-right">
                             <div className="h-12 w-12 rounded-2xl border bg-background flex items-center justify-center">
                               <s.icon className="h-6 w-6 text-primary" />
                             </div>
@@ -381,7 +402,7 @@ export default function Services() {
                               <p className="font-semibold mb-3">{lang === 'ar' ? 'مناسب لـ' : 'Best for'}</p>
                               <ul className="space-y-2">
                                 {s.bestFor.map((b) => (
-                                  <li key={b} className="flex items-start gap-2 text-sm text-muted-foreground">
+                                  <li key={b} className="flex items-start gap-2 text-sm text-muted-foreground rtl:flex-row-reverse rtl:text-right">
                                     <CheckCircle2 className="h-4 w-4 mt-0.5 text-primary" />
                                     <span className="leading-relaxed">{b}</span>
                                   </li>
@@ -392,7 +413,7 @@ export default function Services() {
                               <p className="font-semibold mb-3">{lang === 'ar' ? 'ماذا تستلم؟' : 'What you get'}</p>
                               <ul className="space-y-2">
                                 {s.deliverables.map((d) => (
-                                  <li key={d} className="flex items-start gap-2 text-sm text-muted-foreground">
+                                  <li key={d} className="flex items-start gap-2 text-sm text-muted-foreground rtl:flex-row-reverse rtl:text-right">
                                     <CheckCircle2 className="h-4 w-4 mt-0.5 text-primary" />
                                     <span className="leading-relaxed">{d}</span>
                                   </li>
@@ -402,20 +423,41 @@ export default function Services() {
                           </div>
                         </div>
 
-                        <div className="space-y-3">
+                        {/* CTAs (horizontal) */}
+                        <div
+                          dir={lang === 'ar' ? 'rtl' : 'ltr'}
+                          className="flex flex-wrap items-center gap-3 justify-center md:justify-start rtl:md:justify-end"
+                        >
                           <LocalizedLink href={s.href}>
-                            <Button variant="outline" className="w-full" onClick={() => trackEvent('services_tab_details', { language: lang, service: s.key })}>
+                            <Button
+                              size="lg"
+                              variant="outline"
+                              className="gap-2 font-extrabold border-2 border-primary/35 bg-primary/10 hover:bg-primary/15 hover:border-primary shadow-hover-soft rounded-xl"
+                              onClick={() => trackEvent('services_tab_details', { language: lang, service: s.key })}
+                            >
                               {lang === 'ar' ? 'تفاصيل الخدمة' : 'Service details'}
+                              <ArrowRight className={`h-4 w-4 ${lang === 'ar' ? 'rotate-180' : ''}`} />
                             </Button>
                           </LocalizedLink>
                           <LocalizedLink href={`/request-service?service=${s.key}`}>
-                            <Button className="w-full" onClick={() => trackEvent('services_tab_request', { language: lang, service: s.key })}>
+                            <Button
+                              size="lg"
+                              className="gap-2 font-extrabold shadow-hover-glow rounded-xl"
+                              onClick={() => trackEvent('services_tab_request', { language: lang, service: s.key })}
+                            >
                               {lang === 'ar' ? 'اطلب الخدمة' : 'Request this service'}
+                              <PhoneCall className="h-4 w-4" />
                             </Button>
                           </LocalizedLink>
                           <LocalizedLink href="/contact">
-                            <Button variant="secondary" className="w-full" onClick={() => trackEvent('services_tab_contact', { language: lang, service: s.key })}>
+                            <Button
+                              size="lg"
+                              variant="secondary"
+                              className="gap-2 font-extrabold shadow-hover-soft rounded-xl"
+                              onClick={() => trackEvent('services_tab_contact', { language: lang, service: s.key })}
+                            >
                               {lang === 'ar' ? 'استشارة سريعة' : 'Quick consult'}
+                              <MessageCircle className="h-4 w-4" />
                             </Button>
                           </LocalizedLink>
                         </div>

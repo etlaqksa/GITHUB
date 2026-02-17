@@ -12,27 +12,38 @@ interface ThemeContextType {
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
-export function ThemeProvider({ children }: { children: React.ReactNode }) {
+export function ThemeProvider({
+  children,
+  defaultMode = "light",
+  defaultColorTheme = "blue",
+}: {
+  children: React.ReactNode;
+  defaultMode?: Mode;
+  defaultColorTheme?: ColorTheme;
+}) {
   const [mode, setMode] = useState<Mode>(() => {
     try {
       const stored = localStorage.getItem("theme-mode");
-      return (stored as Mode) || "light";
+      return (stored as Mode) || defaultMode;
     } catch {
-      return "light";
+      return defaultMode;
     }
   });
 
   const [colorTheme, setColorThemeState] = useState<ColorTheme>(() => {
     try {
       const stored = localStorage.getItem("color-theme");
-      return (stored as ColorTheme) || "blue";
+      return (stored as ColorTheme) || defaultColorTheme;
     } catch {
-      return "blue";
+      return defaultColorTheme;
     }
   });
 
   useEffect(() => {
     const html = document.documentElement;
+
+    // Ensure legacy static themes don't interfere with the new page-accent system.
+    if (html.hasAttribute("data-theme")) html.removeAttribute("data-theme");
     
     // Handle Light/Dark Mode
     if (mode === "dark") {
@@ -46,19 +57,13 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
       // ignore
     }
 
-    // Handle Color Theme - Apply to HTML element specifically
-    console.log(`Applying theme attribute: data-theme="${colorTheme}"`);
-    html.setAttribute("data-theme", colorTheme);
+    // Persist the user's preferred color family (used as a global accent seed).
+    // NOTE: We do NOT apply a static data-theme now. Accents are page-specific.
     try {
       localStorage.setItem("color-theme", colorTheme);
     } catch {
       // ignore
     }
-    
-    // Force a small style recalculation if needed
-    html.style.display = 'none';
-    html.offsetHeight; // trigger reflow
-    html.style.display = '';
   }, [mode, colorTheme]);
 
   const toggleMode = () => {
