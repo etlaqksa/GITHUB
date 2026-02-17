@@ -50,6 +50,11 @@ export default function SmartAssistant({ initialOpen = false }: { initialOpen?: 
   const isAr = language === 'ar';
 
   const [open, setOpen] = useState(Boolean(initialOpen));
+  const openRef = useRef(open);
+  useEffect(() => {
+    openRef.current = open;
+  }, [open]);
+
   const [location] = useLocation();
 
   const [input, setInput] = useState('');
@@ -113,34 +118,38 @@ export default function SmartAssistant({ initialOpen = false }: { initialOpen?: 
       });
   };
 
-// Warm up the knowledge base in the background (idle/hover).
-// This makes results appear instantly when the assistant opens,
-// while still keeping LCP safe (it runs after the page becomes idle).
-useEffect(() => {
-  const w: any = window;
-  const run = () => {
-    try { prefetchArticles(); } catch { /* ignore */ }
-  };
-  // Prefer requestIdleCallback when available.
-  if (typeof w.requestIdleCallback === 'function') {
-    const id = w.requestIdleCallback(run, { timeout: 2500 });
-    return () => w.cancelIdleCallback?.(id);
-  }
-  const t = window.setTimeout(run, 1500);
-  return () => window.clearTimeout(t);
-}, []);
-
-
-  // Auto-close the assistant when route changes (e.g., user clicks a result).
+  // Warm up the knowledge base in the background (idle/hover).
+  // This makes results appear instantly when the assistant opens,
+  // while still keeping LCP safe (it runs after the page becomes idle).
   useEffect(() => {
-    if (!open) return;
-    setOpen(false);
-    // Keep the query so the user can reopen quickly if needed.
-  }, [location]); // eslint-disable-line react-hooks/exhaustive-deps
+    const w: any = window;
+    const run = () => {
+      try {
+        prefetchArticles();
+      } catch {
+        /* ignore */
+      }
+    };
+    // Prefer requestIdleCallback when available.
+    if (typeof w.requestIdleCallback === 'function') {
+      const id = w.requestIdleCallback(run, { timeout: 2500 });
+      return () => w.cancelIdleCallback?.(id);
+    }
+    const t = window.setTimeout(run, 1500);
+    return () => window.clearTimeout(t);
+  }, []);
+
+  // Auto-close the assistant only when the route *actually changes*.
+  // IMPORTANT: Do not close on initial mount (otherwise it flashes open then closes).
+  const prevLocationRef = useRef(location);
+  useEffect(() => {
+    if (prevLocationRef.current === location) return;
+    prevLocationRef.current = location;
+    if (openRef.current) setOpen(false);
+  }, [location]);
 
   // Load the articles only when the assistant is actually opened.
-  // This avoids downloading/parsing a large dataset during initial page load
-  // (one of the main reasons PageSpeed scores remain low on mobile).
+  // This avoids downloading/parsing a large dataset during initial page load.
   useEffect(() => {
     if (!open) return;
     if (hasLoadedRef.current) return;
@@ -155,10 +164,7 @@ useEffect(() => {
         timeoutRef.current = null;
       }
     };
-    // Intentionally NOT depending on a state flag like `hasLoaded`.
-    // We only want to run when the assistant opens, and we guard with refs.
   }, [open, isAr]);
-
 
   const results = useMemo((): Result[] => {
     const q = input.trim().toLowerCase();
@@ -174,7 +180,9 @@ useEffect(() => {
         const cats = isAr
           ? (a.categoriesAr || [a.category].filter(Boolean)).join(' ')
           : (a.categoriesEn || [a.categoryEn].filter(Boolean)).join(' ');
-        const excerpt = isAr ? String(a.content || '').slice(0, 600) : String(a.contentEn || a.content || '').slice(0, 600);
+        const excerpt = isAr
+          ? String(a.content || '').slice(0, 600)
+          : String(a.contentEn || a.content || '').slice(0, 600);
 
         const hay = `${title} ${cats} ${excerpt}`.toLowerCase();
 
@@ -191,8 +199,6 @@ useEffect(() => {
           else if (hay.includes(t)) s += 0.5;
         }
 
-        // IMPORTANT:
-        // Do NOT use the dataset's legacy `slug` field for routing (it is only for assets).
         // Always build the canonical URL slug (title-based + trailing ID).
         const urlSlug = getArticleUrlSlug(a, isAr ? 'ar' : 'en');
 
@@ -222,22 +228,36 @@ useEffect(() => {
             className="rounded-full shadow-lg gap-2"
             aria-label={isAr ? 'مساعد الموقع' : 'Site assistant'}
             type="button"
-            onMouseEnter={() => { try { prefetchArticles(); } catch {} }}
+            onMouseEnter={() => {
+              try {
+                prefetchArticles();
+              } catch {
+                /* ignore */
+              }
+            }}
           >
             <Bot className="h-5 w-5" />
             <span className="hidden sm:inline">{isAr ? 'اسأل مساعد إطلاق' : 'Ask ETLAQ'}</span>
           </Button>
         </DialogTrigger>
 
-        <DialogContent className="max-w-xl w-[95vw] sm:w-full">
-          <DialogHeader>
-            <DialogTitle className="flex items-center gap-2">
-              <Sparkles className="h-5 w-5 text-primary" />
-              {isAr ? 'مساعد إطلاق الذكي' : 'ETLAQ Smart Assistant'}
-            </DialogTitle>
-          </DialogHeader>
+        {/*
+          Make the dialog scrollable on small screens:
+          - fixed header
+          - scrollable body
+          - fixed footer (always reachable)
+        */}
+        <DialogContent className="max-w-xl w-[95vw] sm:w-full max-h-[85vh] overflow-hidden p-0 flex flex-col">
+          <div className="p-6 pb-3">
+            <DialogHeader>
+              <DialogTitle className="flex items-center gap-2">
+                <Sparkles className="h-5 w-5 text-primary" />
+                {isAr ? 'مساعد إطلاق الذكي' : 'ETLAQ Smart Assistant'}
+              </DialogTitle>
+            </DialogHeader>
+          </div>
 
-          <div className="space-y-4">
+          <div className="px-6 pb-5 flex-1 min-h-0 overflow-y-auto overscroll-contain space-y-4">
             <p className="text-sm text-muted-foreground leading-relaxed">
               {isAr
                 ? 'ابحث داخل موسوعة المقالات أو اختر ما تريد بسرعة. عند فتح صفحة، سيُغلق المساعد تلقائياً.'
@@ -247,9 +267,7 @@ useEffect(() => {
             <div className="flex flex-wrap gap-2">
               {INTENTS.map((i) => (
                 <LocalizedLink key={i.id} href={i.href} onClick={() => setOpen(false)}>
-                  <Badge className="cursor-pointer hover:opacity-90">
-                    {isAr ? i.ar : i.en}
-                  </Badge>
+                  <Badge className="cursor-pointer hover:opacity-90">{isAr ? i.ar : i.en}</Badge>
                 </LocalizedLink>
               ))}
             </div>
@@ -274,7 +292,6 @@ useEffect(() => {
                   <Button
                     type="button"
                     onClick={() => {
-                      // Allow re-try
                       hasLoadedRef.current = false;
                       setAllArticles([]);
                       setLoadError(null);
@@ -303,9 +320,7 @@ useEffect(() => {
                           onClick={() => setOpen(false)}
                         >
                           <div className="font-medium leading-snug">{r.title}</div>
-                          <div className="text-xs text-muted-foreground mt-1">
-                            {isAr ? 'عرض المقال' : 'Open article'}
-                          </div>
+                          <div className="text-xs text-muted-foreground mt-1">{isAr ? 'عرض المقال' : 'Open article'}</div>
                         </LocalizedLink>
                       </li>
                     ))}
@@ -313,12 +328,12 @@ useEffect(() => {
                 )}
               </div>
             )}
+          </div>
 
-            <div className="flex gap-2 justify-end">
-              <Button variant="outline" onClick={() => setOpen(false)} type="button">
-                {isAr ? 'إغلاق' : 'Close'}
-              </Button>
-            </div>
+          <div className="px-6 py-4 border-t flex justify-end bg-background/80 backdrop-blur">
+            <Button variant="outline" onClick={() => setOpen(false)} type="button">
+              {isAr ? 'إغلاق' : 'Close'}
+            </Button>
           </div>
         </DialogContent>
       </Dialog>
