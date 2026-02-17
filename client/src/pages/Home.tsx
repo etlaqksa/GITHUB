@@ -13,7 +13,8 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import { useLanguage } from '@/contexts/LanguageContext';
-import RotatingPhrases from '@/components/hero/RotatingPhrases';
+import HeroIntroSequence from '@/components/hero/HeroIntroSequence';
+import { usePrefersReducedMotion } from '@/components/hero/usePrefersReducedMotion';
 import { trackEvent } from '@/lib/analytics';
 import { absUrl } from '@/lib/siteUrl';
 import { useUrlSearch } from '@/lib/useUrlSearch';
@@ -35,7 +36,6 @@ import {
   Sparkles,
   Timer,
 } from 'lucide-react';
-import { useLocation } from 'wouter';
 
 
 const accentStyle = (rgb: string): CSSProperties => ({ ['--accent-rgb' as any]: rgb });
@@ -51,45 +51,118 @@ const PILLAR_ACCENTS = ['16 185 129', '37 99 235', '245 158 11', '168 85 247'];
 export default function Home() {
   const { language } = useLanguage();
 
-  const [loc] = useLocation();
-  const search = useUrlSearch();
+const search = useUrlSearch();
 
-  const { heroVariant, showHeroPreview, forceMotion } = useMemo(() => {
-    const rawEnv = (import.meta.env.VITE_HERO_VARIANT || "").toString().toLowerCase();
-    const envVariant = rawEnv === "blobs" ? "blobs" : rawEnv === "grid" ? "grid" : "gradient";
+// Hero variant is persisted in localStorage and can be overridden by query (?hero=...).
+const envVariant = useMemo<"gradient" | "blobs" | "grid">(() => {
+  const rawEnv = (import.meta.env.VITE_HERO_VARIANT || "").toString().toLowerCase();
+  return rawEnv === "blobs" ? "blobs" : rawEnv === "grid" ? "grid" : "gradient";
+}, []);
 
-    const params = new URLSearchParams(search || "");
-
+const [heroVariant, setHeroVariant] = useState<"gradient" | "blobs" | "grid">(() => {
+  if (typeof window === "undefined") return envVariant;
+  try {
+    const params = new URLSearchParams(window.location.search || "");
     const q = (params.get("hero") || "").toLowerCase();
-    const heroVariant = (q === "blobs" || q === "gradient" || q === "grid")
-      ? (q as "blobs" | "gradient" | "grid")
-      : (envVariant as "blobs" | "gradient" | "grid");
+    if (q === "gradient" || q === "blobs" || q === "grid") return q as any;
+  } catch {}
+  try {
+    const stored = window.localStorage.getItem("etlaq:heroVariant");
+    if (stored === "gradient" || stored === "blobs" || stored === "grid") return stored as any;
+  } catch {}
+  return envVariant;
+});
 
-    const showHeroPreview = params.get("previewHero") === "1" || !import.meta.env.PROD;
-    const forceMotion = params.get("motion") === "1" || params.get("forceMotion") === "1";
+const [forceMotion, setForceMotion] = useState<boolean>(() => {
+        if (typeof window === "undefined") return false;
 
-    return { heroVariant, showHeroPreview, forceMotion };
-  }, [loc, search]);
+        let v = false;
 
-  // Allow forcing motion for previewing animations even if the OS has reduced-motion enabled.
-  useEffect(() => {
-    if (typeof document === 'undefined') return;
-    if (forceMotion) document.documentElement.setAttribute('data-force-motion', '1');
-    else document.documentElement.removeAttribute('data-force-motion');
-  }, [forceMotion]);
+        try {
+          const params = new URLSearchParams(window.location.search || "");
+          v = params.get("motion") === "1" || params.get("forceMotion") === "1";
+        } catch {}
 
-  const updateHeroQuery = (next: Record<string, string | undefined>) => {
-    if (typeof window === 'undefined') return;
-    const params = new URLSearchParams(window.location.search || '');
-    Object.entries(next).forEach(([k, v]) => {
-      if (v === undefined || v === null || v === '') params.delete(k);
-      else params.set(k, v);
-    });
-    const qs = params.toString();
-    const url = window.location.pathname + (qs ? `?${qs}` : '') + (window.location.hash || '');
-    window.history.replaceState(null, '', url);
-  };
+        if (!v) {
+          try {
+            v = window.localStorage.getItem("etlaq:forceMotion") === "1";
+          } catch {
+            v = false;
+          }
+        }
 
+        // Apply immediately so the hero sequence respects it on first paint.
+        try {
+          if (typeof document !== "undefined") {
+            if (v) document.documentElement.setAttribute("data-force-motion", "1");
+            else document.documentElement.removeAttribute("data-force-motion");
+          }
+        } catch {}
+
+        return v;
+      });
+
+// Keep hero variant in sync with query string if user navigates/updates URL.
+useEffect(() => {
+  if (typeof window === "undefined") return;
+  const params = new URLSearchParams(search || "");
+  const q = (params.get("hero") || "").toLowerCase();
+  if (q === "gradient" || q === "blobs" || q === "grid") setHeroVariant(q as any);
+
+  const m = params.get("motion") === "1" || params.get("forceMotion") === "1";
+  if (m) setForceMotion(true);
+}, [search]);
+
+// Apply and persist motion override.
+useEffect(() => {
+  if (typeof document === "undefined") return;
+  if (forceMotion) document.documentElement.setAttribute("data-force-motion", "1");
+  else document.documentElement.removeAttribute("data-force-motion");
+
+  try {
+    window.localStorage.setItem("etlaq:forceMotion", forceMotion ? "1" : "0");
+  } catch {}
+}, [forceMotion]);
+
+const updateHeroQuery = (next: Record<string, string | undefined>) => {
+  if (typeof window === "undefined") return;
+  const params = new URLSearchParams(window.location.search || '');
+  Object.entries(next).forEach(([k, v]) => {
+    if (v === undefined || v === null || v === '') params.delete(k);
+    else params.set(k, v);
+  });
+  const qs = params.toString();
+  const url = window.location.pathname + (qs ? `?${qs}` : '') + (window.location.hash || '');
+  window.history.replaceState(null, '', url);
+};
+
+const applyHeroVariant = (v: "gradient" | "blobs" | "grid") => {
+  setHeroVariant(v);
+  try {
+    window.localStorage.setItem("etlaq:heroVariant", v);
+  } catch {}
+  // Keep URLs clean in production (no need for preview params).
+  updateHeroQuery({ previewHero: undefined, hero: undefined });
+};
+
+const toggleForceMotion = () => {
+  setForceMotion((prev) => !prev);
+  updateHeroQuery({ previewHero: undefined, motion: undefined, forceMotion: undefined });
+};
+
+const prefersReducedMotion = usePrefersReducedMotion();
+const [heroIntroDone, setHeroIntroDone] = useState(false);
+const [heroIntroRun, setHeroIntroRun] = useState(0);
+
+useEffect(() => {
+  // If the OS has reduced motion enabled (and we didn't force motion), skip the intro sequence.
+  if (prefersReducedMotion) setHeroIntroDone(true);
+}, [prefersReducedMotion]);
+
+const replayHeroIntro = () => {
+  setHeroIntroDone(false);
+  setHeroIntroRun((x) => x + 1);
+};
 
   const whatsappNumber = '966534145922';
   const heroWhatsAppUrl = useMemo(() => {
@@ -411,11 +484,12 @@ export default function Home() {
           ) : null}
         </div>
 
-        {showHeroPreview ? (
+        {
           <div className="absolute z-30 top-4 ltr:right-4 rtl:left-4 flex items-center gap-2 rounded-full border border-white/25 bg-black/55 px-2 py-1 text-xs font-semibold text-white shadow-[0_12px_32px_rgba(0,0,0,0.35)]">
             <span className="px-2 opacity-80">
               {heroVariant === "blobs" ? "Blobs" : heroVariant === "grid" ? "Grid" : "Gradient"}
             </span>
+
             <button
               type="button"
               className={
@@ -423,7 +497,7 @@ export default function Home() {
                 (heroVariant === "gradient" ? "bg-white/20" : "hover:bg-white/10")
               }
               aria-pressed={heroVariant === "gradient"}
-              onClick={() => updateHeroQuery({ previewHero: '1', hero: 'gradient' })}
+              onClick={() => applyHeroVariant("gradient")}
             >
               Gradient
             </button>
@@ -434,7 +508,7 @@ export default function Home() {
                 (heroVariant === "blobs" ? "bg-white/20" : "hover:bg-white/10")
               }
               aria-pressed={heroVariant === "blobs"}
-              onClick={() => updateHeroQuery({ previewHero: '1', hero: 'blobs' })}
+              onClick={() => applyHeroVariant("blobs")}
             >
               Blobs
             </button>
@@ -446,7 +520,7 @@ export default function Home() {
                 (heroVariant === "grid" ? "bg-white/20" : "hover:bg-white/10")
               }
               aria-pressed={heroVariant === "grid"}
-              onClick={() => updateHeroQuery({ previewHero: '1', hero: 'grid' })}
+              onClick={() => applyHeroVariant("grid")}
             >
               Grid
             </button>
@@ -460,39 +534,61 @@ export default function Home() {
                 (forceMotion ? "bg-white/20" : "hover:bg-white/10")
               }
               aria-pressed={forceMotion}
-              onClick={() => updateHeroQuery({ previewHero: '1', motion: forceMotion ? undefined : '1' })}
+              onClick={toggleForceMotion}
               title="Force motion even if the OS has reduced-motion enabled"
             >
               Motion
             </button>
+
+            <button
+              type="button"
+              className={
+                "rounded-full px-3 py-1 transition " +
+                (!prefersReducedMotion && heroIntroDone ? "hover:bg-white/10" : "opacity-50 cursor-not-allowed")
+              }
+              disabled={prefersReducedMotion || !heroIntroDone}
+              onClick={replayHeroIntro}
+              title="Replay the hero intro sequence"
+            >
+              Replay
+            </button>
           </div>
-        ) : null}
+        }
 
         {/* Contrast layer so hero text stays readable (no top/bottom bands) */}
         <div
           className={
             'absolute inset-0 z-10 pointer-events-none ' +
             (isDesktopModeMobile
-              ? 'bg-black/60'
+              ? 'bg-gradient-to-b from-black/45 via-black/30 to-black/70'
               : isCoarsePointer
-                ? 'bg-black/52'
-                : 'bg-black/46')
+                ? 'bg-gradient-to-b from-black/42 via-black/28 to-black/68'
+                : 'bg-gradient-to-b from-black/38 via-black/24 to-black/64')
           }
           aria-hidden="true"
         />
 
+{!heroIntroDone ? (
+  <HeroIntroSequence
+    language={language}
+    runId={heroIntroRun}
+    onDone={() => setHeroIntroDone(true)}
+  />
+) : null}
+
         <div
           className={
-            'w-full px-4 relative z-20 ' +
+            'relative z-20 flex w-full items-center justify-center px-4 ' +
             (isCoarsePointer ? 'py-8' : 'py-10 md:py-16')
           }
         >
-          <div className="max-w-3xl space-y-6 text-white">
+          <div
+            className="etlaq-hero-final w-full max-w-4xl mx-auto text-center text-white space-y-6"
+            data-visible={heroIntroDone ? '1' : '0'}
+          >
             <div
               className={
-                language === 'ar'
-                  ? 'flex flex-col items-center gap-1 rounded-full border border-white/25 bg-black/60 px-3 py-1 text-[15px] md:text-base font-semibold text-white/90 shadow-[0_10px_30px_rgba(0,0,0,0.35)]'
-                  : 'inline-flex items-center gap-2 rounded-full border border-white/25 bg-black/60 px-3 py-1 text-[15px] md:text-base font-semibold text-white/90 shadow-[0_10px_30px_rgba(0,0,0,0.35)]'
+                'inline-flex items-center justify-center gap-2 rounded-full border border-white/25 bg-black/60 px-3 py-1 text-[14px] md:text-base font-semibold text-white/90 shadow-[0_10px_30px_rgba(0,0,0,0.35)]'
               }
             >
               {language === 'ar' ? (
@@ -512,90 +608,65 @@ export default function Home() {
               )}
             </div>
 
-            <h1 className="text-3xl md:text-5xl font-extrabold leading-[1.08] tracking-tight text-white drop-shadow-[0_10px_34px_rgba(0,0,0,0.92)]">
+            <h1 className="text-4xl md:text-7xl font-extrabold leading-[1.03] tracking-tight drop-shadow-[0_10px_34px_rgba(0,0,0,0.92)]">
               {language === 'ar' ? (
                 <>
-                  نحن نقوّي{' '}
-                  <RotatingPhrases
-                    items={['أساساتك', 'أساسات مبناك', 'أساسات مشروعك']}
-                    intervalMs={2200}
-                    className="text-secondary font-extrabold"
-                    wrapperClassName="align-baseline"
-                  />
+                  نحن نقوّي <span className="text-secondary">أساساتك</span>
                 </>
               ) : (
-                <>
-                  <span className="whitespace-nowrap">
-                    We Strengthen{' '}
-                    <RotatingPhrases
-                      items={['Your Foundations', 'Your Structure', 'Your Ground']}
-                      intervalMs={2200}
-                      className="text-secondary font-extrabold"
-                      wrapperClassName="align-baseline"
-                    />
-                  </span>
-                </>
+                <span className="whitespace-nowrap">
+                  We Strengthen <span className="text-secondary">Your Foundations</span>
+                </span>
               )}
             </h1>
 
-            <div className="text-base md:text-lg font-bold text-white/95 drop-shadow-[0_8px_24px_rgba(0,0,0,0.9)]">
+            <div className="mx-auto max-w-3xl">
               {language === 'ar' ? (
-                <span className="whitespace-nowrap">
-                  <span className="font-bold text-white drop-shadow-[0_3px_12px_rgba(0,0,0,0.8)]">
-                    شركة إطلاق المتميزة
-                  </span>
-                  <span className="text-white/70">{' — '}</span>
-                  <RotatingPhrases
-                    items={['حقن تربة', 'كشف تكهفات', 'جيوفيزياء GPR/ERT/MASW']}
-                    intervalMs={2200}
-                    className="text-secondary font-extrabold"
-                  />
-                </span>
+                <div className="text-2xl md:text-4xl font-extrabold leading-tight drop-shadow-[0_10px_34px_rgba(0,0,0,0.92)]">
+                  <div className="text-white/95">شركة إطلاق المتميزة —</div>
+                  <div className="mt-2 space-y-1">
+                    <div className="text-secondary">حقن تربة</div>
+                    <div className="text-amber-300">كشف تكهفات</div>
+                    <div className="text-cyan-300">جيوفيزياء GPR/ERT/MASW</div>
+                  </div>
+                </div>
               ) : (
-                <span className="whitespace-nowrap">
-                  <span className="font-bold text-white drop-shadow-[0_3px_12px_rgba(0,0,0,0.8)]">
-                    ETLAQ Distinguished Company
-                  </span>
-                  <span className="text-white/70">{' — '}</span>
-                  <RotatingPhrases
-                    items={['Soil Grouting', 'Cavity Detection', 'Geophysics GPR/ERT/MASW']}
-                    intervalMs={2200}
-                    className="text-secondary font-extrabold"
-                  />
-                </span>
+                <div className="text-2xl md:text-4xl font-extrabold leading-tight drop-shadow-[0_10px_34px_rgba(0,0,0,0.92)]">
+                  <div className="text-white/95">ETLAQ Distinguished Company —</div>
+                  <div className="mt-2 space-y-1">
+                    <div className="text-secondary">Soil Grouting</div>
+                    <div className="text-amber-300">Cavity Detection</div>
+                    <div className="text-cyan-300">Geophysics GPR/ERT/MASW</div>
+                  </div>
+                </div>
               )}
             </div>
 
-            <p className="text-base md:text-lg text-white/95 font-medium leading-relaxed text-justify drop-shadow-[0_8px_26px_rgba(0,0,0,0.9)]">
+            <p className="mx-auto max-w-3xl text-base md:text-xl text-white/95 font-semibold leading-relaxed drop-shadow-[0_10px_30px_rgba(0,0,0,0.9)]">
               {language === 'ar'
                 ? 'في شركة إطلاق المتميزة نوفّر حلولًا لمعالجة الهبوطات والتشققات والتكهفات في الرياض وجميع مدن المملكة، عبر تثبيت الأساسات بحقن التربة، وكشف التكهفات بالتخريم (Cavity Probing) أو الحلول الجيوفيزيائية، ثم معالجة وملء التكهفات بالحقن الأسمنتي.'
                 : 'At ETLAQ Distinguished Company, we provide solutions to address settlement, cracks, and cavities across Riyadh and all cities of the Kingdom—by stabilizing foundations with soil grouting, detecting cavities via Cavity Probing or geophysical solutions, then treating and filling cavities with cement grouting.'}
             </p>
 
-            <p className="text-base md:text-lg text-white/95 font-medium leading-relaxed text-justify drop-shadow-[0_8px_26px_rgba(0,0,0,0.9)]">
-              {language === 'ar' ? (
-                <span className="font-semibold">
-                  نركّز على الحل المبكر لأنه يحقق:{' '}
-                  <RotatingPhrases
-                    items={['تكلفة أقل', 'وقت أقل', 'مخاطرة أقل', 'نتائج أكثر استقرارًا']}
-                    intervalMs={2000}
-                    className="text-secondary font-extrabold"
-                  />
-                </span>
-              ) : (
-                <span className="font-semibold">
-                  We focus on early intervention because it delivers:{' '}
-                  <RotatingPhrases
-                    items={['Lower cost', 'Less time', 'Lower risk', 'More stable results']}
-                    intervalMs={2000}
-                    className="text-secondary font-extrabold"
-                  />
-                </span>
-              )}
-            </p>
+            <div className="mx-auto max-w-3xl rounded-2xl border border-white/20 bg-black/40 p-5 text-left rtl:text-right shadow-[0_16px_46px_rgba(0,0,0,0.35)]">
+              <div className="text-lg md:text-2xl font-extrabold text-white drop-shadow-[0_8px_24px_rgba(0,0,0,0.9)]">
+                {language === 'ar' ? 'نركّز على الحل المبكر لأنه يحقق:' : 'We focus on early intervention because it delivers:'}
+              </div>
+              <ul className="mt-4 grid sm:grid-cols-2 gap-3">
+                {(language === 'ar'
+                  ? ['تكلفة أقل', 'وقت أقل', 'مخاطرة أقل', 'نتائج أكثر استقرارًا']
+                  : ['Lower cost', 'Less time', 'Lower risk', 'More stable results']
+                ).map((b) => (
+                  <li key={b} className="flex items-center gap-2 text-base md:text-lg font-bold text-white/95">
+                    <CheckCircle2 className="h-5 w-5 text-secondary" />
+                    <span>{b}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-            <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3">
-<a href="#services" className="w-full sm:w-auto">
+            <div className="flex flex-col sm:flex-row sm:flex-wrap justify-center gap-3 pt-1">
+              <a href="#services" className="w-full sm:w-auto">
                 <Button
                   size="lg"
                   className="w-full sm:w-auto bg-secondary hover:bg-secondary/80 text-secondary-foreground font-semibold shadow-[0_12px_32px_rgba(0,0,0,0.35)]"
@@ -623,7 +694,7 @@ export default function Home() {
               </a>
             </div>
 
-            <div className="rounded-2xl border border-white/20 bg-black/55 p-5">
+            <div className="mx-auto max-w-3xl rounded-2xl border border-white/20 bg-black/55 p-5">
               <TrustStats compact variant="inverse" />
             </div>
           </div>
