@@ -6,7 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { Badge } from '@/components/ui/badge';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { loadArticles } from '@/data/articlesLoader';
+import { loadArticles, prefetchArticles } from '@/data/articlesLoader';
 import LocalizedLink from '@/components/LocalizedLink';
 import { getArticleUrlSlug } from '@/lib/articleUrl';
 
@@ -56,6 +56,25 @@ export default function SmartAssistant({ initialOpen = false }: { initialOpen?: 
   const [allArticles, setAllArticles] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
   const [hasLoaded, setHasLoaded] = useState(false);
+  const [loadError, setLoadError] = useState<string | null>(null);
+
+// Warm up the knowledge base in the background (idle/hover).
+// This makes results appear instantly when the assistant opens,
+// while still keeping LCP safe (it runs after the page becomes idle).
+useEffect(() => {
+  const w: any = window;
+  const run = () => {
+    try { prefetchArticles(); } catch { /* ignore */ }
+  };
+  // Prefer requestIdleCallback when available.
+  if (typeof w.requestIdleCallback === 'function') {
+    const id = w.requestIdleCallback(run, { timeout: 2500 });
+    return () => w.cancelIdleCallback?.(id);
+  }
+  const t = window.setTimeout(run, 1500);
+  return () => window.clearTimeout(t);
+}, []);
+
 
   // Auto-close the assistant when route changes (e.g., user clicks a result).
   useEffect(() => {
@@ -68,31 +87,45 @@ export default function SmartAssistant({ initialOpen = false }: { initialOpen?: 
   // This avoids downloading/parsing a large dataset during initial page load
   // (one of the main reasons PageSpeed scores remain low on mobile).
   useEffect(() => {
-    if (!open) return;
-    if (hasLoaded) return;
+  if (!open) return;
+  if (hasLoaded) return;
 
-    let alive = true;
-    setHasLoaded(true);
-    setLoading(true);
+  let alive = true;
+  setHasLoaded(true);
+  setLoadError(null);
+  setLoading(true);
 
-    loadArticles()
-      .then((a) => {
-        if (!alive) return;
-        setAllArticles(Array.isArray(a) ? a : []);
-      })
-      .catch(() => {
-        if (!alive) return;
-        setAllArticles([]);
-      })
-      .finally(() => {
-        if (!alive) return;
-        setLoading(false);
-      });
+  // Safety timeout: if the chunk request hangs (adblock/proxy/slow network),
+  // we stop "Loading..." and show a retry action.
+  const TIMEOUT_MS = 8000;
+  const timeout = window.setTimeout(() => {
+    if (!alive) return;
+    setLoading(false);
+    setLoadError(isAr ? 'تعذر تحميل قاعدة المعرفة حالياً. يمكنك إعادة المحاولة.' : 'Could not load the knowledge base. Please retry.');
+  }, TIMEOUT_MS);
 
-    return () => {
-      alive = false;
-    };
-  }, [open, hasLoaded]);
+  loadArticles()
+    .then((a) => {
+      if (!alive) return;
+      setAllArticles(Array.isArray(a) ? a : []);
+    })
+    .catch(() => {
+      if (!alive) return;
+      setAllArticles([]);
+      setLoadError(isAr ? 'تعذر تحميل قاعدة المعرفة حالياً. يمكنك إعادة المحاولة.' : 'Could not load the knowledge base. Please retry.');
+    })
+    .finally(() => {
+      window.clearTimeout(timeout);
+      if (!alive) return;
+      setLoading(false);
+    });
+
+  return () => {
+    alive = false;
+    window.clearTimeout(timeout);
+  };
+}, [open, hasLoaded, isAr]);
+
 
   const results = useMemo((): Result[] => {
     const q = input.trim().toLowerCase();
@@ -156,6 +189,7 @@ export default function SmartAssistant({ initialOpen = false }: { initialOpen?: 
             className="rounded-full shadow-lg gap-2"
             aria-label={isAr ? 'مساعد الموقع' : 'Site assistant'}
             type="button"
+            onMouseEnter={() => { try { prefetchArticles(); } catch {} }}
           >
             <Bot className="h-5 w-5" />
             <span className="hidden sm:inline">{isAr ? 'اسأل مساعد إطلاق' : 'Ask ETLAQ'}</span>
@@ -200,7 +234,26 @@ export default function SmartAssistant({ initialOpen = false }: { initialOpen?: 
               <p className="text-sm text-muted-foreground">{isAr ? 'جاري تحميل المحتوى...' : 'Loading content...'}</p>
             )}
 
-            {!loading && input.trim().length >= 2 && (
+            {!loading && loadError && (
+              <div className="etlaq-card rounded-xl border bg-card/60 backdrop-blur p-4">
+                <p className="text-sm text-muted-foreground">{loadError}</p>
+                <div className="mt-3 flex justify-end">
+                  <Button
+                    type="button"
+                    onClick={() => {
+                      // allow re-try
+                      setHasLoaded(false);
+                      setLoadError(null);
+                      setAllArticles([]);
+                    }}
+                  >
+                    {isAr ? 'إعادة المحاولة' : 'Retry'}
+                  </Button>
+                </div>
+              </div>
+            )}
+
+            {!loading && !loadError && input.trim().length >= 2 && (
               <div className="etlaq-card rounded-xl border bg-card/60 backdrop-blur p-4">
                 {results.length === 0 ? (
                   <p className="text-sm text-muted-foreground">

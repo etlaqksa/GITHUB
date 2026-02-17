@@ -18,6 +18,7 @@ import { trackEvent } from '@/lib/analytics';
 import { absUrl } from '@/lib/siteUrl';
 import { cities } from '@/data/seoLocations';
 import { ArrowRight, CheckCircle2, ClipboardList, Drill, MapPin, MessageCircle, PhoneCall, Radar, ShieldCheck, Timer } from 'lucide-react';
+import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import { useState } from 'react';
 
 export default function Services() {
@@ -27,6 +28,7 @@ export default function Services() {
   const canonical = absUrl(`/${lang}/services`);
 
   const [activeService, setActiveService] = useState<'grouting' | 'cavity' | 'geophysical'>('grouting');
+  const reduceMotion = useReducedMotion();
 
   const hero = {
     title: lang === 'ar' ? 'خدماتنا الهندسية' : 'Our engineering services',
@@ -104,6 +106,9 @@ export default function Services() {
           : 'Geophysics isn’t the goal—it’s a tool to reduce risk and guide decisions.',
     },
   ] as const;
+
+  const activeServiceData = services.find((s) => s.key === activeService) ?? services[0];
+  const ActiveIcon = activeServiceData.icon;
 
   const chooser = [
     {
@@ -407,92 +412,100 @@ export default function Services() {
                 </TabsList>
               </div>
 
-              {services.map((s) => (
-                <TabsContent key={s.key} value={s.key} className="mt-6">
-                  <Card className="rounded-3xl border bg-card/70 backdrop-blur">
-                    <CardContent dir={lang === 'ar' ? 'rtl' : 'ltr'} className="p-6 md:p-8">
-                      <div className="space-y-6">
-                        <div className="space-y-4">
-                          <div className="flex items-start gap-3 rtl:flex-row-reverse rtl:text-right">
-                            <div className="h-12 w-12 rounded-2xl border bg-background flex items-center justify-center">
-                              <s.icon className="h-6 w-6 text-primary" />
+              <div className="mt-6">
+                <AnimatePresence mode="wait" initial={false}>
+                  <motion.div
+                    key={activeServiceData.key}
+                    initial={reduceMotion ? { opacity: 0 } : { opacity: 0, y: 10 }}
+                    animate={reduceMotion ? { opacity: 1 } : { opacity: 1, y: 0 }}
+                    exit={reduceMotion ? { opacity: 0 } : { opacity: 0, y: -8 }}
+                    transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
+                  >
+                    <Card className="rounded-3xl border bg-card/70 backdrop-blur">
+                      <CardContent dir={lang === 'ar' ? 'rtl' : 'ltr'} className="p-6 md:p-8">
+                        <div className="space-y-6">
+                          <div className="space-y-4">
+                            <div className="flex items-start gap-3 rtl:flex-row-reverse rtl:text-right">
+                              <div className="h-12 w-12 rounded-2xl border bg-background flex items-center justify-center">
+                                <ActiveIcon className="h-6 w-6 text-primary" />
+                              </div>
+                              <div>
+                                <h3 className="text-xl md:text-2xl font-bold">{activeServiceData.title}</h3>
+                                <p className="text-muted-foreground mt-1 leading-relaxed whitespace-pre-line">{activeServiceData.short}</p>
+                                <p className="text-sm text-muted-foreground mt-3">{activeServiceData.startHint}</p>
+                              </div>
                             </div>
-                            <div>
-                              <h3 className="text-xl md:text-2xl font-bold">{s.title}</h3>
-                              <p className="text-muted-foreground mt-1 leading-relaxed whitespace-pre-line">{s.short}</p>
-                              <p className="text-sm text-muted-foreground mt-3">{s.startHint}</p>
+
+                            <div className="grid md:grid-cols-2 gap-4">
+                              <div className="rounded-2xl border bg-background/50 p-4">
+                                <p className="font-semibold mb-3">{lang === 'ar' ? 'مناسب لـ' : 'Best for'}</p>
+                                <ul className="space-y-2">
+                                  {activeServiceData.bestFor.map((b) => (
+                                    <li key={b} className="flex items-start gap-2 text-sm text-muted-foreground rtl:flex-row-reverse rtl:text-right">
+                                      <CheckCircle2 className="h-4 w-4 mt-0.5 text-primary" />
+                                      <span className="leading-relaxed">{b}</span>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                              <div className="rounded-2xl border bg-background/50 p-4">
+                                <p className="font-semibold mb-3">{lang === 'ar' ? 'ماذا تستلم؟' : 'What you get'}</p>
+                                <ul className="space-y-2">
+                                  {activeServiceData.deliverables.map((d) => (
+                                    <li key={d} className="flex items-start gap-2 text-sm text-muted-foreground rtl:flex-row-reverse rtl:text-right">
+                                      <CheckCircle2 className="h-4 w-4 mt-0.5 text-primary" />
+                                      <span className="leading-relaxed">{d}</span>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
                             </div>
                           </div>
 
-                          <div className="grid md:grid-cols-2 gap-4">
-                            <div className="rounded-2xl border bg-background/50 p-4">
-                              <p className="font-semibold mb-3">{lang === 'ar' ? 'مناسب لـ' : 'Best for'}</p>
-                              <ul className="space-y-2">
-                                {s.bestFor.map((b) => (
-                                  <li key={b} className="flex items-start gap-2 text-sm text-muted-foreground rtl:flex-row-reverse rtl:text-right">
-                                    <CheckCircle2 className="h-4 w-4 mt-0.5 text-primary" />
-                                    <span className="leading-relaxed">{b}</span>
-                                  </li>
-                                ))}
-                              </ul>
-                            </div>
-                            <div className="rounded-2xl border bg-background/50 p-4">
-                              <p className="font-semibold mb-3">{lang === 'ar' ? 'ماذا تستلم؟' : 'What you get'}</p>
-                              <ul className="space-y-2">
-                                {s.deliverables.map((d) => (
-                                  <li key={d} className="flex items-start gap-2 text-sm text-muted-foreground rtl:flex-row-reverse rtl:text-right">
-                                    <CheckCircle2 className="h-4 w-4 mt-0.5 text-primary" />
-                                    <span className="leading-relaxed">{d}</span>
-                                  </li>
-                                ))}
-                              </ul>
-                            </div>
+                          {/* CTAs (horizontal) */}
+                          <div
+                            dir={lang === 'ar' ? 'rtl' : 'ltr'}
+                            className="flex flex-wrap items-center gap-3 justify-center md:justify-start rtl:md:justify-end"
+                          >
+                            <LocalizedLink href={activeServiceData.href}>
+                              <Button
+                                size="lg"
+                                variant="outline"
+                                className="gap-2 font-extrabold border-2 border-primary/35 bg-primary/10 hover:bg-primary/15 hover:border-primary shadow-hover-soft rounded-xl"
+                                onClick={() => trackEvent('services_tab_details', { language: lang, service: activeServiceData.key })}
+                              >
+                                {lang === 'ar' ? 'تفاصيل الخدمة' : 'Service details'}
+                                <ArrowRight className={`h-4 w-4 ${lang === 'ar' ? 'rotate-180' : ''}`} />
+                              </Button>
+                            </LocalizedLink>
+                            <LocalizedLink href={`/request-service?service=${activeServiceData.key}`}>
+                              <Button
+                                size="lg"
+                                className="gap-2 font-extrabold shadow-hover-glow rounded-xl"
+                                onClick={() => trackEvent('services_tab_request', { language: lang, service: activeServiceData.key })}
+                              >
+                                {lang === 'ar' ? 'اطلب الخدمة' : 'Request this service'}
+                                <PhoneCall className="h-4 w-4" />
+                              </Button>
+                            </LocalizedLink>
+                            <LocalizedLink href="/contact">
+                              <Button
+                                size="lg"
+                                variant="secondary"
+                                className="gap-2 font-extrabold shadow-hover-soft rounded-xl"
+                                onClick={() => trackEvent('services_tab_contact', { language: lang, service: activeServiceData.key })}
+                              >
+                                {lang === 'ar' ? 'استشارة سريعة' : 'Quick consult'}
+                                <MessageCircle className="h-4 w-4" />
+                              </Button>
+                            </LocalizedLink>
                           </div>
                         </div>
-
-                        {/* CTAs (horizontal) */}
-                        <div
-                          dir={lang === 'ar' ? 'rtl' : 'ltr'}
-                          className="flex flex-wrap items-center gap-3 justify-center md:justify-start rtl:md:justify-end"
-                        >
-                          <LocalizedLink href={s.href}>
-                            <Button
-                              size="lg"
-                              variant="outline"
-                              className="gap-2 font-extrabold border-2 border-primary/35 bg-primary/10 hover:bg-primary/15 hover:border-primary shadow-hover-soft rounded-xl"
-                              onClick={() => trackEvent('services_tab_details', { language: lang, service: s.key })}
-                            >
-                              {lang === 'ar' ? 'تفاصيل الخدمة' : 'Service details'}
-                              <ArrowRight className={`h-4 w-4 ${lang === 'ar' ? 'rotate-180' : ''}`} />
-                            </Button>
-                          </LocalizedLink>
-                          <LocalizedLink href={`/request-service?service=${s.key}`}>
-                            <Button
-                              size="lg"
-                              className="gap-2 font-extrabold shadow-hover-glow rounded-xl"
-                              onClick={() => trackEvent('services_tab_request', { language: lang, service: s.key })}
-                            >
-                              {lang === 'ar' ? 'اطلب الخدمة' : 'Request this service'}
-                              <PhoneCall className="h-4 w-4" />
-                            </Button>
-                          </LocalizedLink>
-                          <LocalizedLink href="/contact">
-                            <Button
-                              size="lg"
-                              variant="secondary"
-                              className="gap-2 font-extrabold shadow-hover-soft rounded-xl"
-                              onClick={() => trackEvent('services_tab_contact', { language: lang, service: s.key })}
-                            >
-                              {lang === 'ar' ? 'استشارة سريعة' : 'Quick consult'}
-                              <MessageCircle className="h-4 w-4" />
-                            </Button>
-                          </LocalizedLink>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </TabsContent>
-              ))}
+                      </CardContent>
+                    </Card>
+                  </motion.div>
+                </AnimatePresence>
+              </div>
             </Tabs>
           </div>
         </div>
