@@ -135,8 +135,8 @@ export default function SmartAssistant({ initialOpen = false }: { initialOpen?: 
         const cats = isAr
           ? (a.categoriesAr || [a.category].filter(Boolean)).join(' ')
           : (a.categoriesEn || [a.categoryEn].filter(Boolean)).join(' ');
-        const excerpt = isAr ? String(a.content || '').slice(0, 600) : String(a.contentEn || a.content || '').slice(0, 600);
-        const hay = `${title} ${cats} ${excerpt}`.toLowerCase();
+        const excerptChunk = isAr ? String(a.content || '').slice(0, 600) : String(a.contentEn || a.content || '').slice(0, 600);
+        const hay = `${title} ${cats} ${excerptChunk}`.toLowerCase();
 
         let s = 0;
         if (title.toLowerCase().includes(q)) s += 6;
