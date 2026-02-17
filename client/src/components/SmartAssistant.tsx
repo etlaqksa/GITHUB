@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { useLocation } from 'wouter';
 import { Bot, Search, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -55,8 +55,63 @@ export default function SmartAssistant({ initialOpen = false }: { initialOpen?: 
   const [input, setInput] = useState('');
   const [allArticles, setAllArticles] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
-  const [hasLoaded, setHasLoaded] = useState(false);
   const [loadError, setLoadError] = useState<string | null>(null);
+
+  // IMPORTANT:
+  // We cannot use a piece of state like `hasLoaded` as a dependency *and* set it inside the same effect,
+  // because that causes the effect to cleanup immediately (deps changed), which cancels the timeout and
+  // prevents the pending dynamic import from ever updating state.
+  // Use refs instead (no re-render) to keep the loader stable.
+  const hasLoadedRef = useRef(false);
+  const loadTokenRef = useRef(0);
+  const timeoutRef = useRef<number | null>(null);
+
+  const startLoad = () => {
+    // Invalidate any previous in-flight load (if any).
+    loadTokenRef.current += 1;
+    const token = loadTokenRef.current;
+
+    setLoadError(null);
+    setLoading(true);
+
+    // Safety timeout: if the chunk request hangs (adblock/proxy/slow network),
+    // we stop "Loading..." and show a retry action.
+    const TIMEOUT_MS = 8000;
+    if (timeoutRef.current) window.clearTimeout(timeoutRef.current);
+    timeoutRef.current = window.setTimeout(() => {
+      if (loadTokenRef.current !== token) return;
+      setLoading(false);
+      setLoadError(
+        isAr
+          ? 'تعذر تحميل قاعدة المعرفة حالياً. يمكنك إعادة المحاولة.'
+          : 'Could not load the knowledge base. Please retry.',
+      );
+    }, TIMEOUT_MS);
+
+    loadArticles()
+      .then((a) => {
+        if (loadTokenRef.current !== token) return;
+        setAllArticles(Array.isArray(a) ? a : []);
+        hasLoadedRef.current = true;
+      })
+      .catch(() => {
+        if (loadTokenRef.current !== token) return;
+        setAllArticles([]);
+        setLoadError(
+          isAr
+            ? 'تعذر تحميل قاعدة المعرفة حالياً. يمكنك إعادة المحاولة.'
+            : 'Could not load the knowledge base. Please retry.',
+        );
+      })
+      .finally(() => {
+        if (loadTokenRef.current !== token) return;
+        if (timeoutRef.current) {
+          window.clearTimeout(timeoutRef.current);
+          timeoutRef.current = null;
+        }
+        setLoading(false);
+      });
+  };
 
 // Warm up the knowledge base in the background (idle/hover).
 // This makes results appear instantly when the assistant opens,
@@ -87,44 +142,22 @@ useEffect(() => {
   // This avoids downloading/parsing a large dataset during initial page load
   // (one of the main reasons PageSpeed scores remain low on mobile).
   useEffect(() => {
-  if (!open) return;
-  if (hasLoaded) return;
+    if (!open) return;
+    if (hasLoadedRef.current) return;
 
-  let alive = true;
-  setHasLoaded(true);
-  setLoadError(null);
-  setLoading(true);
+    startLoad();
 
-  // Safety timeout: if the chunk request hangs (adblock/proxy/slow network),
-  // we stop "Loading..." and show a retry action.
-  const TIMEOUT_MS = 8000;
-  const timeout = window.setTimeout(() => {
-    if (!alive) return;
-    setLoading(false);
-    setLoadError(isAr ? 'تعذر تحميل قاعدة المعرفة حالياً. يمكنك إعادة المحاولة.' : 'Could not load the knowledge base. Please retry.');
-  }, TIMEOUT_MS);
-
-  loadArticles()
-    .then((a) => {
-      if (!alive) return;
-      setAllArticles(Array.isArray(a) ? a : []);
-    })
-    .catch(() => {
-      if (!alive) return;
-      setAllArticles([]);
-      setLoadError(isAr ? 'تعذر تحميل قاعدة المعرفة حالياً. يمكنك إعادة المحاولة.' : 'Could not load the knowledge base. Please retry.');
-    })
-    .finally(() => {
-      window.clearTimeout(timeout);
-      if (!alive) return;
-      setLoading(false);
-    });
-
-  return () => {
-    alive = false;
-    window.clearTimeout(timeout);
-  };
-}, [open, hasLoaded, isAr]);
+    return () => {
+      // Cancel timers and invalidate any in-flight loads when closing/unmounting.
+      loadTokenRef.current += 1;
+      if (timeoutRef.current) {
+        window.clearTimeout(timeoutRef.current);
+        timeoutRef.current = null;
+      }
+    };
+    // Intentionally NOT depending on a state flag like `hasLoaded`.
+    // We only want to run when the assistant opens, and we guard with refs.
+  }, [open, isAr]);
 
 
   const results = useMemo((): Result[] => {
@@ -241,10 +274,11 @@ useEffect(() => {
                   <Button
                     type="button"
                     onClick={() => {
-                      // allow re-try
-                      setHasLoaded(false);
-                      setLoadError(null);
+                      // Allow re-try
+                      hasLoadedRef.current = false;
                       setAllArticles([]);
+                      setLoadError(null);
+                      startLoad();
                     }}
                   >
                     {isAr ? 'إعادة المحاولة' : 'Retry'}
