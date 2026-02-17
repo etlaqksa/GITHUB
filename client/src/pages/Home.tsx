@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState, type CSSProperties } from 'react';
+import { useEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
 
 import LocalizedLink from '@/components/LocalizedLink';
 import { SEO } from '@/components/SEO';
@@ -13,7 +13,6 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import { useLanguage } from '@/contexts/LanguageContext';
-import RotatingPhrases from '@/components/hero/RotatingPhrases';
 import { trackEvent } from '@/lib/analytics';
 import { absUrl } from '@/lib/siteUrl';
 import { projects } from '@/data/projects';
@@ -34,8 +33,45 @@ import {
   Sparkles,
   Timer,
 } from 'lucide-react';
-import { useLocation } from 'wouter';
 
+
+type RotatingTextProps = {
+  items: string[];
+  intervalMs?: number;
+  className?: string;
+};
+
+function RotatingText({ items, intervalMs = 2400, className = '' }: RotatingTextProps) {
+  const safeItems = items?.length ? items : [''];
+  const [index, setIndex] = useState(0);
+  const [visible, setVisible] = useState(true);
+
+  // Reserve width to reduce CLS when the text rotates (especially on the hero).
+  const maxLen = useMemo(
+    () => safeItems.reduce((m, t) => Math.max(m, (t || '').length), 0),
+    [safeItems]
+  );
+
+  useEffect(() => {
+    if (safeItems.length <= 1) return;
+
+    const id = window.setInterval(() => {
+      setVisible(false);
+      window.setTimeout(() => {
+        setIndex((i) => (i + 1) % safeItems.length);
+        setVisible(true);
+      }, 260);
+    }, intervalMs);
+
+    return () => window.clearInterval(id);
+  }, [safeItems.length, intervalMs]);
+
+  return (
+    <span style={{ minWidth: `${Math.max(4, maxLen)}ch` }} className={`inline-block transition-opacity duration-300 ${visible ? 'opacity-100' : 'opacity-0'} ${className}`}>
+      {safeItems[index]}
+    </span>
+  );
+}
 
 const accentStyle = (rgb: string): CSSProperties => ({ ['--accent-rgb' as any]: rgb });
 
@@ -50,23 +86,10 @@ const PILLAR_ACCENTS = ['16 185 129', '37 99 235', '245 158 11', '168 85 247'];
 export default function Home() {
   const { language } = useLanguage();
 
-  const [loc, setLoc] = useLocation();
-  const { heroVariant, showHeroPreview, heroPath } = useMemo(() => {
-    const rawEnv = (import.meta.env.VITE_HERO_VARIANT || "").toString().toLowerCase();
-    const envVariant = rawEnv === "blobs" ? "blobs" : "gradient";
-
-    const clean = (loc || "/").split("#")[0];
-    const [path, query = ""] = clean.split("?");
-    const params = new URLSearchParams(query);
-
-    const q = (params.get("hero") || "").toLowerCase();
-    const heroVariant = q === "blobs" || q === "gradient" ? (q as "blobs" | "gradient") : envVariant;
-
-    const showHeroPreview = params.get("previewHero") === "1";
-
-    return { heroVariant, showHeroPreview, heroPath: path || "/" };
-  }, [loc]);
-
+  // Hero collage parallax (mobile-friendly). We animate the collage background with scroll
+  // using transforms (instead of CSS background-attachment: fixed, which is unreliable on mobile).
+  const heroRef = useRef<HTMLElement | null>(null);
+  const collageRef = useRef<HTMLImageElement | null>(null);
 
   const whatsappNumber = '966534145922';
   const heroWhatsAppUrl = useMemo(() => {
@@ -320,6 +343,55 @@ export default function Home() {
     },
   ];
 
+  // Collage background selection:
+  // - Normal: full collage
+  // - Mobile "Desktop site" mode: use a wider/shorter crop to avoid visible gaps.
+  // Use smaller defaults to reduce LCP on mobile while keeping high-res options via srcset.
+  const collageBgUrl = isDesktopModeMobile ? '/hero/home-collage-desktop-mobile-960.webp' : '/hero/home-collage-960.webp';
+  const collageSrcSet = isDesktopModeMobile
+    ? '/hero/home-collage-desktop-mobile-640.webp 640w, /hero/home-collage-desktop-mobile-960.webp 960w, /hero/home-collage-desktop-mobile-1280.webp 1280w, /hero/home-collage-desktop-mobile.webp 1920w'
+    : '/hero/home-collage-640.webp 640w, /hero/home-collage-960.webp 960w, /hero/home-collage-1280.webp 1280w, /hero/home-collage.webp 1920w';
+
+
+  useEffect(() => {
+    const heroEl = heroRef.current;
+    const bgEl = collageRef.current;
+    if (!heroEl || !bgEl) return;
+    if (typeof window === 'undefined') return;
+
+    let raf = 0;
+
+    const update = () => {
+      raf = 0;
+      const rect = heroEl.getBoundingClientRect();
+      const vh = window.innerHeight || 1;
+      // Progress from 0..1 as the hero moves through the viewport.
+      const total = vh + rect.height;
+      const progress = Math.min(1, Math.max(0, (vh - rect.top) / total));
+
+      // Keep motion subtle to avoid distracting the user.
+      const isMobile = window.matchMedia?.('(max-width: 768px)')?.matches ?? false;
+      const amplitude = isMobile ? 34 : 56; // px
+      const translateY = (progress - 0.5) * amplitude;
+
+      bgEl.style.transform = `translate3d(0, ${translateY}px, 0) scale(1.08)`;
+    };
+
+    const onScroll = () => {
+      if (raf) return;
+      raf = window.requestAnimationFrame(update);
+    };
+
+    update();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    return () => {
+      window.removeEventListener('scroll', onScroll as unknown as EventListener);
+      window.removeEventListener('resize', onScroll as unknown as EventListener);
+      if (raf) window.cancelAnimationFrame(raf);
+    };
+  }, [collageBgUrl]);
+
   return (
     <>
       <SEO
@@ -359,8 +431,9 @@ export default function Home() {
 
       {/* HERO */}
       <section
+        ref={heroRef}
         className={
-          `relative isolate overflow-hidden ` +
+          `relative overflow-hidden ` +
           (isDesktopModeMobile
             ? 'min-h-[52vh] max-h-none'
             : isCoarsePointer
@@ -368,49 +441,21 @@ export default function Home() {
               : 'min-h-[72vh] md:min-h-[78vh] max-h-[900px]')
         }
       >
-        <div
-          className={
-            "absolute inset-0 z-0 etlaq-hero-bg " +
-            (heroVariant === "blobs" ? "etlaq-hero-bg--blobs" : "etlaq-hero-bg--gradient")
-          }
+        <img
+          ref={collageRef}
+          src={collageBgUrl}
+          srcSet={collageSrcSet}
+          sizes="100vw"
+          width={1920}
+          height={isDesktopModeMobile ? 640 : 1080}
+          fetchPriority="high"
+          loading="eager"
+          decoding="async"
+          className="absolute inset-0 z-0 h-full w-full object-cover object-center"
+          style={{ willChange: 'transform', transform: 'translate3d(0, 0, 0) scale(1.08)' }}
+          alt=""
           aria-hidden="true"
-        >
-          {heroVariant === "blobs" ? (
-            <>
-              <div className="etlaq-hero-blob etlaq-hero-blob-1" />
-              <div className="etlaq-hero-blob etlaq-hero-blob-2" />
-              <div className="etlaq-hero-blob etlaq-hero-blob-3" />
-            </>
-          ) : null}
-        </div>
-
-        {showHeroPreview ? (
-          <div className="absolute z-30 top-4 ltr:right-4 rtl:left-4 flex items-center gap-2 rounded-full border border-white/25 bg-black/55 px-2 py-1 text-xs font-semibold text-white shadow-[0_12px_32px_rgba(0,0,0,0.35)]">
-            <span className="px-2 opacity-80">{heroVariant === "blobs" ? "Blobs" : "Gradient"}</span>
-            <button
-              type="button"
-              className={
-                "rounded-full px-3 py-1 transition " +
-                (heroVariant === "gradient" ? "bg-white/20" : "hover:bg-white/10")
-              }
-              aria-pressed={heroVariant === "gradient"}
-              onClick={() => setLoc(`${heroPath}?previewHero=1&hero=gradient`)}
-            >
-              Gradient
-            </button>
-            <button
-              type="button"
-              className={
-                "rounded-full px-3 py-1 transition " +
-                (heroVariant === "blobs" ? "bg-white/20" : "hover:bg-white/10")
-              }
-              aria-pressed={heroVariant === "blobs"}
-              onClick={() => setLoc(`${heroPath}?previewHero=1&hero=blobs`)}
-            >
-              Blobs
-            </button>
-          </div>
-        ) : null}
+        />
 
         {/* Contrast layer so hero text stays readable (no top/bottom bands) */}
         <div
@@ -475,7 +520,7 @@ export default function Home() {
                     شركة إطلاق المتميزة
                   </span>
                   <span className="text-white/70">{' — '}</span>
-                  <RotatingPhrases
+                  <RotatingText
                     items={['حقن تربة', 'كشف تكهفات', 'جيوفيزياء GPR/ERT/MASW']}
                     intervalMs={2200}
                     className="text-secondary font-extrabold"
@@ -487,7 +532,7 @@ export default function Home() {
                     ETLAQ Distinguished Company
                   </span>
                   <span className="text-white/70">{' — '}</span>
-                  <RotatingPhrases
+                  <RotatingText
                     items={['Soil Grouting', 'Cavity Detection', 'Geophysics GPR/ERT/MASW']}
                     intervalMs={2200}
                     className="text-secondary font-extrabold"
@@ -506,7 +551,7 @@ export default function Home() {
               {language === 'ar' ? (
                 <span className="font-semibold">
                   نركّز على الحل المبكر لأنه يحقق:{' '}
-                  <RotatingPhrases
+                  <RotatingText
                     items={['تكلفة أقل', 'وقت أقل', 'مخاطرة أقل', 'نتائج أكثر استقرارًا']}
                     intervalMs={2000}
                     className="text-secondary font-extrabold"
@@ -515,7 +560,7 @@ export default function Home() {
               ) : (
                 <span className="font-semibold">
                   We focus on early intervention because it delivers:{' '}
-                  <RotatingPhrases
+                  <RotatingText
                     items={['Lower cost', 'Less time', 'Lower risk', 'More stable results']}
                     intervalMs={2000}
                     className="text-secondary font-extrabold"
