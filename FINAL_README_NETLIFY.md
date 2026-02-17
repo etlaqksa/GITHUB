@@ -88,3 +88,20 @@
 
 إذا أردت Phase تالية "مرة واحدة" أيضًا:
 - ارسل ما تريد تحديدًا (مثلاً: إضافة صفحات لكل مدينة/خدمة بالجملة + توليد محتوى تلقائي + صور).
+
+
+---
+
+## (اختياري) تفعيل إجابات المساعد بالذكاء الاصطناعي (Gemini)
+
+تمت إضافة Netlify Function جاهزة: `/.netlify/functions/gemini-assistant` لتشغيل وضع "اسأل" داخل مساعد الموقع.
+
+### الإعداد على Netlify
+1) افتح: **Site settings → Environment variables**
+2) أضف متغير:
+   - `GEMINI_API_KEY` = API Key من Google AI Studio
+3) (اختياري) تحديد الموديل:
+   - `GEMINI_MODEL` = `gemini-2.5-flash-lite` (الافتراضي)
+
+> ملاحظة: المفتاح يبقى سرياً لأنه يُستخدم داخل Netlify Function فقط (Server-side) ولا يتم تضمينه في ملفات الواجهة الأمامية.
+
