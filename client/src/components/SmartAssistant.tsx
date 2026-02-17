@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { useLocation } from 'wouter';
-import { Bot, Search, Sparkles, MessageSquare } from 'lucide-react';
+import { Bot, Search, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
@@ -10,8 +10,7 @@ import { loadArticles, prefetchArticles } from '@/data/articlesLoader';
 import LocalizedLink from '@/components/LocalizedLink';
 import { getArticleUrlSlug } from '@/lib/articleUrl';
 
-type Result = { urlSlug: string; title: string; score: number };
-type AiLink = { title: string; href: string };
+type Result = { urlSlug: string; title: string; excerpt: string; score: number };
 
 const INTENTS = [
   { id: 'grouting', ar: 'حقن التربة', en: 'Soil grouting', href: '/services/grouting' },
@@ -33,20 +32,10 @@ export default function SmartAssistant({ initialOpen = false }: { initialOpen?: 
 
   const [location] = useLocation();
 
-  const [mode, setMode] = useState<'search' | 'ask'>('search');
-
   const [searchInput, setSearchInput] = useState('');
   const [allArticles, setAllArticles] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
   const [loadError, setLoadError] = useState<string | null>(null);
-
-  const [question, setQuestion] = useState('');
-  const [aiAnswer, setAiAnswer] = useState('');
-  const [aiLinks, setAiLinks] = useState<AiLink[]>([]);
-  const [aiCta, setAiCta] = useState('');
-  const [aiLoading, setAiLoading] = useState(false);
-  const [aiError, setAiError] = useState<string | null>(null);
-  const askAbortRef = useRef<AbortController | null>(null);
 
   // IMPORTANT:
   // Use refs (not state) to keep the loader stable.
@@ -116,10 +105,9 @@ export default function SmartAssistant({ initialOpen = false }: { initialOpen?: 
     if (openRef.current) setOpen(false);
   }, [location]);
 
-  // Load the articles only when the assistant is open *and* in search mode.
+  // Load the articles only when the assistant is open.
   useEffect(() => {
     if (!open) return;
-    if (mode !== 'search') return;
     if (hasLoadedRef.current) return;
 
     startLoad();
@@ -132,16 +120,7 @@ export default function SmartAssistant({ initialOpen = false }: { initialOpen?: 
       }
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [open, mode, isAr]);
-
-  // Reset transient states on close
-  useEffect(() => {
-    if (open) return;
-    setAiLoading(false);
-    setAiError(null);
-    askAbortRef.current?.abort();
-    askAbortRef.current = null;
-  }, [open]);
+  }, [open, isAr]);
 
   const results = useMemo((): Result[] => {
     const q = searchInput.trim().toLowerCase();
@@ -172,7 +151,12 @@ export default function SmartAssistant({ initialOpen = false }: { initialOpen?: 
         }
 
         const urlSlug = getArticleUrlSlug(a, isAr ? 'ar' : 'en');
-        return { urlSlug, title, score: s };
+        const excerptRaw = isAr ? String(a.content || '') : String(a.contentEn || a.content || '');
+        const excerpt = excerptRaw
+          .replace(/\s+/g, ' ')
+          .trim()
+          .slice(0, 220);
+        return { urlSlug, title, excerpt, score: s };
       })
       .filter((x) => x.score > 0)
       .sort((a, b) => b.score - a.score)
@@ -188,41 +172,68 @@ export default function SmartAssistant({ initialOpen = false }: { initialOpen?: 
     return out;
   }, [searchInput, allArticles, isAr]);
 
-  const askGemini = async () => {
-    const q = question.trim();
-    if (q.length < 2) return;
+  const guidance = useMemo(() => {
+    const q = searchInput.trim().toLowerCase();
+    if (q.length < 2) return null;
 
-    askAbortRef.current?.abort();
-    const ac = new AbortController();
-    askAbortRef.current = ac;
+    const isQuestion =
+      /\?$/.test(q) ||
+      (isAr
+        ? /(ما\s+هو|ما\s+هي|كيف|هل|لماذا|متى|أين|كم)/.test(q)
+        : /(what|how|can|is|should|why|when|where|price|cost)/.test(q));
 
-    setAiLoading(true);
-    setAiError(null);
-    setAiCta('');
-    // Keep previous answer visible while refreshing (feels instant)
-    try {
-      const res = await fetch('/.netlify/functions/gemini-assistant', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ question: q, language }),
-        signal: ac.signal,
-      });
+    const hits = {
+      grouting: /(هبوط|تشققات|تقوية|اساسات|أساسات|foundation|settlement|crack|underpin)/.test(q),
+      cavities: /(تكهف|تكهفات|فراغ|تجويف|هبوط\s+مفاجئ|cavity|void|sinkhole|probing)/.test(q),
+      geophysics: /(جيوفيزياء|gpr|ert|masw|geophysical|radar)/.test(q),
+      request: /(سعر|تكلفة|عرض\s*سعر|quotation|quote|price|cost)/.test(q),
+      contact: /(تواصل|اتصال|رقم|واتساب|whatsapp|call|contact)/.test(q),
+    };
 
-      const data = await res.json().catch(() => ({} as any));
-      if (!res.ok) {
-        throw new Error(data?.error || 'Request failed');
-      }
+    const links: Array<{ title: string; href: string }> = [];
+    const add = (href: string, titleAr: string, titleEn: string) => {
+      if (links.some((l) => l.href === href)) return;
+      links.push({ href, title: isAr ? titleAr : titleEn });
+    };
 
-      setAiAnswer(String(data?.answer || '').trim());
-      setAiLinks(Array.isArray(data?.links) ? data.links : []);
-      setAiCta(String(data?.cta || '').trim());
-    } catch (e: any) {
-      if (e?.name === 'AbortError') return;
-      setAiError(isAr ? 'تعذر الحصول على إجابة الآن. جرّب مرة أخرى.' : 'Could not get an answer right now. Please retry.');
-    } finally {
-      setAiLoading(false);
+    if (hits.grouting) add('/services/grouting', 'خدمة حقن التربة', 'Soil grouting service');
+    if (hits.cavities) add('/services/cavity', 'خدمة كشف التكهفات', 'Cavity probing service');
+    if (hits.geophysics) add('/services/geophysical', 'حلول جيوفيزيائية', 'Geophysical solutions');
+
+    if (hits.request) add('/request-service', 'اطلب الخدمة / عرض سعر', 'Request service / Quote');
+    if (hits.contact) add('/contact', 'تواصل معنا', 'Contact');
+
+    // Always provide a safe next step for business inquiries
+    if (!hits.request && !hits.contact && isQuestion) {
+      add('/request-service', 'طلب خدمة / زيارة موقع', 'Request service / Site visit');
+      add('/contact', 'تواصل معنا', 'Contact');
     }
-  };
+
+    const message = isAr
+      ? hits.request
+        ? 'للتسعير أو عرض السعر: اختر "اطلب الخدمة" أو تواصل معنا، وسنطلب منك التفاصيل الأساسية ونرتب زيارة الموقع.'
+        : hits.cavities
+          ? 'لو عندك اشتباه فراغ/تكهف: ابدأ بـ كشف التكهفات (Cavity Probing) أو حلول جيوفيزيائية حسب الحالة.'
+          : hits.grouting
+            ? 'لو عندك هبوط/تشققات: حقن التربة قد يكون مناسباً بعد تقييم السبب ونوع التربة وعمق المعالجة.'
+            : hits.geophysics
+              ? 'لو تحتاج مسح غير تدميري: GPR/ERT/MASW تساعد في تحديد الفراغات/الطبقات قبل المعالجة.'
+              : 'اكتب سؤالك أو كلمة مفتاحية وسأقترح أفضل المقالات والخدمة المناسبة داخل الموقع.'
+      : hits.request
+        ? 'For pricing/quotes, use “Request service” or contact us and we’ll guide you through the required details.'
+        : hits.cavities
+          ? 'Suspected void/cavity? Start with cavity probing or a geophysical survey depending on the case.'
+          : hits.grouting
+            ? 'Settlement/cracks? Soil grouting may help after evaluating the cause, soil type, and treatment depth.'
+            : hits.geophysics
+              ? 'Need non-destructive survey? GPR/ERT/MASW can help identify layers/voids before treatment.'
+              : 'Type a question or keyword and I’ll suggest the best articles and the right section inside the site.';
+
+    const top = results?.[0];
+    const quick = top?.excerpt ? { title: top.title, excerpt: top.excerpt, href: `/blog/${top.urlSlug}` } : null;
+
+    return { isQuestion, message, links, quick };
+  }, [searchInput, isAr, results]);
 
   return (
     <div className="fixed bottom-[calc(env(safe-area-inset-bottom,0px)+10.5rem)] md:bottom-24 right-6 z-[60]">
@@ -257,29 +268,6 @@ export default function SmartAssistant({ initialOpen = false }: { initialOpen?: 
           </div>
 
           <div className="px-6 pb-5 flex-1 min-h-0 overflow-y-auto overscroll-contain space-y-4 etlaq-scrollbar">
-            <div className="flex items-center gap-2">
-              <Button
-                type="button"
-                size="sm"
-                variant={mode === 'search' ? 'default' : 'outline'}
-                className="gap-2"
-                onClick={() => setMode('search')}
-              >
-                <Search className="h-4 w-4" />
-                {isAr ? 'بحث' : 'Search'}
-              </Button>
-              <Button
-                type="button"
-                size="sm"
-                variant={mode === 'ask' ? 'default' : 'outline'}
-                className="gap-2"
-                onClick={() => setMode('ask')}
-              >
-                <MessageSquare className="h-4 w-4" />
-                {isAr ? 'اسأل' : 'Ask'}
-              </Button>
-            </div>
-
             <div className="flex flex-wrap gap-2">
               {INTENTS.map((i) => (
                 <LocalizedLink key={i.id} href={i.href} onClick={() => setOpen(false)}>
@@ -288,159 +276,108 @@ export default function SmartAssistant({ initialOpen = false }: { initialOpen?: 
               ))}
             </div>
 
-            {mode === 'search' ? (
-              <>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {isAr
-                    ? 'ابحث داخل موسوعة المقالات أو اختر ما تريد بسرعة. عند فتح صفحة، سيُغلق المساعد تلقائياً.'
-                    : 'Search the knowledge base or jump to key pages. The assistant closes automatically after navigation.'}
-                </p>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              {isAr
+                ? 'ابحث داخل موسوعة المقالات أو اكتب سؤالك وسيقترح المساعد روابط وخطوات مناسبة داخل الموقع. عند فتح صفحة، سيُغلق المساعد تلقائياً.'
+                : 'Search the knowledge base or type a question. The assistant will suggest the best next steps and site links. It closes automatically after navigation.'}
+            </p>
 
-                <div className="flex items-center gap-2">
-                  <Search className="h-4 w-4 text-muted-foreground" />
-                  <Input
-                    value={searchInput}
-                    onChange={(e) => setSearchInput(e.target.value)}
-                    placeholder={isAr ? 'اكتب كلمة مثل: GPR أو حقن التربة...' : 'Type a keyword like: GPR or soil grouting...'}
-                  />
-                </div>
+            <div className="flex items-center gap-2">
+              <Search className="h-4 w-4 text-muted-foreground" />
+              <Input
+                value={searchInput}
+                onChange={(e) => setSearchInput(e.target.value)}
+                placeholder={
+                  isAr ? 'اكتب كلمة أو سؤال مثل: هل ينفع حقن التربة؟' : 'Type a keyword or question like: Is soil grouting suitable?'
+                }
+              />
+            </div>
 
-                {loading && <p className="text-sm text-muted-foreground">{isAr ? 'جاري تحميل المحتوى...' : 'Loading content...'}</p>}
+            {loading && <p className="text-sm text-muted-foreground">{isAr ? 'جاري تحميل المحتوى...' : 'Loading content...'}</p>}
 
-                {!loading && loadError && (
-                  <div className="etlaq-card rounded-xl border bg-card/60 backdrop-blur p-4">
-                    <p className="text-sm text-muted-foreground">{loadError}</p>
-                    <div className="mt-3 flex justify-end">
-                      <Button
-                        type="button"
-                        onClick={() => {
-                          hasLoadedRef.current = false;
-                          setAllArticles([]);
-                          setLoadError(null);
-                          startLoad();
-                        }}
-                      >
-                        {isAr ? 'إعادة المحاولة' : 'Retry'}
-                      </Button>
-                    </div>
-                  </div>
-                )}
-
-                {!loading && !loadError && searchInput.trim().length >= 2 && (
-                  <div className="etlaq-card rounded-xl border bg-card/60 backdrop-blur p-4">
-                    {results.length === 0 ? (
-                      <p className="text-sm text-muted-foreground">
-                        {isAr ? 'لا توجد نتائج واضحة. جرّب كلمة مختلفة.' : 'No clear results. Try a different keyword.'}
-                      </p>
-                    ) : (
-                      <ul className="space-y-3">
-                        {results.map((r) => (
-                          <li key={r.urlSlug}>
-                            <LocalizedLink
-                              href={`/blog/${r.urlSlug}`}
-                              className="block rounded-lg p-2 hover:bg-accent transition"
-                              onClick={() => setOpen(false)}
-                            >
-                              <div className="font-medium leading-snug">{r.title}</div>
-                              <div className="text-xs text-muted-foreground mt-1">{isAr ? 'عرض المقال' : 'Open article'}</div>
-                            </LocalizedLink>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </div>
-                )}
-              </>
-            ) : (
-              <>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {isAr
-                    ? 'اكتب سؤالك وسأقترح عليك أفضل خطوة وروابط مناسبة داخل الموقع.'
-                    : 'Ask a question and I will suggest the best next step with relevant site links.'}
-                </p>
-
-                <div className="space-y-2">
-                  <textarea
-                    value={question}
-                    onChange={(e) => setQuestion(e.target.value)}
-                    rows={3}
-                    className="w-full rounded-xl border bg-background px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-primary/30"
-                    placeholder={
-                      isAr
-                        ? 'مثال: عندي هبوط وتشققات، هل ينفع حقن تربة؟'
-                        : 'Example: I have settlement and cracks — is soil grouting suitable?'
-                    }
-                    onKeyDown={(e) => {
-                      if (e.key === 'Enter' && !e.shiftKey) {
-                        e.preventDefault();
-                        askGemini();
-                      }
+            {!loading && loadError && (
+              <div className="etlaq-card rounded-xl border bg-card/60 backdrop-blur p-4">
+                <p className="text-sm text-muted-foreground">{loadError}</p>
+                <div className="mt-3 flex justify-end">
+                  <Button
+                    type="button"
+                    onClick={() => {
+                      hasLoadedRef.current = false;
+                      setAllArticles([]);
+                      setLoadError(null);
+                      startLoad();
                     }}
-                  />
-                  <div className="flex items-center justify-end gap-2">
-                    <Button
-                      type="button"
-                      variant="outline"
-                      onClick={() => {
-                        setQuestion('');
-                        setAiAnswer('');
-                        setAiLinks([]);
-                        setAiCta('');
-                        setAiError(null);
-                      }}
-                    >
-                      {isAr ? 'مسح' : 'Clear'}
-                    </Button>
-                    <Button type="button" onClick={askGemini} disabled={aiLoading || question.trim().length < 2}>
-                      {aiLoading ? (isAr ? 'جاري الإجابة...' : 'Answering...') : isAr ? 'اسأل الآن' : 'Ask'}
-                    </Button>
-                  </div>
+                  >
+                    {isAr ? 'إعادة المحاولة' : 'Retry'}
+                  </Button>
                 </div>
+              </div>
+            )}
 
-                {aiError && (
-                  <div className="etlaq-card rounded-xl border bg-card/60 backdrop-blur p-4">
-                    <p className="text-sm text-muted-foreground">{aiError}</p>
-                    <div className="mt-3 flex justify-end">
-                      <Button type="button" onClick={askGemini}>
-                        {isAr ? 'إعادة المحاولة' : 'Retry'}
-                      </Button>
-                    </div>
-                  </div>
-                )}
+            {!loading && !loadError && guidance && (
+              <div className="etlaq-card rounded-xl border bg-card/60 backdrop-blur p-4 space-y-3">
+                <div className="text-sm leading-relaxed">{guidance.message}</div>
 
-                {(aiAnswer || aiLoading) && !aiError && (
-                  <div className="etlaq-card rounded-xl border bg-card/60 backdrop-blur p-4 space-y-3">
-                    {aiLoading && !aiAnswer ? (
-                      <p className="text-sm text-muted-foreground">{isAr ? 'جاري توليد الإجابة...' : 'Generating answer...'}</p>
-                    ) : (
-                      <div className="text-sm leading-relaxed whitespace-pre-wrap">{aiAnswer}</div>
-                    )}
-
-                    {aiCta && <div className="text-sm font-medium">{aiCta}</div>}
-
-                    {aiLinks.length > 0 && (
-                      <div className="flex flex-wrap gap-2 pt-1">
-                        {aiLinks.map((l) => (
-                          <LocalizedLink key={`${l.href}-${l.title}`} href={l.href} onClick={() => setOpen(false)}>
-                            <Badge className="cursor-pointer hover:opacity-90">{l.title}</Badge>
-                          </LocalizedLink>
-                        ))}
-                      </div>
-                    )}
-
-                    <div className="flex flex-wrap gap-2 pt-2">
-                      <LocalizedLink href="/request-service" onClick={() => setOpen(false)}>
-                        <Button type="button">{isAr ? 'اطلب الخدمة' : 'Request service'}</Button>
-                      </LocalizedLink>
-                      <LocalizedLink href="/contact" onClick={() => setOpen(false)}>
-                        <Button type="button" variant="outline">
-                          {isAr ? 'تواصل معنا' : 'Contact'}
-                        </Button>
+                {guidance.quick && (
+                  <div className="rounded-lg border bg-background/60 p-3">
+                    <div className="text-xs text-muted-foreground">{isAr ? 'ملخص سريع من أفضل نتيجة:' : 'Quick snippet from top match:'}</div>
+                    <div className="mt-1 font-medium leading-snug">{guidance.quick.title}</div>
+                    <div className="mt-1 text-sm text-muted-foreground leading-relaxed">{guidance.quick.excerpt}…</div>
+                    <div className="mt-2">
+                      <LocalizedLink href={guidance.quick.href} onClick={() => setOpen(false)} className="text-sm underline">
+                        {isAr ? 'فتح المقال' : 'Open article'}
                       </LocalizedLink>
                     </div>
                   </div>
                 )}
-              </>
+
+                {guidance.links.length > 0 && (
+                  <div className="flex flex-wrap gap-2">
+                    {guidance.links.map((l) => (
+                      <LocalizedLink key={`${l.href}-${l.title}`} href={l.href} onClick={() => setOpen(false)}>
+                        <Badge className="cursor-pointer hover:opacity-90">{l.title}</Badge>
+                      </LocalizedLink>
+                    ))}
+                  </div>
+                )}
+
+                <div className="flex flex-wrap gap-2 pt-1">
+                  <LocalizedLink href="/request-service" onClick={() => setOpen(false)}>
+                    <Button type="button">{isAr ? 'اطلب الخدمة' : 'Request service'}</Button>
+                  </LocalizedLink>
+                  <LocalizedLink href="/contact" onClick={() => setOpen(false)}>
+                    <Button type="button" variant="outline">
+                      {isAr ? 'تواصل معنا' : 'Contact'}
+                    </Button>
+                  </LocalizedLink>
+                </div>
+              </div>
+            )}
+
+            {!loading && !loadError && searchInput.trim().length >= 2 && (
+              <div className="etlaq-card rounded-xl border bg-card/60 backdrop-blur p-4">
+                {results.length === 0 ? (
+                  <p className="text-sm text-muted-foreground">
+                    {isAr ? 'لا توجد نتائج واضحة. جرّب كلمة مختلفة.' : 'No clear results. Try a different keyword.'}
+                  </p>
+                ) : (
+                  <ul className="space-y-3">
+                    {results.map((r) => (
+                      <li key={r.urlSlug}>
+                        <LocalizedLink
+                          href={`/blog/${r.urlSlug}`}
+                          className="block rounded-lg p-2 hover:bg-accent transition"
+                          onClick={() => setOpen(false)}
+                        >
+                          <div className="font-medium leading-snug">{r.title}</div>
+                          {r.excerpt && <div className="text-xs text-muted-foreground mt-1 line-clamp-2">{r.excerpt}…</div>}
+                          <div className="text-xs text-muted-foreground mt-1">{isAr ? 'عرض المقال' : 'Open article'}</div>
+                        </LocalizedLink>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
             )}
           </div>
 
