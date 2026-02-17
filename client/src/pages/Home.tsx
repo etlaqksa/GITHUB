@@ -681,7 +681,7 @@ export default function Home() {
                 </CardHeader>
                 <CardContent className="space-y-5">
                   <p className="text-muted-foreground leading-relaxed">{s.desc}</p>
-                  <div className="rounded-xl border bg-card/60 backdrop-blur p-4">
+                  <div className="etlaq-card rounded-xl border bg-card/60 backdrop-blur p-4">
                     <p className="text-sm font-medium mb-3">{language === 'ar' ? 'ماذا تتوقع؟' : 'What to expect'}</p>
                     <ul className="space-y-2">
                       {s.bullets.map((b) => (
@@ -878,7 +878,7 @@ export default function Home() {
       {/* FINAL CTA */}
       <section className="py-12 md:py-16">
         <div className="w-full px-4">
-          <div className="rounded-3xl border bg-card p-8 md:p-12">
+          <div className="etlaq-card rounded-3xl border bg-card p-8 md:p-12">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div className="space-y-3">
                 <h2 className="text-2xl md:text-4xl font-bold">

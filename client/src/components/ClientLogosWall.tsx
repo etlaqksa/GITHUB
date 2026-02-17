@@ -34,7 +34,7 @@ export default function ClientLogosWall({
           </p>
         </div>
 
-        <div className="rounded-2xl border bg-card/40 p-4 md:p-6">
+        <div className="etlaq-card rounded-2xl border bg-card/40 p-4 md:p-6">
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
             {clientLogos.map((logo) => {
               const label = language === 'ar' ? logo.name.ar : logo.name.en || logo.name.ar;

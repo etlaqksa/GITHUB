@@ -179,7 +179,7 @@ export default function Audience() {
 
               <div className="mt-8 grid gap-4 md:grid-cols-3">
                 {bullets.map((b) => (
-                  <div key={b} className="rounded-2xl border bg-card/70 backdrop-blur p-5">
+                  <div key={b} className="etlaq-card rounded-2xl border bg-card/70 backdrop-blur p-5">
                     <div className="flex items-start gap-3">
                       <CheckCircle2 className="h-5 w-5 mt-0.5" />
                       <p className="font-semibold leading-snug">{b}</p>
@@ -235,7 +235,7 @@ export default function Audience() {
           </Card>
 
           <div className="mt-10">
-            <TrustStats className="rounded-2xl border bg-card/60 backdrop-blur p-6 md:p-8" />
+            <TrustStats className="etlaq-card rounded-2xl border bg-card/60 backdrop-blur p-6 md:p-8" />
           </div>
         </div>
       </section>

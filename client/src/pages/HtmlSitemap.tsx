@@ -53,7 +53,7 @@ export default function HtmlSitemap() {
             </p>
 
             <div className="mt-8 grid gap-8">
-              <div className="rounded-2xl border bg-card/60 backdrop-blur p-6">
+              <div className="etlaq-card rounded-2xl border bg-card/60 backdrop-blur p-6">
                 <h2 className="text-xl font-semibold">{language === 'ar' ? 'روابط أساسية' : 'Core pages'}</h2>
                 <ul className="mt-4 grid sm:grid-cols-2 lg:grid-cols-3 gap-2">
                   {coreLinks.map((l) => (
@@ -66,7 +66,7 @@ export default function HtmlSitemap() {
                 </ul>
               </div>
 
-              <div className="rounded-2xl border bg-card/60 backdrop-blur p-6">
+              <div className="etlaq-card rounded-2xl border bg-card/60 backdrop-blur p-6">
                 <h2 className="text-xl font-semibold">{language === 'ar' ? 'صفحات المدن والخدمات' : 'Cities & services'}</h2>
                 <p className="text-sm text-muted-foreground mt-2">
                   {language === 'ar'
@@ -143,7 +143,7 @@ export default function HtmlSitemap() {
                 </div>
               </div>
 
-              <div className="rounded-2xl border bg-card/60 backdrop-blur p-6">
+              <div className="etlaq-card rounded-2xl border bg-card/60 backdrop-blur p-6">
                 <h2 className="text-xl font-semibold">{language === 'ar' ? 'المدونة' : 'Blog'}</h2>
                 <p className="text-sm text-muted-foreground mt-2">
                   {language === 'ar'

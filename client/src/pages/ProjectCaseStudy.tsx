@@ -183,7 +183,7 @@ export default function ProjectCaseStudy() {
 
           <div className="mt-10">
             <RelatedLinksHub signals={relatedSignals} />
-            <TrustStats className="rounded-2xl border bg-card/60 backdrop-blur p-6 md:p-8" />
+            <TrustStats className="etlaq-card rounded-2xl border bg-card/60 backdrop-blur p-6 md:p-8" />
           </div>
         </div>
       </section>

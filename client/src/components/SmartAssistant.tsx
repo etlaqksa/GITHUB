@@ -201,7 +201,7 @@ export default function SmartAssistant({ initialOpen = false }: { initialOpen?: 
             )}
 
             {!loading && input.trim().length >= 2 && (
-              <div className="rounded-xl border bg-card/60 backdrop-blur p-4">
+              <div className="etlaq-card rounded-xl border bg-card/60 backdrop-blur p-4">
                 {results.length === 0 ? (
                   <p className="text-sm text-muted-foreground">
                     {isAr ? 'لا توجد نتائج واضحة. جرّب كلمة مختلفة.' : 'No clear results. Try a different keyword.'}

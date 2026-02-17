@@ -63,7 +63,7 @@ export default function About() {
       {/* Quick CTAs */}
       <section className="py-6">
         <div className="container">
-          <div className="rounded-2xl border bg-card/70 backdrop-blur p-5 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="etlaq-card rounded-2xl border bg-card/70 backdrop-blur p-5 flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="text-center md:text-start">
               <div className="font-semibold">
                 {language === 'ar' ? 'تريد تفاصيل أكثر؟' : 'Want more details?'}

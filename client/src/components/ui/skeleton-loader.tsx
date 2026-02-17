@@ -19,7 +19,7 @@ export default function SkeletonLoader({ className = "", type = "text" }: Skelet
 
   if (type === "card") {
     return (
-      <div className={`w-full rounded-2xl border bg-card p-4 shadow-sm ${className}`}>
+      <div className={`etlaq-card w-full rounded-2xl border bg-card p-4 shadow-sm ${className}`}>
         <div className={`h-40 w-full mb-4 rounded-xl ${baseClass}`} />
         <div className={`h-6 w-3/4 mb-3 ${baseClass}`} />
         <div className="space-y-2">

@@ -125,7 +125,7 @@ export default function Projects() {
       {/* Trust stats */}
       <section className="pb-10">
         <div className="container">
-          <TrustStats className="rounded-2xl border bg-card/60 backdrop-blur p-6 md:p-8" />
+          <TrustStats className="etlaq-card rounded-2xl border bg-card/60 backdrop-blur p-6 md:p-8" />
         </div>
       </section>
 
@@ -239,7 +239,7 @@ export default function Projects() {
           </div>
 
           {/* CTA */}
-          <div className="mt-12 rounded-2xl border bg-card/60 backdrop-blur p-6 md:p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <div className="etlaq-card mt-12 rounded-2xl border bg-card/60 backdrop-blur p-6 md:p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div>
               <h3 className="text-2xl font-bold">{language === 'ar' ? 'لديك مشروع مشابه؟' : 'Have a similar project?'}</h3>
               <p className="mt-2 text-muted-foreground">

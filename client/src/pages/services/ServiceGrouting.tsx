@@ -165,11 +165,11 @@ export default function ServiceGrouting() {
         url="https://etlaqksa.com/services/grouting"
       />
 
-      <div className="w-full">
+      <div className="w-full" style={{ ['--accent-rgb' as any]: '16 185 129' }}>
         <section className="bg-gradient-to-br from-primary/5 via-background to-accent/5 py-10 md:py-12">
           <div className="container">
             
-          <div className="rounded-2xl border bg-card p-6 mb-8">
+          <div className="etlaq-card rounded-2xl border bg-card p-6 mb-8">
             <TrustStats />
           </div>
 <div className="max-w-4xl mx-auto space-y-4">
@@ -332,7 +332,7 @@ export default function ServiceGrouting() {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   {processSteps.map((s, idx) => (
-                    <div key={idx} className="rounded-2xl border bg-card/60 backdrop-blur p-4">
+                    <div key={idx} className="etlaq-card rounded-2xl border bg-card/60 backdrop-blur p-4">
                       <div className="font-semibold">{idx + 1}. {s.title}</div>
                       <div className="text-sm text-muted-foreground leading-relaxed mt-1">
                         <AutoLinkedText text={s.desc} />

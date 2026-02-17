@@ -268,7 +268,7 @@ export default function Services() {
             <h1 className="text-3xl md:text-5xl font-bold">{hero.title}</h1>
             <p className="text-muted-foreground leading-relaxed whitespace-pre-line">{hero.subtitle}</p>
 
-            <div className="mt-6 rounded-2xl border bg-card/70 backdrop-blur p-6">
+            <div className="etlaq-card mt-6 rounded-2xl border bg-card/70 backdrop-blur p-6">
               <TrustStats />
             </div>
 

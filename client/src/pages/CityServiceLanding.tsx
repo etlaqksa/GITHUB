@@ -173,7 +173,7 @@ function ModelLanding(props: {
               ]}
             />
 
-            <div className="rounded-3xl border bg-card/60 backdrop-blur p-6 md:p-8">
+            <div className="etlaq-card rounded-3xl border bg-card/60 backdrop-blur p-6 md:p-8">
               <p className="text-sm font-medium text-muted-foreground">{model.kicker}</p>
               <h1 className="text-3xl md:text-5xl font-bold leading-tight mt-2">{model.h1}</h1>
 
@@ -276,7 +276,7 @@ function ModelLanding(props: {
                 </CardHeader>
                 <CardContent className="space-y-3">
                   {model.processSteps.map((s) => (
-                    <div key={s.title} className="rounded-xl border bg-card/60 backdrop-blur p-4">
+                    <div key={s.title} className="etlaq-card rounded-xl border bg-card/60 backdrop-blur p-4">
                       <div className="flex items-start gap-2">
                         <ClipboardList className="h-4 w-4 mt-0.5 text-primary" />
                         <div>
@@ -344,7 +344,7 @@ function ModelLanding(props: {
               <h2 className="text-2xl md:text-3xl font-bold">{model.faqTitle}</h2>
               <div className="space-y-3">
                 {model.faq.map((f) => (
-                  <details key={f.q} className="rounded-2xl border bg-card/50 backdrop-blur px-5 py-4">
+                  <details key={f.q} className="etlaq-card rounded-2xl border bg-card/50 backdrop-blur px-5 py-4">
                     <summary className="cursor-pointer font-medium">{f.q}</summary>
                     <p className="text-sm text-muted-foreground leading-relaxed mt-2">{f.a}</p>
                   </details>
@@ -360,7 +360,7 @@ function ModelLanding(props: {
 
             {/* CTA + Quick request */}
             <div className="grid lg:grid-cols-2 gap-6 items-start">
-              <div className="rounded-2xl border bg-card/70 backdrop-blur p-6">
+              <div className="etlaq-card rounded-2xl border bg-card/70 backdrop-blur p-6">
                 <h2 className="text-2xl font-bold">{model.footerTitle}</h2>
                 <p className="text-muted-foreground mt-2 leading-relaxed">{model.footerBody}</p>
 
@@ -585,7 +585,7 @@ export default function CityServiceLanding({ params }: Props) {
               </CardHeader>
               <CardContent className="space-y-3">
                 {steps.map((s) => (
-                  <div key={s.title} className="rounded-xl border bg-card/60 backdrop-blur p-4">
+                  <div key={s.title} className="etlaq-card rounded-xl border bg-card/60 backdrop-blur p-4">
                     <div className="flex items-start gap-2">
                       <ClipboardList className="h-4 w-4 mt-0.5 text-primary" />
                       <div>
@@ -611,7 +611,7 @@ export default function CityServiceLanding({ params }: Props) {
               </CardHeader>
               <CardContent className="space-y-4">
                 {faq.map((f) => (
-                  <div key={f.q} className="rounded-xl border bg-card/50 backdrop-blur p-4">
+                  <div key={f.q} className="etlaq-card rounded-xl border bg-card/50 backdrop-blur p-4">
                     <p className="font-medium">{f.q}</p>
                     <p className="text-sm text-muted-foreground leading-relaxed mt-2">{f.a}</p>
                   </div>
@@ -678,7 +678,7 @@ export default function CityServiceLanding({ params }: Props) {
           )}
 
           <div className="mt-10 grid lg:grid-cols-2 gap-6 items-start">
-            <div className="rounded-2xl border bg-card/70 backdrop-blur p-6">
+            <div className="etlaq-card rounded-2xl border bg-card/70 backdrop-blur p-6">
               <h2 className="text-2xl font-bold">{language === 'ar' ? 'طلب مختصر داخل المدينة' : 'Quick request in this city'}</h2>
               <p className="text-muted-foreground mt-2 leading-relaxed">
                 {language === 'ar'

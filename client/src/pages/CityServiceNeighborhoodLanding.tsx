@@ -322,7 +322,7 @@ export default function CityServiceNeighborhoodLanding() {
               ]}
             />
 
-            <div className="rounded-2xl border bg-card/60 backdrop-blur p-6 md:p-8 shadow-sm">
+            <div className="etlaq-card rounded-2xl border bg-card/60 backdrop-blur p-6 md:p-8 shadow-sm">
               <h1 className="text-3xl md:text-4xl font-bold tracking-tight">{h1}</h1>
               <p className="mt-4 text-base md:text-lg text-muted-foreground">
                 <AutoLinkedText text={intro} />
@@ -353,7 +353,7 @@ export default function CityServiceNeighborhoodLanding() {
             </div>
 
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="rounded-2xl border bg-card/60 backdrop-blur p-6 shadow-sm">
+              <div className="etlaq-card rounded-2xl border bg-card/60 backdrop-blur p-6 shadow-sm">
                 <h2 className="text-xl font-semibold">{lang === 'ar' ? 'متى تحتاج هذه الخدمة؟' : 'When do you need this?'}</h2>
                 <ul className="mt-4 space-y-2 text-muted-foreground list-disc ps-5">
                   {whenBullets.slice(0, 6).map((u) => (
@@ -364,7 +364,7 @@ export default function CityServiceNeighborhoodLanding() {
                 </ul>
               </div>
 
-              <div className="rounded-2xl border bg-card/60 backdrop-blur p-6 shadow-sm">
+              <div className="etlaq-card rounded-2xl border bg-card/60 backdrop-blur p-6 shadow-sm">
                 <h2 className="text-xl font-semibold">{lang === 'ar' ? 'خطوات العمل المختصرة' : 'Quick process'}</h2>
                 <ol className="mt-4 space-y-2 text-muted-foreground list-decimal ps-5">
                   {processSteps.slice(0, 6).map((p) => (
@@ -376,7 +376,7 @@ export default function CityServiceNeighborhoodLanding() {
               </div>
             </div>
 
-            <div className="rounded-2xl border bg-card/60 backdrop-blur p-6 md:p-8 shadow-sm">
+            <div className="etlaq-card rounded-2xl border bg-card/60 backdrop-blur p-6 md:p-8 shadow-sm">
               <h2 className="text-xl font-semibold">{lang === 'ar' ? 'أسئلة شائعة' : 'FAQ'}</h2>
               <div className="mt-4">
                 <Accordion type="single" collapsible>
@@ -390,7 +390,7 @@ export default function CityServiceNeighborhoodLanding() {
               </div>
             </div>
 
-            <div className="rounded-2xl border bg-card/60 backdrop-blur p-6 md:p-8 shadow-sm">
+            <div className="etlaq-card rounded-2xl border bg-card/60 backdrop-blur p-6 md:p-8 shadow-sm">
               <h2 className="text-xl font-semibold">{lang === 'ar' ? 'روابط ذات صلة' : 'Related links'}</h2>
               <div className="mt-4 grid sm:grid-cols-2 gap-3">
                 {related.map((r) => (

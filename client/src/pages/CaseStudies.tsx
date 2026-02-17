@@ -37,7 +37,7 @@ export default function CaseStudies() {
       />
 
       <div className="container mx-auto px-4">
-        <div className="max-w-xl mx-auto rounded-2xl border bg-card/70 backdrop-blur p-8 text-center space-y-4">
+        <div className="etlaq-card max-w-xl mx-auto rounded-2xl border bg-card/70 backdrop-blur p-8 text-center space-y-4">
           <h1 className="text-2xl font-bold">
             {lang === 'ar' ? 'تم دمج دراسات الحالة ضمن المشاريع' : 'Case studies are merged into Projects'}
           </h1>

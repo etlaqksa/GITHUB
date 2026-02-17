@@ -102,7 +102,7 @@ function DeferredMount({
 function RouteLoader() {
   return (
     <div className="container mx-auto px-4 py-10">
-      <div className="max-w-xl mx-auto rounded-2xl border bg-card p-6 backdrop-blur-md ring-1 ring-black/5">
+      <div className="etlaq-card max-w-xl mx-auto rounded-2xl border bg-card p-6 backdrop-blur-md ring-1 ring-black/5">
         <SkeletonLoader className="w-40 mb-4" />
         <SkeletonLoader className="w-full mb-2" />
         <SkeletonLoader className="w-5/6 mb-2" />
