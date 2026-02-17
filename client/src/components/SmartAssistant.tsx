@@ -244,7 +244,7 @@ export default function SmartAssistant({ initialOpen = false }: { initialOpen?: 
         <DialogTrigger asChild>
           <Button
             size="lg"
-            className="rounded-full shadow-lg gap-2"
+            className="rounded-full shadow-lg gap-2 etlaq-assistant-fab"
             aria-label={isAr ? 'مساعد الموقع' : 'Site assistant'}
             type="button"
             onMouseEnter={() => {
