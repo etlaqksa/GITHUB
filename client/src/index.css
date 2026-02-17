@@ -359,7 +359,7 @@ html[data-theme='red'] {
   /* Body copy: slightly tinted to avoid pure black while staying readable */
   .etlaq-color-typography :where(p, li):not([class*="text-white"]) {
     color: var(--foreground);
-    color: color-mix(in oklch, var(--foreground) 88%, var(--primary) 12%);
+    color: color-mix(in oklch, var(--foreground) 72%, var(--primary) 28%);
   }
 
   /* Links: accent color + elegant underline */
@@ -378,17 +378,17 @@ html[data-theme='red'] {
 
   /* Emphasis: subtle color for strong/bold without hurting readability */
   .etlaq-color-typography :where(strong, b):not([class*="text-white"]) {
-    color: color-mix(in oklch, var(--foreground) 70%, var(--primary) 30%);
+    color: color-mix(in oklch, var(--foreground) 62%, var(--primary) 38%);
   }
   .etlaq-color-typography :where(em, i):not([class*="text-white"]) {
-    color: color-mix(in oklch, var(--foreground) 78%, var(--accent) 22%);
+    color: color-mix(in oklch, var(--foreground) 70%, var(--accent) 30%);
   }
 
   /* Rich elements */
   .etlaq-color-typography :where(blockquote):not([class*="text-white"]) {
     border-inline-start: 4px solid rgb(var(--etlaq-accent-rgb-local) / 0.45);
     padding-inline-start: 1rem;
-    color: color-mix(in oklch, var(--foreground) 80%, var(--primary) 20%);
+    color: color-mix(in oklch, var(--foreground) 72%, var(--primary) 28%);
   }
   .etlaq-color-typography :where(hr) {
     border-color: rgb(var(--etlaq-accent-rgb-local) / 0.20);
@@ -398,6 +398,46 @@ html[data-theme='red'] {
   .etlaq-color-typography ::selection {
     background: rgb(var(--etlaq-accent-rgb-local) / 0.25);
   }
+  /* Footer: keep contrast on colored bg-primary by using a complementary accent palette (not the same as the theme color). */
+  .etlaq-footer {
+    /* defaults (in case theme attribute is missing) */
+    --etlaq-accent-rgb: 250 204 21; /* amber */
+    --etlaq-accent2-rgb: 255 255 255; /* white */
+  }
+
+  html[data-theme='blue'] .etlaq-footer {
+    --etlaq-accent-rgb: 250 204 21; /* amber/yellow */
+    --etlaq-accent2-rgb: 255 255 255;
+  }
+
+  html[data-theme='green'] .etlaq-footer {
+    --etlaq-accent-rgb: 244 114 182; /* pink */
+    --etlaq-accent2-rgb: 253 230 138; /* soft amber */
+  }
+
+  html[data-theme='orange'] .etlaq-footer {
+    --etlaq-accent-rgb: 56 189 248; /* sky */
+    --etlaq-accent2-rgb: 255 255 255;
+  }
+
+  html[data-theme='purple'] .etlaq-footer {
+    --etlaq-accent-rgb: 163 230 53; /* lime */
+    --etlaq-accent2-rgb: 250 204 21; /* amber */
+  }
+
+  html[data-theme='red'] .etlaq-footer {
+    --etlaq-accent-rgb: 34 211 238; /* cyan */
+    --etlaq-accent2-rgb: 255 255 255;
+  }
+
+  /* Ensure our site-wide typography tinting does not reduce readability in the footer */
+  .etlaq-footer :where(h1, h2, h3, h4, h5, h6) {
+    color: rgb(255 255 255 / 0.96);
+  }
+  .etlaq-footer :where(p, li, blockquote, strong, b, em, i):not([class*="text-white"]) {
+    color: inherit;
+  }
+
 }
 
 @layer components {
