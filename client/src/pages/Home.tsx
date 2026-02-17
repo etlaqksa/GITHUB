@@ -16,6 +16,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import RotatingPhrases from '@/components/hero/RotatingPhrases';
 import { trackEvent } from '@/lib/analytics';
 import { absUrl } from '@/lib/siteUrl';
+import { useUrlSearch } from '@/lib/useUrlSearch';
 import { projects } from '@/data/projects';
 import { cities } from '@/data/seoLocations';
 import {
@@ -50,22 +51,44 @@ const PILLAR_ACCENTS = ['16 185 129', '37 99 235', '245 158 11', '168 85 247'];
 export default function Home() {
   const { language } = useLanguage();
 
-  const [loc, setLoc] = useLocation();
-  const { heroVariant, showHeroPreview, heroPath } = useMemo(() => {
-    const rawEnv = (import.meta.env.VITE_HERO_VARIANT || "").toString().toLowerCase();
-    const envVariant = rawEnv === "blobs" ? "blobs" : "gradient";
+  const [loc] = useLocation();
+  const search = useUrlSearch();
 
-    const clean = (loc || "/").split("#")[0];
-    const [path, query = ""] = clean.split("?");
-    const params = new URLSearchParams(query);
+  const { heroVariant, showHeroPreview, forceMotion } = useMemo(() => {
+    const rawEnv = (import.meta.env.VITE_HERO_VARIANT || "").toString().toLowerCase();
+    const envVariant = rawEnv === "blobs" ? "blobs" : rawEnv === "grid" ? "grid" : "gradient";
+
+    const params = new URLSearchParams(search || "");
 
     const q = (params.get("hero") || "").toLowerCase();
-    const heroVariant = q === "blobs" || q === "gradient" ? (q as "blobs" | "gradient") : envVariant;
+    const heroVariant = (q === "blobs" || q === "gradient" || q === "grid")
+      ? (q as "blobs" | "gradient" | "grid")
+      : (envVariant as "blobs" | "gradient" | "grid");
 
-    const showHeroPreview = params.get("previewHero") === "1";
+    const showHeroPreview = params.get("previewHero") === "1" || !import.meta.env.PROD;
+    const forceMotion = params.get("motion") === "1" || params.get("forceMotion") === "1";
 
-    return { heroVariant, showHeroPreview, heroPath: path || "/" };
-  }, [loc]);
+    return { heroVariant, showHeroPreview, forceMotion };
+  }, [loc, search]);
+
+  // Allow forcing motion for previewing animations even if the OS has reduced-motion enabled.
+  useEffect(() => {
+    if (typeof document === 'undefined') return;
+    if (forceMotion) document.documentElement.setAttribute('data-force-motion', '1');
+    else document.documentElement.removeAttribute('data-force-motion');
+  }, [forceMotion]);
+
+  const updateHeroQuery = (next: Record<string, string | undefined>) => {
+    if (typeof window === 'undefined') return;
+    const params = new URLSearchParams(window.location.search || '');
+    Object.entries(next).forEach(([k, v]) => {
+      if (v === undefined || v === null || v === '') params.delete(k);
+      else params.set(k, v);
+    });
+    const qs = params.toString();
+    const url = window.location.pathname + (qs ? `?${qs}` : '') + (window.location.hash || '');
+    window.history.replaceState(null, '', url);
+  };
 
 
   const whatsappNumber = '966534145922';
@@ -371,7 +394,11 @@ export default function Home() {
         <div
           className={
             "absolute inset-0 z-0 etlaq-hero-bg " +
-            (heroVariant === "blobs" ? "etlaq-hero-bg--blobs" : "etlaq-hero-bg--gradient")
+            (heroVariant === "blobs"
+              ? "etlaq-hero-bg--blobs"
+              : heroVariant === "grid"
+                ? "etlaq-hero-bg--grid"
+                : "etlaq-hero-bg--gradient")
           }
           aria-hidden="true"
         >
@@ -386,7 +413,9 @@ export default function Home() {
 
         {showHeroPreview ? (
           <div className="absolute z-30 top-4 ltr:right-4 rtl:left-4 flex items-center gap-2 rounded-full border border-white/25 bg-black/55 px-2 py-1 text-xs font-semibold text-white shadow-[0_12px_32px_rgba(0,0,0,0.35)]">
-            <span className="px-2 opacity-80">{heroVariant === "blobs" ? "Blobs" : "Gradient"}</span>
+            <span className="px-2 opacity-80">
+              {heroVariant === "blobs" ? "Blobs" : heroVariant === "grid" ? "Grid" : "Gradient"}
+            </span>
             <button
               type="button"
               className={
@@ -394,7 +423,7 @@ export default function Home() {
                 (heroVariant === "gradient" ? "bg-white/20" : "hover:bg-white/10")
               }
               aria-pressed={heroVariant === "gradient"}
-              onClick={() => setLoc(`${heroPath}?previewHero=1&hero=gradient`)}
+              onClick={() => updateHeroQuery({ previewHero: '1', hero: 'gradient' })}
             >
               Gradient
             </button>
@@ -405,9 +434,36 @@ export default function Home() {
                 (heroVariant === "blobs" ? "bg-white/20" : "hover:bg-white/10")
               }
               aria-pressed={heroVariant === "blobs"}
-              onClick={() => setLoc(`${heroPath}?previewHero=1&hero=blobs`)}
+              onClick={() => updateHeroQuery({ previewHero: '1', hero: 'blobs' })}
             >
               Blobs
+            </button>
+
+            <button
+              type="button"
+              className={
+                "rounded-full px-3 py-1 transition " +
+                (heroVariant === "grid" ? "bg-white/20" : "hover:bg-white/10")
+              }
+              aria-pressed={heroVariant === "grid"}
+              onClick={() => updateHeroQuery({ previewHero: '1', hero: 'grid' })}
+            >
+              Grid
+            </button>
+
+            <span className="mx-1 h-5 w-px bg-white/20" aria-hidden="true" />
+
+            <button
+              type="button"
+              className={
+                "rounded-full px-3 py-1 transition " +
+                (forceMotion ? "bg-white/20" : "hover:bg-white/10")
+              }
+              aria-pressed={forceMotion}
+              onClick={() => updateHeroQuery({ previewHero: '1', motion: forceMotion ? undefined : '1' })}
+              title="Force motion even if the OS has reduced-motion enabled"
+            >
+              Motion
             </button>
           </div>
         ) : null}
@@ -459,11 +515,25 @@ export default function Home() {
             <h1 className="text-3xl md:text-5xl font-extrabold leading-[1.08] tracking-tight text-white drop-shadow-[0_10px_34px_rgba(0,0,0,0.92)]">
               {language === 'ar' ? (
                 <>
-                  نحن نقوّي أساساتك
+                  نحن نقوّي{' '}
+                  <RotatingPhrases
+                    items={['أساساتك', 'أساسات مبناك', 'أساسات مشروعك']}
+                    intervalMs={2200}
+                    className="text-secondary font-extrabold"
+                    wrapperClassName="align-baseline"
+                  />
                 </>
               ) : (
                 <>
-                  <span className="whitespace-nowrap">We Strengthen Your Foundations</span>
+                  <span className="whitespace-nowrap">
+                    We Strengthen{' '}
+                    <RotatingPhrases
+                      items={['Your Foundations', 'Your Structure', 'Your Ground']}
+                      intervalMs={2200}
+                      className="text-secondary font-extrabold"
+                      wrapperClassName="align-baseline"
+                    />
+                  </span>
                 </>
               )}
             </h1>
