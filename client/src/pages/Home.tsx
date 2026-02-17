@@ -14,7 +14,6 @@ import {
 } from '@/components/ui/accordion';
 import { useLanguage } from '@/contexts/LanguageContext';
 import HeroIntroSequence from '@/components/hero/HeroIntroSequence';
-import { usePrefersReducedMotion } from '@/components/hero/usePrefersReducedMotion';
 import { trackEvent } from '@/lib/analytics';
 import { absUrl } from '@/lib/siteUrl';
 import { useUrlSearch } from '@/lib/useUrlSearch';
@@ -22,7 +21,6 @@ import { projects } from '@/data/projects';
 import { cities } from '@/data/seoLocations';
 import {
   AlertTriangle,
-  ArrowLeft,
   Building2,
   CheckCircle2,
 
@@ -30,12 +28,12 @@ import {
   Drill,
   HardHat,
   MapPin,
-  MessageCircle,
   Radar,
   ShieldCheck,
   Sparkles,
   Timer,
 } from 'lucide-react';
+import { useLocation } from 'wouter';
 
 
 const accentStyle = (rgb: string): CSSProperties => ({ ['--accent-rgb' as any]: rgb });
@@ -51,118 +49,46 @@ const PILLAR_ACCENTS = ['16 185 129', '37 99 235', '245 158 11', '168 85 247'];
 export default function Home() {
   const { language } = useLanguage();
 
-const search = useUrlSearch();
+  const [loc] = useLocation();
+  const search = useUrlSearch();
 
-// Hero variant is persisted in localStorage and can be overridden by query (?hero=...).
-const envVariant = useMemo<"gradient" | "blobs" | "grid">(() => {
-  const rawEnv = (import.meta.env.VITE_HERO_VARIANT || "").toString().toLowerCase();
-  return rawEnv === "blobs" ? "blobs" : rawEnv === "grid" ? "grid" : "gradient";
-}, []);
+  const { heroVariant, showHeroPreview, forceMotion } = useMemo(() => {
+    const rawEnv = (import.meta.env.VITE_HERO_VARIANT || "").toString().toLowerCase();
+    const envVariant = rawEnv === "blobs" ? "blobs" : rawEnv === "grid" ? "grid" : "gradient";
 
-const [heroVariant, setHeroVariant] = useState<"gradient" | "blobs" | "grid">(() => {
-  if (typeof window === "undefined") return envVariant;
-  try {
-    const params = new URLSearchParams(window.location.search || "");
+    const params = new URLSearchParams(search || "");
+
     const q = (params.get("hero") || "").toLowerCase();
-    if (q === "gradient" || q === "blobs" || q === "grid") return q as any;
-  } catch {}
-  try {
-    const stored = window.localStorage.getItem("etlaq:heroVariant");
-    if (stored === "gradient" || stored === "blobs" || stored === "grid") return stored as any;
-  } catch {}
-  return envVariant;
-});
+    const heroVariant = (q === "blobs" || q === "gradient" || q === "grid")
+      ? (q as "blobs" | "gradient" | "grid")
+      : (envVariant as "blobs" | "gradient" | "grid");
 
-const [forceMotion, setForceMotion] = useState<boolean>(() => {
-        if (typeof window === "undefined") return false;
+    // User requested the switcher to be visible in production without any parameters.
+    const showHeroPreview = true;
+    const forceMotion = params.get("motion") === "1" || params.get("forceMotion") === "1";
 
-        let v = false;
+    return { heroVariant, showHeroPreview, forceMotion };
+  }, [loc, search]);
 
-        try {
-          const params = new URLSearchParams(window.location.search || "");
-          v = params.get("motion") === "1" || params.get("forceMotion") === "1";
-        } catch {}
+  // Allow forcing motion for previewing animations even if the OS has reduced-motion enabled.
+  useEffect(() => {
+    if (typeof document === 'undefined') return;
+    if (forceMotion) document.documentElement.setAttribute('data-force-motion', '1');
+    else document.documentElement.removeAttribute('data-force-motion');
+  }, [forceMotion]);
 
-        if (!v) {
-          try {
-            v = window.localStorage.getItem("etlaq:forceMotion") === "1";
-          } catch {
-            v = false;
-          }
-        }
+  const updateHeroQuery = (next: Record<string, string | undefined>) => {
+    if (typeof window === 'undefined') return;
+    const params = new URLSearchParams(window.location.search || '');
+    Object.entries(next).forEach(([k, v]) => {
+      if (v === undefined || v === null || v === '') params.delete(k);
+      else params.set(k, v);
+    });
+    const qs = params.toString();
+    const url = window.location.pathname + (qs ? `?${qs}` : '') + (window.location.hash || '');
+    window.history.replaceState(null, '', url);
+  };
 
-        // Apply immediately so the hero sequence respects it on first paint.
-        try {
-          if (typeof document !== "undefined") {
-            if (v) document.documentElement.setAttribute("data-force-motion", "1");
-            else document.documentElement.removeAttribute("data-force-motion");
-          }
-        } catch {}
-
-        return v;
-      });
-
-// Keep hero variant in sync with query string if user navigates/updates URL.
-useEffect(() => {
-  if (typeof window === "undefined") return;
-  const params = new URLSearchParams(search || "");
-  const q = (params.get("hero") || "").toLowerCase();
-  if (q === "gradient" || q === "blobs" || q === "grid") setHeroVariant(q as any);
-
-  const m = params.get("motion") === "1" || params.get("forceMotion") === "1";
-  if (m) setForceMotion(true);
-}, [search]);
-
-// Apply and persist motion override.
-useEffect(() => {
-  if (typeof document === "undefined") return;
-  if (forceMotion) document.documentElement.setAttribute("data-force-motion", "1");
-  else document.documentElement.removeAttribute("data-force-motion");
-
-  try {
-    window.localStorage.setItem("etlaq:forceMotion", forceMotion ? "1" : "0");
-  } catch {}
-}, [forceMotion]);
-
-const updateHeroQuery = (next: Record<string, string | undefined>) => {
-  if (typeof window === "undefined") return;
-  const params = new URLSearchParams(window.location.search || '');
-  Object.entries(next).forEach(([k, v]) => {
-    if (v === undefined || v === null || v === '') params.delete(k);
-    else params.set(k, v);
-  });
-  const qs = params.toString();
-  const url = window.location.pathname + (qs ? `?${qs}` : '') + (window.location.hash || '');
-  window.history.replaceState(null, '', url);
-};
-
-const applyHeroVariant = (v: "gradient" | "blobs" | "grid") => {
-  setHeroVariant(v);
-  try {
-    window.localStorage.setItem("etlaq:heroVariant", v);
-  } catch {}
-  // Keep URLs clean in production (no need for preview params).
-  updateHeroQuery({ previewHero: undefined, hero: undefined });
-};
-
-const toggleForceMotion = () => {
-  setForceMotion((prev) => !prev);
-  updateHeroQuery({ previewHero: undefined, motion: undefined, forceMotion: undefined });
-};
-
-const prefersReducedMotion = usePrefersReducedMotion();
-const [heroIntroDone, setHeroIntroDone] = useState(false);
-const [heroIntroRun, setHeroIntroRun] = useState(0);
-
-useEffect(() => {
-  // If the OS has reduced motion enabled (and we didn't force motion), skip the intro sequence.
-  if (prefersReducedMotion) setHeroIntroDone(true);
-}, [prefersReducedMotion]);
-
-const replayHeroIntro = () => {
-  setHeroIntroDone(false);
-  setHeroIntroRun((x) => x + 1);
-};
 
   const whatsappNumber = '966534145922';
   const heroWhatsAppUrl = useMemo(() => {
@@ -458,10 +384,10 @@ const replayHeroIntro = () => {
         className={
           `relative isolate overflow-hidden ` +
           (isDesktopModeMobile
-            ? 'min-h-[52vh] max-h-none'
+            ? 'min-h-[72vh]'
             : isCoarsePointer
-              ? 'min-h-[58vh] max-h-none'
-              : 'min-h-[72vh] md:min-h-[78vh] max-h-[900px]')
+              ? 'min-h-[76vh]'
+              : 'min-h-[86vh] md:min-h-[90vh]')
         }
       >
         <div
@@ -484,12 +410,11 @@ const replayHeroIntro = () => {
           ) : null}
         </div>
 
-        {
+        {showHeroPreview ? (
           <div className="absolute z-30 top-4 ltr:right-4 rtl:left-4 flex items-center gap-2 rounded-full border border-white/25 bg-black/55 px-2 py-1 text-xs font-semibold text-white shadow-[0_12px_32px_rgba(0,0,0,0.35)]">
             <span className="px-2 opacity-80">
               {heroVariant === "blobs" ? "Blobs" : heroVariant === "grid" ? "Grid" : "Gradient"}
             </span>
-
             <button
               type="button"
               className={
@@ -497,7 +422,7 @@ const replayHeroIntro = () => {
                 (heroVariant === "gradient" ? "bg-white/20" : "hover:bg-white/10")
               }
               aria-pressed={heroVariant === "gradient"}
-              onClick={() => applyHeroVariant("gradient")}
+              onClick={() => updateHeroQuery({ hero: 'gradient' })}
             >
               Gradient
             </button>
@@ -508,7 +433,7 @@ const replayHeroIntro = () => {
                 (heroVariant === "blobs" ? "bg-white/20" : "hover:bg-white/10")
               }
               aria-pressed={heroVariant === "blobs"}
-              onClick={() => applyHeroVariant("blobs")}
+              onClick={() => updateHeroQuery({ hero: 'blobs' })}
             >
               Blobs
             </button>
@@ -520,7 +445,7 @@ const replayHeroIntro = () => {
                 (heroVariant === "grid" ? "bg-white/20" : "hover:bg-white/10")
               }
               aria-pressed={heroVariant === "grid"}
-              onClick={() => applyHeroVariant("grid")}
+              onClick={() => updateHeroQuery({ hero: 'grid' })}
             >
               Grid
             </button>
@@ -534,170 +459,39 @@ const replayHeroIntro = () => {
                 (forceMotion ? "bg-white/20" : "hover:bg-white/10")
               }
               aria-pressed={forceMotion}
-              onClick={toggleForceMotion}
+              onClick={() => updateHeroQuery({ motion: forceMotion ? undefined : '1' })}
               title="Force motion even if the OS has reduced-motion enabled"
             >
               Motion
             </button>
-
-            <button
-              type="button"
-              className={
-                "rounded-full px-3 py-1 transition " +
-                (!prefersReducedMotion && heroIntroDone ? "hover:bg-white/10" : "opacity-50 cursor-not-allowed")
-              }
-              disabled={prefersReducedMotion || !heroIntroDone}
-              onClick={replayHeroIntro}
-              title="Replay the hero intro sequence"
-            >
-              Replay
-            </button>
           </div>
-        }
+        ) : null}
 
         {/* Contrast layer so hero text stays readable (no top/bottom bands) */}
         <div
           className={
             'absolute inset-0 z-10 pointer-events-none ' +
             (isDesktopModeMobile
-              ? 'bg-gradient-to-b from-black/45 via-black/30 to-black/70'
+              ? 'bg-black/48'
               : isCoarsePointer
-                ? 'bg-gradient-to-b from-black/42 via-black/28 to-black/68'
-                : 'bg-gradient-to-b from-black/38 via-black/24 to-black/64')
+                ? 'bg-black/44'
+                : 'bg-black/38')
           }
           aria-hidden="true"
         />
 
-{!heroIntroDone ? (
-  <HeroIntroSequence
-    language={language}
-    runId={heroIntroRun}
-    onDone={() => setHeroIntroDone(true)}
-  />
-) : null}
-
         <div
           className={
-            'relative z-20 flex w-full items-center justify-center px-4 ' +
-            (isCoarsePointer ? 'py-8' : 'py-10 md:py-16')
+            'w-full px-4 relative z-20 flex items-center justify-center ' +
+            (isCoarsePointer ? 'py-10' : 'py-12 md:py-16')
           }
         >
-          <div
-            className="etlaq-hero-final w-full max-w-4xl mx-auto text-center text-white space-y-6"
-            data-visible={heroIntroDone ? '1' : '0'}
-          >
-            <div
-              className={
-                'inline-flex items-center justify-center gap-2 rounded-full border border-white/25 bg-black/60 px-3 py-1 text-[14px] md:text-base font-semibold text-white/90 shadow-[0_10px_30px_rgba(0,0,0,0.35)]'
-              }
-            >
-              {language === 'ar' ? (
-                <span className="whitespace-nowrap">
-                  <span className="font-bold text-white drop-shadow-[0_3px_12px_rgba(0,0,0,0.8)]">
-                    حلول هندسية
-                  </span>
-                  {' • حقن تربة • كشف تكهفات • حلول جيوفيزيائية'}
-                </span>
-              ) : (
-                <span className="whitespace-nowrap">
-                  <span className="font-bold text-white drop-shadow-[0_3px_12px_rgba(0,0,0,0.8)]">
-                    Engineering solutions
-                  </span>
-                  {' • Soil Grouting • Cavity Detection • Geophysical Solutions'}
-                </span>
-              )}
-            </div>
-
-            <h1 className="text-4xl md:text-7xl font-extrabold leading-[1.03] tracking-tight drop-shadow-[0_10px_34px_rgba(0,0,0,0.92)]">
-              {language === 'ar' ? (
-                <>
-                  نحن نقوّي <span className="text-secondary">أساساتك</span>
-                </>
-              ) : (
-                <span className="whitespace-nowrap">
-                  We Strengthen <span className="text-secondary">Your Foundations</span>
-                </span>
-              )}
-            </h1>
-
-            <div className="mx-auto max-w-3xl">
-              {language === 'ar' ? (
-                <div className="text-2xl md:text-4xl font-extrabold leading-tight drop-shadow-[0_10px_34px_rgba(0,0,0,0.92)]">
-                  <div className="text-white/95">شركة إطلاق المتميزة —</div>
-                  <div className="mt-2 space-y-1">
-                    <div className="text-secondary">حقن تربة</div>
-                    <div className="text-amber-300">كشف تكهفات</div>
-                    <div className="text-cyan-300">جيوفيزياء GPR/ERT/MASW</div>
-                  </div>
-                </div>
-              ) : (
-                <div className="text-2xl md:text-4xl font-extrabold leading-tight drop-shadow-[0_10px_34px_rgba(0,0,0,0.92)]">
-                  <div className="text-white/95">ETLAQ Distinguished Company —</div>
-                  <div className="mt-2 space-y-1">
-                    <div className="text-secondary">Soil Grouting</div>
-                    <div className="text-amber-300">Cavity Detection</div>
-                    <div className="text-cyan-300">Geophysics GPR/ERT/MASW</div>
-                  </div>
-                </div>
-              )}
-            </div>
-
-            <p className="mx-auto max-w-3xl text-base md:text-xl text-white/95 font-semibold leading-relaxed drop-shadow-[0_10px_30px_rgba(0,0,0,0.9)]">
-              {language === 'ar'
-                ? 'في شركة إطلاق المتميزة نوفّر حلولًا لمعالجة الهبوطات والتشققات والتكهفات في الرياض وجميع مدن المملكة، عبر تثبيت الأساسات بحقن التربة، وكشف التكهفات بالتخريم (Cavity Probing) أو الحلول الجيوفيزيائية، ثم معالجة وملء التكهفات بالحقن الأسمنتي.'
-                : 'At ETLAQ Distinguished Company, we provide solutions to address settlement, cracks, and cavities across Riyadh and all cities of the Kingdom—by stabilizing foundations with soil grouting, detecting cavities via Cavity Probing or geophysical solutions, then treating and filling cavities with cement grouting.'}
-            </p>
-
-            <div className="mx-auto max-w-3xl rounded-2xl border border-white/20 bg-black/40 p-5 text-left rtl:text-right shadow-[0_16px_46px_rgba(0,0,0,0.35)]">
-              <div className="text-lg md:text-2xl font-extrabold text-white drop-shadow-[0_8px_24px_rgba(0,0,0,0.9)]">
-                {language === 'ar' ? 'نركّز على الحل المبكر لأنه يحقق:' : 'We focus on early intervention because it delivers:'}
-              </div>
-              <ul className="mt-4 grid sm:grid-cols-2 gap-3">
-                {(language === 'ar'
-                  ? ['تكلفة أقل', 'وقت أقل', 'مخاطرة أقل', 'نتائج أكثر استقرارًا']
-                  : ['Lower cost', 'Less time', 'Lower risk', 'More stable results']
-                ).map((b) => (
-                  <li key={b} className="flex items-center gap-2 text-base md:text-lg font-bold text-white/95">
-                    <CheckCircle2 className="h-5 w-5 text-secondary" />
-                    <span>{b}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="flex flex-col sm:flex-row sm:flex-wrap justify-center gap-3 pt-1">
-              <a href="#services" className="w-full sm:w-auto">
-                <Button
-                  size="lg"
-                  className="w-full sm:w-auto bg-secondary hover:bg-secondary/80 text-secondary-foreground font-semibold shadow-[0_12px_32px_rgba(0,0,0,0.35)]"
-                  onClick={() => trackEvent('home_hero_explore_services', { language })}
-                >
-                  {language === 'ar' ? 'استعرض الخدمات' : 'Explore services'}
-                  <ArrowLeft className={language === 'ar' ? 'mr-2 h-4 w-4 rotate-180' : 'ml-2 h-4 w-4'} />
-                </Button>
-              </a>
-
-              <a
-                href={heroWhatsAppUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto"
-              >
-                <Button
-                  size="lg"
-                  className="w-full sm:w-auto bg-green-600 hover:bg-green-700 text-white font-semibold shadow-[0_12px_32px_rgba(0,0,0,0.35)] gap-2"
-                  onClick={() => trackEvent('home_hero_whatsapp_click', { language })}
-                >
-                  <MessageCircle className="h-4 w-4" />
-                  {language === 'ar' ? 'تواصل واتساب' : 'WhatsApp'}
-                </Button>
-              </a>
-            </div>
-
-            <div className="mx-auto max-w-3xl rounded-2xl border border-white/20 bg-black/55 p-5">
-              <TrustStats compact variant="inverse" />
-            </div>
-          </div>
+          <HeroIntroSequence
+            heroVariant={heroVariant}
+            heroWhatsAppUrl={heroWhatsAppUrl}
+            onExploreServicesClick={() => trackEvent('home_hero_explore_services', { language })}
+            onWhatsappClick={() => trackEvent('home_hero_whatsapp_click', { language })}
+          />
         </div>
       </section>
 

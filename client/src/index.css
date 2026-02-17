@@ -1450,12 +1450,11 @@ html { scrollbar-gutter: stable; }
 /* Variant 1: animated gradient + subtle noise overlay (CSS-only). */
 .etlaq-hero-bg--gradient {
   background:
-    radial-gradient(1200px circle at 16% 18%, rgb(var(--etlaq-accent-rgb, 37 99 235) / 0.55), transparent 62%),
-    radial-gradient(980px circle at 88% 16%, rgb(var(--etlaq-accent2-rgb, 14 165 233) / 0.45), transparent 64%),
-    radial-gradient(900px circle at 55% 86%, rgb(255 255 255 / 0.16), transparent 60%),
-    radial-gradient(700px circle at 70% 55%, rgb(255 255 255 / 0.10), transparent 62%),
-    linear-gradient(180deg, rgb(0 0 0 / 0.64) 0%, rgb(0 0 0 / 0.28) 52%, rgb(0 0 0 / 0.72) 100%);
-  background-size: 180% 180%;
+    radial-gradient(1100px circle at 18% 18%, rgb(var(--etlaq-accent-rgb, 37 99 235) / 0.55), transparent 60%),
+    radial-gradient(980px circle at 88% 16%, rgb(var(--etlaq-accent2-rgb, 14 165 233) / 0.42), transparent 62%),
+    radial-gradient(1200px circle at 52% 92%, rgb(255 255 255 / 0.16), transparent 58%),
+    linear-gradient(180deg, rgb(0 0 0 / 0.58) 0%, rgb(0 0 0 / 0.28) 55%, rgb(0 0 0 / 0.66) 100%);
+  background-size: 200% 200%;
   background-position: 0% 0%;
   animation: etlaq-hero-gradient-move 10s ease-in-out infinite;
 }
@@ -1463,22 +1462,23 @@ html { scrollbar-gutter: stable; }
 .etlaq-hero-bg--gradient::before {
   content: "";
   position: absolute;
-  inset: -38% -38%;
-  opacity: 0.28;
+  inset: -30% -30%;
+  opacity: 0.18;
   background:
-    conic-gradient(from 210deg at 50% 50%,
-      rgb(var(--etlaq-accent-rgb, 37 99 235) / 0.0) 0deg,
-      rgb(var(--etlaq-accent-rgb, 37 99 235) / 0.30) 70deg,
-      rgb(var(--etlaq-accent2-rgb, 14 165 233) / 0.32) 150deg,
-      rgb(255 255 255 / 0.10) 240deg,
-      rgb(var(--etlaq-accent-rgb, 37 99 235) / 0.22) 320deg,
-      rgb(var(--etlaq-accent-rgb, 37 99 235) / 0.0) 360deg
+    conic-gradient(
+      from 210deg,
+      rgb(var(--etlaq-accent-rgb, 37 99 235) / 0.00) 0deg,
+      rgb(var(--etlaq-accent-rgb, 37 99 235) / 0.35) 80deg,
+      rgb(var(--etlaq-accent2-rgb, 14 165 233) / 0.20) 150deg,
+      rgb(var(--etlaq-accent2-rgb, 14 165 233) / 0.00) 240deg,
+      rgb(255 255 255 / 0.08) 300deg,
+      rgb(var(--etlaq-accent-rgb, 37 99 235) / 0.00) 360deg
     );
-  filter: blur(22px) saturate(1.4);
-  mix-blend-mode: screen;
-  transform: translate3d(0, 0, 0);
+  filter: blur(10px);
+  transform: translateZ(0);
   will-change: transform;
   animation: etlaq-hero-conic 12s linear infinite;
+  mix-blend-mode: screen;
 }
 
 .etlaq-hero-bg--gradient::after {
@@ -1498,52 +1498,38 @@ html { scrollbar-gutter: stable; }
 }
 
 @keyframes etlaq-hero-conic {
-  0%   { transform: translate3d(-6%, -4%, 0) rotate(0deg) scale(1.05); }
-  50%  { transform: translate3d(6%, 4%, 0) rotate(180deg) scale(1.10); }
-  100% { transform: translate3d(-6%, -4%, 0) rotate(360deg) scale(1.05); }
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 /* Variant 2: soft glowing blobs (3 divs) */
 .etlaq-hero-bg--blobs {
   background:
-    radial-gradient(1200px circle at 46% 26%, rgb(var(--etlaq-accent2-rgb, 14 165 233) / 0.22), transparent 62%),
-    radial-gradient(980px circle at 18% 18%, rgb(var(--etlaq-accent-rgb, 37 99 235) / 0.18), transparent 64%),
-    linear-gradient(180deg, rgb(0 0 0 / 0.68) 0%, rgb(0 0 0 / 0.30) 52%, rgb(0 0 0 / 0.76) 100%);
+    radial-gradient(1100px circle at 50% 30%, rgb(var(--etlaq-accent2-rgb, 14 165 233) / 0.22), transparent 62%),
+    radial-gradient(1200px circle at 18% 70%, rgb(var(--etlaq-accent-rgb, 37 99 235) / 0.18), transparent 60%),
+    linear-gradient(180deg, rgb(0 0 0 / 0.62) 0%, rgb(0 0 0 / 0.30) 55%, rgb(0 0 0 / 0.70) 100%);
 }
 
-.etlaq-hero-bg--blobs::before {
+.etlaq-hero-bg--blobs::after {
   content: "";
   position: absolute;
   inset: 0;
-  opacity: 0.18;
-  background-image: radial-gradient(circle, rgb(255 255 255 / 0.18) 1px, transparent 1px);
-  background-size: 90px 90px;
-  background-position: 0px 0px;
-  mask-image: radial-gradient(60% 60% at 55% 40%, #000 0%, #000 55%, transparent 100%);
-  animation: etlaq-hero-stars 22s linear infinite;
-}
-
-@keyframes etlaq-hero-stars {
-  0%   { background-position: 0px 0px; }
-  100% { background-position: 260px 180px; }
+  opacity: 0.14;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgb(255 255 255 / 0.22) 0 1px, transparent 2px),
+    radial-gradient(circle at 70% 20%, rgb(255 255 255 / 0.18) 0 1px, transparent 2px),
+    radial-gradient(circle at 40% 70%, rgb(255 255 255 / 0.16) 0 1px, transparent 2px);
+  background-size: 220px 220px;
+  animation: etlaq-hero-stars 14s linear infinite;
+  mix-blend-mode: overlay;
 }
 
 /* Variant 3: subtle tech grid + sweeping light beam (CSS-only) */
 .etlaq-hero-bg--grid {
   background:
-    radial-gradient(1250px circle at 18% 18%, rgb(var(--etlaq-accent-rgb, 37 99 235) / 0.34), transparent 62%),
-    radial-gradient(980px circle at 88% 22%, rgb(var(--etlaq-accent2-rgb, 14 165 233) / 0.26), transparent 64%),
-    radial-gradient(780px circle at 62% 86%, rgb(255 255 255 / 0.10), transparent 66%),
-    linear-gradient(180deg, rgb(0 0 0 / 0.70) 0%, rgb(0 0 0 / 0.26) 52%, rgb(0 0 0 / 0.82) 100%);
-  background-size: 170% 170%;
-  background-position: 0% 0%;
-  animation: etlaq-hero-grid-bg 12s ease-in-out infinite;
-}
-
-@keyframes etlaq-hero-grid-bg {
-  0%   { background-position: 0% 0%; }
-  50%  { background-position: 100% 55%; }
-  100% { background-position: 0% 0%; }
+    radial-gradient(1100px circle at 18% 18%, rgb(var(--etlaq-accent-rgb, 37 99 235) / 0.30), transparent 62%),
+    radial-gradient(900px circle at 88% 22%, rgb(var(--etlaq-accent2-rgb, 14 165 233) / 0.22), transparent 64%),
+    linear-gradient(180deg, rgb(0 0 0 / 0.64) 0%, rgb(0 0 0 / 0.30) 55%, rgb(0 0 0 / 0.72) 100%);
 }
 
 .etlaq-hero-bg--grid::before {
@@ -1552,8 +1538,8 @@ html { scrollbar-gutter: stable; }
   inset: 0;
   opacity: 0.30;
   background-image:
-    repeating-linear-gradient(0deg, rgb(255 255 255 / 0.11) 0 1px, transparent 1px 48px),
-    repeating-linear-gradient(90deg, rgb(255 255 255 / 0.08) 0 1px, transparent 1px 56px);
+    repeating-linear-gradient(0deg, rgb(255 255 255 / 0.14) 0 1px, transparent 1px 44px),
+    repeating-linear-gradient(90deg, rgb(255 255 255 / 0.10) 0 1px, transparent 1px 52px);
   background-size: auto;
   mask-image: radial-gradient(60% 60% at 60% 45%, #000 0%, #000 55%, transparent 100%);
   animation: etlaq-hero-grid-drift 18s linear infinite;
@@ -1563,7 +1549,7 @@ html { scrollbar-gutter: stable; }
   content: "";
   position: absolute;
   inset: -30% -40%;
-  opacity: 0.34;
+  opacity: 0.36;
   background:
     linear-gradient(90deg,
       transparent 0%,
@@ -1572,7 +1558,7 @@ html { scrollbar-gutter: stable; }
       rgb(var(--etlaq-accent2-rgb, 14 165 233) / 0.00) 65%,
       transparent 100%
     );
-  transform: translateX(-45%) rotate(12deg);
+  transform: translateX(-45%) rotate(10deg);
   will-change: transform;
   animation: etlaq-hero-sweep 6.5s ease-in-out infinite;
   mix-blend-mode: screen;
@@ -1591,8 +1577,8 @@ html { scrollbar-gutter: stable; }
 .etlaq-hero-blob {
   position: absolute;
   border-radius: 9999px;
-  filter: blur(92px);
-  opacity: 0.78;
+  filter: blur(60px);
+  opacity: 0.82;
   transform: translate3d(0, 0, 0);
   will-change: transform;
 }
@@ -1603,7 +1589,7 @@ html { scrollbar-gutter: stable; }
   left: -12%;
   top: -18%;
   background: radial-gradient(circle at 30% 30%, rgb(var(--etlaq-accent-rgb, 37 99 235) / 0.85), transparent 60%);
-  animation: etlaq-hero-blob-1 12s ease-in-out infinite;
+  animation: etlaq-hero-blob-1 14s ease-in-out infinite;
 }
 
 .etlaq-hero-blob-2 {
@@ -1612,7 +1598,7 @@ html { scrollbar-gutter: stable; }
   right: -14%;
   top: -10%;
   background: radial-gradient(circle at 30% 30%, rgb(var(--etlaq-accent2-rgb, 14 165 233) / 0.75), transparent 62%);
-  animation: etlaq-hero-blob-2 14s ease-in-out infinite;
+  animation: etlaq-hero-blob-2 16s ease-in-out infinite;
 }
 
 .etlaq-hero-blob-3 {
@@ -1621,31 +1607,35 @@ html { scrollbar-gutter: stable; }
   left: 18%;
   bottom: -26%;
   background: radial-gradient(circle at 30% 30%, rgb(255 255 255 / 0.18), transparent 65%);
-  animation: etlaq-hero-blob-3 16s ease-in-out infinite;
+  animation: etlaq-hero-blob-3 18s ease-in-out infinite;
+}
+
+@keyframes etlaq-hero-stars {
+  0% { background-position: 0px 0px; }
+  100% { background-position: 240px 140px; }
 }
 
 @keyframes etlaq-hero-blob-1 {
   0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
-  50% { transform: translate3d(22%, 16%, 0) scale(1.10); }
+  50% { transform: translate3d(14%, 10%, 0) scale(1.06); }
 }
 @keyframes etlaq-hero-blob-2 {
   0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
-  50% { transform: translate3d(-22%, 18%, 0) scale(1.12); }
+  50% { transform: translate3d(-12%, 14%, 0) scale(1.08); }
 }
 @keyframes etlaq-hero-blob-3 {
   0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
-  50% { transform: translate3d(14%, -18%, 0) scale(1.08); }
+  50% { transform: translate3d(8%, -12%, 0) scale(1.05); }
 }
 
 /* Reduced motion: keep the hero stable. */
 @media (prefers-reduced-motion: reduce) {
   .etlaq-hero-bg--gradient,
   .etlaq-hero-bg--gradient::before,
-  .etlaq-hero-bg--blobs::before,
-  .etlaq-hero-bg--grid,
   .etlaq-hero-blob-1,
   .etlaq-hero-blob-2,
   .etlaq-hero-blob-3,
+  .etlaq-hero-bg--blobs::after,
   .etlaq-hero-bg--grid::before,
   .etlaq-hero-bg--grid::after {
     animation: none !important;
@@ -1662,20 +1652,14 @@ html { scrollbar-gutter: stable; }
 :root[data-force-motion="1"] .etlaq-hero-bg--gradient::before {
   animation: etlaq-hero-conic 12s linear infinite !important;
 }
-:root[data-force-motion="1"] .etlaq-hero-bg--blobs::before {
-  animation: etlaq-hero-stars 22s linear infinite !important;
-}
-:root[data-force-motion="1"] .etlaq-hero-bg--grid {
-  animation: etlaq-hero-grid-bg 12s ease-in-out infinite !important;
-}
 :root[data-force-motion="1"] .etlaq-hero-blob-1 {
-  animation: etlaq-hero-blob-1 12s ease-in-out infinite !important;
+  animation: etlaq-hero-blob-1 18s ease-in-out infinite !important;
 }
 :root[data-force-motion="1"] .etlaq-hero-blob-2 {
-  animation: etlaq-hero-blob-2 14s ease-in-out infinite !important;
+  animation: etlaq-hero-blob-2 20s ease-in-out infinite !important;
 }
 :root[data-force-motion="1"] .etlaq-hero-blob-3 {
-  animation: etlaq-hero-blob-3 16s ease-in-out infinite !important;
+  animation: etlaq-hero-blob-3 22s ease-in-out infinite !important;
 }
 :root[data-force-motion="1"] .etlaq-hero-bg--grid::before {
   animation: etlaq-hero-grid-drift 18s linear infinite !important;
@@ -1683,163 +1667,6 @@ html { scrollbar-gutter: stable; }
 :root[data-force-motion="1"] .etlaq-hero-bg--grid::after {
   animation: etlaq-hero-sweep 6.5s ease-in-out infinite !important;
 }
-
-
-/* ------------------------------------------------------------
-   HERO TEXT SEQUENCE (Intro) + FINAL REVEAL
-   - Sequence is absolutely positioned (no layout shifts).
-   - Final hero content fades in after the sequence ends.
------------------------------------------------------------- */
-
-.etlaq-hero-final {
-  opacity: 0;
-  transform: translate3d(0, 10px, 0);
-  transition: opacity 900ms ease, transform 900ms ease;
-  will-change: opacity, transform;
-}
-
-.etlaq-hero-final[data-visible="1"] {
-  opacity: 1;
-  transform: translate3d(0, 0, 0);
-}
-
-.etlaq-hero-seq {
-  position: absolute;
-  inset: 0;
-  z-index: 25;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  text-align: center;
-  pointer-events: none;
-  transition: opacity 650ms ease;
-}
-
-.etlaq-hero-seq[data-ending="1"],
-.etlaq-hero-seq[data-phase="4"] {
-  opacity: 0;
-}
-
-.etlaq-hero-seq-step {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  opacity: 0;
-  transform: translate3d(0, 18px, 0) scale(0.985);
-  transition: opacity 520ms ease, transform 520ms ease;
-}
-
-.etlaq-hero-seq[data-phase="0"] .etlaq-hero-seq-step--0,
-.etlaq-hero-seq[data-phase="1"] .etlaq-hero-seq-step--1,
-.etlaq-hero-seq[data-phase="2"] .etlaq-hero-seq-step--2,
-.etlaq-hero-seq[data-phase="3"] .etlaq-hero-seq-step--3 {
-  opacity: 1;
-  transform: translate3d(0, 0, 0) scale(1);
-}
-
-.etlaq-hero-seq-title {
-  font-weight: 900;
-  line-height: 1.02;
-  letter-spacing: -0.02em;
-  color: rgba(255, 255, 255, 0.98);
-  text-shadow: 0 18px 44px rgba(0, 0, 0, 0.65);
-  font-size: clamp(2.2rem, 5vw, 4.6rem);
-}
-
-.etlaq-hero-seq-accent {
-  color: hsl(var(--secondary));
-  filter: drop-shadow(0 10px 28px rgba(0, 0, 0, 0.55));
-}
-
-.etlaq-hero-seq-services {
-  max-width: 58rem;
-  margin: 0 auto;
-}
-
-.etlaq-hero-seq-kicker {
-  font-weight: 900;
-  color: rgba(255, 255, 255, 0.96);
-  font-size: clamp(1.2rem, 2.6vw, 2.4rem);
-  text-shadow: 0 16px 40px rgba(0, 0, 0, 0.62);
-}
-
-.etlaq-hero-seq-lines {
-  margin-top: 0.75rem;
-  display: grid;
-  gap: 0.5rem;
-}
-
-.etlaq-hero-seq-line {
-  font-weight: 900;
-  font-size: clamp(1.6rem, 3.8vw, 3.4rem);
-  line-height: 1.05;
-  text-shadow: 0 18px 44px rgba(0, 0, 0, 0.68);
-}
-
-.etlaq-hero-seq-line--a { color: hsl(var(--secondary)); }
-.etlaq-hero-seq-line--b { color: rgba(252, 211, 77, 0.98); }   /* amber-300 */
-.etlaq-hero-seq-line--c { color: rgba(103, 232, 249, 0.98); }  /* cyan-300 */
-
-.etlaq-hero-seq-paragraph {
-  max-width: 62rem;
-  margin: 0 auto;
-  padding: 1.1rem 1.2rem;
-  border-radius: 1.25rem;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  background: rgba(0, 0, 0, 0.38);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  color: rgba(255, 255, 255, 0.96);
-  font-weight: 750;
-  line-height: 1.7;
-  font-size: clamp(1rem, 1.7vw, 1.6rem);
-  text-shadow: 0 16px 42px rgba(0, 0, 0, 0.72);
-}
-
-.etlaq-hero-seq-benefits {
-  max-width: 56rem;
-  margin: 0 auto;
-}
-
-.etlaq-hero-seq-benefits-title {
-  font-weight: 900;
-  color: rgba(255, 255, 255, 0.98);
-  font-size: clamp(1.2rem, 2.3vw, 2.2rem);
-  text-shadow: 0 18px 44px rgba(0, 0, 0, 0.62);
-}
-
-.etlaq-hero-seq-benefits-list {
-  margin-top: 1rem;
-  display: grid;
-  gap: 0.7rem;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-@media (max-width: 520px) {
-  .etlaq-hero-seq-benefits-list {
-    grid-template-columns: 1fr;
-  }
-}
-
-.etlaq-hero-seq-benefit {
-  list-style: none;
-  font-weight: 900;
-  color: rgba(255, 255, 255, 0.98);
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  background: rgba(0, 0, 0, 0.34);
-  border-radius: 1rem;
-  padding: 0.85rem 0.95rem;
-  text-shadow: 0 16px 40px rgba(0, 0, 0, 0.65);
-  transform: translate3d(0, 8px, 0);
-  opacity: 0;
-  animation: etlaq-hero-benefit-in 650ms ease forwards;
-  animation-delay: var(--d, 0ms);
-}
-
-@keyframes etlaq-hero-benefit-in {
-  to { transform: translate3d(0, 0, 0); opacity: 1; }
+:root[data-force-motion="1"] .etlaq-hero-bg--blobs::after {
+  animation: etlaq-hero-stars 14s linear infinite !important;
 }
