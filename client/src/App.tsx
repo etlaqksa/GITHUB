@@ -114,7 +114,7 @@ function RouteLoader() {
 
 function AppLayout() {
   return (
-    <div className="flex flex-col min-h-screen app-background pb-24 md:pb-0">
+    <div className="flex flex-col min-h-screen app-background etlaq-color-typography pb-24 md:pb-0">
             <ScrollToTop />
       <SkipToContent />
       <Suspense fallback={null}>

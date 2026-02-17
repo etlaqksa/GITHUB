@@ -323,6 +323,81 @@ html[data-theme='red'] {
   input[type="radio"]:not(:disabled) {
     @apply cursor-pointer;
   }
+
+  /*
+    Site-wide color typography system
+    - Keeps the existing theme intact
+    - Adds tasteful color to headings, links, emphasis, and rich content
+    - Avoids overriding explicitly white text (e.g., hero overlays)
+  */
+  .etlaq-color-typography {
+    --etlaq-accent-rgb-local: var(--etlaq-accent-rgb, 37 99 235);
+    --etlaq-accent2-rgb-local: var(--etlaq-accent2-rgb, 14 165 233);
+    --etlaq-accent-ink: rgb(var(--etlaq-accent-rgb-local));
+    --etlaq-accent2-ink: rgb(var(--etlaq-accent2-rgb-local));
+    --etlaq-accent-grad: linear-gradient(
+      90deg,
+      rgb(var(--etlaq-accent-rgb-local) / 1),
+      rgb(var(--etlaq-accent2-rgb-local) / 1)
+    );
+  }
+
+  /* Headings: colored ink (professional, consistent) */
+  .etlaq-color-typography :where(h1):not([class*="text-white"]) {
+    color: rgb(var(--etlaq-accent-rgb-local) / 0.98);
+  }
+  .etlaq-color-typography :where(h2):not([class*="text-white"]) {
+    color: rgb(var(--etlaq-accent-rgb-local) / 0.96);
+  }
+  .etlaq-color-typography :where(h3):not([class*="text-white"]) {
+    color: rgb(var(--etlaq-accent2-rgb-local) / 0.96);
+  }
+  .etlaq-color-typography :where(h4, h5, h6):not([class*="text-white"]) {
+    color: color-mix(in oklch, var(--foreground) 90%, var(--primary) 10%);
+  }
+
+  /* Body copy: slightly tinted to avoid pure black while staying readable */
+  .etlaq-color-typography :where(p, li):not([class*="text-white"]) {
+    color: var(--foreground);
+    color: color-mix(in oklch, var(--foreground) 88%, var(--primary) 12%);
+  }
+
+  /* Links: accent color + elegant underline */
+  .etlaq-color-typography :where(a[href]):not([class*="text-white"]) {
+    color: rgb(var(--etlaq-accent-rgb-local) / 0.98);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+    text-decoration-color: rgb(var(--etlaq-accent-rgb-local) / 0.32);
+    transition: color 180ms ease, text-decoration-color 180ms ease;
+  }
+  .etlaq-color-typography :where(a[href]):not([class*="text-white"]):hover {
+    color: rgb(var(--etlaq-accent2-rgb-local) / 1);
+    text-decoration-color: rgb(var(--etlaq-accent2-rgb-local) / 0.55);
+  }
+
+  /* Emphasis: subtle color for strong/bold without hurting readability */
+  .etlaq-color-typography :where(strong, b):not([class*="text-white"]) {
+    color: color-mix(in oklch, var(--foreground) 70%, var(--primary) 30%);
+  }
+  .etlaq-color-typography :where(em, i):not([class*="text-white"]) {
+    color: color-mix(in oklch, var(--foreground) 78%, var(--accent) 22%);
+  }
+
+  /* Rich elements */
+  .etlaq-color-typography :where(blockquote):not([class*="text-white"]) {
+    border-inline-start: 4px solid rgb(var(--etlaq-accent-rgb-local) / 0.45);
+    padding-inline-start: 1rem;
+    color: color-mix(in oklch, var(--foreground) 80%, var(--primary) 20%);
+  }
+  .etlaq-color-typography :where(hr) {
+    border-color: rgb(var(--etlaq-accent-rgb-local) / 0.20);
+  }
+
+  /* Selection highlight (subtle brand tint) */
+  .etlaq-color-typography ::selection {
+    background: rgb(var(--etlaq-accent-rgb-local) / 0.25);
+  }
 }
 
 @layer components {

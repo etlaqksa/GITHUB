@@ -135,7 +135,10 @@ export default function SmartAssistant({ initialOpen = false }: { initialOpen?: 
         const cats = isAr
           ? (a.categoriesAr || [a.category].filter(Boolean)).join(' ')
           : (a.categoriesEn || [a.categoryEn].filter(Boolean)).join(' ');
-        const excerptChunk = isAr ? String(a.content || '').slice(0, 600) : String(a.contentEn || a.content || '').slice(0, 600);
+        // Use a separate variable name to avoid duplicate declarations later in this scope.
+        const excerptChunk = isAr
+          ? String(a.content || '').slice(0, 600)
+          : String(a.contentEn || a.content || '').slice(0, 600);
         const hay = `${title} ${cats} ${excerptChunk}`.toLowerCase();
 
         let s = 0;
