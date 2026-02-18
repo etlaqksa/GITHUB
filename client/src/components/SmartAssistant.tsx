@@ -14,7 +14,7 @@ import { Input } from '@/components/ui/input';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { loadArticles, prefetchArticles } from '@/data/articlesLoader';
 import projects from '@/data/projects';
-import { getArticleUrlSlug } from '@/lib/articleSlug';
+import { getArticleUrlSlug } from '@/lib/articleUrl';
 import { cn } from '@/lib/utils';
 import { BookOpen, Briefcase, Contact2, FileText, Search, Wrench, X } from 'lucide-react';
 
@@ -226,9 +226,10 @@ export default function SmartAssistant({
       articlesLoaded && allowKind('article')
         ? articles
             .map((a) => {
-              const title = (isAr ? a.titleAr : a.titleEn) || '';
-              const desc = (isAr ? a.excerptAr : a.excerptEn) || '';
-              const slug = getArticleUrlSlug(a);
+              // Support both legacy and current article field names.
+              const title = (isAr ? a.titleAr || a.title : a.titleEn || a.title) || '';
+              const desc = (isAr ? a.excerptAr || a.excerpt : a.excerptEn || a.excerpt) || '';
+              const slug = getArticleUrlSlug(a, language);
               return {
                 id: `art-${slug}`,
                 kind: 'article' as const,
