@@ -1,5 +1,5 @@
 import { lazy, Suspense, useState } from 'react';
-import { Bot } from 'lucide-react';
+import { Search } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 
@@ -31,12 +31,12 @@ export default function SmartAssistantLauncher() {
           <Button
             size="lg"
             className="rounded-full shadow-lg gap-2"
-            aria-label={isAr ? 'مساعد الموقع' : 'Site assistant'}
+            aria-label={isAr ? 'بحث الموقع' : 'Site search'}
             type="button"
             onClick={handleClick}
           >
-            <Bot className="h-5 w-5" />
-            <span className="hidden sm:inline">{isAr ? 'اسأل مساعد إطلاق' : 'Ask ETLAQ'}</span>
+            <Search className="h-5 w-5" />
+            <span className="hidden sm:inline">{isAr ? 'بحث الموقع' : 'Site Search'}</span>
           </Button>
         </div>
       )}

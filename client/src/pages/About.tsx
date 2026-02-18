@@ -121,9 +121,16 @@ export default function About() {
               </div>
             </div>
             <div className="relative">
-              <div className="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl flex items-center justify-center">
+              <div
+                className="aspect-video rounded-2xl border bg-card etlaq-card flex items-center justify-center"
+                style={{
+                  // Warm gold + engineering blue accent
+                  ['--accent-rgb' as any]: '245 158 11',
+                  ['--accent2-rgb' as any]: '37 99 235',
+                }}
+              >
                 <div className="text-center space-y-2">
-                  <div className="text-5xl font-bold text-primary">200+</div>
+                  <div className="text-5xl md:text-6xl font-extrabold text-primary tracking-tight">200+</div>
                   <div className="text-xl font-semibold">
                     {language === 'ar' ? 'مشروع ناجح' : 'Successful Projects'}
                   </div>

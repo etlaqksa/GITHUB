@@ -6,6 +6,29 @@ import { COMPANY_INFO } from '@/config/company';
 export default function Footer() {
   const { t, language } = useLanguage();
 
+  const social = [
+    {
+      label: 'TikTok',
+      iconClass: 'fa-brands fa-tiktok',
+      href: `https://www.tiktok.com/@${COMPANY_INFO.socialHandle}`,
+    },
+    {
+      label: 'Instagram',
+      iconClass: 'fa-brands fa-instagram',
+      href: `https://www.instagram.com/${COMPANY_INFO.socialHandle}/`,
+    },
+    {
+      label: 'X',
+      iconClass: 'fa-brands fa-x-twitter',
+      href: `https://x.com/${COMPANY_INFO.socialHandle}`,
+    },
+    {
+      label: 'Telegram',
+      iconClass: 'fa-brands fa-telegram',
+      href: `https://t.me/${COMPANY_INFO.socialHandle}`,
+    },
+  ] as const;
+
   const quickLinks = [
     { name: t('nav.home'), href: '/' },
     { name: t('nav.about'), href: '/about' },
@@ -151,6 +174,21 @@ export default function Footer() {
                 </a>
               </li>
             </ul>
+
+            <div className="pt-2 flex items-center gap-2 rtl:flex-row-reverse">
+              {social.map((s) => (
+                <a
+                  key={s.label}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={s.label}
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 backdrop-blur hover:bg-white/10 transition"
+                >
+                  <i className={`${s.iconClass} text-[18px]`} aria-hidden="true" />
+                </a>
+              ))}
+            </div>
           </div>
         </div>
 

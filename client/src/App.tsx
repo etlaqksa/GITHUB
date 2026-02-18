@@ -4,6 +4,7 @@ import { Route, Switch, Router as WouterRouter } from "wouter";
 import { Suspense, lazy, useEffect, useMemo, useState, type ReactNode } from "react";
 import ErrorBoundary from "./components/ErrorBoundary";
 import Header from "./components/Header";
+import TopBar from "./components/TopBar";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import SkipToContent from "./components/SkipToContent";
@@ -122,6 +123,7 @@ function AppLayout() {
           <LazyUpdateAvailableBanner />
         </DeferredMount>
       </Suspense>
+      <TopBar />
       <Header />
       <main id="main-content" className="flex-1">
         <InternalLinkingProvider>

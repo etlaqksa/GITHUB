@@ -54,14 +54,14 @@ export default function Home() {
 
   const { heroVariant, showHeroPreview, forceMotion } = useMemo(() => {
     const rawEnv = (import.meta.env.VITE_HERO_VARIANT || "").toString().toLowerCase();
-    const envVariant = rawEnv === "blobs" ? "blobs" : rawEnv === "grid" ? "grid" : "gradient";
+    const envVariant = rawEnv === "blobs" ? "blobs" : rawEnv === "grid" ? "grid" : rawEnv === "light" ? "light" : "gradient";
 
     const params = new URLSearchParams(search || "");
 
     const q = (params.get("hero") || "").toLowerCase();
-    const heroVariant = (q === "blobs" || q === "gradient" || q === "grid")
-      ? (q as "blobs" | "gradient" | "grid")
-      : (envVariant as "blobs" | "gradient" | "grid");
+    const heroVariant = (q === "blobs" || q === "gradient" || q === "grid" || q === "light")
+      ? (q as "blobs" | "gradient" | "grid" | "light")
+      : (envVariant as "blobs" | "gradient" | "grid" | "light");
 
     // User requested the switcher to be visible in production without any parameters.
     const showHeroPreview = true;
@@ -397,7 +397,9 @@ export default function Home() {
               ? "etlaq-hero-bg--blobs"
               : heroVariant === "grid"
                 ? "etlaq-hero-bg--grid"
-                : "etlaq-hero-bg--gradient")
+                : heroVariant === "light"
+                  ? "etlaq-hero-bg--light"
+                  : "etlaq-hero-bg--gradient")
           }
           aria-hidden="true"
         >
@@ -410,72 +412,21 @@ export default function Home() {
           ) : null}
         </div>
 
-        {showHeroPreview ? (
-          <div className="absolute z-30 top-4 ltr:right-4 rtl:left-4 flex items-center gap-2 rounded-full border border-white/25 bg-black/55 px-2 py-1 text-xs font-semibold text-white shadow-[0_12px_32px_rgba(0,0,0,0.35)]">
-            <span className="px-2 opacity-80">
-              {heroVariant === "blobs" ? "Blobs" : heroVariant === "grid" ? "Grid" : "Gradient"}
-            </span>
-            <button
-              type="button"
-              className={
-                "rounded-full px-3 py-1 transition " +
-                (heroVariant === "gradient" ? "bg-white/20" : "hover:bg-white/10")
-              }
-              aria-pressed={heroVariant === "gradient"}
-              onClick={() => updateHeroQuery({ hero: 'gradient' })}
-            >
-              Gradient
-            </button>
-            <button
-              type="button"
-              className={
-                "rounded-full px-3 py-1 transition " +
-                (heroVariant === "blobs" ? "bg-white/20" : "hover:bg-white/10")
-              }
-              aria-pressed={heroVariant === "blobs"}
-              onClick={() => updateHeroQuery({ hero: 'blobs' })}
-            >
-              Blobs
-            </button>
-
-            <button
-              type="button"
-              className={
-                "rounded-full px-3 py-1 transition " +
-                (heroVariant === "grid" ? "bg-white/20" : "hover:bg-white/10")
-              }
-              aria-pressed={heroVariant === "grid"}
-              onClick={() => updateHeroQuery({ hero: 'grid' })}
-            >
-              Grid
-            </button>
-
-            <span className="mx-1 h-5 w-px bg-white/20" aria-hidden="true" />
-
-            <button
-              type="button"
-              className={
-                "rounded-full px-3 py-1 transition " +
-                (forceMotion ? "bg-white/20" : "hover:bg-white/10")
-              }
-              aria-pressed={forceMotion}
-              onClick={() => updateHeroQuery({ motion: forceMotion ? undefined : '1' })}
-              title="Force motion even if the OS has reduced-motion enabled"
-            >
-              Motion
-            </button>
-          </div>
-        ) : null}
-
         {/* Contrast layer so hero text stays readable (no top/bottom bands) */}
         <div
           className={
             'absolute inset-0 z-10 pointer-events-none ' +
-            (isDesktopModeMobile
-              ? 'bg-black/48'
-              : isCoarsePointer
-                ? 'bg-black/44'
-                : 'bg-black/38')
+            (heroVariant === 'light'
+              ? (isDesktopModeMobile
+                  ? 'bg-white/25'
+                  : isCoarsePointer
+                    ? 'bg-white/22'
+                    : 'bg-white/18')
+              : (isDesktopModeMobile
+                  ? 'bg-black/48'
+                  : isCoarsePointer
+                    ? 'bg-black/44'
+                    : 'bg-black/38'))
           }
           aria-hidden="true"
         />
@@ -483,12 +434,16 @@ export default function Home() {
         <div
           className={
             'w-full px-4 relative z-20 flex items-center justify-center ' +
-            (isCoarsePointer ? 'py-10' : 'py-12 md:py-16')
+            (isCoarsePointer ? 'pt-10 pb-14' : 'pt-12 pb-16 md:pt-16 md:pb-20')
           }
         >
           <HeroIntroSequence
             heroVariant={heroVariant}
             heroWhatsAppUrl={heroWhatsAppUrl}
+            showVariantSwitcher={showHeroPreview}
+            forceMotion={forceMotion}
+            onVariantChange={(v) => updateHeroQuery({ hero: v })}
+            onToggleMotion={() => updateHeroQuery({ motion: forceMotion ? undefined : '1' })}
             onExploreServicesClick={() => trackEvent('home_hero_explore_services', { language })}
             onWhatsappClick={() => trackEvent('home_hero_whatsapp_click', { language })}
           />
