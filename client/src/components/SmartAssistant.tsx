@@ -13,7 +13,7 @@ import {
 import { Input } from '@/components/ui/input';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { loadArticles, prefetchArticles } from '@/data/articlesLoader';
-import projects from '@/data/projects';
+import { projects } from '@/data/projects';
 import { getArticleUrlSlug } from '@/lib/articleUrl';
 import { cn } from '@/lib/utils';
 import { BookOpen, Briefcase, Contact2, FileText, Search, Wrench, X } from 'lucide-react';
