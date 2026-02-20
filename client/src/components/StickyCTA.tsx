@@ -31,7 +31,7 @@ export default function StickyCTA() {
         <div className="rounded-2xl border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/70 shadow-lg p-3 flex gap-2">
           <LocalizedLink href="/request-service" className="flex-1">
             <Button
-              className="w-full gap-2"
+              className="w-full gap-2 !bg-[#1d4ed8] !text-white hover:!bg-[#1e40af]"
               size="lg"
               onClick={() =>
                 trackEvent('sticky_request_click', {
