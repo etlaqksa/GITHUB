@@ -42,20 +42,10 @@ export default function AntiInspectGuard() {
       }
     };
 
-    // --- Disable right click ONLY on hero/images ---
+    // --- Disable right click on the whole site (user request) ---
     const onContextMenu = (e: MouseEvent) => {
-      const t = e.target as unknown;
-      if (!(t instanceof Element)) return;
-
-      // Block within hero (or any marked area)
-      const inBlockedArea = !!t.closest('[data-anti-contextmenu="true"]');
-
-      // Block on images
-      const isImg = t.tagName === 'IMG' || !!t.closest('img');
-
-      if (inBlockedArea || isImg) {
-        e.preventDefault();
-      }
+      e.preventDefault();
+      e.stopPropagation();
     };
 
     // --- DevTools detection (best-effort) ---
@@ -76,7 +66,7 @@ export default function AntiInspectGuard() {
     };
 
     window.addEventListener('keydown', onKeyDown, true);
-    window.addEventListener('contextmenu', onContextMenu);
+    window.addEventListener('contextmenu', onContextMenu, { capture: true });
 
     const i = window.setInterval(detect, 500);
     window.addEventListener('resize', detect);
@@ -84,7 +74,7 @@ export default function AntiInspectGuard() {
 
     return () => {
       window.removeEventListener('keydown', onKeyDown, true);
-      window.removeEventListener('contextmenu', onContextMenu);
+      window.removeEventListener('contextmenu', onContextMenu, { capture: true } as any);
       window.removeEventListener('resize', detect);
       window.clearInterval(i);
     };
