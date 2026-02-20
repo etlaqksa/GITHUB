@@ -280,6 +280,16 @@ export default function Header() {
             size="icon"
             className={isMobile ? "" : "hidden"}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label={
+              language === 'ar'
+                ? mobileMenuOpen
+                  ? 'إغلاق القائمة'
+                  : 'فتح القائمة'
+                : mobileMenuOpen
+                  ? 'Close menu'
+                  : 'Open menu'
+            }
+            type="button"
           >
             {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </Button>
