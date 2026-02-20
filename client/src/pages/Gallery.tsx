@@ -20,7 +20,7 @@ export default function Gallery() {
     () =>
       Array.from({ length: 55 }, (_, i) => ({
         id: i + 1,
-        src: `/gallery/Etlaq (${i + 1}).jpg`,
+        src: `/gallery/Etlaq (${i + 1}).webp`,
         alt:
           language === 'ar'
             ? `صورة من أعمال إطلاق رقم ${i + 1}`

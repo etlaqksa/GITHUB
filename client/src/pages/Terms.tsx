@@ -149,7 +149,7 @@ export default function Terms() {
 
   return (
     <>
-      <SEO title={title} description={description} url={canonical} image={absUrl('/favicon.png')} type="website" />
+      <SEO title={title} description={description} url={canonical} image={absUrl('/favicon.webp')} type="website" />
 
       <section className="py-12">
         <div className="container mx-auto px-4">

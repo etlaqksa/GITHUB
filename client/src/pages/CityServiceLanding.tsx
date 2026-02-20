@@ -69,7 +69,7 @@ function OgImageForService(serviceSlug?: string) {
   if (slug.includes('void-detection')) return absUrl('/og-void-detection.webp');
   if (slug.includes('geophysical-surveys')) return absUrl('/og-geophysical-surveys.webp');
   if (slug.includes('foundation-strengthening')) return absUrl('/og-foundation-strengthening.webp');
-  return absUrl('/favicon.png');
+  return absUrl('/favicon.webp');
 }
 
 function ModelLanding(props: {
@@ -105,7 +105,7 @@ function ModelLanding(props: {
     '@type': 'Service',
     name: model.seoTitle,
     description: model.seoDescription,
-    provider: buildLocalBusinessSchema({ url: getSiteUrl(), logoUrl: absUrl('/logo.png'), imageUrl: ogImage }),
+    provider: buildLocalBusinessSchema({ url: getSiteUrl(), logoUrl: absUrl('/logo.webp'), imageUrl: ogImage }),
     areaServed: {
       '@type': 'City',
       name: cityName,
@@ -115,7 +115,7 @@ function ModelLanding(props: {
     url: canonical,
   };
 
-  const localBusinessSchema = buildLocalBusinessSchema({ url: getSiteUrl(), logoUrl: absUrl('/logo.png'), imageUrl: ogImage });
+  const localBusinessSchema = buildLocalBusinessSchema({ url: getSiteUrl(), logoUrl: absUrl('/logo.webp'), imageUrl: ogImage });
 
   const breadcrumb = buildBreadcrumbList([
     { name: lang === 'ar' ? 'الرئيسية' : 'Home', url: absUrl(`/${lang}/`) },
@@ -454,7 +454,7 @@ export default function CityServiceLanding({ params }: Props) {
     '@type': 'Service',
     name: title,
     description,
-    provider: buildLocalBusinessSchema({ url: getSiteUrl(), logoUrl: absUrl('/logo.png'), imageUrl: ogImage }),
+    provider: buildLocalBusinessSchema({ url: getSiteUrl(), logoUrl: absUrl('/logo.webp'), imageUrl: ogImage }),
     areaServed: city
       ? {
           '@type': 'City',
@@ -466,7 +466,7 @@ export default function CityServiceLanding({ params }: Props) {
     url: canonical,
   };
 
-  const localBusinessSchema = buildLocalBusinessSchema({ url: getSiteUrl(), logoUrl: absUrl('/logo.png'), imageUrl: ogImage });
+  const localBusinessSchema = buildLocalBusinessSchema({ url: getSiteUrl(), logoUrl: absUrl('/logo.webp'), imageUrl: ogImage });
 
   const breadcrumb = buildBreadcrumbList([
     { name: language === 'ar' ? 'الرئيسية' : 'Home', url: absUrl(`/${language}/`) },

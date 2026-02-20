@@ -70,7 +70,7 @@ function buildArticleSchema(params: { title: string; description: string; url: s
     '@type': 'Organization',
     name: 'شركة إطلاق المتميزة المحدودة (ETLAQ)',
     url: absUrl('/'),
-    logo: absUrl('/logo.png'),
+    logo: absUrl('/logo.webp'),
   };
 
   return {
@@ -173,7 +173,7 @@ export default function BlogPost() {
   const imageName = useMemo(() => (article?.slug ? getArticleImageName(article.slug) : ''), [article?.slug]);
 
   const ogImage = useMemo(() => {
-    const candidate = imageName ? `/article-images/hero/${language}/${imageName}.webp` : '/favicon.png';
+    const candidate = imageName ? `/article-images/hero/${language}/${imageName}.webp` : '/favicon.webp';
     return absUrl(candidate);
   }, [imageName, language]);
 
@@ -203,14 +203,14 @@ export default function BlogPost() {
     const graph: any[] = [];
 
     // Organization (minimal, consistent)
-    const localBusinessSchema = buildLocalBusinessSchema({ url: absUrl('/'), logoUrl: absUrl('/logo.png') });
+    const localBusinessSchema = buildLocalBusinessSchema({ url: absUrl('/'), logoUrl: absUrl('/logo.webp') });
     graph.push(localBusinessSchema);
 
     graph.push({
       '@type': 'Organization',
       name: 'شركة إطلاق المتميزة المحدودة (ETLAQ)',
       url: absUrl('/'),
-      logo: absUrl('/logo.png'),
+      logo: absUrl('/logo.webp'),
     });
 
     graph.push({
@@ -317,8 +317,8 @@ export default function BlogPost() {
   // and may NOT match the stable internal article.slug used across the site.
   // Always use the internal article.slug (mapped when needed) for image filenames.
   const imageNameForArticle = article?.slug ? getArticleImageName(article.slug) : '';
-  const heroPrimary = imageNameForArticle ? `/article-images/hero/${language}/${imageNameForArticle}.webp` : '/favicon.png';
-  const heroSecondary = imageNameForArticle ? `/article-images/card/${language}/${imageNameForArticle}.webp` : '/favicon.png';
+  const heroPrimary = imageNameForArticle ? `/article-images/hero/${language}/${imageNameForArticle}.webp` : '/favicon.webp';
+  const heroSecondary = imageNameForArticle ? `/article-images/card/${language}/${imageNameForArticle}.webp` : '/favicon.webp';
 
   const [heroSrc, setHeroSrc] = useState<string>(heroPrimary);
 
@@ -562,7 +562,7 @@ export default function BlogPost() {
                 },
                 // We intentionally suppress inline images inside article markdown.
                 // Old embedded images were removed from the repo to keep size small,
-                // and we don't want a global fallback (favicon.png) to show repeatedly.
+                // and we don't want a global fallback (favicon.webp) to show repeatedly.
                 img: () => null,
                 // Prevent swipe on scrollable blocks
                 pre: ({ children, ...props }) => (

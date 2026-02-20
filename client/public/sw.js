@@ -22,8 +22,8 @@ const IMAGE_CACHE = `etlaq-images-${VERSION}`;
 const CORE = [
   '/index.html',
   '/manifest.json',
-  '/favicon.png',
-  '/logo.png',
+  '/favicon.webp',
+  '/logo.webp',
   '/robots.txt',
   '/sitemap.xml',
 ];

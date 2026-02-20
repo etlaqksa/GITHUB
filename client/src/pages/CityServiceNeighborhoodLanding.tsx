@@ -73,7 +73,7 @@ export default function CityServiceNeighborhoodLanding() {
     return buildCityServiceModel({ lang, city, service });
   }, [city, service, lang]);
 
-  const ogImage = useMemo(() => (service ? OgImageForService(service.slug) : absUrl('/favicon.png')), [service]);
+  const ogImage = useMemo(() => (service ? OgImageForService(service.slug) : absUrl('/favicon.webp')), [service]);
 
   const seed = useMemo(() => hashString(`${lang}:${localizedCitySlug}:${localizedServiceSlug}:${localizedHoodSlug}`), [
     lang,
@@ -215,7 +215,7 @@ export default function CityServiceNeighborhoodLanding() {
     if (!city || !service || !neighborhood) return undefined;
 
     const cityLabel = lang === 'ar' ? city.ar : city.en;
-    const localBusiness = buildLocalBusinessSchema({ url: getSiteUrl(), logoUrl: absUrl('/logo.png'), imageUrl: ogImage });
+    const localBusiness = buildLocalBusinessSchema({ url: getSiteUrl(), logoUrl: absUrl('/logo.webp'), imageUrl: ogImage });
 
     const serviceSchema = {
       '@type': 'Service',

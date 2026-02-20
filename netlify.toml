@@ -73,13 +73,13 @@
   status = 200
 
 [[redirects]]
-  from = "/favicon.png"
-  to = "/favicon.png"
+  from = "/favicon.webp"
+  to = "/favicon.webp"
   status = 200
 
 [[redirects]]
-  from = "/logo.png"
-  to = "/logo.png"
+  from = "/logo.webp"
+  to = "/logo.webp"
   status = 200
 
 [[redirects]]

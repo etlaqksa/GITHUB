@@ -18,7 +18,7 @@ export default function NotFound() {
           <div className="flex items-center justify-between gap-4 mb-6">
             <div className="flex items-center gap-3">
               <img
-                src="/logo.png"
+                src="/logo.webp"
                 alt="ETLAQ"
                 className="h-10 w-auto"
                 loading="eager"

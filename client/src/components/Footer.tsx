@@ -57,7 +57,7 @@ export default function Footer() {
           {/* Company Info */}
           <div className="space-y-4">
             <img 
-              src="/logo.png?v=2" 
+              src="/logo.webp?v=2" 
               alt="شركة إطلاق المتميزة" 
               
               width="624"

@@ -89,7 +89,7 @@ export default function Header() {
         <LocalizedLink href="/">
           <div className="flex items-center space-x-2 rtl:space-x-reverse cursor-pointer hover:scale-105 transition-transform duration-300">
             <img 
-              src="/logo.png?v=2" 
+              src="/logo.webp?v=2" 
               alt="شركة إطلاق المتميزة" 
               
               width="624"

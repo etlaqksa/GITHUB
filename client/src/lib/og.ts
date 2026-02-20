@@ -7,5 +7,5 @@ import { absUrl } from './siteUrl';
  * (If you later add dedicated OG images, you can reintroduce a mapping here.)
  */
 export function OgImageForService(_serviceSlug: string): string {
-  return absUrl('/favicon.png');
+  return absUrl('/favicon.webp');
 }

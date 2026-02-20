@@ -11,7 +11,7 @@ const repoRoot = path.resolve(__dirname, '..');
 
 // Inline the site logo as a data URI so rendering never depends on file:// loads.
 // This avoids navigation/load hangs in some Puppeteer/Chromium environments.
-const logoPngPath = path.join(repoRoot, 'client', 'public', 'logo.png');
+const logoPngPath = path.join(repoRoot, 'client', 'public', 'logo.webp');
 let logoDataUri = '';
 try {
   const buf = fs.readFileSync(logoPngPath);

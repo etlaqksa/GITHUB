@@ -47,7 +47,7 @@ function getCategories(article: ArticleContent, language: 'ar' | 'en') {
 }
 
 function getFeaturedImageFallback(article: any) {
-  return '/favicon.png';
+  return '/favicon.webp';
 }
 
 function ArticleCard({
@@ -222,7 +222,7 @@ export default function Blog() {
         title={language === 'ar' ? 'المدونة - إطلاق' : 'Blog - ETLAQ'}
         description={language === 'ar' ? 'مقالات مبسطة وعملية عن حقن التربة، معالجة الهبوط، كشف الفراغات، وتقوية الأساسات.' : 'Practical, reader-friendly articles on soil grouting, settlement mitigation, void detection, and foundation strengthening.'}
         url={canonical}
-        image={absUrl('/favicon.png')}
+        image={absUrl('/favicon.webp')}
         type="website"
       />
       <div className="min-h-screen py-12">
