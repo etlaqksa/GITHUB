@@ -533,7 +533,10 @@ export default function HeroIntroSequence({
   const SceneOverlay = (
     <div
       className={
-        'absolute inset-0 flex items-center justify-center py-10 md:py-14 transition-opacity duration-700 ' +
+        // NOTE: On small mobile screens the reserved (hidden) final layout is very tall.
+        // Centering the overlay would push the animated scenes below the first viewport.
+        // So we align to the top on <sm and keep the centered layout on sm+.
+        'absolute inset-0 flex items-start justify-center pt-16 pb-10 sm:items-center sm:justify-center sm:pt-0 sm:pb-0 sm:py-10 md:py-14 transition-opacity duration-700 ' +
         (done ? 'opacity-0 pointer-events-none' : 'opacity-100 cursor-pointer')
       }
       aria-hidden={done}

@@ -460,8 +460,12 @@ html[data-theme='red'] {
     z-index: 1;
   }
 
-  /* Keep site-wide typography tinting from affecting footer readability */
-  .etlaq-footer :where(p, li, blockquote, strong, b, em, i):not([class*="text-white"]) {
+  /*
+   * Keep site-wide typography tinting from affecting footer readability.
+   * IMPORTANT: Do NOT override FontAwesome icon colors inside the social circles.
+   * (They use inline brand colors / gradients and must remain visible.)
+   */
+  .etlaq-footer :where(p, li, blockquote, strong, b, em, i):not([class*="text-white"], i[class*="fa-"]) {
     color: inherit !important;
   }
 
@@ -1790,4 +1794,68 @@ html { scrollbar-gutter: stable; }
 
 .etlaq-spin-pulse {
   animation: etlaqSpinPulse 10s linear infinite;
+}
+
+/* --- Client logos rail (infinite marquee) --- */
+@keyframes etlaqLogoMarquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    /* Track contains two identical halves; moving by -50% is seamless. */
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.etlaq-logo-rail {
+  position: relative;
+  overflow: hidden;
+  /* Soft edge fade */
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 10%, #000 90%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, #000 10%, #000 90%, transparent 100%);
+}
+
+.etlaq-logo-rail__track {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: max-content;
+  will-change: transform;
+  animation: etlaqLogoMarquee var(--etlaq-rail-duration, 38s) linear infinite;
+}
+
+/* RTL should move the opposite way */
+[dir='rtl'] .etlaq-logo-rail__track {
+  animation-direction: reverse;
+}
+
+/* Pause animation on interaction */
+.etlaq-logo-rail:hover .etlaq-logo-rail__track,
+.etlaq-logo-rail:focus-within .etlaq-logo-rail__track {
+  animation-play-state: paused;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .etlaq-logo-rail {
+    overflow-x: auto;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+  .etlaq-logo-rail__track {
+    animation: none;
+  }
+}
+
+.etlaq-logo-item img {
+  opacity: 0.92;
+  filter: saturate(1.05) contrast(1.02);
+  transition: transform 160ms ease, filter 160ms ease, opacity 160ms ease;
+}
+
+.etlaq-logo-item:hover img,
+.etlaq-logo-item:focus-visible img {
+  opacity: 1;
+  transform: translateY(-2px) scale(1.06);
+  filter: saturate(1.25) contrast(1.05);
 }

@@ -15,6 +15,9 @@ export default function ClientLogosWall({
 }) {
   const { language } = useLanguage();
 
+  // Duration scales with logo count so the marquee isn't too fast or too slow.
+  const railDurationSec = Math.max(34, Math.round(clientLogos.length * 2.6));
+
   const title =
     language === 'ar'
       ? 'يثق بنا عملاء رائدون'
@@ -36,41 +39,58 @@ export default function ClientLogosWall({
         </div>
 
         <div className="etlaq-card rounded-2xl border bg-card/40 p-4 md:p-6">
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
-            {clientLogos.map((logo) => {
-              const label = language === 'ar' ? logo.name.ar : logo.name.en || logo.name.ar;
-              const hasProjects = projects.some((p) => {
-                const ar = p.client?.ar ?? '';
-                const en = p.client?.en ?? '';
-                const arParts = ar.split('/').map((s) => s.trim());
-                const enParts = en.split('/').map((s) => s.trim());
-                return arParts.includes(logo.name.ar) || enParts.includes(logo.name.en);
-              });
+          {/*
+            Infinite logo rail (marquee): repeats continuously.
+            - Colored logos (no grayscale)
+            - Hover/focus pops (scale + saturation)
+            - Clickable to client projects
+          */}
+          <div
+            className="etlaq-logo-rail"
+            style={{ ['--etlaq-rail-duration' as any]: `${railDurationSec}s` }}
+            aria-label={language === 'ar' ? 'شعارات العملاء' : 'Client logos'}
+          >
+            <div className="etlaq-logo-rail__track" role="list">
+              {[...clientLogos, ...clientLogos].map((logo, idx) => {
+                const label = language === 'ar' ? logo.name.ar : logo.name.en || logo.name.ar;
+                const hasProjects = projects.some((p) => {
+                  const ar = p.client?.ar ?? '';
+                  const en = p.client?.en ?? '';
+                  const arParts = ar.split('/').map((s) => s.trim());
+                  const enParts = en.split('/').map((s) => s.trim());
+                  return arParts.includes(logo.name.ar) || enParts.includes(logo.name.en);
+                });
 
-              const href = hasProjects ? `/projects?client=${encodeURIComponent(logo.name.ar)}` : '/projects';
-              return (
-                <LocalizedLink
-                  key={logo.fileName}
-                  href={href}
-                  className="group relative flex h-20 items-center justify-center rounded-xl border bg-background/60 p-3 transition hover:-translate-y-0.5 hover:shadow-sm"
-                  aria-label={label}
-                  title={label}
-                >
-                  <div className="h-12 w-[160px] sm:w-[180px] flex items-center justify-center">
-  <img
-    src={logoSrc(logo.fileName)}
-    alt={label}
-    width={180}
-    height={48}
-    loading="lazy"
-    decoding="async"
-    className="h-full w-full object-contain opacity-90 transition duration-200 group-hover:opacity-100"
-  />
-</div>
-                  <span className="sr-only">{label}</span>
-                </LocalizedLink>
-              );
-            })}
+                const href = hasProjects ? `/projects?client=${encodeURIComponent(logo.name.ar)}` : '/projects';
+                const isDuplicate = idx >= clientLogos.length;
+
+                return (
+                  <LocalizedLink
+                    key={`${logo.fileName}-${idx}`}
+                    href={href}
+                    role="listitem"
+                    tabIndex={isDuplicate ? -1 : 0}
+                    aria-hidden={isDuplicate}
+                    className="etlaq-logo-item group relative flex h-20 w-[170px] sm:w-[190px] flex-none items-center justify-center rounded-xl border bg-background/60 p-3 transition hover:-translate-y-0.5 hover:shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary/60"
+                    aria-label={label}
+                    title={label}
+                  >
+                    <div className="h-12 w-full flex items-center justify-center">
+                      <img
+                        src={logoSrc(logo.fileName)}
+                        alt={label}
+                        width={190}
+                        height={48}
+                        loading="lazy"
+                        decoding="async"
+                        className="h-full w-full object-contain"
+                      />
+                    </div>
+                    <span className="sr-only">{label}</span>
+                  </LocalizedLink>
+                );
+              })}
+            </div>
           </div>
 
           <div className="mt-6 flex flex-wrap items-center justify-between gap-3">
