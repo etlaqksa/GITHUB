@@ -34,7 +34,7 @@ export default function ClientLogosWall() {
               {items.map((logo) => (
                 <LocalizedLink
                   key={logo.fileName}
-                  to={logo.href.replace(`/${language}`, '')}
+                  href={logo.href.replace(`/${language}`, '')}
                   className="etlaq-logo-item"
                   aria-label={logo.name}
                 >
@@ -81,18 +81,18 @@ export default function ClientLogosWall() {
           </div>
         </div>
 
-        <div className="mt-3 text-center text-sm opacity-80" dir={language === 'ar' ? 'rtl' : 'ltr'}>
+        <div className={`mt-3 text-sm opacity-80 ${language === 'ar' ? 'text-left' : 'text-right'}`} dir={language === 'ar' ? 'rtl' : 'ltr'}>
           {language === 'ar' ? (
             <>
               اضغط على أي شعار لعرض المشاريع المرتبطة بهذا العميل.{' '}
-              <LocalizedLink to="/projects" className="underline hover:opacity-100 opacity-90">
+              <LocalizedLink href="/projects" className="underline hover:opacity-100 opacity-90">
                 عرض جميع المشاريع
               </LocalizedLink>
             </>
           ) : (
             <>
               Click any logo to view projects linked to that client.{' '}
-              <LocalizedLink to="/projects" className="underline hover:opacity-100 opacity-90">
+              <LocalizedLink href="/projects" className="underline hover:opacity-100 opacity-90">
                 View all projects
               </LocalizedLink>
             </>
