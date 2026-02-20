@@ -391,6 +391,7 @@ export default function Home() {
 
       {/* HERO */}
       <section
+        data-anti-contextmenu="true"
         className={
           `relative isolate overflow-hidden flex items-center ` +
           (isDesktopModeMobile

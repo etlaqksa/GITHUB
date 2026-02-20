@@ -8,6 +8,7 @@ import TopBar from "./components/TopBar";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import SkipToContent from "./components/SkipToContent";
+import AntiInspectGuard from "./components/AntiInspectGuard";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import { InternalLinkingProvider } from "./contexts/InternalLinkingContext";
@@ -237,6 +238,7 @@ function App() {
         <LanguageProvider>
           <TooltipProvider>
             <Toaster />
+            <AntiInspectGuard />
             <Suspense fallback={null}>
               <DeferredMount timeoutMs={900}>
                 <LazyAnalytics />
