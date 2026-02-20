@@ -99,7 +99,7 @@ function HeroVariantSwitcher({
             : 'max-w-0 opacity-0 -translate-y-0.5 ml-0 rtl:mr-0')
         }
         aria-hidden={!open}
-        inert={!open ? "" : undefined}  // disable focus when collapsed
+        inert={!open ? "" : undefined}
       >
         <div
           className={
@@ -406,7 +406,7 @@ export default function HeroIntroSequence({
         (done ? 'opacity-100' : 'opacity-0')
       }
       aria-hidden={!done}
-      inert={!done ? "" : undefined}  // disable focus while hidden
+      inert={!done ? "" : undefined}
     >
       {TopPill}
 
@@ -542,7 +542,7 @@ export default function HeroIntroSequence({
         (done ? 'opacity-0 pointer-events-none' : 'opacity-100 cursor-pointer')
       }
       aria-hidden={done}
-      inert={done ? "" : undefined}  // disable focus when hidden
+      inert={done ? "" : undefined}
       onClick={onSceneClick}
     >
       <div
