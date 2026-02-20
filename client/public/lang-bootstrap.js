@@ -22,30 +22,8 @@
       html.classList.add('lang-ar');
       html.classList.remove('lang-en');
     }
-
-    // Preload the home hero collage only for the home route.
-    // This improves LCP for /ar and /en home, and avoids competing bandwidth on inner pages.
-    var isHome = clean === '/ar' || clean === '/en' || clean === '/' || clean === '';
-    if (isHome && !document.getElementById('etlaq-preload-hero')) {
-      var link = document.createElement('link');
-      link.id = 'etlaq-preload-hero';
-      link.rel = 'preload';
-      link.as = 'image';
-      link.href = '/hero/home-collage-960.webp';
-      link.setAttribute(
-        'imagesrcset',
-        '/hero/home-collage-640.webp 640w, /hero/home-collage-960.webp 960w, /hero/home-collage-1280.webp 1280w, /hero/home-collage.webp 1920w'
-      );
-      link.setAttribute('imagesizes', '100vw');
-      link.setAttribute('type', 'image/webp');
-      // @ts-ignore - some browsers support fetchpriority on link, others ignore.
-      link.fetchPriority = 'high';
-      document.head.appendChild(link);
-    }
-
-    
-
-    // Theme bootstrap (optional): apply stored color theme early to avoid flash.
+    // Hero uses CSS backgrounds now; no image preload needed here.
+// Theme bootstrap (optional): apply stored color theme early to avoid flash.
     try {
       var t = localStorage.getItem('color-theme');
       if (t && (t === 'blue' || t === 'green' || t === 'orange' || t === 'purple' || t === 'red')) {
