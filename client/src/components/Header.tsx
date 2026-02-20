@@ -117,7 +117,9 @@ export default function Header() {
               ? "relative flex flex-1 min-w-0 items-center"
               : "hidden md:flex flex-1 items-center justify-center"
           }
-          {isDesktopModeMobile ? (
+          aria-label={language === 'ar' ? 'التنقل الرئيسي' : 'Main navigation'}
+        >
+        {isDesktopModeMobile ? (
               <nav className="flex-1 min-w-0">
                 <div className="flex items-center gap-1">
                   <div className="flex-1 overflow-x-auto [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
