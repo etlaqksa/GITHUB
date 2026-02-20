@@ -392,12 +392,12 @@ export default function Home() {
       {/* HERO */}
       <section
         className={
-          `relative isolate overflow-hidden ` +
+          `relative isolate overflow-hidden flex items-center ` +
           (isDesktopModeMobile
-            ? 'min-h-[72vh]'
+            ? 'min-h-[clamp(520px,70vh,720px)]'
             : isCoarsePointer
-              ? 'min-h-[76vh]'
-              : 'min-h-[86vh] md:min-h-[90vh]')
+              ? 'min-h-[clamp(520px,74vh,740px)]'
+              : 'min-h-[clamp(520px,78vh,760px)] md:min-h-[clamp(620px,80vh,860px)]')
         }
       >
         <div

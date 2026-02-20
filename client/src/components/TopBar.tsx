@@ -8,21 +8,26 @@ const social = [
     label: 'TikTok',
     iconClass: 'fa-brands fa-tiktok',
     href: `https://www.tiktok.com/@${COMPANY_INFO.socialHandle}`,
+    color: '#0A0A0A',
   },
   {
     label: 'Instagram',
     iconClass: 'fa-brands fa-instagram',
     href: `https://www.instagram.com/${COMPANY_INFO.socialHandle}/`,
+    gradient:
+      'radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%)',
   },
   {
     label: 'X',
     iconClass: 'fa-brands fa-x-twitter',
     href: `https://x.com/${COMPANY_INFO.socialHandle}`,
+    color: '#0A0A0A',
   },
   {
     label: 'Telegram',
     iconClass: 'fa-brands fa-telegram',
     href: `https://t.me/${COMPANY_INFO.socialHandle}`,
+    color: '#229ED9',
   },
 ] as const;
 
@@ -38,21 +43,21 @@ export default function TopBar() {
     >
       <div className="container mx-auto h-full px-4">
         <div className="flex h-full items-center justify-between gap-3 rtl:flex-row-reverse">
-          <div className="flex items-center gap-3 sm:gap-4 text-[12px] sm:text-sm text-white/90 rtl:flex-row-reverse">
+          <div className="flex items-center gap-3 sm:gap-4 text-[12px] sm:text-sm text-white rtl:flex-row-reverse">
             <a
               href={`tel:${COMPANY_INFO.phoneInternational}`}
-              className="inline-flex items-center gap-2 rounded-full px-2 py-1 text-white/90 no-underline hover:bg-white/10 transition"
+              className="inline-flex items-center gap-2 rounded-full px-2 py-1 text-white no-underline hover:bg-white/10 transition"
               aria-label={isAr ? 'اتصال' : 'Call'}
             >
               <Phone className="h-4 w-4 opacity-90" />
-              <span dir="ltr" className="font-semibold tracking-tight">
+              <span dir="ltr" className="font-semibold tracking-tight whitespace-nowrap">
                 {COMPANY_INFO.phoneDisplay}
               </span>
             </a>
 
             <a
               href={`mailto:${COMPANY_INFO.email}`}
-              className="inline-flex items-center gap-2 rounded-full px-2 py-1 text-white/90 no-underline hover:bg-white/10 transition"
+              className="inline-flex items-center gap-2 rounded-full px-2 py-1 text-white no-underline hover:bg-white/10 transition"
               aria-label={isAr ? 'البريد الإلكتروني' : 'Email'}
             >
               <Mail className="h-4 w-4 opacity-90" />
@@ -69,9 +74,22 @@ export default function TopBar() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={s.label}
-                className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-white/15 bg-white/0 text-white/90 hover:bg-white/10 hover:text-white transition"
+                className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-black/10 bg-white shadow-sm hover:-translate-y-0.5 hover:shadow-md transition"
               >
-                <i className={`${s.iconClass} text-[15px] text-white`} aria-hidden="true" />
+                <i
+                  className={`${s.iconClass} text-[15px]`}
+                  aria-hidden="true"
+                  style={
+                    'gradient' in s
+                      ? ({
+                          backgroundImage: (s as any).gradient,
+                          WebkitBackgroundClip: 'text',
+                          backgroundClip: 'text',
+                          color: 'transparent',
+                        } as any)
+                      : ({ color: (s as any).color } as any)
+                  }
+                />
               </a>
             ))}
           </div>

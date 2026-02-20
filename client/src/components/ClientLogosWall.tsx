@@ -1,4 +1,5 @@
 import { clientLogos } from '@/data/clientsLogos';
+import { projects } from '@/data/projects';
 import { useLanguage } from '@/contexts/LanguageContext';
 import LocalizedLink from '@/components/LocalizedLink';
 
@@ -38,7 +39,15 @@ export default function ClientLogosWall({
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
             {clientLogos.map((logo) => {
               const label = language === 'ar' ? logo.name.ar : logo.name.en || logo.name.ar;
-              const href = `/projects?client=${encodeURIComponent(logo.name.ar)}`;
+              const hasProjects = projects.some((p) => {
+                const ar = p.client?.ar ?? '';
+                const en = p.client?.en ?? '';
+                const arParts = ar.split('/').map((s) => s.trim());
+                const enParts = en.split('/').map((s) => s.trim());
+                return arParts.includes(logo.name.ar) || enParts.includes(logo.name.en);
+              });
+
+              const href = hasProjects ? `/projects?client=${encodeURIComponent(logo.name.ar)}` : '/projects';
               return (
                 <LocalizedLink
                   key={logo.fileName}

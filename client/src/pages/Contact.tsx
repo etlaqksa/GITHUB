@@ -108,7 +108,7 @@ export default function Contact() {
     {
       icon: Phone,
       title: language === 'ar' ? 'الهاتف' : 'Phone',
-      value: '+966 53 414 5922',
+      value: '+966534145922',
       link: 'tel:+966534145922',
     },
     {

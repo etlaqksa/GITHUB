@@ -338,9 +338,12 @@ export default function SmartAssistant({
         if (!v) onClose();
       }}
     >
-      <DialogContent className="max-w-2xl p-0 overflow-hidden">
+      <DialogContent
+        className={cn('max-w-2xl p-0 overflow-hidden', isAr ? 'text-right' : 'text-left')}
+        dir={isAr ? 'rtl' : 'ltr'}
+      >
         <div className="p-4 sm:p-5 border-b bg-background/80 backdrop-blur">
-          <DialogHeader>
+          <DialogHeader className={cn(isAr ? 'text-right sm:text-right' : 'text-left sm:text-left')}>
             <div className="flex items-start justify-between gap-3 rtl:flex-row-reverse">
               <div>
                 <DialogTitle className="text-lg sm:text-xl font-extrabold">
@@ -376,10 +379,10 @@ export default function SmartAssistant({
                     ? 'ابحث بكلمات مثل: حقن تربة، تكهفات، GPR…'
                     : 'Search keywords: grouting, cavities, GPR…'
                 }
-                className={
-                  'pl-9 rtl:pl-3 rtl:pr-9 h-11 rounded-xl text-base bg-background ' +
-                  'focus-visible:ring-secondary/50'
-                }
+                className={cn(
+                  'pl-9 rtl:pl-3 rtl:pr-9 h-11 rounded-xl text-base bg-background focus-visible:ring-secondary/50',
+                  isAr ? 'text-right placeholder:text-right' : 'text-left'
+                )}
               />
             </div>
           </div>

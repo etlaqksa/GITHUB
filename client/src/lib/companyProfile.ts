@@ -3,7 +3,8 @@ export const COMPANY = {
   nameEn: 'Etlaq Distinguished Company',
   brand: 'ETLAQ',
   domain: 'etlaqksa.com',
-  phoneDisplay: '+966 53 414 5922',
+  // No spaces to prevent line-breaks on small screens.
+  phoneDisplay: '+966534145922',
   phoneE164: '+966534145922',
   email: 'etlaqksa@gmail.com',
   addressAr: 'الرياض - حي الياسمين (طريق أنس بن مالك)',

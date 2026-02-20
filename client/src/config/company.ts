@@ -7,7 +7,8 @@ export const COMPANY_INFO = {
   phoneInternational: "+966534145922",
 
   // Display helpers
-  phoneDisplay: "+966 53 414 5922",
+  // NOTE: remove spaces to avoid line-breaks on mobile top bars.
+  phoneDisplay: "+966534145922",
   email: "etlaqksa@gmail.com",
 
   // Social handle

@@ -11,21 +11,26 @@ export default function Footer() {
       label: 'TikTok',
       iconClass: 'fa-brands fa-tiktok',
       href: `https://www.tiktok.com/@${COMPANY_INFO.socialHandle}`,
+      color: '#0A0A0A',
     },
     {
       label: 'Instagram',
       iconClass: 'fa-brands fa-instagram',
       href: `https://www.instagram.com/${COMPANY_INFO.socialHandle}/`,
+      gradient:
+        'radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%)',
     },
     {
       label: 'X',
       iconClass: 'fa-brands fa-x-twitter',
       href: `https://x.com/${COMPANY_INFO.socialHandle}`,
+      color: '#0A0A0A',
     },
     {
       label: 'Telegram',
       iconClass: 'fa-brands fa-telegram',
       href: `https://t.me/${COMPANY_INFO.socialHandle}`,
+      color: '#229ED9',
     },
   ] as const;
 
@@ -144,11 +149,11 @@ export default function Footer() {
               <li className="flex items-start space-x-2 rtl:space-x-reverse text-sm">
                 <Phone className="h-5 w-5 mt-0.5 flex-shrink-0 opacity-90" />
                 <a 
-                  href="tel:+966534145922" 
-                  className="opacity-90 hover:opacity-100 hover:underline transition-all"
+                  href={`tel:${COMPANY_INFO.phoneInternational}`} 
+                  className="opacity-90 hover:opacity-100 hover:underline transition-all whitespace-nowrap"
                   dir="ltr"
                 >
-                  +966 53 414 5922
+                  {COMPANY_INFO.phoneDisplay}
                 </a>
               </li>
               <li className="flex items-start space-x-2 rtl:space-x-reverse text-sm">
@@ -175,7 +180,7 @@ export default function Footer() {
               </li>
             </ul>
 
-            <div className="pt-2 flex items-center gap-2 rtl:flex-row-reverse">
+            <div className="pt-2 flex items-center gap-2.5 rtl:flex-row-reverse">
               {social.map((s) => (
                 <a
                   key={s.label}
@@ -183,9 +188,22 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={s.label}
-                  className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 backdrop-blur hover:bg-white/10 transition no-underline"
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-black/10 bg-white shadow-sm hover:-translate-y-0.5 hover:shadow-md transition no-underline"
                 >
-                  <i className={`${s.iconClass} text-[18px] text-white`} aria-hidden="true" />
+                  <i
+                    className={`${s.iconClass} text-[18px]`}
+                    aria-hidden="true"
+                    style={
+                      'gradient' in s
+                        ? ({
+                            backgroundImage: (s as any).gradient,
+                            WebkitBackgroundClip: 'text',
+                            backgroundClip: 'text',
+                            color: 'transparent',
+                          } as any)
+                        : ({ color: (s as any).color } as any)
+                    }
+                  />
                 </a>
               ))}
             </div>

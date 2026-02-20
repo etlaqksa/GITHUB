@@ -1,4 +1,5 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import type { MouseEvent as ReactMouseEvent } from 'react';
 
 import LocalizedLink from '@/components/LocalizedLink';
 import TrustStats from '@/components/TrustStats';
@@ -86,7 +87,7 @@ function HeroVariantSwitcher({
           toggleBtn
         }
       >
-        <Sparkles className="h-5 w-5" />
+        <Sparkles className={'h-5 w-5 ' + (!open ? 'etlaq-spin-pulse' : '')} />
       </button>
 
       {/* Expanded bar */}
@@ -218,9 +219,14 @@ function BenefitTiles({ variant, tone }: { variant: 'ar' | 'en'; tone: Tone }) {
       ? 'border-white/15 bg-black/35 shadow-[0_18px_48px_rgba(0,0,0,0.40)]'
       : 'border-black/10 bg-white/70 shadow-[0_16px_44px_rgba(0,0,0,0.14)]';
 
+  const accents =
+    tone === 'dark'
+      ? ['text-sky-200', 'text-amber-200', 'text-emerald-200', 'text-violet-200']
+      : ['text-sky-700', 'text-amber-700', 'text-emerald-700', 'text-violet-700'];
+
   return (
     <div className="grid w-full max-w-4xl gap-3 grid-cols-2 md:grid-cols-4">
-      {items.map((it) => (
+      {items.map((it, idx) => (
         <div
           key={it}
           className={
@@ -228,7 +234,7 @@ function BenefitTiles({ variant, tone }: { variant: 'ar' | 'en'; tone: Tone }) {
             tile
           }
         >
-          <span className="text-secondary">{it}</span>
+          <span className={accents[idx % accents.length]}>{it}</span>
         </div>
       ))}
     </div>
@@ -251,11 +257,18 @@ export default function HeroIntroSequence({
   const variant: 'ar' | 'en' = language === 'ar' ? 'ar' : 'en';
   const tone: Tone = heroVariant === 'light' ? 'light' : 'dark';
 
+  const accentOrange = tone === 'dark' ? 'text-amber-300' : 'text-orange-600';
+  const accentEmerald = tone === 'dark' ? 'text-emerald-300' : 'text-emerald-700';
+  const accentViolet = tone === 'dark' ? 'text-violet-300' : 'text-violet-700';
+  const brandGradientText =
+    'bg-gradient-to-l from-secondary via-amber-500 to-orange-500 text-transparent bg-clip-text';
+
   const timeline = useMemo(
     () => ({
       // 0: headline, 1: services, 2: long intro, 3: early intervention, 4: counters
-      showMs: [2600, 2800, 5200, 4200, 2600] as const,
-      fadeMs: [700, 700, 850, 850, 700] as const,
+      // Keep it snappy on first load (users can tap/click to advance).
+      showMs: [1700, 1900, 2400, 2000, 1700] as const,
+      fadeMs: [550, 550, 650, 650, 550] as const,
     }),
     []
   );
@@ -263,6 +276,18 @@ export default function HeroIntroSequence({
   const [scene, setScene] = useState<Scene>(0);
   const [sceneVisible, setSceneVisible] = useState(true);
   const [done, setDone] = useState(false);
+
+  // Allow users to advance the intro sequence by clicking/tapping.
+  const fastAdvanceTimerRef = useRef<number | null>(null);
+
+  useEffect(() => {
+    return () => {
+      if (fastAdvanceTimerRef.current) {
+        window.clearTimeout(fastAdvanceTimerRef.current);
+        fastAdvanceTimerRef.current = null;
+      }
+    };
+  }, []);
 
   // When switching hero variants, restart the intro sequence (keeps the toggle feeling "alive").
   useEffect(() => {
@@ -299,6 +324,41 @@ export default function HeroIntroSequence({
       window.clearTimeout(t2);
     };
   }, [prefersReducedMotion, done, scene, timeline]);
+
+  const advanceScene = useCallback(() => {
+    if (prefersReducedMotion || done) return;
+
+    // Quick fade-out, then swap scene.
+    setSceneVisible(false);
+
+    if (fastAdvanceTimerRef.current) {
+      window.clearTimeout(fastAdvanceTimerRef.current);
+    }
+
+    fastAdvanceTimerRef.current = window.setTimeout(() => {
+      setScene((prev) => {
+        if (prev >= 4) {
+          setDone(true);
+          return prev;
+        }
+        return (prev + 1) as Scene;
+      });
+      setSceneVisible(true);
+    }, 140);
+  }, [done, prefersReducedMotion]);
+
+  const onSceneClick = useCallback(
+    (e: ReactMouseEvent<HTMLDivElement>) => {
+      if (prefersReducedMotion || done) return;
+
+      const target = e.target as HTMLElement | null;
+      // Don't hijack clicks on real interactive elements.
+      if (target && target.closest('a,button,input,textarea,select,label')) return;
+
+      advanceScene();
+    },
+    [advanceScene, done, prefersReducedMotion]
+  );
 
   const TopPill = (
     <div
@@ -340,7 +400,7 @@ export default function HeroIntroSequence({
   const FullContent = (
     <div
       className={
-        'mx-auto w-full max-w-5xl space-y-6 text-center flex flex-col items-center transition-opacity duration-700 ' +
+        'mx-auto w-full max-w-5xl space-y-5 md:space-y-6 text-center flex flex-col items-center transition-opacity duration-700 ' +
         (tone === 'dark' ? 'text-white ' : 'text-slate-950 ') +
         (done ? 'opacity-100' : 'opacity-0')
       }
@@ -358,21 +418,20 @@ export default function HeroIntroSequence({
       >
         {variant === 'ar' ? (
           <>
-            نحن نقوّي <span className="text-secondary">أساساتك</span>
+            نحن <span className="text-secondary">نقوّي</span>{' '}
+            <span className={accentOrange}>أساساتك</span>
           </>
         ) : (
           <>
-            We Strengthen <span className="text-secondary">Your Foundations</span>
+            We <span className="text-secondary">Strengthen</span>{' '}
+            <span className={accentOrange}>Your Foundations</span>
           </>
         )}
       </h1>
 
       <div className="w-full space-y-3">
         <div
-          className={
-            'text-lg md:text-2xl font-extrabold drop-shadow-[0_10px_30px_rgba(0,0,0,0.20)] ' +
-            (tone === 'dark' ? 'text-white' : 'text-slate-900')
-          }
+          className={'text-lg md:text-2xl font-extrabold drop-shadow-[0_10px_30px_rgba(0,0,0,0.20)] ' + brandGradientText}
         >
           {variant === 'ar' ? 'شركة إطلاق المتميزة' : 'ETLAQ Distinguished Company'}
         </div>
@@ -387,9 +446,24 @@ export default function HeroIntroSequence({
             : 'text-slate-700')
         }
       >
-        {variant === 'ar'
-          ? 'في شركة إطلاق المتميزة نوفّر حلولًا لمعالجة الهبوطات والتشققات والتكهفات في الرياض وجميع مدن المملكة، عبر تثبيت الأساسات بحقن التربة، وكشف التكهفات بالتخريم (Cavity Probing) أو الحلول الجيوفيزيائية، ثم معالجة وملء التكهفات بالحقن الأسمنتي.'
-          : 'At ETLAQ Distinguished Company, we provide solutions to address settlement, cracks, and cavities across Riyadh and all cities of the Kingdom—by stabilizing foundations with soil grouting, detecting cavities via Cavity Probing or geophysical solutions, then treating and filling cavities with cement grouting.'}
+        {variant === 'ar' ? (
+          <>
+            في شركة إطلاق المتميزة نوفّر حلولًا لمعالجة الهبوطات والتشققات والتكهفات في الرياض وجميع مدن المملكة، عبر تثبيت
+            الأساسات <span className="text-secondary font-extrabold">بحقن التربة</span>، وكشف التكهفات بالتخريم{' '}
+            <span className={accentOrange + ' font-extrabold'}>(Cavity Probing)</span> أو{' '}
+            <span className={accentEmerald + ' font-extrabold'}>الحلول الجيوفيزيائية</span>، ثم معالجة وملء التكهفات{' '}
+            <span className={accentViolet + ' font-extrabold'}>بالحقن الأسمنتي</span>.
+          </>
+        ) : (
+          <>
+            At ETLAQ Distinguished Company, we provide solutions to address settlement, cracks, and cavities across Riyadh and all cities
+            of the Kingdom—by stabilizing foundations with{' '}
+            <span className="text-secondary font-extrabold">soil grouting</span>, detecting cavities via{' '}
+            <span className={accentOrange + ' font-extrabold'}>Cavity Probing</span> or{' '}
+            <span className={accentEmerald + ' font-extrabold'}>geophysical solutions</span>, then treating and filling cavities with{' '}
+            <span className={accentViolet + ' font-extrabold'}>cement grouting</span>.
+          </>
+        )}
       </p>
 
       <div className="w-full space-y-3">
@@ -401,7 +475,15 @@ export default function HeroIntroSequence({
               : 'text-slate-900')
           }
         >
-          {variant === 'ar' ? 'نركّز على الحل المبكر لأنه يحقق:' : 'We focus on early intervention because it delivers:'}
+          {variant === 'ar' ? (
+            <>
+              نركّز على <span className={accentOrange}>الحل المبكر</span> لأنه يحقق:
+            </>
+          ) : (
+            <>
+              We focus on <span className={accentOrange}>early intervention</span> because it delivers:
+            </>
+          )}
         </div>
         <BenefitTiles variant={variant} tone={tone} />
       </div>
@@ -451,12 +533,11 @@ export default function HeroIntroSequence({
   const SceneOverlay = (
     <div
       className={
-        // Don't vertically center scenes within the (tall) reserved layout.
-        // This prevents a large "empty" area on mobile.
-        'absolute inset-0 flex items-start justify-center pt-16 md:pt-20 transition-opacity duration-700 ' +
-        (done ? 'opacity-0 pointer-events-none' : 'opacity-100')
+        'absolute inset-0 flex items-center justify-center py-10 md:py-14 transition-opacity duration-700 ' +
+        (done ? 'opacity-0 pointer-events-none' : 'opacity-100 cursor-pointer')
       }
       aria-hidden={done}
+      onClick={onSceneClick}
     >
       <div
         className={
@@ -475,11 +556,13 @@ export default function HeroIntroSequence({
           >
             {variant === 'ar' ? (
               <>
-                نحن نقوّي <span className="text-secondary">أساساتك</span>
+                نحن <span className="text-secondary">نقوّي</span>{' '}
+                <span className={accentOrange}>أساساتك</span>
               </>
             ) : (
               <>
-                We Strengthen <span className="text-secondary">Your Foundations</span>
+                We <span className="text-secondary">Strengthen</span>{' '}
+                <span className={accentOrange}>Your Foundations</span>
               </>
             )}
           </h2>
@@ -488,10 +571,7 @@ export default function HeroIntroSequence({
         {scene === 1 ? (
           <div className="w-full space-y-3">
             <div
-              className={
-                'text-lg md:text-2xl font-extrabold drop-shadow-[0_10px_30px_rgba(0,0,0,0.20)] ' +
-                (tone === 'dark' ? 'text-white' : 'text-slate-900')
-              }
+              className={'text-lg md:text-2xl font-extrabold drop-shadow-[0_10px_30px_rgba(0,0,0,0.20)] ' + brandGradientText}
             >
               {variant === 'ar' ? 'شركة إطلاق المتميزة' : 'ETLAQ Distinguished Company'}
             </div>
@@ -508,9 +588,24 @@ export default function HeroIntroSequence({
                 : 'text-slate-800')
             }
           >
-            {variant === 'ar'
-              ? 'في شركة إطلاق المتميزة نوفّر حلولًا لمعالجة الهبوطات والتشققات والتكهفات في الرياض وجميع مدن المملكة، عبر تثبيت الأساسات بحقن التربة، وكشف التكهفات بالتخريم (Cavity Probing) أو الحلول الجيوفيزيائية، ثم معالجة وملء التكهفات بالحقن الأسمنتي.'
-              : 'At ETLAQ Distinguished Company, we provide solutions to address settlement, cracks, and cavities across Riyadh and all cities of the Kingdom—by stabilizing foundations with soil grouting, detecting cavities via Cavity Probing or geophysical solutions, then treating and filling cavities with cement grouting.'}
+            {variant === 'ar' ? (
+              <>
+                في شركة إطلاق المتميزة نوفّر حلولًا لمعالجة الهبوطات والتشققات والتكهفات في الرياض وجميع مدن المملكة، عبر تثبيت
+                الأساسات <span className="text-secondary font-extrabold">بحقن التربة</span>، وكشف التكهفات بالتخريم{' '}
+                <span className={accentOrange + ' font-extrabold'}>(Cavity Probing)</span> أو{' '}
+                <span className={accentEmerald + ' font-extrabold'}>الحلول الجيوفيزيائية</span>، ثم معالجة وملء التكهفات{' '}
+                <span className={accentViolet + ' font-extrabold'}>بالحقن الأسمنتي</span>.
+              </>
+            ) : (
+              <>
+                At ETLAQ Distinguished Company, we provide solutions to address settlement, cracks, and cavities across Riyadh and all
+                cities of the Kingdom—by stabilizing foundations with{' '}
+                <span className="text-secondary font-extrabold">soil grouting</span>, detecting cavities via{' '}
+                <span className={accentOrange + ' font-extrabold'}>Cavity Probing</span> or{' '}
+                <span className={accentEmerald + ' font-extrabold'}>geophysical solutions</span>, then treating and filling cavities with{' '}
+                <span className={accentViolet + ' font-extrabold'}>cement grouting</span>.
+              </>
+            )}
           </p>
         ) : null}
 
@@ -524,7 +619,15 @@ export default function HeroIntroSequence({
                   : 'text-slate-950')
               }
             >
-              {variant === 'ar' ? 'نركّز على الحل المبكر لأنه يحقق:' : 'We focus on early intervention because it delivers:'}
+              {variant === 'ar' ? (
+                <>
+                  نركّز على <span className={accentOrange}>الحل المبكر</span> لأنه يحقق:
+                </>
+              ) : (
+                <>
+                  We focus on <span className={accentOrange}>early intervention</span> because it delivers:
+                </>
+              )}
             </div>
             <BenefitTiles variant={variant} tone={tone} />
           </div>

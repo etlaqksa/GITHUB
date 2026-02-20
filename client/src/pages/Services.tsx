@@ -302,49 +302,6 @@ export default function Services() {
         </div>
       </section>
 
-      {/* CHOOSER + QUICK REQUEST */}
-      <section className="py-12 md:py-16 bg-muted/20">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-[1.4fr_0.9fr] gap-6 items-start">
-            <div>
-              <div className="max-w-3xl space-y-2">
-                <h2 className="text-2xl md:text-4xl font-bold">{lang === 'ar' ? 'اختر نقطة البداية' : 'Choose your starting point'}</h2>
-                <p className="text-muted-foreground leading-relaxed">
-                  {lang === 'ar'
-                    ? 'إذا كنت غير متأكد من المسار، ابدأ بتقييم مختصر وسنوجهك للخطوة الأقل مخاطرة.'
-                    : 'If you’re unsure, start with a short assessment and we’ll guide you to the lowest-risk next step.'}
-                </p>
-              </div>
-
-              <div className="grid md:grid-cols-3 gap-4 mt-6">
-                {chooser.map((c) => (
-                  <Card key={c.title} className="h-full border-border/60 bg-card/70 backdrop-blur">
-                    <CardHeader className="space-y-3">
-                      <div className="h-12 w-12 rounded-2xl border bg-background flex items-center justify-center">
-                        <c.icon className="h-6 w-6 text-primary" />
-                      </div>
-                      <CardTitle className="text-lg">{c.title}</CardTitle>
-                      <CardDescription className="leading-relaxed">{c.desc}</CardDescription>
-                    </CardHeader>
-                    <CardContent className="pt-0">
-                      <LocalizedLink href={c.href}>
-                        <Button variant="outline" className="w-full" onClick={() => trackEvent('services_start_point', { language: lang, choice: c.title })}>
-                          {lang === 'ar' ? 'ابدأ' : 'Start'}
-                        </Button>
-                      </LocalizedLink>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <QuickRequestCard formName="services_quick_assessment" />
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* SERVICES TABS */}
       <section className="py-12 md:py-16">
         <div className="container mx-auto px-4">
@@ -507,6 +464,53 @@ export default function Services() {
                 </AnimatePresence>
               </div>
             </Tabs>
+          </div>
+        </div>
+      </section>
+
+      {/* CHOOSER + QUICK REQUEST */}
+      <section className="py-12 md:py-16 bg-muted/20">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-[1.4fr_0.9fr] gap-6 items-start">
+            <div>
+              <div className="max-w-3xl space-y-2">
+                <h2 className="text-2xl md:text-4xl font-bold">{lang === 'ar' ? 'اختر نقطة البداية' : 'Choose your starting point'}</h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  {lang === 'ar'
+                    ? 'إذا كنت غير متأكد من المسار، ابدأ بتقييم مختصر وسنوجهك للخطوة الأقل مخاطرة.'
+                    : 'If you’re unsure, start with a short assessment and we’ll guide you to the lowest-risk next step.'}
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-4 mt-6">
+                {chooser.map((c) => (
+                  <Card key={c.title} className="h-full border-border/60 bg-card/70 backdrop-blur">
+                    <CardHeader className="space-y-3">
+                      <div className="h-12 w-12 rounded-2xl border bg-background flex items-center justify-center">
+                        <c.icon className="h-6 w-6 text-primary" />
+                      </div>
+                      <CardTitle className="text-lg">{c.title}</CardTitle>
+                      <CardDescription className="leading-relaxed">{c.desc}</CardDescription>
+                    </CardHeader>
+                    <CardContent className="pt-0">
+                      <LocalizedLink href={c.href}>
+                        <Button
+                          variant="outline"
+                          className="w-full"
+                          onClick={() => trackEvent('services_start_point', { language: lang, choice: c.title })}
+                        >
+                          {lang === 'ar' ? 'ابدأ' : 'Start'}
+                        </Button>
+                      </LocalizedLink>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <QuickRequestCard formName="services_quick_assessment" />
+            </div>
           </div>
         </div>
       </section>

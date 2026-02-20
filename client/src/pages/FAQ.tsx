@@ -218,8 +218,8 @@ export default function FAQ() {
                 <h3 className="text-xl font-semibold">
                   {language === 'ar' ? 'اتصل بنا' : 'Call Us'}
                 </h3>
-                <p className="text-muted-foreground" dir="ltr">
-                  +966 53 414 5922
+                <p className="text-muted-foreground whitespace-nowrap" dir="ltr">
+                  +966534145922
                 </p>
                 <a href="tel:+966534145922">
                   <Button variant="outline" className="w-full">

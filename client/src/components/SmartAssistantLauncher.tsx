@@ -1,4 +1,4 @@
-import { lazy, Suspense, useState } from 'react';
+import { lazy, Suspense, useEffect, useRef, useState } from 'react';
 import { Search } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -17,9 +17,34 @@ export default function SmartAssistantLauncher() {
   const [mounted, setMounted] = useState(false);
   const [open, setOpen] = useState(false);
 
+  // Defensive unmount on close to avoid rare portal/overlay glitches
+  // that can make the dialog fail to reopen until refresh.
+  const unmountTimerRef = useRef<number | null>(null);
+
+  useEffect(() => {
+    return () => {
+      if (unmountTimerRef.current) {
+        window.clearTimeout(unmountTimerRef.current);
+        unmountTimerRef.current = null;
+      }
+    };
+  }, []);
+
   const handleOpen = () => {
+    if (unmountTimerRef.current) {
+      window.clearTimeout(unmountTimerRef.current);
+      unmountTimerRef.current = null;
+    }
     if (!mounted) setMounted(true);
     setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+    if (unmountTimerRef.current) {
+      window.clearTimeout(unmountTimerRef.current);
+    }
+    unmountTimerRef.current = window.setTimeout(() => setMounted(false), 250);
   };
 
   return (
@@ -39,7 +64,7 @@ export default function SmartAssistantLauncher() {
 
       {mounted && (
         <Suspense fallback={null}>
-          <LazySmartAssistant initialOpen={open} onClose={() => setOpen(false)} />
+          <LazySmartAssistant initialOpen={open} onClose={handleClose} />
         </Suspense>
       )}
     </>
