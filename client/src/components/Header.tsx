@@ -88,7 +88,20 @@ export default function Header() {
         {/* Logo */}
         <LocalizedLink href="/">
           <div className="flex items-center space-x-2 rtl:space-x-reverse cursor-pointer hover:scale-105 transition-transform duration-300">
-            <img src="/logo-140.webp?v=5" srcSet="/logo-140.webp?v=5 140w, /logo-280.webp?v=5 280w" sizes="140px" width="140" height="70" alt="شركة إطلاق المتميزة" className="h-10 sm:h-12 w-auto object-contain hover-brightness" loading="eager" decoding="async" />
+            <img 
+              src="/logo-224.webp?v=3"
+              srcSet="/logo-224.webp?v=3 224w, /logo.webp?v=3 448w"
+              sizes="(max-width: 640px) 160px, 224px" 
+              alt="شركة إطلاق المتميزة" 
+              width="224"
+              height="112" 
+              
+             
+             
+              className="h-10 sm:h-12 w-auto object-contain hover-brightness"
+              loading="eager"
+              decoding="async"
+            />
           </div>
         </LocalizedLink>
 

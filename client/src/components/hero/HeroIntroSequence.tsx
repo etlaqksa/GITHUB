@@ -267,8 +267,8 @@ export default function HeroIntroSequence({
     () => ({
       // 0: headline, 1: services, 2: long intro, 3: early intervention, 4: counters
       // Keep it snappy on first load (users can tap/click to advance).
-      showMs: [220, 620, 820, 720, 520] as const,
-      fadeMs: [120, 170, 220, 220, 170] as const,
+      showMs: [1700, 1900, 2400, 2000, 1700] as const,
+      fadeMs: [550, 550, 650, 650, 550] as const,
     }),
     []
   );
@@ -402,11 +402,11 @@ export default function HeroIntroSequence({
       className={
         'mx-auto w-full max-w-5xl space-y-5 md:space-y-6 text-center flex flex-col items-center transition-opacity duration-700 ' +
         (tone === 'dark' ? 'text-white ' : 'text-slate-950 ') +
-        'opacity-100'
+        (done ? 'opacity-100' : 'opacity-0')
       }
       aria-hidden={!done}
     >
-      <div className={done ? "opacity-100" : "opacity-0"}>{TopPill}</div>
+      {TopPill}
 
       <h1
         className={
@@ -428,8 +428,6 @@ export default function HeroIntroSequence({
           </>
         )}
       </h1>
-
-      <div className={done ? 'opacity-100' : 'opacity-0'}>
 
       <div className="w-full space-y-3">
         <div
@@ -529,7 +527,6 @@ export default function HeroIntroSequence({
       >
         <TrustStats compact variant={tone === 'dark' ? 'inverse' : 'default'} />
       </div>
-      </div>
     </div>
   );
 
@@ -551,8 +548,30 @@ export default function HeroIntroSequence({
           (sceneVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2')
         }
       >
-        {scene === 0 ? (<div className="h-0" aria-hidden />) : null}
-{scene === 1 ? (
+        {scene === 0 ? (
+          <h2
+            className={
+              'text-6xl md:text-8xl font-extrabold leading-[1.05] tracking-tight ' +
+              (tone === 'dark'
+                ? 'text-white drop-shadow-[0_14px_40px_rgba(0,0,0,0.95)]'
+                : 'text-slate-950 drop-shadow-[0_14px_32px_rgba(0,0,0,0.20)]')
+            }
+          >
+            {variant === 'ar' ? (
+              <>
+                نحن <span className="text-secondary">نقوّي</span>{' '}
+                <span className={accentOrange}>أساساتك</span>
+              </>
+            ) : (
+              <>
+                We <span className="text-secondary">Strengthen</span>{' '}
+                <span className={accentOrange}>Your Foundations</span>
+              </>
+            )}
+          </h2>
+        ) : null}
+
+        {scene === 1 ? (
           <div className="w-full space-y-3">
             <div
               className={'text-lg md:text-2xl font-extrabold drop-shadow-[0_10px_30px_rgba(0,0,0,0.20)] ' + brandGradientText}
