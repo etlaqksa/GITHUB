@@ -1,6 +1,21 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+/* Local fonts (self-hosted via @fontsource) */
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/600.css";
+@import "@fontsource/inter/700.css";
+
+@import "@fontsource/ibm-plex-sans-arabic/400.css";
+@import "@fontsource/ibm-plex-sans-arabic/600.css";
+@import "@fontsource/ibm-plex-sans-arabic/700.css";
+
+
+
+/* Font gate: prevents large CLS from late font swaps on slow connections. */
+html.fonts-pending body { opacity: 0; }
+html.fonts-ready body { opacity: 1; transition: opacity 180ms ease-out; }
+
 @plugin "@tailwindcss/typography";
 
 @custom-variant dark (&:is(.dark *));
