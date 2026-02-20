@@ -9,12 +9,16 @@ import App from "./App";
 import { getLoginUrl } from "./const";
 import { initVitals } from "@/lib/vitals";
 import "./index.css";
+import { mountAntiInspectBlockers } from "@/lib/antiInspectBootstrap";
 import { registerGlobalPreloadErrorHandler } from "./utils/autoReload";
 import { reportClientError } from "./utils/reportClientError";
 
 
 // Self-heal after deployments: if a hashed chunk preload fails, reload once.
 registerGlobalPreloadErrorHandler();
+
+// Best-effort anti-inspect blockers (runs early). Toggle via VITE_ANTI_INSPECT=true
+mountAntiInspectBlockers();
 
 // Basic client-side monitoring (Netlify Forms)
 if (typeof window !== "undefined") {

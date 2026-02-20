@@ -1874,3 +1874,32 @@ html { scrollbar-gutter: stable; }
 .etlaq-search-rtl * {
   text-align: right;
 }
+
+/* --------------------------------------------------
+   Anti-inspect (best-effort UI deterrent)
+   Enabled by adding the class .etlaq-guard-on to <html>
+-------------------------------------------------- */
+
+.etlaq-guard-on,
+.etlaq-guard-on body {
+  /* Prevent iOS long-press callout menu */
+  -webkit-touch-callout: none;
+  /* Reduce accidental text selection (copy still blocked via JS listeners) */
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Allow selection inside form fields */
+.etlaq-guard-on input,
+.etlaq-guard-on textarea,
+.etlaq-guard-on [contenteditable="true"],
+.etlaq-guard-on [contenteditable=""] {
+  -webkit-user-select: text !important;
+  user-select: text !important;
+}
+
+/* Prevent iOS image callout */
+.etlaq-guard-on img,
+.etlaq-guard-on a {
+  -webkit-touch-callout: none;
+}

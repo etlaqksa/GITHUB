@@ -8,12 +8,31 @@ import { useLanguage } from '@/contexts/LanguageContext';
  */
 export default function AntiInspectGuard() {
   const { language, dir } = useLanguage();
-  const enabled = useMemo(() => String(import.meta.env.VITE_ANTI_INSPECT || '') === 'true', []);
+  const enabled = useMemo(() => {
+    const raw = String(import.meta.env.VITE_ANTI_INSPECT ?? '')
+      .trim()
+      .toLowerCase();
+    if (raw === 'true' || raw === '1' || raw === 'yes' || raw === 'on') return true;
+
+    // Optional runtime overrides for quick testing (does not replace env control).
+    try {
+      const qs = new URLSearchParams(window.location.search);
+      if (qs.get('guard') === '1') return true;
+      if (localStorage.getItem('anti_inspect') === '1') return true;
+    } catch {
+      // ignore
+    }
+
+    return false;
+  }, []);
   const [devtoolsOpen, setDevtoolsOpen] = useState(false);
 
   useEffect(() => {
     if (!enabled) return;
     if (typeof window === 'undefined') return;
+
+    // Mark DOM for CSS-based protections (long-press, selection rules, etc.)
+    document.documentElement.classList.add('etlaq-guard-on');
 
     // --- Block a few common shortcuts (best-effort) ---
     const onKeyDown = (e: KeyboardEvent) => {
@@ -40,10 +59,45 @@ export default function AntiInspectGuard() {
         e.stopPropagation();
         return;
       }
+
+      // Ctrl/Cmd+C (copy)
+      if (ctrlOrMeta && key === 'c') {
+        e.preventDefault();
+        e.stopPropagation();
+        return;
+      }
+
+      // Ctrl/Cmd+X (cut)
+      if (ctrlOrMeta && key === 'x') {
+        e.preventDefault();
+        e.stopPropagation();
+        return;
+      }
+
+      // Ctrl+Shift+C (devtools element picker)
+      if (ctrlOrMeta && e.shiftKey && key === 'c') {
+        e.preventDefault();
+        e.stopPropagation();
+        return;
+      }
     };
 
     // --- Disable right click on the whole site (user request) ---
-    const onContextMenu = (e: MouseEvent) => {
+    const onContextMenu = (e: Event) => {
+      e.preventDefault();
+      e.stopPropagation();
+    };
+
+    // --- Block copy/cut via events (best-effort) ---
+    const onCopy = (e: ClipboardEvent) => {
+      e.preventDefault();
+      e.stopPropagation();
+    };
+    const onCut = (e: ClipboardEvent) => {
+      e.preventDefault();
+      e.stopPropagation();
+    };
+    const onDragStart = (e: DragEvent) => {
       e.preventDefault();
       e.stopPropagation();
     };
@@ -61,20 +115,43 @@ export default function AntiInspectGuard() {
       }
       const wDiff = Math.abs(window.outerWidth - window.innerWidth);
       const hDiff = Math.abs(window.outerHeight - window.innerHeight);
-      const opened = wDiff > 160 || hDiff > 160;
+
+      let opened = wDiff > 160 || hDiff > 160;
+
+      // Secondary detection: debugger timing (runs only when DevTools is open)
+      if (!opened) {
+        const t0 = performance.now();
+        // eslint-disable-next-line no-debugger
+        debugger;
+        const dt = performance.now() - t0;
+        if (dt > 200) opened = true;
+      }
+
       setDevtoolsOpen(opened);
     };
 
+    // Use capture so we run before page handlers.
     window.addEventListener('keydown', onKeyDown, true);
+    document.addEventListener('keydown', onKeyDown, true);
     window.addEventListener('contextmenu', onContextMenu, { capture: true });
+    document.addEventListener('contextmenu', onContextMenu, { capture: true });
+    document.addEventListener('copy', onCopy, true);
+    document.addEventListener('cut', onCut, true);
+    document.addEventListener('dragstart', onDragStart, true);
 
     const i = window.setInterval(detect, 500);
     window.addEventListener('resize', detect);
     detect();
 
     return () => {
+      document.documentElement.classList.remove('etlaq-guard-on');
       window.removeEventListener('keydown', onKeyDown, true);
+      document.removeEventListener('keydown', onKeyDown, true);
       window.removeEventListener('contextmenu', onContextMenu, { capture: true } as any);
+      document.removeEventListener('contextmenu', onContextMenu, { capture: true } as any);
+      document.removeEventListener('copy', onCopy, true);
+      document.removeEventListener('cut', onCut, true);
+      document.removeEventListener('dragstart', onDragStart, true);
       window.removeEventListener('resize', detect);
       window.clearInterval(i);
     };
