@@ -188,7 +188,7 @@ export default function Header() {
         <div className="flex items-center gap-1 sm:gap-2 relative shrink-0">
           {/* Request Service CTA (always visible; compact on mobile) */}
           <LocalizedLink href="/request-service" className="shrink-0">
-            <Button className="gap-2 font-bold shadow-hover-soft whitespace-nowrap">
+            <Button className="gap-2 font-bold shadow-hover-soft whitespace-nowrap bg-primary text-primary-foreground hover:bg-primary/90 bg-primary text-primary-foreground hover:bg-primary/90">
               <span className="hidden sm:inline">{t('nav.request')}</span>
               <span className="sm:hidden">{language === 'ar' ? 'اطلب' : 'Request'}</span>
             </Button>

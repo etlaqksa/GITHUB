@@ -137,8 +137,8 @@ html[lang="en"] {
 
 :root {
   /* Base Variables */
-  --primary: oklch(0.46 0.25 250);
-  --primary-foreground: oklch(0.99 0 0);
+  --primary: oklch(0.44 0.22 250);
+  --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.60 0.22 45);
   --secondary-foreground: oklch(0.99 0 0);
   --accent: oklch(0.65 0.18 195);
@@ -149,7 +149,7 @@ html[lang="en"] {
   --warning-foreground: oklch(0.15 0 0);
   --info: oklch(0.62 0.24 290);
   --info-foreground: oklch(0.99 0 0);
-  --ring: oklch(0.46 0.25 250);
+  --ring: oklch(0.44 0.22 250);
 }
 
 /* Theme Overrides - Using !important to ensure they take precedence */
@@ -214,7 +214,7 @@ html[data-theme='red'] {
   /* Borders & Inputs */
   --border: oklch(0.90 0.01 250);
   --input: oklch(0.90 0.01 250);
-  --ring: oklch(0.46 0.25 250);
+  --ring: oklch(0.44 0.22 250);
   --radius: 0.75rem;
 
   /* Layout helpers */
@@ -239,8 +239,8 @@ html[data-theme='red'] {
 }
 
 .dark {
-  --primary: oklch(0.46 0.25 250);
-  --primary-foreground: oklch(0.98 0 0);
+  --primary: oklch(0.44 0.22 250);
+  --primary-foreground: oklch(0.985 0 0);
   --sidebar-primary: var(--color-blue-500);
   --sidebar-primary-foreground: var(--color-blue-50);
   --background: oklch(0.141 0.005 285.823);
@@ -259,7 +259,7 @@ html[data-theme='red'] {
   --destructive-foreground: oklch(0.985 0 0);
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.46 0.25 250);
+  --ring: oklch(0.44 0.22 250);
   --chart-1: var(--color-blue-300);
   --chart-2: var(--color-blue-500);
   --chart-3: var(--color-blue-600);
