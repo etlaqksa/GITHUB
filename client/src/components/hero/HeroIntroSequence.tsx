@@ -5,7 +5,7 @@ import TrustStats from '@/components/TrustStats';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { usePrefersReducedMotion } from '@/components/hero/usePrefersReducedMotion';
-import { ArrowLeft, Drill, MessageCircle, Radar, ShieldCheck } from 'lucide-react';
+import { ArrowLeft, Drill, MessageCircle, Radar, ShieldCheck, Sparkles } from 'lucide-react';
 
 type HeroVariant = 'gradient' | 'blobs' | 'grid' | 'light';
 type Tone = 'dark' | 'light';
@@ -40,6 +40,8 @@ function HeroVariantSwitcher({
 }) {
   if (!onVariantChange) return null;
 
+  const [open, setOpen] = useState(false);
+
   const labels: Record<HeroVariant, string> =
     language === 'ar'
       ? {
@@ -65,43 +67,84 @@ function HeroVariantSwitcher({
   const btnOff = tone === 'dark' ? 'hover:bg-white/10' : 'hover:bg-black/5';
   const divider = tone === 'dark' ? 'bg-white/20' : 'bg-black/10';
 
-  return (
-    <div
-      className={
-        'inline-flex flex-wrap items-center justify-center gap-1.5 rounded-full border px-2 py-1 backdrop-blur ' +
-        shell
-      }
-    >
-      {(Object.keys(labels) as HeroVariant[]).map((v) => (
-        <button
-          key={v}
-          type="button"
-          aria-pressed={heroVariant === v}
-          onClick={() => onVariantChange(v)}
-          className={btnBase + ' ' + (heroVariant === v ? btnOn : btnOff)}
-        >
-          {labels[v]}
-        </button>
-      ))}
+  const toggleBtn =
+    tone === 'dark'
+      ? 'border-white/20 bg-black/40 text-white hover:bg-black/55'
+      : 'border-black/10 bg-white/75 text-slate-900 hover:bg-white';
 
-      {onToggleMotion ? (
-        <>
-          <span className={'mx-1 h-5 w-px ' + divider} aria-hidden="true" />
-          <button
-            type="button"
-            aria-pressed={!!forceMotion}
-            onClick={onToggleMotion}
-            className={btnBase + ' ' + (forceMotion ? btnOn : btnOff)}
-            title={
-              language === 'ar'
-                ? 'تفعيل الحركة حتى مع إعداد تقليل الحركة'
-                : 'Force motion even if OS reduced-motion is enabled'
-            }
-          >
-            {language === 'ar' ? 'حركة' : 'Motion'}
-          </button>
-        </>
-      ) : null}
+  return (
+    <div className="inline-flex items-center justify-center rtl:flex-row-reverse">
+      {/* Collapsed: a single circle. Click toggles the full bar. */}
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        aria-expanded={open}
+        aria-label={language === 'ar' ? 'تغيير خلفية الهيرو' : 'Change hero background'}
+        className={
+          'inline-flex h-11 w-11 items-center justify-center rounded-full border backdrop-blur transition ' +
+          'focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary/60 ' +
+          toggleBtn
+        }
+      >
+        <Sparkles className="h-5 w-5" />
+      </button>
+
+      {/* Expanded bar */}
+      <div
+        className={
+          'overflow-hidden transition-[max-width,opacity,transform] duration-300 ease-out ' +
+          (open
+            ? 'max-w-[min(92vw,560px)] opacity-100 translate-y-0 ml-2 rtl:ml-0 rtl:mr-2'
+            : 'max-w-0 opacity-0 -translate-y-0.5 ml-0 rtl:mr-0')
+        }
+        aria-hidden={!open}
+      >
+        <div
+          className={
+            'inline-flex items-center gap-1.5 rounded-full border px-2 py-1 backdrop-blur ' +
+            // Fixed max width enables horizontal scrolling on mobile instead of wrapping.
+            'w-[min(92vw,560px)] justify-center flex-nowrap overflow-x-auto no-scrollbar ' +
+            shell
+          }
+        >
+          {(Object.keys(labels) as HeroVariant[]).map((v) => (
+            <button
+              key={v}
+              type="button"
+              aria-pressed={heroVariant === v}
+              onClick={() => {
+                onVariantChange(v);
+                setOpen(false);
+              }}
+              className={btnBase + ' whitespace-nowrap ' + (heroVariant === v ? btnOn : btnOff)}
+            >
+              {labels[v]}
+            </button>
+          ))}
+
+          {onToggleMotion ? (
+            <>
+              <span className={'mx-1 h-5 w-px ' + divider} aria-hidden="true" />
+              <button
+                type="button"
+                aria-pressed={!!forceMotion}
+                onClick={() => {
+                  onToggleMotion();
+                  setOpen(false);
+                }}
+                className={btnBase + ' whitespace-nowrap ' + (forceMotion ? btnOn : btnOff)}
+                title={
+                  language === 'ar'
+                    ? 'تفعيل الحركة حتى مع إعداد تقليل الحركة'
+                    : 'Force motion even if OS reduced-motion is enabled'
+                }
+              >
+                {language === 'ar' ? 'حركة' : 'Motion'}
+              </button>
+            </>
+          ) : null}
+        </div>
+      </div>
     </div>
   );
 }
@@ -408,7 +451,9 @@ export default function HeroIntroSequence({
   const SceneOverlay = (
     <div
       className={
-        'absolute inset-0 flex items-center justify-center transition-opacity duration-700 ' +
+        // Don't vertically center scenes within the (tall) reserved layout.
+        // This prevents a large "empty" area on mobile.
+        'absolute inset-0 flex items-start justify-center pt-16 md:pt-20 transition-opacity duration-700 ' +
         (done ? 'opacity-0 pointer-events-none' : 'opacity-100')
       }
       aria-hidden={done}
@@ -441,7 +486,15 @@ export default function HeroIntroSequence({
         ) : null}
 
         {scene === 1 ? (
-          <div className="w-full">
+          <div className="w-full space-y-3">
+            <div
+              className={
+                'text-lg md:text-2xl font-extrabold drop-shadow-[0_10px_30px_rgba(0,0,0,0.20)] ' +
+                (tone === 'dark' ? 'text-white' : 'text-slate-900')
+              }
+            >
+              {variant === 'ar' ? 'شركة إطلاق المتميزة' : 'ETLAQ Distinguished Company'}
+            </div>
             <ServiceTiles variant={variant} tone={tone} />
           </div>
         ) : null}
@@ -510,7 +563,7 @@ export default function HeroIntroSequence({
         </div>
       ) : null}
 
-      <div className="relative w-full flex items-center justify-center pt-14 md:pt-16">
+      <div className="relative w-full pt-16 md:pt-20">
         {/* Reserve final layout height from the start (prevents CLS). */}
         {FullContent}
         {SceneOverlay}

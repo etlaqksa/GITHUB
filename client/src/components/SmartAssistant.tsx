@@ -84,6 +84,11 @@ export default function SmartAssistant({
 
   const inputRef = useRef<HTMLInputElement>(null);
 
+  // Allow the launcher to re-open the dialog without forcing a full page refresh.
+  useEffect(() => {
+    if (typeof initialOpen === 'boolean') setOpen(initialOpen);
+  }, [initialOpen]);
+
   useEffect(() => {
     if (!open) return;
     // Preload the chunk very lightly (no parsing until needed).
@@ -248,11 +253,14 @@ export default function SmartAssistant({
       .slice(0, 18);
 
     // If empty query: show a curated short list.
+    // Requested: do NOT suggest projects by default on first open.
     if (!tokens.length) {
-      const curatedOrder: ResultKind[] = ['service', 'project', 'request', 'contact', 'article'];
-      return combined
-        .sort((a, b) => curatedOrder.indexOf(a.kind) - curatedOrder.indexOf(b.kind))
-        .slice(0, 12);
+      const curatedOrder: ResultKind[] = ['service', 'request', 'contact', 'article', 'project'];
+      const curated = combined
+        .sort((a, b) => curatedOrder.indexOf(a.kind) - curatedOrder.indexOf(b.kind));
+
+      const withoutProjects = filter === 'all' ? curated.filter((r) => r.kind !== 'project') : curated;
+      return withoutProjects.slice(0, 12);
     }
 
     return combined;

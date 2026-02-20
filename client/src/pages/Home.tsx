@@ -53,19 +53,29 @@ export default function Home() {
   const search = useUrlSearch();
 
   const { heroVariant, showHeroPreview, forceMotion } = useMemo(() => {
-    const rawEnv = (import.meta.env.VITE_HERO_VARIANT || "").toString().toLowerCase();
-    const envVariant = rawEnv === "blobs" ? "blobs" : rawEnv === "grid" ? "grid" : rawEnv === "light" ? "light" : "gradient";
+    const rawEnv = (import.meta.env.VITE_HERO_VARIANT || '').toString().toLowerCase();
+    // Default hero variant for production: Light (requested).
+    const envVariant =
+      rawEnv === 'blobs'
+        ? 'blobs'
+        : rawEnv === 'grid'
+          ? 'grid'
+          : rawEnv === 'gradient'
+            ? 'gradient'
+            : rawEnv === 'light'
+              ? 'light'
+              : 'light';
 
-    const params = new URLSearchParams(search || "");
+    const params = new URLSearchParams(search || '');
 
-    const q = (params.get("hero") || "").toLowerCase();
-    const heroVariant = (q === "blobs" || q === "gradient" || q === "grid" || q === "light")
-      ? (q as "blobs" | "gradient" | "grid" | "light")
-      : (envVariant as "blobs" | "gradient" | "grid" | "light");
+    const q = (params.get('hero') || '').toLowerCase();
+    const heroVariant = q === 'blobs' || q === 'gradient' || q === 'grid' || q === 'light'
+      ? (q as 'blobs' | 'gradient' | 'grid' | 'light')
+      : (envVariant as 'blobs' | 'gradient' | 'grid' | 'light');
 
     // User requested the switcher to be visible in production without any parameters.
     const showHeroPreview = true;
-    const forceMotion = params.get("motion") === "1" || params.get("forceMotion") === "1";
+    const forceMotion = params.get('motion') === '1' || params.get('forceMotion') === '1';
 
     return { heroVariant, showHeroPreview, forceMotion };
   }, [loc, search]);

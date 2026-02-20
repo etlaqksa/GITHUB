@@ -183,9 +183,9 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={s.label}
-                  className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 backdrop-blur hover:bg-white/10 transition"
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 backdrop-blur hover:bg-white/10 transition no-underline"
                 >
-                  <i className={`${s.iconClass} text-[18px]`} aria-hidden="true" />
+                  <i className={`${s.iconClass} text-[18px] text-white`} aria-hidden="true" />
                 </a>
               ))}
             </div>

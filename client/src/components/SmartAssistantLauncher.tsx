@@ -15,35 +15,31 @@ export default function SmartAssistantLauncher() {
   const isAr = language === 'ar';
 
   const [mounted, setMounted] = useState(false);
-  const [openAfterMount, setOpenAfterMount] = useState(false);
+  const [open, setOpen] = useState(false);
 
-  const handleClick = () => {
-    if (!mounted) {
-      setMounted(true);
-      setOpenAfterMount(true);
-    }
+  const handleOpen = () => {
+    if (!mounted) setMounted(true);
+    setOpen(true);
   };
 
   return (
     <>
-      {!mounted && (
-        <div className="fixed bottom-[calc(env(safe-area-inset-bottom,0px)+10.5rem)] md:bottom-24 right-6 z-[60]">
-          <Button
-            size="lg"
-            className="rounded-full shadow-lg gap-2"
-            aria-label={isAr ? 'بحث الموقع' : 'Site search'}
-            type="button"
-            onClick={handleClick}
-          >
-            <Search className="h-5 w-5" />
-            <span className="hidden sm:inline">{isAr ? 'بحث الموقع' : 'Site Search'}</span>
-          </Button>
-        </div>
-      )}
+      <div className="fixed bottom-[calc(env(safe-area-inset-bottom,0px)+10.5rem)] md:bottom-24 right-6 z-[60]">
+        <Button
+          size="lg"
+          className="rounded-full shadow-lg gap-2 etlaq-assistant-fab"
+          aria-label={isAr ? 'بحث الموقع' : 'Site search'}
+          type="button"
+          onClick={handleOpen}
+        >
+          <Search className="h-5 w-5" />
+          <span className="hidden sm:inline">{isAr ? 'بحث الموقع' : 'Site Search'}</span>
+        </Button>
+      </div>
 
       {mounted && (
         <Suspense fallback={null}>
-          <LazySmartAssistant initialOpen={openAfterMount} />
+          <LazySmartAssistant initialOpen={open} onClose={() => setOpen(false)} />
         </Suspense>
       )}
     </>
