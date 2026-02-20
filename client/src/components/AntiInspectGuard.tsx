@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { isAntiInspectEnabled } from '@/lib/antiInspectBootstrap';
 
 /**
  * Lightweight anti-inspect UX deterrent.
@@ -8,23 +9,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
  */
 export default function AntiInspectGuard() {
   const { language, dir } = useLanguage();
-  const enabled = useMemo(() => {
-    const raw = String(import.meta.env.VITE_ANTI_INSPECT ?? '')
-      .trim()
-      .toLowerCase();
-    if (raw === 'true' || raw === '1' || raw === 'yes' || raw === 'on') return true;
-
-    // Optional runtime overrides for quick testing (does not replace env control).
-    try {
-      const qs = new URLSearchParams(window.location.search);
-      if (qs.get('guard') === '1') return true;
-      if (localStorage.getItem('anti_inspect') === '1') return true;
-    } catch {
-      // ignore
-    }
-
-    return false;
-  }, []);
+  const enabled = useMemo(() => isAntiInspectEnabled(), []);
   const [devtoolsOpen, setDevtoolsOpen] = useState(false);
 
   useEffect(() => {

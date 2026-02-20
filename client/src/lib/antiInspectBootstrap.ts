@@ -2,10 +2,9 @@
 // IMPORTANT: This does NOT provide real security.
 
 export function isAntiInspectEnabled(): boolean {
-  const raw = String((import.meta as any).env?.VITE_ANTI_INSPECT ?? '')
-    .trim()
-    .toLowerCase();
-  if (raw === 'true' || raw === '1' || raw === 'yes' || raw === 'on') return true;
+  // Build-time flag (controlled via Netlify env: VITE_ANTI_INSPECT=true)
+  // This is injected via Vite `define` to avoid relying on import.meta.env at runtime.
+  if (typeof __ETLAQ_ANTI_INSPECT__ !== 'undefined' && __ETLAQ_ANTI_INSPECT__ === true) return true;
 
   // Optional runtime overrides for quick testing.
   try {
