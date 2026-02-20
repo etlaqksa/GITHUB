@@ -135,30 +135,35 @@ useEffect(() => {
     };
 
     // --- DevTools detection (best-effort) ---
-    const isLikelyDesktop = () => {
-      // avoid false positives on mobile browser chrome
-      return window.innerWidth >= 768 && window.innerHeight >= 520;
+    const overlayEligible = () => {
+      // Only show overlay on real desktop interaction patterns (mouse/trackpad).
+      // Avoid false positives on mobile (including "Request desktop site" mode).
+      try {
+        const ua = String(navigator.userAgent || '').toLowerCase();
+        const isMobileUA = /android|iphone|ipad|ipod|mobile/.test(ua);
+        if (isMobileUA) return false;
+
+        const mm = window.matchMedia;
+        const fine = !!mm && mm('(pointer: fine)').matches;
+        const hover = !!mm && mm('(hover: hover)').matches;
+
+        return fine && hover && window.innerWidth >= 900 && window.innerHeight >= 600;
+      } catch {
+        return false;
+      }
     };
 
     const detect = () => {
-      if (!isLikelyDesktop()) {
+      if (!overlayEligible()) {
         setDevtoolsOpen(false);
         return;
       }
+
       const wDiff = Math.abs(window.outerWidth - window.innerWidth);
       const hDiff = Math.abs(window.outerHeight - window.innerHeight);
 
-      let opened = wDiff > 160 || hDiff > 160;
-
-      // Secondary detection: debugger timing (runs only when DevTools is open)
-      if (!opened) {
-        const t0 = performance.now();
-        // eslint-disable-next-line no-debugger
-        debugger;
-        const dt = performance.now() - t0;
-        if (dt > 200) opened = true;
-      }
-
+      // Docked DevTools usually creates a large delta.
+      const opened = wDiff > 180 || hDiff > 180;
       setDevtoolsOpen(opened);
     };
 
