@@ -1802,8 +1802,8 @@ html { scrollbar-gutter: stable; }
     transform: translate3d(0, 0, 0);
   }
   100% {
-    /* Track contains two identical halves; moving by -50% is seamless. */
-    transform: translate3d(-50%, 0, 0);
+    /* Shift by a measured pixel distance to avoid blank gaps on wide screens. */
+    transform: translate3d(calc(-1 * var(--etlaq-rail-shift, 50%)), 0, 0);
   }
 }
 
@@ -1818,10 +1818,16 @@ html { scrollbar-gutter: stable; }
 .etlaq-logo-rail__track {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: var(--etlaq-rail-gap, 12px);
   width: max-content;
   will-change: transform;
   animation: etlaqLogoMarquee var(--etlaq-rail-duration, 38s) linear infinite;
+}
+
+.etlaq-logo-rail__segment {
+  display: flex;
+  align-items: center;
+  gap: var(--etlaq-rail-gap, 12px);
 }
 
 /* RTL should move the opposite way */
