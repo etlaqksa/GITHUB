@@ -11,6 +11,11 @@
 @import "@fontsource/ibm-plex-sans-arabic/700.css";
 
 
+
+/* Font gate: prevents large CLS from late font swaps on slow connections. */
+html.fonts-pending body { opacity: 0; }
+html.fonts-ready body { opacity: 1; transition: opacity 180ms ease-out; }
+
 @plugin "@tailwindcss/typography";
 
 @custom-variant dark (&:is(.dark *));
@@ -1798,10 +1803,12 @@ html { scrollbar-gutter: stable; }
 
 /* --- Client logos rail (infinite marquee) --- */
 @keyframes etlaqLogoMarquee {
-  0% { transform: translate3d(0, 0, 0); }
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
   100% {
-    /* Two-segment seamless marquee: shift by one segment width + half the inter-segment gap */
-    transform: translate3d(calc(-50% - (var(--etlaq-rail-gap, 12px) / 2)), 0, 0);
+    /* Shift by a measured pixel distance to avoid blank gaps on wide screens. */
+    transform: translate3d(calc(-1 * var(--etlaq-rail-shift, 50%)), 0, 0);
   }
 }
 
@@ -1908,3 +1915,15 @@ html { scrollbar-gutter: stable; }
 .etlaq-guard-on a {
   -webkit-touch-callout: none;
 }
+
+
+/* Infinite client logos rail (CSS-only, no layout measurements -> avoids forced reflow/CLS) */
+.etlaq-logo-rail__viewport{overflow:hidden; width:100%;}
+.etlaq-logo-rail__track{display:flex; width:max-content; will-change:transform; animation: etlaq-logo-marquee 24s linear infinite;}
+.etlaq-logo-rail__segment{display:flex; align-items:center;}
+.etlaq-logo-item{display:inline-flex; align-items:center; padding: 10px 10px; text-decoration:none;}
+.etlaq-logo-box{width:190px; height:48px; border-radius: 14px; background: rgba(255,255,255,0.9); box-shadow: 0 10px 26px rgba(0,0,0,0.10); display:flex; align-items:center; justify-content:center; border: 1px solid rgba(0,0,0,0.06);}
+.etlaq-logo-img{width:100%; height:100%; object-fit:contain; filter:none; opacity:0.96; transition: transform .18s ease, filter .18s ease, opacity .18s ease;}
+.etlaq-logo-item:hover .etlaq-logo-img{transform: scale(1.06); filter: saturate(1.15) contrast(1.05); opacity:1;}
+@keyframes etlaq-logo-marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+@media (prefers-reduced-motion: reduce){.etlaq-logo-rail__track{animation:none;}}
