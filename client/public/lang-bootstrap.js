@@ -36,7 +36,6 @@
     // Font gate: avoid large CLS from late font swaps (especially on mobile throttling).
     try {
       if (!html.classList.contains('fonts-ready')) {
-        html.classList.add('fonts-pending');
         var __fontsDone = false;
         function __markFontsReady() {
           if (__fontsDone) return;
@@ -45,8 +44,8 @@
           html.classList.add('fonts-ready');
         }
         var __t = setTimeout(__markFontsReady, 4500);
-        if (document.fonts && document.fonts.ready) {
-          document.fonts.ready.then(function () {
+        if (document.fonts && {
+          {
             clearTimeout(__t);
             __markFontsReady();
           }).catch(function () {});
