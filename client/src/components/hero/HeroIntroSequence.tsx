@@ -91,6 +91,8 @@ function HeroVariantSwitcher({
       </button>
 
       {/* Expanded bar */}
+      {open && (
+
       <div
         className={
           'overflow-hidden transition-[max-width,opacity,transform] duration-300 ease-out ' +
@@ -98,9 +100,7 @@ function HeroVariantSwitcher({
             ? 'max-w-[min(92vw,560px)] opacity-100 translate-y-0 ml-2 rtl:ml-0 rtl:mr-2'
             : 'max-w-0 opacity-0 -translate-y-0.5 ml-0 rtl:mr-0')
         }
-        aria-hidden={!open}
-        inert={!open ? "" : undefined}
-      >
+>
         <div
           className={
             'inline-flex items-center gap-1.5 rounded-full border px-2 py-1 backdrop-blur ' +
@@ -147,6 +147,8 @@ function HeroVariantSwitcher({
           ) : null}
         </div>
       </div>
+
+      )}
     </div>
   );
 }
@@ -403,10 +405,9 @@ export default function HeroIntroSequence({
       className={
         'mx-auto w-full max-w-5xl space-y-5 md:space-y-6 text-center flex flex-col items-center transition-opacity duration-700 ' +
         (tone === 'dark' ? 'text-white ' : 'text-slate-950 ') +
-        (done ? 'opacity-100' : 'opacity-0')
+        (done ? 'opacity-100 visible pointer-events-auto' : 'opacity-0 invisible pointer-events-none')
       }
       aria-hidden={!done}
-      inert={!done ? "" : undefined}
     >
       {TopPill}
 
@@ -542,7 +543,6 @@ export default function HeroIntroSequence({
         (done ? 'opacity-0 pointer-events-none' : 'opacity-100 cursor-pointer')
       }
       aria-hidden={done}
-      inert={done ? "" : undefined}
       onClick={onSceneClick}
     >
       <div
@@ -675,7 +675,7 @@ export default function HeroIntroSequence({
       <div className="relative w-full pt-16 md:pt-20">
         {/* Reserve final layout height from the start (prevents CLS). */}
         {FullContent}
-        {SceneOverlay}
+        {!done && SceneOverlay}
       </div>
     </div>
   );

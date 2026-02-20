@@ -119,7 +119,7 @@ export default function Header() {
           }
           aria-label={language === 'ar' ? 'التنقل الرئيسي' : 'Main navigation'}
         >
-        {isDesktopModeMobile ? (
+          {isDesktopModeMobile ? (
               <nav className="flex-1 min-w-0">
                 <div className="flex items-center gap-1">
                   <div className="flex-1 overflow-x-auto [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
@@ -201,6 +201,9 @@ export default function Header() {
               size="sm"
               className="hidden sm:inline-flex gap-2 border-2 border-primary/50 hover:border-primary transition-colors"
               onClick={() => setThemeMenuOpen(!themeMenuOpen)}
+              aria-label={language === 'ar' ? 'تغيير الثيم' : 'Change theme'}
+              type="button"
+            >
               <Palette className="h-4 w-4 text-primary" />
               <span className="hidden md:inline font-bold">
                 {language === 'ar' ? 'الثيم' : 'Theme'}
@@ -213,6 +216,9 @@ export default function Header() {
               size="icon"
               className="sm:hidden border-2 border-primary/50 hover:border-primary"
               onClick={() => setThemeMenuOpen(!themeMenuOpen)}
+              aria-label={language === 'ar' ? 'تغيير الثيم' : 'Change theme'}
+              type="button"
+            >
               <Palette className="h-4 w-4 text-primary" />
             </Button>
 
@@ -261,6 +267,9 @@ export default function Header() {
             size="sm"
             onClick={toggleLanguage}
             className="font-medium shadow-hover-soft whitespace-nowrap"
+            aria-label={language === 'ar' ? 'Switch to English' : 'التبديل إلى العربية'}
+            type="button"
+          >
             <span className="hidden sm:inline">{language === 'ar' ? 'EN' : 'العربية'}</span>
             <span className="sm:hidden">{language === 'ar' ? 'EN' : 'AR'}</span>
           </Button>
@@ -269,17 +278,8 @@ export default function Header() {
           <Button
             variant="ghost"
             size="icon"
-            className={isMobile ? '' : 'hidden'}
-            onClick={() => setMobileMenuOpen((v) => !v)}
-            aria-label={
-              language === 'ar'
-                ? mobileMenuOpen
-                  ? 'إغلاق القائمة'
-                  : 'فتح القائمة'
-                : mobileMenuOpen
-                  ? 'Close menu'
-                  : 'Open menu'
-            }
+            className={isMobile ? "" : "hidden"}
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </Button>
