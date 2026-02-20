@@ -1,5 +1,6 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Mail, MapPin, Phone } from 'lucide-react';
+import { SocialIcon } from '@/components/SocialIcons';
 import LocalizedLink from '@/components/LocalizedLink';
 import { COMPANY_INFO } from '@/config/company';
 
@@ -7,32 +8,27 @@ export default function Footer() {
   const { t, language } = useLanguage();
 
   const social = [
-    {
-      label: 'TikTok',
-      iconClass: 'fa-brands fa-tiktok',
-      href: `https://www.tiktok.com/@${COMPANY_INFO.socialHandle}`,
-      color: '#0A0A0A',
-    },
-    {
-      label: 'Instagram',
-      iconClass: 'fa-brands fa-instagram',
-      href: `https://www.instagram.com/${COMPANY_INFO.socialHandle}/`,
-      gradient:
-        'radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%)',
-    },
-    {
-      label: 'X',
-      iconClass: 'fa-brands fa-x-twitter',
-      href: `https://x.com/${COMPANY_INFO.socialHandle}`,
-      color: '#0A0A0A',
-    },
-    {
-      label: 'Telegram',
-      iconClass: 'fa-brands fa-telegram',
-      href: `https://t.me/${COMPANY_INFO.socialHandle}`,
-      color: '#229ED9',
-    },
-  ] as const;
+  {
+    label: 'TikTok',
+    name: 'tiktok',
+    href: `https://www.tiktok.com/@${COMPANY_INFO.socialHandle}`,
+  },
+  {
+    label: 'Instagram',
+    name: 'instagram',
+    href: `https://www.instagram.com/${COMPANY_INFO.socialHandle}/`,
+  },
+  {
+    label: 'X',
+    name: 'x',
+    href: `https://x.com/${COMPANY_INFO.socialHandle}`,
+  },
+  {
+    label: 'Telegram',
+    name: 'telegram',
+    href: `https://t.me/${COMPANY_INFO.socialHandle}`,
+  },
+] as const;
 
   const quickLinks = [
     { name: t('nav.home'), href: '/' },
@@ -190,21 +186,7 @@ export default function Footer() {
                   aria-label={s.label}
                   className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-black/10 bg-white shadow-sm hover:-translate-y-0.5 hover:shadow-md transition no-underline"
                 >
-                  <i
-                    className={`${s.iconClass} text-[18px]`}
-                    aria-hidden="true"
-                    style={
-                      'gradient' in s
-                        ? ({
-                            backgroundImage: (s as any).gradient,
-                            WebkitBackgroundClip: 'text',
-                            backgroundClip: 'text',
-                            color: 'transparent',
-                          } as any)
-                        : ({ color: (s as any).color } as any)
-                    }
-                  />
-                </a>
+                  <SocialIcon name={s.name} className="w-4 h-4" /></a>
               ))}
             </div>
           </div>

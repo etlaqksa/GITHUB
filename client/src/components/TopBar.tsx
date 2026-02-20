@@ -1,4 +1,5 @@
 import { Mail, Phone } from 'lucide-react';
+import { SocialIcon } from '@/components/SocialIcons';
 
 import { COMPANY_INFO } from '@/config/company';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -6,28 +7,23 @@ import { useLanguage } from '@/contexts/LanguageContext';
 const social = [
   {
     label: 'TikTok',
-    iconClass: 'fa-brands fa-tiktok',
+    name: 'tiktok',
     href: `https://www.tiktok.com/@${COMPANY_INFO.socialHandle}`,
-    color: '#0A0A0A',
   },
   {
     label: 'Instagram',
-    iconClass: 'fa-brands fa-instagram',
+    name: 'instagram',
     href: `https://www.instagram.com/${COMPANY_INFO.socialHandle}/`,
-    gradient:
-      'radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%)',
   },
   {
     label: 'X',
-    iconClass: 'fa-brands fa-x-twitter',
+    name: 'x',
     href: `https://x.com/${COMPANY_INFO.socialHandle}`,
-    color: '#0A0A0A',
   },
   {
     label: 'Telegram',
-    iconClass: 'fa-brands fa-telegram',
+    name: 'telegram',
     href: `https://t.me/${COMPANY_INFO.socialHandle}`,
-    color: '#229ED9',
   },
 ] as const;
 
@@ -76,21 +72,7 @@ export default function TopBar() {
                 aria-label={s.label}
                 className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-black/10 bg-white shadow-sm hover:-translate-y-0.5 hover:shadow-md transition"
               >
-                <i
-                  className={`${s.iconClass} text-[15px]`}
-                  aria-hidden="true"
-                  style={
-                    'gradient' in s
-                      ? ({
-                          backgroundImage: (s as any).gradient,
-                          WebkitBackgroundClip: 'text',
-                          backgroundClip: 'text',
-                          color: 'transparent',
-                        } as any)
-                      : ({ color: (s as any).color } as any)
-                  }
-                />
-              </a>
+                <SocialIcon name={s.name} className="w-4 h-4" /></a>
             ))}
           </div>
         </div>
