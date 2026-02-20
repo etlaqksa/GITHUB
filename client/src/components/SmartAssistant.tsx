@@ -339,7 +339,10 @@ export default function SmartAssistant({
       }}
     >
       <DialogContent
-        className={cn('max-w-2xl p-0 overflow-hidden', isAr ? 'text-right' : 'text-left')}
+        className={cn(
+          'max-w-2xl p-0 overflow-hidden',
+          isAr ? 'etlaq-search-rtl text-right' : 'text-left'
+        )}
         dir={isAr ? 'rtl' : 'ltr'}
       >
         <div className="p-4 sm:p-5 border-b bg-background/80 backdrop-blur">
@@ -420,7 +423,7 @@ export default function SmartAssistant({
 
         <div className="max-h-[60vh] overflow-auto p-2 sm:p-3">
           {results.length === 0 ? (
-            <div className="p-6 text-center text-sm text-muted-foreground">
+            <div className={cn('p-6 text-sm text-muted-foreground', isAr ? 'text-right' : 'text-center')}>
               {isAr
                 ? 'لا توجد نتائج. جرّب كلمات أقصر أو غيّر الفلتر.'
                 : 'No results. Try fewer keywords or change the filter.'}

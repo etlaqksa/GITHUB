@@ -1810,6 +1810,10 @@ html { scrollbar-gutter: stable; }
 .etlaq-logo-rail {
   position: relative;
   overflow: hidden;
+  /* Force LTR inside the marquee even on RTL pages to keep the animation seamless.
+     (On RTL pages, reversing the animation direction can push the track out of view
+     and reveal blank gaps.) */
+  direction: ltr;
   /* Soft edge fade */
   -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 10%, #000 90%, transparent 100%);
   mask-image: linear-gradient(to right, transparent 0%, #000 10%, #000 90%, transparent 100%);
@@ -1828,11 +1832,6 @@ html { scrollbar-gutter: stable; }
   display: flex;
   align-items: center;
   gap: var(--etlaq-rail-gap, 12px);
-}
-
-/* RTL should move the opposite way */
-[dir='rtl'] .etlaq-logo-rail__track {
-  animation-direction: reverse;
 }
 
 /* Pause animation on interaction */
@@ -1864,4 +1863,14 @@ html { scrollbar-gutter: stable; }
   opacity: 1;
   transform: translateY(-2px) scale(1.06);
   filter: saturate(1.25) contrast(1.05);
+}
+
+/* --- Site Search RTL: ensure every text line aligns to the right in Arabic --- */
+.etlaq-search-rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+.etlaq-search-rtl * {
+  text-align: right;
 }

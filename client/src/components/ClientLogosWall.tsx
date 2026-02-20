@@ -109,6 +109,7 @@ export default function ClientLogosWall({
           <div
             ref={railRef}
             className="etlaq-logo-rail"
+            dir="ltr"
             style={{
               ['--etlaq-rail-duration' as any]: `${railDurationSec}s`,
               ['--etlaq-rail-shift' as any]: shiftPx ? `${shiftPx}px` : undefined,
@@ -148,6 +149,7 @@ export default function ClientLogosWall({
                           width={190}
                           height={48}
                           loading={eager ? 'eager' : 'lazy'}
+                          fetchPriority={eager ? 'high' : 'auto'}
                           decoding="async"
                           className="h-full w-full object-contain"
                         />
