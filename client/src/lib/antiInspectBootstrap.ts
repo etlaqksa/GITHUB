@@ -2,20 +2,43 @@
 // IMPORTANT: This does NOT provide real security.
 
 export function isAntiInspectEnabled(): boolean {
-  // Build-time flag (controlled via Netlify env: VITE_ANTI_INSPECT=true)
-  // This is injected via Vite `define` to avoid relying on import.meta.env at runtime.
+  // IMPORTANT:
+  // - Netlify UI env vars can sometimes fail to propagate into the Vite build.
+  // - To make the deterrent reliable, we treat it as **ON by default**,
+  //   with an explicit opt-out via ?guard=0 (persisted in localStorage).
+  // - You can still force-enable via ?guard=1.
+
+  // 1) Build-time flag (if it works, keep honoring it)
   if (typeof __ETLAQ_ANTI_INSPECT__ !== 'undefined' && __ETLAQ_ANTI_INSPECT__ === true) return true;
 
-  // Optional runtime overrides for quick testing.
+  // 2) Runtime overrides (persisted)
   try {
-    const qs = new URLSearchParams(window.location.search);
-    if (qs.get('guard') === '1') return true;
-    if (localStorage.getItem('anti_inspect') === '1') return true;
+    const url = new URL(window.location.href);
+    const guard = url.searchParams.get('guard');
+
+    if (guard === '1') {
+      localStorage.setItem('anti_inspect', '1');
+      url.searchParams.delete('guard');
+      window.history.replaceState({}, '', url.toString());
+      return true;
+    }
+
+    if (guard === '0') {
+      localStorage.setItem('anti_inspect', '0');
+      url.searchParams.delete('guard');
+      window.history.replaceState({}, '', url.toString());
+      return false;
+    }
+
+    const stored = localStorage.getItem('anti_inspect');
+    if (stored === '0') return false;
+    if (stored === '1') return true;
   } catch {
     // ignore
   }
 
-  return false;
+  // 3) Default: enabled (guaranteed)
+  return true;
 }
 
 export function mountAntiInspectBlockers(): void {
