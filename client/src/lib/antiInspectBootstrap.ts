@@ -17,18 +17,30 @@ export function isAntiInspectEnabled(): boolean {
     const guard = url.searchParams.get('guard');
 
     if (guard === '1') {
-      localStorage.setItem('anti_inspect', '1');
-      url.searchParams.delete('guard');
-      window.history.replaceState({}, '', url.toString());
-      return true;
-    }
+  localStorage.setItem('anti_inspect', '1');
+  url.searchParams.delete('guard');
+  url.searchParams.delete('k');
+  window.history.replaceState({}, '', url.toString());
+  return true;
+}
 
     if (guard === '0') {
-      localStorage.setItem('anti_inspect', '0');
-      url.searchParams.delete('guard');
-      window.history.replaceState({}, '', url.toString());
-      return false;
-    }
+  const k = url.searchParams.get('k') || '';
+  // Require a password key to disable protection (avoid accidental disable).
+  if (k === "H@mada7op") {
+    localStorage.setItem('anti_inspect', '0');
+    url.searchParams.delete('guard');
+    url.searchParams.delete('k');
+    window.history.replaceState({}, '', url.toString());
+    return false;
+  }
+
+  // Wrong / missing key: ignore request and keep protection enabled.
+  url.searchParams.delete('guard');
+  url.searchParams.delete('k');
+  window.history.replaceState({}, '', url.toString());
+  return true;
+}
 
     const stored = localStorage.getItem('anti_inspect');
     if (stored === '0') return false;

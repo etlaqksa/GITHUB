@@ -12,6 +12,53 @@ export default function AntiInspectGuard() {
   const enabled = useMemo(() => isAntiInspectEnabled(), []);
   const [devtoolsOpen, setDevtoolsOpen] = useState(false);
 
+  const [humanInteracted, setHumanInteracted] = useState(false);
+const suppressOverlay = useMemo(() => {
+  if (typeof window === 'undefined') return true;
+  const ua = String(navigator.userAgent || '').toLowerCase();
+
+  const isIframe = (() => {
+    try {
+      return window.self !== window.top;
+    } catch {
+      return true;
+    }
+  })();
+
+  const isAutomation =
+    // common headless / audit / screenshot agents
+    /netlify|headless|lighthouse|chrome-lighthouse|prerender|puppeteer|playwright|selenium|cypress/.test(ua) ||
+    // crawler-style agents
+    /bot|crawler|spider|facebookexternalhit|twitterbot|slackbot|telegrambot/.test(ua) ||
+    // webdriver signal
+    (navigator as any).webdriver === true;
+
+  // We keep blockers on always, but we hide the overlay for automated previews/screenshots.
+  return isIframe || isAutomation;
+}, []);
+
+
+useEffect(() => {
+  if (!enabled) return;
+  if (typeof window === 'undefined') return;
+
+  const mark = () => setHumanInteracted(true);
+
+  window.addEventListener('pointerdown', mark, { capture: true, passive: true } as any);
+  window.addEventListener('pointermove', mark, { capture: true, passive: true } as any);
+  window.addEventListener('keydown', mark, true);
+  window.addEventListener('scroll', mark, { capture: true, passive: true } as any);
+  window.addEventListener('touchstart', mark, { capture: true, passive: true } as any);
+
+  return () => {
+    window.removeEventListener('pointerdown', mark, { capture: true } as any);
+    window.removeEventListener('pointermove', mark, { capture: true } as any);
+    window.removeEventListener('keydown', mark, true);
+    window.removeEventListener('scroll', mark, { capture: true } as any);
+    window.removeEventListener('touchstart', mark, { capture: true } as any);
+  };
+}, [enabled]);
+
   useEffect(() => {
     if (!enabled) return;
     if (typeof window === 'undefined') return;
@@ -144,6 +191,8 @@ export default function AntiInspectGuard() {
 
   if (!enabled) return null;
   if (!devtoolsOpen) return null;
+  if (suppressOverlay) return null;
+  if (!humanInteracted) return null;
 
   const title = language === 'ar' ? 'تم تفعيل وضع الحماية' : 'Protection mode enabled';
   const body =
