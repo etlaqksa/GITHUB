@@ -215,7 +215,7 @@ export default function CityServiceNeighborhoodLanding() {
     if (!city || !service || !neighborhood) return undefined;
 
     const cityLabel = lang === 'ar' ? city.ar : city.en;
-    const localBusiness = buildLocalBusinessSchema({ url: getSiteUrl(), logoUrl: absUrl('/logo.webp'), imageUrl: ogImage });
+    const localBusiness = buildLocalBusinessSchema({ url: getSiteUrl(), logoUrl: absUrl('/logo-140.webp'), imageUrl: ogImage });
 
     const serviceSchema = {
       '@type': 'Service',

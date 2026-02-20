@@ -216,7 +216,7 @@ function App() {
   useEffect(() => {
     const p = window.location.pathname || "/";
     const isPrefixed = p === "/ar" || p.startsWith("/ar/") || p === "/en" || p.startsWith("/en/");
-    const isAsset = p.startsWith("/assets/") || p.startsWith("/images/") || p.startsWith("/gallery/") || p.startsWith("/article-images/") || p.endsWith(".pdf") || p === "/robots.txt" || p === "/sitemap.xml" || p === "/sitemap-priority.xml" || p === "/sitemap-full.xml" || p === "/manifest.json" || p === "/favicon.webp" || p === "/logo.webp" || p === "/__forms.html";
+    const isAsset = p.startsWith("/assets/") || p.startsWith("/images/") || p.startsWith("/gallery/") || p.startsWith("/article-images/") || p.endsWith(".pdf") || p === "/robots.txt" || p === "/sitemap.xml" || p === "/sitemap-priority.xml" || p === "/sitemap-full.xml" || p === "/manifest.json" || p === "/favicon.webp" || p === "/logo-140.webp" || p === "/__forms.html";
     if (!isPrefixed && !isAsset) {
       // Default language is ALWAYS Arabic for legacy/unprefixed links.
       // (User requirement: Arabic is the default site experience.)

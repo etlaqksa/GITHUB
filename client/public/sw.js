@@ -23,7 +23,7 @@ const CORE = [
   '/index.html',
   '/manifest.json',
   '/favicon.webp',
-  '/logo.webp',
+  '/logo-140.webp',
   '/robots.txt',
   '/sitemap.xml',
 ];

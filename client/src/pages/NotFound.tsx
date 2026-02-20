@@ -19,7 +19,7 @@ export default function NotFound() {
             <div className="flex items-center gap-3">
               <img
                 src="/logo-224.webp?v=3"
-              srcSet="/logo-224.webp?v=3 224w, /logo.webp?v=3 448w"
+              srcSet="/logo-224.webp?v=3 224w, /logo-140.webp?v=3 448w"
               sizes="(max-width: 640px) 160px, 224px"
                 alt="ETLAQ"
                 className="h-10 w-auto"

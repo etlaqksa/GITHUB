@@ -70,7 +70,7 @@ function buildArticleSchema(params: { title: string; description: string; url: s
     '@type': 'Organization',
     name: 'شركة إطلاق المتميزة المحدودة (ETLAQ)',
     url: absUrl('/'),
-    logo: absUrl('/logo.webp'),
+    logo: absUrl('/logo-140.webp'),
   };
 
   return {
@@ -203,14 +203,14 @@ export default function BlogPost() {
     const graph: any[] = [];
 
     // Organization (minimal, consistent)
-    const localBusinessSchema = buildLocalBusinessSchema({ url: absUrl('/'), logoUrl: absUrl('/logo.webp') });
+    const localBusinessSchema = buildLocalBusinessSchema({ url: absUrl('/'), logoUrl: absUrl('/logo-140.webp') });
     graph.push(localBusinessSchema);
 
     graph.push({
       '@type': 'Organization',
       name: 'شركة إطلاق المتميزة المحدودة (ETLAQ)',
       url: absUrl('/'),
-      logo: absUrl('/logo.webp'),
+      logo: absUrl('/logo-140.webp'),
     });
 
     graph.push({
