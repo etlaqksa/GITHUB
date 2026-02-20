@@ -1193,12 +1193,18 @@ img {
 
 
 @layer base {
-  h1 { @apply text-4xl md:text-5xl font-extrabold tracking-tight; }
-  h2 { @apply text-2xl md:text-3xl font-bold tracking-tight; }
-  h3 { @apply text-xl md:text-2xl font-bold; }
-  body { @apply text-base md:text-[15px] leading-relaxed; }
-}
+  h1 { @apply text-4xl font-extrabold tracking-tight; }
+  h2 { @apply text-2xl font-bold tracking-tight; }
+  h3 { @apply text-xl font-bold; }
+  body { @apply text-base leading-relaxed; }
 
+  @screen md {
+    h1 { @apply text-5xl; }
+    h2 { @apply text-3xl; }
+    h3 { @apply text-2xl; }
+    body { @apply text-[15px]; }
+  }
+}
 /* Adjusting font size for tabs and making them more dynamic */
 .tabs a {
     font-size: 1.2rem; /* Increase font size */
