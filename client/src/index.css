@@ -286,7 +286,6 @@ html[data-theme='red'] {
   h3 { font-size: var(--text-2xl); }
   body { font-size: 15px; }
 }
-}
 /* Adjusting font size for tabs and making them more dynamic */
 .tabs a {
     font-size: 1.2rem; /* Increase font size */
