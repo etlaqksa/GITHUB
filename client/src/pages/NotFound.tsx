@@ -17,15 +17,7 @@ export default function NotFound() {
         <CardContent className="p-6 sm:p-10">
           <div className="flex items-center justify-between gap-4 mb-6">
             <div className="flex items-center gap-3">
-              <img
-                src="/logo-224.webp?v=3"
-              srcSet="/logo-224.webp?v=3 224w, /logo-140.webp?v=3 448w"
-              sizes="(max-width: 640px) 160px, 224px"
-                alt="ETLAQ"
-                className="h-10 w-auto"
-                loading="eager"
-                decoding="async"
-              />
+              <img src="/logo-140.webp?v=5" srcSet="/logo-140.webp?v=5 140w, /logo-280.webp?v=5 280w" sizes="140px" width="140" height="70" alt="ETLAQ" className="h-10 w-auto" loading="eager" decoding="async" />
               <div className="leading-tight">
                 <div className="text-sm font-semibold text-foreground">
                   {isAr ? "شركة إطلاق المتميزة" : "ETLAQ Distinguished Company"}

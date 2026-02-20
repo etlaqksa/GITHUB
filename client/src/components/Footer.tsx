@@ -52,16 +52,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <img 
-              src="/logo-224.webp?v=3" 
-              alt="شركة إطلاق المتميزة" 
-              
-             
-             
-              className="h-16 w-auto object-contain brightness-0 invert"
-              loading="lazy"
-              decoding="async"
-            />
+            <img src="/logo-140.webp?v=5" srcSet="/logo-140.webp?v=5 140w, /logo-280.webp?v=5 280w" sizes="140px" width="140" height="70" alt="شركة إطلاق المتميزة" className="h-16 w-auto object-contain brightness-0 invert" loading="lazy" decoding="async" />
             <p className="text-sm opacity-90">
               {language === 'ar'
                 ? 'رواد حلول حقن التربة ومعالجة التكهفات في المملكة العربية السعودية منذ أكثر من 15 عاماً'
