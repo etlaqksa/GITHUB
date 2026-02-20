@@ -1798,12 +1798,10 @@ html { scrollbar-gutter: stable; }
 
 /* --- Client logos rail (infinite marquee) --- */
 @keyframes etlaqLogoMarquee {
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
+  0% { transform: translate3d(0, 0, 0); }
   100% {
-    /* Shift by a measured pixel distance to avoid blank gaps on wide screens. */
-    transform: translate3d(calc(-1 * var(--etlaq-rail-shift, 50%)), 0, 0);
+    /* Two-segment seamless marquee: shift by one segment width + half the inter-segment gap */
+    transform: translate3d(calc(-50% - (var(--etlaq-rail-gap, 12px) / 2)), 0, 0);
   }
 }
 
