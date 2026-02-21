@@ -28,26 +28,6 @@ export default defineConfig({
     outDir: '../dist',
     emptyOutDir: true,
     sourcemap: false,
-    rollupOptions: {
-      output: {
-        // Reduce the number of tiny shared chunks (e.g., lucide icon modules)
-        // which show up as long dependency chains in PSI/Lighthouse.
-        // We intentionally group frequently-shared deps into a few stable chunks.
-        manualChunks(id) {
-          if (!id.includes('node_modules')) return;
-
-          if (id.includes('lucide-react')) return 'icons';
-          if (id.includes('@radix-ui')) return 'radix';
-          if (id.includes('framer-motion')) return 'motion';
-          if (id.includes('wouter')) return 'router';
-          if (id.includes('@tanstack') || id.includes('@trpc')) return 'data';
-
-          return 'vendor';
-        },
-        // NOTE: We intentionally avoid experimental Rollup options here
-        // to keep Netlify builds stable.
-      },
-    },
   },
   server: {
     port: 5173,
