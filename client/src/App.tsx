@@ -120,7 +120,7 @@ function AppLayout() {
             <ScrollToTop />
       <SkipToContent />
       <Suspense fallback={null}>
-        <DeferredMount timeoutMs={600}>
+        <DeferredMount timeoutMs={1800}>
           <LazyUpdateAvailableBanner />
         </DeferredMount>
       </Suspense>
@@ -175,13 +175,13 @@ function AppLayout() {
       </main>
       <Footer />
       <Suspense fallback={null}>
-        <DeferredMount timeoutMs={1200}>
+        <DeferredMount timeoutMs={2800}>
           <LazyWhatsAppButton />
         </DeferredMount>
-        <DeferredMount timeoutMs={1400}>
+        <DeferredMount timeoutMs={3200}>
           <LazyStickyCTA />
         </DeferredMount>
-        <DeferredMount timeoutMs={1600}>
+        <DeferredMount timeoutMs={4200}>
           <LazySmartAssistantLauncher />
         </DeferredMount>
       </Suspense>
@@ -240,7 +240,7 @@ function App() {
             <Toaster />
             <AntiInspectGuard />
             <Suspense fallback={null}>
-              <DeferredMount timeoutMs={900}>
+              <DeferredMount timeoutMs={4000}>
                 <LazyAnalytics />
               </DeferredMount>
             </Suspense>

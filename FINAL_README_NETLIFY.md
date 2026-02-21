@@ -8,26 +8,23 @@
 1) ارفع المشروع على GitHub (كـ Repository).
 2) في Netlify → Add new site → Import from Git.
 3) Build command:
-   - `npm install && npm run build`
-   - *(أو `npm ci && npm run build` إذا كان package-lock متوافق 100% مع package.json)*
+   - `npm ci && npm run build`
 4) Publish directory:
-   - `dist`
+   - `client/dist`
 5) Environment variables (إن وجدت/مطلوبة):
    - **لا يلزم OAuth** للموقع الأساسي. إذا ظهر خطأ `[OAuth] OAUTH_SERVER_URL` أثناء `npm run dev` فهو متعلق بسيرفر محلي فقط. للنشر العام، لا يؤثر عادةً طالما لم تستخدم مسارات OAuth.
 6) تأكد من وجود الملف:
    - `client/public/_redirects` (SPA routing + /ar & /en)
-   - `client/public/_headers` (Security + Cache headers)
 7) بعد النشر: Site settings → Domain management → إضافة `etlaqksa.com` وتفعيل HTTPS.
 
 ---
 
 ## 2) النشر اليدوي (Manual Deploy)
 - قم ببناء المشروع محليًا:
-  1) `npm install`
-  *(أو `npm ci` إذا كان package-lock متوافق)*
+  1) `npm ci`
   2) `npm run build`
-- ارفع مجلد: `dist` بالكامل إلى Netlify (Deploys → Manual deploy)
-- **مهم جدًا:** تأكد أن `dist/_redirects` موجود داخل `dist` بعد البناء.
+- ارفع مجلد: `client/dist` بالكامل إلى Netlify (Deploys → Manual deploy)
+- **مهم جدًا:** تأكد أن `dist/_redirects` موجود داخل `client/dist` بعد البناء.
 
 ---
 

@@ -1,5 +1,5 @@
 /*
-  # Security Headers (production)
+  # Security Headers (balanced: strong defaults + avoids breaking SPA)
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
@@ -7,43 +7,34 @@
   Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()
   Cross-Origin-Opener-Policy: same-origin
   Cross-Origin-Resource-Policy: same-origin
-  # We embed Google Maps on /contact; COEP: require-corp breaks many third-party iframes.
   Cross-Origin-Embedder-Policy: unsafe-none
-
+  
   # Content Security Policy
   # - Allows Google Fonts stylesheets
-  # - Allows GA4 (googletagmanager)
-  # - Allows Microsoft Clarity
-  # - Allows Google Maps embed on the Contact page
-  Content-Security-Policy: default-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; object-src 'none'; frame-src 'self' https://www.google.com https://www.google.com/maps https://www.google.com/maps/embed https://maps.google.com https://www.openstreetmap.org; script-src 'self' https://www.googletagmanager.com https://www.clarity.ms https://*.clarity.ms; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; img-src 'self' data: https: https://www.clarity.ms https://c.clarity.ms https://*.clarity.ms; connect-src 'self' https: https://www.clarity.ms https://c.clarity.ms https://*.clarity.ms; font-src 'self' data: https://fonts.gstatic.com https://cdnjs.cloudflare.com; worker-src 'self'; manifest-src 'self'
-
-  X-Powered-By: Etlaq Tech
-
-  # HTML / SPA routes should be revalidated
-  Cache-Control: public, max-age=0, must-revalidate
+  # - Allows optional GA4 loader (googletagmanager)
+  # Allow Google Maps embed on the Contact page.
+  Content-Security-Policy: default-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; object-src 'none'; frame-src 'self' https://www.google.com https://www.google.com/maps https://www.google.com/maps/embed https://maps.google.com https://www.openstreetmap.org; script-src 'self' https://www.googletagmanager.com; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https:; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; worker-src 'self'; manifest-src 'self'
 
 # Cache static assets (fingerprinted by Vite)
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
-  Cross-Origin-Resource-Policy: cross-origin
 
-# Cache images aggressively
+# Cache images aggressively (safe: file names are stable)
 /gallery/*
   Cache-Control: public, max-age=31536000, immutable
-  Cross-Origin-Resource-Policy: cross-origin
 /images/*
   Cache-Control: public, max-age=31536000, immutable
-  Cross-Origin-Resource-Policy: cross-origin
 /article-images/*
   Cache-Control: public, max-age=31536000, immutable
-  Cross-Origin-Resource-Policy: cross-origin
-/og-share.*
+/og-articles/*
   Cache-Control: public, max-age=31536000, immutable
-  Cross-Origin-Resource-Policy: cross-origin
 
-# Ensure the Service Worker and manifest are always updated promptly
-/sw.js
-  Cache-Control: public, max-age=0, must-revalidate
+# Cache brand assets (stable file names)
+/logo*
+  Cache-Control: public, max-age=31536000, immutable
+/favicon*
+  Cache-Control: public, max-age=31536000, immutable
 
-/manifest.json
+# HTML / routes should be revalidated
+/*
   Cache-Control: public, max-age=0, must-revalidate

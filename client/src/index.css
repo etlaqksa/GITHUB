@@ -12,9 +12,9 @@
 
 
 
-/* Font gate: prevents large CLS from late font swaps on slow connections. */
-html.fonts-pending body { opacity: 0; }
-html.fonts-ready body { opacity: 1; transition: opacity 180ms ease-out; }
+/* NOTE: Removed "font gate" (hiding the whole page until fonts load).
+   It was improving CLS but severely hurting LCP (page stayed invisible on slow connections).
+   We rely on proper font loading + fallbacks instead. */
 
 @plugin "@tailwindcss/typography";
 

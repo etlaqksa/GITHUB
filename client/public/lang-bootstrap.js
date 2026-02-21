@@ -33,33 +33,8 @@
       // ignore
     }
   
-    // Font gate: avoid large CLS from late font swaps (especially on mobile throttling).
-    try {
-      if (!html.classList.contains('fonts-ready')) {
-        html.classList.add('fonts-pending');
-        var __fontsDone = false;
-        function __markFontsReady() {
-          if (__fontsDone) return;
-          __fontsDone = true;
-          html.classList.remove('fonts-pending');
-          html.classList.add('fonts-ready');
-        }
-        var __t = setTimeout(__markFontsReady, 4500);
-        if (document.fonts && document.fonts.ready) {
-          document.fonts.ready.then(function () {
-            clearTimeout(__t);
-            __markFontsReady();
-          }).catch(function () {});
-        } else {
-          setTimeout(function () {
-            clearTimeout(__t);
-            __markFontsReady();
-          }, 900);
-        }
-      }
-    } catch (e4) {
-      // ignore
-    }
+    // NOTE: "Font gate" was removed because it hides the entire page until fonts load,
+    // which hurts LCP on mobile throttling. We now rely on normal font loading behavior.
 
 
   } catch (e) {
