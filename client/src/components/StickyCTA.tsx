@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { PhoneCall, MessageCircle } from 'lucide-react';
+import { IconPhone, IconWhatsapp } from '@/components/icons/etlaq';
 import { useLocation } from 'wouter';
 import { trackEvent } from '@/lib/analytics';
 import LocalizedLink from '@/components/LocalizedLink';
@@ -40,7 +40,7 @@ export default function StickyCTA() {
                 })
               }
             >
-              <PhoneCall className="h-5 w-5" />
+              <IconPhone tone="mono" className="h-5 w-5" />
               {t('nav.request')}
             </Button>
           </LocalizedLink>
@@ -53,7 +53,7 @@ export default function StickyCTA() {
             data-ga-intent="request_service"
           >
             <Button className="w-full gap-2" size="lg" variant="secondary">
-              <MessageCircle className="h-5 w-5" />
+              <IconWhatsapp tone="mono" className="h-5 w-5" />
               {language === 'ar' ? 'واتساب' : 'WhatsApp'}
             </Button>
           </a>

@@ -1936,3 +1936,7 @@ html { scrollbar-gutter: stable; }
 .etlaq-logo-item:hover .etlaq-logo-img{transform: scale(1.06); filter: saturate(1.15) contrast(1.05); opacity:1;}
 @keyframes etlaq-logo-marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
 @media (prefers-reduced-motion: reduce){.etlaq-logo-rail__track{animation:none;}}
+
+
+/* Etlaq icon components */
+.etlaq-icon{display:inline-block;vertical-align:-0.125em;flex-shrink:0;}

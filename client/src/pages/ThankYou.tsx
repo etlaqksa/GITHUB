@@ -2,7 +2,8 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { SEO } from '@/components/SEO';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { CheckCircle2, MessageCircle, Home as HomeIcon } from 'lucide-react';
+import {CheckCircle2, Home as HomeIcon} from 'lucide-react';
+import { IconWhatsapp } from '@/components/icons/etlaq';
 import { useLocation } from 'wouter';
 import LocalizedLink from '@/components/LocalizedLink';
 
@@ -68,7 +69,7 @@ Page: ${pageUrl}`;
               <div className="flex flex-col sm:flex-row gap-3">
                 <Button asChild className="w-full sm:w-auto">
                   <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2">
-                    <MessageCircle className="h-4 w-4" />
+                    <IconWhatsapp className="h-4 w-4" />
                     {copy.ctaWhatsApp}
                   </a>
                 </Button>

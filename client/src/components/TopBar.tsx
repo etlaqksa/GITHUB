@@ -1,4 +1,4 @@
-import { Mail, Phone } from 'lucide-react';
+import { IconEmail, IconPhone } from '@/components/icons/etlaq';
 import { SocialIcon } from '@/components/SocialIcons';
 
 import { COMPANY_INFO } from '@/config/company';
@@ -45,7 +45,7 @@ export default function TopBar() {
               className="inline-flex items-center gap-2 rounded-full px-2 py-1 text-white no-underline hover:bg-white/10 transition"
               aria-label={isAr ? 'اتصال' : 'Call'}
             >
-              <Phone className="h-4 w-4 opacity-90" />
+              <IconPhone tone="mono" className="h-4 w-4 opacity-90" />
               <span dir="ltr" className="font-semibold tracking-tight whitespace-nowrap">
                 {COMPANY_INFO.phoneDisplay}
               </span>
@@ -56,7 +56,7 @@ export default function TopBar() {
               className="inline-flex items-center gap-2 rounded-full px-2 py-1 text-white no-underline hover:bg-white/10 transition"
               aria-label={isAr ? 'البريد الإلكتروني' : 'Email'}
             >
-              <Mail className="h-4 w-4 opacity-90" />
+              <IconEmail tone="mono" className="h-4 w-4 opacity-90" />
               <span className="hidden sm:inline font-semibold tracking-tight">{COMPANY_INFO.email}</span>
               <span className="sm:hidden font-semibold tracking-tight">{isAr ? 'بريد' : 'Email'}</span>
             </a>

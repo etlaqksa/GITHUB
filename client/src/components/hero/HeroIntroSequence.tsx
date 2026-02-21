@@ -6,7 +6,8 @@ import TrustStats from '@/components/TrustStats';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { usePrefersReducedMotion } from '@/components/hero/usePrefersReducedMotion';
-import { ArrowLeft, Drill, MessageCircle, Radar, ShieldCheck, Sparkles } from 'lucide-react';
+import { ArrowLeft, Sparkles } from 'lucide-react';
+import { IconGprRadar, IconShieldCheck, IconSoilGrouting, IconWhatsapp } from '@/components/icons/etlaq';
 
 type HeroVariant = 'gradient' | 'blobs' | 'grid' | 'light';
 type Tone = 'dark' | 'light';
@@ -157,14 +158,14 @@ function ServiceTiles({ variant, tone }: { variant: 'ar' | 'en'; tone: Tone }) {
   const tiles =
     variant === 'ar'
       ? [
-          { icon: Drill, label: 'حقن تربة', href: '/services/grouting' },
-          { icon: Radar, label: 'كشف تكهفات', href: '/services/cavity' },
-          { icon: ShieldCheck, label: 'جيوفيزياء GPR/ERT/MASW', href: '/services/geophysical' },
+          { icon: IconSoilGrouting, label: 'حقن تربة', href: '/services/grouting' },
+          { icon: IconGprRadar, label: 'كشف تكهفات', href: '/services/cavity' },
+          { icon: IconShieldCheck, label: 'جيوفيزياء GPR/ERT/MASW', href: '/services/geophysical' },
         ]
       : [
-          { icon: Drill, label: 'Soil Grouting', href: '/services/grouting' },
-          { icon: Radar, label: 'Cavity Probing', href: '/services/cavity' },
-          { icon: ShieldCheck, label: 'Geophysics GPR/ERT/MASW', href: '/services/geophysical' },
+          { icon: IconSoilGrouting, label: 'Soil Grouting', href: '/services/grouting' },
+          { icon: IconGprRadar, label: 'Cavity Probing', href: '/services/cavity' },
+          { icon: IconShieldCheck, label: 'Geophysics GPR/ERT/MASW', href: '/services/geophysical' },
         ];
 
   const tileShell =
@@ -514,7 +515,7 @@ export default function HeroIntroSequence({
             className="w-full sm:w-auto bg-green-600 hover:bg-green-700 text-white font-semibold shadow-[0_12px_32px_rgba(0,0,0,0.25)] gap-2"
             onClick={onWhatsappClick}
           >
-            <MessageCircle className="h-4 w-4" />
+            <IconWhatsapp tone="mono" className="h-4 w-4" />
             {variant === 'ar' ? 'تواصل واتساب' : 'WhatsApp'}
           </Button>
         </a>

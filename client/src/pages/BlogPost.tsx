@@ -6,7 +6,8 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import type { ArticleContent } from '@/data/articles';
 import { loadArticles } from '@/data/articlesLoader';
 import { SEO } from '@/components/SEO';
-import { Calendar, Clock, User, ArrowLeft, ArrowRight } from 'lucide-react';
+import { User, ArrowLeft, ArrowRight } from 'lucide-react';
+import { IconCalendar, IconClock } from '@/components/icons/etlaq';
 
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -493,12 +494,12 @@ export default function BlogPost() {
             </div>
             {article.date ? (
               <div className="flex items-center gap-1">
-                <Calendar className="h-4 w-4" />
+                <IconCalendar className="h-4 w-4" />
                 <span>{article.date}</span>
               </div>
             ) : null}
             <div className="flex items-center gap-1">
-              <Clock className="h-4 w-4" />
+              <IconClock className="h-4 w-4" />
               <span>{readTime}</span>
             </div>
           </div>

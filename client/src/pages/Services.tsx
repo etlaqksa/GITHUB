@@ -17,7 +17,8 @@ import { buildBreadcrumbList } from '@/lib/schemaHelpers';
 import { trackEvent } from '@/lib/analytics';
 import { absUrl } from '@/lib/siteUrl';
 import { cities } from '@/data/seoLocations';
-import { ArrowRight, CheckCircle2, ClipboardList, Drill, MapPin, MessageCircle, PhoneCall, Radar, ShieldCheck, Timer } from 'lucide-react';
+import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import { IconChecklist, IconClock, IconGprRadar, IconLocation, IconPhone, IconShieldCheck, IconSoilGrouting, IconWhatsapp } from '@/components/icons/etlaq';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import { useState } from 'react';
 
@@ -41,7 +42,7 @@ export default function Services() {
   const services = [
     {
       key: 'grouting',
-      icon: Drill,
+      icon: IconSoilGrouting,
       title: lang === 'ar' ? 'حقن التربة (Cement Grouting)' : 'Soil grouting (cement grouting)',
       href: '/services/grouting',
       short:
@@ -63,7 +64,7 @@ export default function Services() {
     },
     {
       key: 'cavity',
-      icon: Radar,
+      icon: IconGprRadar,
       title: lang === 'ar' ? 'كشف التكهفات والفراغات' : 'Cavity / void detection',
       href: '/services/cavity',
       short:
@@ -85,7 +86,7 @@ export default function Services() {
     },
     {
       key: 'geophysical',
-      icon: ShieldCheck,
+      icon: IconShieldCheck,
       title: lang === 'ar' ? 'الدراسات والاختبارات الجيوفيزيائية' : 'Geophysical surveys',
       href: '/services/geophysical',
       short:
@@ -121,7 +122,7 @@ export default function Services() {
       href: '/request-service?service=grouting',
     },
     {
-      icon: Radar,
+      icon: IconGprRadar,
       title: lang === 'ar' ? 'اشتباه تكهفات بالموقع' : 'Suspected cavities on site',
       desc:
         lang === 'ar'
@@ -130,7 +131,7 @@ export default function Services() {
       href: '/request-service?service=cavity',
     },
     {
-      icon: ClipboardList,
+      icon: IconChecklist,
       title: lang === 'ar' ? 'قبل تنفيذ/للحسم' : 'Before execution / for certainty',
       desc:
         lang === 'ar'
@@ -142,7 +143,7 @@ export default function Services() {
 
   const workflow = [
     {
-      icon: ClipboardList,
+      icon: IconChecklist,
       title: lang === 'ar' ? 'مراجعة سريعة للمعلومات' : 'Quick information review',
       desc:
         lang === 'ar'
@@ -150,7 +151,7 @@ export default function Services() {
           : 'We collect case details (location, symptoms, drawings/reports if available) to pick the right route.',
     },
     {
-      icon: Radar,
+      icon: IconGprRadar,
       title: lang === 'ar' ? 'تشخيص مناسب للحالة' : 'Fit-for-case diagnosis',
       desc:
         lang === 'ar'
@@ -158,7 +159,7 @@ export default function Services() {
           : 'Work may start with detection/surveys to define scope before remediation.',
     },
     {
-      icon: Drill,
+      icon: IconSoilGrouting,
       title: lang === 'ar' ? 'تنفيذ مرحلي وتحكم بالجودة' : 'Phased execution & QC',
       desc:
         lang === 'ar'
@@ -166,7 +167,7 @@ export default function Services() {
           : 'Execute remediation in stages for better control and lower disruption.',
     },
     {
-      icon: Timer,
+      icon: IconClock,
       title: lang === 'ar' ? 'تقرير مخرجات وخطوة تالية' : 'Deliverables & next step',
       desc:
         lang === 'ar'
@@ -442,7 +443,7 @@ export default function Services() {
                                 onClick={() => trackEvent('services_tab_request', { language: lang, service: activeServiceData.key })}
                               >
                                 {lang === 'ar' ? 'اطلب الخدمة' : 'Request this service'}
-                                <PhoneCall className="h-4 w-4" />
+                                <IconPhone className="h-4 w-4" />
                               </Button>
                             </LocalizedLink>
                             <LocalizedLink href="/contact">
@@ -453,7 +454,7 @@ export default function Services() {
                                 onClick={() => trackEvent('services_tab_contact', { language: lang, service: activeServiceData.key })}
                               >
                                 {lang === 'ar' ? 'استشارة سريعة' : 'Quick consult'}
-                                <MessageCircle className="h-4 w-4" />
+                                <IconWhatsapp className="h-4 w-4" />
                               </Button>
                             </LocalizedLink>
                           </div>
@@ -564,7 +565,7 @@ export default function Services() {
                     onClick={() => trackEvent('services_city_click', { language: lang, city: c.slug })}
                   >
                     <span className="inline-flex items-center gap-2">
-                      <MapPin className="h-4 w-4 text-primary" />
+                      <IconLocation className="h-4 w-4 text-primary" />
                       <span>{lang === 'ar' ? c.ar : c.en}</span>
                     </span>
                   </LocalizedLink>
@@ -632,7 +633,7 @@ export default function Services() {
 
 function AlertIcon(props: React.SVGProps<SVGSVGElement>) {
   // A lightweight alert icon built from lucide primitives would require importing another icon.
-  // We use the existing ShieldCheck/ClipboardList/Radar elsewhere; this avoids adding a new import here.
+  // We use the existing IconShieldCheck/IconChecklist/IconGprRadar elsewhere; this avoids adding a new import here.
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
       <path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />

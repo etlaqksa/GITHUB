@@ -7,7 +7,8 @@ import {
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { HelpCircle, MessageCircle, Phone } from 'lucide-react';
+import {HelpCircle, Phone} from 'lucide-react';
+import { IconWhatsapp } from '@/components/icons/etlaq';
 import LocalizedLink from '@/components/LocalizedLink';
 
 export default function FAQ() {
@@ -232,7 +233,7 @@ export default function FAQ() {
             <Card className="text-center hover:shadow-lg transition-shadow">
               <CardContent className="p-6 space-y-4">
                 <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mx-auto">
-                  <MessageCircle className="h-8 w-8 text-accent" />
+                  <IconWhatsapp className="h-8 w-8 text-accent" />
                 </div>
                 <h3 className="text-xl font-semibold">WhatsApp</h3>
                 <p className="text-muted-foreground">

@@ -7,19 +7,18 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { useLanguage } from '@/contexts/LanguageContext';
 import { trackEvent } from '@/lib/analytics';
 import { cities } from '@/data/seoLocations';
+import { AlertTriangle, CheckCircle2, Sparkles } from 'lucide-react';
 import {
-  AlertTriangle,
-  Building2,
-  CheckCircle2,
-  ClipboardList,
-  Drill,
-  HardHat,
-  MapPin,
-  Radar,
-  ShieldCheck,
-  Sparkles,
-  Timer,
-} from 'lucide-react';
+  IconBuilding,
+  IconChecklist,
+  IconClock,
+  IconGprRadar,
+  IconHardHat,
+  IconLocation,
+  IconPump,
+  IconShieldCheck,
+  IconSoilGrouting,
+} from '@/components/icons/etlaq';
 
 // Load FAQ accordion only when it is near the viewport.
 // This removes Radix accordion logic from the initial render, which PSI often flags as forced reflow.
@@ -76,7 +75,7 @@ export default function HomeBelowFold() {
 
   const services = [
     {
-      icon: Drill,
+      icon: IconSoilGrouting,
       key: 'grouting' as const,
       title: language === 'ar' ? 'حقن التربة' : 'Soil Grouting',
       desc:
@@ -90,7 +89,7 @@ export default function HomeBelowFold() {
       href: '/services/grouting',
     },
     {
-      icon: Radar,
+      icon: IconGprRadar,
       key: 'cavity' as const,
       title: language === 'ar' ? 'كشف التكهفات' : 'Cavity Detection',
       desc:
@@ -104,7 +103,7 @@ export default function HomeBelowFold() {
       href: '/services/cavity',
     },
     {
-      icon: ShieldCheck,
+      icon: IconPump,
       key: 'geophysical' as const,
       title: language === 'ar' ? 'الدراسات الجيوفيزيائية' : 'Geophysical Surveys',
       desc:
@@ -130,7 +129,7 @@ export default function HomeBelowFold() {
       href: '/request-service?service=grouting',
     },
     {
-      icon: Radar,
+      icon: IconGprRadar,
       title: language === 'ar' ? 'اشتباه تكهفات' : 'Suspected cavities',
       desc:
         language === 'ar'
@@ -139,7 +138,7 @@ export default function HomeBelowFold() {
       href: '/request-service?service=cavity',
     },
     {
-      icon: HardHat,
+      icon: IconHardHat,
       title: language === 'ar' ? 'قبل تنفيذ أعمال حساسة' : 'Before critical works',
       desc:
         language === 'ar'
@@ -148,7 +147,7 @@ export default function HomeBelowFold() {
       href: '/request-service?service=geophysical',
     },
     {
-      icon: MapPin,
+      icon: IconLocation,
       title: language === 'ar' ? 'مشكلة داخل مبنى قائم' : 'Inside an existing building',
       desc:
         language === 'ar'
@@ -160,7 +159,7 @@ export default function HomeBelowFold() {
 
   const approach = [
     {
-      icon: ClipboardList,
+      icon: IconChecklist,
       title: language === 'ar' ? 'تقييم سريع وتحديد نطاق' : 'Fast assessment & scope',
       desc:
         language === 'ar'
@@ -168,7 +167,7 @@ export default function HomeBelowFold() {
           : 'We collect available inputs and define a realistic scope—no exaggeration, no underestimation.',
     },
     {
-      icon: Radar,
+      icon: IconGprRadar,
       title: language === 'ar' ? 'تشخيص قابل للتنفيذ' : 'Actionable diagnosis',
       desc:
         language === 'ar'
@@ -176,7 +175,7 @@ export default function HomeBelowFold() {
           : 'When the cause is unclear, we start with detection/surveys then decide the remediation route.',
     },
     {
-      icon: Drill,
+      icon: IconSoilGrouting,
       title: language === 'ar' ? 'تنفيذ مرحلي مع مراقبة' : 'Phased execution + monitoring',
       desc:
         language === 'ar'
@@ -184,7 +183,7 @@ export default function HomeBelowFold() {
           : 'Structured staged execution to reduce risk and improve quality control.',
     },
     {
-      icon: Timer,
+      icon: IconClock,
       title: language === 'ar' ? 'مخرجات وتوصيات واضحة' : 'Clear deliverables',
       desc:
         language === 'ar'
@@ -195,7 +194,7 @@ export default function HomeBelowFold() {
 
   const valuePillars = [
     {
-      icon: ShieldCheck,
+      icon: IconShieldCheck,
       title: language === 'ar' ? 'سلامة وجودة' : 'Safety & quality',
       desc:
         language === 'ar'
@@ -211,7 +210,7 @@ export default function HomeBelowFold() {
           : 'Fit-for-case tools instead of one-size-fits-all solutions.',
     },
     {
-      icon: Building2,
+      icon: IconBuilding,
       title: language === 'ar' ? 'خبرة ميدانية' : 'Field experience',
       desc:
         language === 'ar'
