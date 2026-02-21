@@ -9,11 +9,21 @@ function logoSrc(fileName: string) {
 }
 
 function getLogoHref(fileName: string, fallbackClientArName: string) {
-  const proj = projects.find((p) => p.clientLogo === fileName);
-  if (!proj) return `/projects`;
-  const clientAr = proj.client?.ar || fallbackClientArName;
-  return `/projects?client=${encodeURIComponent(clientAr)}`;
+  // Projects are keyed by client name (Arabic) rather than logo filename.
+  // If this logo belongs to at least one project, deep-link with the `client` query param.
+  const wanted = (fallbackClientArName || '').trim();
+  if (!wanted) return `/projects`;
+
+  const hasProject = projects.some((p) => {
+    const ar = p.client?.ar || '';
+    const parts = ar.split('/').map((x) => x.trim()).filter(Boolean);
+    return parts.includes(wanted) || ar.includes(wanted);
+  });
+
+  if (!hasProject) return `/projects`;
+  return `/projects?client=${encodeURIComponent(wanted)}`;
 }
+
 
 export default function ClientLogosWall() {
   const { language } = useLanguage();
