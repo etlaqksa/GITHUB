@@ -26,6 +26,24 @@ export default function Services() {
   const { language } = useLanguage();
   const lang = language === 'en' ? 'en' : 'ar';
 
+  const requestLabel = (serviceKey: string) => {
+    if (lang === 'ar') {
+      const map: Record<string, string> = {
+        grouting: 'اطلب حقن تربة',
+        cavity: 'اطلب كشف تكهفات',
+        geophysical: 'اطلب اختبار جيوفيزيائي',
+      };
+      return map[serviceKey] ?? 'اطلب الخدمة';
+    }
+
+    const mapEn: Record<string, string> = {
+      grouting: 'Request soil injection',
+      cavity: 'Request cavity detection',
+      geophysical: 'Request geophysical test',
+    };
+    return mapEn[serviceKey] ?? 'Request this service';
+  };
+
   const canonical = absUrl(`/${lang}/services`);
 
   const [activeService, setActiveService] = useState<'grouting' | 'cavity' | 'geophysical'>('grouting');
@@ -442,7 +460,7 @@ export default function Services() {
                                 className="gap-2 font-extrabold shadow-hover-glow rounded-xl"
                                 onClick={() => trackEvent('services_tab_request', { language: lang, service: activeServiceData.key })}
                               >
-                                {lang === 'ar' ? 'اطلب الخدمة' : 'Request this service'}
+                                {requestLabel(activeServiceData.key)}
                                 <IconPhone className="h-4 w-4" />
                               </Button>
                             </LocalizedLink>

@@ -73,6 +73,24 @@ const PILLAR_ACCENTS = ['16 185 129', '37 99 235', '245 158 11', '168 85 247'];
 export default function HomeBelowFold() {
   const { language } = useLanguage();
 
+  const requestLabel = (serviceKey: string) => {
+    if (language === 'ar') {
+      const map: Record<string, string> = {
+        grouting: 'اطلب حقن تربة',
+        cavity: 'اطلب كشف تكهفات',
+        geophysical: 'اطلب اختبار جيوفيزيائي',
+      };
+      return map[serviceKey] ?? 'اطلب خدمة';
+    }
+
+    const mapEn: Record<string, string> = {
+      grouting: 'Request soil injection',
+      cavity: 'Request cavity detection',
+      geophysical: 'Request geophysical test',
+    };
+    return mapEn[serviceKey] ?? 'Request service';
+  };
+
   const services = [
     {
       icon: IconSoilGrouting,
@@ -343,7 +361,7 @@ export default function HomeBelowFold() {
                         className="w-full"
                         onClick={() => trackEvent('home_service_request', { language, service: s.key })}
                       >
-                        {language === 'ar' ? 'اطلب الخدمة' : 'Request service'}
+                        {requestLabel(s.key)}
                       </Button>
                     </LocalizedLink>
                   </div>
