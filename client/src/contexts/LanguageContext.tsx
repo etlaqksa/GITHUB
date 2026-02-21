@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, useLayoutEffect, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useState, useLayoutEffect, ReactNode } from 'react';
 import { getLangFromPathname } from '@/lib/localizePath';
 
 type Language = 'ar' | 'en';
@@ -38,50 +38,6 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
   useLayoutEffect(() => {
     document.documentElement.setAttribute('lang', language);
     document.documentElement.setAttribute('dir', language === 'ar' ? 'rtl' : 'ltr');
-  }, [language]);
-
-  // Load language-specific fonts on demand to reduce the critical network chain.
-  // - Arabic is the default experience: only load IBM Plex (400/700) in the main CSS.
-  // - English loads Inter only when needed.
-  // - Arabic 600 weight is deferred until idle to keep initial load lean.
-  useEffect(() => {
-    let cancelled = false;
-
-    if (language === 'en') {
-      // Vite will code-split CSS imports and cache them.
-      import('@/styles/fonts-en.css').catch(() => void 0);
-      return;
-    }
-
-    // Arabic: load the extra 600 weight after first paint / idle.
-    const loadExtra = () => {
-      if (cancelled) return;
-      import('@/styles/fonts-ar-extra.css').catch(() => void 0);
-    };
-
-    try {
-      if ('requestIdleCallback' in window) {
-        // @ts-ignore
-        const id = window.requestIdleCallback(loadExtra, { timeout: 2500 });
-        return () => {
-          cancelled = true;
-          try {
-            // @ts-ignore
-            window.cancelIdleCallback?.(id);
-          } catch {
-            // ignore
-          }
-        };
-      }
-    } catch {
-      // ignore
-    }
-
-    const t = window.setTimeout(loadExtra, 2200);
-    return () => {
-      cancelled = true;
-      window.clearTimeout(t);
-    };
   }, [language]);
 
   // Keep language state in sync if user navigates directly to /ar or /en

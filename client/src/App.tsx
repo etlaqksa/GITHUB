@@ -1,3 +1,5 @@
+import { Toaster } from "@/components/ui/sonner";
+import { TooltipProvider } from "@/components/ui/tooltip";
 import { Route, Switch, Router as WouterRouter } from "wouter";
 import { Suspense, lazy, useEffect, useMemo, useState, type ReactNode } from "react";
 import ErrorBoundary from "./components/ErrorBoundary";
@@ -53,7 +55,6 @@ const LazyStickyCTA = lazy(() => import("./components/StickyCTA"));
 const LazySmartAssistantLauncher = lazy(() => import("./components/SmartAssistantLauncher"));
 const LazyAnalytics = lazy(() => import("./components/Analytics"));
 const LazyUpdateAvailableBanner = lazy(() => import("./components/UpdateAvailableBanner"));
-const LazyToaster = lazy(() => import("./components/LazyToaster"));
 
 function DeferredMount({
   children,
@@ -100,58 +101,6 @@ function DeferredMount({
   return show ? <>{children}</> : null;
 }
 
-function InteractionMount({
-  children,
-  fallbackMs = 8000,
-}: {
-  children: ReactNode;
-  fallbackMs?: number;
-}) {
-  const [show, setShow] = useState(false);
-
-  useEffect(() => {
-    if (show) return;
-    let cancelled = false;
-
-    const reveal = () => {
-      if (cancelled) return;
-      setShow(true);
-      cleanup();
-    };
-
-    const onInteract = () => reveal();
-
-    const cleanup = () => {
-      try {
-        window.removeEventListener('pointerdown', onInteract);
-        window.removeEventListener('keydown', onInteract);
-        window.removeEventListener('scroll', onInteract);
-        window.removeEventListener('touchstart', onInteract);
-      } catch {
-        // ignore
-      }
-    };
-
-    try {
-      window.addEventListener('pointerdown', onInteract, { once: true, passive: true } as any);
-      window.addEventListener('keydown', onInteract, { once: true } as any);
-      window.addEventListener('scroll', onInteract, { once: true, passive: true } as any);
-      window.addEventListener('touchstart', onInteract, { once: true, passive: true } as any);
-    } catch {
-      // ignore
-    }
-
-    const t = window.setTimeout(reveal, fallbackMs);
-    return () => {
-      cancelled = true;
-      window.clearTimeout(t);
-      cleanup();
-    };
-  }, [fallbackMs, show]);
-
-  return show ? <>{children}</> : null;
-}
-
 function RouteLoader() {
   return (
     <div className="container mx-auto px-4 py-10">
@@ -165,21 +114,11 @@ function RouteLoader() {
   );
 }
 
-function AppLayout() {
+function RouteShellLoader() {
   return (
-    <div className="flex flex-col min-h-screen app-background etlaq-color-typography pb-24 md:pb-0">
-            <ScrollToTop />
-      <SkipToContent />
-      <Suspense fallback={null}>
-        <InteractionMount fallbackMs={9000}>
-          <LazyUpdateAvailableBanner />
-        </InteractionMount>
-      </Suspense>
-      <TopBar />
-      <Header />
-      <main id="main-content" className="flex-1">
-        <InternalLinkingProvider>
-          <Suspense fallback={<RouteLoader />}>
+          <Suspense fallback={<RouteShellLoader />}>
+        <main id="main-content" className="flex-1">
+          <InternalLinkingProvider>
             <Switch>
             <Route path="/about" component={About} />
             <Route path="/services/grouting" component={ServiceGrouting} />
@@ -221,20 +160,20 @@ function AppLayout() {
             <Route path="/" component={Home} />
             <Route component={NotFound} />
             </Switch>
-          </Suspense>
-        </InternalLinkingProvider>
-      </main>
-      <Footer />
+          </InternalLinkingProvider>
+        </main>
+        <Footer />
+      </Suspense>
       <Suspense fallback={null}>
-        <InteractionMount fallbackMs={9000}>
+        <DeferredMount timeoutMs={2800}>
           <LazyWhatsAppButton />
-        </InteractionMount>
-        <InteractionMount fallbackMs={9500}>
+        </DeferredMount>
+        <DeferredMount timeoutMs={3200}>
           <LazyStickyCTA />
-        </InteractionMount>
-        <InteractionMount fallbackMs={12000}>
+        </DeferredMount>
+        <DeferredMount timeoutMs={4200}>
           <LazySmartAssistantLauncher />
-        </InteractionMount>
+        </DeferredMount>
       </Suspense>
 
     </div>
@@ -287,20 +226,18 @@ function App() {
     <ErrorBoundary>
       <ThemeProvider defaultMode="light">
         <LanguageProvider>
-          <Suspense fallback={null}>
-            <DeferredMount timeoutMs={3200}>
-              <LazyToaster />
-            </DeferredMount>
-          </Suspense>
+          <TooltipProvider>
+            <Toaster />
             <AntiInspectGuard />
             <Suspense fallback={null}>
-              <InteractionMount fallbackMs={12000}>
+              <DeferredMount timeoutMs={4000}>
                 <LazyAnalytics />
-              </InteractionMount>
+              </DeferredMount>
             </Suspense>
             <WouterRouter base={base}>
               <AppLayout />
             </WouterRouter>
+          </TooltipProvider>
         </LanguageProvider>
       </ThemeProvider>
     </ErrorBoundary>
