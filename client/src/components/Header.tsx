@@ -89,8 +89,8 @@ export default function Header() {
         <LocalizedLink href="/">
           <div className="flex items-center space-x-2 rtl:space-x-reverse cursor-pointer hover:scale-105 transition-transform duration-300">
             <img 
-              src="/logo-224.webp?v=4"
-              srcSet="/logo-160.webp?v=4 160w, /logo-224.webp?v=4 224w, /logo-320.webp?v=4 320w, /logo.webp?v=4 448w"
+              src="/logo-160.webp?v=5"
+              srcSet="/logo-160.webp?v=5 160w, /logo-224.webp?v=5 224w, /logo-320.webp?v=5 320w, /logo.webp?v=5 448w"
               sizes="(max-width: 640px) 80px, 96px" 
               alt="شركة إطلاق المتميزة" 
               width="224"
@@ -100,6 +100,7 @@ export default function Header() {
              
               className="h-10 sm:h-12 w-auto object-contain hover-brightness"
               loading="eager"
+              fetchPriority="high"
               decoding="async"
             />
           </div>

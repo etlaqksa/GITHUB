@@ -53,8 +53,8 @@ export default function Footer() {
           {/* Company Info */}
           <div className="space-y-4">
             <img 
-              src="/logo-224.webp?v=3"
-              srcSet="/logo-224.webp?v=3 224w, /logo.webp?v=3 448w"
+              src="/logo-160.webp?v=5"
+              srcSet="/logo-160.webp?v=5 160w, /logo-224.webp?v=5 224w, /logo-320.webp?v=5 320w, /logo.webp?v=5 448w"
               sizes="(max-width: 640px) 160px, 224px" 
               alt="شركة إطلاق المتميزة" 
               width="224"

@@ -1,4 +1,4 @@
-import { Suspense, lazy, useEffect, useMemo, useState, type ReactNode } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 
 import { SEO } from '@/components/SEO';
 import HeroIntroSequence from '@/components/hero/HeroIntroSequence';
@@ -8,53 +8,8 @@ import { absUrl } from '@/lib/siteUrl';
 import { useUrlSearch } from '@/lib/useUrlSearch';
 import { useLocation } from 'wouter';
 
-// Move below-the-fold content into a separate chunk to improve LCP on mobile.
-const HomeBelowFold = lazy(() => import('./home/HomeBelowFold'));
+import HomeBelowFold from './home/HomeBelowFold';
 
-function DeferredMount({
-  children,
-  timeoutMs = 1400,
-}: {
-  children: ReactNode;
-  timeoutMs?: number;
-}) {
-  const [show, setShow] = useState(false);
-
-  useEffect(() => {
-    let cancelled = false;
-    const reveal = () => {
-      if (cancelled) return;
-      setShow(true);
-    };
-
-    const t = window.setTimeout(reveal, timeoutMs);
-
-    let idleId: any = null;
-    try {
-      if ('requestIdleCallback' in window) {
-        // @ts-ignore
-        idleId = window.requestIdleCallback(reveal, { timeout: timeoutMs });
-      }
-    } catch {
-      // ignore
-    }
-
-    return () => {
-      cancelled = true;
-      try {
-        if (idleId && 'cancelIdleCallback' in window) {
-          // @ts-ignore
-          window.cancelIdleCallback(idleId);
-        }
-      } catch {
-        // ignore
-      }
-      window.clearTimeout(t);
-    };
-  }, [timeoutMs]);
-
-  return show ? <>{children}</> : null;
-}
 
 export default function Home() {
   const { language } = useLanguage();
@@ -263,12 +218,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* BELOW THE FOLD (lazy) */}
-      <Suspense fallback={null}>
-        <DeferredMount timeoutMs={2400}>
-          <HomeBelowFold />
-        </DeferredMount>
-      </Suspense>
+      {/* BELOW THE FOLD */}
+      <HomeBelowFold />
     </>
   );
 }
