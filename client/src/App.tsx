@@ -114,56 +114,79 @@ function RouteLoader() {
   );
 }
 
-function RouteShellLoader() {
+function AppLayout() {
   return (
-          <Suspense fallback={<RouteShellLoader />}>
-        <main id="main-content" className="flex-1">
-          <InternalLinkingProvider>
-            <Switch>
-            <Route path="/about" component={About} />
-            <Route path="/services/grouting" component={ServiceGrouting} />
-            <Route path="/services/cavity" component={ServiceCavity} />
-            <Route path="/services/geophysical" component={ServiceGeophysical} />
-            <Route path="/projects/:slug" component={ProjectCaseStudy} />
-            <Route path="/projects" component={Projects} />
-            <Route path="/case-studies" component={CaseStudies} />
-            <Route path="/gallery" component={Gallery} />
-            <Route path="/blog/:slug" component={BlogPost} />
-            <Route path="/blog" component={Blog} />
-            <Route path="/faq" component={FAQ} />
-            <Route path="/contact" component={Contact} />
-            <Route path="/request-service" component={RequestService} />
-            <Route path="/thank-you" component={ThankYou} />
-            <Route path="/for/:audience" component={Audience} />
+    <div className="flex flex-col min-h-screen app-background etlaq-color-typography pb-24 md:pb-0">
+      <ScrollToTop />
+      <SkipToContent />
 
-            {/* HTML sitemap (helps crawl + internal linking) */}
-            <Route path="/sitemap" component={HtmlSitemap} />
-
-            <Route path="/terms" component={Terms} />
-            <Route path="/privacy" component={Privacy} />
-
-            {/* SEO: city/service landing pages */}
-            {/* IMPORTANT: place neighborhood hub BEFORE generic service route to avoid treating it as a service slug */}
-            <Route path="/locations/:citySlug/احياء" component={CityNeighborhoods} />
-            <Route path="/locations/:citySlug/neighborhoods" component={CityNeighborhoods} />
-            <Route path="/locations/:citySlug/:serviceSlug/:hoodSlug" component={CityServiceNeighborhoodLanding} />
-            <Route path="/locations/:citySlug/:serviceSlug" component={CityServiceLanding} />
-            <Route path="/locations/:citySlug" component={CityLanding} />
-            <Route path="/locations" component={Locations} />
-
-            <Route path="/services" component={Services} />
-
-            <Route path="/keywords" component={KeywordsAdmin} />
-            <Route path="/content-studio" component={ContentStudio} />
-
-            {/* IMPORTANT: keep Home last to avoid "/" greedily matching other routes */}
-            <Route path="/" component={Home} />
-            <Route component={NotFound} />
-            </Switch>
-          </InternalLinkingProvider>
-        </main>
-        <Footer />
+      {/* Non-blocking: update banner */}
+      <Suspense fallback={null}>
+        <DeferredMount timeoutMs={1800}>
+          <LazyUpdateAvailableBanner />
+        </DeferredMount>
       </Suspense>
+
+      <TopBar />
+      <Header />
+
+      {/*
+        IMPORTANT (CLS fix): keep Footer inside the SAME Suspense boundary as routes.
+        When a lazy route suspends, we show <RouteLoader/> instead of rendering Footer early
+        then pushing it down later (which PSI reports as a huge CLS).
+      */}
+      <Suspense fallback={<RouteLoader />}>
+        <>
+          <main id="main-content" className="flex-1">
+            <InternalLinkingProvider>
+              <Switch>
+                <Route path="/about" component={About} />
+                <Route path="/services/grouting" component={ServiceGrouting} />
+                <Route path="/services/cavity" component={ServiceCavity} />
+                <Route path="/services/geophysical" component={ServiceGeophysical} />
+                <Route path="/projects/:slug" component={ProjectCaseStudy} />
+                <Route path="/projects" component={Projects} />
+                <Route path="/case-studies" component={CaseStudies} />
+                <Route path="/gallery" component={Gallery} />
+                <Route path="/blog/:slug" component={BlogPost} />
+                <Route path="/blog" component={Blog} />
+                <Route path="/faq" component={FAQ} />
+                <Route path="/contact" component={Contact} />
+                <Route path="/request-service" component={RequestService} />
+                <Route path="/thank-you" component={ThankYou} />
+                <Route path="/for/:audience" component={Audience} />
+
+                {/* HTML sitemap (helps crawl + internal linking) */}
+                <Route path="/sitemap" component={HtmlSitemap} />
+
+                <Route path="/terms" component={Terms} />
+                <Route path="/privacy" component={Privacy} />
+
+                {/* SEO: city/service landing pages */}
+                {/* IMPORTANT: place neighborhood hub BEFORE generic service route to avoid treating it as a service slug */}
+                <Route path="/locations/:citySlug/احياء" component={CityNeighborhoods} />
+                <Route path="/locations/:citySlug/neighborhoods" component={CityNeighborhoods} />
+                <Route path="/locations/:citySlug/:serviceSlug/:hoodSlug" component={CityServiceNeighborhoodLanding} />
+                <Route path="/locations/:citySlug/:serviceSlug" component={CityServiceLanding} />
+                <Route path="/locations/:citySlug" component={CityLanding} />
+                <Route path="/locations" component={Locations} />
+
+                <Route path="/services" component={Services} />
+
+                <Route path="/keywords" component={KeywordsAdmin} />
+                <Route path="/content-studio" component={ContentStudio} />
+
+                {/* IMPORTANT: keep Home last to avoid "/" greedily matching other routes */}
+                <Route path="/" component={Home} />
+                <Route component={NotFound} />
+              </Switch>
+            </InternalLinkingProvider>
+          </main>
+          <Footer />
+        </>
+      </Suspense>
+
+      {/* Defer non-critical UI */}
       <Suspense fallback={null}>
         <DeferredMount timeoutMs={2800}>
           <LazyWhatsAppButton />
@@ -175,7 +198,6 @@ function RouteShellLoader() {
           <LazySmartAssistantLauncher />
         </DeferredMount>
       </Suspense>
-
     </div>
   );
 }
