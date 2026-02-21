@@ -157,6 +157,15 @@ export default function HomeBelowFold() {
     },
   ];
 
+  const quickPathCta = (href: string) => {
+    const isAr = language === 'ar';
+    if (href.includes('service=grouting')) return isAr ? 'اطلب الحقن' : 'Request grouting';
+    if (href.includes('service=cavity')) return isAr ? 'اطلب الكشف' : 'Request detection';
+    if (href.includes('service=geophysical')) return isAr ? 'اطلب اختبار' : 'Request testing';
+    return isAr ? 'اطلب خدمة' : 'Request service';
+  };
+
+
   const approach = [
     {
       icon: IconChecklist,
@@ -274,7 +283,7 @@ export default function HomeBelowFold() {
                       className="w-full rounded-full"
                       onClick={() => trackEvent('home_quickpath_click', { language, path: p.title })}
                     >
-                      {language === 'ar' ? 'ابدأ الآن' : 'Start'}
+                      {quickPathCta(p.href)}
                     </Button>
                   </LocalizedLink>
                 </CardContent>
