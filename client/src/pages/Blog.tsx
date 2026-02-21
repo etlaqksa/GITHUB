@@ -29,6 +29,31 @@ function stripArabic(text: string) {
   return text.replace(/[\u0600-\u06FF\u0750-\u077F\u08A0-\u08FF\uFB50-\uFDFF\uFE70-\uFEFF]/g, '').replace(/\s+/g, ' ').trim();
 }
 
+/**
+ * Normalize text for resilient search (Arabic + English).
+ * - Removes diacritics/tatweel
+ * - Normalizes common Arabic letter variants (أ/إ/آ → ا, ى → ي, ة → ه)
+ * - Strips punctuation and collapses whitespace
+ */
+function normalizeForSearch(text: string) {
+  return String(text || '')
+    .toLowerCase()
+    // Remove Arabic diacritics (tashkeel) and Qur'anic marks
+    .replace(/[\u064B-\u065F\u0670\u06D6-\u06ED]/g, '')
+    // Remove tatweel
+    .replace(/\u0640/g, '')
+    // Normalize common Arabic variants
+    .replace(/[أإآ]/g, 'ا')
+    .replace(/ى/g, 'ي')
+    .replace(/ة/g, 'ه')
+    // Reduce hamza forms (helps users who type without hamza)
+    .replace(/[ؤئء]/g, '')
+    // Remove punctuation/symbols (keep Arabic/Latin letters & numbers)
+    .replace(/[^a-z0-9\u0600-\u06FF\s]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 function estimateReadTime(content: string, lang: 'ar' | 'en') {
   const plain = stripMarkdown(content);
   const words = plain.split(/\s+/).filter(Boolean).length;
@@ -192,15 +217,25 @@ export default function Blog() {
   }, [language, allArticles]);
 
   const articles = useMemo(() => {
-    const q = searchQuery.trim().toLowerCase();
+    const q = normalizeForSearch(searchQuery);
     return allArticles
       .filter(a => {
         const cats = getCategories(a, language);
         const matchesCategory = selectedCategory === 'all' ? true : cats.includes(selectedCategory);
 
-        const title = language === 'ar' ? a.title : stripArabic(a.titleEn || '');
-        const content = language === 'ar' ? a.content : stripArabic(a.contentEn || '');
-        const hay = (title + ' ' + stripMarkdown(content)).toLowerCase();
+        // Search across both languages to make the search resilient.
+        // Display stays language-specific, but filtering uses a combined haystack.
+        const arTitle = a.title || '';
+        const arContent = a.content || '';
+        const enTitle = stripArabic(a.titleEn || '');
+        const enContent = stripArabic(a.contentEn || '');
+
+        const combined =
+          language === 'ar'
+            ? `${arTitle} ${stripMarkdown(arContent)} ${enTitle} ${stripMarkdown(enContent)}`
+            : `${enTitle} ${stripMarkdown(enContent)} ${arTitle} ${stripMarkdown(arContent)}`;
+
+        const hay = normalizeForSearch(combined);
         const matchesSearch = q ? hay.includes(q) : true;
 
         return matchesCategory && matchesSearch;
@@ -252,13 +287,16 @@ export default function Blog() {
 
         {/* Search */}
         <div className="max-w-xl mx-auto mb-6 relative">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+          <Search
+            className={`absolute ${language === 'ar' ? 'right-3' : 'left-3'} top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground pointer-events-none`}
+          />
           <input
             type="text"
             placeholder={language === 'ar' ? 'ابحث عن مقال...' : 'Search articles...'}
             value={searchQuery}
             onChange={e => setSearchQuery(e.target.value)}
-            className="w-full pl-10 pr-4 py-2 rounded-lg border bg-background"
+            dir={language === 'ar' ? 'rtl' : 'ltr'}
+            className={`w-full ${language === 'ar' ? 'pr-10 pl-4' : 'pl-10 pr-4'} py-2 rounded-lg border bg-background`}
           />
         </div>
 
