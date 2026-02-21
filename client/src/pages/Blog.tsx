@@ -260,7 +260,7 @@ export default function Blog() {
             placeholder={language === 'ar' ? 'ابحث عن مقال...' : 'Search articles...'}
             value={searchQuery}
             onChange={e => setSearchQuery(e.target.value)}
-            className={`w-full ${isAr ? "pr-10 pl-4" : "pl-10 pr-4"} py-2 rounded-lg border bg-background"
+            className={`w-full ${isAr ? "pr-10 pl-4" : "pl-10 pr-4"} py-2 rounded-lg border bg-background`}
           />
         </div>
 
