@@ -2,13 +2,16 @@
 @import "tw-animate-css";
 
 /* Local fonts (self-hosted via @fontsource) */
-@import "@fontsource/inter/400.css";
-@import "@fontsource/inter/600.css";
-@import "@fontsource/inter/700.css";
-
 @import "@fontsource/ibm-plex-sans-arabic/400.css";
 @import "@fontsource/ibm-plex-sans-arabic/600.css";
 @import "@fontsource/ibm-plex-sans-arabic/700.css";
+
+/*
+  PERFORMANCE NOTE
+  - Arabic (/ar) is the default experience.
+  - Loading Inter on every page forces extra WOFF2 downloads and lengthens the critical chain.
+  - Inter is loaded dynamically ONLY when the language is English (see LanguageContext).
+*/
 
 
 

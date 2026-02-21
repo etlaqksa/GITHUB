@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useLayoutEffect, ReactNode } from 'react';
+import React, { createContext, useContext, useEffect, useLayoutEffect, useState, ReactNode } from 'react';
 import { getLangFromPathname } from '@/lib/localizePath';
 
 type Language = 'ar' | 'en';
@@ -38,6 +38,16 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
   useLayoutEffect(() => {
     document.documentElement.setAttribute('lang', language);
     document.documentElement.setAttribute('dir', language === 'ar' ? 'rtl' : 'ltr');
+  }, [language]);
+
+  // Load English font files ONLY when needed.
+  // This avoids extra WOFF2 downloads for the default Arabic experience and reduces the critical chain.
+  useEffect(() => {
+    if (language !== 'en') return;
+    // Fire-and-forget: Vite will code-split these CSS imports.
+    void import('@fontsource/inter/400.css');
+    void import('@fontsource/inter/600.css');
+    void import('@fontsource/inter/700.css');
   }, [language]);
 
   // Keep language state in sync if user navigates directly to /ar or /en

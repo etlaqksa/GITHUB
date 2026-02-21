@@ -1,15 +1,9 @@
-import { useMemo, type CSSProperties } from 'react';
+import { Suspense, lazy, useEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode } from 'react';
 
 import LocalizedLink from '@/components/LocalizedLink';
 import ClientLogosWall from '@/components/ClientLogosWall';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from '@/components/ui/accordion';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { trackEvent } from '@/lib/analytics';
 import { cities } from '@/data/seoLocations';
@@ -26,6 +20,46 @@ import {
   Sparkles,
   Timer,
 } from 'lucide-react';
+
+// Load FAQ accordion only when it is near the viewport.
+// This removes Radix accordion logic from the initial render, which PSI often flags as forced reflow.
+const LazyHomeFaqSection = lazy(() => import('./HomeFaqSection'));
+
+function InViewMount({
+  children,
+  fallback,
+  rootMargin = '700px',
+}: {
+  children: ReactNode;
+  fallback: ReactNode;
+  rootMargin?: string;
+}) {
+  const ref = useRef<HTMLDivElement | null>(null);
+  const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    if (show) return;
+    const el = ref.current;
+    if (!el || typeof IntersectionObserver === 'undefined') {
+      setShow(true);
+      return;
+    }
+    const obs = new IntersectionObserver(
+      (entries) => {
+        const first = entries[0];
+        if (first?.isIntersecting) {
+          setShow(true);
+          obs.disconnect();
+        }
+      },
+      { rootMargin },
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, [show, rootMargin]);
+
+  return <div ref={ref}>{show ? children : fallback}</div>;
+}
 
 const accentStyle = (rgb: string): CSSProperties => ({ ['--accent-rgb' as any]: rgb });
 
@@ -203,48 +237,7 @@ export default function HomeBelowFold() {
     return picked.length ? picked : cities.slice(0, 8);
   }, []);
 
-  const faq = [
-    {
-      id: 'faq-1',
-      q: language === 'ar' ? 'هل أبدأ بحقن التربة أم بكشف التكهفات؟' : 'Should I start with grouting or cavity detection?',
-      a:
-        language === 'ar'
-          ? 'إذا كان السبب غير واضح أو يوجد اشتباه تكهفات/فراغات، نبدأ بالكشف أو الدراسة الجيوفيزيائية ثم نحدد المعالجة. إذا كانت المؤشرات واضحة لضعف/هبوط موضعي تحت الأساسات، قد نبدأ بخطة حقن مرحلية بعد التقييم.'
-          : 'If the root cause is unclear or voids are suspected, start with detection or geophysics, then decide remediation. If indicators point to localized weakness/settlement under foundations, a staged grouting plan may follow after assessment.',
-    },
-    {
-      id: 'faq-2',
-      q: language === 'ar' ? 'هل الحقن يوقف التشققات نهائياً؟' : 'Will grouting permanently stop cracks?',
-      a:
-        language === 'ar'
-          ? 'الحقن يعالج سبباً شائعاً (ضعف/فراغات/هبوط)، لكنه ليس حلًا سحريًا لكل التشققات. النتيجة تعتمد على السبب الحقيقي، ونوصي بخطوة التشخيص أولاً عند الشك.'
-          : 'Grouting addresses common causes (weak soil/voids/settlement), but it is not a universal cure for every crack. Results depend on the real cause—diagnosis first when uncertain.',
-    },
-    {
-      id: 'faq-3',
-      q: language === 'ar' ? 'ما المعلومات التي تساعدكم في التقييم؟' : 'What information helps your assessment?',
-      a:
-        language === 'ar'
-          ? 'موقع المشروع، صور للتشققات/الهبوط إن وُجدت، مخططات إنشائية أو تقرير تربة سابق (إن توفر)، وأي أعمال سابقة بالموقع (تسربات/حفريات/إضافات).'
-          : 'Project location, photos of cracks/settlement (if any), drawings or a prior soil report (if available), and any previous site events (leakage/excavation/changes).',
-    },
-    {
-      id: 'faq-4',
-      q: language === 'ar' ? 'كم تستغرق الأعمال؟' : 'How long does it take?',
-      a:
-        language === 'ar'
-          ? 'يعتمد على نطاق المشكلة وطبيعة الوصول للموقع ومتطلبات الاختبارات والتوثيق. بعد التقييم نحدد خطة زمنية واقعية.'
-          : 'It depends on scope, site access, and testing/documentation requirements. After assessment, we propose a realistic timeline.',
-    },
-    {
-      id: 'faq-5',
-      q: language === 'ar' ? 'هل تعملون داخل المباني القائمة؟' : 'Do you work inside existing buildings?',
-      a:
-        language === 'ar'
-          ? 'نعم حسب الحالة ومتطلبات السلامة. نرتب العمل لتقليل الإزعاج قدر الإمكان، ونوضح قبل التنفيذ نقاط الدخول والحماية والتنظيف.'
-          : 'Yes, depending on the case and safety requirements. We plan access, protection, and cleanup steps ahead to minimize disruption.',
-    },
-  ];
+  // FAQ moved to a lazy + in-view section to keep the initial render lighter and avoid forced reflow flags.
 
   return (
     <>
@@ -476,34 +469,16 @@ export default function HomeBelowFold() {
         </div>
       </section>
 
-      {/* FAQ */}
-      <section className="py-12 md:py-16 bg-muted/20">
-        <div className="w-full px-4">
-          <div className="max-w-3xl mx-auto text-center space-y-3">
-            <h2 className="text-2xl md:text-4xl font-bold">{language === 'ar' ? 'أسئلة شائعة' : 'FAQ'}</h2>
-            <p className="text-muted-foreground">
-              {language === 'ar'
-                ? 'إجابات مختصرة لأكثر الأسئلة تكرارًا قبل بدء أي عمل ميداني.'
-                : 'Quick answers to common questions before any field work starts.'}
-            </p>
-          </div>
-
-          <div className="max-w-4xl mx-auto mt-8">
-            <Card className="rounded-3xl border bg-card/70 backdrop-blur">
-              <CardContent className="p-6 md:p-8">
-                <Accordion type="single" collapsible className="w-full">
-                  {faq.map((item) => (
-                    <AccordionItem key={item.id} value={item.id}>
-                      <AccordionTrigger className="text-left">{item.q}</AccordionTrigger>
-                      <AccordionContent className="text-muted-foreground leading-relaxed">{item.a}</AccordionContent>
-                    </AccordionItem>
-                  ))}
-                </Accordion>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
+      {/* FAQ (lazy + in-view) */}
+      <InViewMount
+        fallback={<div className="py-12 md:py-16 bg-muted/20"><div className="w-full px-4"><div className="max-w-4xl mx-auto mt-8"><div className="h-64 rounded-3xl border bg-card/50" /></div></div></div>}
+      >
+        <Suspense
+          fallback={<div className="py-12 md:py-16 bg-muted/20"><div className="w-full px-4"><div className="max-w-4xl mx-auto mt-8"><div className="h-64 rounded-3xl border bg-card/50" /></div></div></div>}
+        >
+          <LazyHomeFaqSection />
+        </Suspense>
+      </InViewMount>
 
       {/* FINAL CTA */}
       <section className="py-12 md:py-16">

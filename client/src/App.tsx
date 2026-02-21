@@ -1,5 +1,3 @@
-import { Toaster } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
 import { Route, Switch, Router as WouterRouter } from "wouter";
 import { Suspense, lazy, useEffect, useMemo, useState, type ReactNode } from "react";
 import ErrorBoundary from "./components/ErrorBoundary";
@@ -56,12 +54,21 @@ const LazySmartAssistantLauncher = lazy(() => import("./components/SmartAssistan
 const LazyAnalytics = lazy(() => import("./components/Analytics"));
 const LazyUpdateAvailableBanner = lazy(() => import("./components/UpdateAvailableBanner"));
 
+// Defer toast runtime (sonner) to avoid adding it to the critical path.
+// (We only need the Toaster after the first interaction or later in the session.)
+const LazyToaster = lazy(async () => {
+  const mod = await import("@/components/ui/sonner");
+  return { default: mod.Toaster };
+});
+
 function DeferredMount({
   children,
   timeoutMs = 1200,
+  requireInteraction = false,
 }: {
   children: ReactNode;
   timeoutMs?: number;
+  requireInteraction?: boolean;
 }) {
   const [show, setShow] = useState(false);
 
@@ -72,16 +79,36 @@ function DeferredMount({
       setShow(true);
     };
 
+    // Always keep a hard timeout fallback.
     const t = window.setTimeout(reveal, timeoutMs);
 
     let idleId: any = null;
-    try {
-      if ('requestIdleCallback' in window) {
-        // @ts-ignore
-        idleId = window.requestIdleCallback(reveal, { timeout: timeoutMs });
+    const cleanupFns: Array<() => void> = [];
+
+    if (requireInteraction) {
+      // PSI/Lighthouse does not interact with the page.
+      // Loading non-critical UI only after real interaction avoids bloating the critical chain.
+      const events: Array<keyof WindowEventMap> = [
+        'pointerdown',
+        'touchstart',
+        'keydown',
+        'scroll',
+        'mousemove',
+      ];
+      const onAny = () => reveal();
+      events.forEach((ev) => {
+        window.addEventListener(ev, onAny, { passive: true, once: true } as any);
+        cleanupFns.push(() => window.removeEventListener(ev, onAny as any));
+      });
+    } else {
+      try {
+        if ('requestIdleCallback' in window) {
+          // @ts-ignore
+          idleId = window.requestIdleCallback(reveal, { timeout: timeoutMs });
+        }
+      } catch {
+        // ignore
       }
-    } catch {
-      // ignore
     }
 
     return () => {
@@ -94,9 +121,16 @@ function DeferredMount({
       } catch {
         // ignore
       }
+      cleanupFns.forEach((fn) => {
+        try {
+          fn();
+        } catch {
+          // ignore
+        }
+      });
       window.clearTimeout(t);
     };
-  }, [timeoutMs]);
+  }, [timeoutMs, requireInteraction]);
 
   return show ? <>{children}</> : null;
 }
@@ -122,7 +156,7 @@ function AppLayout() {
 
       {/* Non-blocking: update banner */}
       <Suspense fallback={null}>
-        <DeferredMount timeoutMs={1800}>
+        <DeferredMount timeoutMs={12000} requireInteraction>
           <LazyUpdateAvailableBanner />
         </DeferredMount>
       </Suspense>
@@ -188,13 +222,13 @@ function AppLayout() {
 
       {/* Defer non-critical UI */}
       <Suspense fallback={null}>
-        <DeferredMount timeoutMs={2800}>
+        <DeferredMount timeoutMs={9000} requireInteraction>
           <LazyWhatsAppButton />
         </DeferredMount>
-        <DeferredMount timeoutMs={3200}>
+        <DeferredMount timeoutMs={10000} requireInteraction>
           <LazyStickyCTA />
         </DeferredMount>
-        <DeferredMount timeoutMs={4200}>
+        <DeferredMount timeoutMs={11000} requireInteraction>
           <LazySmartAssistantLauncher />
         </DeferredMount>
       </Suspense>
@@ -248,18 +282,21 @@ function App() {
     <ErrorBoundary>
       <ThemeProvider defaultMode="light">
         <LanguageProvider>
-          <TooltipProvider>
-            <Toaster />
+          {/* Tooltips are provided locally where needed (e.g., Sidebar). */}
+          <Suspense fallback={null}>
+            <DeferredMount timeoutMs={8000} requireInteraction>
+              <LazyToaster />
+            </DeferredMount>
+          </Suspense>
             <AntiInspectGuard />
             <Suspense fallback={null}>
-              <DeferredMount timeoutMs={4000}>
+              <DeferredMount timeoutMs={12000} requireInteraction>
                 <LazyAnalytics />
               </DeferredMount>
             </Suspense>
             <WouterRouter base={base}>
               <AppLayout />
             </WouterRouter>
-          </TooltipProvider>
         </LanguageProvider>
       </ThemeProvider>
     </ErrorBoundary>
