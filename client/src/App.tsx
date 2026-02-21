@@ -11,6 +11,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import { InternalLinkingProvider } from "./contexts/InternalLinkingContext";
 import SkeletonLoader from "@/components/ui/skeleton-loader";
+import { Etlaq3DIconDefs } from "@/components/icons/etlaq";
 
 const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
@@ -153,6 +154,9 @@ function AppLayout() {
     <div className="flex flex-col min-h-screen app-background etlaq-color-typography pb-24 md:pb-0">
       <ScrollToTop />
       <SkipToContent />
+
+      {/* Shared SVG defs for Etlaq 3D icons (render once) */}
+      <Etlaq3DIconDefs />
 
       {/* Non-blocking: update banner */}
       <Suspense fallback={null}>

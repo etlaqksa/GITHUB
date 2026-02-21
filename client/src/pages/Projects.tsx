@@ -7,7 +7,8 @@ import TrustStats from '@/components/TrustStats';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { projects as allProjects, type ServiceKey } from '@/data/projects';
 import { getClientLogoByArName } from '@/data/clientsLogos';
-import { Building2, Calendar, MapPin, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { IconBuilding, IconCalendar, IconLocation } from '@/components/icons/etlaq';
 import { useEffect, useMemo, useState } from 'react';
 import { useLocation } from 'wouter';
 import LocalizedLink from '@/components/LocalizedLink';
@@ -204,16 +205,16 @@ export default function Projects() {
                             className="h-5 w-auto max-w-[72px] rounded-sm opacity-90"
                           />
                         ) : (
-                          <Building2 className="h-4 w-4" />
+                          <IconBuilding className="h-4 w-4" />
                         )}
                         <span className="line-clamp-1">{client}</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <MapPin className="h-4 w-4" />
+                        <IconLocation className="h-4 w-4" />
                         <span>{location}</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <Calendar className="h-4 w-4" />
+                        <IconCalendar className="h-4 w-4" />
                         <span>{p.year}</span>
                       </div>
                     </div>

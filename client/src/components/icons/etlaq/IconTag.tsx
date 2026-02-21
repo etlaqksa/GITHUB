@@ -4,11 +4,8 @@ import type { EtlaqIconProps } from './types';
 /**
  * Tag / Label — كلمات مفتاحية
  */
-export function IconTag({ title, tone = 'brand', primary: primaryProp, accent: accentProp, surface: surfaceProp, className, ...props }: EtlaqIconProps) {
-  const primary = primaryProp ?? (tone === 'mono' ? 'currentColor' : 'var(--etlaq-icon-primary, #1E3A8A)');
-  const accent = accentProp ?? (tone === 'mono' ? 'currentColor' : 'var(--etlaq-icon-accent, #F59E0B)');
-  const surface = surfaceProp ?? (tone === 'mono' ? 'transparent' : 'var(--etlaq-icon-surface, #E0E7FF)');
-
+export function IconTag({ title, tone = 'brand', primary: _primary, accent: _accent, surface: _surface, className, ...props }: EtlaqIconProps) {
+  const monoClass = tone === 'mono' ? 'etlaq-icon--mono' : '';
   return (
     <svg
       viewBox="0 0 48 48"
@@ -18,12 +15,14 @@ export function IconTag({ title, tone = 'brand', primary: primaryProp, accent: a
       focusable="false"
       aria-hidden={title ? undefined : true}
       role={title ? 'img' : 'presentation'}
-      className={['etlaq-icon', className].filter(Boolean).join(' ')}
+      className={['etlaq-icon', monoClass, className].filter(Boolean).join(' ')}
       {...props}
     >
       {title ? <title>{title}</title> : null}
-      
-      <path d="M10 24L24 10H38V24L24 38L10 24Z" fill={surface} stroke={primary} strokeLinejoin="round" strokeWidth="2.5" /><circle cx="31" cy="17" fill={accent} r="3" />
+      <path d="M10 24L24 10H38V24L24 38L10 24Z" fill="url(#realSilver)" filter="url(#innerShadow)" stroke="url(#realBlue)" strokeLinejoin="round" strokeWidth="2.5">
+      </path>
+      <circle cx="31" cy="17" fill="url(#realGold)" r="3">
+      </circle>
     </svg>
   );
 }

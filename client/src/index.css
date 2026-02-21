@@ -1940,3 +1940,4 @@ html { scrollbar-gutter: stable; }
 
 /* Etlaq icon components */
 .etlaq-icon{display:inline-block;vertical-align:-0.125em;flex-shrink:0;}
+.etlaq-icon--mono *{fill:currentColor !important;stroke:currentColor !important;filter:none !important;}

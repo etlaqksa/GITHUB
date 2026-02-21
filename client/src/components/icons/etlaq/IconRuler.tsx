@@ -2,13 +2,10 @@ import React from 'react';
 import type { EtlaqIconProps } from './types';
 
 /**
- * Ruler / Measure — قياس وأبعاد
+ * Ruler — قياس وأبعاد
  */
-export function IconRuler({ title, tone = 'brand', primary: primaryProp, accent: accentProp, surface: surfaceProp, className, ...props }: EtlaqIconProps) {
-  const primary = primaryProp ?? (tone === 'mono' ? 'currentColor' : 'var(--etlaq-icon-primary, #1E3A8A)');
-  const accent = accentProp ?? (tone === 'mono' ? 'currentColor' : 'var(--etlaq-icon-accent, #F59E0B)');
-  const surface = surfaceProp ?? (tone === 'mono' ? 'transparent' : 'var(--etlaq-icon-surface, #E0E7FF)');
-
+export function IconRuler({ title, tone = 'brand', primary: _primary, accent: _accent, surface: _surface, className, ...props }: EtlaqIconProps) {
+  const monoClass = tone === 'mono' ? 'etlaq-icon--mono' : '';
   return (
     <svg
       viewBox="0 0 48 48"
@@ -18,12 +15,14 @@ export function IconRuler({ title, tone = 'brand', primary: primaryProp, accent:
       focusable="false"
       aria-hidden={title ? undefined : true}
       role={title ? 'img' : 'presentation'}
-      className={['etlaq-icon', className].filter(Boolean).join(' ')}
+      className={['etlaq-icon', monoClass, className].filter(Boolean).join(' ')}
       {...props}
     >
       {title ? <title>{title}</title> : null}
-      
-      <path d="M10 38L38 10L44 16L16 44L10 38Z" fill={surface} stroke={primary} strokeWidth="2.5" /><path d="M22 26L28 32M28 20L34 26M16 32L22 38" stroke={accent} strokeLinecap="round" strokeWidth="2.5" />
+      <path d="M10 38L38 10L44 16L16 44L10 38Z" fill="url(#realSilver)" filter="url(#innerShadow)" stroke="url(#realBlue)" strokeWidth="2.5">
+      </path>
+      <path d="M22 26L28 32M28 20L34 26M16 32L22 38" stroke="url(#realGold)" strokeLinecap="round" strokeWidth="3">
+      </path>
     </svg>
   );
 }

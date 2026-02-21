@@ -2,9 +2,9 @@ import React from 'react';
 import type { EtlaqIconProps } from './types';
 
 /**
- * Radar / GPR — رادار الاختراق GPR
+ * Soil Layers — طبقات التربة
  */
-export function IconGprRadar({ title, tone = 'brand', primary: _primary, accent: _accent, surface: _surface, className, ...props }: EtlaqIconProps) {
+export function IconSoilLayers({ title, tone = 'brand', primary: _primary, accent: _accent, surface: _surface, className, ...props }: EtlaqIconProps) {
   const monoClass = tone === 'mono' ? 'etlaq-icon--mono' : '';
   return (
     <svg
@@ -19,11 +19,11 @@ export function IconGprRadar({ title, tone = 'brand', primary: _primary, accent:
       {...props}
     >
       {title ? <title>{title}</title> : null}
-      <rect fill="url(#realBlue)" filter="url(#innerShadow)" height="12" rx="3" width="20" x="14" y="8">
+      <rect fill="url(#realSilver)" filter="url(#innerShadow)" height="32" rx="4" stroke="url(#realBlue)" strokeWidth="2.5" width="32" x="8" y="8">
       </rect>
-      <path d="M20 8V4M28 8V4" stroke="url(#realBlue)" strokeLinecap="round" strokeWidth="2.5">
+      <path d="M8 18C14 20 20 16 26 18C32 20 36 16 40 18" stroke="url(#realBlue)" strokeWidth="2.5">
       </path>
-      <path d="M18 28C22 32 26 32 30 28M14 34C20 40 28 40 34 34M10 40C18 48 30 48 38 40" stroke="url(#realGold)" strokeLinecap="round" strokeWidth="3">
+      <path d="M8 30C16 28 24 32 32 30C36 29 38 28 40 30" stroke="url(#realGold)" strokeWidth="3">
       </path>
     </svg>
   );

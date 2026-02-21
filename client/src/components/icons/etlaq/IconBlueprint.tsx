@@ -2,13 +2,10 @@ import React from 'react';
 import type { EtlaqIconProps } from './types';
 
 /**
- * Blueprint / Plan — مخططات هندسية
+ * Blueprint — مخططات هندسية
  */
-export function IconBlueprint({ title, tone = 'brand', primary: primaryProp, accent: accentProp, surface: surfaceProp, className, ...props }: EtlaqIconProps) {
-  const primary = primaryProp ?? (tone === 'mono' ? 'currentColor' : 'var(--etlaq-icon-primary, #1E3A8A)');
-  const accent = accentProp ?? (tone === 'mono' ? 'currentColor' : 'var(--etlaq-icon-accent, #F59E0B)');
-  const surface = surfaceProp ?? (tone === 'mono' ? 'transparent' : 'var(--etlaq-icon-surface, #E0E7FF)');
-
+export function IconBlueprint({ title, tone = 'brand', primary: _primary, accent: _accent, surface: _surface, className, ...props }: EtlaqIconProps) {
+  const monoClass = tone === 'mono' ? 'etlaq-icon--mono' : '';
   return (
     <svg
       viewBox="0 0 48 48"
@@ -18,12 +15,16 @@ export function IconBlueprint({ title, tone = 'brand', primary: primaryProp, acc
       focusable="false"
       aria-hidden={title ? undefined : true}
       role={title ? 'img' : 'presentation'}
-      className={['etlaq-icon', className].filter(Boolean).join(' ')}
+      className={['etlaq-icon', monoClass, className].filter(Boolean).join(' ')}
       {...props}
     >
       {title ? <title>{title}</title> : null}
-      
-      <rect fill={surface} height="28" rx="2" stroke={primary} strokeWidth="2.5" width="32" x="8" y="10" /><path d="M14 28L24 18L34 28" stroke={accent} strokeLinejoin="round" strokeWidth="2.5" /><rect fill={accent} height="4" width="36" x="6" y="40" />
+      <rect fill="url(#realSilver)" filter="url(#innerShadow)" height="28" rx="2" stroke="url(#realBlue)" strokeWidth="2.5" width="32" x="8" y="10">
+      </rect>
+      <path d="M14 28L24 18L34 28" stroke="url(#realGold)" strokeLinejoin="round" strokeWidth="3">
+      </path>
+      <rect fill="url(#realGold)" height="4" width="36" x="6" y="40">
+      </rect>
     </svg>
   );
 }

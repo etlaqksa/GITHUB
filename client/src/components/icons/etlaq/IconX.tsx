@@ -4,11 +4,8 @@ import type { EtlaqIconProps } from './types';
 /**
  * X / Twitter — منصة X (تويتر)
  */
-export function IconX({ title, tone = 'brand', primary: primaryProp, accent: accentProp, surface: surfaceProp, className, ...props }: EtlaqIconProps) {
-  const primary = primaryProp ?? (tone === 'mono' ? 'currentColor' : 'var(--etlaq-icon-primary, #1E3A8A)');
-  const accent = accentProp ?? (tone === 'mono' ? 'currentColor' : 'var(--etlaq-icon-accent, #F59E0B)');
-  const surface = surfaceProp ?? (tone === 'mono' ? 'transparent' : 'var(--etlaq-icon-surface, #E0E7FF)');
-
+export function IconX({ title, tone = 'brand', primary: _primary, accent: _accent, surface: _surface, className, ...props }: EtlaqIconProps) {
+  const monoClass = tone === 'mono' ? 'etlaq-icon--mono' : '';
   return (
     <svg
       viewBox="0 0 48 48"
@@ -18,12 +15,14 @@ export function IconX({ title, tone = 'brand', primary: primaryProp, accent: acc
       focusable="false"
       aria-hidden={title ? undefined : true}
       role={title ? 'img' : 'presentation'}
-      className={['etlaq-icon', className].filter(Boolean).join(' ')}
+      className={['etlaq-icon', monoClass, className].filter(Boolean).join(' ')}
       {...props}
     >
       {title ? <title>{title}</title> : null}
-      
-      <path d="M10 8L22 24L10 40H14L24 26.5L34 40H38L26 24L38 8H34L24 21.5L14 8H10Z" fill={primary} /><path d="M16 10L32 38" stroke={accent} strokeLinecap="round" strokeWidth="2" />
+      <path d="M10 8L22 24L10 40H14L24 26.5L34 40H38L26 24L38 8H34L24 21.5L14 8H10Z" fill="url(#realBlue)" filter="url(#innerShadow)">
+      </path>
+      <path d="M16 10L32 38" stroke="url(#realGold)" strokeLinecap="round" strokeWidth="2.5">
+      </path>
     </svg>
   );
 }

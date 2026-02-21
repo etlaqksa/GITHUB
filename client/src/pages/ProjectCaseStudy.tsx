@@ -7,7 +7,8 @@ import TrustStats from '@/components/TrustStats';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { projects } from '@/data/projects';
 import { getClientLogoByArName } from '@/data/clientsLogos';
-import { ArrowLeft, Building2, Calendar, MapPin, CheckCircle2 } from 'lucide-react';
+import { ArrowLeft, CheckCircle2 } from 'lucide-react';
+import { IconBuilding, IconCalendar, IconLocation } from '@/components/icons/etlaq';
 import { useMemo } from 'react';
 import { useRoute } from 'wouter';
 import LocalizedLink from '@/components/LocalizedLink';
@@ -95,15 +96,15 @@ export default function ProjectCaseStudy() {
 
               <div className="mt-6 flex flex-wrap gap-4 text-sm text-muted-foreground">
                 <div className="flex items-center gap-2">
-                  <Building2 className="h-4 w-4" />
+                  <IconBuilding className="h-4 w-4" />
                   <span>{client}</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <MapPin className="h-4 w-4" />
+                  <IconLocation className="h-4 w-4" />
                   <span>{location}</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Calendar className="h-4 w-4" />
+                  <IconCalendar className="h-4 w-4" />
                   <span>{project.year}</span>
                 </div>
               </div>

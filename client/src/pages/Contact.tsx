@@ -4,7 +4,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Mail, MapPin, Phone } from 'lucide-react';
+import { IconEmail, IconLocation, IconPhone } from '@/components/icons/etlaq';
 import { useState } from 'react';
 import { toast } from 'sonner';
 import { useLocation } from 'wouter';
@@ -106,19 +106,19 @@ export default function Contact() {
 
   const contactInfo = [
     {
-      icon: Phone,
+      icon: IconPhone,
       title: language === 'ar' ? 'الهاتف' : 'Phone',
       value: '+966534145922',
       link: 'tel:+966534145922',
     },
     {
-      icon: Mail,
+      icon: IconEmail,
       title: language === 'ar' ? 'البريد الإلكتروني' : 'Email',
       value: 'etlaqksa@gmail.com',
       link: 'mailto:etlaqksa@gmail.com',
     },
     {
-      icon: MapPin,
+      icon: IconLocation,
       title: language === 'ar' ? 'العنوان' : 'Address',
       value: language === 'ar' ? 'الرياض - حي الياسمين (طريق أنس بن مالك)' : 'Riyadh - Al Yasmin (Anas Bin Malik Rd)',
       link: 'https://maps.google.com/?q=4348+Anas+Bin+Malik+Road,+Al+Yasmin,+Riyadh,+Saudi+Arabia',
@@ -149,7 +149,7 @@ export default function Contact() {
               <Card key={index} className="text-center hover-lift">
                 <CardContent className="p-6 space-y-4">
                   <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
-                    <info.icon className="h-8 w-8 text-primary" />
+                    <info.icon className="h-8 w-8" />
                   </div>
                   <h3 className="text-xl font-semibold">{info.title}</h3>
                   {info.link ? (
