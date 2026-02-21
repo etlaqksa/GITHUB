@@ -254,7 +254,7 @@ export default function Blog() {
 
         {/* Search */}
         <div className="max-w-xl mx-auto mb-6 relative">
-          <IconSearch tone="mono" className={`pointer-events-none absolute top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground ${isAr ? "right-3" : "left-3"}`} />
+          <IconSearch className={`pointer-events-none absolute top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground ${isAr ? "right-3" : "left-3"}`} />
           <input
             type="text"
             placeholder={language === 'ar' ? 'ابحث عن مقال...' : 'Search articles...'}

@@ -155,11 +155,11 @@ function ModelLanding(props: {
           <div className="w-full space-y-6">
             <div className="flex flex-wrap items-center gap-2">
               <span className="inline-flex items-center gap-2 rounded-full border bg-card/60 backdrop-blur px-4 py-2 text-sm">
-                <IconLocation tone="mono" className="h-4 w-4 text-primary" />
+                <IconLocation className="h-4 w-4 text-primary" />
                 <span className="text-muted-foreground">{cityName}</span>
               </span>
               <span className="inline-flex items-center gap-2 rounded-full border bg-card/60 backdrop-blur px-4 py-2 text-sm">
-                <IconShieldCheck tone="mono" className="h-4 w-4 text-primary" />
+                <IconShieldCheck className="h-4 w-4 text-primary" />
                 <span className="text-muted-foreground">
                   {lang === 'ar' ? 'خطة واضحة ومخرجات مفهومة' : 'Clear plan & deliverables'}
                 </span>
@@ -279,7 +279,7 @@ function ModelLanding(props: {
                   {model.processSteps.map((s) => (
                     <div key={s.title} className="etlaq-card rounded-xl border bg-card/60 backdrop-blur p-4">
                       <div className="flex items-start gap-2">
-                        <IconChecklist tone="mono" className="h-4 w-4 mt-0.5 text-primary" />
+                        <IconChecklist className="h-4 w-4 mt-0.5 text-primary" />
                         <div>
                           <p className="text-sm font-medium">{s.title}</p>
                           <p className="text-sm text-muted-foreground leading-relaxed">{s.body}</p>
@@ -521,11 +521,11 @@ export default function CityServiceLanding({ params }: Props) {
           <div className="max-w-4xl mx-auto space-y-4">
             <div className="flex flex-wrap items-center gap-2">
               <span className="inline-flex items-center gap-2 rounded-full border bg-card/60 backdrop-blur px-4 py-2 text-sm">
-                <IconLocation tone="mono" className="h-4 w-4 text-primary" />
+                <IconLocation className="h-4 w-4 text-primary" />
                 <span className="text-muted-foreground">{cityName}</span>
               </span>
               <span className="inline-flex items-center gap-2 rounded-full border bg-card/60 backdrop-blur px-4 py-2 text-sm">
-                <IconShieldCheck tone="mono" className="h-4 w-4 text-primary" />
+                <IconShieldCheck className="h-4 w-4 text-primary" />
                 <span className="text-muted-foreground">{language === 'ar' ? 'خطة واضحة ومخرجات مفهومة' : 'Clear plan & deliverables'}</span>
               </span>
             </div>
@@ -588,7 +588,7 @@ export default function CityServiceLanding({ params }: Props) {
                 {steps.map((s) => (
                   <div key={s.title} className="etlaq-card rounded-xl border bg-card/60 backdrop-blur p-4">
                     <div className="flex items-start gap-2">
-                      <IconChecklist tone="mono" className="h-4 w-4 mt-0.5 text-primary" />
+                      <IconChecklist className="h-4 w-4 mt-0.5 text-primary" />
                       <div>
                         <p className="text-sm font-medium">{s.title}</p>
                         <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>

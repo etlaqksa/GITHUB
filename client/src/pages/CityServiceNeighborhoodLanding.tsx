@@ -302,14 +302,14 @@ export default function CityServiceNeighborhoodLanding() {
           <div className="w-full space-y-6">
             <div className="flex flex-wrap items-center gap-2">
               <Badge variant="outline" className="gap-2">
-                <IconLocation tone="mono" className="h-4 w-4 text-primary" />
+                <IconLocation className="h-4 w-4 text-primary" />
                 <span>{cityName}</span>
               </Badge>
               <Badge variant="outline" className="gap-2">
                 <span>{hoodName}</span>
               </Badge>
               <Badge variant="outline" className="gap-2">
-                <IconShieldCheck tone="mono" className="h-4 w-4 text-primary" />
+                <IconShieldCheck className="h-4 w-4 text-primary" />
                 <span>{lang === 'ar' ? 'توثيق ومخرجات واضحة' : 'Clear deliverables'}</span>
               </Badge>
             </div>
@@ -346,7 +346,7 @@ export default function CityServiceNeighborhoodLanding() {
                 </a>
                 <LocalizedLink href="/request-service">
                   <Button variant="outline" className="w-full sm:w-auto">
-                    <IconPhone tone="mono" className="h-4 w-4 me-2" />
+                    <IconPhone className="h-4 w-4 me-2" />
                     {lang === 'ar' ? 'طلب خدمة / معاينة' : 'Request service'}
                   </Button>
                 </LocalizedLink>

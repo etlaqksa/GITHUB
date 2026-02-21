@@ -147,7 +147,7 @@ export default function Footer() {
             </h3>
             <ul className="space-y-3">
               <li className="flex items-start space-x-2 rtl:space-x-reverse text-sm">
-                <IconPhone tone="mono" className="h-5 w-5 mt-0.5 flex-shrink-0 opacity-90" />
+                <IconPhone className="h-5 w-5 mt-0.5 flex-shrink-0 opacity-90" />
                 <a 
                   href={`tel:${COMPANY_INFO.phoneInternational}`} 
                   className="opacity-90 hover:opacity-100 hover:underline transition-all whitespace-nowrap"
@@ -157,7 +157,7 @@ export default function Footer() {
                 </a>
               </li>
               <li className="flex items-start space-x-2 rtl:space-x-reverse text-sm">
-                <IconEmail tone="mono" className="h-5 w-5 mt-0.5 flex-shrink-0 opacity-90" />
+                <IconEmail className="h-5 w-5 mt-0.5 flex-shrink-0 opacity-90" />
                 <a 
                   href="mailto:etlaqksa@gmail.com" 
                   className="opacity-90 hover:opacity-100 hover:underline transition-all"
@@ -166,7 +166,7 @@ export default function Footer() {
                 </a>
               </li>
               <li className="flex items-start space-x-2 rtl:space-x-reverse text-sm">
-                <IconLocation tone="mono" className="h-5 w-5 mt-0.5 flex-shrink-0 opacity-90" />
+                <IconLocation className="h-5 w-5 mt-0.5 flex-shrink-0 opacity-90" />
                 <a 
                   href="https://maps.google.com/?q=4348+Anas+Bin+Malik+Road,+Al+Yasmin,+Riyadh,+Saudi+Arabia" 
                   target="_blank" 

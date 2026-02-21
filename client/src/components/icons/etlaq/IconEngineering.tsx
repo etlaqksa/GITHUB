@@ -4,8 +4,7 @@ import type { EtlaqIconProps } from './types';
 /**
  * Engineering — الهندسة والإدارة
  */
-export function IconEngineering({ title, tone = 'brand', primary: _primary, accent: _accent, surface: _surface, className, ...props }: EtlaqIconProps) {
-  const monoClass = tone === 'mono' ? 'etlaq-icon--mono' : '';
+export function IconEngineering({ title, className, ...props }: EtlaqIconProps) {
   return (
     <svg
       viewBox="0 0 48 48"
@@ -15,7 +14,7 @@ export function IconEngineering({ title, tone = 'brand', primary: _primary, acce
       focusable="false"
       aria-hidden={title ? undefined : true}
       role={title ? 'img' : 'presentation'}
-      className={['etlaq-icon', monoClass, className].filter(Boolean).join(' ')}
+      className={['etlaq-icon', className].filter(Boolean).join(' ')}
       {...props}
     >
       {title ? <title>{title}</title> : null}

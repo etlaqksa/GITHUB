@@ -40,7 +40,7 @@ export default function StickyCTA() {
                 })
               }
             >
-              <IconPhone tone="mono" className="h-5 w-5" />
+              <IconPhone className="h-5 w-5" />
               {t('nav.request')}
             </Button>
           </LocalizedLink>
@@ -53,7 +53,7 @@ export default function StickyCTA() {
             data-ga-intent="request_service"
           >
             <Button className="w-full gap-2" size="lg" variant="secondary">
-              <IconWhatsapp tone="mono" className="h-5 w-5" />
+              <IconWhatsapp className="h-5 w-5" />
               {language === 'ar' ? 'واتساب' : 'WhatsApp'}
             </Button>
           </a>

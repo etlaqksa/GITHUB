@@ -45,7 +45,7 @@ export default function CityNeighborhoods({ params }: Props) {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center space-y-3">
             <div className="inline-flex items-center gap-2 rounded-full border bg-card/60 backdrop-blur px-4 py-2 text-sm">
-              <IconLocation tone="mono" className="h-4 w-4 text-primary" />
+              <IconLocation className="h-4 w-4 text-primary" />
               <span className="text-muted-foreground">{language === 'ar' ? 'تصفح حسب الحي' : 'Browse by neighborhood'}</span>
             </div>
 

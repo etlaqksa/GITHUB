@@ -4,8 +4,7 @@ import type { EtlaqIconProps } from './types';
 /**
  * WhatsApp — واتساب
  */
-export function IconWhatsapp({ title, tone = 'brand', primary: _primary, accent: _accent, surface: _surface, className, ...props }: EtlaqIconProps) {
-  const monoClass = tone === 'mono' ? 'etlaq-icon--mono' : '';
+export function IconWhatsapp({ title, className, ...props }: EtlaqIconProps) {
   return (
     <svg
       viewBox="0 0 48 48"
@@ -15,7 +14,7 @@ export function IconWhatsapp({ title, tone = 'brand', primary: _primary, accent:
       focusable="false"
       aria-hidden={title ? undefined : true}
       role={title ? 'img' : 'presentation'}
-      className={['etlaq-icon', monoClass, className].filter(Boolean).join(' ')}
+      className={['etlaq-icon', className].filter(Boolean).join(' ')}
       {...props}
     >
       {title ? <title>{title}</title> : null}

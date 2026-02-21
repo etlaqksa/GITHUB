@@ -58,7 +58,7 @@ export default function WhatsAppButton() {
       aria-label={isAr ? "تواصل معنا عبر واتساب" : "Contact us on WhatsApp"}
       title={isAr ? "واتساب" : "WhatsApp"}
     >
-      <IconWhatsapp tone="mono" className="h-7 w-7" />
+      <IconWhatsapp className="h-7 w-7" />
       <span className="absolute right-full top-1/2 -translate-y-1/2 mr-3 rounded-full bg-black/80 text-white text-xs px-3 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
         {isAr ? "واتساب" : "WhatsApp"}
       </span>
