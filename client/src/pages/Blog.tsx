@@ -30,6 +30,31 @@ function stripArabic(text: string) {
   return text.replace(/[\u0600-\u06FF\u0750-\u077F\u08A0-\u08FF\uFB50-\uFDFF\uFE70-\uFEFF]/g, '').replace(/\s+/g, ' ').trim();
 }
 
+// Make search forgiving for Arabic (hamza forms, taa marbouta, alif maqsoora, tashkeel...)
+// and also normalize basic Latin diacritics.
+function normalizeForSearch(input: string) {
+  return (input || '')
+    .toLowerCase()
+    // Normalize Latin characters (remove combining marks)
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
+    // Remove Arabic diacritics / marks
+    .replace(/[\u064B-\u065F\u0670\u06D6-\u06ED]/g, '')
+    // Remove tatweel
+    .replace(/\u0640/g, '')
+    // Unify common Arabic letter variants
+    .replace(/[إأآا]/g, 'ا')
+    .replace(/ى/g, 'ي')
+    .replace(/ة/g, 'ه')
+    .replace(/ؤ/g, 'و')
+    .replace(/ئ/g, 'ي')
+    .replace(/ء/g, '')
+    // Drop punctuation/symbols (keep Arabic/Latin letters + numbers + spaces)
+    .replace(/[^\u0600-\u06FFa-z0-9\s]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 function estimateReadTime(content: string, lang: 'ar' | 'en') {
   const plain = stripMarkdown(content);
   const words = plain.split(/\s+/).filter(Boolean).length;
@@ -194,15 +219,23 @@ export default function Blog() {
   }, [language, allArticles]);
 
   const articles = useMemo(() => {
-    const q = searchQuery.trim().toLowerCase();
+    const q = normalizeForSearch(searchQuery);
     return allArticles
       .filter(a => {
         const cats = getCategories(a, language);
         const matchesCategory = selectedCategory === 'all' ? true : cats.includes(selectedCategory);
 
-        const title = language === 'ar' ? a.title : stripArabic(a.titleEn || '');
-        const content = language === 'ar' ? a.content : stripArabic(a.contentEn || '');
-        const hay = (title + ' ' + stripMarkdown(content)).toLowerCase();
+        // Search across both Arabic + English fields to avoid "no results" surprises.
+        // Also normalize Arabic variants so common spelling differences still match.
+        const titleAr = a.title || '';
+        const contentAr = a.content || '';
+        const titleEn = stripArabic(a.titleEn || '');
+        const contentEn = stripArabic(a.contentEn || '');
+
+        const hay = normalizeForSearch(
+          `${titleAr} ${stripMarkdown(contentAr)} ${titleEn} ${stripMarkdown(contentEn)}`
+        );
+
         const matchesSearch = q ? hay.includes(q) : true;
 
         return matchesCategory && matchesSearch;
