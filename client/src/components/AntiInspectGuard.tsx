@@ -153,43 +153,17 @@ useEffect(() => {
       }
     };
 
-    // --- DevTools detection (best-effort) ---
-    // IMPORTANT: `outerHeight/outerWidth` deltas vary widely by OS/browser chrome and can be > 180 even without DevTools.
-    // To avoid false positives, we measure a baseline delta after initial load, then flag DevTools only if the delta
-    // increases significantly beyond that baseline (typical when DevTools is docked).
-    let baselineReady = false;
-    let baseWDiff = 0;
-    let baseHDiff = 0;
-
-    const measureDiff = () => {
-      const wDiff = Math.abs(window.outerWidth - window.innerWidth);
-      const hDiff = Math.abs(window.outerHeight - window.innerHeight);
-      return { wDiff, hDiff };
-    };
-
-    const setBaseline = () => {
-      const { wDiff, hDiff } = measureDiff();
-      baseWDiff = wDiff;
-      baseHDiff = hDiff;
-      baselineReady = true;
-    };
-
     const detect = () => {
       if (!overlayEligible()) {
         setDevtoolsOpen(false);
         return;
       }
 
-      // Until baseline is ready, never show overlay (prevents first-paint false positives).
-      if (!baselineReady) {
-        setDevtoolsOpen(false);
-        return;
-      }
+      const wDiff = Math.abs(window.outerWidth - window.innerWidth);
+      const hDiff = Math.abs(window.outerHeight - window.innerHeight);
 
-      const { wDiff, hDiff } = measureDiff();
-
-      // Docked DevTools typically increases one of the deltas substantially.
-      const opened = (wDiff - baseWDiff) > 160 || (hDiff - baseHDiff) > 160;
+      // Docked DevTools usually creates a large delta.
+      const opened = wDiff > 180 || hDiff > 180;
       setDevtoolsOpen(opened);
     };
 
@@ -201,11 +175,6 @@ useEffect(() => {
     document.addEventListener('copy', onCopy, true);
     document.addEventListener('cut', onCut, true);
     document.addEventListener('dragstart', onDragStart, true);
-
-    const baselineTimer = window.setTimeout(() => {
-      setBaseline();
-      detect();
-    }, 1200);
 
     const i = window.setInterval(detect, 500);
     window.addEventListener('resize', detect);
@@ -222,7 +191,6 @@ useEffect(() => {
       document.removeEventListener('dragstart', onDragStart, true);
       window.removeEventListener('resize', detect);
       window.clearInterval(i);
-      window.clearTimeout(baselineTimer);
     };
   }, [enabled]);
 
