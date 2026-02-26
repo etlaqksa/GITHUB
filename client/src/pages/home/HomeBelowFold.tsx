@@ -315,7 +315,7 @@ export default function HomeBelowFold() {
         <div className="w-full">
           <SectionHeader
             eyebrow={<><Sparkles className="h-4 w-4" />{language === 'ar' ? 'الخدمات' : 'Core services'}</>}
-            title={language === 'ar' ? 'خدماتنا الأساسية' : 'Core services'}}
+	            title={language === 'ar' ? 'خدماتنا الأساسية' : 'Core services'}
             subtitle={language === 'ar'
                 ? 'خدمات مركزة ومباشرة لمعالجة المشاكل تحت الأساسات: حقن التربة، كشف التكهفات، والدراسات الجيوفيزيائية.'
                 : 'Focused subsurface services: soil grouting, cavity detection, and geophysical surveys.'}
@@ -378,7 +378,7 @@ export default function HomeBelowFold() {
               <SectionHeader
                 align="start"
                 eyebrow={<><IconChecklist className="h-4 w-4" />{language === 'ar' ? 'منهجية التنفيذ' : 'Methodology'}</>}
-                title={language === 'ar' ? 'منهجية عمل تقلل المخاطر' : 'A method that reduces risk'}}
+	                title={language === 'ar' ? 'منهجية عمل تقلل المخاطر' : 'A method that reduces risk'}
                 subtitle={language === 'ar'
                   ? 'هدفنا ليس “حل سريع” فقط — بل حل صحيح. لذلك نعتمد خطوات واضحة من التشخيص حتى التسليم، مع تنفيذ مرحلي وتوثيق مناسب لمتطلبات المشروع.'
                   : 'Our goal isn’t just a “quick fix” — it’s the correct fix. We follow clear steps from diagnosis to deliverables, with staged execution and documentation aligned with project requirements.'}
@@ -449,11 +449,11 @@ export default function HomeBelowFold() {
               <SectionHeader
                 align="start"
                 eyebrow={<><IconLocation className="h-4 w-4" />{language === 'ar' ? 'التغطية الجغرافية' : 'Coverage'}</>}
-                title={language === 'ar' ? 'نغطي مناطق المملكة' : 'Serving all regions of KSA'}}
+	                title={language === 'ar' ? 'نغطي مناطق المملكة' : 'Serving all regions of KSA'}
                 subtitle={language === 'ar'
                   ? 'فرق ميدانية وخطط تنفيذ قابلة للتوسع حسب حجم المشروع. يمكنك البدء من صفحة مدينتك أو طلب تقييم مباشر.'
                   : 'Field crews and scalable execution plans depending on scope. Start from your city page or request an assessment.'}
-              </p>
+	              />
 
               <div className="flex flex-col sm:flex-row gap-3 pt-2">
                 <LocalizedLink href="/locations" className="inline-flex">
@@ -515,11 +515,11 @@ export default function HomeBelowFold() {
                 <h2 className="text-2xl md:text-4xl font-bold">
                   {language === 'ar' ? 'ابدأ بخطوة واحدة' : 'Start with one clear step'}
                 </h2>
-                <p className="text-muted-foreground leading-relaxed">
-                  {language === 'ar'
-                    ? 'أرسل تفاصيل الحالة وسنقترح المسار الأنسب: كشف/دراسة/حقن — مع خطة أولية ومخرجات واضحة.'
-                    : 'Share your case details and we’ll suggest the best route: detection/surveys/grouting — with a clear initial plan and practical deliverables.'}}
-              />
+	                <p className="text-muted-foreground leading-relaxed">
+	                  {language === 'ar'
+	                    ? 'أرسل تفاصيل الحالة وسنقترح المسار الأنسب: كشف/دراسة/حقن — مع خطة أولية ومخرجات واضحة.'
+	                    : 'Share your case details and we’ll suggest the best route: detection/surveys/grouting — with a clear initial plan and practical deliverables.'}
+	                </p>
             </div>
               <div className="flex flex-col gap-3">
                 <LocalizedLink href="/request-service">
