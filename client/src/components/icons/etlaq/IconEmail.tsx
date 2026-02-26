@@ -2,26 +2,23 @@ import React from 'react';
 import type { EtlaqIconProps } from './types';
 
 /**
- * Email — البريد الإلكتروني
+ * Email (Gmail) — البريد الإلكتروني
  */
-export function IconEmail({ title, className, ...props }: EtlaqIconProps) {
+export function IconEmail({ title, className }: EtlaqIconProps) {
+  const alt = title ?? '';
+  const ariaHidden = title ? undefined : true;
+
   return (
-    <svg
-      viewBox="0 0 48 48"
-      width="1em"
-      height="1em"
-      fill="none"
-      focusable="false"
-      aria-hidden={title ? undefined : true}
-      role={title ? 'img' : 'presentation'}
-      className={['etlaq-icon', className].filter(Boolean).join(' ')}
-      {...props}
-    >
-      {title ? <title>{title}</title> : null}
-      <rect fill="url(#realSilver)" filter="url(#innerShadow)" height="24" rx="3" stroke="url(#realBlue)" strokeWidth="2.5" width="36" x="6" y="12">
-      </rect>
-      <path d="M6 16L24 26L42 16" stroke="url(#realGold)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3">
-      </path>
-    </svg>
+    <img
+      src="/social-icons/email.webp"
+      width="24"
+      height="24"
+      className={className}
+      alt={alt}
+      aria-hidden={ariaHidden}
+      loading="lazy"
+      decoding="async"
+      draggable={false}
+    />
   );
 }

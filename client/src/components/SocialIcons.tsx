@@ -1,28 +1,44 @@
 import React from 'react';
-import { IconInstagram, IconTelegram, IconTiktok, IconX, IconWhatsapp } from '@/components/icons/etlaq';
+import { IconX } from '@/components/icons/etlaq';
 
 type SocialKey = 'tiktok' | 'instagram' | 'x' | 'telegram' | 'whatsapp';
 
-const COMPONENTS: Record<SocialKey, React.ComponentType<React.SVGProps<SVGSVGElement>>> = {
-  tiktok: IconTiktok,
-  instagram: IconInstagram,
-  x: IconX,
-  telegram: IconTelegram,
-  whatsapp: IconWhatsapp,
+const WEBP_SRC: Record<Exclude<SocialKey, 'x'>, string> = {
+  tiktok: '/social-icons/tiktok.webp',
+  instagram: '/social-icons/instagram.webp',
+  telegram: '/social-icons/telegram.webp',
+  whatsapp: '/social-icons/whatsapp.webp',
 };
 
+/**
+ * Social icons used in TopBar/Footer.
+ * Render as lightweight WebP images (except X which remains as SVG because no replacement was provided).
+ */
 export function SocialIcon({
   name,
   className,
   title,
-  ...props
 }: {
   name: SocialKey;
   className?: string;
   title?: string;
-} & React.SVGProps<SVGSVGElement>) {
-  const Comp = COMPONENTS[name];
+}) {
+  if (name === 'x') {
+    return <IconX title={title} className={className} />;
+  }
 
-  // Social icons are usually displayed inside a white circular button, so we keep the brand tone.
-  return <Comp title={title} className={className} {...props} />;
+  const src = WEBP_SRC[name];
+  return (
+    <img
+      src={src}
+      width="24"
+      height="24"
+      className={className}
+      alt=""
+      aria-hidden="true"
+      loading="lazy"
+      decoding="async"
+      draggable={false}
+    />
+  );
 }
