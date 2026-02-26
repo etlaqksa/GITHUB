@@ -25,18 +25,19 @@
       try {
         if ('requestIdleCallback' in window) {
           // @ts-ignore
-          window.requestIdleCallback(load, { timeout: 3500 });
+          window.requestIdleCallback(load, { timeout: 1500 });
         } else {
-          setTimeout(load, 1500);
+          setTimeout(load, 900);
         }
       } catch (e) {
-        setTimeout(load, 1500);
+        setTimeout(load, 900);
       }
     }
 
-    if (document.readyState === 'complete') {
+    if (document.readyState === 'complete' || document.readyState === 'interactive') {
       schedule();
     } else {
+      document.addEventListener('DOMContentLoaded', schedule, { once: true });
       window.addEventListener('load', schedule, { once: true });
     }
   } catch (e) {}
