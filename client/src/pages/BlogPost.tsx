@@ -12,7 +12,6 @@ import { IconCalendar, IconClock } from '@/components/icons/etlaq';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import remarkInternalLinks from '@/lib/internalLinking/remarkInternalLinks';
-import rehypeRaw from 'rehype-raw';
 import LocalizedLink from '@/components/LocalizedLink';
 import { absUrl } from '@/lib/siteUrl';
 import { getArticleImageName } from '@/data/articleImageMap';
@@ -518,8 +517,10 @@ export default function BlogPost() {
               ${language === 'ar' ? 'rtl prose-headings:text-right prose-p:text-right prose-li:text-right' : 'ltr'}`}
           >
             <ReactMarkdown
+              // Security: do NOT render raw HTML inside markdown. This prevents XSS
+              // if article content ever becomes untrusted (CMS/imports/copy-paste).
+              skipHtml
               remarkPlugins={[remarkGfm, [remarkInternalLinks as any, { lang: language }]]}
-              rehypePlugins={[rehypeRaw]}
               components={{
                 table: ({ children, ...props }) => (
                   <div className="my-8 w-full overflow-x-auto rounded-lg border border-border">
