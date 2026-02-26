@@ -13,6 +13,10 @@ import { InternalLinkingProvider } from "./contexts/InternalLinkingContext";
 import SkeletonLoader from "@/components/ui/skeleton-loader";
 import { Etlaq3DIconDefs } from "@/components/icons/etlaq";
 
+// Internal tools are disabled in production by default.
+// Enable only in dev, or by setting VITE_INTERNAL_TOOLS=true at build time.
+const INTERNAL_TOOLS_ENABLED = import.meta.env.DEV || (import.meta.env.VITE_INTERNAL_TOOLS === "true");
+
 const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
 const Services = lazy(() => import("./pages/Services"));
@@ -26,9 +30,13 @@ const FAQ = lazy(() => import("./pages/FAQ"));
 const Contact = lazy(() => import("./pages/Contact"));
 const RequestService = lazy(() => import("./pages/RequestService"));
 const ThankYou = lazy(() => import("./pages/ThankYou"));
-const KeywordsAdmin = lazy(() => import("./pages/KeywordsAdmin"));
+const KeywordsAdmin = INTERNAL_TOOLS_ENABLED
+  ? lazy(() => import("./pages/KeywordsAdmin"))
+  : ((() => null) as any);
 const CaseStudies = lazy(() => import("./pages/CaseStudies"));
-const ContentStudio = lazy(() => import("./pages/ContentStudio"));
+const ContentStudio = INTERNAL_TOOLS_ENABLED
+  ? lazy(() => import("./pages/ContentStudio"))
+  : ((() => null) as any);
 
 // Smart assistant is loaded only after user interaction (see SmartAssistantLauncher)
 
@@ -211,8 +219,12 @@ function AppLayout() {
 
                 <Route path="/services" component={Services} />
 
-                <Route path="/keywords" component={KeywordsAdmin} />
-                <Route path="/content-studio" component={ContentStudio} />
+                {INTERNAL_TOOLS_ENABLED ? (
+                  <>
+                    <Route path="/keywords" component={KeywordsAdmin} />
+                    <Route path="/content-studio" component={ContentStudio} />
+                  </>
+                ) : null}
 
                 {/* IMPORTANT: keep Home last to avoid "/" greedily matching other routes */}
                 <Route path="/" component={Home} />

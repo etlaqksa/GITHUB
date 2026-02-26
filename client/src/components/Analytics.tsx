@@ -132,13 +132,14 @@ export default function Analytics() {
 
       try {
         if (isTel) {
-          const phone = href.replace(/^tel:/i, '').trim();
-          trackEvent('contact', { ...base, contact_method: 'phone', phone, destination: href });
+          // Privacy: do NOT send phone numbers to analytics.
+          trackEvent('contact', { ...base, contact_method: 'phone' });
         } else if (isMail) {
-          const email = href.replace(/^mailto:/i, '').split('?')[0].trim();
-          trackEvent('contact', { ...base, contact_method: 'email', email, destination: href });
+          // Privacy: do NOT send email addresses to analytics.
+          trackEvent('contact', { ...base, contact_method: 'email' });
         } else if (isWa) {
-          trackEvent('contact', { ...base, contact_method: 'whatsapp', destination: href });
+          // Privacy: avoid sending full destination URLs.
+          trackEvent('contact', { ...base, contact_method: 'whatsapp' });
         }
       } catch {
         // ignore

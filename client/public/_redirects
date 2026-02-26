@@ -3,6 +3,14 @@
 # This avoids infinite redirects if the Netlify site has a trailing-slash setting.
 /        /ar           301!
 
+# --- Block internal tools in production (security) ---
+/keywords           /404.html   404
+/content-studio     /404.html   404
+/ar/keywords        /404.html   404
+/en/keywords        /404.html   404
+/ar/content-studio  /404.html   404
+/en/content-studio  /404.html   404
+
 # --- Legacy case-studies route is merged into /projects ---
 # Must be BEFORE the /ar/* and /en/* SPA rewrites.
 /ar/case-studies   /ar/projects   301!
