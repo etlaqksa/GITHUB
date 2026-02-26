@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 
 import { SEO } from '@/components/SEO';
-import HeroBlueprintV2 from '@/components/hero/HeroBlueprintV2';
+import HeroIntroSequence from '@/components/hero/HeroIntroSequence';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { trackEvent } from '@/lib/analytics';
 import { absUrl } from '@/lib/siteUrl';
@@ -16,7 +16,7 @@ export default function Home() {
   const [loc] = useLocation();
   const search = useUrlSearch();
 
-  const { heroVariant, showHeroPreview } = useMemo(() => {
+  const { heroVariant, showHeroPreview, forceMotion } = useMemo(() => {
     const rawEnv = (import.meta.env.VITE_HERO_VARIANT || '').toString().toLowerCase();
     // Default hero variant for production: Light (requested).
     const envVariant =
@@ -38,8 +38,17 @@ export default function Home() {
 
     // User requested the switcher to be visible in production without any parameters.
     const showHeroPreview = true;
-    return { heroVariant, showHeroPreview };
+    const forceMotion = params.get('motion') === '1' || params.get('forceMotion') === '1';
+
+    return { heroVariant, showHeroPreview, forceMotion };
   }, [loc, search]);
+
+  // Allow forcing motion for previewing animations even if the OS has reduced-motion enabled.
+  useEffect(() => {
+    if (typeof document === 'undefined') return;
+    if (forceMotion) document.documentElement.setAttribute('data-force-motion', '1');
+    else document.documentElement.removeAttribute('data-force-motion');
+  }, [forceMotion]);
 
   const updateHeroQuery = (next: Record<string, string | undefined>) => {
     if (typeof window === 'undefined') return;
@@ -175,21 +184,34 @@ export default function Home() {
         <div
           className={
             'absolute inset-0 z-10 pointer-events-none ' +
-            (isDesktopModeMobile ? 'bg-black/55' : isCoarsePointer ? 'bg-black/50' : 'bg-black/45')
+            (heroVariant === 'light'
+              ? isDesktopModeMobile
+                ? 'bg-white/25'
+                : isCoarsePointer
+                  ? 'bg-white/22'
+                  : 'bg-white/18'
+              : isDesktopModeMobile
+                ? 'bg-black/48'
+                : isCoarsePointer
+                  ? 'bg-black/44'
+                  : 'bg-black/38')
           }
           aria-hidden="true"
         />
 
         <div
           className={
-            'w-full container px-4 relative z-20 ' +
+            'w-full px-4 relative z-20 flex items-center justify-center ' +
             (isCoarsePointer ? 'pt-10 pb-14' : 'pt-12 pb-16 md:pt-16 md:pb-20')
           }
         >
-          <HeroBlueprintV2
+          <HeroIntroSequence
             heroVariant={heroVariant}
             heroWhatsAppUrl={heroWhatsAppUrl}
-            showVariantBadge={showHeroPreview}
+            showVariantSwitcher={showHeroPreview}
+            forceMotion={forceMotion}
+            onVariantChange={(v) => updateHeroQuery({ hero: v })}
+            onToggleMotion={() => updateHeroQuery({ motion: forceMotion ? undefined : '1' })}
             onExploreServicesClick={() => trackEvent('home_hero_explore_services', { language })}
             onWhatsappClick={() => trackEvent('home_hero_whatsapp_click', { language })}
           />

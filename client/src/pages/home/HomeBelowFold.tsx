@@ -5,8 +5,6 @@ import ClientLogosWall from '@/components/ClientLogosWall';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Section } from '@/components/layout/Section';
-import { SectionHeader } from '@/components/layout/SectionHeader';
 import { trackEvent } from '@/lib/analytics';
 import { cities } from '@/data/seoLocations';
 import { AlertTriangle, CheckCircle2, Sparkles } from 'lucide-react';
@@ -270,15 +268,18 @@ export default function HomeBelowFold() {
   return (
     <>
       {/* QUICK PATHS */}
-      <Section>
-        <div className="w-full">
-          <SectionHeader
-            eyebrow={<><Sparkles className="h-4 w-4" />{language === 'ar' ? 'ابدأ من الحالة' : 'Start from your case'}</>}
-            title={language === 'ar' ? 'اختر حالتك — وخذ خطوة واضحة' : 'Pick your case — get a clear next step'}
-            subtitle={language === 'ar'
+      <section className="py-12 md:py-16">
+        <div className="w-full px-4">
+          <div className="max-w-3xl mx-auto text-center space-y-3">
+            <h2 className="text-2xl md:text-4xl font-bold">
+              {language === 'ar' ? 'اختر حالتك — وخذ خطوة واضحة' : 'Pick your case — get a clear next step'}
+            </h2>
+            <p className="text-muted-foreground">
+              {language === 'ar'
                 ? 'بدون تعقيد: اختر ما يطابق حالتك، ثم أرسل التفاصيل لنقترح المسار الأنسب.'
                 : 'No friction: choose what matches your case, then share details and we’ll guide the best route.'}
-          />
+            </p>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
             {quickPaths.map((p, idx) => (
@@ -308,18 +309,19 @@ export default function HomeBelowFold() {
             ))}
           </div>
         </div>
-      </Section>
+      </section>
 
       {/* SERVICES */}
-      <Section id="services" tone="muted">
-        <div className="w-full">
-          <SectionHeader
-            eyebrow={<><Sparkles className="h-4 w-4" />{language === 'ar' ? 'الخدمات' : 'Core services'}</>}
-	            title={language === 'ar' ? 'خدماتنا الأساسية' : 'Core services'}
-            subtitle={language === 'ar'
+      <section id="services" className="py-12 md:py-16 bg-muted/20">
+        <div className="w-full px-4">
+          <div className="max-w-3xl mx-auto text-center space-y-3">
+            <h2 className="text-2xl md:text-4xl font-bold">{language === 'ar' ? 'خدماتنا الأساسية' : 'Core services'}</h2>
+            <p className="text-muted-foreground">
+              {language === 'ar'
                 ? 'خدمات مركزة ومباشرة لمعالجة المشاكل تحت الأساسات: حقن التربة، كشف التكهفات، والدراسات الجيوفيزيائية.'
                 : 'Focused subsurface services: soil grouting, cavity detection, and geophysical surveys.'}
-          />
+            </p>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-6 mt-10">
             {services.map((s) => (
@@ -368,21 +370,19 @@ export default function HomeBelowFold() {
             ))}
           </div>
         </div>
-      </Section>
+      </section>
 
       {/* APPROACH + VALUE */}
-      <Section>
-        <div className="w-full">
-          <div className="grid lg:grid-cols-2 gap-10 items-start">
-            <div className="space-y-6">
-              <SectionHeader
-                align="start"
-                eyebrow={<><IconChecklist className="h-4 w-4" />{language === 'ar' ? 'منهجية التنفيذ' : 'Methodology'}</>}
-	                title={language === 'ar' ? 'منهجية عمل تقلل المخاطر' : 'A method that reduces risk'}
-                subtitle={language === 'ar'
+      <section className="py-12 md:py-16">
+        <div className="w-full px-4">
+          <div className="grid lg:grid-cols-2 gap-8 items-start">
+            <div className="space-y-4">
+              <h2 className="text-2xl md:text-4xl font-bold">{language === 'ar' ? 'منهجية عمل تقلل المخاطر' : 'A method that reduces risk'}</h2>
+              <p className="text-muted-foreground leading-relaxed">
+                {language === 'ar'
                   ? 'هدفنا ليس “حل سريع” فقط — بل حل صحيح. لذلك نعتمد خطوات واضحة من التشخيص حتى التسليم، مع تنفيذ مرحلي وتوثيق مناسب لمتطلبات المشروع.'
                   : 'Our goal isn’t just a “quick fix” — it’s the correct fix. We follow clear steps from diagnosis to deliverables, with staged execution and documentation aligned with project requirements.'}
-              />
+              </p>
 
               <div className="grid sm:grid-cols-2 gap-4 pt-2">
                 {valuePillars.map((p, idx) => (
@@ -436,24 +436,24 @@ export default function HomeBelowFold() {
             </Card>
           </div>
         </div>
-      </Section>
+      </section>
 
       {/* CLIENTS */}
       <ClientLogosWall />
 
       {/* LOCATIONS */}
-      <Section tone="muted">
-        <div className="w-full">
-          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-            <div className="space-y-6">
-              <SectionHeader
-                align="start"
-                eyebrow={<><IconLocation className="h-4 w-4" />{language === 'ar' ? 'التغطية الجغرافية' : 'Coverage'}</>}
-	                title={language === 'ar' ? 'نغطي مناطق المملكة' : 'Serving all regions of KSA'}
-                subtitle={language === 'ar'
+      <section className="py-12 md:py-16 bg-muted/20">
+        <div className="w-full px-4">
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+            <div className="space-y-2">
+              <h2 className="text-2xl md:text-4xl font-bold">
+                {language === 'ar' ? 'نغطي مناطق المملكة' : 'Serving all regions of KSA'}
+              </h2>
+              <p className="text-muted-foreground leading-relaxed">
+                {language === 'ar'
                   ? 'فرق ميدانية وخطط تنفيذ قابلة للتوسع حسب حجم المشروع. يمكنك البدء من صفحة مدينتك أو طلب تقييم مباشر.'
                   : 'Field crews and scalable execution plans depending on scope. Start from your city page or request an assessment.'}
-	              />
+              </p>
 
               <div className="flex flex-col sm:flex-row gap-3 pt-2">
                 <LocalizedLink href="/locations" className="inline-flex">
@@ -493,34 +493,34 @@ export default function HomeBelowFold() {
             </Card>
           </div>
         </div>
-      </Section>
+      </section>
 
       {/* FAQ (lazy + in-view) */}
       <InViewMount
-        fallback={<div className="py-12 md:py-16 bg-muted/20"><div className="w-full"><div className="max-w-4xl mx-auto mt-8"><div className="h-64 rounded-3xl border bg-card/50" /></div></div></div>}
+        fallback={<div className="py-12 md:py-16 bg-muted/20"><div className="w-full px-4"><div className="max-w-4xl mx-auto mt-8"><div className="h-64 rounded-3xl border bg-card/50" /></div></div></div>}
       >
         <Suspense
-          fallback={<div className="py-12 md:py-16 bg-muted/20"><div className="w-full"><div className="max-w-4xl mx-auto mt-8"><div className="h-64 rounded-3xl border bg-card/50" /></div></div></div>}
+          fallback={<div className="py-12 md:py-16 bg-muted/20"><div className="w-full px-4"><div className="max-w-4xl mx-auto mt-8"><div className="h-64 rounded-3xl border bg-card/50" /></div></div></div>}
         >
           <LazyHomeFaqSection />
         </Suspense>
       </InViewMount>
 
       {/* FINAL CTA */}
-      <Section>
-        <div className="w-full">
+      <section className="py-12 md:py-16">
+        <div className="w-full px-4">
           <div className="etlaq-card rounded-3xl border bg-card p-8 md:p-12">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div className="space-y-3">
                 <h2 className="text-2xl md:text-4xl font-bold">
                   {language === 'ar' ? 'ابدأ بخطوة واحدة' : 'Start with one clear step'}
                 </h2>
-	                <p className="text-muted-foreground leading-relaxed">
-	                  {language === 'ar'
-	                    ? 'أرسل تفاصيل الحالة وسنقترح المسار الأنسب: كشف/دراسة/حقن — مع خطة أولية ومخرجات واضحة.'
-	                    : 'Share your case details and we’ll suggest the best route: detection/surveys/grouting — with a clear initial plan and practical deliverables.'}
-	                </p>
-            </div>
+                <p className="text-muted-foreground leading-relaxed">
+                  {language === 'ar'
+                    ? 'أرسل تفاصيل الحالة وسنقترح المسار الأنسب: كشف/دراسة/حقن — مع خطة أولية ومخرجات واضحة.'
+                    : 'Share your case details and we’ll suggest the best route: detection/surveys/grouting — with a clear initial plan and practical deliverables.'}
+                </p>
+              </div>
               <div className="flex flex-col gap-3">
                 <LocalizedLink href="/request-service">
                   <Button size="lg" className="w-full" onClick={() => trackEvent('home_final_cta_request', { language })}>
@@ -536,7 +536,7 @@ export default function HomeBelowFold() {
             </div>
           </div>
         </div>
-      </Section>
+      </section>
     </>
   );
 }

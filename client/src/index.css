@@ -291,24 +291,17 @@ html[data-theme='red'] {
   }
 
   /* App background: subtle, professional color wash (applied on the root wrapper) */
-  
-.app-background {
-  --pa: var(--etlaq-accent-rgb, 37 99 235);
-  --pa2: var(--etlaq-accent2-rgb, 14 165 233);
-  --ink-rgb: 11 27 52;
-
-  background-color: var(--background);
-  background-image:
-    linear-gradient(to right, rgb(var(--ink-rgb) / 0.055) 1px, transparent 1px),
-    linear-gradient(to bottom, rgb(var(--ink-rgb) / 0.055) 1px, transparent 1px),
-    radial-gradient(1200px circle at 15% -10%, rgb(var(--pa) / 0.14), transparent 55%),
-    radial-gradient(1000px circle at 90% 0%, rgb(var(--pa2) / 0.12), transparent 55%),
-    radial-gradient(900px circle at 50% 110%, oklch(0.68 0.22 45 / 0.10), transparent 60%),
-    linear-gradient(180deg, oklch(0.99 0 0), oklch(0.96 0.005 250));
-  background-size: 48px 48px, 48px 48px, auto, auto, auto, auto;
-  background-position: -8px -8px, -8px -8px, 0 0, 0 0, 0 0, 0 0;
-  background-attachment: scroll;
-}
+  .app-background {
+    --pa: var(--etlaq-accent-rgb, 37 99 235);
+    --pa2: var(--etlaq-accent2-rgb, 14 165 233);
+    background-color: var(--background);
+    background-image:
+      radial-gradient(1200px circle at 15% -10%, rgb(var(--pa) / 0.13), transparent 55%),
+      radial-gradient(1000px circle at 90% 0%, rgb(var(--pa2) / 0.12), transparent 55%),
+      radial-gradient(900px circle at 50% 110%, oklch(0.68 0.22 45 / 0.10), transparent 60%),
+      linear-gradient(180deg, oklch(0.99 0 0), oklch(0.96 0.005 250));
+    background-attachment: scroll;
+  }
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Inter', 'IBM Plex Sans Arabic', ui-sans-serif, system-ui, sans-serif;
     font-weight: 700;
@@ -1225,12 +1218,8 @@ img {
   h2 { @apply text-2xl font-bold tracking-tight; }
   h3 { @apply text-xl font-bold; }
   body { @apply text-base leading-relaxed; }
-}
 
-/* Tailwind v4 removed the @screen directive.
-   Use a standard media query instead to keep builds warning-free. */
-@media (min-width: 768px) {
-  @layer base {
+  @screen md {
     h1 { @apply text-5xl; }
     h2 { @apply text-3xl; }
     h3 { @apply text-2xl; }
@@ -1951,34 +1940,3 @@ html { scrollbar-gutter: stable; }
 
 /* Etlaq icon components */
 .etlaq-icon{display:inline-block;vertical-align:-0.125em;flex-shrink:0;}
-
-
-/* -------------------------------------------
-   Hero visual (Blueprint panel)
--------------------------------------------- */
-.etlaq-hero-visual {
-  position: relative;
-}
-.etlaq-hero-visual::before {
-  content: "";
-  position: absolute;
-  inset: -1px;
-  border-radius: 1.6rem;
-  background: radial-gradient(900px 420px at 20% 0%, rgb(var(--etlaq-accent-rgb, 37 99 235) / 0.22), transparent 55%),
-              radial-gradient(700px 360px at 90% 20%, rgb(var(--etlaq-accent2-rgb, 14 165 233) / 0.18), transparent 60%);
-  filter: blur(18px);
-  opacity: 0.65;
-  z-index: -1;
-  pointer-events: none;
-}
-.etlaq-blueprint-overlay {
-  background-image:
-    linear-gradient(to right, rgb(255 255 255 / 0.12) 1px, transparent 1px),
-    linear-gradient(to bottom, rgb(255 255 255 / 0.12) 1px, transparent 1px),
-    linear-gradient(to right, rgb(255 255 255 / 0.06) 1px, transparent 1px),
-    linear-gradient(to bottom, rgb(255 255 255 / 0.06) 1px, transparent 1px);
-  background-size: 36px 36px, 36px 36px, 12px 12px, 12px 12px;
-  background-position: 0 0, 0 0, 0 0, 0 0;
-  opacity: 0.45;
-  mix-blend-mode: overlay;
-}
