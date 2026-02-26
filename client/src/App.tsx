@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import TopBar from "./components/TopBar";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
+import ClaritySpaBridge from "./components/ClaritySpaBridge";
 import SkipToContent from "./components/SkipToContent";
 import AntiInspectGuard from "./components/AntiInspectGuard";
 import { ThemeProvider } from "./contexts/ThemeContext";
@@ -162,6 +163,7 @@ function AppLayout() {
     <div className="flex flex-col min-h-screen app-background etlaq-color-typography pb-24 md:pb-0">
       <ScrollToTop />
       <SkipToContent />
+      <ClaritySpaBridge />
 
       {/* Shared SVG defs for Etlaq 3D icons (render once) */}
       <Etlaq3DIconDefs />
