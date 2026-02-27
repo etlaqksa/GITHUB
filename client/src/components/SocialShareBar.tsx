@@ -134,25 +134,18 @@ const Icons = {
 };
 
 const COLORS = {
-  whatsapp: "bg-[#25D366] hover:bg-[#1fb85a]",
-  facebook: "bg-[#1877F2] hover:bg-[#1366cf]",
-  x: "bg-[#111827] hover:bg-black",
-  pinterest: "bg-[#E60023] hover:bg-[#cc001f]",
-  linkedin: "bg-[#0A66C2] hover:bg-[#0958a8]",
-  telegram: "bg-[#229ED9] hover:bg-[#1b86b9]",
-  email: "bg-slate-700 hover:bg-slate-800",
-  copy: "bg-slate-200 hover:bg-slate-300 text-slate-900",
-};
-
-function ShareLink({ label, className, href, icon }: { label: string; className: string; href: string; icon: React.ReactNode }) {
-  const base = "inline-flex items-center gap-2 rounded-full px-3 py-2 text-sm font-semibold shadow-sm transition active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-400";
-  return (
-    <a href={href} target="_blank" rel="noopener noreferrer" aria-label={label} title={label} className={`${base} ${className}`}>
-      <IconWrap>{icon}</IconWrap>
-      <span className="whitespace-nowrap">{label}</span>
-    </a>
-  );
-}
+  // Unified light background (match the "Copy link" button)
+  btn: "bg-slate-200 hover:bg-slate-300 text-slate-900",
+  // Brand colors for icons (keeps recognition while background stays unified)
+  iconWhatsapp: "text-[#25D366]",
+  iconFacebook: "text-[#1877F2]",
+  iconX: "text-[#111827]",
+  iconPinterest: "text-[#E60023]",
+  iconLinkedin: "text-[#0A66C2]",
+  iconTelegram: "text-[#229ED9]",
+  iconEmail: "text-slate-700",
+  iconCopy: "text-slate-900",
+} as const;
 
 export default function SocialShareBar({ title, showCompanyDetails = true, url, imageUrl, variant = "inline" }: Props) {
   const [loc] = useLocation();
@@ -200,16 +193,16 @@ export default function SocialShareBar({ title, showCompanyDetails = true, url, 
   return (
     <section className={wrapClass} aria-label={isAr ? "مشاركة المقال" : "Share"}>
       <div className="flex flex-wrap items-center gap-2">
-        <ShareLink label={isAr ? "واتساب" : "WhatsApp"} className={`text-white ${COLORS.whatsapp}`} href={links.whatsapp} icon={Icons.whatsapp} />
-        <ShareLink label={isAr ? "فيسبوك" : "Facebook"} className={`text-white ${COLORS.facebook}`} href={links.facebook} icon={Icons.facebook} />
-        <ShareLink label={isAr ? "إكس" : "X"} className={`text-white ${COLORS.x}`} href={links.x} icon={Icons.x} />
-        <ShareLink label={isAr ? "بنتريست" : "Pinterest"} className={`text-white ${COLORS.pinterest}`} href={links.pinterest} icon={Icons.pinterest} />
-        <ShareLink label={isAr ? "لينكدإن" : "LinkedIn"} className={`text-white ${COLORS.linkedin}`} href={links.linkedin} icon={Icons.linkedin} />
-        <ShareLink label={isAr ? "تيليجرام" : "Telegram"} className={`text-white ${COLORS.telegram}`} href={links.telegram} icon={Icons.telegram} />
-        <ShareLink label={isAr ? "البريد" : "Email"} className={`text-white ${COLORS.email}`} href={links.email} icon={Icons.email} />
+        <ShareLink label={isAr ? "واتساب" : "WhatsApp"} className={COLORS.btn} href={links.whatsapp} icon={Icons.whatsapp} iconClassName={COLORS.iconWhatsapp} />
+        <ShareLink label={isAr ? "فيسبوك" : "Facebook"} className={COLORS.btn} href={links.facebook} icon={Icons.facebook} iconClassName={COLORS.iconFacebook} />
+        <ShareLink label={isAr ? "إكس" : "X"} className={COLORS.btn} href={links.x} icon={Icons.x} iconClassName={COLORS.iconX} />
+        <ShareLink label={isAr ? "بنتريست" : "Pinterest"} className={COLORS.btn} href={links.pinterest} icon={Icons.pinterest} iconClassName={COLORS.iconPinterest} />
+        <ShareLink label={isAr ? "لينكدإن" : "LinkedIn"} className={COLORS.btn} href={links.linkedin} icon={Icons.linkedin} iconClassName={COLORS.iconLinkedin} />
+        <ShareLink label={isAr ? "تيليجرام" : "Telegram"} className={COLORS.btn} href={links.telegram} icon={Icons.telegram} iconClassName={COLORS.iconTelegram} />
+        <ShareLink label={isAr ? "البريد" : "Email"} className={COLORS.btn} href={links.email} icon={Icons.email} iconClassName={COLORS.iconEmail} />
         <button
           type="button"
-          className={`inline-flex items-center gap-2 rounded-full px-3 py-2 text-sm font-semibold shadow-sm transition active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-400 ${COLORS.copy}`}
+          className={`inline-flex items-center gap-2 rounded-full px-3 py-2 shadow-sm transition active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-400 ${COLORS.btn}`}
           onClick={async () => {
             const ok = await copyToClipboard(resolvedUrl);
             setCopied(ok);
@@ -218,8 +211,8 @@ export default function SocialShareBar({ title, showCompanyDetails = true, url, 
           aria-label={isAr ? "نسخ الرابط" : "Copy link"}
           title={isAr ? "نسخ الرابط" : "Copy link"}
         >
-          <IconWrap>{Icons.copy}</IconWrap>
-          <span className="whitespace-nowrap">{copied ? (isAr ? "تم النسخ" : "Copied") : (isAr ? "نسخ الرابط" : "Copy")}</span>
+          <IconWrap><span className={COLORS.iconCopy}>{Icons.copy}</span></IconWrap>
+          <span className="whitespace-nowrap text-xs font-semibold">{copied ? (isAr ? "تم النسخ" : "Copied") : (isAr ? "نسخ الرابط" : "Copy")}</span>
         </button>
       </div>
 
