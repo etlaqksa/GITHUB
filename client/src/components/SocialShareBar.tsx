@@ -147,6 +147,34 @@ const COLORS = {
   iconCopy: "text-slate-900",
 } as const;
 
+
+type ShareLinkProps = {
+  label: string;
+  href: string;
+  className?: string;
+  icon: React.ReactNode;
+  iconClassName?: string;
+};
+
+function ShareLink({ label, href, className = "", icon, iconClassName = "" }: ShareLinkProps) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`inline-flex items-center gap-2 rounded-full px-3 py-2 shadow-sm transition active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-400 ${className}`}
+      aria-label={label}
+      title={label}
+    >
+      <IconWrap>
+        <span className={iconClassName}>{icon}</span>
+      </IconWrap>
+      <span className="whitespace-nowrap text-xs font-semibold">{label}</span>
+    </a>
+  );
+}
+
+
 export default function SocialShareBar({ title, showCompanyDetails = true, url, imageUrl, variant = "inline" }: Props) {
   const [loc] = useLocation();
   const [copied, setCopied] = useState(false);
