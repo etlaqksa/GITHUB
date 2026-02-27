@@ -591,7 +591,7 @@ export default function BlogPost() {
               {contentRaw}
             </ReactMarkdown>
         <div className="mt-10">
-          <SocialShareBar title={post.title} variant="card" />
+          <SocialShareBar title={title} variant="card" />
         </div>
 
           </article>
