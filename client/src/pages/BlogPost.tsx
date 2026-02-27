@@ -22,6 +22,8 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import { findArticleByAnySlug, getArticleUrlSlug } from '@/lib/articleUrl';
 import { localizeBarePathToLang } from '@/lib/mapPathToLang';
 
+import SocialShareBar from "../components/SocialShareBar";
+
 function stripMarkdown(md: string) {
   return md
     .replace(/```[\s\S]*?```/g, ' ')
@@ -354,6 +356,10 @@ export default function BlogPost() {
             />
 
             <h1 className="text-3xl font-bold mb-4">{language === 'ar' ? 'المقال غير موجود' : 'Article not found'}</h1>
+          <div className="mt-4">
+            <SocialShareBar variant="card" />
+          </div>
+
           <LocalizedLink href="/blog" className="text-primary underline">
             {language === 'ar' ? 'العودة للمقالات' : 'Back to blog'}
           </LocalizedLink>
@@ -584,6 +590,10 @@ export default function BlogPost() {
             >
               {contentRaw}
             </ReactMarkdown>
+        <div className="mt-10">
+          <SocialShareBar title={post.title} variant="card" />
+        </div>
+
           </article>
 
           {((language === 'ar' ? article.faqAr : article.faqEn) || []).length > 0 && (
