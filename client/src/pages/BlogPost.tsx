@@ -616,6 +616,38 @@ export default function BlogPost() {
             </section>
           )}
 
+          {/* Article-end CTA */}
+          <div className="mt-10 rounded-2xl border border-primary/20 bg-primary/5 p-6 sm:p-8">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div>
+                <h3 className="font-bold text-lg">
+                  {language === 'ar' ? 'هل لديك مشكلة مشابهة؟' : 'Facing a similar problem?'}
+                </h3>
+                <p className="text-sm text-muted-foreground mt-1">
+                  {language === 'ar'
+                    ? 'فريق إطلاق الهندسي يقدّم تقييماً مختصراً مجانياً. تواصل معنا عبر الواتساب أو صفحة طلب الخدمة.'
+                    : 'ETLAQ's engineering team provides a free brief assessment. Reach us via WhatsApp or the service request page.'}
+                </p>
+              </div>
+              <div className="flex gap-3 flex-shrink-0">
+                <a
+                  href={`https://wa.me/966534145922?text=${encodeURIComponent(language === 'ar' ? 'السلام عليكم، قرأت مقالاً في موقعكم وأود الاستفسار.' : 'Hello, I read an article on your site and would like to inquire.')}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-[#25d366] hover:bg-[#1ebe57] text-white font-semibold text-sm px-4 py-2.5 rounded-xl transition-colors"
+                >
+                  <span>💬</span>
+                  {language === 'ar' ? 'واتساب' : 'WhatsApp'}
+                </a>
+                <LocalizedLink href="/request-service">
+                  <button type="button" className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-sm px-4 py-2.5 rounded-xl transition-colors">
+                    {language === 'ar' ? 'اطلب خدمة' : 'Request Service'}
+                  </button>
+                </LocalizedLink>
+              </div>
+            </div>
+          </div>
+
           <RelatedLinksHub signals={relatedSignals} />
         </div>
       </div>

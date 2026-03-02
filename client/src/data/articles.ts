@@ -45,7 +45,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "what-is-soil-grouting",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/what-is-soil-grouting.webp",
       alt: "ما هو حقن التربة؟ تعريف عملي يربط الآلية بالقرار الهندسي",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -143,7 +143,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "building-settlement-causes",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/building-settlement-causes.webp",
       alt: "تاريخ وتطور تقنيات حقن التربة في الهندسة المدنية",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -320,7 +320,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "cavity-detection-techniques",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/cavity-detection-techniques.webp",
       alt: "الفرق بين تحسين التربة (Ground Improvement) وتقوية التربة (Soil Stabilization)",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -450,7 +450,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "cement-grouting-types",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/cement-grouting-types.webp",
       alt: "فيزياء الحقن: كيف ينتشر الملاط داخل المسام والشقوق؟",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -623,7 +623,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "building-cracks-solutions",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/building-cracks-solutions.webp",
       alt: "دور المهندس الجيوتقني في تصميم برامج الحقن",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -779,7 +779,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "soil-testing-importance",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/soil-testing-importance.webp",
       alt: "المصطلحات الأساسية في عالم الحقن (نفاذية، لزوجة، ضغط، تدفق)",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -917,7 +917,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "gpr-technology",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/gpr-technology.webp",
       alt: "متى يكون الحقن هو الحل الأمثل؟ (دراسة الجدوى الفنية والاقتصادية)",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -1063,7 +1063,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "concrete-slab-settlement",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/concrete-slab-settlement.webp",
       alt: "معايير الجودة العالمية في أعمال الحقن (EN 12715 و ASTM)",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -1191,7 +1191,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "epoxy-injection-repair",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/epoxy-injection-repair.webp",
       alt: "الفرق بين الحقن العلاجي (Remedial Grouting) والحقن الوقائي (Preventative Grouting)",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -1295,7 +1295,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "foundation-strengthening",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/foundation-strengthening.webp",
       alt: "تحديات حقن التربة في البيئات الصحراوية والمناطق الساحلية",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -1425,7 +1425,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "geotechnical-problems-saudi",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/geotechnical-problems-saudi.webp",
       alt: "الحقن النفاذي (Permeation Grouting): الآلية والتطبيقات",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -1565,7 +1565,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "jet-grouting-technology",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/jet-grouting-technology.webp",
       alt: "الحقن الانضغاطي (Compaction Grouting): متى وكيف نستخدمه؟",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -1699,7 +1699,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "choosing-grouting-technique",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/choosing-grouting-technique.webp",
       alt: "الحقن النفاث (Jet Grouting): من فيزياء النفث إلى خصائص الأعمدة",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -1863,7 +1863,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "foundation-water-leakage",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/foundation-water-leakage.webp",
       alt: "حقن الكسر الهيدروليكي (Fracture Grouting): التحكم في رفع المنشآت",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -1981,7 +1981,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "carbon-fiber-reinforcement",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/carbon-fiber-reinforcement.webp",
       alt: "حقن الستارة (Curtain Grouting): فلسفة تقليل النفاذية في السدود",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -2101,7 +2101,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "periodic-building-inspection",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/periodic-building-inspection.webp",
       alt: "الحقن التعويضي (Compensation Grouting): حماية المنشآت أثناء الحفر النفقي",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -2222,7 +2222,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "rock-cavities-solutions",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/rock-cavities-solutions.webp",
       alt: "حقن الفراغات (Void Filling): معالجة التكهفات والجيوب الهوائية",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -2445,7 +2445,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "soil-improvement-techniques",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/soil-improvement-techniques.webp",
       alt: "الحقن الكيميائي: استخدام الراتنجات والسيليكات",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -2599,7 +2599,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "geotech-encyclopedia-01",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/polyurethane-grouting-01.webp",
       alt: "حقن البولي يوريثان (Polyurethane Grouting): السرعة والكفاءة في منع التسرب",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -2735,7 +2735,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "geotech-encyclopedia-02",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/microfine-cement-grouting-02.webp",
       alt: "الملاط الدقيق (Microfine Cement): اختراق التربة ذات النفاذية المنخفضة",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -2879,7 +2879,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "geotech-encyclopedia-03",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/under-raft-grouting-03.webp",
       alt: "الحقن أسفل اللبشة (Under-Raft Grouting): تحسين تفاعل التربة والأساس",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -3001,7 +3001,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "geotech-encyclopedia-04",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/grouting-in-fractured-rock-and-karst-04.webp",
       alt: "تقنيات الحقن في الصخور المتشققة والطبقات الكارستية",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -3191,7 +3191,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "geotech-encyclopedia-05",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/cement-grout-rheology-05.webp",
       alt: "رولوجيا الملاط الإسمنتي: اللزوجة، الإجهاد الخاضع، والاتساق",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -3347,7 +3347,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "geotech-encyclopedia-06",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/how-the-water-to-cement-ratio-affects-strength-06.webp",
       alt: "تأثير نسبة الماء إلى الإسمنت (W/C Ratio) على قوة وديمومة الحقن",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -3503,7 +3503,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "geotech-encyclopedia-07",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/chemical-admixtures-for-grout-07.webp",
       alt: "الإضافات الكيميائية للملاط: الملدنات، المسرعات، والمواد المانعة للنزف",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -3629,7 +3629,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "geotech-encyclopedia-08",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/pozzolanic-materials-in-grout-mixes-08.webp",
       alt: "استخدام المواد البوزولانية (Fly Ash, Silica Fume) في خلطات الحقن",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -3779,7 +3779,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "geotech-encyclopedia-09",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/grout-bleeding-and-segregation-09.webp",
       alt: "نزف الملاط (Bleeding) والانفصال الحبيبي: المخاطر والحلول",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -3937,7 +3937,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "geotech-encyclopedia-10",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/sulfate-resistant-cement-10.webp",
       alt: "الإسمنت المقاوم للكبريتات: ضرورة هندسية في تربة الخليج العربي",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -4056,7 +4056,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "geotech-encyclopedia-11",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/eco-friendly-grouting-materials-11.webp",
       alt: "المواد الصديقة للبيئة في حقن التربة: التوجهات الحديثة",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -4240,7 +4240,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "geotech-encyclopedia-12",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/laboratory-testing-of-grouting-materials-12.webp",
       alt: "اختبارات المختبر لمواد الحقن: قبل وأثناء التنفيذ",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -4360,7 +4360,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "geotech-encyclopedia-13",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/grout-stability-13.webp",
       alt: "استقرار الملاط (Grout Stability): الفرق بين الملاط المستقر وغير المستقر",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -4492,7 +4492,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "geotech-encyclopedia-14",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/selecting-grout-type-using-soil-gradation-14.webp",
       alt: "اختيار مادة الحقن بناءً على قطر حبيبات التربة (D10/D15)",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -4609,7 +4609,7 @@ export const articles: ArticleContent[] = [
       author: "فريق ETLAQ الهندسي",
       slug: "geotech-encyclopedia-15",
       image: {
-        url: "/favicon.webp",
+        url: "/article-images/card/ar/back-of-envelope-grout-spread-calculations-15.webp",
         alt: "حسابات تقريبية لانتشار الحقن: نصف قطر تأثير ولماذا يخطئ كثيرًا",
         creditName: "ETLAQ (generated)",
         creditUrl: "",
@@ -4679,7 +4679,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "geotech-encyclopedia-16",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/differential-settlement-16.webp",
       alt: "الهبوط التفاضلي (Differential Settlement): الكابوس الإنشائي وكيفية قراءته",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -4799,7 +4799,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "geotech-encyclopedia-17",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/crack-pattern-interpretation-17.webp",
       alt: "تحليل أنماط التشققات: هل هي إنشائية أم ناتجة عن هبوط التربة؟",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -4923,7 +4923,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "geotech-encyclopedia-18",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/how-water-leaks-from-tanks-and-18.webp",
       alt: "تأثير تسربات المياه (الخزانات والشبكات) على استقرار الأساسات",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -5059,7 +5059,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "geotech-encyclopedia-19",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/expansive-soils-19.webp",
       alt: "التربة الانتفاخية (Expansive Soil): مشاكلها وحلول الحقن المقترحة",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -5187,7 +5187,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "geotech-encyclopedia-20",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/collapsible-soils-20.webp",
       alt: "التربة الانهيارية (Collapsible Soil): مخاطر الغمر بالماء وكيفية معالجتها",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -5332,7 +5332,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "geotech-encyclopedia-21",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/voids-beneath-floor-slabs-21.webp",
       alt: "الفراغات تحت بلاطات الأرضيات: الأسباب، المخاطر، وطرق المعالجة",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -5482,7 +5482,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "geotech-encyclopedia-22",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/impact-of-nearby-construction-on-existing-22.webp",
       alt: "تأثير الأعمال الإنشائية المجاورة على استقرار المباني القائمة",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -5696,7 +5696,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "geotech-encyclopedia-23",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/natural-sinkholes-23.webp",
       alt: "التكهفات الطبيعية (Sinkholes): كيف تتكون وكيف نكتشفها؟",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -5864,7 +5864,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "geotech-encyclopedia-24",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/how-moisture-changes-the-behavior-of-24.webp",
       alt: "دور الرطوبة في تغيير خصائص التربة الطينية والرملية",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -5984,7 +5984,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "geotech-encyclopedia-25",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/void-detection-methods-compared-25.webp",
       alt: "تقنيات كشف الفراغات: مقارنة دقة وإشارات كل تقنية",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -6152,7 +6152,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "geotech-encyclopedia-26",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/ground-penetrating-radar-gpr-26.webp",
       alt: "رادار الاختراق الأرضي (GPR): كيف يعمل، أين ينجح، وأين يخدعنا؟",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -6300,7 +6300,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "geotech-encyclopedia-27",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/electrical-resistivity-tomography-ert-27.webp",
       alt: "المسح الكهربائي (ERT): رسم خرائط المقاومية للكشف عن المياه والفراغات",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -6416,7 +6416,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "geotech-encyclopedia-28",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/microgravity-surveys-28.webp",
       alt: "الميكروغرافيتي (Microgravity): التقنية الأدق لكشف التكهفات العميقة",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -6536,7 +6536,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "geotech-encyclopedia-29",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/seismic-surveys-29.webp",
       alt: "المسح السيزمي: قياس سرعة الموجات لتقييم صلابة التربة",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -6692,7 +6692,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "geotech-encyclopedia-30",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/integrating-geophysical-and-geotechnical-data-for-30.webp",
       alt: "دمج البيانات الجيوفيزيائية والجيوتقنية: الوصول إلى صورة كاملة للموقع",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -6808,7 +6808,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "geotech-encyclopedia-31",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/accuracy-limits-in-geophysical-instruments-31.webp",
       alt: "حدود الدقة في الأجهزة الجيوفيزيائية: إدارة التوقعات",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -6952,7 +6952,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "geotech-encyclopedia-32",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/post-survey-verification-boreholes-32.webp",
       alt: "التحقق بالثقوب الاستكشافية بعد المسح: كيفية أخذ عينة قرار",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -7092,7 +7092,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "geotech-encyclopedia-33",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/borehole-cameras-33.webp",
       alt: "استخدام الكاميرات داخل الثقوب (Borehole Camera) لمعاينة الفراغات",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -7232,7 +7232,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "geotech-encyclopedia-34",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/interpreting-anomalies-in-survey-reports-34.webp",
       alt: "تفسير الشذوذ (Anomalies) في تقارير المسح: بين الواقع والخطأ التقني",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -7350,7 +7350,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "geotech-encyclopedia-35",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/grouting-equipment-35.webp",
       alt: "معدات الحقن: من المضخات اليدوية إلى الأنظمة المحوسبة",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -7476,7 +7476,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "geotech-encyclopedia-36",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/designing-an-injection-grid-36.webp",
       alt: "تصميم شبكة نقاط الحقن: المسافات، الأعماق، والتسلسل",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -7602,7 +7602,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "geotech-encyclopedia-37",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/monitoring-injection-pressure-37.webp",
       alt: "مراقبة ضغط الحقن: الحفاظ على توازن المنشأ",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -7743,7 +7743,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "geotech-encyclopedia-38",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/flow-rate-measurement-38.webp",
       alt: "قياس معدل التدفق (Flow Rate) وأهميته في تحديد حجم الفراغات",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -7875,7 +7875,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "geotech-encyclopedia-39",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/refusal-criteria-in-grouting-39.webp",
       alt: "معايير التوقف عن الحقن (Refusal Criteria): متى ننهي العمل في النقطة؟",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -8001,7 +8001,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "geotech-encyclopedia-40",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/why-grouting-logs-matter-40.webp",
       alt: "أهمية السجلات اليومية (Grouting Logs) في توثيق الجودة",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -8123,7 +8123,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "geotech-encyclopedia-41",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/site-safety-in-grouting-works-41.webp",
       alt: "السلامة المهنية في مواقع أعمال الحقن والتعامل مع الضغوط العالية",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -8227,7 +8227,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "geotech-encyclopedia-42",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/site-management-42.webp",
       alt: "إدارة الموقع وتنسيق العمل بين فريق الحقن والمقاول الرئيسي",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -8345,7 +8345,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "geotech-encyclopedia-43",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/common-execution-mistakes-in-grouting-43.webp",
       alt: "الأخطاء الشائعة في تنفيذ أعمال الحقن وكيفية تجنبها",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -8505,7 +8505,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "geotech-encyclopedia-44",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/maintaining-grouting-equipment-44.webp",
       alt: "صيانة معدات الحقن وأثرها على دقة النتائج",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -8615,7 +8615,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "geotech-encyclopedia-45",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/underpinning-options-45.webp",
       alt: "تقوية الأساسات (Underpinning): خريطة خيارات بين الحقن والخوازيق",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -8739,7 +8739,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "geotech-encyclopedia-46",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/epoxy-injection-for-structural-cracks-46.webp",
       alt: "حقن الإيبوكسي للشقوق الإنشائية: متى يكون إصلاحاً إنشائياً؟",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -8906,7 +8906,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "geotech-encyclopedia-47",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/cfrp-strengthening-alongside-soil-grouting-47.webp",
       alt: "تدعيم العناصر الإنشائية بالكربون فايبر (CFRP) بالتزامن مع حقن التربة",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -9055,7 +9055,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "geotech-encyclopedia-48",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/settlement-remediation-48.webp",
       alt: "معالجة هبوط القواعد المنفصلة مقابل اللبشة المسلحة",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -9165,7 +9165,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "geotech-encyclopedia-49",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/protecting-heritage-structures-with-micro-grouting-techniques-49.webp",
       alt: "حماية المنشآت الأثرية والتاريخية باستخدام تقنيات الحقن الدقيق",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -9301,7 +9301,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "geotech-encyclopedia-50",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/ground-improvement-under-roads-and-runways-50.webp",
       alt: "تقوية التربة تحت الطرق والمدارج: متطلبات خاصة وسرعة تنفيذ",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -9490,7 +9490,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "soil-grouting-guide",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/soil-grouting-guide.webp",
       alt: "التعامل مع مشاكل التربة في الأبراج العالية والمباني ذات الأحمال الكبيرة",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -9602,7 +9602,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "foundation-strengthening-guide",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/foundation-strengthening-guide.webp",
       alt: "استعادة استقامة المباني المائلة (Structure Re-leveling) عبر الحقن",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -9723,7 +9723,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "void-detection-guide",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/void-detection-guide.webp",
       alt: "كيف تقرأ تقرير جسات التربة؟ من الجداول إلى المخاطر التصميمية",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -9879,7 +9879,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "sinkhole-investigation-guide",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/sinkhole-investigation-guide.webp",
       alt: "تحليل الحساسية في قرارات الحقن: أي متغير يغير قرارك أكثر؟",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -10035,7 +10035,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "validation-criteria-grouting",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/validation-criteria-grouting.webp",
       alt: "مستقبل حقن التربة: الذكاء الاصطناعي والاستشعار عن بعد",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -10169,7 +10169,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "gpr-vs-ert",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/gpr-vs-ert.webp",
       alt: "دراسة حالة: معالجة تكهف ضخم تحت منطقة سكنية (الدروس المستفادة)",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -10297,7 +10297,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "cracks-settlement-guide",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/cracks-settlement-guide.webp",
       alt: "دراسة حالة: وقف تسرب مياه جوفية في قبو مبنى تجاري",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -10417,7 +10417,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "soil-investigation-report-guide",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/soil-investigation-report-guide.webp",
       alt: "أهمية الفحص الدوري للمباني: مؤشرات مبكرة تمنع كوارث مستقبلية",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -10571,7 +10571,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "pre-construction-risk-guide",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/pre-construction-risk-guide.webp",
       alt: "دليل المالك: كيف تختار مقاول الحقن المتخصص؟",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -10712,7 +10712,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "maintenance-monitoring-guide",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/maintenance-monitoring-guide.webp",
       alt: "الخلاصة: فلسفة الحقن كعلم يجمع بين الخبرة الميدانية والنظرية الهندسية",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -10832,7 +10832,7 @@ export const articles: ArticleContent[] = [
     author: "فريق ETLAQ الهندسي",
     slug: "cfrp-soil-grouting-framework",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/cfrp-soil-grouting-framework.webp",
       alt: "دمج حقن التربة مع تدعيم CFRP: إطار عملي لاستقرار المنشآت ومعالجة الهبوط",
       creditName: "ETLAQ (generated)",
       creditUrl: "",
@@ -10973,7 +10973,7 @@ The concurrent application of CFRP strengthening and soil grouting constitutes a
     author: "فريق ETLAQ الهندسي",
     slug: "cfrp-soil-grouting-materials-standards",
     image: {
-      url: "/favicon.webp",
+      url: "/article-images/card/ar/cfrp-soil-grouting-materials-standards.webp",
       alt: "مواد ومعايير دمج CFRP مع حقن التربة: اختيار النظام المناسب وتقليل التشققات",
       creditName: "ETLAQ (generated)",
       creditUrl: "",

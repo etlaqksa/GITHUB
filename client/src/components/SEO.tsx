@@ -54,7 +54,7 @@ export function SEO({
       'شركة متخصصة في حقن التربة (الحقن الأسمنتي) وكشف التكهفات، مع دراسات جيوفيزيائية عند الحاجة في المملكة العربية السعودية',
     url: base,
     telephone: '+966534145922',
-    email: 'etlaqksa@gmail.com',
+    email: 'info@etlaqksa.com',
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'الرياض',
@@ -167,3 +167,17 @@ export function SEO({
   );
 }
 
+
+// Helper to build BreadcrumbList schema
+export function buildBreadcrumbSchema(items: { name: string; url: string }[]) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.name,
+      item: item.url,
+    })),
+  };
+}

@@ -6,14 +6,43 @@
   NODE_VERSION = "20"
   SITE_URL = "https://etlaqksa.com"
 
-# Ensure Netlify parses static HTML forms (Netlify Forms detection)
 [build.processing]
   ignore_html_forms = false
 
-# Language-prefixed SPA routing (matches public/_redirects)
-# NOTE: We intentionally do NOT force a trailing slash here to avoid redirect loops
-# if Netlify's trailing-slash setting is configured.
+# ─── Security Headers ─────────────────────────────────────────────────────────
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(self)"
+    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://clarity.ms https://www.clarity.ms; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob: https: http:; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://region1.google-analytics.com https://clarity.ms https://www.clarity.ms; frame-src https://www.google.com https://maps.google.com; object-src 'none'; base-uri 'self'; form-action 'self';"
 
+# ─── Cache Headers ─────────────────────────────────────────────────────────────
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000, stale-while-revalidate=86400"
+
+[[headers]]
+  for = "/article-images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000, stale-while-revalidate=86400"
+
+[[headers]]
+  for = "/media/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000, stale-while-revalidate=86400"
+
+# ─── Redirects ─────────────────────────────────────────────────────────────────
 [[redirects]]
   from = "/"
   to = "/ar"
@@ -96,6 +125,7 @@
   from = "/sitemap.xml"
   to = "/sitemap.xml"
   status = 200
+
 [[redirects]]
   from = "/googleb9eafcb71ddde876.html"
   to = "/googleb9eafcb71ddde876.html"
@@ -131,14 +161,7 @@
   to = "/api/:splat"
   status = 200
 
-# NOTE: We intentionally do NOT add a forced 301 to /ar/* here.
-# - For manual deploys, Netlify uses dist/_redirects.
-# - For repo-based deploys, we keep behavior consistent with _redirects
-#   by rewriting everything to /index.html (SPA) and letting the app
-#   canonicalize to /ar or /en via history.replaceState.
-
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-

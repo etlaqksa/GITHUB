@@ -5,4 +5,19 @@ Disallow: /ar/keywords
 Disallow: /en/keywords
 Disallow: /ar/content-studio
 Disallow: /en/content-studio
+Disallow: /api/
+
+# Major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 2
+
 Sitemap: https://etlaqksa.com/sitemap.xml

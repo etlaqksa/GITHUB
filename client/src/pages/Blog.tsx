@@ -96,10 +96,10 @@ function ArticleCard({
   const postSlug = getArticleUrlSlug(article, language);
 
   return (
-    <Card className="group h-full overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:scale-[1.07]">
+    <Card className="group h-full overflow-hidden rounded-2xl border border-border/60 bg-card transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 hover:border-primary/30">
       <LocalizedLink href={`/blog/${postSlug}`} className="block relative" aria-label={title}>
           <div className="aspect-[16/9] w-full bg-muted">
-            <img src={imgUrl} alt={title} className="w-full h-full object-cover" loading="lazy" draggable={false} onContextMenu={(e) => e.preventDefault()} />
+            <img src={imgUrl} alt={title} className="w-full h-full object-cover" loading="lazy" decoding="async" />
           </div>
         
       </LocalizedLink>
@@ -201,12 +201,15 @@ export default function Blog() {
     setLocation(`/blog?${params.toString()}`, { replace: true } as any);
   };
   const [searchQuery, setSearchQuery] = useState('');
+  const [currentPage, setCurrentPage] = useState(1);
+  const ARTICLES_PER_PAGE = 12;
 
   // support /blog?cat=...
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const cat = params.get('cat');
     if (cat) setSelectedCategory(cat);
+    setCurrentPage(1);
   }, []);
 
   const categories = useMemo(() => {
@@ -244,8 +247,12 @@ export default function Blog() {
       .sort((a, b) => (a.id ?? 0) - (b.id ?? 0));
   }, [language, selectedCategory, searchQuery, allArticles]);
 
+  const totalPages = Math.ceil(articles.length / ARTICLES_PER_PAGE);
+  const paginatedArticles = articles.slice((currentPage - 1) * ARTICLES_PER_PAGE, currentPage * ARTICLES_PER_PAGE);
+
   const pickCategory = (cat: string) => {
     setSelectedCategory(cat);
+    setCurrentPage(1);
     const params = new URLSearchParams(window.location.search);
     params.set('cat', cat);
     setLocation(`/blog?${params.toString()}`, { replace: true } as any);
@@ -329,9 +336,43 @@ export default function Blog() {
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {articles.map((article) => (
+            {paginatedArticles.map((article) => (
               <ArticleCard key={article.id} article={article} language={language} onPickCategory={pickCategory} />
             ))}
+          </div>
+        )}
+
+        {/* Pagination */}
+        {totalPages > 1 && (
+          <div className="flex items-center justify-center gap-2 mt-10 flex-wrap">
+            <button
+              type="button"
+              onClick={() => { setCurrentPage(p => Math.max(1, p - 1)); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+              disabled={currentPage === 1}
+              className="px-4 py-2 rounded-xl border text-sm font-semibold transition-all hover:bg-muted disabled:opacity-40 disabled:cursor-not-allowed"
+            >
+              {language === 'ar' ? '→ السابق' : '← Previous'}
+            </button>
+            <div className="flex items-center gap-1">
+              {[...Array(totalPages)].map((_, i) => (
+                <button
+                  key={i}
+                  type="button"
+                  onClick={() => { setCurrentPage(i + 1); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+                  className={`w-10 h-10 rounded-xl border text-sm font-bold transition-all ${currentPage === i + 1 ? 'bg-primary text-primary-foreground border-primary shadow-sm' : 'hover:bg-muted'}`}
+                >
+                  {i + 1}
+                </button>
+              ))}
+            </div>
+            <button
+              type="button"
+              onClick={() => { setCurrentPage(p => Math.min(totalPages, p + 1)); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+              disabled={currentPage === totalPages}
+              className="px-4 py-2 rounded-xl border text-sm font-semibold transition-all hover:bg-muted disabled:opacity-40 disabled:cursor-not-allowed"
+            >
+              {language === 'ar' ? '← التالي' : 'Next →'}
+            </button>
           </div>
         )}
       </div>

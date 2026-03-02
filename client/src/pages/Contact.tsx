@@ -114,8 +114,8 @@ export default function Contact() {
     {
       icon: IconEmail,
       title: language === 'ar' ? 'البريد الإلكتروني' : 'Email',
-      value: 'etlaqksa@gmail.com',
-      link: 'mailto:etlaqksa@gmail.com',
+      value: 'info@etlaqksa.com',
+      link: 'mailto:info@etlaqksa.com',
     },
     {
       icon: IconLocation,
@@ -306,8 +306,8 @@ export default function Contact() {
 
                   <div className="text-center text-sm text-muted-foreground">
                     {language === 'ar' ? 'بديل سريع: راسلنا على ' : 'Quick alternative: email us at '}{' '}
-                    <a href="mailto:etlaqksa@gmail.com" className="underline underline-offset-4">
-                      etlaqksa@gmail.com
+                    <a href="mailto:info@etlaqksa.com" className="underline underline-offset-4">
+                      info@etlaqksa.com
                     </a>
                   </div>
                 </form>

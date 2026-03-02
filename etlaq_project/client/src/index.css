@@ -1,0 +1,1942 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* Local fonts (self-hosted via @fontsource) */
+@import "@fontsource/ibm-plex-sans-arabic/400.css";
+@import "@fontsource/ibm-plex-sans-arabic/600.css";
+@import "@fontsource/ibm-plex-sans-arabic/700.css";
+
+/*
+  PERFORMANCE NOTE
+  - Arabic (/ar) is the default experience.
+  - Loading Inter on every page forces extra WOFF2 downloads and lengthens the critical chain.
+  - Inter is loaded dynamically ONLY when the language is English (see LanguageContext).
+*/
+
+
+
+/* NOTE: Removed "font gate" (hiding the whole page until fonts load).
+   It was improving CLS but severely hurting LCP (page stayed invisible on slow connections).
+   We rely on proper font loading + fallbacks instead. */
+
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:is(.dark *));
+
+@custom-variant rtl (&:is([dir="rtl"] *));
+@custom-variant ltr (&:is([dir="ltr"] *));
+
+@theme inline {
+  /* Default (Arabic) */
+  --font-sans: "IBM Plex Sans Arabic", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "IBM Plex Sans Arabic", ui-sans-serif, system-ui, sans-serif;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+/* Prominent service tabs (big colored pills with shadow + hover) */
+@layer components {
+  /* Duplicate selector increases specificity to override Radix/shadcn defaults. */
+  .etlaq-tab.etlaq-tab {
+    --accent-rgb: var(--etlaq-accent-rgb, 37 99 235);
+    --accent2-rgb: var(--etlaq-accent2-rgb, 14 165 233);
+
+    height: auto;
+    padding: 0.9rem 1rem;
+    border-radius: 1rem;
+    border: 1px solid rgb(var(--accent-rgb) / 0.28);
+    background:
+      linear-gradient(135deg, rgb(var(--accent-rgb) / 0.16), rgb(var(--accent2-rgb) / 0.10));
+    box-shadow: 0 10px 26px rgb(0 0 0 / 0.10);
+    transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease, filter 200ms ease;
+    will-change: transform;
+  }
+
+  .etlaq-tab-shell.etlaq-tab-shell {
+    /* Larger outer rectangle that hosts the tab trigger */
+    --accent-rgb: var(--accent-rgb, var(--etlaq-accent-rgb, 37 99 235));
+    --accent2-rgb: var(--accent2-rgb, var(--etlaq-accent2-rgb, 14 165 233));
+
+    border-radius: 1.25rem;
+    border: 1px solid rgb(var(--accent-rgb) / 0.18);
+    background:
+      radial-gradient(900px 420px at 10% 0%, rgb(var(--accent-rgb) / 0.10), transparent 60%),
+      radial-gradient(700px 360px at 92% 10%, rgb(var(--accent2-rgb) / 0.07), transparent 55%),
+      linear-gradient(180deg, rgb(255 255 255 / 0.55), rgb(255 255 255 / 0.35));
+    box-shadow: 0 10px 28px rgb(0 0 0 / 0.08);
+    transition: box-shadow 200ms ease, border-color 200ms ease, filter 200ms ease;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .etlaq-tab-shell.etlaq-tab-shell:hover {
+      border-color: rgb(var(--accent-rgb) / 0.34);
+      box-shadow: 0 16px 44px rgb(0 0 0 / 0.12);
+      filter: saturate(1.02);
+    }
+  }
+
+  .etlaq-tab.etlaq-tab[data-state="active"] {
+    border-color: rgb(var(--accent-rgb) / 0.60);
+    background:
+      linear-gradient(135deg, rgb(var(--accent-rgb) / 0.95), rgb(var(--accent2-rgb) / 0.90));
+    color: rgb(255 255 255 / 0.98);
+    box-shadow:
+      0 18px 42px rgb(0 0 0 / 0.16),
+      0 0 0 4px rgb(var(--accent-rgb) / 0.16);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .etlaq-tab.etlaq-tab:hover {
+      transform: translateY(-3px);
+      border-color: rgb(var(--accent-rgb) / 0.46);
+      box-shadow: 0 16px 44px rgb(0 0 0 / 0.14);
+      filter: saturate(1.03);
+    }
+  }
+}
+
+html { font-family: var(--font-sans); }
+body { font-family: var(--font-sans); }
+
+/* Use Inter for English routes to reduce unused font downloads and improve rendering stability */
+html[lang="en"] {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+:root {
+  /* Base Variables */
+  --primary: oklch(0.60 0.25 250);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.60 0.22 45);
+  --secondary-foreground: oklch(0.99 0 0);
+  --accent: oklch(0.65 0.18 195);
+  --accent-foreground: oklch(0.99 0 0);
+  --success: oklch(0.58 0.20 145);
+  --success-foreground: oklch(0.99 0 0);
+  --warning: oklch(0.75 0.18 75);
+  --warning-foreground: oklch(0.15 0 0);
+  --info: oklch(0.62 0.24 290);
+  --info-foreground: oklch(0.99 0 0);
+  --ring: oklch(0.60 0.25 250);
+}
+
+/* Theme Overrides - Using !important to ensure they take precedence */
+html[data-theme='blue'] {
+  --primary: oklch(0.60 0.25 250) !important;
+  --ring: oklch(0.60 0.25 250) !important;
+
+  --etlaq-accent-rgb: 37 99 235 !important;
+  --etlaq-accent2-rgb: 14 165 233 !important;
+}
+
+html[data-theme='green'] {
+  --primary: oklch(0.62 0.18 145) !important;
+  --ring: oklch(0.62 0.18 145) !important;
+
+  --etlaq-accent-rgb: 34 197 94 !important;
+  --etlaq-accent2-rgb: 16 185 129 !important;
+}
+
+html[data-theme='orange'] {
+  --primary: oklch(0.68 0.22 45) !important;
+  --ring: oklch(0.68 0.22 45) !important;
+
+  --etlaq-accent-rgb: 249 115 22 !important;
+  --etlaq-accent2-rgb: 245 158 11 !important;
+}
+
+html[data-theme='purple'] {
+  --primary: oklch(0.62 0.24 290) !important;
+  --ring: oklch(0.62 0.24 290) !important;
+
+  --etlaq-accent-rgb: 168 85 247 !important;
+  --etlaq-accent2-rgb: 99 102 241 !important;
+}
+
+html[data-theme='red'] {
+  --primary: oklch(0.60 0.25 25) !important;
+  --ring: oklch(0.60 0.25 25) !important;
+
+  --etlaq-accent-rgb: 239 68 68 !important;
+  --etlaq-accent2-rgb: 244 63 94 !important;
+}
+
+:root {
+  
+  /* Background & Surfaces */
+  --background: oklch(0.99 0 0);
+  --foreground: oklch(0.20 0.02 250);
+  --card: oklch(1 0 0 / 0.72);
+  --card-foreground: oklch(0.20 0.02 250);
+  --popover: oklch(1 0 0 / 0.78);
+  --popover-foreground: oklch(0.20 0.02 250);
+  
+  /* Muted */
+  --muted: oklch(0.96 0.005 250);
+  --muted-foreground: oklch(0.50 0.02 250);
+  
+  /* Destructive */
+  --destructive: oklch(0.60 0.25 25);
+  --destructive-foreground: oklch(0.99 0 0);
+  
+  /* Borders & Inputs */
+  --border: oklch(0.90 0.01 250);
+  --input: oklch(0.90 0.01 250);
+  --ring: oklch(0.60 0.25 250);
+  --radius: 0.75rem;
+
+  /* Layout helpers */
+  --etlaq-topbar-h: 40px;
+  
+  /* Chart Colors - Vibrant Rainbow */
+  --chart-1: oklch(0.60 0.25 250);  /* Electric Blue */
+  --chart-2: oklch(0.68 0.22 45);   /* Energetic Orange */
+  --chart-3: oklch(0.65 0.18 195);  /* Fresh Teal */
+  --chart-4: oklch(0.62 0.24 290);  /* Electric Purple */
+  --chart-5: oklch(0.58 0.20 145);  /* Vibrant Green */
+  
+  /* Sidebar */
+  --sidebar-primary: oklch(0.60 0.25 250);
+  --sidebar-primary-foreground: oklch(0.99 0 0);
+  --sidebar: oklch(0.99 0 0);
+  --sidebar-foreground: oklch(0.25 0.02 250);
+  --sidebar-accent: oklch(0.96 0.005 250);
+  --sidebar-accent-foreground: oklch(0.20 0.02 250);
+  --sidebar-border: oklch(0.90 0.01 250);
+  --sidebar-ring: oklch(0.60 0.25 250);
+}
+
+.dark {
+  --primary: oklch(0.60 0.25 250);
+  --primary-foreground: oklch(0.985 0 0);
+  --sidebar-primary: var(--color-blue-500);
+  --sidebar-primary-foreground: var(--color-blue-50);
+  --background: oklch(0.141 0.005 285.823);
+  --foreground: oklch(0.85 0.005 65);
+  --card: oklch(0.21 0.006 285.885);
+  --card-foreground: oklch(0.85 0.005 65);
+  --popover: oklch(0.21 0.006 285.885);
+  --popover-foreground: oklch(0.85 0.005 65);
+  --secondary: oklch(0.60 0.22 45);
+  --secondary-foreground: oklch(0.7 0.005 65);
+  --muted: oklch(0.274 0.006 286.033);
+  --muted-foreground: oklch(0.705 0.015 286.067);
+  --accent: oklch(0.274 0.006 286.033);
+  --accent-foreground:  oklch(0.92 0.005 65);
+  --destructive: oklch(0.704 0.191 22.216);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.60 0.25 250);
+  --chart-1: var(--color-blue-300);
+  --chart-2: var(--color-blue-500);
+  --chart-3: var(--color-blue-600);
+  --chart-4: var(--color-blue-700);
+  --chart-5: var(--color-blue-800);
+  --sidebar: oklch(0.21 0.006 285.885);
+  --sidebar-foreground: oklch(0.85 0.005 65);
+  --sidebar-accent: oklch(0.274 0.006 286.033);
+  --sidebar-accent-foreground:  oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.488 0.243 264.376);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', 'IBM Plex Sans Arabic', ui-sans-serif, system-ui, sans-serif;
+
+    /* Global typography polish: justified text across the site (AR/EN) */
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+  }
+
+  /* App background: subtle, professional color wash (applied on the root wrapper) */
+  .app-background {
+    --pa: var(--etlaq-accent-rgb, 37 99 235);
+    --pa2: var(--etlaq-accent2-rgb, 14 165 233);
+    background-color: var(--background);
+    background-image:
+      radial-gradient(1200px circle at 15% -10%, rgb(var(--pa) / 0.13), transparent 55%),
+      radial-gradient(1000px circle at 90% 0%, rgb(var(--pa2) / 0.12), transparent 55%),
+      radial-gradient(900px circle at 50% 110%, oklch(0.68 0.22 45 / 0.10), transparent 60%),
+      linear-gradient(180deg, oklch(0.99 0 0), oklch(0.96 0.005 250));
+    background-attachment: scroll;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', 'IBM Plex Sans Arabic', ui-sans-serif, system-ui, sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+  [dir="rtl"] body {
+    font-family: 'IBM Plex Sans Arabic', 'Inter', ui-sans-serif, system-ui, sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    text-align-last: right;
+  }
+
+  [dir="ltr"] body {
+    text-align-last: left;
+  }
+  [dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3, [dir="rtl"] h4, [dir="rtl"] h5, [dir="rtl"] h6 {
+    font-family: 'IBM Plex Sans Arabic', 'Inter', ui-sans-serif, system-ui, sans-serif;
+    font-weight: 700;
+    letter-spacing: 0;
+  }
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [type="button"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  a[href],
+  select:not(:disabled),
+  input[type="checkbox"]:not(:disabled),
+  input[type="radio"]:not(:disabled) {
+    @apply cursor-pointer;
+  }
+
+  /*
+    Site-wide color typography system
+    - Keeps the existing theme intact
+    - Adds tasteful color to headings, links, emphasis, and rich content
+    - Avoids overriding explicitly white text (e.g., hero overlays)
+  */
+  .etlaq-color-typography {
+    --etlaq-accent-rgb-local: var(--etlaq-accent-rgb, 37 99 235);
+    --etlaq-accent2-rgb-local: var(--etlaq-accent2-rgb, 14 165 233);
+    --etlaq-accent-ink: rgb(var(--etlaq-accent-rgb-local));
+    --etlaq-accent2-ink: rgb(var(--etlaq-accent2-rgb-local));
+    --etlaq-accent-grad: linear-gradient(
+      90deg,
+      rgb(var(--etlaq-accent-rgb-local) / 1),
+      rgb(var(--etlaq-accent2-rgb-local) / 1)
+    );
+  }
+
+  /* Headings: colored ink (professional, consistent) */
+  .etlaq-color-typography :where(h1):not([class*="text-white"]) {
+    color: rgb(var(--etlaq-accent-rgb-local) / 0.98);
+  }
+  .etlaq-color-typography :where(h2):not([class*="text-white"]) {
+    color: rgb(var(--etlaq-accent-rgb-local) / 0.96);
+  }
+  .etlaq-color-typography :where(h3):not([class*="text-white"]) {
+    color: rgb(var(--etlaq-accent2-rgb-local) / 0.96);
+  }
+  .etlaq-color-typography :where(h4, h5, h6):not([class*="text-white"]) {
+    color: color-mix(in oklch, var(--foreground) 90%, var(--primary) 10%);
+  }
+
+  /* Body copy: slightly tinted to avoid pure black while staying readable */
+  .etlaq-color-typography :where(p, li):not([class*="text-white"]) {
+    color: var(--foreground);
+    /* Stronger but still readable tint */
+    color: color-mix(in oklch, var(--foreground) 60%, var(--primary) 40%);
+  }
+
+  /* Links: accent color + elegant underline */
+  .etlaq-color-typography :where(a[href]):not([class*="text-white"]) {
+    color: rgb(var(--etlaq-accent-rgb-local) / 0.98);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+    text-decoration-color: rgb(var(--etlaq-accent-rgb-local) / 0.32);
+    transition: color 180ms ease, text-decoration-color 180ms ease;
+  }
+  .etlaq-color-typography :where(a[href]):not([class*="text-white"]):hover {
+    color: rgb(var(--etlaq-accent2-rgb-local) / 1);
+    text-decoration-color: rgb(var(--etlaq-accent2-rgb-local) / 0.55);
+  }
+
+  /* Emphasis: subtle color for strong/bold without hurting readability */
+  .etlaq-color-typography :where(strong, b):not([class*="text-white"]) {
+    color: color-mix(in oklch, var(--foreground) 54%, var(--primary) 46%);
+  }
+  .etlaq-color-typography :where(em, i):not([class*="text-white"]) {
+    color: color-mix(in oklch, var(--foreground) 62%, var(--accent) 38%);
+  }
+
+  /* Rich elements */
+  .etlaq-color-typography :where(blockquote):not([class*="text-white"]) {
+    border-inline-start: 4px solid rgb(var(--etlaq-accent-rgb-local) / 0.45);
+    padding-inline-start: 1rem;
+    color: color-mix(in oklch, var(--foreground) 72%, var(--primary) 28%);
+  }
+  .etlaq-color-typography :where(hr) {
+    border-color: rgb(var(--etlaq-accent-rgb-local) / 0.20);
+  }
+
+  /* Selection highlight (subtle brand tint) */
+  .etlaq-color-typography ::selection {
+    background: rgb(var(--etlaq-accent-rgb-local) / 0.25);
+  }
+  /*
+   * Footer
+   * ----
+   * Don't use the theme's bg-primary (it can be very bright and kills contrast).
+   * Instead, use a neutral dark base + subtle accent glow that changes by theme,
+   * while keeping text/links always readable.
+   */
+  .etlaq-footer {
+    /* fallback accent */
+    --etlaq-footer-accent-rgb: 250 204 21; /* amber */
+    --etlaq-footer-accent2-rgb: 255 255 255; /* white */
+
+    background: linear-gradient(180deg, rgb(9 13 22 / 0.985), rgb(7 10 18 / 0.985));
+    color: rgb(255 255 255 / 0.92);
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Theme-aware complementary accent used only as a subtle glow, not as the background */
+  html[data-theme='blue'] .etlaq-footer {
+    --etlaq-footer-accent-rgb: 250 204 21; /* amber */
+    --etlaq-footer-accent2-rgb: 255 255 255;
+  }
+  html[data-theme='green'] .etlaq-footer {
+    --etlaq-footer-accent-rgb: 244 114 182; /* pink */
+    --etlaq-footer-accent2-rgb: 253 230 138; /* soft amber */
+  }
+  html[data-theme='orange'] .etlaq-footer {
+    --etlaq-footer-accent-rgb: 56 189 248; /* sky */
+    --etlaq-footer-accent2-rgb: 255 255 255;
+  }
+  html[data-theme='purple'] .etlaq-footer {
+    --etlaq-footer-accent-rgb: 163 230 53; /* lime */
+    --etlaq-footer-accent2-rgb: 250 204 21; /* amber */
+  }
+  html[data-theme='red'] .etlaq-footer {
+    --etlaq-footer-accent-rgb: 34 211 238; /* cyan */
+    --etlaq-footer-accent2-rgb: 255 255 255;
+  }
+
+  .etlaq-footer::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    background:
+      radial-gradient(1200px 420px at 85% 18%, rgb(var(--etlaq-footer-accent-rgb) / 0.22), transparent 60%),
+      radial-gradient(900px 360px at 12% -10%, rgb(var(--etlaq-footer-accent-rgb) / 0.14), transparent 65%),
+      linear-gradient(180deg, rgb(var(--etlaq-footer-accent-rgb) / 0.08), transparent 32%);
+    pointer-events: none;
+    filter: saturate(1.1);
+  }
+
+  .etlaq-footer > .container,
+  .etlaq-footer .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  /*
+   * Keep site-wide typography tinting from affecting footer readability.
+   * IMPORTANT: Do NOT override FontAwesome icon colors inside the social circles.
+   * (They use inline brand colors / gradients and must remain visible.)
+   */
+  .etlaq-footer :where(p, li, blockquote, strong, b, em, i):not([class*="text-white"], i[class*="fa-"]) {
+    color: inherit !important;
+  }
+
+  /* Footer headings pop using the complementary accent */
+  .etlaq-footer :where(h1, h2, h3, h4, h5, h6) {
+    color: rgb(var(--etlaq-footer-accent-rgb) / 0.98) !important;
+    text-shadow: 0 1px 0 rgb(0 0 0 / 0.25);
+  }
+
+  /* Links: default off-white for readability, accent underline; hover becomes accent */
+  .etlaq-footer :where(a[href]) {
+    color: rgb(255 255 255 / 0.92) !important;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+    text-decoration-color: rgb(var(--etlaq-footer-accent-rgb) / 0.38);
+    transition: color 160ms ease, text-decoration-color 160ms ease, opacity 160ms ease;
+  }
+  .etlaq-footer :where(a[href]):hover {
+    color: rgb(var(--etlaq-footer-accent-rgb) / 1) !important;
+    text-decoration-color: rgb(var(--etlaq-footer-accent-rgb) / 0.70);
+    opacity: 1 !important;
+  }
+
+  /* Icons and subtle elements */
+  .etlaq-footer :where(svg) {
+    color: rgb(var(--etlaq-footer-accent2-rgb) / 0.98);
+  }
+
+  /* Assistant floating button: always high-contrast (does not inherit theme bg-primary) */
+  .etlaq-assistant-fab {
+    background: rgb(9 13 22 / 0.92) !important;
+    color: rgb(255 255 255 / 0.96) !important;
+    border: 1px solid rgb(255 255 255 / 0.16) !important;
+    box-shadow: 0 14px 40px rgb(0 0 0 / 0.35) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+    transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+  }
+  .etlaq-assistant-fab::after {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: radial-gradient(220px 120px at 30% 20%, rgb(var(--etlaq-accent-rgb-local) / 0.35), transparent 62%);
+    pointer-events: none;
+    mix-blend-mode: screen;
+  }
+  .etlaq-assistant-fab:hover {
+    transform: translateY(-1px);
+    border-color: rgb(var(--etlaq-accent-rgb-local) / 0.55) !important;
+    box-shadow: 0 18px 50px rgb(0 0 0 / 0.42) !important;
+  }
+  .etlaq-assistant-fab:focus-visible {
+    outline: 2px solid rgb(var(--etlaq-accent-rgb-local) / 0.85);
+    outline-offset: 3px;
+  }
+
+}
+
+@layer components {
+  /**
+   * Custom container utility that centers content and adds responsive padding.
+   *
+   * This overrides Tailwind's default container behavior to:
+   * - Auto-center content (mx-auto)
+   * - Add responsive horizontal padding
+   * - Set max-width for large screens
+   *
+   * Usage: <div className="container">...</div>
+   *
+   * For custom widths, use max-w-* utilities directly:
+   * <div className="max-w-6xl mx-auto px-4">...</div>
+   */
+  .container {
+    width: 100%;
+    margin-inline: auto;
+    padding-left: 1rem; /* 16px - mobile padding */
+    padding-right: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1.5rem; /* 24px - tablet padding */
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2rem; /* 32px - desktop padding */
+      padding-right: 2rem;
+      /*
+        Use full viewport width across the whole site (avoid large empty gutters),
+        while keeping comfortable padding for readability.
+      */
+      max-width: none;
+    }
+  }
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent horizontal overflow and keep layout centered even in "Desktop site" mobile mode */
+html, body, #root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
+/* Global Hover Effects */
+@layer utilities {
+  /* Hide scrollbars but keep scrolling (used by compact horizontal controls). */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  }
+  
+  .hover-scale {
+    transition: transform 0.3s ease;
+  }
+  
+  .hover-scale:hover {
+    transform: scale(1.05);
+  }
+  
+  .hover-glow {
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  
+  .hover-glow:hover {
+    box-shadow: 0 0 20px rgb(var(--etlaq-accent-rgb, 14 165 233) / 0.40);
+    transform: translateY(-4px);
+  }
+
+  .hover-brightness {
+    transition: filter 0.3s ease, transform 0.3s ease;
+  }
+
+  .hover-brightness:hover {
+    filter: brightness(1.1);
+    transform: scale(1.02);
+  }
+}
+
+
+
+/* Professional Interactive Hover Effects */
+@layer utilities {
+  /* Card Hover Effects */
+  .card-hover {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+  }
+  
+  .card-hover:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12), 0 0 0 1px rgb(var(--etlaq-accent-rgb, 14 165 233) / 0.12);
+  }
+
+  .card-hover::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.05), rgba(168, 85, 247, 0.05));
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+  }
+
+  .card-hover:hover::before {
+    opacity: 1;
+  }
+
+  /* Button Hover Effects */
+  .btn-hover-slide {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  .btn-hover-slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+    z-index: -1;
+  }
+
+  .btn-hover-slide:hover::before {
+    left: 100%;
+  }
+
+  /* Image Hover Effects */
+  .image-hover-zoom {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .image-hover-zoom img {
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .image-hover-zoom:hover img {
+    transform: scale(1.15);
+  }
+
+  .image-hover-overlay {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .image-hover-overlay::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.6), rgba(168, 85, 247, 0.6));
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .image-hover-overlay:hover::after {
+    opacity: 1;
+  }
+
+  /* Link Hover Effects */
+  .link-hover-underline {
+    position: relative;
+    display: inline-block;
+  }
+
+  .link-hover-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: currentColor;
+    transition: width 0.3s ease;
+  }
+
+  .link-hover-underline:hover::after {
+    width: 100%;
+  }
+
+  /* Icon Hover Effects */
+  .icon-hover-rotate {
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .icon-hover-rotate:hover {
+    transform: rotate(360deg);
+  }
+
+  .icon-hover-bounce {
+    transition: transform 0.3s ease;
+  }
+
+  .icon-hover-bounce:hover {
+    animation: bounce 0.6s ease;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  /* Gradient Hover Effects */
+  .gradient-hover {
+    background-size: 200% 200%;
+    transition: background-position 0.5s ease, transform 0.3s ease;
+  }
+
+  .gradient-hover:hover {
+    background-position: 100% 100%;
+    transform: scale(1.02);
+  }
+
+  /* Shadow Hover Effects */
+  .shadow-hover-soft {
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+
+  .shadow-hover-soft:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
+  }
+
+  .shadow-hover-glow {
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+
+  .shadow-hover-glow:hover {
+    box-shadow: 0 0 30px rgb(var(--etlaq-accent-rgb, 14 165 233) / 0.55), 0 10px 25px rgba(0, 0, 0, 0.1);
+    transform: translateY(-6px);
+  }
+
+  /* Border Hover Effects */
+  .border-hover-expand {
+    position: relative;
+  }
+
+  .border-hover-expand::before {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border: 2px solid transparent;
+    border-radius: inherit;
+    background: linear-gradient(
+      135deg,
+      rgb(var(--etlaq-accent-rgb, 14 165 233) / 1),
+      rgb(var(--etlaq-accent2-rgb, 168 85 247) / 1)
+    ) border-box;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .border-hover-expand:hover::before {
+    opacity: 1;
+  }
+
+  /* Text Hover Effects */
+  .text-hover-gradient {
+    background: linear-gradient(90deg, #0ea5e9, #a855f7, #0ea5e9);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    color: transparent;
+    transition: background-position 0.5s ease;
+  }
+
+  .text-hover-gradient:hover {
+    background-position: 100% center;
+  }
+
+  /* Smooth Transitions for All Interactive Elements */
+  a, button, input, select, textarea, [role="button"] {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+
+
+/* Professional Loading Animations */
+@layer utilities {
+  /* Fade In Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  /* Scale Animations */
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes scaleInBounce {
+    0% {
+      opacity: 0;
+      transform: scale(0.3);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    70% {
+      transform: scale(0.95);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  /* Slide Animations */
+  @keyframes slideInUp {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideInDown {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  /* Rotate Animations */
+  @keyframes rotateIn {
+    from {
+      opacity: 0;
+      transform: rotate(-180deg) scale(0.5);
+    }
+    to {
+      opacity: 1;
+      transform: rotate(0) scale(1);
+    }
+  }
+
+  /* Shimmer Animation for Skeleton Loaders */
+  @keyframes shimmer {
+    0% {
+      background-position: -1000px 0;
+    }
+    100% {
+      background-position: 1000px 0;
+    }
+  }
+
+  /* Animation Classes */
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  .animate-fade-in-down {
+    animation: fadeInDown 0.8s ease-out forwards;
+  }
+
+  .animate-fade-in-left {
+    animation: fadeInLeft 0.8s ease-out forwards;
+  }
+
+  .animate-fade-in-right {
+    animation: fadeInRight 0.8s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.6s ease-out forwards;
+  }
+
+  .animate-scale-in-bounce {
+    animation: scaleInBounce 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  }
+
+  .animate-slide-in-up {
+    animation: slideInUp 0.8s ease-out forwards;
+  }
+
+  .animate-slide-in-down {
+    animation: slideInDown 0.8s ease-out forwards;
+  }
+
+  .animate-rotate-in {
+    animation: rotateIn 0.8s ease-out forwards;
+  }
+
+  /* Stagger Delays */
+  .animation-delay-100 {
+    animation-delay: 0.1s;
+  }
+
+  .animation-delay-200 {
+    animation-delay: 0.2s;
+  }
+
+  .animation-delay-300 {
+    animation-delay: 0.3s;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 0.4s;
+  }
+
+  .animation-delay-500 {
+    animation-delay: 0.5s;
+  }
+
+  .animation-delay-600 {
+    animation-delay: 0.6s;
+  }
+
+  .animation-delay-700 {
+    animation-delay: 0.7s;
+  }
+
+  .animation-delay-800 {
+    animation-delay: 0.8s;
+  }
+
+  /* Initial Hidden State */
+  .animate-on-load {
+    opacity: 0;
+  }
+
+  /* Skeleton Loader */
+  .skeleton {
+    background: linear-gradient(
+      90deg,
+      #f0f0f0 0%,
+      #e0e0e0 20%,
+      #f0f0f0 40%,
+      #f0f0f0 100%
+    );
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite linear;
+    border-radius: 4px;
+  }
+
+  .dark .skeleton {
+    background: linear-gradient(
+      90deg,
+      #2a2a2a 0%,
+      #3a3a3a 20%,
+      #2a2a2a 40%,
+      #2a2a2a 100%
+    );
+    background-size: 1000px 100%;
+  }
+
+  /* Pulse Animation for Loading States */
+  @keyframes pulse-slow {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+
+  .animate-pulse-slow {
+    animation: pulse-slow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  /* Intersection Observer Ready Classes */
+  .scroll-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .scroll-animate.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .scroll-animate-left {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .scroll-animate-left.in-view {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .scroll-animate-right {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .scroll-animate-right.in-view {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .scroll-animate-scale {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .scroll-animate-scale.in-view {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+
+/* Browser Compatibility Fixes */
+@layer utilities {
+  /* Ensure animations work in all browsers */
+  @supports not (animation: none) {
+    .animate-fade-in,
+    .animate-fade-in-up,
+    .animate-fade-in-down,
+    .animate-fade-in-left,
+    .animate-fade-in-right,
+    .animate-scale-in,
+    .animate-scale-in-bounce,
+    .animate-slide-in-up,
+    .animate-slide-in-down,
+    .animate-rotate-in {
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  }
+
+  /* Force hardware acceleration for better performance */
+  .card-hover,
+  .image-hover-zoom,
+  .btn-hover-slide,
+  .icon-hover-rotate,
+  .icon-hover-bounce {
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    -moz-perspective: 1000;
+    perspective: 1000;
+  }
+
+  /* Fix for Chrome animation delays */
+  .animate-on-load {
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+
+  /* Ensure transitions work in older browsers */
+  * {
+    -webkit-transition-property: all;
+    -moz-transition-property: all;
+    -o-transition-property: all;
+    transition-property: all;
+  }
+}
+
+/* Force reload styles - Cache busting */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Ensure images load properly in Chrome */
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+
+
+
+@layer base {
+  h1 { @apply text-4xl font-extrabold tracking-tight; }
+  h2 { @apply text-2xl font-bold tracking-tight; }
+  h3 { @apply text-xl font-bold; }
+  body { @apply text-base leading-relaxed; }
+
+  @screen md {
+    h1 { @apply text-5xl; }
+    h2 { @apply text-3xl; }
+    h3 { @apply text-2xl; }
+    body { @apply text-[15px]; }
+  }
+}
+/* Adjusting font size for tabs and making them more dynamic */
+.tabs a {
+    font-size: 1.2rem; /* Increase font size */
+    font-weight: bold; /* Make text bold */
+    transition: all 0.3s ease; /* Add transition effect */
+}
+
+.tabs a:hover {
+    transform: scale(1.1); /* Slight hover effect for better interaction */
+}
+
+/* --- Surgical Fix Animations (Tailwind v4-safe) --- */
+/* Define keyframes outside layers for maximum compatibility */
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Utility classes */
+@layer utilities {
+  .animate-shimmer {
+    animation: shimmer 1.5s infinite;
+  }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 0.3s ease-out both;
+  }
+}
+
+
+/* Prevent floating WhatsApp button from covering footer content on mobile */
+@media (max-width: 640px) {
+  body {
+    padding-bottom: max(env(safe-area-inset-bottom), 5rem);
+  }
+}
+
+
+/* Prevent layout shift when the scrollbar appears/disappears (reduces CLS) */
+html { scrollbar-gutter: stable; }
+
+
+@media (min-width: 768px) {
+  .app-background {
+    background-attachment: fixed;
+  }
+}
+
+
+/* Global prominent cards (all pages): shadow + hover + subtle accent line */
+@layer components {
+  /* Duplicate selector increases specificity so it overrides shadcn/tailwind utilities. */
+  .etlaq-card.etlaq-card {
+    /* Default accent comes from the current page (can still be overridden per element via inline --accent-rgb). */
+    --accent-rgb: var(--etlaq-accent-rgb, 37 99 235);
+    --accent2-rgb: var(--etlaq-accent2-rgb, 14 165 233);
+
+    position: relative;
+    overflow: hidden;
+    border-color: rgb(var(--accent-rgb) / 0.18);
+    box-shadow: 0 14px 40px rgb(0 0 0 / 0.10);
+    background-image:
+      radial-gradient(900px 420px at 12% 0%, rgb(var(--accent-rgb) / 0.10), transparent 60%),
+      radial-gradient(700px 360px at 92% 10%, rgb(var(--accent2-rgb) / 0.08), transparent 55%);
+    transition:
+      transform 220ms ease,
+      box-shadow 220ms ease,
+      border-color 220ms ease,
+      filter 220ms ease;
+    will-change: transform;
+  }
+
+  .etlaq-card.etlaq-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(
+      90deg,
+      rgb(var(--accent-rgb) / 0.92),
+      rgb(var(--accent-rgb) / 0.35),
+      transparent 78%
+    );
+    pointer-events: none;
+  }
+
+  .etlaq-card.etlaq-card > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .etlaq-card.etlaq-card:focus-within {
+    outline: none;
+    border-color: rgb(var(--accent-rgb) / 0.45);
+    box-shadow:
+      0 18px 55px rgb(0 0 0 / 0.13),
+      0 0 0 4px rgb(var(--accent-rgb) / 0.16);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .etlaq-card.etlaq-card:hover {
+      transform: translateY(-6px);
+      border-color: rgb(var(--accent-rgb) / 0.42);
+      box-shadow: 0 22px 70px rgb(0 0 0 / 0.16);
+      filter: saturate(1.02);
+    }
+  }
+}
+
+
+/* Home page highlight cards (prominent rectangles with color + shadow + hover) */
+@layer components {
+  /* Duplicate selector increases specificity so it overrides shadcn/tailwind utilities. */
+  .etlaq-accent-card.etlaq-accent-card {
+    /* Default accent comes from the current page (overridden per-card via inline --accent-rgb when needed). */
+    --accent-rgb: var(--etlaq-accent-rgb, 37 99 235);
+    --accent2-rgb: var(--etlaq-accent2-rgb, 14 165 233);
+
+    position: relative;
+    overflow: hidden;
+    border-radius: 1.25rem;
+    border: 1px solid rgb(var(--accent-rgb) / 0.28);
+    box-shadow: 0 14px 40px rgb(0 0 0 / 0.10);
+    background-image:
+      radial-gradient(900px 420px at 12% 0%, rgb(var(--accent-rgb) / 0.18), transparent 60%),
+      radial-gradient(700px 360px at 92% 10%, rgb(var(--accent2-rgb) / 0.13), transparent 55%);
+    transition:
+      transform 220ms ease,
+      box-shadow 220ms ease,
+      border-color 220ms ease,
+      filter 220ms ease;
+    will-change: transform;
+  }
+
+  .etlaq-accent-card.etlaq-accent-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(
+      90deg,
+      rgb(var(--accent-rgb) / 0.95),
+      rgb(var(--accent-rgb) / 0.45),
+      transparent 75%
+    );
+    pointer-events: none;
+  }
+
+  .etlaq-accent-card.etlaq-accent-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgb(var(--accent-rgb) / 0.10), transparent 45%);
+    opacity: 0.9;
+    pointer-events: none;
+  }
+
+  .etlaq-accent-card.etlaq-accent-card > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .etlaq-accent-card.etlaq-accent-card:focus-within {
+    outline: none;
+    border-color: rgb(var(--accent-rgb) / 0.55);
+    box-shadow:
+      0 18px 55px rgb(0 0 0 / 0.13),
+      0 0 0 4px rgb(var(--accent-rgb) / 0.20);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .etlaq-accent-card.etlaq-accent-card:hover {
+      transform: translateY(-6px);
+      border-color: rgb(var(--accent-rgb) / 0.55);
+      box-shadow: 0 22px 70px rgb(0 0 0 / 0.16);
+      filter: saturate(1.04);
+    }
+  }
+
+  .etlaq-accent-icon {
+    color: rgb(var(--accent-rgb) / 0.95);
+    background: rgb(var(--accent-rgb) / 0.10);
+    border: 1px solid rgb(var(--accent-rgb) / 0.28);
+    box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.18);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .etlaq-accent-card.etlaq-accent-card:hover .etlaq-accent-icon {
+      background: rgb(var(--accent-rgb) / 0.14);
+      border-color: rgb(var(--accent-rgb) / 0.36);
+    }
+  }
+}
+
+
+/* Accent scrollbar (used in the assistant and long panels) */
+.etlaq-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--primary)) transparent;
+}
+.etlaq-scrollbar::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.etlaq-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.etlaq-scrollbar::-webkit-scrollbar-thumb {
+  background: color-mix(in oklab, hsl(var(--primary)) 70%, transparent);
+  border-radius: 999px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+.etlaq-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary));
+  background-clip: content-box;
+}
+
+
+/* ------------------------------------------------------------
+   Home Hero (no images): 2 variants for quick A/B preview
+   - Gradient + Noise: .etlaq-hero-bg--gradient
+   - Light Blobs:      .etlaq-hero-bg--blobs + .etlaq-hero-blob-*
+   - Grid + Sweep:     .etlaq-hero-bg--grid
+   Notes:
+   - Animations are transform/background-position only (better LCP/CLS).
+   - Respects prefers-reduced-motion.
+------------------------------------------------------------ */
+
+.etlaq-hero-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* Variant 1: animated gradient + subtle noise overlay (CSS-only). */
+.etlaq-hero-bg--gradient {
+  background:
+    radial-gradient(1100px circle at 18% 18%, rgb(var(--etlaq-accent-rgb, 37 99 235) / 0.55), transparent 60%),
+    radial-gradient(980px circle at 88% 16%, rgb(var(--etlaq-accent2-rgb, 14 165 233) / 0.42), transparent 62%),
+    radial-gradient(1200px circle at 52% 92%, rgb(255 255 255 / 0.16), transparent 58%),
+    linear-gradient(180deg, rgb(0 0 0 / 0.58) 0%, rgb(0 0 0 / 0.28) 55%, rgb(0 0 0 / 0.66) 100%);
+  background-size: 200% 200%;
+  background-position: 0% 0%;
+  animation: etlaq-hero-gradient-move 10s ease-in-out infinite;
+}
+
+.etlaq-hero-bg--gradient::before {
+  content: "";
+  position: absolute;
+  inset: -30% -30%;
+  opacity: 0.18;
+  background:
+    conic-gradient(
+      from 210deg,
+      rgb(var(--etlaq-accent-rgb, 37 99 235) / 0.00) 0deg,
+      rgb(var(--etlaq-accent-rgb, 37 99 235) / 0.35) 80deg,
+      rgb(var(--etlaq-accent2-rgb, 14 165 233) / 0.20) 150deg,
+      rgb(var(--etlaq-accent2-rgb, 14 165 233) / 0.00) 240deg,
+      rgb(255 255 255 / 0.08) 300deg,
+      rgb(var(--etlaq-accent-rgb, 37 99 235) / 0.00) 360deg
+    );
+  filter: blur(10px);
+  transform: translateZ(0);
+  will-change: transform;
+  animation: etlaq-hero-conic 12s linear infinite;
+  mix-blend-mode: screen;
+}
+
+.etlaq-hero-bg--gradient::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.12;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E");
+  background-size: 220px 220px;
+  mix-blend-mode: overlay;
+}
+
+@keyframes etlaq-hero-gradient-move {
+  0%   { background-position: 0% 0%; }
+  50%  { background-position: 100% 60%; }
+  100% { background-position: 0% 0%; }
+}
+
+@keyframes etlaq-hero-conic {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Variant 2: soft glowing blobs (3 divs) */
+.etlaq-hero-bg--blobs {
+  background:
+    radial-gradient(1100px circle at 50% 30%, rgb(var(--etlaq-accent2-rgb, 14 165 233) / 0.22), transparent 62%),
+    radial-gradient(1200px circle at 18% 70%, rgb(var(--etlaq-accent-rgb, 37 99 235) / 0.18), transparent 60%),
+    linear-gradient(180deg, rgb(0 0 0 / 0.62) 0%, rgb(0 0 0 / 0.30) 55%, rgb(0 0 0 / 0.70) 100%);
+}
+
+.etlaq-hero-bg--blobs::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.14;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgb(255 255 255 / 0.22) 0 1px, transparent 2px),
+    radial-gradient(circle at 70% 20%, rgb(255 255 255 / 0.18) 0 1px, transparent 2px),
+    radial-gradient(circle at 40% 70%, rgb(255 255 255 / 0.16) 0 1px, transparent 2px);
+  background-size: 220px 220px;
+  animation: etlaq-hero-stars 14s linear infinite;
+  mix-blend-mode: overlay;
+}
+
+/* Variant 3: subtle tech grid + sweeping light beam (CSS-only) */
+.etlaq-hero-bg--grid {
+  background:
+    radial-gradient(1100px circle at 18% 18%, rgb(var(--etlaq-accent-rgb, 37 99 235) / 0.30), transparent 62%),
+    radial-gradient(900px circle at 88% 22%, rgb(var(--etlaq-accent2-rgb, 14 165 233) / 0.22), transparent 64%),
+    linear-gradient(180deg, rgb(0 0 0 / 0.64) 0%, rgb(0 0 0 / 0.30) 55%, rgb(0 0 0 / 0.72) 100%);
+}
+
+.etlaq-hero-bg--grid::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.30;
+  background-image:
+    repeating-linear-gradient(0deg, rgb(255 255 255 / 0.14) 0 1px, transparent 1px 44px),
+    repeating-linear-gradient(90deg, rgb(255 255 255 / 0.10) 0 1px, transparent 1px 52px);
+  background-size: auto;
+  mask-image: radial-gradient(60% 60% at 60% 45%, #000 0%, #000 55%, transparent 100%);
+  animation: etlaq-hero-grid-drift 18s linear infinite;
+}
+
+.etlaq-hero-bg--grid::after {
+  content: "";
+  position: absolute;
+  inset: -30% -40%;
+  opacity: 0.36;
+  background:
+    linear-gradient(90deg,
+      transparent 0%,
+      rgb(var(--etlaq-accent2-rgb, 14 165 233) / 0.00) 35%,
+      rgb(var(--etlaq-accent2-rgb, 14 165 233) / 0.25) 50%,
+      rgb(var(--etlaq-accent2-rgb, 14 165 233) / 0.00) 65%,
+      transparent 100%
+    );
+  transform: translateX(-45%) rotate(10deg);
+  will-change: transform;
+  animation: etlaq-hero-sweep 6.5s ease-in-out infinite;
+  mix-blend-mode: screen;
+}
+
+@keyframes etlaq-hero-grid-drift {
+  0%   { background-position: 0px 0px, 0px 0px; }
+  100% { background-position: 220px 140px, -180px -110px; }
+}
+
+@keyframes etlaq-hero-sweep {
+  0%, 100% { transform: translateX(-55%) rotate(12deg); }
+  50%      { transform: translateX(55%) rotate(12deg); }
+}
+
+.etlaq-hero-blob {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(60px);
+  opacity: 0.82;
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+}
+
+.etlaq-hero-blob-1 {
+  width: min(72vw, 520px);
+  height: min(72vw, 520px);
+  left: -12%;
+  top: -18%;
+  background: radial-gradient(circle at 30% 30%, rgb(var(--etlaq-accent-rgb, 37 99 235) / 0.85), transparent 60%);
+  animation: etlaq-hero-blob-1 14s ease-in-out infinite;
+}
+
+.etlaq-hero-blob-2 {
+  width: min(70vw, 520px);
+  height: min(70vw, 520px);
+  right: -14%;
+  top: -10%;
+  background: radial-gradient(circle at 30% 30%, rgb(var(--etlaq-accent2-rgb, 14 165 233) / 0.75), transparent 62%);
+  animation: etlaq-hero-blob-2 16s ease-in-out infinite;
+}
+
+.etlaq-hero-blob-3 {
+  width: min(76vw, 560px);
+  height: min(76vw, 560px);
+  left: 18%;
+  bottom: -26%;
+  background: radial-gradient(circle at 30% 30%, rgb(255 255 255 / 0.18), transparent 65%);
+  animation: etlaq-hero-blob-3 18s ease-in-out infinite;
+}
+
+@keyframes etlaq-hero-stars {
+  0% { background-position: 0px 0px; }
+  100% { background-position: 240px 140px; }
+}
+
+@keyframes etlaq-hero-blob-1 {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(14%, 10%, 0) scale(1.06); }
+}
+@keyframes etlaq-hero-blob-2 {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(-12%, 14%, 0) scale(1.08); }
+}
+@keyframes etlaq-hero-blob-3 {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(8%, -12%, 0) scale(1.05); }
+}
+
+/*
+  =============================
+  HERO BACKGROUND — Variant 4
+  Light Engineering Motion
+  Off-white + Soft Beige + Warm Gold
+  - Subtle engineering grid
+  - Clear sweep
+  - Higher brightness, stronger motion
+  =============================
+*/
+
+.etlaq-hero-bg--light {
+  background:
+    radial-gradient(900px circle at 18% 18%, rgb(255 252 246 / 0.95), transparent 60%),
+    radial-gradient(1000px circle at 86% 20%, rgb(252 243 229 / 0.95), transparent 62%),
+    radial-gradient(900px circle at 55% 92%, rgb(245 214 150 / 0.45), transparent 58%),
+    linear-gradient(180deg, rgb(255 252 246 / 1) 0%, rgb(252 243 229 / 0.98) 45%, rgb(248 231 200 / 0.96) 100%);
+  background-size: 180% 180%;
+  background-position: 0% 0%;
+  animation: etlaq-hero-light-move 9s ease-in-out infinite;
+}
+
+.etlaq-hero-bg--light::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(0deg, rgb(120 85 20 / 0.14) 0 1px, transparent 1px 44px),
+    repeating-linear-gradient(90deg, rgb(120 85 20 / 0.10) 0 1px, transparent 1px 52px);
+  opacity: 0.22;
+  mask-image: radial-gradient(70% 60% at 55% 45%, #000 0%, #000 58%, transparent 100%);
+  -webkit-mask-image: radial-gradient(70% 60% at 55% 45%, #000 0%, #000 58%, transparent 100%);
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+  animation: etlaq-hero-light-grid 12.5s linear infinite;
+  mix-blend-mode: multiply;
+}
+
+.etlaq-hero-bg--light::after {
+  content: "";
+  position: absolute;
+  inset: -30% -40%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgb(236 184 72 / 0.00) 34%,
+    rgb(236 184 72 / 0.42) 50%,
+    rgb(236 184 72 / 0.00) 66%,
+    transparent 100%
+  );
+  opacity: 0.60;
+  transform: translateX(-55%) rotate(12deg);
+  will-change: transform;
+  animation: etlaq-hero-light-sweep 5.8s ease-in-out infinite;
+  mix-blend-mode: multiply;
+}
+
+@keyframes etlaq-hero-light-move {
+  0%   { background-position: 0% 0%; }
+  50%  { background-position: 100% 55%; }
+  100% { background-position: 0% 0%; }
+}
+
+@keyframes etlaq-hero-light-grid {
+  0%   { transform: translate3d(0, 0, 0); }
+  50%  { transform: translate3d(-2%, 1%, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+
+@keyframes etlaq-hero-light-sweep {
+  0%, 100% { transform: translateX(-55%) rotate(12deg); }
+  50%      { transform: translateX(55%) rotate(12deg); }
+}
+
+/* Reduced motion: keep the hero stable. */
+@media (prefers-reduced-motion: reduce) {
+  .etlaq-hero-bg--gradient,
+  .etlaq-hero-bg--gradient::before,
+  .etlaq-hero-bg--light,
+  .etlaq-hero-bg--light::before,
+  .etlaq-hero-bg--light::after,
+  .etlaq-hero-blob-1,
+  .etlaq-hero-blob-2,
+  .etlaq-hero-blob-3,
+  .etlaq-hero-bg--blobs::after,
+  .etlaq-hero-bg--grid::before,
+  .etlaq-hero-bg--grid::after {
+    animation: none !important;
+  }
+  .etlaq-hero-bg--gradient::after {
+    opacity: 0.06;
+  }
+}
+
+/* Force-motion override (for previews): allow animations even if OS is set to reduced-motion. */
+:root[data-force-motion="1"] .etlaq-hero-bg--gradient {
+  animation: etlaq-hero-gradient-move 10s ease-in-out infinite !important;
+}
+:root[data-force-motion="1"] .etlaq-hero-bg--gradient::before {
+  animation: etlaq-hero-conic 12s linear infinite !important;
+}
+:root[data-force-motion="1"] .etlaq-hero-bg--light {
+  animation: etlaq-hero-light-move 9s ease-in-out infinite !important;
+}
+:root[data-force-motion="1"] .etlaq-hero-bg--light::before {
+  animation: etlaq-hero-light-grid 12.5s linear infinite !important;
+}
+:root[data-force-motion="1"] .etlaq-hero-bg--light::after {
+  animation: etlaq-hero-light-sweep 5.8s ease-in-out infinite !important;
+}
+:root[data-force-motion="1"] .etlaq-hero-blob-1 {
+  animation: etlaq-hero-blob-1 18s ease-in-out infinite !important;
+}
+:root[data-force-motion="1"] .etlaq-hero-blob-2 {
+  animation: etlaq-hero-blob-2 20s ease-in-out infinite !important;
+}
+:root[data-force-motion="1"] .etlaq-hero-blob-3 {
+  animation: etlaq-hero-blob-3 22s ease-in-out infinite !important;
+}
+:root[data-force-motion="1"] .etlaq-hero-bg--grid::before {
+  animation: etlaq-hero-grid-drift 18s linear infinite !important;
+}
+:root[data-force-motion="1"] .etlaq-hero-bg--grid::after {
+  animation: etlaq-hero-sweep 6.5s ease-in-out infinite !important;
+}
+:root[data-force-motion="1"] .etlaq-hero-bg--blobs::after {
+  animation: etlaq-hero-stars 14s linear infinite !important;
+}
+
+/* Top bar height matches Tailwind h-9 (36px) on <640px and h-10 (40px) on sm+ */
+@media (max-width: 639px) {
+  :root {
+    --etlaq-topbar-h: 36px;
+  }
+}
+
+/* --- Hero background switcher hint --- */
+@keyframes etlaqSpinPulse {
+  0%,
+  85% {
+    transform: rotate(0deg);
+  }
+  92%,
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.etlaq-spin-pulse {
+  animation: etlaqSpinPulse 10s linear infinite;
+}
+
+/* --- Client logos rail (infinite marquee) --- */
+@keyframes etlaqLogoMarquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    /* Shift by a measured pixel distance to avoid blank gaps on wide screens. */
+    transform: translate3d(calc(-1 * var(--etlaq-rail-shift, 50%)), 0, 0);
+  }
+}
+
+.etlaq-logo-rail {
+  position: relative;
+  overflow: hidden;
+  /* Force LTR inside the marquee even on RTL pages to keep the animation seamless.
+     (On RTL pages, reversing the animation direction can push the track out of view
+     and reveal blank gaps.) */
+  direction: ltr;
+  /* Soft edge fade */
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 10%, #000 90%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, #000 10%, #000 90%, transparent 100%);
+}
+
+.etlaq-logo-rail__track {
+  display: flex;
+  align-items: center;
+  gap: var(--etlaq-rail-gap, 12px);
+  width: max-content;
+  will-change: transform;
+  animation: etlaqLogoMarquee var(--etlaq-rail-duration, 38s) linear infinite;
+}
+
+.etlaq-logo-rail__segment {
+  display: flex;
+  align-items: center;
+  gap: var(--etlaq-rail-gap, 12px);
+}
+
+/* Pause animation on interaction */
+.etlaq-logo-rail:hover .etlaq-logo-rail__track,
+.etlaq-logo-rail:focus-within .etlaq-logo-rail__track {
+  animation-play-state: paused;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .etlaq-logo-rail {
+    overflow-x: auto;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+  .etlaq-logo-rail__track {
+    animation: none;
+  }
+}
+
+.etlaq-logo-item img {
+  opacity: 0.92;
+  filter: saturate(1.05) contrast(1.02);
+  transition: transform 160ms ease, filter 160ms ease, opacity 160ms ease;
+}
+
+.etlaq-logo-item:hover img,
+.etlaq-logo-item:focus-visible img {
+  opacity: 1;
+  transform: translateY(-2px) scale(1.06);
+  filter: saturate(1.25) contrast(1.05);
+}
+
+/* --- Site Search RTL: ensure every text line aligns to the right in Arabic --- */
+.etlaq-search-rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+.etlaq-search-rtl * {
+  text-align: right;
+}
+
+/* --------------------------------------------------
+   Anti-inspect (best-effort UI deterrent)
+   Enabled by adding the class .etlaq-guard-on to <html>
+-------------------------------------------------- */
+
+.etlaq-guard-on,
+.etlaq-guard-on body {
+  /* Prevent iOS long-press callout menu */
+  -webkit-touch-callout: none;
+  /* Reduce accidental text selection (copy still blocked via JS listeners) */
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Stronger: prevent selection across all elements (except inputs below) */
+.etlaq-guard-on * {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+/* Allow selection inside form fields */
+.etlaq-guard-on input,
+.etlaq-guard-on textarea,
+.etlaq-guard-on [contenteditable="true"],
+.etlaq-guard-on [contenteditable=""] {
+  -webkit-user-select: text !important;
+  user-select: text !important;
+}
+
+/* Prevent iOS image callout */
+.etlaq-guard-on img,
+.etlaq-guard-on a {
+  -webkit-touch-callout: none;
+}
+
+
+/* Infinite client logos rail (CSS-only, no layout measurements -> avoids forced reflow/CLS) */
+.etlaq-logo-rail__viewport{overflow:hidden; width:100%;}
+.etlaq-logo-rail__track{display:flex; width:max-content; will-change:transform; animation: etlaq-logo-marquee 24s linear infinite;}
+.etlaq-logo-rail__segment{display:flex; align-items:center;}
+.etlaq-logo-item{display:inline-flex; align-items:center; padding: 10px 10px; text-decoration:none;}
+.etlaq-logo-box{width:190px; height:48px; border-radius: 14px; background: rgba(255,255,255,0.9); box-shadow: 0 10px 26px rgba(0,0,0,0.10); display:flex; align-items:center; justify-content:center; border: 1px solid rgba(0,0,0,0.06);}
+.etlaq-logo-img{width:100%; height:100%; object-fit:contain; filter:none; opacity:0.96; transition: transform .18s ease, filter .18s ease, opacity .18s ease;}
+.etlaq-logo-item:hover .etlaq-logo-img{transform: scale(1.06); filter: saturate(1.15) contrast(1.05); opacity:1;}
+@keyframes etlaq-logo-marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+@media (prefers-reduced-motion: reduce){.etlaq-logo-rail__track{animation:none;}}
+
+
+/* Etlaq icon components */
+.etlaq-icon{display:inline-block;vertical-align:-0.125em;flex-shrink:0;}

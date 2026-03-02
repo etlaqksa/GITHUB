@@ -2,6 +2,7 @@ import { Suspense, lazy, useEffect, useMemo, useRef, useState, type CSSPropertie
 
 import LocalizedLink from '@/components/LocalizedLink';
 import ClientLogosWall from '@/components/ClientLogosWall';
+import Testimonials from '@/components/Testimonials';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -440,6 +441,9 @@ export default function HomeBelowFold() {
 
       {/* CLIENTS */}
       <ClientLogosWall />
+
+      {/* TESTIMONIALS */}
+      <Testimonials className="py-12 md:py-16 container" />
 
       {/* LOCATIONS */}
       <section className="py-12 md:py-16 bg-muted/20">
