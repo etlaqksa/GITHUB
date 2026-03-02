@@ -626,7 +626,7 @@ export default function BlogPost() {
                 <p className="text-sm text-muted-foreground mt-1">
                   {language === 'ar'
                     ? 'فريق إطلاق الهندسي يقدّم تقييماً مختصراً مجانياً. تواصل معنا عبر الواتساب أو صفحة طلب الخدمة.'
-                    : 'ETLAQ's engineering team provides a free brief assessment. Reach us via WhatsApp or the service request page.'}
+                    : 'ETLAQ's engineering team provides a free brief assessment. Reach us via WhatsApp or the service request page."}
                 </p>
               </div>
               <div className="flex gap-3 flex-shrink-0">
