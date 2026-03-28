@@ -2,7 +2,6 @@ import { Suspense, lazy, useEffect, useMemo, useRef, useState, type CSSPropertie
 
 import LocalizedLink from '@/components/LocalizedLink';
 import ClientLogosWall from '@/components/ClientLogosWall';
-import Testimonials from '@/components/Testimonials';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -20,6 +19,12 @@ import {
   IconShieldCheck,
   IconSoilGrouting,
 } from '@/components/icons/etlaq';
+
+// New high-conversion sections
+import TestimonialsSection from '@/components/TestimonialsSection';
+import ServiceDecisionHelper from '@/components/ServiceDecisionHelper';
+import WhyChooseUs from '@/components/WhyChooseUs';
+import EmergencyCTA from '@/components/EmergencyCTA';
 
 // Load FAQ accordion only when it is near the viewport.
 // This removes Radix accordion logic from the initial render, which PSI often flags as forced reflow.
@@ -442,9 +447,6 @@ export default function HomeBelowFold() {
       {/* CLIENTS */}
       <ClientLogosWall />
 
-      {/* TESTIMONIALS */}
-      <Testimonials className="py-12 md:py-16 container" />
-
       {/* LOCATIONS */}
       <section className="py-12 md:py-16 bg-muted/20">
         <div className="w-full px-4">
@@ -509,6 +511,18 @@ export default function HomeBelowFold() {
           <LazyHomeFaqSection />
         </Suspense>
       </InViewMount>
+
+      {/* SERVICE DECISION HELPER — interactive 3-question guide */}
+      <ServiceDecisionHelper className="bg-slate-50/60" />
+
+      {/* WHY CHOOSE US — 6 differentiators */}
+      <WhyChooseUs />
+
+      {/* TESTIMONIALS — client reviews carousel */}
+      <TestimonialsSection className="bg-muted/20" />
+
+      {/* EMERGENCY CTA — for urgent cases */}
+      <EmergencyCTA />
 
       {/* FINAL CTA */}
       <section className="py-12 md:py-16">
