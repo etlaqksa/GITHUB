@@ -25,6 +25,9 @@ import TestimonialsSection from '@/components/TestimonialsSection';
 import ServiceDecisionHelper from '@/components/ServiceDecisionHelper';
 import WhyChooseUs from '@/components/WhyChooseUs';
 import EmergencyCTA from '@/components/EmergencyCTA';
+import ProcessTimeline from '@/components/ProcessTimeline';
+import FeaturedProjects from '@/components/FeaturedProjects';
+import CertificationsBar from '@/components/CertificationsBar';
 
 // Load FAQ accordion only when it is near the viewport.
 // This removes Radix accordion logic from the initial render, which PSI often flags as forced reflow.
@@ -515,11 +518,24 @@ export default function HomeBelowFold() {
       {/* SERVICE DECISION HELPER — interactive 3-question guide */}
       <ServiceDecisionHelper className="bg-slate-50/60" />
 
+      {/* PROCESS TIMELINE — how we work */}
+      <ProcessTimeline />
+
       {/* WHY CHOOSE US — 6 differentiators */}
-      <WhyChooseUs />
+      <WhyChooseUs className="bg-slate-50" />
+
+      {/* FEATURED PROJECTS — project showcase */}
+      <FeaturedProjects limit={6} />
 
       {/* TESTIMONIALS — client reviews carousel */}
       <TestimonialsSection className="bg-muted/20" />
+
+      {/* CERTIFICATIONS BAR — trust indicators */}
+      <section className="py-8">
+        <div className="container">
+          <CertificationsBar variant="dark" />
+        </div>
+      </section>
 
       {/* EMERGENCY CTA — for urgent cases */}
       <EmergencyCTA />

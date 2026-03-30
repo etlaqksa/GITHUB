@@ -21,6 +21,7 @@ import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import { IconChecklist, IconClock, IconGprRadar, IconLocation, IconPhone, IconShieldCheck, IconSoilGrouting, IconWhatsapp } from '@/components/icons/etlaq';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import { useState } from 'react';
+import ServiceComparisonTable from '@/components/ServiceComparisonTable';
 
 export default function Services() {
   const { language } = useLanguage();
@@ -616,6 +617,9 @@ export default function Services() {
           </div>
         </div>
       </section>
+
+      {/* SERVICE COMPARISON TABLE */}
+      <ServiceComparisonTable />
 
       {/* FAQ */}
       <section className="py-12 md:py-16 bg-muted/20">

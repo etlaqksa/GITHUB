@@ -1,103 +1,52 @@
-# ETLAQ KSA — World‑Class Final (All Phases Integrated)
+# ETLAQ KSA — v26 World-Class Professional (جاهز للإطلاق الفوري)
 
-هذا الملف يمثل نسخة نهائية مدمجة تشمل جميع التحسينات التي تم تنفيذها عبر المراحل (SEO + محتوى + CRO + Schema + OG Images + Performance + Forms + Routing).
+## ما الجديد في هذه النسخة
 
----
+### مكونات جديدة (10 مكونات)
 
-## 1) النشر على Netlify (Recommended: Git Deploy)
-1) ارفع المشروع على GitHub (كـ Repository).
-2) في Netlify → Add new site → Import from Git.
-3) Build command:
-   - `npm ci && npm run build`
-4) Publish directory:
-   - `client/dist`
-5) Environment variables (إن وجدت/مطلوبة):
-   - **لا يلزم OAuth** للموقع الأساسي. إذا ظهر خطأ `[OAuth] OAUTH_SERVER_URL` أثناء `npm run dev` فهو متعلق بسيرفر محلي فقط. للنشر العام، لا يؤثر عادةً طالما لم تستخدم مسارات OAuth.
-6) تأكد من وجود الملف:
-   - `client/public/_redirects` (SPA routing + /ar & /en)
-7) بعد النشر: Site settings → Domain management → إضافة `etlaqksa.com` وتفعيل HTTPS.
+| المكون | الوظيفة |
+|--------|---------|
+| ProcessTimeline | 6 خطوات تفاعلية "كيف نعمل" مع auto-advance |
+| EquipmentShowcase | عرض كامل للمعدات: GPR, ERT, MASW, مضخات، حفر |
+| ServiceComparisonTable | جدول مقارنة 10 معايير × 3 خدمات |
+| FeaturedProjects | عرض مشاريع متنوع + إحصائيات |
+| CertificationsBar | شريط ثقة 6 إنجازات (dark/light/colored) |
+| TestimonialsSection | Carousel آراء 5 عملاء + نجوم |
+| ServiceDecisionHelper | دليل 3 أسئلة تفاعلي → يوجه لخدمة محددة |
+| WhyChooseUs | 6 أعمدة تميّز احترافية |
+| EmergencyCTA | CTA حالات طوارئ أحمر مع WhatsApp |
+| ArticleEndCTA | CTA ذكي نهاية كل مقال (يكتشف الخدمة تلقائياً) |
 
----
+### صفحات مُعاد كتابتها
+- **About.tsx** — إعادة كتابة كاملة: Hero داكن + Timeline + القيم + المعدات
+- **HomeBelowFold.tsx** — 7 أقسام جديدة
+- **Services.tsx** — جدول مقارنة الخدمات
+- **Blog.tsx** — Pagination (12/صفحة) + عداد نتائج
+- **BlogPost.tsx** — CTA نهاية كل مقال
 
-## 2) النشر اليدوي (Manual Deploy)
-- قم ببناء المشروع محليًا:
-  1) `npm ci`
-  2) `npm run build`
-- ارفع مجلد: `client/dist` بالكامل إلى Netlify (Deploys → Manual deploy)
-- **مهم جدًا:** تأكد أن `dist/_redirects` موجود داخل `client/dist` بعد البناء.
-
----
-
-## 3) النماذج (Netlify Forms)
-- النماذج تُكتشف من:
-  - `client/public/__forms.html`
-- يجب أن ترى نماذج مثل:
-  - `contact` / `request_service` / `quick_assessment` (قد تختلف الأسماء حسب النسخة)
-- إذا لم تظهر النماذج:
-  - تأكد أن إعداد Netlify لا يتجاهل HTML forms.
-  - في netlify.toml (إن وجد) تأكد أن:
-    - `ignore_html_forms = false`
-
-> صفحة `/.netlify.app/__forms.html` قد تظهر بيضاء — هذا طبيعي لأنها صفحة كشف/تعريف للنماذج وليست واجهة.
+### CSS احترافية
+- +120 سطر: gradient text, shimmer skeleton, FAB, print styles, dark mode
+- smooth scroll, focus-visible, line-clamp, professional card hover
 
 ---
 
-## 4) اللغة الافتراضية
-- الافتراضي عربي دائمًا:
-  - المسار الرئيسي يذهب إلى `/ar`
-  - الروابط الداخلية تستخدم LocalizedLink لضمان اللغة.
+## النشر على Netlify
+
+```
+Build command: npm ci && npm run build
+Publish dir:   client/dist
+```
+
+لا تغيير في Environment Variables أو إعدادات النشر عن الإصدارات السابقة.
+
+## الصفحات الرئيسية
+
+- `/ar/` — الرئيسية
+- `/ar/about` — من نحن (محسّنة بالكامل)
+- `/ar/services` — الخدمات + جدول مقارنة
+- `/ar/projects` — المشاريع
+- `/ar/blog` — المدونة + Pagination
+- `/ar/request-service` — طلب خدمة
+- `/ar/contact` — تواصل
 
 ---
-
-## 5) صفحات داخلية (NoIndex)
-- `content-studio` صفحة داخلية:
-  - `Disallow` في robots.txt
-  - `noindex` في SEO
-
----
-
-## 6) أهم الإضافات الموجودة في هذه النسخة
-- OG Images احترافية لكل خدمة + WebP
-- Breadcrumb UI + BreadcrumbList Schema
-- LocalBusiness schema مركزي + تحسين Service schema + تحسين Article schema
-- Hub داخلي للمقالات يربط الخدمات والمدن
-- صفحة Case Studies منظمة + Schema
-- نموذج تحويل مختصر quick_assessment
-- تحسينات الأداء (Vite manualChunks + cssCodeSplit + sourcemap false)
-- تنظيف LocalizedLink لمنع nested anchors (HTML صحي)
-
----
-
-## 7) مسارات مهمة
-- الخدمات: `/ar/services`
-- المدن: `/ar/locations`
-- دراسات الحالة: `/ar/case-studies`
-- المشاريع: `/ar/projects`
-- المدونة: `/ar/blog`
-- طلب خدمة: `/ar/request-service`
-
----
-
-## 8) ملاحظات DNS للدومين etlaqksa.com (names.co.uk)
-- في Netlify ستجد DNS Targets:
-  - A records لـ apex (etlaqksa.com) إلى Netlify load balancer IPs
-  - CNAME لـ www إلى `YOUR-SITE.netlify.app`
-- ضعها في names.co.uk ثم انتظر انتشار DNS.
-
----
-
-إذا أردت Phase تالية "مرة واحدة" أيضًا:
-- ارسل ما تريد تحديدًا (مثلاً: إضافة صفحات لكل مدينة/خدمة بالجملة + توليد محتوى تلقائي + صور).
-
-
----
-
-## ملاحظة بخصوص "مساعد الموقع"
-
-المساعد الحالي يعتمد على **قاعدة معرفة الموقع (المقالات والصفحات)** فقط:
-- يبحث داخل المقالات ويعرض أفضل النتائج
-- يقترح روابط الخدمات المناسبة (حقن التربة / كشف التكهفات / الجيوفيزياء)
-- يوجّه إلى **طلب الخدمة** و **التواصل** عند أسئلة التسعير أو الاستشارة
-
-لا يوجد ربط خارجي بنماذج ذكاء اصطناعي أو مفاتيح API — وبالتالي يعمل بدون أي إعداد إضافي في Netlify.
-

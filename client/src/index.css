@@ -1889,6 +1889,41 @@ html { scrollbar-gutter: stable; }
   text-align: right;
 }
 
+/* --------------------------------------------------
+   Anti-inspect (best-effort UI deterrent)
+   Enabled by adding the class .etlaq-guard-on to <html>
+-------------------------------------------------- */
+
+.etlaq-guard-on,
+.etlaq-guard-on body {
+  /* Prevent iOS long-press callout menu */
+  -webkit-touch-callout: none;
+  /* Reduce accidental text selection (copy still blocked via JS listeners) */
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Stronger: prevent selection across all elements (except inputs below) */
+.etlaq-guard-on * {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+/* Allow selection inside form fields */
+.etlaq-guard-on input,
+.etlaq-guard-on textarea,
+.etlaq-guard-on [contenteditable="true"],
+.etlaq-guard-on [contenteditable=""] {
+  -webkit-user-select: text !important;
+  user-select: text !important;
+}
+
+/* Prevent iOS image callout */
+.etlaq-guard-on img,
+.etlaq-guard-on a {
+  -webkit-touch-callout: none;
+}
 
 
 /* Infinite client logos rail (CSS-only, no layout measurements -> avoids forced reflow/CLS) */
@@ -1906,130 +1941,162 @@ html { scrollbar-gutter: stable; }
 /* Etlaq icon components */
 .etlaq-icon{display:inline-block;vertical-align:-0.125em;flex-shrink:0;}
 
-/* ═══════════════════════════════════════════════════════════════════
-   PROFESSIONAL ENHANCEMENTS — added in v2 refactoring
-   ═══════════════════════════════════════════════════════════════════ */
 
-/* Smooth focus rings */
-@layer base {
-  :focus-visible {
-    outline: 2px solid var(--primary);
-    outline-offset: 2px;
-    border-radius: 6px;
+/* ═══════════════════════════════════════════════════════════════
+   ETLAQ v25 — PROFESSIONAL DESIGN ENHANCEMENTS
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Smooth scroll for the entire page ── */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ── Professional card hover states ── */
+.etlaq-card-hover {
+  transition: box-shadow 0.22s ease, transform 0.22s ease;
+}
+.etlaq-card-hover:hover {
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.1), 0 4px 12px rgba(0, 0, 0, 0.06);
+  transform: translateY(-2px);
+}
+
+/* ── Focus-visible ring (accessibility) ── */
+*:focus-visible {
+  outline: 2px solid rgb(37 99 235 / 0.7);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ── Professional gradient text helper ── */
+.etlaq-gradient-text {
+  background: linear-gradient(135deg, rgb(37 99 235), rgb(14 165 233));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Section divider ── */
+.etlaq-section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgb(226 232 240), transparent);
+  border: none;
+  margin: 0;
+}
+
+/* ── Shimmer skeleton loading ── */
+@keyframes etlaq-shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.etlaq-skeleton {
+  background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%);
+  background-size: 200% 100%;
+  animation: etlaq-shimmer 1.6s ease-in-out infinite;
+  border-radius: 8px;
+}
+
+/* ── Floating action button (WhatsApp) ── */
+.etlaq-fab {
+  position: fixed;
+  bottom: calc(5rem + env(safe-area-inset-bottom));
+  inset-inline-end: 1.25rem;
+  z-index: 45;
+  border-radius: 9999px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2), 0 2px 6px rgba(37,211,102,0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.etlaq-fab:hover {
+  transform: scale(1.08);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.25), 0 4px 12px rgba(37,211,102,0.5);
+}
+@media (min-width: 768px) {
+  .etlaq-fab {
+    bottom: 2rem;
   }
 }
 
-/* Better image rendering globally */
-@layer base {
-  img {
-    image-rendering: -webkit-optimize-contrast;
-  }
+/* ── Number/stats counter animation ── */
+@keyframes etlaq-count-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.etlaq-counter-animate {
+  animation: etlaq-count-up 0.5s ease-out forwards;
 }
 
-/* Premium card hover effect */
-@layer components {
-  .etlaq-card-hover {
-    transition: box-shadow 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
-  }
-  .etlaq-card-hover:hover {
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
-    transform: translateY(-2px);
-  }
-  .dark .etlaq-card-hover:hover {
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 2px 8px rgba(0, 0, 0, 0.15);
-  }
+/* ── Line clamp utility (for article excerpts) ── */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
-/* Selection colour */
-@layer base {
-  ::selection {
-    background-color: rgb(var(--primary) / 0.18);
-  }
+/* ── Process timeline connector ── */
+.etlaq-timeline-connector {
+  position: absolute;
+  inset-inline-start: 1.25rem;
+  top: 2.5rem;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, rgb(59 130 246 / 0.4), transparent);
 }
 
-/* Scrollbar refinement */
-@layer base {
-  * {
-    scrollbar-width: thin;
-    scrollbar-color: rgb(var(--border)) transparent;
-  }
-  *::-webkit-scrollbar {
-    width: 6px;
-    height: 6px;
-  }
-  *::-webkit-scrollbar-track {
-    background: transparent;
-  }
-  *::-webkit-scrollbar-thumb {
-    background-color: var(--border);
-    border-radius: 3px;
-  }
+/* ── Service badge colors (consistent across pages) ── */
+.etlaq-badge-grouting  { background: rgb(219 234 254); color: rgb(29 78 216); }
+.etlaq-badge-cavity    { background: rgb(254 243 199); color: rgb(146 64 14); }
+.etlaq-badge-geophys   { background: rgb(209 250 229); color: rgb(6 95 70); }
+
+/* ── Trust bar (dark variant) horizontal scroll on mobile ── */
+.etlaq-trust-scroll {
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.etlaq-trust-scroll::-webkit-scrollbar { display: none; }
+
+/* ── Image protection helper ── */
+.etlaq-img-protected {
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
 }
 
-/* Search input enhanced */
-@layer components {
-  .etlaq-search-input {
-    padding-inline-start: 2.75rem;
-    padding-inline-end: 1rem;
-    height: 2.75rem;
-    border-radius: 0.875rem;
-    border: 1.5px solid var(--border);
-    background: var(--background);
-    width: 100%;
-    font-size: 0.9375rem;
-    transition: border-color 0.2s, box-shadow 0.2s;
-  }
-  .etlaq-search-input:focus {
-    outline: none;
-    border-color: var(--primary);
-    box-shadow: 0 0 0 3px rgb(var(--primary) / 0.12);
-  }
+/* ── Announcement/alert strip ── */
+.etlaq-strip {
+  background: linear-gradient(90deg, rgb(29 78 216), rgb(37 99 235));
+  color: white;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  letter-spacing: 0.01em;
 }
 
-/* Testimonials quote decorative */
-@layer components {
-  .testimonial-card {
-    position: relative;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
+/* ── Print styles ── */
+@media print {
+  .etlaq-fab,
+  .etlaq-topbar,
+  nav[class*="sticky"],
+  [data-hide-print] {
+    display: none !important;
   }
-  .testimonial-card:hover {
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
-    transform: translateY(-2px);
-  }
+  body { font-size: 12pt; }
+  a[href]::after { content: " (" attr(href) ")"; font-size: 0.75em; color: #666; }
 }
 
-/* Professional badge */
-@layer components {
-  .badge-pro {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.375rem;
-    background: linear-gradient(135deg, rgb(var(--primary) / 0.12), rgb(var(--primary) / 0.06));
-    color: var(--primary);
-    border: 1px solid rgb(var(--primary) / 0.2);
-    border-radius: 9999px;
-    padding: 0.25rem 0.875rem;
-    font-size: 0.8125rem;
-    font-weight: 600;
-    letter-spacing: 0.01em;
-  }
+/* ── Dark mode adjustments ── */
+.dark .etlaq-skeleton {
+  background: linear-gradient(90deg, #1e293b 25%, #334155 50%, #1e293b 75%);
+  background-size: 200% 100%;
 }
-
-/* Stat counter pill */
-@layer components {
-  .stat-pill {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 1rem;
-    padding: 0.875rem 1.25rem;
-    min-width: 120px;
-    transition: box-shadow 0.2s, transform 0.2s;
-  }
-  .stat-pill:hover {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-    transform: translateY(-1px);
-  }
-}
+.dark .etlaq-badge-grouting  { background: rgb(29 78 216 / 0.25); color: rgb(147 197 253); }
+.dark .etlaq-badge-cavity    { background: rgb(146 64 14 / 0.25); color: rgb(253 230 138); }
+.dark .etlaq-badge-geophys   { background: rgb(6 95 70 / 0.25);  color: rgb(110 231 183); }

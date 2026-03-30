@@ -6,7 +6,7 @@ export const COMPANY = {
   // No spaces to prevent line-breaks on small screens.
   phoneDisplay: '+966534145922',
   phoneE164: '+966534145922',
-  email: 'info@etlaqksa.com',
+  email: 'etlaqksa@gmail.com',
   addressAr: 'الرياض - حي الياسمين (طريق أنس بن مالك)',
   addressEn: 'Riyadh - Al Yasmin (Anas Bin Malik Rd)',
   // Keep as a Google Maps query link (no claim of exact coordinates)

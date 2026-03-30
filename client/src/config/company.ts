@@ -1,14 +1,15 @@
 export const COMPANY_INFO = {
-  // Fill these in with the actual values from your commercial registration documents
-  commercialRegister: "1010XXXXXXX", // ← ضع رقم السجل التجاري الفعلي هنا
-  vatNumber: "3XXXXXXXXXXXXX3",       // ← ضع الرقم الضريبي الفعلي هنا
+  // Optional: fill these later (leave empty to hide in UI)
+  commercialRegister: "", // e.g. "1010XXXXXX"
+  vatNumber: "",          // e.g. "3XXXXXXXXXXXXX"
 
-  // Public contact
+  // Public contact (already used elsewhere)
   phoneInternational: "+966534145922",
+
+  // Display helpers
+  // NOTE: remove spaces to avoid line-breaks on mobile top bars.
   phoneDisplay: "+966534145922",
-  
-  // Professional domain email (not Gmail)
-  email: "info@etlaqksa.com",
+  email: "etlaqksa@gmail.com",
 
   // Social handle
   socialHandle: "etlaqksa",

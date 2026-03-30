@@ -80,7 +80,7 @@ export default function ProtectedImage({
         'bg-muted/40',
         className,
       ].join(' ')}
-      
+      onContextMenu={(e) => e.preventDefault()}
       onDragStart={(e) => e.preventDefault()}
       style={{
         userSelect: 'none',

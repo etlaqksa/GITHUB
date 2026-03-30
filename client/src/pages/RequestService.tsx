@@ -475,9 +475,9 @@ export default function RequestService() {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-2 justify-center">
-                  <a href="mailto:info@etlaqksa.com">
+                  <a href="mailto:etlaqksa@gmail.com">
                     <Button variant="outline" className="w-full sm:w-auto">
-                      {language === 'ar' ? 'أرسل بريدًا إلى info@etlaqksa.com' : 'Email info@etlaqksa.com'}
+                      {language === 'ar' ? 'أرسل بريدًا إلى etlaqksa@gmail.com' : 'Email etlaqksa@gmail.com'}
                     </Button>
                   </a>
                   <LocalizedLink href="/contact">

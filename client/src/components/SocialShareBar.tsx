@@ -12,14 +12,14 @@ type Props = {
 const COMPANY_AR = {
   name: "شركة إطلاق المتميزة المحدودة",
   site: "www.etlaqksa.com",
-  email: "info@etlaqksa.com",
+  email: "etlaqksa@gmail.com",
   phone: "+966534145922",
 };
 
 const COMPANY_EN = {
   name: "Etlaq Al Mutamayezah Co. Ltd.",
   site: "www.etlaqksa.com",
-  email: "info@etlaqksa.com",
+  email: "etlaqksa@gmail.com",
   phone: "+966534145922",
 };
 
