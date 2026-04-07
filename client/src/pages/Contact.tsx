@@ -5,7 +5,7 @@ import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { IconEmail, IconLocation, IconPhone } from '@/components/icons/etlaq';
-import { useState } from 'react';
+import { useState, useCallback, useRef, useEffect } from 'react';
 import { toast } from 'sonner';
 import { useLocation } from 'wouter';
 import { trackEvent } from '@/lib/analytics';
@@ -16,6 +16,16 @@ function encodeForm(data: Record<string, string>) {
     .join('&');
 }
 
+// Netlify max file size: 8MB per file / 8MB total for free tier
+const MAX_FILE_SIZE_MB = 8;
+const MAX_FILE_SIZE_BYTES = MAX_FILE_SIZE_MB * 1024 * 1024;
+
+// Simple math CAPTCHA for spam prevention (CSRF alternative for static sites)
+function generateCaptcha() {
+  const a = Math.floor(Math.random() * 10) + 1;
+  const b = Math.floor(Math.random() * 10) + 1;
+  return { a, b, answer: a + b };
+}
 
 export default function Contact() {
   const { language } = useLanguage();
@@ -29,9 +39,49 @@ export default function Contact() {
   });
   const [attachments, setAttachments] = useState<FileList | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [fileError, setFileError] = useState('');
+
+  // CAPTCHA state
+  const [captcha, setCaptcha] = useState(generateCaptcha);
+  const [captchaInput, setCaptchaInput] = useState('');
+  const [captchaError, setCaptchaError] = useState('');
+
+  // CSRF token (timestamp-based for static sites)
+  const csrfToken = useRef(Date.now().toString(36) + Math.random().toString(36).slice(2));
+
+  const validateFiles = useCallback((files: FileList | null) => {
+    if (!files || !files.length) {
+      setFileError('');
+      return true;
+    }
+    for (let i = 0; i < files.length; i++) {
+      if (files[i].size > MAX_FILE_SIZE_BYTES) {
+        const msg = language === 'ar'
+          ? `حجم الملف "${files[i].name}" يتجاوز الحد المسموح (${MAX_FILE_SIZE_MB} ميجابايت)`
+          : `File "${files[i].name}" exceeds the maximum size (${MAX_FILE_SIZE_MB}MB)`;
+        setFileError(msg);
+        return false;
+      }
+    }
+    setFileError('');
+    return true;
+  }, [language]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Validate CAPTCHA
+    if (parseInt(captchaInput, 10) !== captcha.answer) {
+      setCaptchaError(language === 'ar' ? 'إجابة التحقق غير صحيحة' : 'Incorrect verification answer');
+      setCaptcha(generateCaptcha());
+      setCaptchaInput('');
+      return;
+    }
+    setCaptchaError('');
+
+    // Validate files
+    if (!validateFiles(attachments)) return;
+
     setIsSubmitting(true);
     try {
       trackEvent('form_submit_attempt', { form: 'contact', language });
@@ -43,6 +93,7 @@ export default function Contact() {
       payload.append('page', page);
       payload.append('referrer', referrer);
       payload.append('bot-field', '');
+      payload.append('_csrf', csrfToken.current);
       payload.append('name', formData.name);
       payload.append('email', formData.email);
       payload.append('phone', formData.phone);
@@ -89,6 +140,8 @@ export default function Contact() {
       setLocation(`/thank-you?form=contact`);
       setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
       setAttachments(null);
+      setCaptchaInput('');
+      setCaptcha(generateCaptcha());
     } catch {
       toast.error(language === 'ar' ? 'تعذر إرسال الرسالة، حاول مرة أخرى' : 'Failed to send message, please try again');
       trackEvent('form_submit_error', { form: 'contact', language });
@@ -192,8 +245,9 @@ export default function Contact() {
                   encType="multipart/form-data"
                 >
               <input type="hidden" name="form-name" value="contact" />
+              <input type="hidden" name="_csrf" value={csrfToken.current} />
               <p className="hidden">
-                <label>Don’t fill this out: <input name="bot-field" /></label>
+                <label>Don't fill this out: <input name="bot-field" /></label>
               </p>
                   <div className="space-y-2">
                     <Label htmlFor="name">
@@ -285,13 +339,63 @@ export default function Contact() {
                       type="file"
                       multiple
                       accept="image/*,application/pdf"
-                      onChange={(e) => setAttachments(e.target.files)}
+                      onChange={(e) => {
+                        const files = e.target.files;
+                        if (validateFiles(files)) {
+                          setAttachments(files);
+                        } else {
+                          e.target.value = '';
+                          setAttachments(null);
+                        }
+                      }}
                     />
+                    {fileError && (
+                      <div className="text-xs text-red-600 font-medium">{fileError}</div>
+                    )}
                     <div className="text-xs text-muted-foreground">
                       {language === 'ar'
-                        ? 'يمكنك إرفاق صور للتشققات/الموقع أو ملف PDF (حتى يسهل التشخيص).' 
-                        : 'Attach site/crack photos or a PDF to help the diagnosis.'}
+                        ? `يمكنك إرفاق صور للتشققات/الموقع أو ملف PDF (حتى يسهل التشخيص). حجم الملف يجب ألا يتجاوز ${MAX_FILE_SIZE_MB} ميجابايت.`
+                        : `Attach site/crack photos or a PDF to help the diagnosis. Max file size: ${MAX_FILE_SIZE_MB}MB.`}
                     </div>
+                  </div>
+
+                  {/* CAPTCHA - Math verification */}
+                  <div className="space-y-2 rounded-lg border bg-muted/30 p-4">
+                    <Label htmlFor="captcha" className="font-semibold">
+                      {language === 'ar' ? 'تحقق أنك لست روبوت' : 'Verify you are human'} *
+                    </Label>
+                    <div className="flex items-center gap-3">
+                      <span className="text-lg font-bold select-none" dir="ltr">
+                        {captcha.a} + {captcha.b} = ?
+                      </span>
+                      <Input
+                        id="captcha"
+                        type="number"
+                        value={captchaInput}
+                        onChange={(e) => {
+                          setCaptchaInput(e.target.value);
+                          setCaptchaError('');
+                        }}
+                        required
+                        className="w-24"
+                        placeholder="?"
+                        dir="ltr"
+                      />
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setCaptcha(generateCaptcha());
+                          setCaptchaInput('');
+                          setCaptchaError('');
+                        }}
+                        className="text-sm text-primary hover:underline"
+                      >
+                        {language === 'ar' ? 'سؤال جديد' : 'New question'}
+                      </button>
+                    </div>
+                    {captchaError && (
+                      <div className="text-xs text-red-600 font-medium">{captchaError}</div>
+                    )}
                   </div>
 
                   <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
@@ -330,8 +434,6 @@ export default function Contact() {
                 <CardContent>
                   <div className="aspect-video bg-muted rounded-lg overflow-hidden">
                     <iframe
-                      // Google Maps embeds can be blocked by some networks/extensions.
-                      // OpenStreetMap provides a reliable no-key alternative.
                       src="https://www.openstreetmap.org/export/embed.html?bbox=46.651%2C24.704%2C46.699%2C24.724&layer=mapnik&marker=24.7136%2C46.6753"
                       width="100%"
                       height="100%"
@@ -343,7 +445,7 @@ export default function Contact() {
                     />
                   </div>
 
-                  {/* Fallback links (in case embeds are blocked by extensions/corporate policies) */}
+                  {/* Fallback links */}
                   <div className="mt-3 flex flex-col sm:flex-row gap-2">
                     <a
                       href="https://www.google.com/maps?q=24.7136,46.6753"

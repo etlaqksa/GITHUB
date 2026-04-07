@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { useLanguage } from '@/contexts/LanguageContext';
 import { User, ChevronLeft, ChevronRight } from 'lucide-react';
 import { IconCalendar, IconClock, IconSearch } from '@/components/icons/etlaq';
-import { useMemo, useState, useEffect } from 'react';
+import { useMemo, useState, useEffect, useRef } from 'react';
 import { useLocation } from 'wouter';
 import type { ArticleContent } from '@/data/articles';
 import { loadArticles } from '@/data/articlesLoader';
@@ -163,6 +163,94 @@ function ArticleCard({
   );
 }
 
+function InstantSearch({
+  searchQuery,
+  setSearchQuery,
+  language,
+  isAr,
+  allArticles,
+}: {
+  searchQuery: string;
+  setSearchQuery: (q: string) => void;
+  language: 'ar' | 'en';
+  isAr: boolean;
+  allArticles: ArticleContent[];
+}) {
+  const [isFocused, setIsFocused] = useState(false);
+  const wrapperRef = useRef<HTMLDivElement>(null);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (wrapperRef.current && !wrapperRef.current.contains(e.target as Node)) {
+        setIsFocused(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  const instantResults = useMemo(() => {
+    const q = normalizeForSearch(searchQuery);
+    if (!q || q.length < 2) return [];
+    return allArticles
+      .filter((a) => {
+        const hay = normalizeForSearch(
+          `${a.title || ''} ${stripMarkdown(a.content || '')} ${stripArabic(a.titleEn || '')} ${stripMarkdown(stripArabic(a.contentEn || ''))}`
+        );
+        return hay.includes(q);
+      })
+      .slice(0, 5);
+  }, [searchQuery, allArticles]);
+
+  const showDropdown = isFocused && searchQuery.length >= 2 && instantResults.length > 0;
+
+  return (
+    <div className="max-w-xl mx-auto mb-6 relative" ref={wrapperRef}>
+      <IconSearch className={`pointer-events-none absolute top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground ${isAr ? "right-3" : "left-3"}`} />
+      <input
+        type="text"
+        placeholder={language === 'ar' ? 'ابحث عن مقال...' : 'Search articles...'}
+        value={searchQuery}
+        onChange={e => setSearchQuery(e.target.value)}
+        onFocus={() => setIsFocused(true)}
+        className={`w-full ${isAr ? "pr-10 pl-4" : "pl-10 pr-4"} py-2 rounded-lg border bg-background`}
+      />
+      {showDropdown && (
+        <div className="absolute z-50 mt-1 w-full rounded-lg border bg-background shadow-xl overflow-hidden">
+          {instantResults.map((article) => {
+            const title = language === 'ar' ? article.title : stripArabic(article.titleEn || '');
+            const cats = getCategories(article, language);
+            const postSlug = getArticleUrlSlug(article, language);
+            return (
+              <LocalizedLink
+                key={article.id}
+                href={`/blog/${postSlug}`}
+              >
+                <div
+                  className="px-4 py-3 hover:bg-muted cursor-pointer border-b last:border-b-0 transition-colors"
+                  onClick={() => setIsFocused(false)}
+                >
+                  <div className="font-medium text-sm line-clamp-1">{title || `Article #${article.id}`}</div>
+                  <div className="flex items-center gap-2 mt-1 text-xs text-muted-foreground">
+                    {cats[0] && <span className="bg-primary/10 text-primary px-1.5 py-0.5 rounded">{cats[0]}</span>}
+                    <span>{article.date}</span>
+                  </div>
+                </div>
+              </LocalizedLink>
+            );
+          })}
+          {searchQuery.length >= 2 && instantResults.length === 0 && (
+            <div className="px-4 py-3 text-sm text-muted-foreground text-center">
+              {language === 'ar' ? 'لا توجد نتائج' : 'No results'}
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
+
 export default function Blog() {
   const { language } = useLanguage();
   const isAr = language === 'ar';
@@ -295,17 +383,14 @@ export default function Blog() {
 
         </div>
 
-        {/* Search */}
-        <div className="max-w-xl mx-auto mb-6 relative">
-          <IconSearch className={`pointer-events-none absolute top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground ${isAr ? "right-3" : "left-3"}`} />
-          <input
-            type="text"
-            placeholder={language === 'ar' ? 'ابحث عن مقال...' : 'Search articles...'}
-            value={searchQuery}
-            onChange={e => setSearchQuery(e.target.value)}
-            className={`w-full ${isAr ? "pr-10 pl-4" : "pl-10 pr-4"} py-2 rounded-lg border bg-background`}
-          />
-        </div>
+        {/* Search with instant results */}
+        <InstantSearch
+          searchQuery={searchQuery}
+          setSearchQuery={setSearchQuery}
+          language={language}
+          isAr={isAr}
+          allArticles={allArticles}
+        />
 
         {/* Category filter */}
         <div className="flex flex-wrap justify-center gap-2 mb-8">

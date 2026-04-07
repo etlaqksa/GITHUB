@@ -1,7 +1,7 @@
 export const COMPANY_INFO = {
-  // Optional: fill these later (leave empty to hide in UI)
-  commercialRegister: "", // e.g. "1010XXXXXX"
-  vatNumber: "",          // e.g. "3XXXXXXXXXXXXX"
+  // Company registration details
+  commercialRegister: "1010823069",
+  vatNumber: "311394818900003",
 
   // Public contact (already used elsewhere)
   phoneInternational: "+966534145922",
