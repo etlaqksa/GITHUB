@@ -1,10 +1,11 @@
 import { Badge } from '@/components/ui/badge';
+import { useRef, useCallback } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { User, ChevronLeft, ChevronRight } from 'lucide-react';
 import { IconCalendar, IconClock, IconSearch } from '@/components/icons/etlaq';
-import { useMemo, useState, useEffect, useRef } from 'react';
+import { useMemo, useState, useEffect } from 'react';
 import { useLocation } from 'wouter';
 import type { ArticleContent } from '@/data/articles';
 import { loadArticles } from '@/data/articlesLoader';
@@ -163,94 +164,6 @@ function ArticleCard({
   );
 }
 
-function InstantSearch({
-  searchQuery,
-  setSearchQuery,
-  language,
-  isAr,
-  allArticles,
-}: {
-  searchQuery: string;
-  setSearchQuery: (q: string) => void;
-  language: 'ar' | 'en';
-  isAr: boolean;
-  allArticles: ArticleContent[];
-}) {
-  const [isFocused, setIsFocused] = useState(false);
-  const wrapperRef = useRef<HTMLDivElement>(null);
-
-  // Close dropdown when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (e: MouseEvent) => {
-      if (wrapperRef.current && !wrapperRef.current.contains(e.target as Node)) {
-        setIsFocused(false);
-      }
-    };
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
-
-  const instantResults = useMemo(() => {
-    const q = normalizeForSearch(searchQuery);
-    if (!q || q.length < 2) return [];
-    return allArticles
-      .filter((a) => {
-        const hay = normalizeForSearch(
-          `${a.title || ''} ${stripMarkdown(a.content || '')} ${stripArabic(a.titleEn || '')} ${stripMarkdown(stripArabic(a.contentEn || ''))}`
-        );
-        return hay.includes(q);
-      })
-      .slice(0, 5);
-  }, [searchQuery, allArticles]);
-
-  const showDropdown = isFocused && searchQuery.length >= 2 && instantResults.length > 0;
-
-  return (
-    <div className="max-w-xl mx-auto mb-6 relative" ref={wrapperRef}>
-      <IconSearch className={`pointer-events-none absolute top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground ${isAr ? "right-3" : "left-3"}`} />
-      <input
-        type="text"
-        placeholder={language === 'ar' ? 'ابحث عن مقال...' : 'Search articles...'}
-        value={searchQuery}
-        onChange={e => setSearchQuery(e.target.value)}
-        onFocus={() => setIsFocused(true)}
-        className={`w-full ${isAr ? "pr-10 pl-4" : "pl-10 pr-4"} py-2 rounded-lg border bg-background`}
-      />
-      {showDropdown && (
-        <div className="absolute z-50 mt-1 w-full rounded-lg border bg-background shadow-xl overflow-hidden">
-          {instantResults.map((article) => {
-            const title = language === 'ar' ? article.title : stripArabic(article.titleEn || '');
-            const cats = getCategories(article, language);
-            const postSlug = getArticleUrlSlug(article, language);
-            return (
-              <LocalizedLink
-                key={article.id}
-                href={`/blog/${postSlug}`}
-              >
-                <div
-                  className="px-4 py-3 hover:bg-muted cursor-pointer border-b last:border-b-0 transition-colors"
-                  onClick={() => setIsFocused(false)}
-                >
-                  <div className="font-medium text-sm line-clamp-1">{title || `Article #${article.id}`}</div>
-                  <div className="flex items-center gap-2 mt-1 text-xs text-muted-foreground">
-                    {cats[0] && <span className="bg-primary/10 text-primary px-1.5 py-0.5 rounded">{cats[0]}</span>}
-                    <span>{article.date}</span>
-                  </div>
-                </div>
-              </LocalizedLink>
-            );
-          })}
-          {searchQuery.length >= 2 && instantResults.length === 0 && (
-            <div className="px-4 py-3 text-sm text-muted-foreground text-center">
-              {language === 'ar' ? 'لا توجد نتائج' : 'No results'}
-            </div>
-          )}
-        </div>
-      )}
-    </div>
-  );
-}
-
 export default function Blog() {
   const { language } = useLanguage();
   const isAr = language === 'ar';
@@ -288,7 +201,16 @@ export default function Blog() {
     // Use router navigation so the current language prefix (/ar or /en) is preserved
     setLocation(`/blog?${params.toString()}`, { replace: true } as any);
   };
+  // Immediate display value (controlled input — no delay)
+  const [searchInput, setSearchInput] = useState('');
+  // Debounced value used for filtering (300ms)
   const [searchQuery, setSearchQuery] = useState('');
+  const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const handleSearchChange = useCallback((val: string) => {
+    setSearchInput(val);
+    if (debounceRef.current) clearTimeout(debounceRef.current);
+    debounceRef.current = setTimeout(() => setSearchQuery(val), 300);
+  }, []);
 
   // support /blog?cat=...
   useEffect(() => {
@@ -347,7 +269,7 @@ export default function Blog() {
   const pagedArticles = articles.slice((page - 1) * ARTICLES_PER_PAGE, page * ARTICLES_PER_PAGE);
 
   // Reset to page 1 whenever filter/search changes
-  useEffect(() => { setPage(1); }, [selectedCategory, searchQuery]);
+  useEffect(() => { setPage(1); }, [selectedCategory, searchQuery, searchInput]);
 
   return (
     <>
@@ -383,14 +305,28 @@ export default function Blog() {
 
         </div>
 
-        {/* Search with instant results */}
-        <InstantSearch
-          searchQuery={searchQuery}
-          setSearchQuery={setSearchQuery}
-          language={language}
-          isAr={isAr}
-          allArticles={allArticles}
-        />
+        {/* Search */}
+        <div className="max-w-xl mx-auto mb-6 relative">
+          <IconSearch className={`pointer-events-none absolute top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground ${isAr ? "right-3" : "left-3"}`} />
+          <input
+            type="text"
+            placeholder={language === 'ar' ? 'ابحث عن مقال...' : 'Search articles...'}
+            value={searchInput}
+            onChange={e => handleSearchChange(e.target.value)}
+            className={`w-full ${isAr ? "pr-10 pl-4" : "pl-10 pr-4"} py-2 rounded-lg border bg-background`}
+            aria-label={language === 'ar' ? 'بحث' : 'Search'}
+            autoComplete="off"
+            spellCheck={false}
+          />
+          {searchInput && (
+            <button
+              type="button"
+              onClick={() => { setSearchInput(''); setSearchQuery(''); }}
+              className={`absolute top-1/2 -translate-y-1/2 h-5 w-5 flex items-center justify-center rounded-full bg-slate-300 text-slate-600 hover:bg-slate-400 transition text-xs ${isAr ? 'left-3' : 'right-3'}`}
+              aria-label={language === 'ar' ? 'مسح البحث' : 'Clear search'}
+            >✕</button>
+          )}
+        </div>
 
         {/* Category filter */}
         <div className="flex flex-wrap justify-center gap-2 mb-8">

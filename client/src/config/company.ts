@@ -1,5 +1,5 @@
 export const COMPANY_INFO = {
-  // Company registration details
+  // Official registration numbers
   commercialRegister: "1010823069",
   vatNumber: "311394818900003",
 

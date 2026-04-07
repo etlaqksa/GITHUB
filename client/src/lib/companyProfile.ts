@@ -11,6 +11,9 @@ export const COMPANY = {
   addressEn: 'Riyadh - Al Yasmin (Anas Bin Malik Rd)',
   // Keep as a Google Maps query link (no claim of exact coordinates)
   mapsUrl: 'https://maps.google.com/?q=4348+Anas+Bin+Malik+Road,+Al+Yasmin,+Riyadh,+Saudi+Arabia',
+  // Official registration numbers
+  commercialRegister: '1010823069',
+  vatNumber: '311394818900003',
 };
 
 export function buildLocalBusinessSchema(params: { url: string; logoUrl: string; imageUrl?: string }) {

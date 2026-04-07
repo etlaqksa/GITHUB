@@ -205,15 +205,20 @@ export default function Footer() {
           </p>
 
           {(COMPANY_INFO.commercialRegister || COMPANY_INFO.vatNumber) && (
-            <div className="mt-3 text-xs opacity-80 flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
+            <div className="mt-3 text-xs opacity-75 flex flex-wrap items-center justify-center gap-x-4 gap-y-1.5">
               {COMPANY_INFO.commercialRegister && (
-                <span>
-                  {language === 'ar' ? 'السجل التجاري:' : 'CR:'} {COMPANY_INFO.commercialRegister}
+                <span className="inline-flex items-center gap-1.5">
+                  <span className="opacity-60">{language === 'ar' ? 'السجل التجاري:' : 'CR:'}</span>
+                  <span className="font-semibold font-mono tracking-wide">{COMPANY_INFO.commercialRegister}</span>
                 </span>
               )}
+              {COMPANY_INFO.commercialRegister && COMPANY_INFO.vatNumber && (
+                <span className="opacity-30">|</span>
+              )}
               {COMPANY_INFO.vatNumber && (
-                <span>
-                  {language === 'ar' ? 'الرقم الضريبي:' : 'VAT:'} {COMPANY_INFO.vatNumber}
+                <span className="inline-flex items-center gap-1.5">
+                  <span className="opacity-60">{language === 'ar' ? 'الرقم الضريبي:' : 'VAT:'}</span>
+                  <span className="font-semibold font-mono tracking-wide">{COMPANY_INFO.vatNumber}</span>
                 </span>
               )}
             </div>

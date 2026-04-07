@@ -39,3 +39,15 @@
 # HTML / routes should be revalidated
 /*
   Cache-Control: public, max-age=0, must-revalidate
+# Block .env files from being served (security: prevent accidental exposure)
+/.env
+  X-Robots-Tag: noindex
+  Content-Type: text/plain
+/.env.*
+  X-Robots-Tag: noindex
+
+# Block backup files
+/*.bak
+  X-Robots-Tag: noindex
+/*.backup
+  X-Robots-Tag: noindex

@@ -7,21 +7,11 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { SEO } from '@/components/SEO';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { CheckCircle2, ClipboardList, PhoneCall } from 'lucide-react';
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { toast } from 'sonner';
 import { useLocation } from 'wouter';
 import { trackEvent } from '@/lib/analytics';
 import LocalizedLink from '@/components/LocalizedLink';
-
-// Netlify max file size: 8MB per file
-const MAX_FILE_SIZE_MB = 8;
-const MAX_FILE_SIZE_BYTES = MAX_FILE_SIZE_MB * 1024 * 1024;
-
-function generateCaptcha() {
-  const a = Math.floor(Math.random() * 10) + 1;
-  const b = Math.floor(Math.random() * 10) + 1;
-  return { a, b, answer: a + b };
-}
 
 function encodeForm(data: Record<string, string>) {
   return Object.keys(data)
@@ -49,27 +39,9 @@ export default function RequestService() {
     company: '',
   });
   const [attachments, setAttachments] = useState<FileList | null>(null);
-  const [fileError, setFileError] = useState('');
-  const [captcha, setCaptcha] = useState(generateCaptcha);
-  const [captchaInput, setCaptchaInput] = useState('');
-  const [captchaError, setCaptchaError] = useState('');
-  const csrfToken = useRef(Date.now().toString(36) + Math.random().toString(36).slice(2));
+  const [attachmentError, setAttachmentError] = useState<string>('');
+  const MAX_FILE_MB = 10;
   const [location, setLocation] = useLocation();
-
-  const validateFiles = useCallback((files: FileList | null) => {
-    if (!files || !files.length) { setFileError(''); return true; }
-    for (let i = 0; i < files.length; i++) {
-      if (files[i].size > MAX_FILE_SIZE_BYTES) {
-        const msg = language === 'ar'
-          ? `حجم الملف "${files[i].name}" يتجاوز الحد المسموح (${MAX_FILE_SIZE_MB} ميجابايت)`
-          : `File "${files[i].name}" exceeds the maximum size (${MAX_FILE_SIZE_MB}MB)`;
-        setFileError(msg);
-        return false;
-      }
-    }
-    setFileError('');
-    return true;
-  }, [language]);
 
   useEffect(() => {
     // Prefill from query params: ?service=grouting|cavity|geophysical&audience=individuals|developers|contractors|government
@@ -144,18 +116,6 @@ export default function RequestService() {
     e.preventDefault();
     if (!canNext) return;
 
-    // Validate CAPTCHA
-    if (parseInt(captchaInput, 10) !== captcha.answer) {
-      setCaptchaError(language === 'ar' ? 'إجابة التحقق غير صحيحة' : 'Incorrect verification answer');
-      setCaptcha(generateCaptcha());
-      setCaptchaInput('');
-      return;
-    }
-    setCaptchaError('');
-
-    // Validate files
-    if (!validateFiles(attachments)) return;
-
     setIsSubmitting(true);
     try {
       trackEvent('form_submit_attempt', {
@@ -173,6 +133,8 @@ export default function RequestService() {
       payload.append('page', page || 'https://etlaqksa.com/request-service');
       payload.append('referrer', referrer);
       payload.append('bot-field', '');
+      const honeypot = (document.getElementById('rs_website') as HTMLInputElement)?.value;
+      if (honeypot) { setIsSubmitting(false); return; }
       payload.append('service', formData.service);
       payload.append('projectType', formData.projectType);
       payload.append('city', formData.city);
@@ -418,22 +380,28 @@ export default function RequestService() {
                               multiple
                               accept="image/*,application/pdf"
                               onChange={(e) => {
-                                const files = e.target.files;
-                                if (validateFiles(files)) {
-                                  setAttachments(files);
-                                } else {
+                              const files = e.target.files;
+                              if (files) {
+                                let totalMB = 0;
+                                Array.from(files).forEach(f => { totalMB += f.size / (1024 * 1024); });
+                                if (totalMB > MAX_FILE_MB) {
+                                  setAttachmentError(language === 'ar' ? `حجم الملف كبير جداً. الحد الأقصى ${MAX_FILE_MB} ميجابايت.` : `File too large. Max ${MAX_FILE_MB} MB.`);
                                   e.target.value = '';
                                   setAttachments(null);
+                                } else {
+                                  setAttachmentError('');
+                                  setAttachments(files);
                                 }
-                              }}
+                              }
+                            }}
                             />
-                            {fileError && (
-                              <div className="text-xs text-red-600 font-medium">{fileError}</div>
+                            {attachmentError && (
+                              <div className="text-xs text-red-600 font-semibold mt-1">{attachmentError}</div>
                             )}
                             <div className="text-xs text-muted-foreground">
                               {language === 'ar'
-                                ? `صور للتشققات/الموقع أو ملف PDF يساعد على تقييم أسرع. حجم الملف يجب ألا يتجاوز ${MAX_FILE_SIZE_MB} ميجابايت.`
-                                : `Site/crack photos or a PDF can help speed up evaluation. Max file size: ${MAX_FILE_SIZE_MB}MB.`}
+                                ? `صور للتشققات/الموقع أو ملف PDF يساعد على تقييم أسرع. الحد الأقصى لحجم الملف: ${MAX_FILE_MB} ميجابايت.`
+                                : `Site/crack photos or a PDF can help speed up evaluation. Max file size: ${MAX_FILE_MB} MB.`}
                             </div>
                           </div>
                         </div>
@@ -491,40 +459,6 @@ export default function RequestService() {
                       </div>
                     )}
 
-                    {/* CAPTCHA - only show on final step */}
-                    {step === stepsTotal && (
-                      <div className="space-y-2 rounded-lg border bg-muted/30 p-4">
-                        <Label htmlFor="captcha-rs" className="font-semibold">
-                          {language === 'ar' ? 'تحقق أنك لست روبوت' : 'Verify you are human'} *
-                        </Label>
-                        <div className="flex items-center gap-3">
-                          <span className="text-lg font-bold select-none" dir="ltr">
-                            {captcha.a} + {captcha.b} = ?
-                          </span>
-                          <Input
-                            id="captcha-rs"
-                            type="number"
-                            value={captchaInput}
-                            onChange={(e) => { setCaptchaInput(e.target.value); setCaptchaError(''); }}
-                            required
-                            className="w-24"
-                            placeholder="?"
-                            dir="ltr"
-                          />
-                          <button
-                            type="button"
-                            onClick={() => { setCaptcha(generateCaptcha()); setCaptchaInput(''); setCaptchaError(''); }}
-                            className="text-sm text-primary hover:underline"
-                          >
-                            {language === 'ar' ? 'سؤال جديد' : 'New question'}
-                          </button>
-                        </div>
-                        {captchaError && (
-                          <div className="text-xs text-red-600 font-medium">{captchaError}</div>
-                        )}
-                      </div>
-                    )}
-
                     <div className="flex items-center justify-between gap-3 pt-2">
                       <Button
                         type="button"
@@ -544,6 +478,8 @@ export default function RequestService() {
                           {t('request.next')}
                         </Button>
                       ) : (
+                        {/* Honeypot anti-spam */}
+                        <input id="rs_website" name="rs_website" type="text" tabIndex={-1} autoComplete="off" style={{position:'absolute',left:'-9999px',opacity:0,height:0,width:0}} aria-hidden="true" />
                         <Button type="submit" disabled={!canNext || isSubmitting} className="gap-2">
                           <CheckCircle2 className="h-4 w-4" />
                           {isSubmitting ? (language === 'ar' ? 'جاري الإرسال...' : 'Submitting...') : t('request.submit')}

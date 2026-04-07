@@ -6,12 +6,6 @@ import { isAntiInspectEnabled } from '@/lib/antiInspectBootstrap';
  * Lightweight anti-inspect UX deterrent.
  * NOTE: This does NOT provide real security. It only discourages casual inspection.
  * Toggle via: VITE_ANTI_INSPECT=true
- *
- * Fixed: Opera sidebar caused false-positive DevTools detection due to
- * Opera's built-in sidebar panel (Messenger, WhatsApp, Telegram, etc.)
- * increasing the outerWidth–innerWidth delta beyond the old 180px threshold.
- * Solution: detect Opera and use a higher threshold (360px), and also
- * exclude Opera's known sidebar widths from the calculation.
  */
 export default function AntiInspectGuard() {
   const { language, dir } = useLanguage();
@@ -141,14 +135,6 @@ useEffect(() => {
     };
 
     // --- DevTools detection (best-effort) ---
-    // Fixed: Opera has a built-in sidebar (Messenger, Telegram, etc.) that
-    // inflates the outerWidth–innerWidth delta by ~260-340px even without DevTools.
-    // We detect Opera and apply a larger threshold to avoid false positives.
-    const isOpera = (() => {
-      const ua = String(navigator.userAgent || '').toLowerCase();
-      return ua.includes('opr/') || ua.includes('opera') || !!(window as any).opr;
-    })();
-
     const overlayEligible = () => {
       // Only show overlay on real desktop interaction patterns (mouse/trackpad).
       // Avoid false positives on mobile (including "Request desktop site" mode).
@@ -157,11 +143,19 @@ useEffect(() => {
         const isMobileUA = /android|iphone|ipad|ipod|mobile/.test(ua);
         if (isMobileUA) return false;
 
+        // Opera has wide native UI chrome causing false positives
+        const isOpera = /opr\/|opera\//.test(ua) || ('opr' in window) || ('opera' in window);
+        if (isOpera) return false;
+
+        // Brave browser can also trigger false positives
+        const isBrave = !!((navigator as any).brave);
+        if (isBrave) return false;
+
         const mm = window.matchMedia;
         const fine = !!mm && mm('(pointer: fine)').matches;
         const hover = !!mm && mm('(hover: hover)').matches;
 
-        return fine && hover && window.innerWidth >= 900 && window.innerHeight >= 600;
+        return fine && hover && window.innerWidth >= 1024 && window.innerHeight >= 650;
       } catch {
         return false;
       }
@@ -176,13 +170,9 @@ useEffect(() => {
       const wDiff = Math.abs(window.outerWidth - window.innerWidth);
       const hDiff = Math.abs(window.outerHeight - window.innerHeight);
 
-      // Opera sidebar typically adds 260-340px to width delta.
-      // Use a much higher threshold for Opera to avoid false positives.
-      // For Chrome/Firefox/Edge, the standard 180px threshold works fine.
-      const threshold = isOpera ? 400 : 180;
-
       // Docked DevTools usually creates a large delta.
-      const opened = wDiff > threshold || hDiff > threshold;
+      // Raised threshold 180→280 to avoid false positives on browsers with wide UI chrome
+      const opened = wDiff > 280 || hDiff > 280;
       setDevtoolsOpen(opened);
     };
 
