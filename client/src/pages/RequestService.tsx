@@ -478,12 +478,22 @@ export default function RequestService() {
                           {t('request.next')}
                         </Button>
                       ) : (
-                        {/* Honeypot anti-spam */}
-                        <input id="rs_website" name="rs_website" type="text" tabIndex={-1} autoComplete="off" style={{position:'absolute',left:'-9999px',opacity:0,height:0,width:0}} aria-hidden="true" />
-                        <Button type="submit" disabled={!canNext || isSubmitting} className="gap-2">
-                          <CheckCircle2 className="h-4 w-4" />
-                          {isSubmitting ? (language === 'ar' ? 'جاري الإرسال...' : 'Submitting...') : t('request.submit')}
-                        </Button>
+                        <>
+                          {/* Honeypot anti-spam */}
+                          <input
+                            id="rs_website"
+                            name="rs_website"
+                            type="text"
+                            tabIndex={-1}
+                            autoComplete="off"
+                            style={{ position: 'absolute', left: '-9999px', opacity: 0, height: 0, width: 0 }}
+                            aria-hidden="true"
+                          />
+                          <Button type="submit" disabled={!canNext || isSubmitting} className="gap-2">
+                            <CheckCircle2 className="h-4 w-4" />
+                            {isSubmitting ? (language === 'ar' ? 'جاري الإرسال...' : 'Submitting...') : t('request.submit')}
+                          </Button>
+                        </>
                       )}
                     </div>
                   </form>
