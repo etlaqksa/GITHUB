@@ -313,19 +313,19 @@ export default function Blog() {
             placeholder={language === 'ar' ? 'ابحث عن مقال...' : 'Search articles...'}
             value={searchInput}
             onChange={e => handleSearchChange(e.target.value)}
-            className={`w-full ${isAr ? "pr-10 pl-4" : "pl-10 pr-4"} py-2 rounded-lg border bg-background`}
+            className={`w-full ${isAr ? "pr-10 pl-10" : "pl-10 pr-10"} py-2.5 rounded-xl border bg-background shadow-sm focus:outline-none focus:ring-2 focus:ring-primary/30 transition`}
             aria-label={language === 'ar' ? 'بحث' : 'Search'}
             autoComplete="off"
             spellCheck={false}
           />
-          {searchInput && (
+          {searchInput ? (
             <button
               type="button"
               onClick={() => { setSearchInput(''); setSearchQuery(''); }}
-              className={`absolute top-1/2 -translate-y-1/2 h-5 w-5 flex items-center justify-center rounded-full bg-slate-300 text-slate-600 hover:bg-slate-400 transition text-xs ${isAr ? 'left-3' : 'right-3'}`}
+              className={`absolute top-1/2 -translate-y-1/2 h-6 w-6 flex items-center justify-center rounded-full bg-muted hover:bg-muted-foreground/20 text-muted-foreground hover:text-foreground transition-all text-sm font-bold ${isAr ? 'left-2.5' : 'right-2.5'}`}
               aria-label={language === 'ar' ? 'مسح البحث' : 'Clear search'}
             >✕</button>
-          )}
+          ) : null}
         </div>
 
         {/* Category filter */}
