@@ -10,9 +10,61 @@
 [build.processing]
   ignore_html_forms = false
 
-# Language-prefixed SPA routing (matches public/_redirects)
-# NOTE: We intentionally do NOT force a trailing slash here to avoid redirect loops
-# if Netlify's trailing-slash setting is configured.
+# ─── 301 Redirects: Dead pages indexed by Google ────────────────────────────
+# These are pages that Google has crawled and indexed but return 404.
+# We redirect them to the correct canonical URL to recover crawl budget
+# and preserve any link equity.
+
+[[redirects]]
+  from = "/home"
+  to = "/ar"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/index"
+  to = "/ar"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/index.html"
+  to = "/ar"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ar/home"
+  to = "/ar"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/home"
+  to = "/en"
+  status = 301
+  force = true
+
+# Legacy slug patterns that may be indexed
+[[redirects]]
+  from = "/services/soil-grouting"
+  to = "/ar/services/grouting"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/cavity-detection"
+  to = "/ar/services/cavity"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/geophysical-surveys"
+  to = "/ar/services/geophysical"
+  status = 301
+  force = true
+
+# ─── Language-prefixed SPA routing ──────────────────────────────────────────
 
 [[redirects]]
   from = "/"

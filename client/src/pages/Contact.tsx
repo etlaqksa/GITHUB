@@ -198,9 +198,11 @@ export default function Contact() {
                   encType="multipart/form-data"
                 >
               <input type="hidden" name="form-name" value="contact" />
-              <p className="hidden">
-                <label>Don’t fill this out: <input name="bot-field" /></label>
-              </p>
+              {/* Netlify honeypot — visually & semantically hidden; bots see it, users don't */}
+              <div aria-hidden="true" style={{position:'absolute',left:'-9999px',width:0,height:0,overflow:'hidden',opacity:0,pointerEvents:'none'}}>
+                <label htmlFor="bot-contact">website</label>
+                <input id="bot-contact" name="bot-field" tabIndex={-1} autoComplete="off" />
+              </div>
                   <div className="space-y-2">
                     <Label htmlFor="name">
                       {language === 'ar' ? 'الاسم الكامل' : 'Full Name'} *

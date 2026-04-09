@@ -36,6 +36,18 @@ class ErrorBoundary extends Component<Props, State> {
 
   render() {
     if (this.state.hasError) {
+      // For crawlers / bots: redirect to /ar instead of showing an error page.
+      // This prevents Googlebot from indexing the error message.
+      if (typeof window !== 'undefined' && typeof navigator !== 'undefined') {
+        const ua = String(navigator.userAgent || '').toLowerCase();
+        const isBot =
+          /googlebot|bingbot|yandex|baiduspider|duckduckbot|slurp|facebookexternalhit|twitterbot/.test(ua);
+        if (isBot) {
+          // Hard redirect to canonical home for bots
+          window.location.replace('/ar');
+          return null;
+        }
+      }
       const lang = (globalThis as any).lang === 'en' ? 'en' : 'ar';
       const isAr = lang === 'ar';
       // Show debug details in dev, or in production if the URL includes ?debug=1

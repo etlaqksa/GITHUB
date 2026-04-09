@@ -11,7 +11,15 @@
 <!-- Don't disable zoom (accessibility) -->
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="#0ea5e9" name="theme-color"/>
-<meta name="etlaq-build" content="v21_perfSlashFix_2026-02-16" />
+<meta name="etlaq-build" content="v28_fixes_2026" />
+<!--
+  CRAWL FALLBACK: If JavaScript is disabled or the SPA fails to boot (stale chunks
+  after a deployment), this meta-refresh sends Googlebot to /ar.
+  Real users with JS enabled will never see this — React mounts immediately.
+-->
+<noscript>
+  <meta http-equiv="refresh" content="0; url=/ar" />
+</noscript>
 
 <!-- Font Awesome (social icons) -->
 <link href="/favicon.webp?v=2" rel="apple-touch-icon" sizes="180x180"/>

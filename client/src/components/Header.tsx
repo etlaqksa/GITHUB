@@ -189,9 +189,11 @@ export default function Header() {
         <div className="flex items-center gap-1 sm:gap-2 relative shrink-0">
           {/* Request Service CTA (always visible; compact on mobile) */}
           <LocalizedLink href="/request-service" className="shrink-0">
-            <Button className="gap-2 font-bold shadow-hover-soft whitespace-nowrap bg-primary text-primary-foreground hover:bg-primary/90 bg-primary text-primary-foreground hover:bg-primary/90 !bg-[#1d4ed8] !text-white hover:!bg-[#1e40af]">
-              <span className="hidden sm:inline">{t('nav.request')}</span>
-              <span className="sm:hidden">{language === 'ar' ? 'اطلب' : 'Request'}</span>
+            <Button
+              aria-label={language === 'ar' ? t('nav.request') : t('nav.request')}
+              className="gap-2 font-bold shadow-hover-soft whitespace-nowrap bg-primary text-primary-foreground hover:bg-primary/90 !bg-[#1d4ed8] !text-white hover:!bg-[#1e40af]">
+              <span className="hidden sm:inline" aria-hidden="true">{t('nav.request')}</span>
+              <span className="sm:hidden" aria-hidden="true">{language === 'ar' ? 'اطلب' : 'Request'}</span>
             </Button>
           </LocalizedLink>
           {/* Theme switcher (always visible) */}
@@ -206,7 +208,7 @@ export default function Header() {
               type="button"
             >
               <Palette className="h-4 w-4 text-primary" />
-              <span className="hidden md:inline font-bold">
+              <span className="hidden md:inline font-bold" aria-hidden="true">
                 {language === 'ar' ? 'الثيم' : 'Theme'}
               </span>
             </Button>
@@ -268,11 +270,11 @@ export default function Header() {
             size="sm"
             onClick={toggleLanguage}
             className="font-medium shadow-hover-soft whitespace-nowrap"
-            aria-label={language === 'ar' ? 'Switch to English' : 'التبديل إلى العربية'}
+            aria-label={language === 'ar' ? 'Switch to English (EN)' : 'التبديل إلى العربية'}
             type="button"
           >
             <span className="hidden sm:inline">{language === 'ar' ? 'EN' : 'العربية'}</span>
-            <span className="sm:hidden">{language === 'ar' ? 'EN' : 'AR'}</span>
+            <span className="sm:hidden" aria-hidden="true">{language === 'ar' ? 'EN' : 'AR'}</span>
           </Button>
 
           {/* Mobile Menu Button (true mobile only) */}
