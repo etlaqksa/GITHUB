@@ -448,21 +448,21 @@ export default function HomeBelowFold() {
       </section>
 
       {/* CLIENTS HEADING + LOGOS */}
-      <div className="pt-8 pb-0">
+      <section className="pt-8 pb-0">
         <div className="w-full px-4">
-          <div className="text-center space-y-1 mb-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground/70">
+          <div className="max-w-3xl mx-auto text-center space-y-3 mb-6">
+            <h2 className="text-2xl md:text-4xl font-bold">
               {language === 'ar' ? 'عملاؤنا' : 'Our Clients'}
-            </p>
-            <h2 className="text-lg md:text-xl font-semibold text-foreground/80">
-              {language === 'ar'
-                ? 'نفخر بثقة كبرى الجهات الحكومية والخاصة'
-                : 'Trusted by leading public & private sector clients'}
             </h2>
+            <p className="text-muted-foreground">
+              {language === 'ar'
+                ? 'نفخر بثقة كبرى الجهات الحكومية والخاصة في المملكة العربية السعودية'
+                : 'Trusted by leading public & private sector organisations across Saudi Arabia'}
+            </p>
           </div>
         </div>
-      </div>
-      <ClientLogosWall />
+        <ClientLogosWall />
+      </section>
 
       {/* LOCATIONS */}
       <section className="py-7 md:py-10 bg-muted/20">
