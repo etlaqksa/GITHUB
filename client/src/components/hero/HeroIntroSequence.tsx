@@ -667,6 +667,27 @@ export default function HeroIntroSequence({
             <TrustStats compact variant={tone === 'dark' ? 'inverse' : 'default'} />
           </div>
         ) : null}
+
+        {/* Compact trust ribbon visible during all intro scenes (not scene 4 which has full TrustStats) */}
+        {scene < 4 && (
+          <div
+            className={
+              'mt-6 flex flex-wrap items-center justify-center gap-4 text-sm font-semibold opacity-75 transition-opacity duration-500 ' +
+              (tone === 'dark' ? 'text-white/80' : 'text-slate-600')
+            }
+          >
+            {[
+              { val: '15+', label: variant === 'ar' ? 'سنة خبرة' : 'Years exp.' },
+              { val: '200+', label: variant === 'ar' ? 'مشروع' : 'Projects' },
+              { val: '100+', label: variant === 'ar' ? 'عميل' : 'Clients' },
+            ].map((s) => (
+              <span key={s.val} className="flex items-center gap-1.5">
+                <span className="text-base md:text-lg font-extrabold text-secondary">{s.val}</span>
+                {s.label}
+              </span>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
