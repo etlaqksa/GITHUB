@@ -267,19 +267,27 @@ export default function HeroIntroSequence({
   const brandGradientText =
     'bg-gradient-to-l from-secondary via-amber-500 to-orange-500 text-transparent bg-clip-text';
 
+  // Skip animation for returning visitors — show final content immediately.
+  const isReturningVisitor = useMemo(() => {
+    if (typeof window === 'undefined') return false;
+    try {
+      return sessionStorage.getItem('etlaq-hero-seen') === '1';
+    } catch { return false; }
+  }, []);
+
   const timeline = useMemo(
     () => ({
       // 0: headline, 1: services, 2: long intro, 3: early intervention, 4: counters
-      // Keep it snappy on first load (users can tap/click to advance).
-      showMs: [1700, 1900, 2400, 2000, 1700] as const,
-      fadeMs: [550, 550, 650, 650, 550] as const,
+      // Reduced durations (~30% faster) for snappier first-time experience.
+      showMs: [1200, 1300, 1700, 1400, 1200] as const,
+      fadeMs: [400, 400, 450, 450, 400] as const,
     }),
     []
   );
 
   const [scene, setScene] = useState<Scene>(0);
   const [sceneVisible, setSceneVisible] = useState(true);
-  const [done, setDone] = useState(false);
+  const [done, setDone] = useState(isReturningVisitor);
 
   // Allow users to advance the intro sequence by clicking/tapping.
   const fastAdvanceTimerRef = useRef<number | null>(null);
@@ -302,7 +310,7 @@ export default function HeroIntroSequence({
   }, [heroVariant, prefersReducedMotion]);
 
   useEffect(() => {
-    if (prefersReducedMotion) {
+    if (prefersReducedMotion || isReturningVisitor) {
       setDone(true);
       return;
     }
@@ -327,7 +335,14 @@ export default function HeroIntroSequence({
       window.clearTimeout(t1);
       window.clearTimeout(t2);
     };
-  }, [prefersReducedMotion, done, scene, timeline]);
+  }, [prefersReducedMotion, isReturningVisitor, done, scene, timeline]);
+
+  // Mark visitor as returning after first complete animation.
+  useEffect(() => {
+    if (done && !isReturningVisitor) {
+      try { sessionStorage.setItem('etlaq-hero-seen', '1'); } catch {}
+    }
+  }, [done, isReturningVisitor]);
 
   const advanceScene = useCallback(() => {
     if (prefersReducedMotion || done) return;

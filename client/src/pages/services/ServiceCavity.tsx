@@ -132,6 +132,17 @@ export default function ServiceCavity() {
           },
         ];
 
+  // Build FAQPage schema for rich snippets in Google Search.
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  };
+
   return (
     <>
       <SEO
@@ -142,6 +153,8 @@ export default function ServiceCavity() {
             : 'Cavity detection using geophysical methods (GPR, ERT) to assess risk and recommend remediation.'
         }
         url="https://etlaqksa.com/services/cavity"
+        image="https://etlaqksa.com/og-void-detection.webp"
+        schema={faqSchema}
       />
 
       <div className="w-full" style={{ ['--accent-rgb' as any]: '245 158 11' }}>

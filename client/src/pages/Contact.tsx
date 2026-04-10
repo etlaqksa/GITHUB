@@ -35,6 +35,23 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Client-side rate limiting: max 3 submissions per 15 minutes.
+    const RATE_KEY = 'etlaq-contact-submits';
+    const RATE_WINDOW_MS = 15 * 60 * 1000;
+    const RATE_MAX = 3;
+    try {
+      const raw = sessionStorage.getItem(RATE_KEY);
+      const submits: number[] = raw ? JSON.parse(raw) : [];
+      const recent = submits.filter((t) => Date.now() - t < RATE_WINDOW_MS);
+      if (recent.length >= RATE_MAX) {
+        toast.error(language === 'ar' ? 'تم إرسال طلبك بالفعل. يرجى الانتظار قبل المحاولة مرة أخرى.' : 'You have already submitted recently. Please wait before trying again.');
+        return;
+      }
+      recent.push(Date.now());
+      sessionStorage.setItem(RATE_KEY, JSON.stringify(recent));
+    } catch { /* sessionStorage unavailable — proceed without limiting */ }
+
     setIsSubmitting(true);
     try {
       trackEvent('form_submit_attempt', { form: 'contact', language });

@@ -112,6 +112,17 @@ export default function ServiceGeophysical() {
           },
         ];
 
+  // Build FAQPage schema for rich snippets in Google Search.
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  };
+
   return (
     <>
       <SEO
@@ -122,6 +133,8 @@ export default function ServiceGeophysical() {
             : 'Geophysical surveys (GPR/ERT/Seismic) to assess risk, locate voids/weak zones, and support remediation decisions.'
         }
         url="https://etlaqksa.com/services/geophysical"
+        image="https://etlaqksa.com/og-geophysical-surveys.webp"
+        schema={faqSchema}
       />
 
       <div className="w-full" style={{ ['--accent-rgb' as any]: '99 102 241' }}>

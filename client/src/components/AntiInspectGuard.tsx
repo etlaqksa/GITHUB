@@ -92,8 +92,15 @@ useEffect(() => {
         return;
       }
 
-      // Ctrl/Cmd+C (copy)
+      // Ctrl/Cmd+C (copy) — allow if user is focused on contact elements (phone/email)
       if (ctrlOrMeta && key === 'c') {
+        const active = document.activeElement;
+        const sel = window.getSelection();
+        const anchorEl = sel?.anchorNode?.parentElement;
+        const isContactFocused = active && (active.tagName === 'INPUT' || active.tagName === 'TEXTAREA'
+          || active.closest?.('a[href^="tel:"], a[href^="mailto:"]'));
+        const isContactSelected = anchorEl?.closest?.('a[href^="tel:"], a[href^="mailto:"]');
+        if (isContactFocused || isContactSelected) return; // allow copying contact info
         e.preventDefault();
         e.stopPropagation();
         return;
@@ -121,11 +128,23 @@ useEffect(() => {
     };
 
     // --- Block copy/cut via events (best-effort) ---
+    // Allow copying phone numbers and email addresses for usability.
+    const isContactElement = (el: Element | null): boolean => {
+      if (!el) return false;
+      const tag = el.tagName?.toLowerCase();
+      if (tag === 'input' || tag === 'textarea') return true;
+      const href = el.getAttribute?.('href') || '';
+      if (href.startsWith('tel:') || href.startsWith('mailto:')) return true;
+      const closest = el.closest?.('a[href^="tel:"], a[href^="mailto:"], input, textarea');
+      return !!closest;
+    };
     const onCopy = (e: ClipboardEvent) => {
+      if (isContactElement(e.target as Element)) return; // allow
       e.preventDefault();
       e.stopPropagation();
     };
     const onCut = (e: ClipboardEvent) => {
+      if (isContactElement(e.target as Element)) return; // allow
       e.preventDefault();
       e.stopPropagation();
     };

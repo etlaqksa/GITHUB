@@ -116,6 +116,22 @@ export default function RequestService() {
     e.preventDefault();
     if (!canNext) return;
 
+    // Client-side rate limiting: max 3 submissions per 15 minutes.
+    const RATE_KEY = 'etlaq-request-submits';
+    const RATE_WINDOW_MS = 15 * 60 * 1000;
+    const RATE_MAX = 3;
+    try {
+      const raw = sessionStorage.getItem(RATE_KEY);
+      const submits: number[] = raw ? JSON.parse(raw) : [];
+      const recent = submits.filter((t) => Date.now() - t < RATE_WINDOW_MS);
+      if (recent.length >= RATE_MAX) {
+        toast.error(language === 'ar' ? 'تم إرسال طلبك بالفعل. يرجى الانتظار قبل المحاولة مرة أخرى.' : 'You have already submitted recently. Please wait before trying again.');
+        return;
+      }
+      recent.push(Date.now());
+      sessionStorage.setItem(RATE_KEY, JSON.stringify(recent));
+    } catch { /* sessionStorage unavailable — proceed without limiting */ }
+
     setIsSubmitting(true);
     try {
       trackEvent('form_submit_attempt', {
@@ -271,6 +287,49 @@ export default function RequestService() {
                       : 'After submitting: we will review and reply with a clear next step (visit / assessment / quote).'}
                   </CardDescription>
                 </CardHeader>
+
+                {/* Visual progress bar with step indicators */}
+                <div className="px-6 pt-5 pb-2">
+                  <div className="flex items-center justify-between mb-2">
+                    {[
+                      { num: 1, label: language === 'ar' ? 'الخدمة' : 'Service', icon: ClipboardList },
+                      { num: 2, label: language === 'ar' ? 'التفاصيل' : 'Details', icon: ClipboardList },
+                      { num: 3, label: language === 'ar' ? 'التواصل' : 'Contact', icon: PhoneCall },
+                    ].map((s) => (
+                      <div
+                        key={s.num}
+                        className={
+                          'flex flex-col items-center gap-1 text-xs font-medium transition-colors ' +
+                          (step >= s.num ? 'text-primary' : 'text-muted-foreground')
+                        }
+                      >
+                        <div
+                          className={
+                            'flex h-9 w-9 items-center justify-center rounded-full border-2 transition-all ' +
+                            (step > s.num
+                              ? 'border-primary bg-primary text-primary-foreground'
+                              : step === s.num
+                              ? 'border-primary bg-primary/10 text-primary'
+                              : 'border-muted bg-muted/30 text-muted-foreground')
+                          }
+                        >
+                          {step > s.num ? (
+                            <CheckCircle2 className="h-5 w-5" />
+                          ) : (
+                            <span className="text-sm font-bold">{s.num}</span>
+                          )}
+                        </div>
+                        <span className="hidden sm:block">{s.label}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="relative h-2 rounded-full bg-muted overflow-hidden">
+                    <div
+                      className="absolute inset-y-0 left-0 rounded-full bg-gradient-to-r from-primary to-primary/70 transition-all duration-500 ease-out"
+                      style={{ width: `${((step - 1) / (stepsTotal - 1)) * 100}%` }}
+                    />
+                  </div>
+                </div>
 
                 <CardContent className="p-6 md:p-8">
                   <form

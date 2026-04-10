@@ -153,6 +153,17 @@ export default function ServiceGrouting() {
           },
         ];
 
+  // Build FAQPage schema for rich snippets in Google Search.
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  };
+
   return (
     <>
       <SEO
@@ -163,6 +174,8 @@ export default function ServiceGrouting() {
             : 'Soil grouting and cement injection to strengthen soil, fill voids, and reduce settlement risks. Request a fast assessment.'
         }
         url="https://etlaqksa.com/services/grouting"
+        image="https://etlaqksa.com/og-soil-grouting.webp"
+        schema={faqSchema}
       />
 
       <div className="w-full" style={{ ['--accent-rgb' as any]: '16 185 129' }}>

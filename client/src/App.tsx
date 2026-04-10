@@ -170,7 +170,7 @@ function AppLayout() {
 
       {/* Non-blocking: update banner */}
       <Suspense fallback={null}>
-        <DeferredMount timeoutMs={12000} requireInteraction>
+        <DeferredMount timeoutMs={6000} requireInteraction>
           <LazyUpdateAvailableBanner />
         </DeferredMount>
       </Suspense>
@@ -240,13 +240,13 @@ function AppLayout() {
 
       {/* Defer non-critical UI */}
       <Suspense fallback={null}>
-        <DeferredMount timeoutMs={9000} requireInteraction>
+        <DeferredMount timeoutMs={3000} requireInteraction>
           <LazyWhatsAppButton />
         </DeferredMount>
-        <DeferredMount timeoutMs={10000} requireInteraction>
+        <DeferredMount timeoutMs={4000} requireInteraction>
           <LazyStickyCTA />
         </DeferredMount>
-        <DeferredMount timeoutMs={11000} requireInteraction>
+        <DeferredMount timeoutMs={5000} requireInteraction>
           <LazySmartAssistantLauncher />
         </DeferredMount>
       </Suspense>
@@ -302,13 +302,13 @@ function App() {
         <LanguageProvider>
           {/* Tooltips are provided locally where needed (e.g., Sidebar). */}
           <Suspense fallback={null}>
-            <DeferredMount timeoutMs={8000} requireInteraction>
+            <DeferredMount timeoutMs={4000} requireInteraction>
               <LazyToaster />
             </DeferredMount>
           </Suspense>
             <AntiInspectGuard />
             <Suspense fallback={null}>
-              <DeferredMount timeoutMs={12000} requireInteraction>
+              <DeferredMount timeoutMs={3000} requireInteraction>
                 <LazyAnalytics />
               </DeferredMount>
             </Suspense>
