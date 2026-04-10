@@ -9,6 +9,7 @@ import { useState } from 'react';
 import { toast } from 'sonner';
 import { useLocation } from 'wouter';
 import { trackEvent } from '@/lib/analytics';
+import { getRecaptchaToken } from '@/lib/recaptcha';
 
 function encodeForm(data: Record<string, string>) {
   return Object.keys(data)
@@ -54,6 +55,13 @@ export default function Contact() {
 
     setIsSubmitting(true);
     try {
+      // reCAPTCHA v3 verification — lazy-loads the script on first submit.
+      const recaptchaToken = await getRecaptchaToken('contact_form');
+      if (recaptchaToken === null) {
+        // reCAPTCHA unavailable (ad-blocker) — proceed without it.
+        trackEvent('recaptcha_unavailable', { form: 'contact' });
+      }
+
       trackEvent('form_submit_attempt', { form: 'contact', language });
       const page = typeof window !== 'undefined' ? window.location.href : '';
       const referrer = typeof document !== 'undefined' ? document.referrer : '';
@@ -63,6 +71,7 @@ export default function Contact() {
       payload.append('page', page);
       payload.append('referrer', referrer);
       payload.append('bot-field', '');
+      if (recaptchaToken) payload.append('g-recaptcha-response', recaptchaToken);
       // honeypot: if filled by bot, silently reject
       const honeypot = (document.getElementById('contact_website') as HTMLInputElement)?.value;
       if (honeypot) { setIsSubmitting(false); return; }

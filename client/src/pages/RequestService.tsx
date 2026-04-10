@@ -11,6 +11,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { toast } from 'sonner';
 import { useLocation } from 'wouter';
 import { trackEvent } from '@/lib/analytics';
+import { getRecaptchaToken } from '@/lib/recaptcha';
 import LocalizedLink from '@/components/LocalizedLink';
 
 function encodeForm(data: Record<string, string>) {
@@ -134,6 +135,12 @@ export default function RequestService() {
 
     setIsSubmitting(true);
     try {
+      // reCAPTCHA v3 verification — lazy-loads the script on first submit.
+      const recaptchaToken = await getRecaptchaToken('request_service');
+      if (recaptchaToken === null) {
+        trackEvent('recaptcha_unavailable', { form: 'request-service' });
+      }
+
       trackEvent('form_submit_attempt', {
         form: 'request-service',
         service: formData.service || 'unknown',
@@ -149,6 +156,7 @@ export default function RequestService() {
       payload.append('page', page || 'https://etlaqksa.com/request-service');
       payload.append('referrer', referrer);
       payload.append('bot-field', '');
+      if (recaptchaToken) payload.append('g-recaptcha-response', recaptchaToken);
       const honeypot = (document.getElementById('rs_website') as HTMLInputElement)?.value;
       if (honeypot) { setIsSubmitting(false); return; }
       payload.append('service', formData.service);
