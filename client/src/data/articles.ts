@@ -41,9 +41,9 @@ export const articles: ArticleContent[] = [
     categoriesEn: ["Soil Grouting", "Geotechnical Engineering", "Ground Improvement Library"],
     date: "2025-09-01",
     readTime: "3 دقيقة",
-    readTimeEn: "2 min",
+    readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "what-is-soil-grouting",
+    slug: "what-is-soil-grouting-a-practical-definition-linking-mechanism-to-engineering-decisions",
     image: {
       url: "/favicon.webp",
       alt: "ما هو حقن التربة؟ تعريف عملي يربط الآلية بالقرار الهندسي",
@@ -116,12 +116,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "متى يكون حقن التربة هو الخيار الأنسب؟", answer: "يكون مناسبًا عند الحاجة لتحسين خواص التربة تحت الأساسات، تقليل الهبوط، أو معالجة مسارات تسرب المياه—خصوصًا عندما تكون أعمال الحفر/الاستبدال غير ممكنة أو مكلفة." },
-      { question: "ما الفرق بين الحقن الأسمنتي وطرق الحقن الأخرى؟", answer: "الحقن الأسمنتي يعتمد على ملاط إسمنتي بخصائص لزوجة مناسبة، بينما توجد مواد أخرى (كيميائية/ميكروفاين) لظروف خاصة. اختيار المادة مرتبط بحجم المسام، النفاذية، والهدف (تقوية/عزل)." },
-      { question: "كيف نحدد نوع الخلطة واللزوجة المناسبة؟", answer: "نعتمد على طبيعة التربة/الصخور، نتائج الفحوصات، وهدف المعالجة. أحيانًا نبدأ بخليط تمهيدي ثم نعدّل تدريجيًا لتحقيق اختراق أفضل دون إحداث مشاكل جانبية." },
-      { question: "كيف أعرف أن المعالجة نجحت؟", answer: "المؤشرات تشمل استقرار الاستهلاك، تحسن سلوك الهبوط، وتحسن نتائج التحقق (مثل probing/اختبارات أو مراقبة التشققات) حسب خطة المشروع." },
-    ],
-    faqEn: [
+    { question: "ما الفرق العملي بين حقن الأسمنت وحقن البوليمرات؟", answer: "حقن الأسمنت يُستخدم لملء الفراغات الكبيرة وتقوية التربة ميكانيكياً، بينما يناسب حقن البوليمرات التحكم بالتسرب وملء المسام الدقيقة التي لا يخترقها الأسمنت.", questionEn: "What is the practical difference between cement and polymer grouting?", answerEn: "Cement grouting is best for filling large voids and improving mechanical strength, while polymer grouting targets fine pores and seepage control where cement cannot penetrate." },
+    { question: "متى يكون حقن النفث (Jet Grouting) الخيار الأنسب؟", answer: "يُفضل عندما تكون التربة هشة أو غير متجانسة ولا يمكن للحقن التقليدي اختراقها، إذ يقوم بتفتيت التربة وخلطها بالمعجون الأسمنتي لتكوين أعمدة متينة.", questionEn: "When is Jet Grouting the preferred choice?", answerEn: "It is preferred when soil is weak or heterogeneous and conventional grouting cannot penetrate effectively — it breaks up and mixes soil with cement grout to form solid columns." },
+    { question: "هل يمكن تطبيق حقن التربة تحت المباني القائمة؟", answer: "نعم، وهو من أبرز مزاياه. يمكن تنفيذه من خلال حفر نقاط حقن صغيرة بحد أدنى من الأعمال الإنشائية دون الحاجة لإخلاء المبنى في معظم الحالات.", questionEn: "Can soil grouting be applied under existing buildings?", answerEn: "Yes, this is one of its key advantages. It can be executed through small drill points with minimal structural work and typically without evacuating the building." },
+    { question: "ما المعلومات التي أحتاجها قبل طلب حقن التربة؟", answer: "أهمها: طبيعة المشكلة (هبوط، تشقق، تسرب)، نوع التربة إن كان متاحاً، صور للموقع والتشققات، وموقع المبنى. كلما كانت المعلومات أدق كانت التوصية أدق.", questionEn: "What information do I need before requesting soil grouting?", answerEn: "Key items: nature of the problem (settlement, cracking, seepage), soil type if available, photos of site and cracks, and building location. The more detail provided, the more precise the recommendation." }
+  ], faqEn: [
       { question: "When is soil grouting the right solution?", answer: "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly." },
       { question: "How is cement grouting different from other grouts?", answer: "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective." },
       { question: "How do you choose the mix and viscosity?", answer: "We base it on ground type, test results, and the treatment objective. In many cases, mixes are adjusted progressively to balance penetration and control." },
@@ -141,7 +140,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "building-settlement-causes",
+    slug: "the-history-and-evolution-of-soil-grouting-in-civil-engineering",
     image: {
       url: "/favicon.webp",
       alt: "تاريخ وتطور تقنيات حقن التربة في الهندسة المدنية",
@@ -293,12 +292,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "متى يكون حقن التربة هو الخيار الأنسب؟", answer: "يكون مناسبًا عند الحاجة لتحسين خواص التربة تحت الأساسات، تقليل الهبوط، أو معالجة مسارات تسرب المياه—خصوصًا عندما تكون أعمال الحفر/الاستبدال غير ممكنة أو مكلفة." },
-      { question: "ما الفرق بين الحقن الأسمنتي وطرق الحقن الأخرى؟", answer: "الحقن الأسمنتي يعتمد على ملاط إسمنتي بخصائص لزوجة مناسبة، بينما توجد مواد أخرى (كيميائية/ميكروفاين) لظروف خاصة. اختيار المادة مرتبط بحجم المسام، النفاذية، والهدف (تقوية/عزل)." },
-      { question: "كيف نحدد نوع الخلطة واللزوجة المناسبة؟", answer: "نعتمد على طبيعة التربة/الصخور، نتائج الفحوصات، وهدف المعالجة. أحيانًا نبدأ بخليط تمهيدي ثم نعدّل تدريجيًا لتحقيق اختراق أفضل دون إحداث مشاكل جانبية." },
-      { question: "كيف أعرف أن المعالجة نجحت؟", answer: "المؤشرات تشمل استقرار الاستهلاك، تحسن سلوك الهبوط، وتحسن نتائج التحقق (مثل probing/اختبارات أو مراقبة التشققات) حسب خطة المشروع." },
-    ],
-    faqEn: [
+    { question: "كيف يُقيَّم الموقع قبل تحديد طريقة الحقن؟", answer: "يشمل التقييم: زيارة ميدانية لرصد المؤشرات المرئية، مراجعة أي بيانات تربة متاحة، وأحياناً اختبار جيوفيزيائي أولي لتحديد النطاق الإجمالي للمشكلة قبل اتخاذ قرار الحقن.", questionEn: "How is a site assessed before determining the grouting method?", answerEn: "Assessment includes a field visit to document visual indicators, reviewing any available soil data, and sometimes a preliminary geophysical test to define the overall problem extent before deciding on grouting." },
+    { question: "ما الخطوات العملية بعد الانتهاء من الحقن للتحقق من نجاحه؟", answer: "إجراء اختبارات ما بعد الحقن (بعد فترة تصلّد كافية)، مراقبة أجهزة قياس الهبوط لمدة لا تقل عن أسبوعين، والفحص البصري للتشققات لمتابعة توقفها أو تطورها.", questionEn: "What practical steps are taken after grouting to verify success?", answerEn: "Conducting post-grouting tests after adequate curing time, monitoring settlement gauges for at least two weeks, and visually inspecting cracks to track whether they have stopped or progressed." },
+    { question: "هل تحتاج مشاريع الحقن إلى اعتمادات أو تصاريح رسمية؟", answer: "في المملكة العربية السعودية يتطلب العمل بالمنشآت الكبيرة أو الحكومية عادة موافقة الجهة المالكة والمشرف على المشروع. يوفر فريق إطلاق الوثائق والتقارير اللازمة لاستيفاء هذه المتطلبات.", questionEn: "Do grouting projects require official approvals or permits?", answerEn: "In Saudi Arabia, work on major or government structures typically requires approval from the asset owner and project supervisor. The ETLAQ team provides the necessary documentation and reports to meet these requirements." },
+    { question: "ما مدى تأثير حقن التربة على المنشآت المجاورة؟", answer: "مع ضبط ضغوط الحقن ضمن الحدود الآمنة، يكون التأثير على المجاورات ضئيلاً. المشاريع في المناطق المكتظة تستدعي مراقبة مستمرة للمنشآت المجاورة طوال فترة التنفيذ.", questionEn: "How much does soil grouting affect adjacent structures?", answerEn: "With injection pressures controlled within safe limits, the impact on adjacent structures is minimal. Projects in dense areas require continuous monitoring of neighbouring structures throughout execution." }
+  ], faqEn: [
       { question: "When is soil grouting the right solution?", answer: "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly." },
       { question: "How is cement grouting different from other grouts?", answer: "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective." },
       { question: "How do you choose the mix and viscosity?", answer: "We base it on ground type, test results, and the treatment objective. In many cases, mixes are adjusted progressively to balance penetration and control." },
@@ -316,9 +314,9 @@ export const articles: ArticleContent[] = [
     categoriesEn: ["Cavity Detection", "Geotechnical Engineering", "Soil Grouting", "Ground Improvement Library"],
     date: "2025-09-07",
     readTime: "4 دقيقة",
-    readTimeEn: "3 min",
+    readTimeEn: "4 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "cavity-detection-techniques",
+    slug: "ground-improvement-vs-soil-stabilization-whats-the-difference",
     image: {
       url: "/favicon.webp",
       alt: "الفرق بين تحسين التربة (Ground Improvement) وتقوية التربة (Soil Stabilization)",
@@ -423,12 +421,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "ماذا يمكن أن تكشف الاختبارات الجيوفيزيائية في الموقع؟", answer: "تساعد الاختبارات مثل GPR وERT وMASW على تكوين صورة أولية عن الطبقات وتغيّر الخواص تحت السطح، ورصد مؤشرات الفراغات أو التباين في التربة والصخور. اختيار الاختبار يعتمد على عمق الهدف وطبيعة الموقع." },
-      { question: "ما الفرق بين GPR وERT ومتى نستخدم كلًا منهما؟", answer: "GPR مناسب أكثر للأعماق الضحلة نسبيًا ولرصد الأجسام/الفراغات في بيئات معينة، بينما ERT يعطي تصورًا أعمق عن تغيّر المقاومة الكهربائية ويمكن أن يكون مفيدًا في رصد مناطق التشبع أو التكهفات. غالبًا نستخدمهما تكامليًا." },
-      { question: "هل النتائج “قطعية” أم تحتاج تحقق؟", answer: "الجيوفيزياء تعطي مؤشرات قوية لكنها ليست بديلًا عن التحقق. في المواقع الحساسة ننفذ حفر/Cavity Probing للتحقق من الأهداف قبل أي معالجة، ثم نربط النتائج بالتقرير الجيوتقني والمعاينات." },
-      { question: "ما الذي أستلمه في نهاية العمل؟", answer: "تستلم خرائط/مقاطع تفسيرية، وصف المنهجية، حدود الدقة، وتوصيات عملية للخطوة التالية (تحقق، معالجة، أو متابعة)." },
-    ],
-    faqEn: [
+    { question: "ما الحالات التي تستوجب دراسة جيوتقنية قبل الحقن؟", answer: "كل مشروع حقن يحتاج فهماً لنوع التربة وخصائصها. في المشاريع الكبيرة أو المعقدة، تُوصى بدراسة جيوتقنية رسمية. في المشاريع الأصغر، قد يكفي فحص ميداني مع الاستفادة من بيانات أي حفريات سابقة.", questionEn: "In which cases is a geotechnical study required before grouting?", answerEn: "Every grouting project needs an understanding of soil type and properties. For large or complex projects, a formal geotechnical study is recommended. For smaller ones, a field assessment using available borehole data may suffice." },
+    { question: "ما الدور الهندسي للمشرف الميداني في مشروع الحقن؟", answer: "يُراقب الضغط والكميات لحظة بلحظة، يتخذ قرارات تعديل الخلطة أو الضغط حسب استجابة التربة، يُوثّق جميع البيانات، ويُنسّق مع المهندس المسؤول عند أي تشويه غير متوقع.", questionEn: "What is the engineering role of the on-site supervisor in a grouting project?", answerEn: "Monitoring pressure and volumes in real time, making mix or pressure adjustment decisions based on soil response, documenting all data, and coordinating with the responsible engineer on any unexpected deformation." },
+    { question: "هل يتأثر الحقن بالتغيرات الموسمية في الرطوبة والحرارة؟", answer: "نعم — الحرارة الشديدة تُسرّع تصلّد الخلطة وتُقلل الوقت المتاح للضخ. التغيرات في الرطوبة الموسمية تُؤثّر على نفاذية التربة. في المملكة يُخطَّط للحقن الكبير في المواسم الأقل حرارة كلما أمكن.", questionEn: "Does grouting get affected by seasonal changes in moisture and temperature?", answerEn: "Yes — extreme heat accelerates mix setting and reduces available pumping time. Seasonal moisture changes affect soil permeability. In Saudi Arabia, major grouting is planned for cooler seasons when possible." },
+    { question: "هل يمكن إعادة الحقن في منطقة سبق حقنها؟", answer: "نعم عند الحاجة، لكن يتطلب تحليل دقيق لأسباب عدم نجاح الحقن الأول. قد يُشير لاستمرار مصدر مشكلة لم يُعالَج، أو لأن نوع الحقن الأول لم يكن مناسباً للتربة.", questionEn: "Can grouting be repeated in an area that was previously grouted?", answerEn: "Yes when needed, but it requires careful analysis of why the first grouting was insufficient. It may indicate a continuing source problem that was not addressed, or that the initial grouting type was not appropriate for the soil." }
+  ], faqEn: [
       { question: "What can geophysical tests reveal on site?", answer: "Methods such as GPR, ERT, and MASW provide a subsurface picture—layering trends, anomalies, and indicators of voids or weak zones. The right method depends on target depth and ground conditions." },
       { question: "GPR vs ERT: when do we use each?", answer: "GPR is often effective for shallow targets and discrete features in suitable soils, while ERT can image deeper resistivity contrasts and moisture-related variations. Many projects benefit from a combined approach." },
       { question: "Are results conclusive?", answer: "Geophysics provides strong indicators, but critical decisions typically require verification. Targeted probing/drilling is used to confirm anomalies before remediation." },
@@ -448,7 +445,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "cement-grouting-types",
+    slug: "the-physics-of-grouting-how-grout-spreads-through-pores-and-fractures",
     image: {
       url: "/favicon.webp",
       alt: "فيزياء الحقن: كيف ينتشر الملاط داخل المسام والشقوق؟",
@@ -472,7 +469,7 @@ export const articles: ArticleContent[] = [
   
   - **الخصائص الطيفية للملاط:** تشمل اللزوجة، الكثافة، ونسبة الجسيمات الصلبة (نسبة الأسمنت إلى الماء أو المواد الكيميائية). تؤثر هذه الخصائص على قدرة الملاط على النفاذ والتغلغل.
   
-  - **الخصائص الهيدروليكية للتربة:** مثل معدل النفاذية (Permeability)، المسامية (Porosity)، توزيع حجم المسام (Pore Size Distribution)، ونوعية الشقوق (عرض وطول وامتداد الشقوق).
+  - **الخصائص الهيدروليكية للتربة:** مثل معامل النفاذية (Permeability)، المسامية (Porosity)، توزيع حجم المسام (Pore Size Distribution)، ونوعية الشقوق (عرض وطول وامتداد الشقوق).
   
   - **الضغط المطبق:** الضغط الذي يطبق أثناء عملية الحقن يُعد من أهم العوامل التي تحفز حركة الملاط داخل المسامات أو تفتيت الشقوق وتوسيعها. يجب ضبط الضغط بدقة لتجنب تكسير إضافي أو خسائر الملاط.
   
@@ -596,11 +593,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "متى يكون حقن التربة هو الخيار الأنسب؟", answer: "يكون مناسبًا عند الحاجة لتحسين خواص التربة تحت الأساسات، تقليل الهبوط، أو معالجة مسارات تسرب المياه—خصوصًا عندما تكون أعمال الحفر/الاستبدال غير ممكنة أو مكلفة." },
-      { question: "ما الفرق بين الحقن الأسمنتي وطرق الحقن الأخرى؟", answer: "الحقن الأسمنتي يعتمد على ملاط إسمنتي بخصائص لزوجة مناسبة، بينما توجد مواد أخرى (كيميائية/ميكروفاين) لظروف خاصة. اختيار المادة مرتبط بحجم المسام، النفاذية، والهدف (تقوية/عزل)." },
-      { question: "كيف نحدد نوع الخلطة واللزوجة المناسبة؟", answer: "نعتمد على طبيعة التربة/الصخور، نتائج الفحوصات، وهدف المعالجة. أحيانًا نبدأ بخليط تمهيدي ثم نعدّل تدريجيًا لتحقيق اختراق أفضل دون إحداث مشاكل جانبية." },
-      { question: "كيف أعرف أن المعالجة نجحت؟", answer: "المؤشرات تشمل استقرار الاستهلاك، تحسن سلوك الهبوط، وتحسن نتائج التحقق (مثل probing/اختبارات أو مراقبة التشققات) حسب خطة المشروع." },
-    ],
+    { question: "هل يمكن تطبيق حقن التربة تحت المباني القائمة دون تفريغها؟", answer: "نعم، وهو من أبرز مزايا الحقن. يُنفَّذ من خلال حفر نقاط حقن صغيرة بحد أدنى من الأعمال الإنشائية دون إخلاء المبنى في معظم الحالات.", questionEn: "Can soil grouting be applied under occupied buildings?", answerEn: "Yes, this is one of its key advantages. It is executed through small drill points with minimal structural work and without evacuating the building in most cases." },
+    { question: "ما الفرق بين حقن الأسمنت وحقن البوليمرات؟", answer: "حقن الأسمنت يُستخدم لملء الفراغات الكبيرة وتقوية التربة ميكانيكياً، بينما يناسب حقن البوليمرات التحكم بالتسرب وملء المسام الدقيقة التي لا يخترقها الأسمنت.", questionEn: "What is the difference between cement and polymer grouting?", answerEn: "Cement grouting fills large voids and improves mechanical strength; polymer grouting targets seepage control and fine pores that cement cannot penetrate." },
+    { question: "كيف تعرف أن حقن التربة هو الحل المناسب لمشكلتك؟", answer: "إذا كانت المشكلة هبوطاً أو تشققات ناتجة عن ضعف التربة أو تكهفات تحت الأساسات، فالحقن عادة الخيار الأنسب. التشخيص الدقيق يُؤكد ذلك قبل أي قرار.", questionEn: "How do you know if soil grouting is the right solution for your problem?", answerEn: "If the issue is settlement or cracks caused by weak soil or cavities under foundations, grouting is usually the right choice. Accurate diagnosis confirms this before any decision." },
+    { question: "ما المدة الزمنية اللازمة لملاحظة تحسن بعد الحقن؟", answer: "التحسن الميكانيكي يبدأ مع تصلّد الحقن خلال 24-72 ساعة للخلطات الأسمنتية. التقييم الكامل يستلزم أسبوعين إلى أربعة أسابيع مع مراقبة منتظمة لأجهزة قياس الهبوط.", questionEn: "How long does it take to notice improvement after grouting?", answerEn: "Mechanical improvement begins as grout sets within 24-72 hours for cement mixes. Full assessment requires 2-4 weeks with regular settlement monitoring." }
+  ],
     faqEn: [
       { question: "When is soil grouting the right solution?", answer: "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly." },
       { question: "How is cement grouting different from other grouts?", answer: "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective." },
@@ -619,9 +616,9 @@ export const articles: ArticleContent[] = [
     categoriesEn: ["Cracks & Structures", "Geotechnical Engineering", "Soil Grouting", "Ground Improvement Library"],
     date: "2025-09-13",
     readTime: "3 دقيقة",
-    readTimeEn: "2 min",
+    readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "building-cracks-solutions",
+    slug: "the-geotechnical-engineers-role-in-designing-grouting-programs",
     image: {
       url: "/favicon.webp",
       alt: "دور المهندس الجيوتقني في تصميم برامج الحقن",
@@ -752,11 +749,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "متى يكون حقن التربة هو الخيار الأنسب؟", answer: "يكون مناسبًا عند الحاجة لتحسين خواص التربة تحت الأساسات، تقليل الهبوط، أو معالجة مسارات تسرب المياه—خصوصًا عندما تكون أعمال الحفر/الاستبدال غير ممكنة أو مكلفة." },
-      { question: "ما الفرق بين الحقن الأسمنتي وطرق الحقن الأخرى؟", answer: "الحقن الأسمنتي يعتمد على ملاط إسمنتي بخصائص لزوجة مناسبة، بينما توجد مواد أخرى (كيميائية/ميكروفاين) لظروف خاصة. اختيار المادة مرتبط بحجم المسام، النفاذية، والهدف (تقوية/عزل)." },
-      { question: "كيف نحدد نوع الخلطة واللزوجة المناسبة؟", answer: "نعتمد على طبيعة التربة/الصخور، نتائج الفحوصات، وهدف المعالجة. أحيانًا نبدأ بخليط تمهيدي ثم نعدّل تدريجيًا لتحقيق اختراق أفضل دون إحداث مشاكل جانبية." },
-      { question: "كيف أعرف أن المعالجة نجحت؟", answer: "المؤشرات تشمل استقرار الاستهلاك، تحسن سلوك الهبوط، وتحسن نتائج التحقق (مثل probing/اختبارات أو مراقبة التشققات) حسب خطة المشروع." },
-    ],
+    { question: "ما مؤشرات الخطر التي تستوجب التدخل بالحقن فوراً؟", answer: "تشققات متوسعة بسرعة، هبوط مستمر ملحوظ، انحراف ظاهر في الجدران أو الأعمدة، أو وجود ضوضاء غير مألوفة في البنية. كل هذه مؤشرات تستدعي تقييماً هندسياً عاجلاً.", questionEn: "What danger signs require immediate grouting intervention?", answerEn: "Rapidly widening cracks, continuous visible settlement, apparent wall or column inclination, or unfamiliar structural sounds — all require urgent engineering assessment." },
+    { question: "هل حقن التربة آمن للمنشآت القريبة من موقع العمل؟", answer: "مع ضبط ضغوط الحقن ضمن الحدود الآمنة، يكون التأثير على المجاورات ضئيلاً. المشاريع في المناطق المكتظة تستدعي مراقبة مستمرة للمنشآت المجاورة طوال فترة التنفيذ.", questionEn: "Is soil grouting safe for structures near the work site?", answerEn: "With injection pressures within safe limits, the impact on adjacent structures is minimal. Dense-area projects require continuous monitoring of neighbouring structures throughout execution." },
+    { question: "كيف يُمنع انتشار الحقن خارج المنطقة المستهدفة؟", answer: "عبر ضبط اللزوجة وضغط الحقن، والاستناد إلى بيانات نفاذية التربة لتحديد نقاط الحقن. المراقبة الميدانية المستمرة للضغط تُنبّه لأي انتشار غير مخطط له.", questionEn: "How is uncontrolled grout spread prevented?", answerEn: "By controlling viscosity and injection pressure, using soil permeability data to position injection points, and continuous field pressure monitoring to alert against unplanned migration." },
+    { question: "ما الفترة الزمنية التي يتحمل فيها الحقن بعد التنفيذ؟", answer: "مع الاختيار الصحيح للمادة وجودة التنفيذ، يُفترض أن يكون الحقن حلاً دائماً. العمر الافتراضي للحقن الأسمنتي مماثل للخرسانة (50+ سنة)، والبوليمرات تتفاوت حسب النوع والبيئة.", questionEn: "How long does grout last after execution?", answerEn: "With correct material selection and quality execution, grouting should be a permanent solution. Cement grout lifespan matches concrete (50+ years); polymers vary by type and environment." }
+  ],
     faqEn: [
       { question: "When is soil grouting the right solution?", answer: "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly." },
       { question: "How is cement grouting different from other grouts?", answer: "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective." },
@@ -777,7 +774,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "soil-testing-importance",
+    slug: "essential-grouting-terminology-permeability-viscosity-pressure-and-flow",
     image: {
       url: "/favicon.webp",
       alt: "المصطلحات الأساسية في عالم الحقن (نفاذية، لزوجة، ضغط، تدفق)",
@@ -890,11 +887,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "متى يكون حقن التربة هو الخيار الأنسب؟", answer: "يكون مناسبًا عند الحاجة لتحسين خواص التربة تحت الأساسات، تقليل الهبوط، أو معالجة مسارات تسرب المياه—خصوصًا عندما تكون أعمال الحفر/الاستبدال غير ممكنة أو مكلفة." },
-      { question: "ما الفرق بين الحقن الأسمنتي وطرق الحقن الأخرى؟", answer: "الحقن الأسمنتي يعتمد على ملاط إسمنتي بخصائص لزوجة مناسبة، بينما توجد مواد أخرى (كيميائية/ميكروفاين) لظروف خاصة. اختيار المادة مرتبط بحجم المسام، النفاذية، والهدف (تقوية/عزل)." },
-      { question: "كيف نحدد نوع الخلطة واللزوجة المناسبة؟", answer: "نعتمد على طبيعة التربة/الصخور، نتائج الفحوصات، وهدف المعالجة. أحيانًا نبدأ بخليط تمهيدي ثم نعدّل تدريجيًا لتحقيق اختراق أفضل دون إحداث مشاكل جانبية." },
-      { question: "كيف أعرف أن المعالجة نجحت؟", answer: "المؤشرات تشمل استقرار الاستهلاك، تحسن سلوك الهبوط، وتحسن نتائج التحقق (مثل probing/اختبارات أو مراقبة التشققات) حسب خطة المشروع." },
-    ],
+    { question: "ما الخطوات العملية لطلب خدمة حقن التربة؟", answer: "ابدأ بتوثيق المشكلة (صور، قياسات)، ثم تواصل مع فريق إطلاق لتقييم أولي. بعد الزيارة الميدانية تُحدَّد التقنية المناسبة والتكلفة التقديرية قبل بدء التنفيذ.", questionEn: "What are the practical steps to request soil grouting service?", answerEn: "Start by documenting the problem (photos, measurements), then contact the ETLAQ team for initial assessment. After the field visit, the appropriate technique and estimated cost are determined before execution begins." },
+    { question: "ما الذي يشمله تقرير ما بعد الحقن؟", answer: "يشمل: خريطة نقاط الحقن المنجزة، سجلات الضغط والكميات لكل نقطة، نتائج اختبارات التحقق، توصيات للمتابعة، وشهادات مواد الحقن.", questionEn: "What does a post-grouting report include?", answerEn: "It includes: map of completed injection points, pressure and volume logs per point, verification test results, follow-up recommendations, and grout material certificates." },
+    { question: "كم عدد نقاط الحقن الضروري في المشروع المتوسط؟", answer: "يتوقف على مساحة المشكلة وعمق المعالجة. المشروع المتوسط قد يتراوح بين 10 و50 نقطة. نقاط الحقن تُحدَّد بعد الزيارة الميدانية وبناءً على نتائج التحقيق.", questionEn: "How many injection points are needed in a typical project?", answerEn: "Depends on problem area and treatment depth. A typical project may range from 10 to 50 points. Injection points are determined after the site visit and investigation results." },
+    { question: "هل يمكن توقف الحقن ثم استئنافه في اليوم التالي؟", answer: "نعم، لكن يُنبغي توثيق حالة كل نقطة عند التوقف لضمان استكمال المناطق غير المكتملة. بعض الخلطات قد تحتاج مواصفات خاصة عند الاستئناف لضمان الترابط مع الحقن السابق.", questionEn: "Can grouting be stopped and resumed the next day?", answerEn: "Yes, but each point's status at stoppage must be documented to ensure incomplete zones are finished. Some mixes may need special specifications on resumption to ensure bonding with previous grout." }
+  ],
     faqEn: [
       { question: "When is soil grouting the right solution?", answer: "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly." },
       { question: "How is cement grouting different from other grouts?", answer: "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective." },
@@ -913,9 +910,9 @@ export const articles: ArticleContent[] = [
     categoriesEn: ["Geophysical Surveys", "Geotechnical Engineering", "Soil Grouting", "Ground Improvement Library"],
     date: "2025-09-19",
     readTime: "3 دقيقة",
-    readTimeEn: "2 min",
+    readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "gpr-technology",
+    slug: "when-is-grouting-the-best-solution-technical-and-economic-feasibility",
     image: {
       url: "/favicon.webp",
       alt: "متى يكون الحقن هو الحل الأمثل؟ (دراسة الجدوى الفنية والاقتصادية)",
@@ -1036,11 +1033,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "متى يكون حقن التربة هو الخيار الأنسب؟", answer: "يكون مناسبًا عند الحاجة لتحسين خواص التربة تحت الأساسات، تقليل الهبوط، أو معالجة مسارات تسرب المياه—خصوصًا عندما تكون أعمال الحفر/الاستبدال غير ممكنة أو مكلفة." },
-      { question: "ما الفرق بين الحقن الأسمنتي وطرق الحقن الأخرى؟", answer: "الحقن الأسمنتي يعتمد على ملاط إسمنتي بخصائص لزوجة مناسبة، بينما توجد مواد أخرى (كيميائية/ميكروفاين) لظروف خاصة. اختيار المادة مرتبط بحجم المسام، النفاذية، والهدف (تقوية/عزل)." },
-      { question: "كيف نحدد نوع الخلطة واللزوجة المناسبة؟", answer: "نعتمد على طبيعة التربة/الصخور، نتائج الفحوصات، وهدف المعالجة. أحيانًا نبدأ بخليط تمهيدي ثم نعدّل تدريجيًا لتحقيق اختراق أفضل دون إحداث مشاكل جانبية." },
-      { question: "كيف أعرف أن المعالجة نجحت؟", answer: "المؤشرات تشمل استقرار الاستهلاك، تحسن سلوك الهبوط، وتحسن نتائج التحقق (مثل probing/اختبارات أو مراقبة التشققات) حسب خطة المشروع." },
-    ],
+    { question: "هل يمكن تطبيق حقن التربة تحت المباني القائمة دون تفريغها؟", answer: "نعم، وهو من أبرز مزايا الحقن. يُنفَّذ من خلال حفر نقاط حقن صغيرة بحد أدنى من الأعمال الإنشائية دون إخلاء المبنى في معظم الحالات.", questionEn: "Can soil grouting be applied under occupied buildings?", answerEn: "Yes, this is one of its key advantages. It is executed through small drill points with minimal structural work and without evacuating the building in most cases." },
+    { question: "ما الفرق بين حقن الأسمنت وحقن البوليمرات؟", answer: "حقن الأسمنت يُستخدم لملء الفراغات الكبيرة وتقوية التربة ميكانيكياً، بينما يناسب حقن البوليمرات التحكم بالتسرب وملء المسام الدقيقة التي لا يخترقها الأسمنت.", questionEn: "What is the difference between cement and polymer grouting?", answerEn: "Cement grouting fills large voids and improves mechanical strength; polymer grouting targets seepage control and fine pores that cement cannot penetrate." },
+    { question: "كيف تعرف أن حقن التربة هو الحل المناسب لمشكلتك؟", answer: "إذا كانت المشكلة هبوطاً أو تشققات ناتجة عن ضعف التربة أو تكهفات تحت الأساسات، فالحقن عادة الخيار الأنسب. التشخيص الدقيق يُؤكد ذلك قبل أي قرار.", questionEn: "How do you know if soil grouting is the right solution for your problem?", answerEn: "If the issue is settlement or cracks caused by weak soil or cavities under foundations, grouting is usually the right choice. Accurate diagnosis confirms this before any decision." },
+    { question: "ما المدة الزمنية اللازمة لملاحظة تحسن بعد الحقن؟", answer: "التحسن الميكانيكي يبدأ مع تصلّد الحقن خلال 24-72 ساعة للخلطات الأسمنتية. التقييم الكامل يستلزم أسبوعين إلى أربعة أسابيع مع مراقبة منتظمة لأجهزة قياس الهبوط.", questionEn: "How long does it take to notice improvement after grouting?", answerEn: "Mechanical improvement begins as grout sets within 24-72 hours for cement mixes. Full assessment requires 2-4 weeks with regular settlement monitoring." }
+  ],
     faqEn: [
       { question: "When is soil grouting the right solution?", answer: "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly." },
       { question: "How is cement grouting different from other grouts?", answer: "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective." },
@@ -1059,9 +1056,9 @@ export const articles: ArticleContent[] = [
     categoriesEn: ["Foundations & Settlement", "Geotechnical Engineering", "Soil Grouting", "Ground Improvement Library"],
     date: "2025-09-22",
     readTime: "3 دقيقة",
-    readTimeEn: "2 min",
+    readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "concrete-slab-settlement",
+    slug: "global-quality-standards-in-grouting-works-en-12715-and-astm",
     image: {
       url: "/favicon.webp",
       alt: "معايير الجودة العالمية في أعمال الحقن (EN 12715 و ASTM)",
@@ -1164,11 +1161,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "متى يكون حقن التربة هو الخيار الأنسب؟", answer: "يكون مناسبًا عند الحاجة لتحسين خواص التربة تحت الأساسات، تقليل الهبوط، أو معالجة مسارات تسرب المياه—خصوصًا عندما تكون أعمال الحفر/الاستبدال غير ممكنة أو مكلفة." },
-      { question: "ما الفرق بين الحقن الأسمنتي وطرق الحقن الأخرى؟", answer: "الحقن الأسمنتي يعتمد على ملاط إسمنتي بخصائص لزوجة مناسبة، بينما توجد مواد أخرى (كيميائية/ميكروفاين) لظروف خاصة. اختيار المادة مرتبط بحجم المسام، النفاذية، والهدف (تقوية/عزل)." },
-      { question: "كيف نحدد نوع الخلطة واللزوجة المناسبة؟", answer: "نعتمد على طبيعة التربة/الصخور، نتائج الفحوصات، وهدف المعالجة. أحيانًا نبدأ بخليط تمهيدي ثم نعدّل تدريجيًا لتحقيق اختراق أفضل دون إحداث مشاكل جانبية." },
-      { question: "كيف أعرف أن المعالجة نجحت؟", answer: "المؤشرات تشمل استقرار الاستهلاك، تحسن سلوك الهبوط، وتحسن نتائج التحقق (مثل probing/اختبارات أو مراقبة التشققات) حسب خطة المشروع." },
-    ],
+    { question: "ما مؤشرات الخطر التي تستوجب التدخل بالحقن فوراً؟", answer: "تشققات متوسعة بسرعة، هبوط مستمر ملحوظ، انحراف ظاهر في الجدران أو الأعمدة، أو وجود ضوضاء غير مألوفة في البنية. كل هذه مؤشرات تستدعي تقييماً هندسياً عاجلاً.", questionEn: "What danger signs require immediate grouting intervention?", answerEn: "Rapidly widening cracks, continuous visible settlement, apparent wall or column inclination, or unfamiliar structural sounds — all require urgent engineering assessment." },
+    { question: "هل حقن التربة آمن للمنشآت القريبة من موقع العمل؟", answer: "مع ضبط ضغوط الحقن ضمن الحدود الآمنة، يكون التأثير على المجاورات ضئيلاً. المشاريع في المناطق المكتظة تستدعي مراقبة مستمرة للمنشآت المجاورة طوال فترة التنفيذ.", questionEn: "Is soil grouting safe for structures near the work site?", answerEn: "With injection pressures within safe limits, the impact on adjacent structures is minimal. Dense-area projects require continuous monitoring of neighbouring structures throughout execution." },
+    { question: "كيف يُمنع انتشار الحقن خارج المنطقة المستهدفة؟", answer: "عبر ضبط اللزوجة وضغط الحقن، والاستناد إلى بيانات نفاذية التربة لتحديد نقاط الحقن. المراقبة الميدانية المستمرة للضغط تُنبّه لأي انتشار غير مخطط له.", questionEn: "How is uncontrolled grout spread prevented?", answerEn: "By controlling viscosity and injection pressure, using soil permeability data to position injection points, and continuous field pressure monitoring to alert against unplanned migration." },
+    { question: "ما الفترة الزمنية التي يتحمل فيها الحقن بعد التنفيذ؟", answer: "مع الاختيار الصحيح للمادة وجودة التنفيذ، يُفترض أن يكون الحقن حلاً دائماً. العمر الافتراضي للحقن الأسمنتي مماثل للخرسانة (50+ سنة)، والبوليمرات تتفاوت حسب النوع والبيئة.", questionEn: "How long does grout last after execution?", answerEn: "With correct material selection and quality execution, grouting should be a permanent solution. Cement grout lifespan matches concrete (50+ years); polymers vary by type and environment." }
+  ],
     faqEn: [
       { question: "When is soil grouting the right solution?", answer: "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly." },
       { question: "How is cement grouting different from other grouts?", answer: "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective." },
@@ -1189,7 +1186,7 @@ export const articles: ArticleContent[] = [
     readTime: "2 دقيقة",
     readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "epoxy-injection-repair",
+    slug: "remedial-vs-preventive-grouting-objectives-triggers-and-selection",
     image: {
       url: "/favicon.webp",
       alt: "الفرق بين الحقن العلاجي (Remedial Grouting) والحقن الوقائي (Preventative Grouting)",
@@ -1268,11 +1265,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "متى يكون حقن التربة هو الخيار الأنسب؟", answer: "يكون مناسبًا عند الحاجة لتحسين خواص التربة تحت الأساسات، تقليل الهبوط، أو معالجة مسارات تسرب المياه—خصوصًا عندما تكون أعمال الحفر/الاستبدال غير ممكنة أو مكلفة." },
-      { question: "ما الفرق بين الحقن الأسمنتي وطرق الحقن الأخرى؟", answer: "الحقن الأسمنتي يعتمد على ملاط إسمنتي بخصائص لزوجة مناسبة، بينما توجد مواد أخرى (كيميائية/ميكروفاين) لظروف خاصة. اختيار المادة مرتبط بحجم المسام، النفاذية، والهدف (تقوية/عزل)." },
-      { question: "كيف نحدد نوع الخلطة واللزوجة المناسبة؟", answer: "نعتمد على طبيعة التربة/الصخور، نتائج الفحوصات، وهدف المعالجة. أحيانًا نبدأ بخليط تمهيدي ثم نعدّل تدريجيًا لتحقيق اختراق أفضل دون إحداث مشاكل جانبية." },
-      { question: "كيف أعرف أن المعالجة نجحت؟", answer: "المؤشرات تشمل استقرار الاستهلاك، تحسن سلوك الهبوط، وتحسن نتائج التحقق (مثل probing/اختبارات أو مراقبة التشققات) حسب خطة المشروع." },
-    ],
+    { question: "ما الخطوات العملية لطلب خدمة حقن التربة؟", answer: "ابدأ بتوثيق المشكلة (صور، قياسات)، ثم تواصل مع فريق إطلاق لتقييم أولي. بعد الزيارة الميدانية تُحدَّد التقنية المناسبة والتكلفة التقديرية قبل بدء التنفيذ.", questionEn: "What are the practical steps to request soil grouting service?", answerEn: "Start by documenting the problem (photos, measurements), then contact the ETLAQ team for initial assessment. After the field visit, the appropriate technique and estimated cost are determined before execution begins." },
+    { question: "ما الذي يشمله تقرير ما بعد الحقن؟", answer: "يشمل: خريطة نقاط الحقن المنجزة، سجلات الضغط والكميات لكل نقطة، نتائج اختبارات التحقق، توصيات للمتابعة، وشهادات مواد الحقن.", questionEn: "What does a post-grouting report include?", answerEn: "It includes: map of completed injection points, pressure and volume logs per point, verification test results, follow-up recommendations, and grout material certificates." },
+    { question: "كم عدد نقاط الحقن الضروري في المشروع المتوسط؟", answer: "يتوقف على مساحة المشكلة وعمق المعالجة. المشروع المتوسط قد يتراوح بين 10 و50 نقطة. نقاط الحقن تُحدَّد بعد الزيارة الميدانية وبناءً على نتائج التحقيق.", questionEn: "How many injection points are needed in a typical project?", answerEn: "Depends on problem area and treatment depth. A typical project may range from 10 to 50 points. Injection points are determined after the site visit and investigation results." },
+    { question: "هل يمكن توقف الحقن ثم استئنافه في اليوم التالي؟", answer: "نعم، لكن يُنبغي توثيق حالة كل نقطة عند التوقف لضمان استكمال المناطق غير المكتملة. بعض الخلطات قد تحتاج مواصفات خاصة عند الاستئناف لضمان الترابط مع الحقن السابق.", questionEn: "Can grouting be stopped and resumed the next day?", answerEn: "Yes, but each point's status at stoppage must be documented to ensure incomplete zones are finished. Some mixes may need special specifications on resumption to ensure bonding with previous grout." }
+  ],
     faqEn: [
       { question: "When is soil grouting the right solution?", answer: "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly." },
       { question: "How is cement grouting different from other grouts?", answer: "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective." },
@@ -1293,7 +1290,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "foundation-strengthening",
+    slug: "challenges-of-soil-grouting-in-desert-and-coastal-environments",
     image: {
       url: "/favicon.webp",
       alt: "تحديات حقن التربة في البيئات الصحراوية والمناطق الساحلية",
@@ -1322,7 +1319,7 @@ export const articles: ArticleContent[] = [
   ### التحديات الفنية في المناطق الساحلية
   
   1. **ارتفاع منسوب المياه الجوفية والملوحة**  
-  تحتوي المناطق الساحلية على تربة مشبعة بالمياه ذات ملوحة عالية تؤثر على خواص المواد الأسمنتيّة والكيميائية المُستخدمة في الحقن، مما يقلل من قوة التماسك وسرعة تفاعل المواد ويؤدي إلى تآكل مسبق لمكونات الخلطات.
+  تحتوي المناطق الساحلية على تربة مشبعة بالمياه ذات ملوحة عالية تؤثر على خواص المواد الأسمنتيّة والكيميائية المُستخدمة في الحقن، مما يقلل من معامل التماسك وسرعة تفاعل المواد ويؤدي إلى تآكل مسبق لمكونات الخلطات.
   
   2. **خطورة تآكل التربة والتسرب**  
   تواجد المياه المالحة يزيد من خطر التآكل الكيميائي للتربة وخطوط الأساسات، وتشكيل تجاويف نتيجة غسيل المواد الدقيقة عبر المياه، الأمر الذي يتطلب استخدام مواد حقن مقاومة للبيئات المالحة مثل البوليمرات الخاصة أو الأسمنتات المعدلة.
@@ -1332,7 +1329,7 @@ export const articles: ArticleContent[] = [
   
   ### الحلول الهندسية والتقنيات الموصى بها
   
-  - **اختيار مادة الحقن المناسبة**: في البيئات الصحراوية يُفضل استخدام خلطات بوليمرية أو مواد كيميائية ذات لزوجة متوسطة تسمح بالانتشار الأمثل في التربة الرملية الجافة. أما في المناطق الساحلية فيتم استخدام مواد مقاومة للتآكل المائي والملوحة، مثل الأسمنت المعدل بالمواد الإضافية المضادة للكلورide وفق المعيار ASTM C1157.
+  - **اختيار مادة الحقن المناسبة**: في البيئات الصحراوية يُفضل استخدام خلطات بوليمرية أو مواد كيميائية ذات لزوجة متوسطة تسمح بالانتشار الأمثل في التربة الرملية الجافة. أما في المناطق الساحلية فيتم استخدام مواد مقاومة للتآكل المائي والملوحة، مثل الأسمنت المعدل بالمواد الإضافية المضادة للكلوريدات وفق المعيار ASTM C1157.
   
   - **تقنيات الحقن المتقدمة**: يُستحسن اعتماد طرق مثل حقن النفث (Jet Grouting) الذي يسمح بتكوين أعمدة أسمنتية متماسكة تمنع الانسياب المائي، خصوصًا في الظرف الصعب للبيئات الساحلية. بينما في الصحاري يمكن تطبيق حقن الضغط (Compaction Grouting) لرفع وتكثيف طبقات التربة غير المتماسكة.
   
@@ -1398,11 +1395,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "متى يكون حقن التربة هو الخيار الأنسب؟", answer: "يكون مناسبًا عند الحاجة لتحسين خواص التربة تحت الأساسات، تقليل الهبوط، أو معالجة مسارات تسرب المياه—خصوصًا عندما تكون أعمال الحفر/الاستبدال غير ممكنة أو مكلفة." },
-      { question: "ما الفرق بين الحقن الأسمنتي وطرق الحقن الأخرى؟", answer: "الحقن الأسمنتي يعتمد على ملاط إسمنتي بخصائص لزوجة مناسبة، بينما توجد مواد أخرى (كيميائية/ميكروفاين) لظروف خاصة. اختيار المادة مرتبط بحجم المسام، النفاذية، والهدف (تقوية/عزل)." },
-      { question: "كيف نحدد نوع الخلطة واللزوجة المناسبة؟", answer: "نعتمد على طبيعة التربة/الصخور، نتائج الفحوصات، وهدف المعالجة. أحيانًا نبدأ بخليط تمهيدي ثم نعدّل تدريجيًا لتحقيق اختراق أفضل دون إحداث مشاكل جانبية." },
-      { question: "كيف أعرف أن المعالجة نجحت؟", answer: "المؤشرات تشمل استقرار الاستهلاك، تحسن سلوك الهبوط، وتحسن نتائج التحقق (مثل probing/اختبارات أو مراقبة التشققات) حسب خطة المشروع." },
-    ],
+    { question: "هل يمكن تطبيق حقن التربة تحت المباني القائمة دون تفريغها؟", answer: "نعم، وهو من أبرز مزايا الحقن. يُنفَّذ من خلال حفر نقاط حقن صغيرة بحد أدنى من الأعمال الإنشائية دون إخلاء المبنى في معظم الحالات.", questionEn: "Can soil grouting be applied under occupied buildings?", answerEn: "Yes, this is one of its key advantages. It is executed through small drill points with minimal structural work and without evacuating the building in most cases." },
+    { question: "ما الفرق بين حقن الأسمنت وحقن البوليمرات؟", answer: "حقن الأسمنت يُستخدم لملء الفراغات الكبيرة وتقوية التربة ميكانيكياً، بينما يناسب حقن البوليمرات التحكم بالتسرب وملء المسام الدقيقة التي لا يخترقها الأسمنت.", questionEn: "What is the difference between cement and polymer grouting?", answerEn: "Cement grouting fills large voids and improves mechanical strength; polymer grouting targets seepage control and fine pores that cement cannot penetrate." },
+    { question: "كيف تعرف أن حقن التربة هو الحل المناسب لمشكلتك؟", answer: "إذا كانت المشكلة هبوطاً أو تشققات ناتجة عن ضعف التربة أو تكهفات تحت الأساسات، فالحقن عادة الخيار الأنسب. التشخيص الدقيق يُؤكد ذلك قبل أي قرار.", questionEn: "How do you know if soil grouting is the right solution for your problem?", answerEn: "If the issue is settlement or cracks caused by weak soil or cavities under foundations, grouting is usually the right choice. Accurate diagnosis confirms this before any decision." },
+    { question: "ما المدة الزمنية اللازمة لملاحظة تحسن بعد الحقن؟", answer: "التحسن الميكانيكي يبدأ مع تصلّد الحقن خلال 24-72 ساعة للخلطات الأسمنتية. التقييم الكامل يستلزم أسبوعين إلى أربعة أسابيع مع مراقبة منتظمة لأجهزة قياس الهبوط.", questionEn: "How long does it take to notice improvement after grouting?", answerEn: "Mechanical improvement begins as grout sets within 24-72 hours for cement mixes. Full assessment requires 2-4 weeks with regular settlement monitoring." }
+  ],
     faqEn: [
       { question: "When is soil grouting the right solution?", answer: "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly." },
       { question: "How is cement grouting different from other grouts?", answer: "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective." },
@@ -1423,7 +1420,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "geotechnical-problems-saudi",
+    slug: "permeation-grouting-mechanism-and-applications",
     image: {
       url: "/favicon.webp",
       alt: "الحقن النفاذي (Permeation Grouting): الآلية والتطبيقات",
@@ -1538,11 +1535,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "متى يكون حقن التربة هو الخيار الأنسب؟", answer: "يكون مناسبًا عند الحاجة لتحسين خواص التربة تحت الأساسات، تقليل الهبوط، أو معالجة مسارات تسرب المياه—خصوصًا عندما تكون أعمال الحفر/الاستبدال غير ممكنة أو مكلفة." },
-      { question: "ما الفرق بين الحقن الأسمنتي وطرق الحقن الأخرى؟", answer: "الحقن الأسمنتي يعتمد على ملاط إسمنتي بخصائص لزوجة مناسبة، بينما توجد مواد أخرى (كيميائية/ميكروفاين) لظروف خاصة. اختيار المادة مرتبط بحجم المسام، النفاذية، والهدف (تقوية/عزل)." },
-      { question: "كيف نحدد نوع الخلطة واللزوجة المناسبة؟", answer: "نعتمد على طبيعة التربة/الصخور، نتائج الفحوصات، وهدف المعالجة. أحيانًا نبدأ بخليط تمهيدي ثم نعدّل تدريجيًا لتحقيق اختراق أفضل دون إحداث مشاكل جانبية." },
-      { question: "كيف أعرف أن المعالجة نجحت؟", answer: "المؤشرات تشمل استقرار الاستهلاك، تحسن سلوك الهبوط، وتحسن نتائج التحقق (مثل probing/اختبارات أو مراقبة التشققات) حسب خطة المشروع." },
-    ],
+    { question: "ما مؤشرات الخطر التي تستوجب التدخل بالحقن فوراً؟", answer: "تشققات متوسعة بسرعة، هبوط مستمر ملحوظ، انحراف ظاهر في الجدران أو الأعمدة، أو وجود ضوضاء غير مألوفة في البنية. كل هذه مؤشرات تستدعي تقييماً هندسياً عاجلاً.", questionEn: "What danger signs require immediate grouting intervention?", answerEn: "Rapidly widening cracks, continuous visible settlement, apparent wall or column inclination, or unfamiliar structural sounds — all require urgent engineering assessment." },
+    { question: "هل حقن التربة آمن للمنشآت القريبة من موقع العمل؟", answer: "مع ضبط ضغوط الحقن ضمن الحدود الآمنة، يكون التأثير على المجاورات ضئيلاً. المشاريع في المناطق المكتظة تستدعي مراقبة مستمرة للمنشآت المجاورة طوال فترة التنفيذ.", questionEn: "Is soil grouting safe for structures near the work site?", answerEn: "With injection pressures within safe limits, the impact on adjacent structures is minimal. Dense-area projects require continuous monitoring of neighbouring structures throughout execution." },
+    { question: "كيف يُمنع انتشار الحقن خارج المنطقة المستهدفة؟", answer: "عبر ضبط اللزوجة وضغط الحقن، والاستناد إلى بيانات نفاذية التربة لتحديد نقاط الحقن. المراقبة الميدانية المستمرة للضغط تُنبّه لأي انتشار غير مخطط له.", questionEn: "How is uncontrolled grout spread prevented?", answerEn: "By controlling viscosity and injection pressure, using soil permeability data to position injection points, and continuous field pressure monitoring to alert against unplanned migration." },
+    { question: "ما الفترة الزمنية التي يتحمل فيها الحقن بعد التنفيذ؟", answer: "مع الاختيار الصحيح للمادة وجودة التنفيذ، يُفترض أن يكون الحقن حلاً دائماً. العمر الافتراضي للحقن الأسمنتي مماثل للخرسانة (50+ سنة)، والبوليمرات تتفاوت حسب النوع والبيئة.", questionEn: "How long does grout last after execution?", answerEn: "With correct material selection and quality execution, grouting should be a permanent solution. Cement grout lifespan matches concrete (50+ years); polymers vary by type and environment." }
+  ],
     faqEn: [
       { question: "When is soil grouting the right solution?", answer: "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly." },
       { question: "How is cement grouting different from other grouts?", answer: "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective." },
@@ -1561,9 +1558,9 @@ export const articles: ArticleContent[] = [
     categoriesEn: ["Ground Improvement", "Geotechnical Engineering", "Soil Grouting", "Ground Improvement Library"],
     date: "2025-10-04",
     readTime: "3 دقيقة",
-    readTimeEn: "2 min",
+    readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "jet-grouting-technology",
+    slug: "compaction-grouting-when-and-how-to-use-it",
     image: {
       url: "/favicon.webp",
       alt: "الحقن الانضغاطي (Compaction Grouting): متى وكيف نستخدمه؟",
@@ -1672,11 +1669,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "متى يكون حقن التربة هو الخيار الأنسب؟", answer: "يكون مناسبًا عند الحاجة لتحسين خواص التربة تحت الأساسات، تقليل الهبوط، أو معالجة مسارات تسرب المياه—خصوصًا عندما تكون أعمال الحفر/الاستبدال غير ممكنة أو مكلفة." },
-      { question: "ما الفرق بين الحقن الأسمنتي وطرق الحقن الأخرى؟", answer: "الحقن الأسمنتي يعتمد على ملاط إسمنتي بخصائص لزوجة مناسبة، بينما توجد مواد أخرى (كيميائية/ميكروفاين) لظروف خاصة. اختيار المادة مرتبط بحجم المسام، النفاذية، والهدف (تقوية/عزل)." },
-      { question: "كيف نحدد نوع الخلطة واللزوجة المناسبة؟", answer: "نعتمد على طبيعة التربة/الصخور، نتائج الفحوصات، وهدف المعالجة. أحيانًا نبدأ بخليط تمهيدي ثم نعدّل تدريجيًا لتحقيق اختراق أفضل دون إحداث مشاكل جانبية." },
-      { question: "كيف أعرف أن المعالجة نجحت؟", answer: "المؤشرات تشمل استقرار الاستهلاك، تحسن سلوك الهبوط، وتحسن نتائج التحقق (مثل probing/اختبارات أو مراقبة التشققات) حسب خطة المشروع." },
-    ],
+    { question: "ما الخطوات العملية لطلب خدمة حقن التربة؟", answer: "ابدأ بتوثيق المشكلة (صور، قياسات)، ثم تواصل مع فريق إطلاق لتقييم أولي. بعد الزيارة الميدانية تُحدَّد التقنية المناسبة والتكلفة التقديرية قبل بدء التنفيذ.", questionEn: "What are the practical steps to request soil grouting service?", answerEn: "Start by documenting the problem (photos, measurements), then contact the ETLAQ team for initial assessment. After the field visit, the appropriate technique and estimated cost are determined before execution begins." },
+    { question: "ما الذي يشمله تقرير ما بعد الحقن؟", answer: "يشمل: خريطة نقاط الحقن المنجزة، سجلات الضغط والكميات لكل نقطة، نتائج اختبارات التحقق، توصيات للمتابعة، وشهادات مواد الحقن.", questionEn: "What does a post-grouting report include?", answerEn: "It includes: map of completed injection points, pressure and volume logs per point, verification test results, follow-up recommendations, and grout material certificates." },
+    { question: "كم عدد نقاط الحقن الضروري في المشروع المتوسط؟", answer: "يتوقف على مساحة المشكلة وعمق المعالجة. المشروع المتوسط قد يتراوح بين 10 و50 نقطة. نقاط الحقن تُحدَّد بعد الزيارة الميدانية وبناءً على نتائج التحقيق.", questionEn: "How many injection points are needed in a typical project?", answerEn: "Depends on problem area and treatment depth. A typical project may range from 10 to 50 points. Injection points are determined after the site visit and investigation results." },
+    { question: "هل يمكن توقف الحقن ثم استئنافه في اليوم التالي؟", answer: "نعم، لكن يُنبغي توثيق حالة كل نقطة عند التوقف لضمان استكمال المناطق غير المكتملة. بعض الخلطات قد تحتاج مواصفات خاصة عند الاستئناف لضمان الترابط مع الحقن السابق.", questionEn: "Can grouting be stopped and resumed the next day?", answerEn: "Yes, but each point's status at stoppage must be documented to ensure incomplete zones are finished. Some mixes may need special specifications on resumption to ensure bonding with previous grout." }
+  ],
     faqEn: [
       { question: "When is soil grouting the right solution?", answer: "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly." },
       { question: "How is cement grouting different from other grouts?", answer: "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective." },
@@ -1695,9 +1692,9 @@ export const articles: ArticleContent[] = [
     categoriesEn: ["Soil Grouting", "Geotechnical Engineering", "Ground Improvement Library"],
     date: "2025-10-07",
     readTime: "4 دقيقة",
-    readTimeEn: "3 min",
+    readTimeEn: "4 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "choosing-grouting-technique",
+    slug: "jet-grouting-from-jet-mechanics-to-column-properties",
     image: {
       url: "/favicon.webp",
       alt: "الحقن النفاث (Jet Grouting): من فيزياء النفث إلى خصائص الأعمدة",
@@ -1836,11 +1833,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "متى يكون حقن التربة هو الخيار الأنسب؟", answer: "يكون مناسبًا عند الحاجة لتحسين خواص التربة تحت الأساسات، تقليل الهبوط، أو معالجة مسارات تسرب المياه—خصوصًا عندما تكون أعمال الحفر/الاستبدال غير ممكنة أو مكلفة." },
-      { question: "ما الفرق بين الحقن الأسمنتي وطرق الحقن الأخرى؟", answer: "الحقن الأسمنتي يعتمد على ملاط إسمنتي بخصائص لزوجة مناسبة، بينما توجد مواد أخرى (كيميائية/ميكروفاين) لظروف خاصة. اختيار المادة مرتبط بحجم المسام، النفاذية، والهدف (تقوية/عزل)." },
-      { question: "كيف نحدد نوع الخلطة واللزوجة المناسبة؟", answer: "نعتمد على طبيعة التربة/الصخور، نتائج الفحوصات، وهدف المعالجة. أحيانًا نبدأ بخليط تمهيدي ثم نعدّل تدريجيًا لتحقيق اختراق أفضل دون إحداث مشاكل جانبية." },
-      { question: "كيف أعرف أن المعالجة نجحت؟", answer: "المؤشرات تشمل استقرار الاستهلاك، تحسن سلوك الهبوط، وتحسن نتائج التحقق (مثل probing/اختبارات أو مراقبة التشققات) حسب خطة المشروع." },
-    ],
+    { question: "هل يمكن تطبيق حقن التربة تحت المباني القائمة دون تفريغها؟", answer: "نعم، وهو من أبرز مزايا الحقن. يُنفَّذ من خلال حفر نقاط حقن صغيرة بحد أدنى من الأعمال الإنشائية دون إخلاء المبنى في معظم الحالات.", questionEn: "Can soil grouting be applied under occupied buildings?", answerEn: "Yes, this is one of its key advantages. It is executed through small drill points with minimal structural work and without evacuating the building in most cases." },
+    { question: "ما الفرق بين حقن الأسمنت وحقن البوليمرات؟", answer: "حقن الأسمنت يُستخدم لملء الفراغات الكبيرة وتقوية التربة ميكانيكياً، بينما يناسب حقن البوليمرات التحكم بالتسرب وملء المسام الدقيقة التي لا يخترقها الأسمنت.", questionEn: "What is the difference between cement and polymer grouting?", answerEn: "Cement grouting fills large voids and improves mechanical strength; polymer grouting targets seepage control and fine pores that cement cannot penetrate." },
+    { question: "كيف تعرف أن حقن التربة هو الحل المناسب لمشكلتك؟", answer: "إذا كانت المشكلة هبوطاً أو تشققات ناتجة عن ضعف التربة أو تكهفات تحت الأساسات، فالحقن عادة الخيار الأنسب. التشخيص الدقيق يُؤكد ذلك قبل أي قرار.", questionEn: "How do you know if soil grouting is the right solution for your problem?", answerEn: "If the issue is settlement or cracks caused by weak soil or cavities under foundations, grouting is usually the right choice. Accurate diagnosis confirms this before any decision." },
+    { question: "ما المدة الزمنية اللازمة لملاحظة تحسن بعد الحقن؟", answer: "التحسن الميكانيكي يبدأ مع تصلّد الحقن خلال 24-72 ساعة للخلطات الأسمنتية. التقييم الكامل يستلزم أسبوعين إلى أربعة أسابيع مع مراقبة منتظمة لأجهزة قياس الهبوط.", questionEn: "How long does it take to notice improvement after grouting?", answerEn: "Mechanical improvement begins as grout sets within 24-72 hours for cement mixes. Full assessment requires 2-4 weeks with regular settlement monitoring." }
+  ],
     faqEn: [
       { question: "When is soil grouting the right solution?", answer: "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly." },
       { question: "How is cement grouting different from other grouts?", answer: "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective." },
@@ -1859,9 +1856,9 @@ export const articles: ArticleContent[] = [
     categoriesEn: ["Foundations & Groundwater", "Geotechnical Engineering", "Soil Grouting", "Ground Improvement Library"],
     date: "2025-10-10",
     readTime: "3 دقيقة",
-    readTimeEn: "2 min",
+    readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "foundation-water-leakage",
+    slug: "fracture-grouting-controlling-uplift-and-ground-heave",
     image: {
       url: "/favicon.webp",
       alt: "حقن الكسر الهيدروليكي (Fracture Grouting): التحكم في رفع المنشآت",
@@ -1954,11 +1951,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "متى يكون حقن التربة هو الخيار الأنسب؟", answer: "يكون مناسبًا عند الحاجة لتحسين خواص التربة تحت الأساسات، تقليل الهبوط، أو معالجة مسارات تسرب المياه—خصوصًا عندما تكون أعمال الحفر/الاستبدال غير ممكنة أو مكلفة." },
-      { question: "ما الفرق بين الحقن الأسمنتي وطرق الحقن الأخرى؟", answer: "الحقن الأسمنتي يعتمد على ملاط إسمنتي بخصائص لزوجة مناسبة، بينما توجد مواد أخرى (كيميائية/ميكروفاين) لظروف خاصة. اختيار المادة مرتبط بحجم المسام، النفاذية، والهدف (تقوية/عزل)." },
-      { question: "كيف نحدد نوع الخلطة واللزوجة المناسبة؟", answer: "نعتمد على طبيعة التربة/الصخور، نتائج الفحوصات، وهدف المعالجة. أحيانًا نبدأ بخليط تمهيدي ثم نعدّل تدريجيًا لتحقيق اختراق أفضل دون إحداث مشاكل جانبية." },
-      { question: "كيف أعرف أن المعالجة نجحت؟", answer: "المؤشرات تشمل استقرار الاستهلاك، تحسن سلوك الهبوط، وتحسن نتائج التحقق (مثل probing/اختبارات أو مراقبة التشققات) حسب خطة المشروع." },
-    ],
+    { question: "ما مؤشرات الخطر التي تستوجب التدخل بالحقن فوراً؟", answer: "تشققات متوسعة بسرعة، هبوط مستمر ملحوظ، انحراف ظاهر في الجدران أو الأعمدة، أو وجود ضوضاء غير مألوفة في البنية. كل هذه مؤشرات تستدعي تقييماً هندسياً عاجلاً.", questionEn: "What danger signs require immediate grouting intervention?", answerEn: "Rapidly widening cracks, continuous visible settlement, apparent wall or column inclination, or unfamiliar structural sounds — all require urgent engineering assessment." },
+    { question: "هل حقن التربة آمن للمنشآت القريبة من موقع العمل؟", answer: "مع ضبط ضغوط الحقن ضمن الحدود الآمنة، يكون التأثير على المجاورات ضئيلاً. المشاريع في المناطق المكتظة تستدعي مراقبة مستمرة للمنشآت المجاورة طوال فترة التنفيذ.", questionEn: "Is soil grouting safe for structures near the work site?", answerEn: "With injection pressures within safe limits, the impact on adjacent structures is minimal. Dense-area projects require continuous monitoring of neighbouring structures throughout execution." },
+    { question: "كيف يُمنع انتشار الحقن خارج المنطقة المستهدفة؟", answer: "عبر ضبط اللزوجة وضغط الحقن، والاستناد إلى بيانات نفاذية التربة لتحديد نقاط الحقن. المراقبة الميدانية المستمرة للضغط تُنبّه لأي انتشار غير مخطط له.", questionEn: "How is uncontrolled grout spread prevented?", answerEn: "By controlling viscosity and injection pressure, using soil permeability data to position injection points, and continuous field pressure monitoring to alert against unplanned migration." },
+    { question: "ما الفترة الزمنية التي يتحمل فيها الحقن بعد التنفيذ؟", answer: "مع الاختيار الصحيح للمادة وجودة التنفيذ، يُفترض أن يكون الحقن حلاً دائماً. العمر الافتراضي للحقن الأسمنتي مماثل للخرسانة (50+ سنة)، والبوليمرات تتفاوت حسب النوع والبيئة.", questionEn: "How long does grout last after execution?", answerEn: "With correct material selection and quality execution, grouting should be a permanent solution. Cement grout lifespan matches concrete (50+ years); polymers vary by type and environment." }
+  ],
     faqEn: [
       { question: "When is soil grouting the right solution?", answer: "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly." },
       { question: "How is cement grouting different from other grouts?", answer: "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective." },
@@ -1977,9 +1974,9 @@ export const articles: ArticleContent[] = [
     categoriesEn: ["Structural Strengthening", "Geotechnical Engineering", "Soil Grouting", "Ground Improvement Library"],
     date: "2025-10-13",
     readTime: "3 دقيقة",
-    readTimeEn: "2 min",
+    readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "carbon-fiber-reinforcement",
+    slug: "curtain-grouting-a-strategy-for-permeability-reduction-in-dams",
     image: {
       url: "/favicon.webp",
       alt: "حقن الستارة (Curtain Grouting): فلسفة تقليل النفاذية في السدود",
@@ -2074,11 +2071,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "متى يكون حقن التربة هو الخيار الأنسب؟", answer: "يكون مناسبًا عند الحاجة لتحسين خواص التربة تحت الأساسات، تقليل الهبوط، أو معالجة مسارات تسرب المياه—خصوصًا عندما تكون أعمال الحفر/الاستبدال غير ممكنة أو مكلفة." },
-      { question: "ما الفرق بين الحقن الأسمنتي وطرق الحقن الأخرى؟", answer: "الحقن الأسمنتي يعتمد على ملاط إسمنتي بخصائص لزوجة مناسبة، بينما توجد مواد أخرى (كيميائية/ميكروفاين) لظروف خاصة. اختيار المادة مرتبط بحجم المسام، النفاذية، والهدف (تقوية/عزل)." },
-      { question: "كيف نحدد نوع الخلطة واللزوجة المناسبة؟", answer: "نعتمد على طبيعة التربة/الصخور، نتائج الفحوصات، وهدف المعالجة. أحيانًا نبدأ بخليط تمهيدي ثم نعدّل تدريجيًا لتحقيق اختراق أفضل دون إحداث مشاكل جانبية." },
-      { question: "كيف أعرف أن المعالجة نجحت؟", answer: "المؤشرات تشمل استقرار الاستهلاك، تحسن سلوك الهبوط، وتحسن نتائج التحقق (مثل probing/اختبارات أو مراقبة التشققات) حسب خطة المشروع." },
-    ],
+    { question: "ما الخطوات العملية لطلب خدمة حقن التربة؟", answer: "ابدأ بتوثيق المشكلة (صور، قياسات)، ثم تواصل مع فريق إطلاق لتقييم أولي. بعد الزيارة الميدانية تُحدَّد التقنية المناسبة والتكلفة التقديرية قبل بدء التنفيذ.", questionEn: "What are the practical steps to request soil grouting service?", answerEn: "Start by documenting the problem (photos, measurements), then contact the ETLAQ team for initial assessment. After the field visit, the appropriate technique and estimated cost are determined before execution begins." },
+    { question: "ما الذي يشمله تقرير ما بعد الحقن؟", answer: "يشمل: خريطة نقاط الحقن المنجزة، سجلات الضغط والكميات لكل نقطة، نتائج اختبارات التحقق، توصيات للمتابعة، وشهادات مواد الحقن.", questionEn: "What does a post-grouting report include?", answerEn: "It includes: map of completed injection points, pressure and volume logs per point, verification test results, follow-up recommendations, and grout material certificates." },
+    { question: "كم عدد نقاط الحقن الضروري في المشروع المتوسط؟", answer: "يتوقف على مساحة المشكلة وعمق المعالجة. المشروع المتوسط قد يتراوح بين 10 و50 نقطة. نقاط الحقن تُحدَّد بعد الزيارة الميدانية وبناءً على نتائج التحقيق.", questionEn: "How many injection points are needed in a typical project?", answerEn: "Depends on problem area and treatment depth. A typical project may range from 10 to 50 points. Injection points are determined after the site visit and investigation results." },
+    { question: "هل يمكن توقف الحقن ثم استئنافه في اليوم التالي؟", answer: "نعم، لكن يُنبغي توثيق حالة كل نقطة عند التوقف لضمان استكمال المناطق غير المكتملة. بعض الخلطات قد تحتاج مواصفات خاصة عند الاستئناف لضمان الترابط مع الحقن السابق.", questionEn: "Can grouting be stopped and resumed the next day?", answerEn: "Yes, but each point's status at stoppage must be documented to ensure incomplete zones are finished. Some mixes may need special specifications on resumption to ensure bonding with previous grout." }
+  ],
     faqEn: [
       { question: "When is soil grouting the right solution?", answer: "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly." },
       { question: "How is cement grouting different from other grouts?", answer: "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective." },
@@ -2097,9 +2094,9 @@ export const articles: ArticleContent[] = [
     categoriesEn: ["Asset Management", "Geotechnical Engineering", "Soil Grouting", "Ground Improvement Library"],
     date: "2025-10-16",
     readTime: "3 دقيقة",
-    readTimeEn: "2 min",
+    readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "periodic-building-inspection",
+    slug: "compensation-grouting-protecting-structures-during-tunneling-and-excavation",
     image: {
       url: "/favicon.webp",
       alt: "الحقن التعويضي (Compensation Grouting): حماية المنشآت أثناء الحفر النفقي",
@@ -2195,11 +2192,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "متى يكون حقن التربة هو الخيار الأنسب؟", answer: "يكون مناسبًا عند الحاجة لتحسين خواص التربة تحت الأساسات، تقليل الهبوط، أو معالجة مسارات تسرب المياه—خصوصًا عندما تكون أعمال الحفر/الاستبدال غير ممكنة أو مكلفة." },
-      { question: "ما الفرق بين الحقن الأسمنتي وطرق الحقن الأخرى؟", answer: "الحقن الأسمنتي يعتمد على ملاط إسمنتي بخصائص لزوجة مناسبة، بينما توجد مواد أخرى (كيميائية/ميكروفاين) لظروف خاصة. اختيار المادة مرتبط بحجم المسام، النفاذية، والهدف (تقوية/عزل)." },
-      { question: "كيف نحدد نوع الخلطة واللزوجة المناسبة؟", answer: "نعتمد على طبيعة التربة/الصخور، نتائج الفحوصات، وهدف المعالجة. أحيانًا نبدأ بخليط تمهيدي ثم نعدّل تدريجيًا لتحقيق اختراق أفضل دون إحداث مشاكل جانبية." },
-      { question: "كيف أعرف أن المعالجة نجحت؟", answer: "المؤشرات تشمل استقرار الاستهلاك، تحسن سلوك الهبوط، وتحسن نتائج التحقق (مثل probing/اختبارات أو مراقبة التشققات) حسب خطة المشروع." },
-    ],
+    { question: "هل يمكن تطبيق حقن التربة تحت المباني القائمة دون تفريغها؟", answer: "نعم، وهو من أبرز مزايا الحقن. يُنفَّذ من خلال حفر نقاط حقن صغيرة بحد أدنى من الأعمال الإنشائية دون إخلاء المبنى في معظم الحالات.", questionEn: "Can soil grouting be applied under occupied buildings?", answerEn: "Yes, this is one of its key advantages. It is executed through small drill points with minimal structural work and without evacuating the building in most cases." },
+    { question: "ما الفرق بين حقن الأسمنت وحقن البوليمرات؟", answer: "حقن الأسمنت يُستخدم لملء الفراغات الكبيرة وتقوية التربة ميكانيكياً، بينما يناسب حقن البوليمرات التحكم بالتسرب وملء المسام الدقيقة التي لا يخترقها الأسمنت.", questionEn: "What is the difference between cement and polymer grouting?", answerEn: "Cement grouting fills large voids and improves mechanical strength; polymer grouting targets seepage control and fine pores that cement cannot penetrate." },
+    { question: "كيف تعرف أن حقن التربة هو الحل المناسب لمشكلتك؟", answer: "إذا كانت المشكلة هبوطاً أو تشققات ناتجة عن ضعف التربة أو تكهفات تحت الأساسات، فالحقن عادة الخيار الأنسب. التشخيص الدقيق يُؤكد ذلك قبل أي قرار.", questionEn: "How do you know if soil grouting is the right solution for your problem?", answerEn: "If the issue is settlement or cracks caused by weak soil or cavities under foundations, grouting is usually the right choice. Accurate diagnosis confirms this before any decision." },
+    { question: "ما المدة الزمنية اللازمة لملاحظة تحسن بعد الحقن؟", answer: "التحسن الميكانيكي يبدأ مع تصلّد الحقن خلال 24-72 ساعة للخلطات الأسمنتية. التقييم الكامل يستلزم أسبوعين إلى أربعة أسابيع مع مراقبة منتظمة لأجهزة قياس الهبوط.", questionEn: "How long does it take to notice improvement after grouting?", answerEn: "Mechanical improvement begins as grout sets within 24-72 hours for cement mixes. Full assessment requires 2-4 weeks with regular settlement monitoring." }
+  ],
     faqEn: [
       { question: "When is soil grouting the right solution?", answer: "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly." },
       { question: "How is cement grouting different from other grouts?", answer: "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective." },
@@ -2220,7 +2217,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "rock-cavities-solutions",
+    slug: "void-filling-grouting-treating-cavities-and-hidden-voids",
     image: {
       url: "/favicon.webp",
       alt: "حقن الفراغات (Void Filling): معالجة التكهفات والجيوب الهوائية",
@@ -2418,11 +2415,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Al Rass](/locations/al-rass)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "كيف نتحقق من وجود تكهفات أو فراغات تحت الأرض؟", answer: "عادة ندمج المسح الجيوفيزيائي مع الحفر الاستكشافي (Cavity Probing) حسب حساسية الموقع. الهدف هو تحويل “مؤشرات” إلى “حقائق” قبل اتخاذ قرار المعالجة." },
-      { question: "هل كل فراغ يعني خطرًا مباشرًا؟", answer: "ليس بالضرورة. نقيّم حجم الفراغ وعمقه وموقعه بالنسبة للأحمال ومصادر المياه، ثم نحدد مستوى الخطورة واحتمال التطور." },
-      { question: "ما الحلول الشائعة بعد اكتشاف الفراغات؟", answer: "قد تشمل الحقن الأسمنتي أو تحسين الصرف أو تدعيم موضعي حسب السبب. اختيار الحل يعتمد على سبب الفراغ (تكهف كارستي، تسرب مياه، ردم ضعيف…إلخ)." },
-      { question: "كيف تقللون مفاجآت الموقع أثناء التنفيذ؟", answer: "بالتحقق المرحلي، وربط البيانات الجيوفيزيائية بالملاحظات الميدانية، ووضع حدود واضحة لنطاق العمل وتحديث خطة المعالجة عند ظهور معطيات جديدة." },
-    ],
+    { question: "ما أفضل تقنية للكشف عن التكهفات قبل الحقن؟", answer: "GPR هو الخيار الأول للكشف السريع عن الفراغات الضحلة، بينما ERT أفضل في التربة الطينية الرطبة وعلى أعماق أكبر. الجمع بينهما يُقلل الغموض في تفسير النتائج.", questionEn: "What is the best cavity detection technique before grouting?", answerEn: "GPR is the first choice for fast detection of shallow voids, while ERT performs better in wet clayey soil and at greater depths. Combining both reduces interpretation ambiguity." },
+    { question: "هل يمكن الكشف عن التكهفات دون حفر؟", answer: "نعم، أجهزة GPR وERT وMASW تُعطي صورة للباطن دون أي حفر. هذا من أهم مزاياها في المواقع الحساسة أو ذات الأرضيات المعبّدة.", questionEn: "Can cavities be detected without excavation?", answerEn: "Yes, GPR, ERT, and MASW provide subsurface images without any excavation — a key advantage in sensitive sites or paved areas." },
+    { question: "ما الفرق بين الكشف بالرادار (GPR) والكشف بالمقاومة الكهربائية (ERT)؟", answer: "GPR يكشف عن الفراغات بدقة عالية على أعماق ضحلة (0.5-5 م) في التربة الجافة. ERT يعمل على أعماق أكبر لكن بدقة تفصيلية أقل، وهو أفضل في التربة الرطبة التي تُضعف إشارة GPR.", questionEn: "What is the difference between GPR and ERT cavity detection?", answerEn: "GPR detects voids with high precision at shallow depths (0.5-5m) in dry soil. ERT works at greater depths with less detail, and performs better in wet soil that attenuates GPR signals." },
+    { question: "كيف تُترجم نتائج الكشف الجيوفيزيائي إلى قرار معالجة؟", answer: "تُحدَّد مناطق الاشتباه من خلال شذوذات الإشارة، ثم تُصنَّف حسب الأولوية بناءً على حجمها وعمقها وقربها من الأساسات، ثم تُصمَّم خطة الحقن بناءً على هذه النتائج.", questionEn: "How are geophysical detection results translated into treatment decisions?", answerEn: "Suspected zones are identified from signal anomalies, prioritised by size, depth, and proximity to foundations, then a grouting plan is designed based on these findings." }
+  ],
     faqEn: [
       { question: "How do we confirm cavities/voids below ground?", answer: "A reliable workflow combines geophysics with targeted probing/drilling where needed. The goal is to turn anomalies into confirmed targets before remediation." },
       { question: "Is every void an immediate hazard?", answer: "Not necessarily. Risk depends on size, depth, location relative to loads, and water conditions. We assess both severity and likelihood of progression." },
@@ -2441,9 +2438,9 @@ export const articles: ArticleContent[] = [
     categoriesEn: ["Ground Improvement", "Geotechnical Engineering", "Soil Grouting", "Ground Improvement Library"],
     date: "2025-10-22",
     readTime: "3 دقيقة",
-    readTimeEn: "2 min",
+    readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "soil-improvement-techniques",
+    slug: "chemical-grouting-resins-silicates-and-their-use-cases",
     image: {
       url: "/favicon.webp",
       alt: "الحقن الكيميائي: استخدام الراتنجات والسيليكات",
@@ -2572,11 +2569,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "متى يكون حقن التربة هو الخيار الأنسب؟", answer: "يكون مناسبًا عند الحاجة لتحسين خواص التربة تحت الأساسات، تقليل الهبوط، أو معالجة مسارات تسرب المياه—خصوصًا عندما تكون أعمال الحفر/الاستبدال غير ممكنة أو مكلفة." },
-      { question: "ما الفرق بين الحقن الأسمنتي وطرق الحقن الأخرى؟", answer: "الحقن الأسمنتي يعتمد على ملاط إسمنتي بخصائص لزوجة مناسبة، بينما توجد مواد أخرى (كيميائية/ميكروفاين) لظروف خاصة. اختيار المادة مرتبط بحجم المسام، النفاذية، والهدف (تقوية/عزل)." },
-      { question: "كيف نحدد نوع الخلطة واللزوجة المناسبة؟", answer: "نعتمد على طبيعة التربة/الصخور، نتائج الفحوصات، وهدف المعالجة. أحيانًا نبدأ بخليط تمهيدي ثم نعدّل تدريجيًا لتحقيق اختراق أفضل دون إحداث مشاكل جانبية." },
-      { question: "كيف أعرف أن المعالجة نجحت؟", answer: "المؤشرات تشمل استقرار الاستهلاك، تحسن سلوك الهبوط، وتحسن نتائج التحقق (مثل probing/اختبارات أو مراقبة التشققات) حسب خطة المشروع." },
-    ],
+    { question: "ما مؤشرات الخطر التي تستوجب التدخل بالحقن فوراً؟", answer: "تشققات متوسعة بسرعة، هبوط مستمر ملحوظ، انحراف ظاهر في الجدران أو الأعمدة، أو وجود ضوضاء غير مألوفة في البنية. كل هذه مؤشرات تستدعي تقييماً هندسياً عاجلاً.", questionEn: "What danger signs require immediate grouting intervention?", answerEn: "Rapidly widening cracks, continuous visible settlement, apparent wall or column inclination, or unfamiliar structural sounds — all require urgent engineering assessment." },
+    { question: "هل حقن التربة آمن للمنشآت القريبة من موقع العمل؟", answer: "مع ضبط ضغوط الحقن ضمن الحدود الآمنة، يكون التأثير على المجاورات ضئيلاً. المشاريع في المناطق المكتظة تستدعي مراقبة مستمرة للمنشآت المجاورة طوال فترة التنفيذ.", questionEn: "Is soil grouting safe for structures near the work site?", answerEn: "With injection pressures within safe limits, the impact on adjacent structures is minimal. Dense-area projects require continuous monitoring of neighbouring structures throughout execution." },
+    { question: "كيف يُمنع انتشار الحقن خارج المنطقة المستهدفة؟", answer: "عبر ضبط اللزوجة وضغط الحقن، والاستناد إلى بيانات نفاذية التربة لتحديد نقاط الحقن. المراقبة الميدانية المستمرة للضغط تُنبّه لأي انتشار غير مخطط له.", questionEn: "How is uncontrolled grout spread prevented?", answerEn: "By controlling viscosity and injection pressure, using soil permeability data to position injection points, and continuous field pressure monitoring to alert against unplanned migration." },
+    { question: "ما الفترة الزمنية التي يتحمل فيها الحقن بعد التنفيذ؟", answer: "مع الاختيار الصحيح للمادة وجودة التنفيذ، يُفترض أن يكون الحقن حلاً دائماً. العمر الافتراضي للحقن الأسمنتي مماثل للخرسانة (50+ سنة)، والبوليمرات تتفاوت حسب النوع والبيئة.", questionEn: "How long does grout last after execution?", answerEn: "With correct material selection and quality execution, grouting should be a permanent solution. Cement grout lifespan matches concrete (50+ years); polymers vary by type and environment." }
+  ],
     faqEn: [
       { question: "When is soil grouting the right solution?", answer: "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly." },
       { question: "How is cement grouting different from other grouts?", answer: "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective." },
@@ -2597,7 +2594,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "geotech-encyclopedia-01",
+    slug: "polyurethane-grouting-fast-effective-leak-stopping",
     image: {
       url: "/favicon.webp",
       alt: "حقن البولي يوريثان (Polyurethane Grouting): السرعة والكفاءة في منع التسرب",
@@ -2708,11 +2705,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "متى يكون حقن التربة هو الخيار الأنسب؟", answer: "يكون مناسبًا عند الحاجة لتحسين خواص التربة تحت الأساسات، تقليل الهبوط، أو معالجة مسارات تسرب المياه—خصوصًا عندما تكون أعمال الحفر/الاستبدال غير ممكنة أو مكلفة." },
-      { question: "ما الفرق بين الحقن الأسمنتي وطرق الحقن الأخرى؟", answer: "الحقن الأسمنتي يعتمد على ملاط إسمنتي بخصائص لزوجة مناسبة، بينما توجد مواد أخرى (كيميائية/ميكروفاين) لظروف خاصة. اختيار المادة مرتبط بحجم المسام، النفاذية، والهدف (تقوية/عزل)." },
-      { question: "كيف نحدد نوع الخلطة واللزوجة المناسبة؟", answer: "نعتمد على طبيعة التربة/الصخور، نتائج الفحوصات، وهدف المعالجة. أحيانًا نبدأ بخليط تمهيدي ثم نعدّل تدريجيًا لتحقيق اختراق أفضل دون إحداث مشاكل جانبية." },
-      { question: "كيف أعرف أن المعالجة نجحت؟", answer: "المؤشرات تشمل استقرار الاستهلاك، تحسن سلوك الهبوط، وتحسن نتائج التحقق (مثل probing/اختبارات أو مراقبة التشققات) حسب خطة المشروع." },
-    ],
+    { question: "ما الخطوات العملية لطلب خدمة حقن التربة؟", answer: "ابدأ بتوثيق المشكلة (صور، قياسات)، ثم تواصل مع فريق إطلاق لتقييم أولي. بعد الزيارة الميدانية تُحدَّد التقنية المناسبة والتكلفة التقديرية قبل بدء التنفيذ.", questionEn: "What are the practical steps to request soil grouting service?", answerEn: "Start by documenting the problem (photos, measurements), then contact the ETLAQ team for initial assessment. After the field visit, the appropriate technique and estimated cost are determined before execution begins." },
+    { question: "ما الذي يشمله تقرير ما بعد الحقن؟", answer: "يشمل: خريطة نقاط الحقن المنجزة، سجلات الضغط والكميات لكل نقطة، نتائج اختبارات التحقق، توصيات للمتابعة، وشهادات مواد الحقن.", questionEn: "What does a post-grouting report include?", answerEn: "It includes: map of completed injection points, pressure and volume logs per point, verification test results, follow-up recommendations, and grout material certificates." },
+    { question: "كم عدد نقاط الحقن الضروري في المشروع المتوسط؟", answer: "يتوقف على مساحة المشكلة وعمق المعالجة. المشروع المتوسط قد يتراوح بين 10 و50 نقطة. نقاط الحقن تُحدَّد بعد الزيارة الميدانية وبناءً على نتائج التحقيق.", questionEn: "How many injection points are needed in a typical project?", answerEn: "Depends on problem area and treatment depth. A typical project may range from 10 to 50 points. Injection points are determined after the site visit and investigation results." },
+    { question: "هل يمكن توقف الحقن ثم استئنافه في اليوم التالي؟", answer: "نعم، لكن يُنبغي توثيق حالة كل نقطة عند التوقف لضمان استكمال المناطق غير المكتملة. بعض الخلطات قد تحتاج مواصفات خاصة عند الاستئناف لضمان الترابط مع الحقن السابق.", questionEn: "Can grouting be stopped and resumed the next day?", answerEn: "Yes, but each point's status at stoppage must be documented to ensure incomplete zones are finished. Some mixes may need special specifications on resumption to ensure bonding with previous grout." }
+  ],
     faqEn: [
       { question: "When is soil grouting the right solution?", answer: "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly." },
       { question: "How is cement grouting different from other grouts?", answer: "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective." },
@@ -2731,9 +2728,9 @@ export const articles: ArticleContent[] = [
     categoriesEn: ["Grouting & Improvement Encyclopedia", "Geotechnical Engineering", "Soil Grouting", "Ground Improvement Library"],
     date: "2025-10-28",
     readTime: "3 دقيقة",
-    readTimeEn: "2 min",
+    readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "geotech-encyclopedia-02",
+    slug: "microfine-cement-grouting-penetration-in-low-permeability-soils",
     image: {
       url: "/favicon.webp",
       alt: "الملاط الدقيق (Microfine Cement): اختراق التربة ذات النفاذية المنخفضة",
@@ -2852,11 +2849,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "متى يكون حقن التربة هو الخيار الأنسب؟", answer: "يكون مناسبًا عند الحاجة لتحسين خواص التربة تحت الأساسات، تقليل الهبوط، أو معالجة مسارات تسرب المياه—خصوصًا عندما تكون أعمال الحفر/الاستبدال غير ممكنة أو مكلفة." },
-      { question: "ما الفرق بين الحقن الأسمنتي وطرق الحقن الأخرى؟", answer: "الحقن الأسمنتي يعتمد على ملاط إسمنتي بخصائص لزوجة مناسبة، بينما توجد مواد أخرى (كيميائية/ميكروفاين) لظروف خاصة. اختيار المادة مرتبط بحجم المسام، النفاذية، والهدف (تقوية/عزل)." },
-      { question: "كيف نحدد نوع الخلطة واللزوجة المناسبة؟", answer: "نعتمد على طبيعة التربة/الصخور، نتائج الفحوصات، وهدف المعالجة. أحيانًا نبدأ بخليط تمهيدي ثم نعدّل تدريجيًا لتحقيق اختراق أفضل دون إحداث مشاكل جانبية." },
-      { question: "كيف أعرف أن المعالجة نجحت؟", answer: "المؤشرات تشمل استقرار الاستهلاك، تحسن سلوك الهبوط، وتحسن نتائج التحقق (مثل probing/اختبارات أو مراقبة التشققات) حسب خطة المشروع." },
-    ],
+    { question: "هل يمكن تطبيق حقن التربة تحت المباني القائمة دون تفريغها؟", answer: "نعم، وهو من أبرز مزايا الحقن. يُنفَّذ من خلال حفر نقاط حقن صغيرة بحد أدنى من الأعمال الإنشائية دون إخلاء المبنى في معظم الحالات.", questionEn: "Can soil grouting be applied under occupied buildings?", answerEn: "Yes, this is one of its key advantages. It is executed through small drill points with minimal structural work and without evacuating the building in most cases." },
+    { question: "ما الفرق بين حقن الأسمنت وحقن البوليمرات؟", answer: "حقن الأسمنت يُستخدم لملء الفراغات الكبيرة وتقوية التربة ميكانيكياً، بينما يناسب حقن البوليمرات التحكم بالتسرب وملء المسام الدقيقة التي لا يخترقها الأسمنت.", questionEn: "What is the difference between cement and polymer grouting?", answerEn: "Cement grouting fills large voids and improves mechanical strength; polymer grouting targets seepage control and fine pores that cement cannot penetrate." },
+    { question: "كيف تعرف أن حقن التربة هو الحل المناسب لمشكلتك؟", answer: "إذا كانت المشكلة هبوطاً أو تشققات ناتجة عن ضعف التربة أو تكهفات تحت الأساسات، فالحقن عادة الخيار الأنسب. التشخيص الدقيق يُؤكد ذلك قبل أي قرار.", questionEn: "How do you know if soil grouting is the right solution for your problem?", answerEn: "If the issue is settlement or cracks caused by weak soil or cavities under foundations, grouting is usually the right choice. Accurate diagnosis confirms this before any decision." },
+    { question: "ما المدة الزمنية اللازمة لملاحظة تحسن بعد الحقن؟", answer: "التحسن الميكانيكي يبدأ مع تصلّد الحقن خلال 24-72 ساعة للخلطات الأسمنتية. التقييم الكامل يستلزم أسبوعين إلى أربعة أسابيع مع مراقبة منتظمة لأجهزة قياس الهبوط.", questionEn: "How long does it take to notice improvement after grouting?", answerEn: "Mechanical improvement begins as grout sets within 24-72 hours for cement mixes. Full assessment requires 2-4 weeks with regular settlement monitoring." }
+  ],
     faqEn: [
       { question: "When is soil grouting the right solution?", answer: "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly." },
       { question: "How is cement grouting different from other grouts?", answer: "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective." },
@@ -2875,9 +2872,9 @@ export const articles: ArticleContent[] = [
     categoriesEn: ["Grouting & Improvement Encyclopedia", "Geotechnical Engineering", "Soil Grouting", "Ground Improvement Library"],
     date: "2025-10-31",
     readTime: "3 دقيقة",
-    readTimeEn: "2 min",
+    readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "geotech-encyclopedia-03",
+    slug: "underraft-grouting-improving-soilfoundation-interaction",
     image: {
       url: "/favicon.webp",
       alt: "الحقن أسفل اللبشة (Under-Raft Grouting): تحسين تفاعل التربة والأساس",
@@ -2974,11 +2971,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "كيف نتحقق من وجود تكهفات أو فراغات تحت الأرض؟", answer: "عادة ندمج المسح الجيوفيزيائي مع الحفر الاستكشافي (Cavity Probing) حسب حساسية الموقع. الهدف هو تحويل “مؤشرات” إلى “حقائق” قبل اتخاذ قرار المعالجة." },
-      { question: "هل كل فراغ يعني خطرًا مباشرًا؟", answer: "ليس بالضرورة. نقيّم حجم الفراغ وعمقه وموقعه بالنسبة للأحمال ومصادر المياه، ثم نحدد مستوى الخطورة واحتمال التطور." },
-      { question: "ما الحلول الشائعة بعد اكتشاف الفراغات؟", answer: "قد تشمل الحقن الأسمنتي أو تحسين الصرف أو تدعيم موضعي حسب السبب. اختيار الحل يعتمد على سبب الفراغ (تكهف كارستي، تسرب مياه، ردم ضعيف…إلخ)." },
-      { question: "كيف تقللون مفاجآت الموقع أثناء التنفيذ؟", answer: "بالتحقق المرحلي، وربط البيانات الجيوفيزيائية بالملاحظات الميدانية، ووضع حدود واضحة لنطاق العمل وتحديث خطة المعالجة عند ظهور معطيات جديدة." },
-    ],
+    { question: "متى يُوصى بالكشف الجيوفيزيائي قبل حقن التربة؟", answer: "يُوصى به دائماً عند وجود شك في حجم أو موقع التكهفات، وعندما تكون تكاليف الحقن الغير موجَّه مرتفعة، وفي المواقع التي يُشكّل فيها الحقن غير الدقيق خطراً على المنشأة.", questionEn: "When is geophysical detection recommended before grouting?", answerEn: "Always recommended when cavity size or location is uncertain, when unguided grouting costs are high, and when imprecise injection poses structural risk." },
+    { question: "كيف تختلف أساليب كشف التكهفات في التربة الصحراوية؟", answer: "التربة الصحراوية الجافة تُعطي أفضل النتائج مع GPR لأن الجفاف يُقلل امتصاص الإشارة. لكن التغيرات الكبيرة في درجات الحرارة قد تؤثر على معايرة الأجهزة وتستدعي قراءات صباحية.", questionEn: "How do cavity detection methods differ in desert soil?", answerEn: "Arid desert soil gives best GPR results as dryness reduces signal absorption. However, large temperature variations can affect instrument calibration and may require morning readings." },
+    { question: "ما دقة تحديد عمق التكهف بجهاز GPR؟", answer: "في التربة المتجانسة الجافة: دقة ±5-10% من العمق الفعلي. تتأثر الدقة بتغيّر خصائص التربة مع العمق وبوجود طبقات رطبة تُغيّر سرعة انتشار الموجة.", questionEn: "How accurate is GPR in determining cavity depth?", answerEn: "In homogeneous dry soil: ±5-10% of actual depth. Accuracy is affected by soil property variation with depth and moist layers that alter wave propagation speed." },
+    { question: "هل يمكن تمييز التكهف الجاف عن المملوء بماء بجهاز GPR؟", answer: "نعم، التكهف المائي يُعطي انعكاساً أقوى بسبب الفرق الكبير في الثابت العزلي، بينما التكهف الجاف يُعطي انعكاساً أضعف. الفرق في طبيعة الانعكاس يُساعد في التمييز.", questionEn: "Can dry and water-filled cavities be distinguished with GPR?", answerEn: "Yes, water-filled cavities produce stronger reflections due to high dielectric contrast, while dry cavities give weaker reflections. The reflection character helps differentiate them." }
+  ],
     faqEn: [
       { question: "How do we confirm cavities/voids below ground?", answer: "A reliable workflow combines geophysics with targeted probing/drilling where needed. The goal is to turn anomalies into confirmed targets before remediation." },
       { question: "Is every void an immediate hazard?", answer: "Not necessarily. Risk depends on size, depth, location relative to loads, and water conditions. We assess both severity and likelihood of progression." },
@@ -2997,9 +2994,9 @@ export const articles: ArticleContent[] = [
     categoriesEn: ["Grouting & Improvement Encyclopedia", "Geotechnical Engineering", "Soil Grouting", "Ground Improvement Library"],
     date: "2025-11-03",
     readTime: "3 دقيقة",
-    readTimeEn: "2 min",
+    readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "geotech-encyclopedia-04",
+    slug: "grouting-in-fractured-rock-and-karst-formations-techniques-and-risks",
     image: {
       url: "/favicon.webp",
       alt: "تقنيات الحقن في الصخور المتشققة والطبقات الكارستية",
@@ -3063,7 +3060,7 @@ export const articles: ArticleContent[] = [
   
   - **ASTM D5105:** معيار خاص بتقنيات الحقن في الصخور والجدران.
   
-  - **دليل FHWA:** يتناول أيضا تطبيقات الحقن في المشاريع الكبرى لتحسين التربة والصخور.
+  - **دليل FHWA:** يتناول أيضاً تطبيقات الحقن في المشاريع الكبرى لتحسين التربة والصخور.
   
   ### تطبيقات عملية
   
@@ -3164,11 +3161,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "كيف نتحقق من وجود تكهفات أو فراغات تحت الأرض؟", answer: "عادة ندمج المسح الجيوفيزيائي مع الحفر الاستكشافي (Cavity Probing) حسب حساسية الموقع. الهدف هو تحويل “مؤشرات” إلى “حقائق” قبل اتخاذ قرار المعالجة." },
-      { question: "هل كل فراغ يعني خطرًا مباشرًا؟", answer: "ليس بالضرورة. نقيّم حجم الفراغ وعمقه وموقعه بالنسبة للأحمال ومصادر المياه، ثم نحدد مستوى الخطورة واحتمال التطور." },
-      { question: "ما الحلول الشائعة بعد اكتشاف الفراغات؟", answer: "قد تشمل الحقن الأسمنتي أو تحسين الصرف أو تدعيم موضعي حسب السبب. اختيار الحل يعتمد على سبب الفراغ (تكهف كارستي، تسرب مياه، ردم ضعيف…إلخ)." },
-      { question: "كيف تقللون مفاجآت الموقع أثناء التنفيذ؟", answer: "بالتحقق المرحلي، وربط البيانات الجيوفيزيائية بالملاحظات الميدانية، ووضع حدود واضحة لنطاق العمل وتحديث خطة المعالجة عند ظهور معطيات جديدة." },
-    ],
+    { question: "ما أفضل تقنية للكشف عن التكهفات قبل الحقن؟", answer: "GPR هو الخيار الأول للكشف السريع عن الفراغات الضحلة، بينما ERT أفضل في التربة الطينية الرطبة وعلى أعماق أكبر. الجمع بينهما يُقلل الغموض في تفسير النتائج.", questionEn: "What is the best cavity detection technique before grouting?", answerEn: "GPR is the first choice for fast detection of shallow voids, while ERT performs better in wet clayey soil and at greater depths. Combining both reduces interpretation ambiguity." },
+    { question: "هل يمكن الكشف عن التكهفات دون حفر؟", answer: "نعم، أجهزة GPR وERT وMASW تُعطي صورة للباطن دون أي حفر. هذا من أهم مزاياها في المواقع الحساسة أو ذات الأرضيات المعبّدة.", questionEn: "Can cavities be detected without excavation?", answerEn: "Yes, GPR, ERT, and MASW provide subsurface images without any excavation — a key advantage in sensitive sites or paved areas." },
+    { question: "ما الفرق بين الكشف بالرادار (GPR) والكشف بالمقاومة الكهربائية (ERT)؟", answer: "GPR يكشف عن الفراغات بدقة عالية على أعماق ضحلة (0.5-5 م) في التربة الجافة. ERT يعمل على أعماق أكبر لكن بدقة تفصيلية أقل، وهو أفضل في التربة الرطبة التي تُضعف إشارة GPR.", questionEn: "What is the difference between GPR and ERT cavity detection?", answerEn: "GPR detects voids with high precision at shallow depths (0.5-5m) in dry soil. ERT works at greater depths with less detail, and performs better in wet soil that attenuates GPR signals." },
+    { question: "كيف تُترجم نتائج الكشف الجيوفيزيائي إلى قرار معالجة؟", answer: "تُحدَّد مناطق الاشتباه من خلال شذوذات الإشارة، ثم تُصنَّف حسب الأولوية بناءً على حجمها وعمقها وقربها من الأساسات، ثم تُصمَّم خطة الحقن بناءً على هذه النتائج.", questionEn: "How are geophysical detection results translated into treatment decisions?", answerEn: "Suspected zones are identified from signal anomalies, prioritised by size, depth, and proximity to foundations, then a grouting plan is designed based on these findings." }
+  ],
     faqEn: [
       { question: "How do we confirm cavities/voids below ground?", answer: "A reliable workflow combines geophysics with targeted probing/drilling where needed. The goal is to turn anomalies into confirmed targets before remediation." },
       { question: "Is every void an immediate hazard?", answer: "Not necessarily. Risk depends on size, depth, location relative to loads, and water conditions. We assess both severity and likelihood of progression." },
@@ -3189,7 +3186,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "geotech-encyclopedia-05",
+    slug: "cement-grout-rheology-viscosity-yield-stress-and-consistency",
     image: {
       url: "/favicon.webp",
       alt: "رولوجيا الملاط الإسمنتي: اللزوجة، الإجهاد الخاضع، والاتساق",
@@ -3320,11 +3317,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "متى يكون حقن التربة هو الخيار الأنسب؟", answer: "يكون مناسبًا عند الحاجة لتحسين خواص التربة تحت الأساسات، تقليل الهبوط، أو معالجة مسارات تسرب المياه—خصوصًا عندما تكون أعمال الحفر/الاستبدال غير ممكنة أو مكلفة." },
-      { question: "ما الفرق بين الحقن الأسمنتي وطرق الحقن الأخرى؟", answer: "الحقن الأسمنتي يعتمد على ملاط إسمنتي بخصائص لزوجة مناسبة، بينما توجد مواد أخرى (كيميائية/ميكروفاين) لظروف خاصة. اختيار المادة مرتبط بحجم المسام، النفاذية، والهدف (تقوية/عزل)." },
-      { question: "كيف نحدد نوع الخلطة واللزوجة المناسبة؟", answer: "نعتمد على طبيعة التربة/الصخور، نتائج الفحوصات، وهدف المعالجة. أحيانًا نبدأ بخليط تمهيدي ثم نعدّل تدريجيًا لتحقيق اختراق أفضل دون إحداث مشاكل جانبية." },
-      { question: "كيف أعرف أن المعالجة نجحت؟", answer: "المؤشرات تشمل استقرار الاستهلاك، تحسن سلوك الهبوط، وتحسن نتائج التحقق (مثل probing/اختبارات أو مراقبة التشققات) حسب خطة المشروع." },
-    ],
+    { question: "ما مؤشرات الخطر التي تستوجب التدخل بالحقن فوراً؟", answer: "تشققات متوسعة بسرعة، هبوط مستمر ملحوظ، انحراف ظاهر في الجدران أو الأعمدة، أو وجود ضوضاء غير مألوفة في البنية. كل هذه مؤشرات تستدعي تقييماً هندسياً عاجلاً.", questionEn: "What danger signs require immediate grouting intervention?", answerEn: "Rapidly widening cracks, continuous visible settlement, apparent wall or column inclination, or unfamiliar structural sounds — all require urgent engineering assessment." },
+    { question: "هل حقن التربة آمن للمنشآت القريبة من موقع العمل؟", answer: "مع ضبط ضغوط الحقن ضمن الحدود الآمنة، يكون التأثير على المجاورات ضئيلاً. المشاريع في المناطق المكتظة تستدعي مراقبة مستمرة للمنشآت المجاورة طوال فترة التنفيذ.", questionEn: "Is soil grouting safe for structures near the work site?", answerEn: "With injection pressures within safe limits, the impact on adjacent structures is minimal. Dense-area projects require continuous monitoring of neighbouring structures throughout execution." },
+    { question: "كيف يُمنع انتشار الحقن خارج المنطقة المستهدفة؟", answer: "عبر ضبط اللزوجة وضغط الحقن، والاستناد إلى بيانات نفاذية التربة لتحديد نقاط الحقن. المراقبة الميدانية المستمرة للضغط تُنبّه لأي انتشار غير مخطط له.", questionEn: "How is uncontrolled grout spread prevented?", answerEn: "By controlling viscosity and injection pressure, using soil permeability data to position injection points, and continuous field pressure monitoring to alert against unplanned migration." },
+    { question: "ما الفترة الزمنية التي يتحمل فيها الحقن بعد التنفيذ؟", answer: "مع الاختيار الصحيح للمادة وجودة التنفيذ، يُفترض أن يكون الحقن حلاً دائماً. العمر الافتراضي للحقن الأسمنتي مماثل للخرسانة (50+ سنة)، والبوليمرات تتفاوت حسب النوع والبيئة.", questionEn: "How long does grout last after execution?", answerEn: "With correct material selection and quality execution, grouting should be a permanent solution. Cement grout lifespan matches concrete (50+ years); polymers vary by type and environment." }
+  ],
     faqEn: [
       { question: "When is soil grouting the right solution?", answer: "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly." },
       { question: "How is cement grouting different from other grouts?", answer: "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective." },
@@ -3343,9 +3340,9 @@ export const articles: ArticleContent[] = [
     categoriesEn: ["Grouting & Improvement Encyclopedia", "Geotechnical Engineering", "Soil Grouting", "Ground Improvement Library"],
     date: "2025-11-09",
     readTime: "3 دقيقة",
-    readTimeEn: "2 min",
+    readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "geotech-encyclopedia-06",
+    slug: "how-the-watertocement-ratio-affects-strength-and-durability",
     image: {
       url: "/favicon.webp",
       alt: "تأثير نسبة الماء إلى الإسمنت (W/C Ratio) على قوة وديمومة الحقن",
@@ -3353,13 +3350,13 @@ export const articles: ArticleContent[] = [
       creditUrl: "",
       license: "Internal",
     },
-    excerpt: "مقدمة تلعب نسبة الماء إلى الإسمنت (W/C Ratio) دورًا محوريًا في تحديد الخواص الميكانيكية والدوام لمواد الحقن الأسمنتية المستخدمة في تحسين التربة. إذ تؤثر هذه النسبة على تفاعل الأسمنت مع الماء، وبالتالي على متانة الخرسانة المصبوبة ضمن الفراغات الأرضية. ولذلك، فهم تأثير هذه النسبة يتحكم في نجاح عمليات الحقن الأرضي، التي تعد من الحلول…",
+    excerpt: "مقدمة تلعب نسبة الماء إلى الإسمنت (W/C Ratio) دورًا محوريًا في تحديد الخواص الميكانيكية والدوام لمواد الحقن الأسمنتي المستخدمة في تحسين التربة. إذ تؤثر هذه النسبة على تفاعل الأسمنت مع الماء، وبالتالي على متانة الخرسانة المصبوبة ضمن الفراغات الأرضية. ولذلك، فهم تأثير هذه النسبة يتحكم في نجاح عمليات الحقن الأرضي، التي تعد من الحلول…",
     excerptEn: "Introduction The water to cement ratio (W/C ratio) plays a critical role in determining the mechanical properties and durability of cementitious grouting materials used for soil improvement. This ratio affects the hydration reaction of cement and, consequently, the integrity of the hardened grout injected into soil voids. Understanding…",
     content: `# تأثير نسبة الماء إلى الإسمنت (W/C Ratio) على قوة وديمومة الحقن
   
   **مقدمة**
   
-  تلعب نسبة الماء إلى الإسمنت (W/C Ratio) دورًا محوريًا في تحديد الخواص الميكانيكية والدوام لمواد الحقن الأسمنتية المستخدمة في تحسين التربة. إذ تؤثر هذه النسبة على تفاعل الأسمنت مع الماء، وبالتالي على متانة الخرسانة المصبوبة ضمن الفراغات الأرضية. ولذلك، فهم تأثير هذه النسبة يتحكم في نجاح عمليات الحقن الأرضي، التي تعد من الحلول الهندسية المتقدمة لمشاكل ضعف التربة، الهبوط، والتسربات.
+  تلعب نسبة الماء إلى الإسمنت (W/C Ratio) دورًا محوريًا في تحديد الخواص الميكانيكية والدوام لمواد الحقن الأسمنتي المستخدمة في تحسين التربة. إذ تؤثر هذه النسبة على تفاعل الأسمنت مع الماء، وبالتالي على متانة الخرسانة المصبوبة ضمن الفراغات الأرضية. ولذلك، فهم تأثير هذه النسبة يتحكم في نجاح عمليات الحقن الأرضي، التي تعد من الحلول الهندسية المتقدمة لمشاكل ضعف التربة، الهبوط، والتسربات.
   
   ---
   
@@ -3476,11 +3473,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "متى يكون حقن التربة هو الخيار الأنسب؟", answer: "يكون مناسبًا عند الحاجة لتحسين خواص التربة تحت الأساسات، تقليل الهبوط، أو معالجة مسارات تسرب المياه—خصوصًا عندما تكون أعمال الحفر/الاستبدال غير ممكنة أو مكلفة." },
-      { question: "ما الفرق بين الحقن الأسمنتي وطرق الحقن الأخرى؟", answer: "الحقن الأسمنتي يعتمد على ملاط إسمنتي بخصائص لزوجة مناسبة، بينما توجد مواد أخرى (كيميائية/ميكروفاين) لظروف خاصة. اختيار المادة مرتبط بحجم المسام، النفاذية، والهدف (تقوية/عزل)." },
-      { question: "كيف نحدد نوع الخلطة واللزوجة المناسبة؟", answer: "نعتمد على طبيعة التربة/الصخور، نتائج الفحوصات، وهدف المعالجة. أحيانًا نبدأ بخليط تمهيدي ثم نعدّل تدريجيًا لتحقيق اختراق أفضل دون إحداث مشاكل جانبية." },
-      { question: "كيف أعرف أن المعالجة نجحت؟", answer: "المؤشرات تشمل استقرار الاستهلاك، تحسن سلوك الهبوط، وتحسن نتائج التحقق (مثل probing/اختبارات أو مراقبة التشققات) حسب خطة المشروع." },
-    ],
+    { question: "ما الخطوات العملية لطلب خدمة حقن التربة؟", answer: "ابدأ بتوثيق المشكلة (صور، قياسات)، ثم تواصل مع فريق إطلاق لتقييم أولي. بعد الزيارة الميدانية تُحدَّد التقنية المناسبة والتكلفة التقديرية قبل بدء التنفيذ.", questionEn: "What are the practical steps to request soil grouting service?", answerEn: "Start by documenting the problem (photos, measurements), then contact the ETLAQ team for initial assessment. After the field visit, the appropriate technique and estimated cost are determined before execution begins." },
+    { question: "ما الذي يشمله تقرير ما بعد الحقن؟", answer: "يشمل: خريطة نقاط الحقن المنجزة، سجلات الضغط والكميات لكل نقطة، نتائج اختبارات التحقق، توصيات للمتابعة، وشهادات مواد الحقن.", questionEn: "What does a post-grouting report include?", answerEn: "It includes: map of completed injection points, pressure and volume logs per point, verification test results, follow-up recommendations, and grout material certificates." },
+    { question: "كم عدد نقاط الحقن الضروري في المشروع المتوسط؟", answer: "يتوقف على مساحة المشكلة وعمق المعالجة. المشروع المتوسط قد يتراوح بين 10 و50 نقطة. نقاط الحقن تُحدَّد بعد الزيارة الميدانية وبناءً على نتائج التحقيق.", questionEn: "How many injection points are needed in a typical project?", answerEn: "Depends on problem area and treatment depth. A typical project may range from 10 to 50 points. Injection points are determined after the site visit and investigation results." },
+    { question: "هل يمكن توقف الحقن ثم استئنافه في اليوم التالي؟", answer: "نعم، لكن يُنبغي توثيق حالة كل نقطة عند التوقف لضمان استكمال المناطق غير المكتملة. بعض الخلطات قد تحتاج مواصفات خاصة عند الاستئناف لضمان الترابط مع الحقن السابق.", questionEn: "Can grouting be stopped and resumed the next day?", answerEn: "Yes, but each point's status at stoppage must be documented to ensure incomplete zones are finished. Some mixes may need special specifications on resumption to ensure bonding with previous grout." }
+  ],
     faqEn: [
       { question: "When is soil grouting the right solution?", answer: "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly." },
       { question: "How is cement grouting different from other grouts?", answer: "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective." },
@@ -3499,9 +3496,9 @@ export const articles: ArticleContent[] = [
     categoriesEn: ["Grouting & Improvement Encyclopedia", "Geotechnical Engineering", "Soil Grouting", "Ground Improvement Library"],
     date: "2025-11-12",
     readTime: "3 دقيقة",
-    readTimeEn: "2 min",
+    readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "geotech-encyclopedia-07",
+    slug: "chemical-admixtures-for-grout-superplasticizers-accelerators-and-antibleed-agents",
     image: {
       url: "/favicon.webp",
       alt: "الإضافات الكيميائية للملاط: الملدنات، المسرعات، والمواد المانعة للنزف",
@@ -3602,11 +3599,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "متى يكون حقن التربة هو الخيار الأنسب؟", answer: "يكون مناسبًا عند الحاجة لتحسين خواص التربة تحت الأساسات، تقليل الهبوط، أو معالجة مسارات تسرب المياه—خصوصًا عندما تكون أعمال الحفر/الاستبدال غير ممكنة أو مكلفة." },
-      { question: "ما الفرق بين الحقن الأسمنتي وطرق الحقن الأخرى؟", answer: "الحقن الأسمنتي يعتمد على ملاط إسمنتي بخصائص لزوجة مناسبة، بينما توجد مواد أخرى (كيميائية/ميكروفاين) لظروف خاصة. اختيار المادة مرتبط بحجم المسام، النفاذية، والهدف (تقوية/عزل)." },
-      { question: "كيف نحدد نوع الخلطة واللزوجة المناسبة؟", answer: "نعتمد على طبيعة التربة/الصخور، نتائج الفحوصات، وهدف المعالجة. أحيانًا نبدأ بخليط تمهيدي ثم نعدّل تدريجيًا لتحقيق اختراق أفضل دون إحداث مشاكل جانبية." },
-      { question: "كيف أعرف أن المعالجة نجحت؟", answer: "المؤشرات تشمل استقرار الاستهلاك، تحسن سلوك الهبوط، وتحسن نتائج التحقق (مثل probing/اختبارات أو مراقبة التشققات) حسب خطة المشروع." },
-    ],
+    { question: "هل يمكن تطبيق حقن التربة تحت المباني القائمة دون تفريغها؟", answer: "نعم، وهو من أبرز مزايا الحقن. يُنفَّذ من خلال حفر نقاط حقن صغيرة بحد أدنى من الأعمال الإنشائية دون إخلاء المبنى في معظم الحالات.", questionEn: "Can soil grouting be applied under occupied buildings?", answerEn: "Yes, this is one of its key advantages. It is executed through small drill points with minimal structural work and without evacuating the building in most cases." },
+    { question: "ما الفرق بين حقن الأسمنت وحقن البوليمرات؟", answer: "حقن الأسمنت يُستخدم لملء الفراغات الكبيرة وتقوية التربة ميكانيكياً، بينما يناسب حقن البوليمرات التحكم بالتسرب وملء المسام الدقيقة التي لا يخترقها الأسمنت.", questionEn: "What is the difference between cement and polymer grouting?", answerEn: "Cement grouting fills large voids and improves mechanical strength; polymer grouting targets seepage control and fine pores that cement cannot penetrate." },
+    { question: "كيف تعرف أن حقن التربة هو الحل المناسب لمشكلتك؟", answer: "إذا كانت المشكلة هبوطاً أو تشققات ناتجة عن ضعف التربة أو تكهفات تحت الأساسات، فالحقن عادة الخيار الأنسب. التشخيص الدقيق يُؤكد ذلك قبل أي قرار.", questionEn: "How do you know if soil grouting is the right solution for your problem?", answerEn: "If the issue is settlement or cracks caused by weak soil or cavities under foundations, grouting is usually the right choice. Accurate diagnosis confirms this before any decision." },
+    { question: "ما المدة الزمنية اللازمة لملاحظة تحسن بعد الحقن؟", answer: "التحسن الميكانيكي يبدأ مع تصلّد الحقن خلال 24-72 ساعة للخلطات الأسمنتية. التقييم الكامل يستلزم أسبوعين إلى أربعة أسابيع مع مراقبة منتظمة لأجهزة قياس الهبوط.", questionEn: "How long does it take to notice improvement after grouting?", answerEn: "Mechanical improvement begins as grout sets within 24-72 hours for cement mixes. Full assessment requires 2-4 weeks with regular settlement monitoring." }
+  ],
     faqEn: [
       { question: "When is soil grouting the right solution?", answer: "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly." },
       { question: "How is cement grouting different from other grouts?", answer: "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective." },
@@ -3627,7 +3624,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "geotech-encyclopedia-08",
+    slug: "pozzolanic-materials-in-grout-mixes-fly-ash-and-silica-fume",
     image: {
       url: "/favicon.webp",
       alt: "استخدام المواد البوزولانية (Fly Ash, Silica Fume) في خلطات الحقن",
@@ -3665,7 +3662,7 @@ export const articles: ArticleContent[] = [
   
   #### 3. معايير التصميم والتنفيذ
   
-  - يتوجب استخدام نسب مناسبة من المواد البوزולانية حسب نوع التربة وظروف المشروع. تتراوح عادة نسبة الرماد المتطاير بين 15-30% من وزن الأسمنت، بينما الدخان السيليكا يُستخدم بنسب أقل (5-10%) نظرًا لنشاطه العالي.
+  - يتوجب استخدام نسب مناسبة من المواد البوزولانية حسب نوع التربة وظروف المشروع. تتراوح عادة نسبة الرماد المتطاير بين 15-30% من وزن الأسمنت، بينما الدخان السيليكا يُستخدم بنسب أقل (5-10%) نظرًا لنشاطه العالي.
   
   - يجب مراجعة المعايير الدولية مثل **EN 12715:2000** لتصميم خلطات الحقن وتحقيق المتانة، وكذلك الكود الأمريكي **ASTM C618** لتعريف المواصفات الفنية للرماد المتطاير والدخان السيليكا.
   
@@ -3752,11 +3749,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "متى يكون حقن التربة هو الخيار الأنسب؟", answer: "يكون مناسبًا عند الحاجة لتحسين خواص التربة تحت الأساسات، تقليل الهبوط، أو معالجة مسارات تسرب المياه—خصوصًا عندما تكون أعمال الحفر/الاستبدال غير ممكنة أو مكلفة." },
-      { question: "ما الفرق بين الحقن الأسمنتي وطرق الحقن الأخرى؟", answer: "الحقن الأسمنتي يعتمد على ملاط إسمنتي بخصائص لزوجة مناسبة، بينما توجد مواد أخرى (كيميائية/ميكروفاين) لظروف خاصة. اختيار المادة مرتبط بحجم المسام، النفاذية، والهدف (تقوية/عزل)." },
-      { question: "كيف نحدد نوع الخلطة واللزوجة المناسبة؟", answer: "نعتمد على طبيعة التربة/الصخور، نتائج الفحوصات، وهدف المعالجة. أحيانًا نبدأ بخليط تمهيدي ثم نعدّل تدريجيًا لتحقيق اختراق أفضل دون إحداث مشاكل جانبية." },
-      { question: "كيف أعرف أن المعالجة نجحت؟", answer: "المؤشرات تشمل استقرار الاستهلاك، تحسن سلوك الهبوط، وتحسن نتائج التحقق (مثل probing/اختبارات أو مراقبة التشققات) حسب خطة المشروع." },
-    ],
+    { question: "ما مؤشرات الخطر التي تستوجب التدخل بالحقن فوراً؟", answer: "تشققات متوسعة بسرعة، هبوط مستمر ملحوظ، انحراف ظاهر في الجدران أو الأعمدة، أو وجود ضوضاء غير مألوفة في البنية. كل هذه مؤشرات تستدعي تقييماً هندسياً عاجلاً.", questionEn: "What danger signs require immediate grouting intervention?", answerEn: "Rapidly widening cracks, continuous visible settlement, apparent wall or column inclination, or unfamiliar structural sounds — all require urgent engineering assessment." },
+    { question: "هل حقن التربة آمن للمنشآت القريبة من موقع العمل؟", answer: "مع ضبط ضغوط الحقن ضمن الحدود الآمنة، يكون التأثير على المجاورات ضئيلاً. المشاريع في المناطق المكتظة تستدعي مراقبة مستمرة للمنشآت المجاورة طوال فترة التنفيذ.", questionEn: "Is soil grouting safe for structures near the work site?", answerEn: "With injection pressures within safe limits, the impact on adjacent structures is minimal. Dense-area projects require continuous monitoring of neighbouring structures throughout execution." },
+    { question: "كيف يُمنع انتشار الحقن خارج المنطقة المستهدفة؟", answer: "عبر ضبط اللزوجة وضغط الحقن، والاستناد إلى بيانات نفاذية التربة لتحديد نقاط الحقن. المراقبة الميدانية المستمرة للضغط تُنبّه لأي انتشار غير مخطط له.", questionEn: "How is uncontrolled grout spread prevented?", answerEn: "By controlling viscosity and injection pressure, using soil permeability data to position injection points, and continuous field pressure monitoring to alert against unplanned migration." },
+    { question: "ما الفترة الزمنية التي يتحمل فيها الحقن بعد التنفيذ؟", answer: "مع الاختيار الصحيح للمادة وجودة التنفيذ، يُفترض أن يكون الحقن حلاً دائماً. العمر الافتراضي للحقن الأسمنتي مماثل للخرسانة (50+ سنة)، والبوليمرات تتفاوت حسب النوع والبيئة.", questionEn: "How long does grout last after execution?", answerEn: "With correct material selection and quality execution, grouting should be a permanent solution. Cement grout lifespan matches concrete (50+ years); polymers vary by type and environment." }
+  ],
     faqEn: [
       { question: "When is soil grouting the right solution?", answer: "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly." },
       { question: "How is cement grouting different from other grouts?", answer: "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective." },
@@ -3775,9 +3772,9 @@ export const articles: ArticleContent[] = [
     categoriesEn: ["Grouting & Improvement Encyclopedia", "Geotechnical Engineering", "Soil Grouting", "Ground Improvement Library"],
     date: "2025-11-18",
     readTime: "3 دقيقة",
-    readTimeEn: "2 min",
+    readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "geotech-encyclopedia-09",
+    slug: "grout-bleeding-and-segregation-risks-and-practical-mitigation",
     image: {
       url: "/favicon.webp",
       alt: "نزف الملاط (Bleeding) والانفصال الحبيبي: المخاطر والحلول",
@@ -3910,11 +3907,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "متى يكون حقن التربة هو الخيار الأنسب؟", answer: "يكون مناسبًا عند الحاجة لتحسين خواص التربة تحت الأساسات، تقليل الهبوط، أو معالجة مسارات تسرب المياه—خصوصًا عندما تكون أعمال الحفر/الاستبدال غير ممكنة أو مكلفة." },
-      { question: "ما الفرق بين الحقن الأسمنتي وطرق الحقن الأخرى؟", answer: "الحقن الأسمنتي يعتمد على ملاط إسمنتي بخصائص لزوجة مناسبة، بينما توجد مواد أخرى (كيميائية/ميكروفاين) لظروف خاصة. اختيار المادة مرتبط بحجم المسام، النفاذية، والهدف (تقوية/عزل)." },
-      { question: "كيف نحدد نوع الخلطة واللزوجة المناسبة؟", answer: "نعتمد على طبيعة التربة/الصخور، نتائج الفحوصات، وهدف المعالجة. أحيانًا نبدأ بخليط تمهيدي ثم نعدّل تدريجيًا لتحقيق اختراق أفضل دون إحداث مشاكل جانبية." },
-      { question: "كيف أعرف أن المعالجة نجحت؟", answer: "المؤشرات تشمل استقرار الاستهلاك، تحسن سلوك الهبوط، وتحسن نتائج التحقق (مثل probing/اختبارات أو مراقبة التشققات) حسب خطة المشروع." },
-    ],
+    { question: "ما الخطوات العملية لطلب خدمة حقن التربة؟", answer: "ابدأ بتوثيق المشكلة (صور، قياسات)، ثم تواصل مع فريق إطلاق لتقييم أولي. بعد الزيارة الميدانية تُحدَّد التقنية المناسبة والتكلفة التقديرية قبل بدء التنفيذ.", questionEn: "What are the practical steps to request soil grouting service?", answerEn: "Start by documenting the problem (photos, measurements), then contact the ETLAQ team for initial assessment. After the field visit, the appropriate technique and estimated cost are determined before execution begins." },
+    { question: "ما الذي يشمله تقرير ما بعد الحقن؟", answer: "يشمل: خريطة نقاط الحقن المنجزة، سجلات الضغط والكميات لكل نقطة، نتائج اختبارات التحقق، توصيات للمتابعة، وشهادات مواد الحقن.", questionEn: "What does a post-grouting report include?", answerEn: "It includes: map of completed injection points, pressure and volume logs per point, verification test results, follow-up recommendations, and grout material certificates." },
+    { question: "كم عدد نقاط الحقن الضروري في المشروع المتوسط؟", answer: "يتوقف على مساحة المشكلة وعمق المعالجة. المشروع المتوسط قد يتراوح بين 10 و50 نقطة. نقاط الحقن تُحدَّد بعد الزيارة الميدانية وبناءً على نتائج التحقيق.", questionEn: "How many injection points are needed in a typical project?", answerEn: "Depends on problem area and treatment depth. A typical project may range from 10 to 50 points. Injection points are determined after the site visit and investigation results." },
+    { question: "هل يمكن توقف الحقن ثم استئنافه في اليوم التالي؟", answer: "نعم، لكن يُنبغي توثيق حالة كل نقطة عند التوقف لضمان استكمال المناطق غير المكتملة. بعض الخلطات قد تحتاج مواصفات خاصة عند الاستئناف لضمان الترابط مع الحقن السابق.", questionEn: "Can grouting be stopped and resumed the next day?", answerEn: "Yes, but each point's status at stoppage must be documented to ensure incomplete zones are finished. Some mixes may need special specifications on resumption to ensure bonding with previous grout." }
+  ],
     faqEn: [
       { question: "When is soil grouting the right solution?", answer: "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly." },
       { question: "How is cement grouting different from other grouts?", answer: "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective." },
@@ -3935,7 +3932,7 @@ export const articles: ArticleContent[] = [
     readTime: "2 دقيقة",
     readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "geotech-encyclopedia-10",
+    slug: "sulfateresistant-cement-an-engineering-necessity-in-gulf-soils",
     image: {
       url: "/favicon.webp",
       alt: "الإسمنت المقاوم للكبريتات: ضرورة هندسية في تربة الخليج العربي",
@@ -4029,11 +4026,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "متى يكون حقن التربة هو الخيار الأنسب؟", answer: "يكون مناسبًا عند الحاجة لتحسين خواص التربة تحت الأساسات، تقليل الهبوط، أو معالجة مسارات تسرب المياه—خصوصًا عندما تكون أعمال الحفر/الاستبدال غير ممكنة أو مكلفة." },
-      { question: "ما الفرق بين الحقن الأسمنتي وطرق الحقن الأخرى؟", answer: "الحقن الأسمنتي يعتمد على ملاط إسمنتي بخصائص لزوجة مناسبة، بينما توجد مواد أخرى (كيميائية/ميكروفاين) لظروف خاصة. اختيار المادة مرتبط بحجم المسام، النفاذية، والهدف (تقوية/عزل)." },
-      { question: "كيف نحدد نوع الخلطة واللزوجة المناسبة؟", answer: "نعتمد على طبيعة التربة/الصخور، نتائج الفحوصات، وهدف المعالجة. أحيانًا نبدأ بخليط تمهيدي ثم نعدّل تدريجيًا لتحقيق اختراق أفضل دون إحداث مشاكل جانبية." },
-      { question: "كيف أعرف أن المعالجة نجحت؟", answer: "المؤشرات تشمل استقرار الاستهلاك، تحسن سلوك الهبوط، وتحسن نتائج التحقق (مثل probing/اختبارات أو مراقبة التشققات) حسب خطة المشروع." },
-    ],
+    { question: "هل يمكن تطبيق حقن التربة تحت المباني القائمة دون تفريغها؟", answer: "نعم، وهو من أبرز مزايا الحقن. يُنفَّذ من خلال حفر نقاط حقن صغيرة بحد أدنى من الأعمال الإنشائية دون إخلاء المبنى في معظم الحالات.", questionEn: "Can soil grouting be applied under occupied buildings?", answerEn: "Yes, this is one of its key advantages. It is executed through small drill points with minimal structural work and without evacuating the building in most cases." },
+    { question: "ما الفرق بين حقن الأسمنت وحقن البوليمرات؟", answer: "حقن الأسمنت يُستخدم لملء الفراغات الكبيرة وتقوية التربة ميكانيكياً، بينما يناسب حقن البوليمرات التحكم بالتسرب وملء المسام الدقيقة التي لا يخترقها الأسمنت.", questionEn: "What is the difference between cement and polymer grouting?", answerEn: "Cement grouting fills large voids and improves mechanical strength; polymer grouting targets seepage control and fine pores that cement cannot penetrate." },
+    { question: "كيف تعرف أن حقن التربة هو الحل المناسب لمشكلتك؟", answer: "إذا كانت المشكلة هبوطاً أو تشققات ناتجة عن ضعف التربة أو تكهفات تحت الأساسات، فالحقن عادة الخيار الأنسب. التشخيص الدقيق يُؤكد ذلك قبل أي قرار.", questionEn: "How do you know if soil grouting is the right solution for your problem?", answerEn: "If the issue is settlement or cracks caused by weak soil or cavities under foundations, grouting is usually the right choice. Accurate diagnosis confirms this before any decision." },
+    { question: "ما المدة الزمنية اللازمة لملاحظة تحسن بعد الحقن؟", answer: "التحسن الميكانيكي يبدأ مع تصلّد الحقن خلال 24-72 ساعة للخلطات الأسمنتية. التقييم الكامل يستلزم أسبوعين إلى أربعة أسابيع مع مراقبة منتظمة لأجهزة قياس الهبوط.", questionEn: "How long does it take to notice improvement after grouting?", answerEn: "Mechanical improvement begins as grout sets within 24-72 hours for cement mixes. Full assessment requires 2-4 weeks with regular settlement monitoring." }
+  ],
     faqEn: [
       { question: "When is soil grouting the right solution?", answer: "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly." },
       { question: "How is cement grouting different from other grouts?", answer: "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective." },
@@ -4054,7 +4051,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "geotech-encyclopedia-11",
+    slug: "ecofriendly-grouting-materials-modern-trends-and-considerations",
     image: {
       url: "/favicon.webp",
       alt: "المواد الصديقة للبيئة في حقن التربة: التوجهات الحديثة",
@@ -4213,11 +4210,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "متى يكون حقن التربة هو الخيار الأنسب؟", answer: "يكون مناسبًا عند الحاجة لتحسين خواص التربة تحت الأساسات، تقليل الهبوط، أو معالجة مسارات تسرب المياه—خصوصًا عندما تكون أعمال الحفر/الاستبدال غير ممكنة أو مكلفة." },
-      { question: "ما الفرق بين الحقن الأسمنتي وطرق الحقن الأخرى؟", answer: "الحقن الأسمنتي يعتمد على ملاط إسمنتي بخصائص لزوجة مناسبة، بينما توجد مواد أخرى (كيميائية/ميكروفاين) لظروف خاصة. اختيار المادة مرتبط بحجم المسام، النفاذية، والهدف (تقوية/عزل)." },
-      { question: "كيف نحدد نوع الخلطة واللزوجة المناسبة؟", answer: "نعتمد على طبيعة التربة/الصخور، نتائج الفحوصات، وهدف المعالجة. أحيانًا نبدأ بخليط تمهيدي ثم نعدّل تدريجيًا لتحقيق اختراق أفضل دون إحداث مشاكل جانبية." },
-      { question: "كيف أعرف أن المعالجة نجحت؟", answer: "المؤشرات تشمل استقرار الاستهلاك، تحسن سلوك الهبوط، وتحسن نتائج التحقق (مثل probing/اختبارات أو مراقبة التشققات) حسب خطة المشروع." },
-    ],
+    { question: "ما مؤشرات الخطر التي تستوجب التدخل بالحقن فوراً؟", answer: "تشققات متوسعة بسرعة، هبوط مستمر ملحوظ، انحراف ظاهر في الجدران أو الأعمدة، أو وجود ضوضاء غير مألوفة في البنية. كل هذه مؤشرات تستدعي تقييماً هندسياً عاجلاً.", questionEn: "What danger signs require immediate grouting intervention?", answerEn: "Rapidly widening cracks, continuous visible settlement, apparent wall or column inclination, or unfamiliar structural sounds — all require urgent engineering assessment." },
+    { question: "هل حقن التربة آمن للمنشآت القريبة من موقع العمل؟", answer: "مع ضبط ضغوط الحقن ضمن الحدود الآمنة، يكون التأثير على المجاورات ضئيلاً. المشاريع في المناطق المكتظة تستدعي مراقبة مستمرة للمنشآت المجاورة طوال فترة التنفيذ.", questionEn: "Is soil grouting safe for structures near the work site?", answerEn: "With injection pressures within safe limits, the impact on adjacent structures is minimal. Dense-area projects require continuous monitoring of neighbouring structures throughout execution." },
+    { question: "كيف يُمنع انتشار الحقن خارج المنطقة المستهدفة؟", answer: "عبر ضبط اللزوجة وضغط الحقن، والاستناد إلى بيانات نفاذية التربة لتحديد نقاط الحقن. المراقبة الميدانية المستمرة للضغط تُنبّه لأي انتشار غير مخطط له.", questionEn: "How is uncontrolled grout spread prevented?", answerEn: "By controlling viscosity and injection pressure, using soil permeability data to position injection points, and continuous field pressure monitoring to alert against unplanned migration." },
+    { question: "ما الفترة الزمنية التي يتحمل فيها الحقن بعد التنفيذ؟", answer: "مع الاختيار الصحيح للمادة وجودة التنفيذ، يُفترض أن يكون الحقن حلاً دائماً. العمر الافتراضي للحقن الأسمنتي مماثل للخرسانة (50+ سنة)، والبوليمرات تتفاوت حسب النوع والبيئة.", questionEn: "How long does grout last after execution?", answerEn: "With correct material selection and quality execution, grouting should be a permanent solution. Cement grout lifespan matches concrete (50+ years); polymers vary by type and environment." }
+  ],
     faqEn: [
       { question: "When is soil grouting the right solution?", answer: "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly." },
       { question: "How is cement grouting different from other grouts?", answer: "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective." },
@@ -4236,9 +4233,9 @@ export const articles: ArticleContent[] = [
     categoriesEn: ["Grouting & Improvement Encyclopedia", "Geotechnical Engineering", "Soil Grouting", "Ground Improvement Library"],
     date: "2025-11-27",
     readTime: "3 دقيقة",
-    readTimeEn: "2 min",
+    readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "geotech-encyclopedia-12",
+    slug: "laboratory-testing-of-grouting-materials-before-and-during-works",
     image: {
       url: "/favicon.webp",
       alt: "اختبارات المختبر لمواد الحقن: قبل وأثناء التنفيذ",
@@ -4333,11 +4330,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "متى يكون حقن التربة هو الخيار الأنسب؟", answer: "يكون مناسبًا عند الحاجة لتحسين خواص التربة تحت الأساسات، تقليل الهبوط، أو معالجة مسارات تسرب المياه—خصوصًا عندما تكون أعمال الحفر/الاستبدال غير ممكنة أو مكلفة." },
-      { question: "ما الفرق بين الحقن الأسمنتي وطرق الحقن الأخرى؟", answer: "الحقن الأسمنتي يعتمد على ملاط إسمنتي بخصائص لزوجة مناسبة، بينما توجد مواد أخرى (كيميائية/ميكروفاين) لظروف خاصة. اختيار المادة مرتبط بحجم المسام، النفاذية، والهدف (تقوية/عزل)." },
-      { question: "كيف نحدد نوع الخلطة واللزوجة المناسبة؟", answer: "نعتمد على طبيعة التربة/الصخور، نتائج الفحوصات، وهدف المعالجة. أحيانًا نبدأ بخليط تمهيدي ثم نعدّل تدريجيًا لتحقيق اختراق أفضل دون إحداث مشاكل جانبية." },
-      { question: "كيف أعرف أن المعالجة نجحت؟", answer: "المؤشرات تشمل استقرار الاستهلاك، تحسن سلوك الهبوط، وتحسن نتائج التحقق (مثل probing/اختبارات أو مراقبة التشققات) حسب خطة المشروع." },
-    ],
+    { question: "ما الخطوات العملية لطلب خدمة حقن التربة؟", answer: "ابدأ بتوثيق المشكلة (صور، قياسات)، ثم تواصل مع فريق إطلاق لتقييم أولي. بعد الزيارة الميدانية تُحدَّد التقنية المناسبة والتكلفة التقديرية قبل بدء التنفيذ.", questionEn: "What are the practical steps to request soil grouting service?", answerEn: "Start by documenting the problem (photos, measurements), then contact the ETLAQ team for initial assessment. After the field visit, the appropriate technique and estimated cost are determined before execution begins." },
+    { question: "ما الذي يشمله تقرير ما بعد الحقن؟", answer: "يشمل: خريطة نقاط الحقن المنجزة، سجلات الضغط والكميات لكل نقطة، نتائج اختبارات التحقق، توصيات للمتابعة، وشهادات مواد الحقن.", questionEn: "What does a post-grouting report include?", answerEn: "It includes: map of completed injection points, pressure and volume logs per point, verification test results, follow-up recommendations, and grout material certificates." },
+    { question: "كم عدد نقاط الحقن الضروري في المشروع المتوسط؟", answer: "يتوقف على مساحة المشكلة وعمق المعالجة. المشروع المتوسط قد يتراوح بين 10 و50 نقطة. نقاط الحقن تُحدَّد بعد الزيارة الميدانية وبناءً على نتائج التحقيق.", questionEn: "How many injection points are needed in a typical project?", answerEn: "Depends on problem area and treatment depth. A typical project may range from 10 to 50 points. Injection points are determined after the site visit and investigation results." },
+    { question: "هل يمكن توقف الحقن ثم استئنافه في اليوم التالي؟", answer: "نعم، لكن يُنبغي توثيق حالة كل نقطة عند التوقف لضمان استكمال المناطق غير المكتملة. بعض الخلطات قد تحتاج مواصفات خاصة عند الاستئناف لضمان الترابط مع الحقن السابق.", questionEn: "Can grouting be stopped and resumed the next day?", answerEn: "Yes, but each point's status at stoppage must be documented to ensure incomplete zones are finished. Some mixes may need special specifications on resumption to ensure bonding with previous grout." }
+  ],
     faqEn: [
       { question: "When is soil grouting the right solution?", answer: "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly." },
       { question: "How is cement grouting different from other grouts?", answer: "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective." },
@@ -4358,7 +4355,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "geotech-encyclopedia-13",
+    slug: "grout-stability-stable-vs-unstable-mixes-and-why-it-matters",
     image: {
       url: "/favicon.webp",
       alt: "استقرار الملاط (Grout Stability): الفرق بين الملاط المستقر وغير المستقر",
@@ -4465,11 +4462,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "متى يكون حقن التربة هو الخيار الأنسب؟", answer: "يكون مناسبًا عند الحاجة لتحسين خواص التربة تحت الأساسات، تقليل الهبوط، أو معالجة مسارات تسرب المياه—خصوصًا عندما تكون أعمال الحفر/الاستبدال غير ممكنة أو مكلفة." },
-      { question: "ما الفرق بين الحقن الأسمنتي وطرق الحقن الأخرى؟", answer: "الحقن الأسمنتي يعتمد على ملاط إسمنتي بخصائص لزوجة مناسبة، بينما توجد مواد أخرى (كيميائية/ميكروفاين) لظروف خاصة. اختيار المادة مرتبط بحجم المسام، النفاذية، والهدف (تقوية/عزل)." },
-      { question: "كيف نحدد نوع الخلطة واللزوجة المناسبة؟", answer: "نعتمد على طبيعة التربة/الصخور، نتائج الفحوصات، وهدف المعالجة. أحيانًا نبدأ بخليط تمهيدي ثم نعدّل تدريجيًا لتحقيق اختراق أفضل دون إحداث مشاكل جانبية." },
-      { question: "كيف أعرف أن المعالجة نجحت؟", answer: "المؤشرات تشمل استقرار الاستهلاك، تحسن سلوك الهبوط، وتحسن نتائج التحقق (مثل probing/اختبارات أو مراقبة التشققات) حسب خطة المشروع." },
-    ],
+    { question: "هل يمكن تطبيق حقن التربة تحت المباني القائمة دون تفريغها؟", answer: "نعم، وهو من أبرز مزايا الحقن. يُنفَّذ من خلال حفر نقاط حقن صغيرة بحد أدنى من الأعمال الإنشائية دون إخلاء المبنى في معظم الحالات.", questionEn: "Can soil grouting be applied under occupied buildings?", answerEn: "Yes, this is one of its key advantages. It is executed through small drill points with minimal structural work and without evacuating the building in most cases." },
+    { question: "ما الفرق بين حقن الأسمنت وحقن البوليمرات؟", answer: "حقن الأسمنت يُستخدم لملء الفراغات الكبيرة وتقوية التربة ميكانيكياً، بينما يناسب حقن البوليمرات التحكم بالتسرب وملء المسام الدقيقة التي لا يخترقها الأسمنت.", questionEn: "What is the difference between cement and polymer grouting?", answerEn: "Cement grouting fills large voids and improves mechanical strength; polymer grouting targets seepage control and fine pores that cement cannot penetrate." },
+    { question: "كيف تعرف أن حقن التربة هو الحل المناسب لمشكلتك؟", answer: "إذا كانت المشكلة هبوطاً أو تشققات ناتجة عن ضعف التربة أو تكهفات تحت الأساسات، فالحقن عادة الخيار الأنسب. التشخيص الدقيق يُؤكد ذلك قبل أي قرار.", questionEn: "How do you know if soil grouting is the right solution for your problem?", answerEn: "If the issue is settlement or cracks caused by weak soil or cavities under foundations, grouting is usually the right choice. Accurate diagnosis confirms this before any decision." },
+    { question: "ما المدة الزمنية اللازمة لملاحظة تحسن بعد الحقن؟", answer: "التحسن الميكانيكي يبدأ مع تصلّد الحقن خلال 24-72 ساعة للخلطات الأسمنتية. التقييم الكامل يستلزم أسبوعين إلى أربعة أسابيع مع مراقبة منتظمة لأجهزة قياس الهبوط.", questionEn: "How long does it take to notice improvement after grouting?", answerEn: "Mechanical improvement begins as grout sets within 24-72 hours for cement mixes. Full assessment requires 2-4 weeks with regular settlement monitoring." }
+  ],
     faqEn: [
       { question: "When is soil grouting the right solution?", answer: "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly." },
       { question: "How is cement grouting different from other grouts?", answer: "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective." },
@@ -4488,9 +4485,9 @@ export const articles: ArticleContent[] = [
     categoriesEn: ["Grouting & Improvement Encyclopedia", "Geotechnical Engineering", "Soil Grouting", "Ground Improvement Library"],
     date: "2025-12-03",
     readTime: "3 دقيقة",
-    readTimeEn: "2 min",
+    readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "geotech-encyclopedia-14",
+    slug: "selecting-grout-type-using-soil-gradation-d10d15-criteria",
     image: {
       url: "/favicon.webp",
       alt: "اختيار مادة الحقن بناءً على قطر حبيبات التربة (D10/D15)",
@@ -4583,12 +4580,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "متى يكون حقن التربة هو الخيار الأنسب؟", answer: "يكون مناسبًا عند الحاجة لتحسين خواص التربة تحت الأساسات، تقليل الهبوط، أو معالجة مسارات تسرب المياه—خصوصًا عندما تكون أعمال الحفر/الاستبدال غير ممكنة أو مكلفة." },
-      { question: "ما الفرق بين الحقن الأسمنتي وطرق الحقن الأخرى؟", answer: "الحقن الأسمنتي يعتمد على ملاط إسمنتي بخصائص لزوجة مناسبة، بينما توجد مواد أخرى (كيميائية/ميكروفاين) لظروف خاصة. اختيار المادة مرتبط بحجم المسام، النفاذية، والهدف (تقوية/عزل)." },
-      { question: "كيف نحدد نوع الخلطة واللزوجة المناسبة؟", answer: "نعتمد على طبيعة التربة/الصخور، نتائج الفحوصات، وهدف المعالجة. أحيانًا نبدأ بخليط تمهيدي ثم نعدّل تدريجيًا لتحقيق اختراق أفضل دون إحداث مشاكل جانبية." },
-      { question: "كيف أعرف أن المعالجة نجحت؟", answer: "المؤشرات تشمل استقرار الاستهلاك، تحسن سلوك الهبوط، وتحسن نتائج التحقق (مثل probing/اختبارات أو مراقبة التشققات) حسب خطة المشروع." },
-    ],
-    faqEn: [
+    { question: "كيف تُختار أنسب تقنية حقن لكل موقع؟", answer: "القرار يستند إلى نوع التربة ومشكلتها الجوهرية: ترب رملية نافذة تناسبها حقن الأسمنت والنفاذ، الترب الطينية تحتاج حقناً كيميائياً، والترب الهشة قد تتطلب Jet Grouting لتكوين أعمدة داعمة.", questionEn: "How is the most appropriate grouting technique selected for each site?", answerEn: "The decision is based on soil type and core problem: permeable sandy soils suit cement and permeation grouting, clays need chemical grouting, and weak soils may require Jet Grouting to form support columns." },
+    { question: "ما الاختبارات الضرورية قبل تنفيذ أي عملية حقن؟", answer: "الحد الأدنى المطلوب: تحديد نوع التربة (SPT أو CPT)، قياس النفاذية، وتحليل عينات مختبرية. في المشاريع الكبيرة تُضاف دراسة جيوفيزيائية (GPR/ERT) للحصول على صورة شاملة.", questionEn: "What tests are required before any grouting operation?", answerEn: "The minimum required: soil type identification (SPT or CPT), permeability measurement, and laboratory sample analysis. For larger projects, a geophysical study (GPR/ERT) is added for a comprehensive picture." },
+    { question: "كيف تُقيَّم جودة ونجاح عملية الحقن بعد التنفيذ؟", answer: "عبر اختبارات تحقق ما بعد الحقن: CPT أو اختبار ضغط المياه لقياس التحسن في خصائص التربة، مراقبة أجهزة قياس الهبوط، والفحص البصري للتشققات. تُقارَن النتائج بالقياسات الأولية.", questionEn: "How is grouting quality and success evaluated post-execution?", answerEn: "Through post-grouting verification tests: CPT or water pressure tests measuring soil property improvement, settlement monitoring instruments, and visual crack inspection. Results are compared against baseline measurements." },
+    { question: "ما العوامل التي تُحدد تكلفة مشروع حقن التربة؟", answer: "الأهم: عمق الحقن، نوع المادة المستخدمة، تعقيد المشروع وإمكانية الوصول، كمية الحقن المطلوبة، ووجود إنشاءات حساسة مجاورة تستدعي ضوابط إضافية.", questionEn: "What factors determine the cost of a soil grouting project?", answerEn: "Key factors: injection depth, material type used, project complexity and access, required grouting volume, and presence of sensitive adjacent structures requiring additional controls." }
+  ], faqEn: [
       { question: "When is soil grouting the right solution?", answer: "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly." },
       { question: "How is cement grouting different from other grouts?", answer: "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective." },
       { question: "How do you choose the mix and viscosity?", answer: "We base it on ground type, test results, and the treatment objective. In many cases, mixes are adjusted progressively to balance penetration and control." },
@@ -4607,7 +4603,7 @@ export const articles: ArticleContent[] = [
       readTime: "4 دقائق",
       readTimeEn: "4 min",
       author: "فريق ETLAQ الهندسي",
-      slug: "geotech-encyclopedia-15",
+      slug: "backofenvelope-grout-spread-calculations-radius-of-influence-and-common-pitfalls",
       image: {
         url: "/favicon.webp",
         alt: "حسابات تقريبية لانتشار الحقن: نصف قطر تأثير ولماذا يخطئ كثيرًا",
@@ -4638,6 +4634,12 @@ export const articles: ArticleContent[] = [
   إذا رغبت بالقراءة من مصادر موثوقة، ابحث عن FHWA (Ground Improvement) ومعيار EN 12715 (Grouting) كمدخل عام، ثم طبّق المنطق على حالة موقعك. نحن في ETLAQ نترجم هذه المبادئ إلى قرار عملي يناسب ظروف الموقع داخل المملكة.
   
   النتيجة الأفضل تتحقق عندما يكون التشخيص واضحًا والخطوة التالية محددة. المقال يعطيك منطق القرار، والفحص الميداني يؤكد التفاصيل.
+  ## روابط ذات صلة داخل موقعنا
+  
+  - [خدمة حقن التربة](/services/grouting)
+  - [كشف التكهفات والفراغات](/services/cavity)
+  - [الدراسات الجيوفيزيائية](/services/geophysical)
+  - [تواصل معنا للاستشارة](/contact)
   `,
       contentEn: `# Back‑of‑Envelope Spread Estimates: Radius of Influence—and Why It Misleads
   
@@ -4677,7 +4679,7 @@ export const articles: ArticleContent[] = [
     readTime: "2 دقيقة",
     readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "geotech-encyclopedia-16",
+    slug: "differential-settlement-how-to-read-the-structural-nightmare",
     image: {
       url: "/favicon.webp",
       alt: "الهبوط التفاضلي (Differential Settlement): الكابوس الإنشائي وكيفية قراءته",
@@ -4772,12 +4774,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "متى يكون حقن التربة هو الخيار الأنسب؟", answer: "يكون مناسبًا عند الحاجة لتحسين خواص التربة تحت الأساسات، تقليل الهبوط، أو معالجة مسارات تسرب المياه—خصوصًا عندما تكون أعمال الحفر/الاستبدال غير ممكنة أو مكلفة." },
-      { question: "ما الفرق بين الحقن الأسمنتي وطرق الحقن الأخرى؟", answer: "الحقن الأسمنتي يعتمد على ملاط إسمنتي بخصائص لزوجة مناسبة، بينما توجد مواد أخرى (كيميائية/ميكروفاين) لظروف خاصة. اختيار المادة مرتبط بحجم المسام، النفاذية، والهدف (تقوية/عزل)." },
-      { question: "كيف نحدد نوع الخلطة واللزوجة المناسبة؟", answer: "نعتمد على طبيعة التربة/الصخور، نتائج الفحوصات، وهدف المعالجة. أحيانًا نبدأ بخليط تمهيدي ثم نعدّل تدريجيًا لتحقيق اختراق أفضل دون إحداث مشاكل جانبية." },
-      { question: "كيف أعرف أن المعالجة نجحت؟", answer: "المؤشرات تشمل استقرار الاستهلاك، تحسن سلوك الهبوط، وتحسن نتائج التحقق (مثل probing/اختبارات أو مراقبة التشققات) حسب خطة المشروع." },
-    ],
-    faqEn: [
+    { question: "ما الفرق بين الهبوط الكلي والهبوط التفاضلي وأيهما أخطر؟", answer: "الهبوط الكلي هو نزول منتظم للمنشأة كاملها، بينما التفاضلي هو هبوط غير متساوٍ بين أجزائها. الهبوط التفاضلي أخطر بكثير لأنه يُسبب إجهادات انحناء وقوى قص تُفضي للتشقق والانهيار.", questionEn: "What is the difference between total and differential settlement and which is more dangerous?", answerEn: "Total settlement is uniform sinking of the entire structure, while differential is uneven settlement between its parts. Differential is far more dangerous as it causes bending stresses and shear forces leading to cracking and potential collapse." },
+    { question: "متى يكون الهبوط مقبولاً ومتى يستدعي التدخل الفوري؟", answer: "الهبوط المقبول يعتمد على نوع المنشأة: للمباني السكنية عادة < 25 مم كلي و< 15 مم تفاضلي. أي هبوط مصحوب بتشققات متسعة أو تشوه واضح في الهيكل يستدعي فحصاً فورياً.", questionEn: "When is settlement acceptable and when does it require immediate action?", answerEn: "Acceptable settlement depends on structure type: for residential buildings typically < 25mm total and < 15mm differential. Any settlement accompanied by widening cracks or visible structural distortion requires immediate inspection." },
+    { question: "كيف يُوقف حقن التربة الهبوط الجاري؟", answer: "يزيد الحقن من قدرة التحمل وصلابة التربة تحت الأساسات، مما يُقلل التشوه الإضافي. في بعض الحالات يُستخدم حقن الرفع (Compensation Grouting) لاسترداد جزء من الهبوط السابق.", questionEn: "How does soil grouting stop active settlement?", answerEn: "Grouting increases bearing capacity and stiffness of soil under foundations, reducing further deformation. In some cases Compensation Grouting is used to partially recover previous settlement." },
+    { question: "هل يمكن رفع المبنى مجدداً بعد هبوطه عبر الحقن؟", answer: "نعم، بتقنية Compensation Grouting المتحكّمة التي تستخدم ضغطاً متدرجاً لرفع الأساس ببطء ودقة. لكنها تحتاج مراقبة مستمرة دقيقة لتجنب الإفراط في الرفع أو تشقق الهيكل.", questionEn: "Can a building be re-lifted after settlement through grouting?", answerEn: "Yes, using controlled Compensation Grouting that applies incremental pressure to slowly and precisely lift the foundation. It requires continuous precise monitoring to avoid over-lifting or structural cracking." }
+  ], faqEn: [
       { question: "When is soil grouting the right solution?", answer: "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly." },
       { question: "How is cement grouting different from other grouts?", answer: "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective." },
       { question: "How do you choose the mix and viscosity?", answer: "We base it on ground type, test results, and the treatment objective. In many cases, mixes are adjusted progressively to balance penetration and control." },
@@ -4795,9 +4796,9 @@ export const articles: ArticleContent[] = [
     categoriesEn: ["Grouting & Improvement Encyclopedia", "Geotechnical Engineering", "Soil Grouting", "Ground Improvement Library"],
     date: "2025-12-12",
     readTime: "3 دقيقة",
-    readTimeEn: "2 min",
+    readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "geotech-encyclopedia-17",
+    slug: "crack-pattern-interpretation-structural-cracks-or-settlementinduced",
     image: {
       url: "/favicon.webp",
       alt: "تحليل أنماط التشققات: هل هي إنشائية أم ناتجة عن هبوط التربة؟",
@@ -4896,12 +4897,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "متى يكون حقن التربة هو الخيار الأنسب؟", answer: "يكون مناسبًا عند الحاجة لتحسين خواص التربة تحت الأساسات، تقليل الهبوط، أو معالجة مسارات تسرب المياه—خصوصًا عندما تكون أعمال الحفر/الاستبدال غير ممكنة أو مكلفة." },
-      { question: "ما الفرق بين الحقن الأسمنتي وطرق الحقن الأخرى؟", answer: "الحقن الأسمنتي يعتمد على ملاط إسمنتي بخصائص لزوجة مناسبة، بينما توجد مواد أخرى (كيميائية/ميكروفاين) لظروف خاصة. اختيار المادة مرتبط بحجم المسام، النفاذية، والهدف (تقوية/عزل)." },
-      { question: "كيف نحدد نوع الخلطة واللزوجة المناسبة؟", answer: "نعتمد على طبيعة التربة/الصخور، نتائج الفحوصات، وهدف المعالجة. أحيانًا نبدأ بخليط تمهيدي ثم نعدّل تدريجيًا لتحقيق اختراق أفضل دون إحداث مشاكل جانبية." },
-      { question: "كيف أعرف أن المعالجة نجحت؟", answer: "المؤشرات تشمل استقرار الاستهلاك، تحسن سلوك الهبوط، وتحسن نتائج التحقق (مثل probing/اختبارات أو مراقبة التشققات) حسب خطة المشروع." },
-    ],
-    faqEn: [
+    { question: "كيف يُحدّد المهندس سبب تسرب المياه قبل الحقن؟", answer: "يبدأ بالفحص البصري وتتبع مسار الرطوبة، ثم قد يستخدم صبغة كيميائية (tracer dye) لتتبع مصدر التسرب، وأحياناً تصوير بالكاميرا الداخلية للأنابيب أو الشقوق.", questionEn: "How does the engineer identify the source of water seepage before grouting?", answerEn: "Starting with visual inspection and tracing moisture paths, then potentially using tracer dye to follow the source, and sometimes internal camera inspection of pipes or cracks." },
+    { question: "هل حقن البوليمرات (PU) يمنع التسرب بشكل دائم؟", answer: "في الغالب نعم إذا نُفّذ في المكان الصحيح وبالكميات المناسبة. البولي يوريثان يتمدد ويملأ الشقوق بشكل دائم. قد يحتاج إعادة تطبيق في حالات الضغط الهيدروستاتيكي العالي جداً.", questionEn: "Does PU polymer grouting provide permanent seepage prevention?", answerEn: "Generally yes when applied correctly and in appropriate quantities. Polyurethane expands and permanently seals cracks. Reapplication may be needed under very high hydrostatic pressure." },
+    { question: "ما الفرق بين حقن الشقوق وحقن التربة في سياق التسرب؟", answer: "حقن الشقوق يستهدف مسارات التسرب في الخرسانة أو الأساسات مباشرة، بينما حقن التربة يُقلل النفاذية في التربة المحيطة لمنع وصول المياه للأساسات أصلاً.", questionEn: "What is the difference between crack injection and soil grouting for seepage control?", answerEn: "Crack injection targets seepage paths directly in concrete or foundations, while soil grouting reduces permeability in surrounding soil to prevent water reaching foundations in the first place." },
+    { question: "كيف يؤثر ارتفاع منسوب المياه الجوفية على مشاريع الحقن؟", answer: "المياه الجوفية العالية تُضعف اللاصقية وتُمدّد الخلطات قبل تصلّدها. يُعالَج هذا بخلطات أسرع في التصلّد أو إضافة مسرّعات، وفي بعض الحالات خفض منسوب المياه مؤقتاً.", questionEn: "How does a high groundwater table affect grouting projects?", answerEn: "High groundwater weakens adhesion and dilutes mixes before setting. This is addressed using faster-setting mixes or accelerators, and in some cases temporary dewatering." }
+  ], faqEn: [
       { question: "When is soil grouting the right solution?", answer: "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly." },
       { question: "How is cement grouting different from other grouts?", answer: "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective." },
       { question: "How do you choose the mix and viscosity?", answer: "We base it on ground type, test results, and the treatment objective. In many cases, mixes are adjusted progressively to balance penetration and control." },
@@ -4921,7 +4921,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "geotech-encyclopedia-18",
+    slug: "how-water-leaks-from-tanks-and-utilities-undermine-foundations",
     image: {
       url: "/favicon.webp",
       alt: "تأثير تسربات المياه (الخزانات والشبكات) على استقرار الأساسات",
@@ -5032,12 +5032,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "متى يكون حقن التربة هو الخيار الأنسب؟", answer: "يكون مناسبًا عند الحاجة لتحسين خواص التربة تحت الأساسات، تقليل الهبوط، أو معالجة مسارات تسرب المياه—خصوصًا عندما تكون أعمال الحفر/الاستبدال غير ممكنة أو مكلفة." },
-      { question: "ما الفرق بين الحقن الأسمنتي وطرق الحقن الأخرى؟", answer: "الحقن الأسمنتي يعتمد على ملاط إسمنتي بخصائص لزوجة مناسبة، بينما توجد مواد أخرى (كيميائية/ميكروفاين) لظروف خاصة. اختيار المادة مرتبط بحجم المسام، النفاذية، والهدف (تقوية/عزل)." },
-      { question: "كيف نحدد نوع الخلطة واللزوجة المناسبة؟", answer: "نعتمد على طبيعة التربة/الصخور، نتائج الفحوصات، وهدف المعالجة. أحيانًا نبدأ بخليط تمهيدي ثم نعدّل تدريجيًا لتحقيق اختراق أفضل دون إحداث مشاكل جانبية." },
-      { question: "كيف أعرف أن المعالجة نجحت؟", answer: "المؤشرات تشمل استقرار الاستهلاك، تحسن سلوك الهبوط، وتحسن نتائج التحقق (مثل probing/اختبارات أو مراقبة التشققات) حسب خطة المشروع." },
-    ],
-    faqEn: [
+    { question: "كيف تُختار أنسب تقنية حقن لكل موقع؟", answer: "القرار يستند إلى نوع التربة ومشكلتها الجوهرية: ترب رملية نافذة تناسبها حقن الأسمنت والنفاذ، الترب الطينية تحتاج حقناً كيميائياً، والترب الهشة قد تتطلب Jet Grouting لتكوين أعمدة داعمة.", questionEn: "How is the most appropriate grouting technique selected for each site?", answerEn: "The decision is based on soil type and core problem: permeable sandy soils suit cement and permeation grouting, clays need chemical grouting, and weak soils may require Jet Grouting to form support columns." },
+    { question: "ما الاختبارات الضرورية قبل تنفيذ أي عملية حقن؟", answer: "الحد الأدنى المطلوب: تحديد نوع التربة (SPT أو CPT)، قياس النفاذية، وتحليل عينات مختبرية. في المشاريع الكبيرة تُضاف دراسة جيوفيزيائية (GPR/ERT) للحصول على صورة شاملة.", questionEn: "What tests are required before any grouting operation?", answerEn: "The minimum required: soil type identification (SPT or CPT), permeability measurement, and laboratory sample analysis. For larger projects, a geophysical study (GPR/ERT) is added for a comprehensive picture." },
+    { question: "كيف تُقيَّم جودة ونجاح عملية الحقن بعد التنفيذ؟", answer: "عبر اختبارات تحقق ما بعد الحقن: CPT أو اختبار ضغط المياه لقياس التحسن في خصائص التربة، مراقبة أجهزة قياس الهبوط، والفحص البصري للتشققات. تُقارَن النتائج بالقياسات الأولية.", questionEn: "How is grouting quality and success evaluated post-execution?", answerEn: "Through post-grouting verification tests: CPT or water pressure tests measuring soil property improvement, settlement monitoring instruments, and visual crack inspection. Results are compared against baseline measurements." },
+    { question: "ما العوامل التي تُحدد تكلفة مشروع حقن التربة؟", answer: "الأهم: عمق الحقن، نوع المادة المستخدمة، تعقيد المشروع وإمكانية الوصول، كمية الحقن المطلوبة، ووجود إنشاءات حساسة مجاورة تستدعي ضوابط إضافية.", questionEn: "What factors determine the cost of a soil grouting project?", answerEn: "Key factors: injection depth, material type used, project complexity and access, required grouting volume, and presence of sensitive adjacent structures requiring additional controls." }
+  ], faqEn: [
       { question: "When is soil grouting the right solution?", answer: "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly." },
       { question: "How is cement grouting different from other grouts?", answer: "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective." },
       { question: "How do you choose the mix and viscosity?", answer: "We base it on ground type, test results, and the treatment objective. In many cases, mixes are adjusted progressively to balance penetration and control." },
@@ -5055,9 +5054,9 @@ export const articles: ArticleContent[] = [
     categoriesEn: ["Grouting & Improvement Encyclopedia", "Geotechnical Engineering", "Soil Grouting", "Ground Improvement Library"],
     date: "2025-12-18",
     readTime: "3 دقيقة",
-    readTimeEn: "2 min",
+    readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "geotech-encyclopedia-19",
+    slug: "expansive-soils-key-problems-and-groutingbased-remedies",
     image: {
       url: "/favicon.webp",
       alt: "التربة الانتفاخية (Expansive Soil): مشاكلها وحلول الحقن المقترحة",
@@ -5160,12 +5159,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "متى يكون حقن التربة هو الخيار الأنسب؟", answer: "يكون مناسبًا عند الحاجة لتحسين خواص التربة تحت الأساسات، تقليل الهبوط، أو معالجة مسارات تسرب المياه—خصوصًا عندما تكون أعمال الحفر/الاستبدال غير ممكنة أو مكلفة." },
-      { question: "ما الفرق بين الحقن الأسمنتي وطرق الحقن الأخرى؟", answer: "الحقن الأسمنتي يعتمد على ملاط إسمنتي بخصائص لزوجة مناسبة، بينما توجد مواد أخرى (كيميائية/ميكروفاين) لظروف خاصة. اختيار المادة مرتبط بحجم المسام، النفاذية، والهدف (تقوية/عزل)." },
-      { question: "كيف نحدد نوع الخلطة واللزوجة المناسبة؟", answer: "نعتمد على طبيعة التربة/الصخور، نتائج الفحوصات، وهدف المعالجة. أحيانًا نبدأ بخليط تمهيدي ثم نعدّل تدريجيًا لتحقيق اختراق أفضل دون إحداث مشاكل جانبية." },
-      { question: "كيف أعرف أن المعالجة نجحت؟", answer: "المؤشرات تشمل استقرار الاستهلاك، تحسن سلوك الهبوط، وتحسن نتائج التحقق (مثل probing/اختبارات أو مراقبة التشققات) حسب خطة المشروع." },
-    ],
-    faqEn: [
+    { question: "كيف تُختار أنسب تقنية حقن لكل موقع؟", answer: "القرار يستند إلى نوع التربة ومشكلتها الجوهرية: ترب رملية نافذة تناسبها حقن الأسمنت والنفاذ، الترب الطينية تحتاج حقناً كيميائياً، والترب الهشة قد تتطلب Jet Grouting لتكوين أعمدة داعمة.", questionEn: "How is the most appropriate grouting technique selected for each site?", answerEn: "The decision is based on soil type and core problem: permeable sandy soils suit cement and permeation grouting, clays need chemical grouting, and weak soils may require Jet Grouting to form support columns." },
+    { question: "ما الاختبارات الضرورية قبل تنفيذ أي عملية حقن؟", answer: "الحد الأدنى المطلوب: تحديد نوع التربة (SPT أو CPT)، قياس النفاذية، وتحليل عينات مختبرية. في المشاريع الكبيرة تُضاف دراسة جيوفيزيائية (GPR/ERT) للحصول على صورة شاملة.", questionEn: "What tests are required before any grouting operation?", answerEn: "The minimum required: soil type identification (SPT or CPT), permeability measurement, and laboratory sample analysis. For larger projects, a geophysical study (GPR/ERT) is added for a comprehensive picture." },
+    { question: "كيف تُقيَّم جودة ونجاح عملية الحقن بعد التنفيذ؟", answer: "عبر اختبارات تحقق ما بعد الحقن: CPT أو اختبار ضغط المياه لقياس التحسن في خصائص التربة، مراقبة أجهزة قياس الهبوط، والفحص البصري للتشققات. تُقارَن النتائج بالقياسات الأولية.", questionEn: "How is grouting quality and success evaluated post-execution?", answerEn: "Through post-grouting verification tests: CPT or water pressure tests measuring soil property improvement, settlement monitoring instruments, and visual crack inspection. Results are compared against baseline measurements." },
+    { question: "ما العوامل التي تُحدد تكلفة مشروع حقن التربة؟", answer: "الأهم: عمق الحقن، نوع المادة المستخدمة، تعقيد المشروع وإمكانية الوصول، كمية الحقن المطلوبة، ووجود إنشاءات حساسة مجاورة تستدعي ضوابط إضافية.", questionEn: "What factors determine the cost of a soil grouting project?", answerEn: "Key factors: injection depth, material type used, project complexity and access, required grouting volume, and presence of sensitive adjacent structures requiring additional controls." }
+  ], faqEn: [
       { question: "When is soil grouting the right solution?", answer: "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly." },
       { question: "How is cement grouting different from other grouts?", answer: "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective." },
       { question: "How do you choose the mix and viscosity?", answer: "We base it on ground type, test results, and the treatment objective. In many cases, mixes are adjusted progressively to balance penetration and control." },
@@ -5185,7 +5183,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "geotech-encyclopedia-20",
+    slug: "collapsible-soils-wetting-risks-and-treatment-approaches",
     image: {
       url: "/favicon.webp",
       alt: "التربة الانهيارية (Collapsible Soil): مخاطر الغمر بالماء وكيفية معالجتها",
@@ -5305,12 +5303,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "كيف نتحقق من وجود تكهفات أو فراغات تحت الأرض؟", answer: "عادة ندمج المسح الجيوفيزيائي مع الحفر الاستكشافي (Cavity Probing) حسب حساسية الموقع. الهدف هو تحويل “مؤشرات” إلى “حقائق” قبل اتخاذ قرار المعالجة." },
-      { question: "هل كل فراغ يعني خطرًا مباشرًا؟", answer: "ليس بالضرورة. نقيّم حجم الفراغ وعمقه وموقعه بالنسبة للأحمال ومصادر المياه، ثم نحدد مستوى الخطورة واحتمال التطور." },
-      { question: "ما الحلول الشائعة بعد اكتشاف الفراغات؟", answer: "قد تشمل الحقن الأسمنتي أو تحسين الصرف أو تدعيم موضعي حسب السبب. اختيار الحل يعتمد على سبب الفراغ (تكهف كارستي، تسرب مياه، ردم ضعيف…إلخ)." },
-      { question: "كيف تقللون مفاجآت الموقع أثناء التنفيذ؟", answer: "بالتحقق المرحلي، وربط البيانات الجيوفيزيائية بالملاحظات الميدانية، ووضع حدود واضحة لنطاق العمل وتحديث خطة المعالجة عند ظهور معطيات جديدة." },
-    ],
-    faqEn: [
+    { question: "كيف تتكوّن التكهفات الكارستية تحت المباني؟", answer: "تتكوّن عادة في الصخور الكلسية أو الجبسية عندما تُذيب المياه الحمضية المعادن تدريجياً عبر الشقوق. في المناطق الجافة كالمملكة العربية السعودية يكون الجبس المصدر الرئيسي للتكهفات.", questionEn: "How do karstic cavities form beneath buildings?", answerEn: "They typically form in limestone or gypsum rock when acidic water gradually dissolves minerals through fractures. In arid regions like Saudi Arabia, gypsum is the main source of cavity formation." },
+    { question: "ما الخطوات الأولى عند اكتشاف تكهف تحت مبنى قائم؟", answer: "أولاً التوثيق والقياس الدقيق لموقع وحجم التكهف، ثم تقييم استقرار البلاطة فوقه، ثم تحديد مصدر التكهف لمنع توسعه، وأخيراً اختيار طريقة الملء المناسبة.", questionEn: "What are the first steps when a cavity is discovered beneath an existing building?", answerEn: "First, accurately document and measure cavity location and size; assess slab stability above it; identify the cavity source to prevent expansion; then select the appropriate filling method." },
+    { question: "هل يمكن أن يتوسع التكهف بعد الملء بالحقن؟", answer: "إذا لم يُعالَج مصدر الماء المسبّب للتكهف، فنعم يمكن تكوّن تكهفات جديدة قريبة. لذلك الحقن وحده غير كافٍ دون معالجة العوامل المُسبّبة.", questionEn: "Can the cavity expand again after grouting?", answerEn: "If the water source causing the cavity is not addressed, new adjacent cavities can form. This is why grouting alone is insufficient without treating the underlying causes." },
+    { question: "ما الفرق بين معالجة تكهف جاف وآخر مملوء بالماء؟", answer: "التكهف الجاف يُملأ بمعجون أسمنتي أو رغوي مباشرة. التكهف المائي يحتاج معجوناً سريع التصلّد أو مادة تتفاعل مع الماء كالبولي يوريثان قبل الملء الكامل.", questionEn: "What is the difference between treating a dry cavity and a water-filled one?", answerEn: "Dry cavities are filled directly with cement or foam grout. Water-filled cavities require fast-setting grout or water-reactive material like polyurethane before full filling." }
+  ], faqEn: [
       { question: "How do we confirm cavities/voids below ground?", answer: "A reliable workflow combines geophysics with targeted probing/drilling where needed. The goal is to turn anomalies into confirmed targets before remediation." },
       { question: "Is every void an immediate hazard?", answer: "Not necessarily. Risk depends on size, depth, location relative to loads, and water conditions. We assess both severity and likelihood of progression." },
       { question: "What happens after voids are detected?", answer: "Common options include cement grouting, drainage improvements, or localized strengthening depending on root cause (karst, leakage, weak backfill, etc.)." },
@@ -5328,9 +5325,9 @@ export const articles: ArticleContent[] = [
     categoriesEn: ["Grouting & Improvement Encyclopedia", "Geotechnical Engineering", "Soil Grouting", "Ground Improvement Library"],
     date: "2025-12-24",
     readTime: "3 دقيقة",
-    readTimeEn: "2 min",
+    readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "geotech-encyclopedia-21",
+    slug: "voids-beneath-floor-slabs-causes-risks-and-repair-options",
     image: {
       url: "/favicon.webp",
       alt: "الفراغات تحت بلاطات الأرضيات: الأسباب، المخاطر، وطرق المعالجة",
@@ -5379,7 +5376,7 @@ export const articles: ArticleContent[] = [
   **ب‌- تقنيات الرفع**  
   - **رفع البلاطة الخرسانية (Mudjacking / Slab Jacking):** حقن مواد مملوءة في الفراغات لرفع البلاطة وتسويتها.  
   
-  **ت‌- تعزيز الأساسيات**  
+  **ت‌- تعزيز الأساسات**  
   - اعتماد الخوازيق الصغيرة أو دعامات تقوية في الحالات الحرجة لضمان استقرار البلاطات.  
   
   ### المعايير والمواصفات  
@@ -5455,12 +5452,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "كيف نتحقق من وجود تكهفات أو فراغات تحت الأرض؟", answer: "عادة ندمج المسح الجيوفيزيائي مع الحفر الاستكشافي (Cavity Probing) حسب حساسية الموقع. الهدف هو تحويل “مؤشرات” إلى “حقائق” قبل اتخاذ قرار المعالجة." },
-      { question: "هل كل فراغ يعني خطرًا مباشرًا؟", answer: "ليس بالضرورة. نقيّم حجم الفراغ وعمقه وموقعه بالنسبة للأحمال ومصادر المياه، ثم نحدد مستوى الخطورة واحتمال التطور." },
-      { question: "ما الحلول الشائعة بعد اكتشاف الفراغات؟", answer: "قد تشمل الحقن الأسمنتي أو تحسين الصرف أو تدعيم موضعي حسب السبب. اختيار الحل يعتمد على سبب الفراغ (تكهف كارستي، تسرب مياه، ردم ضعيف…إلخ)." },
-      { question: "كيف تقللون مفاجآت الموقع أثناء التنفيذ؟", answer: "بالتحقق المرحلي، وربط البيانات الجيوفيزيائية بالملاحظات الميدانية، ووضع حدود واضحة لنطاق العمل وتحديث خطة المعالجة عند ظهور معطيات جديدة." },
-    ],
-    faqEn: [
+    { question: "كيف تُختار أنسب تقنية حقن لكل موقع؟", answer: "القرار يستند إلى نوع التربة ومشكلتها الجوهرية: ترب رملية نافذة تناسبها حقن الأسمنت والنفاذ، الترب الطينية تحتاج حقناً كيميائياً، والترب الهشة قد تتطلب Jet Grouting لتكوين أعمدة داعمة.", questionEn: "How is the most appropriate grouting technique selected for each site?", answerEn: "The decision is based on soil type and core problem: permeable sandy soils suit cement and permeation grouting, clays need chemical grouting, and weak soils may require Jet Grouting to form support columns." },
+    { question: "ما الاختبارات الضرورية قبل تنفيذ أي عملية حقن؟", answer: "الحد الأدنى المطلوب: تحديد نوع التربة (SPT أو CPT)، قياس النفاذية، وتحليل عينات مختبرية. في المشاريع الكبيرة تُضاف دراسة جيوفيزيائية (GPR/ERT) للحصول على صورة شاملة.", questionEn: "What tests are required before any grouting operation?", answerEn: "The minimum required: soil type identification (SPT or CPT), permeability measurement, and laboratory sample analysis. For larger projects, a geophysical study (GPR/ERT) is added for a comprehensive picture." },
+    { question: "كيف تُقيَّم جودة ونجاح عملية الحقن بعد التنفيذ؟", answer: "عبر اختبارات تحقق ما بعد الحقن: CPT أو اختبار ضغط المياه لقياس التحسن في خصائص التربة، مراقبة أجهزة قياس الهبوط، والفحص البصري للتشققات. تُقارَن النتائج بالقياسات الأولية.", questionEn: "How is grouting quality and success evaluated post-execution?", answerEn: "Through post-grouting verification tests: CPT or water pressure tests measuring soil property improvement, settlement monitoring instruments, and visual crack inspection. Results are compared against baseline measurements." },
+    { question: "ما العوامل التي تُحدد تكلفة مشروع حقن التربة؟", answer: "الأهم: عمق الحقن، نوع المادة المستخدمة، تعقيد المشروع وإمكانية الوصول، كمية الحقن المطلوبة، ووجود إنشاءات حساسة مجاورة تستدعي ضوابط إضافية.", questionEn: "What factors determine the cost of a soil grouting project?", answerEn: "Key factors: injection depth, material type used, project complexity and access, required grouting volume, and presence of sensitive adjacent structures requiring additional controls." }
+  ], faqEn: [
       { question: "How do we confirm cavities/voids below ground?", answer: "A reliable workflow combines geophysics with targeted probing/drilling where needed. The goal is to turn anomalies into confirmed targets before remediation." },
       { question: "Is every void an immediate hazard?", answer: "Not necessarily. Risk depends on size, depth, location relative to loads, and water conditions. We assess both severity and likelihood of progression." },
       { question: "What happens after voids are detected?", answer: "Common options include cement grouting, drainage improvements, or localized strengthening depending on root cause (karst, leakage, weak backfill, etc.)." },
@@ -5480,7 +5476,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "geotech-encyclopedia-22",
+    slug: "impact-of-nearby-construction-on-existing-building-stability",
     image: {
       url: "/favicon.webp",
       alt: "تأثير الأعمال الإنشائية المجاورة على استقرار المباني القائمة",
@@ -5669,12 +5665,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "متى يكون حقن التربة هو الخيار الأنسب؟", answer: "يكون مناسبًا عند الحاجة لتحسين خواص التربة تحت الأساسات، تقليل الهبوط، أو معالجة مسارات تسرب المياه—خصوصًا عندما تكون أعمال الحفر/الاستبدال غير ممكنة أو مكلفة." },
-      { question: "ما الفرق بين الحقن الأسمنتي وطرق الحقن الأخرى؟", answer: "الحقن الأسمنتي يعتمد على ملاط إسمنتي بخصائص لزوجة مناسبة، بينما توجد مواد أخرى (كيميائية/ميكروفاين) لظروف خاصة. اختيار المادة مرتبط بحجم المسام، النفاذية، والهدف (تقوية/عزل)." },
-      { question: "كيف نحدد نوع الخلطة واللزوجة المناسبة؟", answer: "نعتمد على طبيعة التربة/الصخور، نتائج الفحوصات، وهدف المعالجة. أحيانًا نبدأ بخليط تمهيدي ثم نعدّل تدريجيًا لتحقيق اختراق أفضل دون إحداث مشاكل جانبية." },
-      { question: "كيف أعرف أن المعالجة نجحت؟", answer: "المؤشرات تشمل استقرار الاستهلاك، تحسن سلوك الهبوط، وتحسن نتائج التحقق (مثل probing/اختبارات أو مراقبة التشققات) حسب خطة المشروع." },
-    ],
-    faqEn: [
+    { question: "كيف تتكوّن التكهفات الكارستية تحت المباني؟", answer: "تتكوّن عادة في الصخور الكلسية أو الجبسية عندما تُذيب المياه الحمضية المعادن تدريجياً عبر الشقوق. في المناطق الجافة كالمملكة العربية السعودية يكون الجبس المصدر الرئيسي للتكهفات.", questionEn: "How do karstic cavities form beneath buildings?", answerEn: "They typically form in limestone or gypsum rock when acidic water gradually dissolves minerals through fractures. In arid regions like Saudi Arabia, gypsum is the main source of cavity formation." },
+    { question: "ما الخطوات الأولى عند اكتشاف تكهف تحت مبنى قائم؟", answer: "أولاً التوثيق والقياس الدقيق لموقع وحجم التكهف، ثم تقييم استقرار البلاطة فوقه، ثم تحديد مصدر التكهف لمنع توسعه، وأخيراً اختيار طريقة الملء المناسبة.", questionEn: "What are the first steps when a cavity is discovered beneath an existing building?", answerEn: "First, accurately document and measure cavity location and size; assess slab stability above it; identify the cavity source to prevent expansion; then select the appropriate filling method." },
+    { question: "هل يمكن أن يتوسع التكهف بعد الملء بالحقن؟", answer: "إذا لم يُعالَج مصدر الماء المسبّب للتكهف، فنعم يمكن تكوّن تكهفات جديدة قريبة. لذلك الحقن وحده غير كافٍ دون معالجة العوامل المُسبّبة.", questionEn: "Can the cavity expand again after grouting?", answerEn: "If the water source causing the cavity is not addressed, new adjacent cavities can form. This is why grouting alone is insufficient without treating the underlying causes." },
+    { question: "ما الفرق بين معالجة تكهف جاف وآخر مملوء بالماء؟", answer: "التكهف الجاف يُملأ بمعجون أسمنتي أو رغوي مباشرة. التكهف المائي يحتاج معجوناً سريع التصلّد أو مادة تتفاعل مع الماء كالبولي يوريثان قبل الملء الكامل.", questionEn: "What is the difference between treating a dry cavity and a water-filled one?", answerEn: "Dry cavities are filled directly with cement or foam grout. Water-filled cavities require fast-setting grout or water-reactive material like polyurethane before full filling." }
+  ], faqEn: [
       { question: "When is soil grouting the right solution?", answer: "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly." },
       { question: "How is cement grouting different from other grouts?", answer: "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective." },
       { question: "How do you choose the mix and viscosity?", answer: "We base it on ground type, test results, and the treatment objective. In many cases, mixes are adjusted progressively to balance penetration and control." },
@@ -5692,9 +5687,9 @@ export const articles: ArticleContent[] = [
     categoriesEn: ["Grouting & Improvement Encyclopedia", "Geotechnical Engineering", "Soil Grouting", "Ground Improvement Library"],
     date: "2025-12-30",
     readTime: "3 دقيقة",
-    readTimeEn: "2 min",
+    readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "geotech-encyclopedia-23",
+    slug: "natural-sinkholes-formation-mechanisms-and-detection",
     image: {
       url: "/favicon.webp",
       alt: "التكهفات الطبيعية (Sinkholes): كيف تتكون وكيف نكتشفها؟",
@@ -5837,12 +5832,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "كيف نتحقق من وجود تكهفات أو فراغات تحت الأرض؟", answer: "عادة ندمج المسح الجيوفيزيائي مع الحفر الاستكشافي (Cavity Probing) حسب حساسية الموقع. الهدف هو تحويل “مؤشرات” إلى “حقائق” قبل اتخاذ قرار المعالجة." },
-      { question: "هل كل فراغ يعني خطرًا مباشرًا؟", answer: "ليس بالضرورة. نقيّم حجم الفراغ وعمقه وموقعه بالنسبة للأحمال ومصادر المياه، ثم نحدد مستوى الخطورة واحتمال التطور." },
-      { question: "ما الحلول الشائعة بعد اكتشاف الفراغات؟", answer: "قد تشمل الحقن الأسمنتي أو تحسين الصرف أو تدعيم موضعي حسب السبب. اختيار الحل يعتمد على سبب الفراغ (تكهف كارستي، تسرب مياه، ردم ضعيف…إلخ)." },
-      { question: "كيف تقللون مفاجآت الموقع أثناء التنفيذ؟", answer: "بالتحقق المرحلي، وربط البيانات الجيوفيزيائية بالملاحظات الميدانية، ووضع حدود واضحة لنطاق العمل وتحديث خطة المعالجة عند ظهور معطيات جديدة." },
-    ],
-    faqEn: [
+    { question: "كيف تُختار أنسب تقنية حقن لكل موقع؟", answer: "القرار يستند إلى نوع التربة ومشكلتها الجوهرية: ترب رملية نافذة تناسبها حقن الأسمنت والنفاذ، الترب الطينية تحتاج حقناً كيميائياً، والترب الهشة قد تتطلب Jet Grouting لتكوين أعمدة داعمة.", questionEn: "How is the most appropriate grouting technique selected for each site?", answerEn: "The decision is based on soil type and core problem: permeable sandy soils suit cement and permeation grouting, clays need chemical grouting, and weak soils may require Jet Grouting to form support columns." },
+    { question: "ما الاختبارات الضرورية قبل تنفيذ أي عملية حقن؟", answer: "الحد الأدنى المطلوب: تحديد نوع التربة (SPT أو CPT)، قياس النفاذية، وتحليل عينات مختبرية. في المشاريع الكبيرة تُضاف دراسة جيوفيزيائية (GPR/ERT) للحصول على صورة شاملة.", questionEn: "What tests are required before any grouting operation?", answerEn: "The minimum required: soil type identification (SPT or CPT), permeability measurement, and laboratory sample analysis. For larger projects, a geophysical study (GPR/ERT) is added for a comprehensive picture." },
+    { question: "كيف تُقيَّم جودة ونجاح عملية الحقن بعد التنفيذ؟", answer: "عبر اختبارات تحقق ما بعد الحقن: CPT أو اختبار ضغط المياه لقياس التحسن في خصائص التربة، مراقبة أجهزة قياس الهبوط، والفحص البصري للتشققات. تُقارَن النتائج بالقياسات الأولية.", questionEn: "How is grouting quality and success evaluated post-execution?", answerEn: "Through post-grouting verification tests: CPT or water pressure tests measuring soil property improvement, settlement monitoring instruments, and visual crack inspection. Results are compared against baseline measurements." },
+    { question: "ما العوامل التي تُحدد تكلفة مشروع حقن التربة؟", answer: "الأهم: عمق الحقن، نوع المادة المستخدمة، تعقيد المشروع وإمكانية الوصول، كمية الحقن المطلوبة، ووجود إنشاءات حساسة مجاورة تستدعي ضوابط إضافية.", questionEn: "What factors determine the cost of a soil grouting project?", answerEn: "Key factors: injection depth, material type used, project complexity and access, required grouting volume, and presence of sensitive adjacent structures requiring additional controls." }
+  ], faqEn: [
       { question: "How do we confirm cavities/voids below ground?", answer: "A reliable workflow combines geophysics with targeted probing/drilling where needed. The goal is to turn anomalies into confirmed targets before remediation." },
       { question: "Is every void an immediate hazard?", answer: "Not necessarily. Risk depends on size, depth, location relative to loads, and water conditions. We assess both severity and likelihood of progression." },
       { question: "What happens after voids are detected?", answer: "Common options include cement grouting, drainage improvements, or localized strengthening depending on root cause (karst, leakage, weak backfill, etc.)." },
@@ -5860,9 +5854,9 @@ export const articles: ArticleContent[] = [
     categoriesEn: ["Grouting & Improvement Encyclopedia", "Geotechnical Engineering", "Soil Grouting", "Ground Improvement Library"],
     date: "2026-01-02",
     readTime: "3 دقيقة",
-    readTimeEn: "2 min",
+    readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "geotech-encyclopedia-24",
+    slug: "how-moisture-changes-the-behavior-of-clayey-and-sandy-soils",
     image: {
       url: "/favicon.webp",
       alt: "دور الرطوبة في تغيير خصائص التربة الطينية والرملية",
@@ -5895,7 +5889,7 @@ export const articles: ArticleContent[] = [
   
   ### علاقة الرطوبة بعمليات تحسين التربة وحقنها  
   في مجال تحسين الأرض (Ground Improvement)، يُعتبر التعرف على درجة تشبع التربة خطوة هامة لاختيار تقنية الحقن المناسبة:  
-  - **حقن الأسمنت (Cement Grouting):** فعّال في التربة الرملية المتجانسة ذات النفاذية المتوسطة، حيث تحدد الرطوبة سرعة هجينة الاسمنت (Setting Time) وانتشاره داخل الفراغات.  
+  - **حقن الأسمنت (Cement Grouting):** فعّال في التربة الرملية المتجانسة ذات النفاذية المتوسطة، حيث تحدد الرطوبة زمن التصلّب (Setting Time) وانتشاره داخل الفراغات.  
   - **حقن البولي يوريثان (Polyurethane Injection):** يتميز بقدرته على التفاعل مع الماء لتكوين رغوة-expandable تقلل نفاذية التربة وتزيد كثافتها، خاصة في التربة الطينية الرطبة.  
   - **حقن النفث (Jet Grouting):** يعتمد على نفث المواد بقوة عالية، حيث تلعب الرطوبة دورًا في تسهيل تفتيت تماسك الطين أو الرمل لتشكيل أعمدة خرسانية قوية.
   
@@ -5957,12 +5951,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "متى يكون حقن التربة هو الخيار الأنسب؟", answer: "يكون مناسبًا عند الحاجة لتحسين خواص التربة تحت الأساسات، تقليل الهبوط، أو معالجة مسارات تسرب المياه—خصوصًا عندما تكون أعمال الحفر/الاستبدال غير ممكنة أو مكلفة." },
-      { question: "ما الفرق بين الحقن الأسمنتي وطرق الحقن الأخرى؟", answer: "الحقن الأسمنتي يعتمد على ملاط إسمنتي بخصائص لزوجة مناسبة، بينما توجد مواد أخرى (كيميائية/ميكروفاين) لظروف خاصة. اختيار المادة مرتبط بحجم المسام، النفاذية، والهدف (تقوية/عزل)." },
-      { question: "كيف نحدد نوع الخلطة واللزوجة المناسبة؟", answer: "نعتمد على طبيعة التربة/الصخور، نتائج الفحوصات، وهدف المعالجة. أحيانًا نبدأ بخليط تمهيدي ثم نعدّل تدريجيًا لتحقيق اختراق أفضل دون إحداث مشاكل جانبية." },
-      { question: "كيف أعرف أن المعالجة نجحت؟", answer: "المؤشرات تشمل استقرار الاستهلاك، تحسن سلوك الهبوط، وتحسن نتائج التحقق (مثل probing/اختبارات أو مراقبة التشققات) حسب خطة المشروع." },
-    ],
-    faqEn: [
+    { question: "كيف تتكوّن التكهفات الكارستية تحت المباني؟", answer: "تتكوّن عادة في الصخور الكلسية أو الجبسية عندما تُذيب المياه الحمضية المعادن تدريجياً عبر الشقوق. في المناطق الجافة كالمملكة العربية السعودية يكون الجبس المصدر الرئيسي للتكهفات.", questionEn: "How do karstic cavities form beneath buildings?", answerEn: "They typically form in limestone or gypsum rock when acidic water gradually dissolves minerals through fractures. In arid regions like Saudi Arabia, gypsum is the main source of cavity formation." },
+    { question: "ما الخطوات الأولى عند اكتشاف تكهف تحت مبنى قائم؟", answer: "أولاً التوثيق والقياس الدقيق لموقع وحجم التكهف، ثم تقييم استقرار البلاطة فوقه، ثم تحديد مصدر التكهف لمنع توسعه، وأخيراً اختيار طريقة الملء المناسبة.", questionEn: "What are the first steps when a cavity is discovered beneath an existing building?", answerEn: "First, accurately document and measure cavity location and size; assess slab stability above it; identify the cavity source to prevent expansion; then select the appropriate filling method." },
+    { question: "هل يمكن أن يتوسع التكهف بعد الملء بالحقن؟", answer: "إذا لم يُعالَج مصدر الماء المسبّب للتكهف، فنعم يمكن تكوّن تكهفات جديدة قريبة. لذلك الحقن وحده غير كافٍ دون معالجة العوامل المُسبّبة.", questionEn: "Can the cavity expand again after grouting?", answerEn: "If the water source causing the cavity is not addressed, new adjacent cavities can form. This is why grouting alone is insufficient without treating the underlying causes." },
+    { question: "ما الفرق بين معالجة تكهف جاف وآخر مملوء بالماء؟", answer: "التكهف الجاف يُملأ بمعجون أسمنتي أو رغوي مباشرة. التكهف المائي يحتاج معجوناً سريع التصلّد أو مادة تتفاعل مع الماء كالبولي يوريثان قبل الملء الكامل.", questionEn: "What is the difference between treating a dry cavity and a water-filled one?", answerEn: "Dry cavities are filled directly with cement or foam grout. Water-filled cavities require fast-setting grout or water-reactive material like polyurethane before full filling." }
+  ], faqEn: [
       { question: "When is soil grouting the right solution?", answer: "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly." },
       { question: "How is cement grouting different from other grouts?", answer: "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective." },
       { question: "How do you choose the mix and viscosity?", answer: "We base it on ground type, test results, and the treatment objective. In many cases, mixes are adjusted progressively to balance penetration and control." },
@@ -5980,9 +5973,9 @@ export const articles: ArticleContent[] = [
     categoriesEn: ["Grouting & Improvement Encyclopedia", "Geotechnical Engineering", "Soil Grouting", "Ground Improvement Library"],
     date: "2026-01-05",
     readTime: "4 دقيقة",
-    readTimeEn: "3 min",
+    readTimeEn: "4 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "geotech-encyclopedia-25",
+    slug: "cavity-detection-methods-compared-accuracy-and-signal-characteristics",
     image: {
       url: "/favicon.webp",
       alt: "تقنيات كشف الفراغات: مقارنة دقة وإشارات كل تقنية",
@@ -6125,11 +6118,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "كيف نتحقق من وجود تكهفات أو فراغات تحت الأرض؟", answer: "عادة ندمج المسح الجيوفيزيائي مع الحفر الاستكشافي (Cavity Probing) حسب حساسية الموقع. الهدف هو تحويل “مؤشرات” إلى “حقائق” قبل اتخاذ قرار المعالجة." },
-      { question: "هل كل فراغ يعني خطرًا مباشرًا؟", answer: "ليس بالضرورة. نقيّم حجم الفراغ وعمقه وموقعه بالنسبة للأحمال ومصادر المياه، ثم نحدد مستوى الخطورة واحتمال التطور." },
-      { question: "ما الحلول الشائعة بعد اكتشاف الفراغات؟", answer: "قد تشمل الحقن الأسمنتي أو تحسين الصرف أو تدعيم موضعي حسب السبب. اختيار الحل يعتمد على سبب الفراغ (تكهف كارستي، تسرب مياه، ردم ضعيف…إلخ)." },
-      { question: "كيف تقللون مفاجآت الموقع أثناء التنفيذ؟", answer: "بالتحقق المرحلي، وربط البيانات الجيوفيزيائية بالملاحظات الميدانية، ووضع حدود واضحة لنطاق العمل وتحديث خطة المعالجة عند ظهور معطيات جديدة." },
-    ],
+    { question: "متى يُوصى بالكشف الجيوفيزيائي قبل حقن التربة؟", answer: "يُوصى به دائماً عند وجود شك في حجم أو موقع التكهفات، وعندما تكون تكاليف الحقن الغير موجَّه مرتفعة، وفي المواقع التي يُشكّل فيها الحقن غير الدقيق خطراً على المنشأة.", questionEn: "When is geophysical detection recommended before grouting?", answerEn: "Always recommended when cavity size or location is uncertain, when unguided grouting costs are high, and when imprecise injection poses structural risk." },
+    { question: "كيف تختلف أساليب كشف التكهفات في التربة الصحراوية؟", answer: "التربة الصحراوية الجافة تُعطي أفضل النتائج مع GPR لأن الجفاف يُقلل امتصاص الإشارة. لكن التغيرات الكبيرة في درجات الحرارة قد تؤثر على معايرة الأجهزة وتستدعي قراءات صباحية.", questionEn: "How do cavity detection methods differ in desert soil?", answerEn: "Arid desert soil gives best GPR results as dryness reduces signal absorption. However, large temperature variations can affect instrument calibration and may require morning readings." },
+    { question: "ما دقة تحديد عمق التكهف بجهاز GPR؟", answer: "في التربة المتجانسة الجافة: دقة ±5-10% من العمق الفعلي. تتأثر الدقة بتغيّر خصائص التربة مع العمق وبوجود طبقات رطبة تُغيّر سرعة انتشار الموجة.", questionEn: "How accurate is GPR in determining cavity depth?", answerEn: "In homogeneous dry soil: ±5-10% of actual depth. Accuracy is affected by soil property variation with depth and moist layers that alter wave propagation speed." },
+    { question: "هل يمكن تمييز التكهف الجاف عن المملوء بماء بجهاز GPR؟", answer: "نعم، التكهف المائي يُعطي انعكاساً أقوى بسبب الفرق الكبير في الثابت العزلي، بينما التكهف الجاف يُعطي انعكاساً أضعف. الفرق في طبيعة الانعكاس يُساعد في التمييز.", questionEn: "Can dry and water-filled cavities be distinguished with GPR?", answerEn: "Yes, water-filled cavities produce stronger reflections due to high dielectric contrast, while dry cavities give weaker reflections. The reflection character helps differentiate them." }
+  ],
     faqEn: [
       { question: "How do we confirm cavities/voids below ground?", answer: "A reliable workflow combines geophysics with targeted probing/drilling where needed. The goal is to turn anomalies into confirmed targets before remediation." },
       { question: "Is every void an immediate hazard?", answer: "Not necessarily. Risk depends on size, depth, location relative to loads, and water conditions. We assess both severity and likelihood of progression." },
@@ -6150,7 +6143,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "geotech-encyclopedia-26",
+    slug: "groundpenetrating-radar-gpr-how-it-works-where-it-excels-and-where-it-misleads",
     image: {
       url: "/favicon.webp",
       alt: "رادار الاختراق الأرضي (GPR): كيف يعمل، أين ينجح، وأين يخدعنا؟",
@@ -6273,11 +6266,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Khobar](/locations/khobar)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "ماذا يمكن أن تكشف الاختبارات الجيوفيزيائية في الموقع؟", answer: "تساعد الاختبارات مثل GPR وERT وMASW على تكوين صورة أولية عن الطبقات وتغيّر الخواص تحت السطح، ورصد مؤشرات الفراغات أو التباين في التربة والصخور. اختيار الاختبار يعتمد على عمق الهدف وطبيعة الموقع." },
-      { question: "ما الفرق بين GPR وERT ومتى نستخدم كلًا منهما؟", answer: "GPR مناسب أكثر للأعماق الضحلة نسبيًا ولرصد الأجسام/الفراغات في بيئات معينة، بينما ERT يعطي تصورًا أعمق عن تغيّر المقاومة الكهربائية ويمكن أن يكون مفيدًا في رصد مناطق التشبع أو التكهفات. غالبًا نستخدمهما تكامليًا." },
-      { question: "هل النتائج “قطعية” أم تحتاج تحقق؟", answer: "الجيوفيزياء تعطي مؤشرات قوية لكنها ليست بديلًا عن التحقق. في المواقع الحساسة ننفذ حفر/Cavity Probing للتحقق من الأهداف قبل أي معالجة، ثم نربط النتائج بالتقرير الجيوتقني والمعاينات." },
-      { question: "ما الذي أستلمه في نهاية العمل؟", answer: "تستلم خرائط/مقاطع تفسيرية، وصف المنهجية، حدود الدقة، وتوصيات عملية للخطوة التالية (تحقق، معالجة، أو متابعة)." },
-    ],
+    { question: "ما الفرق بين GPR وERT وMASW وأيهما أختار؟", answer: "GPR لكشف الفراغات والطبقات الضحلة، ERT لتصوير التربة على أعماق أكبر وتحديد نفاذيتها، MASW لقياس صلابة التربة وتصنيف الموقع زلزالياً. الاختيار يعتمد على هدف الدراسة وعمق المنطقة المستهدفة.", questionEn: "What is the difference between GPR, ERT, and MASW — which to choose?", answerEn: "GPR for shallow void and layer detection; ERT for deeper soil imaging and permeability mapping; MASW for soil stiffness and seismic site classification. Choice depends on study objective and target depth." },
+    { question: "كم تستغرق الدراسة الجيوفيزيائية عادة في الموقع؟", answer: "المسح الميداني لموقع متوسط يستغرق يوماً واحداً إلى ثلاثة أيام. التحليل وإعداد التقرير يحتاج أسبوعاً إلى أسبوعين حسب تعقيد البيانات.", questionEn: "How long does a geophysical survey typically take on site?", answerEn: "Field scanning for a typical site takes one to three days. Analysis and report preparation requires one to two weeks depending on data complexity." },
+    { question: "هل يمكن استخدام الدراسة الجيوفيزيائية بديلاً عن الحفر الاستكشافي؟", answer: "لا تُغني الدراسة الجيوفيزيائية كلياً عن الحفر لأخذ عينات مباشرة، لكنها تُوجِّه الحفر نحو المناطق الأكثر أهمية وتُقلل من عدد الحفريات الضرورية.", questionEn: "Can geophysical surveys replace exploratory drilling?", answerEn: "They cannot fully replace drilling for direct samples, but they guide drilling toward the most critical zones and reduce the number of required boreholes." },
+    { question: "ما المعلومات التي أحتاجها لتفسير تقرير الدراسة الجيوفيزيائية؟", answer: "أهمها: معرفة نوع التربة العامة في المنطقة، أعماق المياه الجوفية إن كانت متوفرة، وأي بيانات حفريات سابقة. هذه المعلومات تُساعد المهندس على تحسين دقة التفسير.", questionEn: "What background information do I need to interpret a geophysical report?", answerEn: "Key information: general soil type in the area, groundwater depth if available, and any previous borehole data. This helps the engineer improve interpretation accuracy." }
+  ],
     faqEn: [
       { question: "What can geophysical tests reveal on site?", answer: "Methods such as GPR, ERT, and MASW provide a subsurface picture—layering trends, anomalies, and indicators of voids or weak zones. The right method depends on target depth and ground conditions." },
       { question: "GPR vs ERT: when do we use each?", answer: "GPR is often effective for shallow targets and discrete features in suitable soils, while ERT can image deeper resistivity contrasts and moisture-related variations. Many projects benefit from a combined approach." },
@@ -6296,9 +6289,9 @@ export const articles: ArticleContent[] = [
     categoriesEn: ["Grouting & Improvement Encyclopedia", "Geotechnical Engineering", "Soil Grouting", "Ground Improvement Library"],
     date: "2026-01-11",
     readTime: "3 دقيقة",
-    readTimeEn: "2 min",
+    readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "geotech-encyclopedia-27",
+    slug: "electrical-resistivity-tomography-ert-mapping-resistivity-to-detect-water-and-voids",
     image: {
       url: "/favicon.webp",
       alt: "المسح الكهربائي (ERT): رسم خرائط المقاومية للكشف عن المياه والفراغات",
@@ -6389,12 +6382,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "ماذا يمكن أن تكشف الاختبارات الجيوفيزيائية في الموقع؟", answer: "تساعد الاختبارات مثل GPR وERT وMASW على تكوين صورة أولية عن الطبقات وتغيّر الخواص تحت السطح، ورصد مؤشرات الفراغات أو التباين في التربة والصخور. اختيار الاختبار يعتمد على عمق الهدف وطبيعة الموقع." },
-      { question: "ما الفرق بين GPR وERT ومتى نستخدم كلًا منهما؟", answer: "GPR مناسب أكثر للأعماق الضحلة نسبيًا ولرصد الأجسام/الفراغات في بيئات معينة، بينما ERT يعطي تصورًا أعمق عن تغيّر المقاومة الكهربائية ويمكن أن يكون مفيدًا في رصد مناطق التشبع أو التكهفات. غالبًا نستخدمهما تكامليًا." },
-      { question: "هل النتائج “قطعية” أم تحتاج تحقق؟", answer: "الجيوفيزياء تعطي مؤشرات قوية لكنها ليست بديلًا عن التحقق. في المواقع الحساسة ننفذ حفر/Cavity Probing للتحقق من الأهداف قبل أي معالجة، ثم نربط النتائج بالتقرير الجيوتقني والمعاينات." },
-      { question: "ما الذي أستلمه في نهاية العمل؟", answer: "تستلم خرائط/مقاطع تفسيرية، وصف المنهجية، حدود الدقة، وتوصيات عملية للخطوة التالية (تحقق، معالجة، أو متابعة)." },
-    ],
-    faqEn: [
+    { question: "ما الفرق بين MASW وReMi في تحليل الموجات السطحية؟", answer: "كلاهما يحلل موجات Rayleigh، لكن MASW يستخدم مصدراً نشطاً (ضربة مطرقة) وهو أسرع وأكثر تحكماً، بينما ReMi يعتمد على الضوضاء السلبية المحيطة وأفضل في المناطق الحضرية المزدحمة.", questionEn: "What is the difference between MASW and ReMi in surface wave analysis?", answerEn: "Both analyse Rayleigh waves, but MASW uses an active source (hammer blow) and is faster and more controlled, while ReMi relies on passive ambient noise and performs better in busy urban areas." },
+    { question: "ما المعلومات التي يوفرها MASW ولا توفرها طرق أخرى؟", answer: "MASW يُقدّر معامل القص (Vs30) الذي يُستخدم في تصميم المنشآت الزلزالية وتصنيف الموقع حسب IBC/ASCE. هذه المعلومة لا تتوفر مباشرة من CPT أو SPT.", questionEn: "What information does MASW provide that other methods do not?", answerEn: "MASW estimates the shear wave velocity profile (Vs30) used in seismic structural design and site classification per IBC/ASCE — information not directly available from CPT or SPT." },
+    { question: "كيف يُؤثّر سمك التربة الناعمة على نتائج MASW؟", answer: "كلما زاد سمك التربة الناعمة، انخفضت سرعة الموجة الكلية وأصبح الموقع أكثر حساسية للزلازل. التضخيم يرتبط عكسياً بسرعة الموجة وطردياً مع سمك الطبقة الناعمة.", questionEn: "How does soft soil thickness affect MASW results?", answerEn: "Greater soft soil thickness lowers overall wave velocity and increases seismic site amplification. Amplification is inversely related to wave velocity and directly related to soft layer thickness." },
+    { question: "هل يمكن دمج MASW مع ERT في موقع واحد؟", answer: "نعم، وهو شائع في التحقيقات الشاملة. ERT يُعطي صورة المقاومة الكهربائية بينما MASW يُعطي صورة السرعة الميكانيكية، ودمجهما يُقلل الغموض في تفسير النتائج.", questionEn: "Can MASW and ERT be combined at the same site?", answerEn: "Yes, this is common in comprehensive investigations. ERT provides the resistivity image while MASW provides the mechanical velocity profile — combining both reduces ambiguity in interpretation." }
+  ], faqEn: [
       { question: "What can geophysical tests reveal on site?", answer: "Methods such as GPR, ERT, and MASW provide a subsurface picture—layering trends, anomalies, and indicators of voids or weak zones. The right method depends on target depth and ground conditions." },
       { question: "GPR vs ERT: when do we use each?", answer: "GPR is often effective for shallow targets and discrete features in suitable soils, while ERT can image deeper resistivity contrasts and moisture-related variations. Many projects benefit from a combined approach." },
       { question: "Are results conclusive?", answer: "Geophysics provides strong indicators, but critical decisions typically require verification. Targeted probing/drilling is used to confirm anomalies before remediation." },
@@ -6414,7 +6406,7 @@ export const articles: ArticleContent[] = [
     readTime: "2 دقيقة",
     readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "geotech-encyclopedia-28",
+    slug: "microgravity-surveys-highsensitivity-detection-of-deep-cavities",
     image: {
       url: "/favicon.webp",
       alt: "الميكروغرافيتي (Microgravity): التقنية الأدق لكشف التكهفات العميقة",
@@ -6509,12 +6501,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "كيف نتحقق من وجود تكهفات أو فراغات تحت الأرض؟", answer: "عادة ندمج المسح الجيوفيزيائي مع الحفر الاستكشافي (Cavity Probing) حسب حساسية الموقع. الهدف هو تحويل “مؤشرات” إلى “حقائق” قبل اتخاذ قرار المعالجة." },
-      { question: "هل كل فراغ يعني خطرًا مباشرًا؟", answer: "ليس بالضرورة. نقيّم حجم الفراغ وعمقه وموقعه بالنسبة للأحمال ومصادر المياه، ثم نحدد مستوى الخطورة واحتمال التطور." },
-      { question: "ما الحلول الشائعة بعد اكتشاف الفراغات؟", answer: "قد تشمل الحقن الأسمنتي أو تحسين الصرف أو تدعيم موضعي حسب السبب. اختيار الحل يعتمد على سبب الفراغ (تكهف كارستي، تسرب مياه، ردم ضعيف…إلخ)." },
-      { question: "كيف تقللون مفاجآت الموقع أثناء التنفيذ؟", answer: "بالتحقق المرحلي، وربط البيانات الجيوفيزيائية بالملاحظات الميدانية، ووضع حدود واضحة لنطاق العمل وتحديث خطة المعالجة عند ظهور معطيات جديدة." },
-    ],
-    faqEn: [
+    { question: "كيف تُختار أنسب تقنية حقن لكل موقع؟", answer: "القرار يستند إلى نوع التربة ومشكلتها الجوهرية: ترب رملية نافذة تناسبها حقن الأسمنت والنفاذ، الترب الطينية تحتاج حقناً كيميائياً، والترب الهشة قد تتطلب Jet Grouting لتكوين أعمدة داعمة.", questionEn: "How is the most appropriate grouting technique selected for each site?", answerEn: "The decision is based on soil type and core problem: permeable sandy soils suit cement and permeation grouting, clays need chemical grouting, and weak soils may require Jet Grouting to form support columns." },
+    { question: "ما الاختبارات الضرورية قبل تنفيذ أي عملية حقن؟", answer: "الحد الأدنى المطلوب: تحديد نوع التربة (SPT أو CPT)، قياس النفاذية، وتحليل عينات مختبرية. في المشاريع الكبيرة تُضاف دراسة جيوفيزيائية (GPR/ERT) للحصول على صورة شاملة.", questionEn: "What tests are required before any grouting operation?", answerEn: "The minimum required: soil type identification (SPT or CPT), permeability measurement, and laboratory sample analysis. For larger projects, a geophysical study (GPR/ERT) is added for a comprehensive picture." },
+    { question: "كيف تُقيَّم جودة ونجاح عملية الحقن بعد التنفيذ؟", answer: "عبر اختبارات تحقق ما بعد الحقن: CPT أو اختبار ضغط المياه لقياس التحسن في خصائص التربة، مراقبة أجهزة قياس الهبوط، والفحص البصري للتشققات. تُقارَن النتائج بالقياسات الأولية.", questionEn: "How is grouting quality and success evaluated post-execution?", answerEn: "Through post-grouting verification tests: CPT or water pressure tests measuring soil property improvement, settlement monitoring instruments, and visual crack inspection. Results are compared against baseline measurements." },
+    { question: "ما العوامل التي تُحدد تكلفة مشروع حقن التربة؟", answer: "الأهم: عمق الحقن، نوع المادة المستخدمة، تعقيد المشروع وإمكانية الوصول، كمية الحقن المطلوبة، ووجود إنشاءات حساسة مجاورة تستدعي ضوابط إضافية.", questionEn: "What factors determine the cost of a soil grouting project?", answerEn: "Key factors: injection depth, material type used, project complexity and access, required grouting volume, and presence of sensitive adjacent structures requiring additional controls." }
+  ], faqEn: [
       { question: "How do we confirm cavities/voids below ground?", answer: "A reliable workflow combines geophysics with targeted probing/drilling where needed. The goal is to turn anomalies into confirmed targets before remediation." },
       { question: "Is every void an immediate hazard?", answer: "Not necessarily. Risk depends on size, depth, location relative to loads, and water conditions. We assess both severity and likelihood of progression." },
       { question: "What happens after voids are detected?", answer: "Common options include cement grouting, drainage improvements, or localized strengthening depending on root cause (karst, leakage, weak backfill, etc.)." },
@@ -6532,9 +6523,9 @@ export const articles: ArticleContent[] = [
     categoriesEn: ["Grouting & Improvement Encyclopedia", "Geotechnical Engineering", "Soil Grouting", "Ground Improvement Library"],
     date: "2026-01-17",
     readTime: "3 دقيقة",
-    readTimeEn: "2 min",
+    readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "geotech-encyclopedia-29",
+    slug: "seismic-surveys-using-wave-velocity-to-assess-soil-stiffness",
     image: {
       url: "/favicon.webp",
       alt: "المسح السيزمي: قياس سرعة الموجات لتقييم صلابة التربة",
@@ -6665,12 +6656,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "ماذا يمكن أن تكشف الاختبارات الجيوفيزيائية في الموقع؟", answer: "تساعد الاختبارات مثل GPR وERT وMASW على تكوين صورة أولية عن الطبقات وتغيّر الخواص تحت السطح، ورصد مؤشرات الفراغات أو التباين في التربة والصخور. اختيار الاختبار يعتمد على عمق الهدف وطبيعة الموقع." },
-      { question: "ما الفرق بين GPR وERT ومتى نستخدم كلًا منهما؟", answer: "GPR مناسب أكثر للأعماق الضحلة نسبيًا ولرصد الأجسام/الفراغات في بيئات معينة، بينما ERT يعطي تصورًا أعمق عن تغيّر المقاومة الكهربائية ويمكن أن يكون مفيدًا في رصد مناطق التشبع أو التكهفات. غالبًا نستخدمهما تكامليًا." },
-      { question: "هل النتائج “قطعية” أم تحتاج تحقق؟", answer: "الجيوفيزياء تعطي مؤشرات قوية لكنها ليست بديلًا عن التحقق. في المواقع الحساسة ننفذ حفر/Cavity Probing للتحقق من الأهداف قبل أي معالجة، ثم نربط النتائج بالتقرير الجيوتقني والمعاينات." },
-      { question: "ما الذي أستلمه في نهاية العمل؟", answer: "تستلم خرائط/مقاطع تفسيرية، وصف المنهجية، حدود الدقة، وتوصيات عملية للخطوة التالية (تحقق، معالجة، أو متابعة)." },
-    ],
-    faqEn: [
+    { question: "كيف تُختار أنسب تقنية حقن لكل موقع؟", answer: "القرار يستند إلى نوع التربة ومشكلتها الجوهرية: ترب رملية نافذة تناسبها حقن الأسمنت والنفاذ، الترب الطينية تحتاج حقناً كيميائياً، والترب الهشة قد تتطلب Jet Grouting لتكوين أعمدة داعمة.", questionEn: "How is the most appropriate grouting technique selected for each site?", answerEn: "The decision is based on soil type and core problem: permeable sandy soils suit cement and permeation grouting, clays need chemical grouting, and weak soils may require Jet Grouting to form support columns." },
+    { question: "ما الاختبارات الضرورية قبل تنفيذ أي عملية حقن؟", answer: "الحد الأدنى المطلوب: تحديد نوع التربة (SPT أو CPT)، قياس النفاذية، وتحليل عينات مختبرية. في المشاريع الكبيرة تُضاف دراسة جيوفيزيائية (GPR/ERT) للحصول على صورة شاملة.", questionEn: "What tests are required before any grouting operation?", answerEn: "The minimum required: soil type identification (SPT or CPT), permeability measurement, and laboratory sample analysis. For larger projects, a geophysical study (GPR/ERT) is added for a comprehensive picture." },
+    { question: "كيف تُقيَّم جودة ونجاح عملية الحقن بعد التنفيذ؟", answer: "عبر اختبارات تحقق ما بعد الحقن: CPT أو اختبار ضغط المياه لقياس التحسن في خصائص التربة، مراقبة أجهزة قياس الهبوط، والفحص البصري للتشققات. تُقارَن النتائج بالقياسات الأولية.", questionEn: "How is grouting quality and success evaluated post-execution?", answerEn: "Through post-grouting verification tests: CPT or water pressure tests measuring soil property improvement, settlement monitoring instruments, and visual crack inspection. Results are compared against baseline measurements." },
+    { question: "ما العوامل التي تُحدد تكلفة مشروع حقن التربة؟", answer: "الأهم: عمق الحقن، نوع المادة المستخدمة، تعقيد المشروع وإمكانية الوصول، كمية الحقن المطلوبة، ووجود إنشاءات حساسة مجاورة تستدعي ضوابط إضافية.", questionEn: "What factors determine the cost of a soil grouting project?", answerEn: "Key factors: injection depth, material type used, project complexity and access, required grouting volume, and presence of sensitive adjacent structures requiring additional controls." }
+  ], faqEn: [
       { question: "What can geophysical tests reveal on site?", answer: "Methods such as GPR, ERT, and MASW provide a subsurface picture—layering trends, anomalies, and indicators of voids or weak zones. The right method depends on target depth and ground conditions." },
       { question: "GPR vs ERT: when do we use each?", answer: "GPR is often effective for shallow targets and discrete features in suitable soils, while ERT can image deeper resistivity contrasts and moisture-related variations. Many projects benefit from a combined approach." },
       { question: "Are results conclusive?", answer: "Geophysics provides strong indicators, but critical decisions typically require verification. Targeted probing/drilling is used to confirm anomalies before remediation." },
@@ -6690,7 +6680,7 @@ export const articles: ArticleContent[] = [
     readTime: "2 دقيقة",
     readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "geotech-encyclopedia-30",
+    slug: "integrating-geophysical-and-geotechnical-data-for-full-site-characterization",
     image: {
       url: "/favicon.webp",
       alt: "دمج البيانات الجيوفيزيائية والجيوتقنية: الوصول إلى صورة كاملة للموقع",
@@ -6781,12 +6771,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Al Majma’ah](/locations/majmaah)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "ماذا يمكن أن تكشف الاختبارات الجيوفيزيائية في الموقع؟", answer: "تساعد الاختبارات مثل GPR وERT وMASW على تكوين صورة أولية عن الطبقات وتغيّر الخواص تحت السطح، ورصد مؤشرات الفراغات أو التباين في التربة والصخور. اختيار الاختبار يعتمد على عمق الهدف وطبيعة الموقع." },
-      { question: "ما الفرق بين GPR وERT ومتى نستخدم كلًا منهما؟", answer: "GPR مناسب أكثر للأعماق الضحلة نسبيًا ولرصد الأجسام/الفراغات في بيئات معينة، بينما ERT يعطي تصورًا أعمق عن تغيّر المقاومة الكهربائية ويمكن أن يكون مفيدًا في رصد مناطق التشبع أو التكهفات. غالبًا نستخدمهما تكامليًا." },
-      { question: "هل النتائج “قطعية” أم تحتاج تحقق؟", answer: "الجيوفيزياء تعطي مؤشرات قوية لكنها ليست بديلًا عن التحقق. في المواقع الحساسة ننفذ حفر/Cavity Probing للتحقق من الأهداف قبل أي معالجة، ثم نربط النتائج بالتقرير الجيوتقني والمعاينات." },
-      { question: "ما الذي أستلمه في نهاية العمل؟", answer: "تستلم خرائط/مقاطع تفسيرية، وصف المنهجية، حدود الدقة، وتوصيات عملية للخطوة التالية (تحقق، معالجة، أو متابعة)." },
-    ],
-    faqEn: [
+    { question: "كيف تُختار أنسب تقنية حقن لكل موقع؟", answer: "القرار يستند إلى نوع التربة ومشكلتها الجوهرية: ترب رملية نافذة تناسبها حقن الأسمنت والنفاذ، الترب الطينية تحتاج حقناً كيميائياً، والترب الهشة قد تتطلب Jet Grouting لتكوين أعمدة داعمة.", questionEn: "How is the most appropriate grouting technique selected for each site?", answerEn: "The decision is based on soil type and core problem: permeable sandy soils suit cement and permeation grouting, clays need chemical grouting, and weak soils may require Jet Grouting to form support columns." },
+    { question: "ما الاختبارات الضرورية قبل تنفيذ أي عملية حقن؟", answer: "الحد الأدنى المطلوب: تحديد نوع التربة (SPT أو CPT)، قياس النفاذية، وتحليل عينات مختبرية. في المشاريع الكبيرة تُضاف دراسة جيوفيزيائية (GPR/ERT) للحصول على صورة شاملة.", questionEn: "What tests are required before any grouting operation?", answerEn: "The minimum required: soil type identification (SPT or CPT), permeability measurement, and laboratory sample analysis. For larger projects, a geophysical study (GPR/ERT) is added for a comprehensive picture." },
+    { question: "كيف تُقيَّم جودة ونجاح عملية الحقن بعد التنفيذ؟", answer: "عبر اختبارات تحقق ما بعد الحقن: CPT أو اختبار ضغط المياه لقياس التحسن في خصائص التربة، مراقبة أجهزة قياس الهبوط، والفحص البصري للتشققات. تُقارَن النتائج بالقياسات الأولية.", questionEn: "How is grouting quality and success evaluated post-execution?", answerEn: "Through post-grouting verification tests: CPT or water pressure tests measuring soil property improvement, settlement monitoring instruments, and visual crack inspection. Results are compared against baseline measurements." },
+    { question: "ما العوامل التي تُحدد تكلفة مشروع حقن التربة؟", answer: "الأهم: عمق الحقن، نوع المادة المستخدمة، تعقيد المشروع وإمكانية الوصول، كمية الحقن المطلوبة، ووجود إنشاءات حساسة مجاورة تستدعي ضوابط إضافية.", questionEn: "What factors determine the cost of a soil grouting project?", answerEn: "Key factors: injection depth, material type used, project complexity and access, required grouting volume, and presence of sensitive adjacent structures requiring additional controls." }
+  ], faqEn: [
       { question: "What can geophysical tests reveal on site?", answer: "Methods such as GPR, ERT, and MASW provide a subsurface picture—layering trends, anomalies, and indicators of voids or weak zones. The right method depends on target depth and ground conditions." },
       { question: "GPR vs ERT: when do we use each?", answer: "GPR is often effective for shallow targets and discrete features in suitable soils, while ERT can image deeper resistivity contrasts and moisture-related variations. Many projects benefit from a combined approach." },
       { question: "Are results conclusive?", answer: "Geophysics provides strong indicators, but critical decisions typically require verification. Targeted probing/drilling is used to confirm anomalies before remediation." },
@@ -6804,9 +6793,9 @@ export const articles: ArticleContent[] = [
     categoriesEn: ["Grouting & Improvement Encyclopedia", "Geotechnical Engineering", "Soil Grouting", "Ground Improvement Library"],
     date: "2026-01-23",
     readTime: "3 دقيقة",
-    readTimeEn: "2 min",
+    readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "geotech-encyclopedia-31",
+    slug: "accuracy-limits-in-geophysical-instruments-setting-realistic-expectations",
     image: {
       url: "/favicon.webp",
       alt: "حدود الدقة في الأجهزة الجيوفيزيائية: إدارة التوقعات",
@@ -6925,12 +6914,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "كيف نتحقق من وجود تكهفات أو فراغات تحت الأرض؟", answer: "عادة ندمج المسح الجيوفيزيائي مع الحفر الاستكشافي (Cavity Probing) حسب حساسية الموقع. الهدف هو تحويل “مؤشرات” إلى “حقائق” قبل اتخاذ قرار المعالجة." },
-      { question: "هل كل فراغ يعني خطرًا مباشرًا؟", answer: "ليس بالضرورة. نقيّم حجم الفراغ وعمقه وموقعه بالنسبة للأحمال ومصادر المياه، ثم نحدد مستوى الخطورة واحتمال التطور." },
-      { question: "ما الحلول الشائعة بعد اكتشاف الفراغات؟", answer: "قد تشمل الحقن الأسمنتي أو تحسين الصرف أو تدعيم موضعي حسب السبب. اختيار الحل يعتمد على سبب الفراغ (تكهف كارستي، تسرب مياه، ردم ضعيف…إلخ)." },
-      { question: "كيف تقللون مفاجآت الموقع أثناء التنفيذ؟", answer: "بالتحقق المرحلي، وربط البيانات الجيوفيزيائية بالملاحظات الميدانية، ووضع حدود واضحة لنطاق العمل وتحديث خطة المعالجة عند ظهور معطيات جديدة." },
-    ],
-    faqEn: [
+    { question: "كيف تتكوّن التكهفات الكارستية تحت المباني؟", answer: "تتكوّن عادة في الصخور الكلسية أو الجبسية عندما تُذيب المياه الحمضية المعادن تدريجياً عبر الشقوق. في المناطق الجافة كالمملكة العربية السعودية يكون الجبس المصدر الرئيسي للتكهفات.", questionEn: "How do karstic cavities form beneath buildings?", answerEn: "They typically form in limestone or gypsum rock when acidic water gradually dissolves minerals through fractures. In arid regions like Saudi Arabia, gypsum is the main source of cavity formation." },
+    { question: "ما الخطوات الأولى عند اكتشاف تكهف تحت مبنى قائم؟", answer: "أولاً التوثيق والقياس الدقيق لموقع وحجم التكهف، ثم تقييم استقرار البلاطة فوقه، ثم تحديد مصدر التكهف لمنع توسعه، وأخيراً اختيار طريقة الملء المناسبة.", questionEn: "What are the first steps when a cavity is discovered beneath an existing building?", answerEn: "First, accurately document and measure cavity location and size; assess slab stability above it; identify the cavity source to prevent expansion; then select the appropriate filling method." },
+    { question: "هل يمكن أن يتوسع التكهف بعد الملء بالحقن؟", answer: "إذا لم يُعالَج مصدر الماء المسبّب للتكهف، فنعم يمكن تكوّن تكهفات جديدة قريبة. لذلك الحقن وحده غير كافٍ دون معالجة العوامل المُسبّبة.", questionEn: "Can the cavity expand again after grouting?", answerEn: "If the water source causing the cavity is not addressed, new adjacent cavities can form. This is why grouting alone is insufficient without treating the underlying causes." },
+    { question: "ما الفرق بين معالجة تكهف جاف وآخر مملوء بالماء؟", answer: "التكهف الجاف يُملأ بمعجون أسمنتي أو رغوي مباشرة. التكهف المائي يحتاج معجوناً سريع التصلّد أو مادة تتفاعل مع الماء كالبولي يوريثان قبل الملء الكامل.", questionEn: "What is the difference between treating a dry cavity and a water-filled one?", answerEn: "Dry cavities are filled directly with cement or foam grout. Water-filled cavities require fast-setting grout or water-reactive material like polyurethane before full filling." }
+  ], faqEn: [
       { question: "How do we confirm cavities/voids below ground?", answer: "A reliable workflow combines geophysics with targeted probing/drilling where needed. The goal is to turn anomalies into confirmed targets before remediation." },
       { question: "Is every void an immediate hazard?", answer: "Not necessarily. Risk depends on size, depth, location relative to loads, and water conditions. We assess both severity and likelihood of progression." },
       { question: "What happens after voids are detected?", answer: "Common options include cement grouting, drainage improvements, or localized strengthening depending on root cause (karst, leakage, weak backfill, etc.)." },
@@ -6950,7 +6938,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "geotech-encyclopedia-32",
+    slug: "postsurvey-verification-boreholes-how-to-decide-where-to-drill",
     image: {
       url: "/favicon.webp",
       alt: "التحقق بالثقوب الاستكشافية بعد المسح: كيفية أخذ عينة قرار",
@@ -7055,7 +7043,6 @@ export const articles: ArticleContent[] = [
   - ASTM D420: Guide for Site Characterization for Engineering Design and Construction Purposes  
   - FHWA NHI-05-047: Ground Improvement Techniques
   
-  #END#
   
   ## Related links on our site
   
@@ -7065,12 +7052,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "ماذا يمكن أن تكشف الاختبارات الجيوفيزيائية في الموقع؟", answer: "تساعد الاختبارات مثل GPR وERT وMASW على تكوين صورة أولية عن الطبقات وتغيّر الخواص تحت السطح، ورصد مؤشرات الفراغات أو التباين في التربة والصخور. اختيار الاختبار يعتمد على عمق الهدف وطبيعة الموقع." },
-      { question: "ما الفرق بين GPR وERT ومتى نستخدم كلًا منهما؟", answer: "GPR مناسب أكثر للأعماق الضحلة نسبيًا ولرصد الأجسام/الفراغات في بيئات معينة، بينما ERT يعطي تصورًا أعمق عن تغيّر المقاومة الكهربائية ويمكن أن يكون مفيدًا في رصد مناطق التشبع أو التكهفات. غالبًا نستخدمهما تكامليًا." },
-      { question: "هل النتائج “قطعية” أم تحتاج تحقق؟", answer: "الجيوفيزياء تعطي مؤشرات قوية لكنها ليست بديلًا عن التحقق. في المواقع الحساسة ننفذ حفر/Cavity Probing للتحقق من الأهداف قبل أي معالجة، ثم نربط النتائج بالتقرير الجيوتقني والمعاينات." },
-      { question: "ما الذي أستلمه في نهاية العمل؟", answer: "تستلم خرائط/مقاطع تفسيرية، وصف المنهجية، حدود الدقة، وتوصيات عملية للخطوة التالية (تحقق، معالجة، أو متابعة)." },
-    ],
-    faqEn: [
+    { question: "كيف تُختار أنسب تقنية حقن لكل موقع؟", answer: "القرار يستند إلى نوع التربة ومشكلتها الجوهرية: ترب رملية نافذة تناسبها حقن الأسمنت والنفاذ، الترب الطينية تحتاج حقناً كيميائياً، والترب الهشة قد تتطلب Jet Grouting لتكوين أعمدة داعمة.", questionEn: "How is the most appropriate grouting technique selected for each site?", answerEn: "The decision is based on soil type and core problem: permeable sandy soils suit cement and permeation grouting, clays need chemical grouting, and weak soils may require Jet Grouting to form support columns." },
+    { question: "ما الاختبارات الضرورية قبل تنفيذ أي عملية حقن؟", answer: "الحد الأدنى المطلوب: تحديد نوع التربة (SPT أو CPT)، قياس النفاذية، وتحليل عينات مختبرية. في المشاريع الكبيرة تُضاف دراسة جيوفيزيائية (GPR/ERT) للحصول على صورة شاملة.", questionEn: "What tests are required before any grouting operation?", answerEn: "The minimum required: soil type identification (SPT or CPT), permeability measurement, and laboratory sample analysis. For larger projects, a geophysical study (GPR/ERT) is added for a comprehensive picture." },
+    { question: "كيف تُقيَّم جودة ونجاح عملية الحقن بعد التنفيذ؟", answer: "عبر اختبارات تحقق ما بعد الحقن: CPT أو اختبار ضغط المياه لقياس التحسن في خصائص التربة، مراقبة أجهزة قياس الهبوط، والفحص البصري للتشققات. تُقارَن النتائج بالقياسات الأولية.", questionEn: "How is grouting quality and success evaluated post-execution?", answerEn: "Through post-grouting verification tests: CPT or water pressure tests measuring soil property improvement, settlement monitoring instruments, and visual crack inspection. Results are compared against baseline measurements." },
+    { question: "ما العوامل التي تُحدد تكلفة مشروع حقن التربة؟", answer: "الأهم: عمق الحقن، نوع المادة المستخدمة، تعقيد المشروع وإمكانية الوصول، كمية الحقن المطلوبة، ووجود إنشاءات حساسة مجاورة تستدعي ضوابط إضافية.", questionEn: "What factors determine the cost of a soil grouting project?", answerEn: "Key factors: injection depth, material type used, project complexity and access, required grouting volume, and presence of sensitive adjacent structures requiring additional controls." }
+  ], faqEn: [
       { question: "What can geophysical tests reveal on site?", answer: "Methods such as GPR, ERT, and MASW provide a subsurface picture—layering trends, anomalies, and indicators of voids or weak zones. The right method depends on target depth and ground conditions." },
       { question: "GPR vs ERT: when do we use each?", answer: "GPR is often effective for shallow targets and discrete features in suitable soils, while ERT can image deeper resistivity contrasts and moisture-related variations. Many projects benefit from a combined approach." },
       { question: "Are results conclusive?", answer: "Geophysics provides strong indicators, but critical decisions typically require verification. Targeted probing/drilling is used to confirm anomalies before remediation." },
@@ -7088,9 +7074,9 @@ export const articles: ArticleContent[] = [
     categoriesEn: ["Grouting & Improvement Encyclopedia", "Geotechnical Engineering", "Soil Grouting", "Ground Improvement Library"],
     date: "2026-01-29",
     readTime: "3 دقيقة",
-    readTimeEn: "2 min",
+    readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "geotech-encyclopedia-33",
+    slug: "borehole-cameras-visual-inspection-of-subsurface-voids",
     image: {
       url: "/favicon.webp",
       alt: "استخدام الكاميرات داخل الثقوب (Borehole Camera) لمعاينة الفراغات",
@@ -7126,7 +7112,7 @@ export const articles: ArticleContent[] = [
   - تُنخفض الكاميرا داخل الثقب بواسطة كابل تحكم إلى العمق المطلوب.
   - يبدأ المشغل بتوجيه الكاميرا ومسح الجدران الداخلية للثقب.
   - توثق جميع الملاحظات بالصور والفيديو، وتُحلل البيانات لاحقاً لتقييم الفراغات.
-  - في حال وجود عوائق او مخاطرة، ينصح بتكرار المعاينة بعد عمليات الحقن أو معالجة الفراغات.
+  - في حال وجود عوائق أو مخاطرة، ينصح بتكرار المعاينة بعد عمليات الحقن أو معالجة الفراغات.
   
   #### 4. المعايير الدولية ذات العلاقة  
   يتم استخدام الكاميرات وفقاً لمعايير الجودة والسلامة مثل:
@@ -7205,12 +7191,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "كيف نتحقق من وجود تكهفات أو فراغات تحت الأرض؟", answer: "عادة ندمج المسح الجيوفيزيائي مع الحفر الاستكشافي (Cavity Probing) حسب حساسية الموقع. الهدف هو تحويل “مؤشرات” إلى “حقائق” قبل اتخاذ قرار المعالجة." },
-      { question: "هل كل فراغ يعني خطرًا مباشرًا؟", answer: "ليس بالضرورة. نقيّم حجم الفراغ وعمقه وموقعه بالنسبة للأحمال ومصادر المياه، ثم نحدد مستوى الخطورة واحتمال التطور." },
-      { question: "ما الحلول الشائعة بعد اكتشاف الفراغات؟", answer: "قد تشمل الحقن الأسمنتي أو تحسين الصرف أو تدعيم موضعي حسب السبب. اختيار الحل يعتمد على سبب الفراغ (تكهف كارستي، تسرب مياه، ردم ضعيف…إلخ)." },
-      { question: "كيف تقللون مفاجآت الموقع أثناء التنفيذ؟", answer: "بالتحقق المرحلي، وربط البيانات الجيوفيزيائية بالملاحظات الميدانية، ووضع حدود واضحة لنطاق العمل وتحديث خطة المعالجة عند ظهور معطيات جديدة." },
-    ],
-    faqEn: [
+    { question: "كيف تُختار أنسب تقنية حقن لكل موقع؟", answer: "القرار يستند إلى نوع التربة ومشكلتها الجوهرية: ترب رملية نافذة تناسبها حقن الأسمنت والنفاذ، الترب الطينية تحتاج حقناً كيميائياً، والترب الهشة قد تتطلب Jet Grouting لتكوين أعمدة داعمة.", questionEn: "How is the most appropriate grouting technique selected for each site?", answerEn: "The decision is based on soil type and core problem: permeable sandy soils suit cement and permeation grouting, clays need chemical grouting, and weak soils may require Jet Grouting to form support columns." },
+    { question: "ما الاختبارات الضرورية قبل تنفيذ أي عملية حقن؟", answer: "الحد الأدنى المطلوب: تحديد نوع التربة (SPT أو CPT)، قياس النفاذية، وتحليل عينات مختبرية. في المشاريع الكبيرة تُضاف دراسة جيوفيزيائية (GPR/ERT) للحصول على صورة شاملة.", questionEn: "What tests are required before any grouting operation?", answerEn: "The minimum required: soil type identification (SPT or CPT), permeability measurement, and laboratory sample analysis. For larger projects, a geophysical study (GPR/ERT) is added for a comprehensive picture." },
+    { question: "كيف تُقيَّم جودة ونجاح عملية الحقن بعد التنفيذ؟", answer: "عبر اختبارات تحقق ما بعد الحقن: CPT أو اختبار ضغط المياه لقياس التحسن في خصائص التربة، مراقبة أجهزة قياس الهبوط، والفحص البصري للتشققات. تُقارَن النتائج بالقياسات الأولية.", questionEn: "How is grouting quality and success evaluated post-execution?", answerEn: "Through post-grouting verification tests: CPT or water pressure tests measuring soil property improvement, settlement monitoring instruments, and visual crack inspection. Results are compared against baseline measurements." },
+    { question: "ما العوامل التي تُحدد تكلفة مشروع حقن التربة؟", answer: "الأهم: عمق الحقن، نوع المادة المستخدمة، تعقيد المشروع وإمكانية الوصول، كمية الحقن المطلوبة، ووجود إنشاءات حساسة مجاورة تستدعي ضوابط إضافية.", questionEn: "What factors determine the cost of a soil grouting project?", answerEn: "Key factors: injection depth, material type used, project complexity and access, required grouting volume, and presence of sensitive adjacent structures requiring additional controls." }
+  ], faqEn: [
       { question: "How do we confirm cavities/voids below ground?", answer: "A reliable workflow combines geophysics with targeted probing/drilling where needed. The goal is to turn anomalies into confirmed targets before remediation." },
       { question: "Is every void an immediate hazard?", answer: "Not necessarily. Risk depends on size, depth, location relative to loads, and water conditions. We assess both severity and likelihood of progression." },
       { question: "What happens after voids are detected?", answer: "Common options include cement grouting, drainage improvements, or localized strengthening depending on root cause (karst, leakage, weak backfill, etc.)." },
@@ -7228,9 +7213,9 @@ export const articles: ArticleContent[] = [
     categoriesEn: ["Grouting & Improvement Encyclopedia", "Geotechnical Engineering", "Soil Grouting", "Ground Improvement Library"],
     date: "2026-02-01",
     readTime: "3 دقيقة",
-    readTimeEn: "2 min",
+    readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "geotech-encyclopedia-34",
+    slug: "interpreting-anomalies-in-survey-reports-real-features-vs-technical-artifacts",
     image: {
       url: "/favicon.webp",
       alt: "تفسير الشذوذ (Anomalies) في تقارير المسح: بين الواقع والخطأ التقني",
@@ -7323,12 +7308,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Khobar](/locations/khobar)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "ماذا يمكن أن تكشف الاختبارات الجيوفيزيائية في الموقع؟", answer: "تساعد الاختبارات مثل GPR وERT وMASW على تكوين صورة أولية عن الطبقات وتغيّر الخواص تحت السطح، ورصد مؤشرات الفراغات أو التباين في التربة والصخور. اختيار الاختبار يعتمد على عمق الهدف وطبيعة الموقع." },
-      { question: "ما الفرق بين GPR وERT ومتى نستخدم كلًا منهما؟", answer: "GPR مناسب أكثر للأعماق الضحلة نسبيًا ولرصد الأجسام/الفراغات في بيئات معينة، بينما ERT يعطي تصورًا أعمق عن تغيّر المقاومة الكهربائية ويمكن أن يكون مفيدًا في رصد مناطق التشبع أو التكهفات. غالبًا نستخدمهما تكامليًا." },
-      { question: "هل النتائج “قطعية” أم تحتاج تحقق؟", answer: "الجيوفيزياء تعطي مؤشرات قوية لكنها ليست بديلًا عن التحقق. في المواقع الحساسة ننفذ حفر/Cavity Probing للتحقق من الأهداف قبل أي معالجة، ثم نربط النتائج بالتقرير الجيوتقني والمعاينات." },
-      { question: "ما الذي أستلمه في نهاية العمل؟", answer: "تستلم خرائط/مقاطع تفسيرية، وصف المنهجية، حدود الدقة، وتوصيات عملية للخطوة التالية (تحقق، معالجة، أو متابعة)." },
-    ],
-    faqEn: [
+    { question: "كيف تُختار أنسب تقنية حقن لكل موقع؟", answer: "القرار يستند إلى نوع التربة ومشكلتها الجوهرية: ترب رملية نافذة تناسبها حقن الأسمنت والنفاذ، الترب الطينية تحتاج حقناً كيميائياً، والترب الهشة قد تتطلب Jet Grouting لتكوين أعمدة داعمة.", questionEn: "How is the most appropriate grouting technique selected for each site?", answerEn: "The decision is based on soil type and core problem: permeable sandy soils suit cement and permeation grouting, clays need chemical grouting, and weak soils may require Jet Grouting to form support columns." },
+    { question: "ما الاختبارات الضرورية قبل تنفيذ أي عملية حقن؟", answer: "الحد الأدنى المطلوب: تحديد نوع التربة (SPT أو CPT)، قياس النفاذية، وتحليل عينات مختبرية. في المشاريع الكبيرة تُضاف دراسة جيوفيزيائية (GPR/ERT) للحصول على صورة شاملة.", questionEn: "What tests are required before any grouting operation?", answerEn: "The minimum required: soil type identification (SPT or CPT), permeability measurement, and laboratory sample analysis. For larger projects, a geophysical study (GPR/ERT) is added for a comprehensive picture." },
+    { question: "كيف تُقيَّم جودة ونجاح عملية الحقن بعد التنفيذ؟", answer: "عبر اختبارات تحقق ما بعد الحقن: CPT أو اختبار ضغط المياه لقياس التحسن في خصائص التربة، مراقبة أجهزة قياس الهبوط، والفحص البصري للتشققات. تُقارَن النتائج بالقياسات الأولية.", questionEn: "How is grouting quality and success evaluated post-execution?", answerEn: "Through post-grouting verification tests: CPT or water pressure tests measuring soil property improvement, settlement monitoring instruments, and visual crack inspection. Results are compared against baseline measurements." },
+    { question: "ما العوامل التي تُحدد تكلفة مشروع حقن التربة؟", answer: "الأهم: عمق الحقن، نوع المادة المستخدمة، تعقيد المشروع وإمكانية الوصول، كمية الحقن المطلوبة، ووجود إنشاءات حساسة مجاورة تستدعي ضوابط إضافية.", questionEn: "What factors determine the cost of a soil grouting project?", answerEn: "Key factors: injection depth, material type used, project complexity and access, required grouting volume, and presence of sensitive adjacent structures requiring additional controls." }
+  ], faqEn: [
       { question: "What can geophysical tests reveal on site?", answer: "Methods such as GPR, ERT, and MASW provide a subsurface picture—layering trends, anomalies, and indicators of voids or weak zones. The right method depends on target depth and ground conditions." },
       { question: "GPR vs ERT: when do we use each?", answer: "GPR is often effective for shallow targets and discrete features in suitable soils, while ERT can image deeper resistivity contrasts and moisture-related variations. Many projects benefit from a combined approach." },
       { question: "Are results conclusive?", answer: "Geophysics provides strong indicators, but critical decisions typically require verification. Targeted probing/drilling is used to confirm anomalies before remediation." },
@@ -7346,9 +7330,9 @@ export const articles: ArticleContent[] = [
     categoriesEn: ["Grouting & Improvement Encyclopedia", "Geotechnical Engineering", "Soil Grouting", "Ground Improvement Library"],
     date: "2026-02-04",
     readTime: "3 دقيقة",
-    readTimeEn: "2 min",
+    readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "geotech-encyclopedia-35",
+    slug: "grouting-equipment-from-hand-pumps-to-computerized-systems",
     image: {
       url: "/favicon.webp",
       alt: "معدات الحقن: من المضخات اليدوية إلى الأنظمة المحوسبة",
@@ -7449,11 +7433,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "متى يكون حقن التربة هو الخيار الأنسب؟", answer: "يكون مناسبًا عند الحاجة لتحسين خواص التربة تحت الأساسات، تقليل الهبوط، أو معالجة مسارات تسرب المياه—خصوصًا عندما تكون أعمال الحفر/الاستبدال غير ممكنة أو مكلفة." },
-      { question: "ما الفرق بين الحقن الأسمنتي وطرق الحقن الأخرى؟", answer: "الحقن الأسمنتي يعتمد على ملاط إسمنتي بخصائص لزوجة مناسبة، بينما توجد مواد أخرى (كيميائية/ميكروفاين) لظروف خاصة. اختيار المادة مرتبط بحجم المسام، النفاذية، والهدف (تقوية/عزل)." },
-      { question: "كيف نحدد نوع الخلطة واللزوجة المناسبة؟", answer: "نعتمد على طبيعة التربة/الصخور، نتائج الفحوصات، وهدف المعالجة. أحيانًا نبدأ بخليط تمهيدي ثم نعدّل تدريجيًا لتحقيق اختراق أفضل دون إحداث مشاكل جانبية." },
-      { question: "كيف أعرف أن المعالجة نجحت؟", answer: "المؤشرات تشمل استقرار الاستهلاك، تحسن سلوك الهبوط، وتحسن نتائج التحقق (مثل probing/اختبارات أو مراقبة التشققات) حسب خطة المشروع." },
-    ],
+    { question: "ما مؤشرات الخطر التي تستوجب التدخل بالحقن فوراً؟", answer: "تشققات متوسعة بسرعة، هبوط مستمر ملحوظ، انحراف ظاهر في الجدران أو الأعمدة، أو وجود ضوضاء غير مألوفة في البنية. كل هذه مؤشرات تستدعي تقييماً هندسياً عاجلاً.", questionEn: "What danger signs require immediate grouting intervention?", answerEn: "Rapidly widening cracks, continuous visible settlement, apparent wall or column inclination, or unfamiliar structural sounds — all require urgent engineering assessment." },
+    { question: "هل حقن التربة آمن للمنشآت القريبة من موقع العمل؟", answer: "مع ضبط ضغوط الحقن ضمن الحدود الآمنة، يكون التأثير على المجاورات ضئيلاً. المشاريع في المناطق المكتظة تستدعي مراقبة مستمرة للمنشآت المجاورة طوال فترة التنفيذ.", questionEn: "Is soil grouting safe for structures near the work site?", answerEn: "With injection pressures within safe limits, the impact on adjacent structures is minimal. Dense-area projects require continuous monitoring of neighbouring structures throughout execution." },
+    { question: "كيف يُمنع انتشار الحقن خارج المنطقة المستهدفة؟", answer: "عبر ضبط اللزوجة وضغط الحقن، والاستناد إلى بيانات نفاذية التربة لتحديد نقاط الحقن. المراقبة الميدانية المستمرة للضغط تُنبّه لأي انتشار غير مخطط له.", questionEn: "How is uncontrolled grout spread prevented?", answerEn: "By controlling viscosity and injection pressure, using soil permeability data to position injection points, and continuous field pressure monitoring to alert against unplanned migration." },
+    { question: "ما الفترة الزمنية التي يتحمل فيها الحقن بعد التنفيذ؟", answer: "مع الاختيار الصحيح للمادة وجودة التنفيذ، يُفترض أن يكون الحقن حلاً دائماً. العمر الافتراضي للحقن الأسمنتي مماثل للخرسانة (50+ سنة)، والبوليمرات تتفاوت حسب النوع والبيئة.", questionEn: "How long does grout last after execution?", answerEn: "With correct material selection and quality execution, grouting should be a permanent solution. Cement grout lifespan matches concrete (50+ years); polymers vary by type and environment." }
+  ],
     faqEn: [
       { question: "When is soil grouting the right solution?", answer: "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly." },
       { question: "How is cement grouting different from other grouts?", answer: "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective." },
@@ -7472,9 +7456,9 @@ export const articles: ArticleContent[] = [
     categoriesEn: ["Grouting & Improvement Encyclopedia", "Geotechnical Engineering", "Soil Grouting", "Ground Improvement Library"],
     date: "2026-02-07",
     readTime: "3 دقيقة",
-    readTimeEn: "2 min",
+    readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "geotech-encyclopedia-36",
+    slug: "designing-an-injection-grid-spacing-depth-and-sequencing",
     image: {
       url: "/favicon.webp",
       alt: "تصميم شبكة نقاط الحقن: المسافات، الأعماق، والتسلسل",
@@ -7575,11 +7559,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "متى يكون حقن التربة هو الخيار الأنسب؟", answer: "يكون مناسبًا عند الحاجة لتحسين خواص التربة تحت الأساسات، تقليل الهبوط، أو معالجة مسارات تسرب المياه—خصوصًا عندما تكون أعمال الحفر/الاستبدال غير ممكنة أو مكلفة." },
-      { question: "ما الفرق بين الحقن الأسمنتي وطرق الحقن الأخرى؟", answer: "الحقن الأسمنتي يعتمد على ملاط إسمنتي بخصائص لزوجة مناسبة، بينما توجد مواد أخرى (كيميائية/ميكروفاين) لظروف خاصة. اختيار المادة مرتبط بحجم المسام، النفاذية، والهدف (تقوية/عزل)." },
-      { question: "كيف نحدد نوع الخلطة واللزوجة المناسبة؟", answer: "نعتمد على طبيعة التربة/الصخور، نتائج الفحوصات، وهدف المعالجة. أحيانًا نبدأ بخليط تمهيدي ثم نعدّل تدريجيًا لتحقيق اختراق أفضل دون إحداث مشاكل جانبية." },
-      { question: "كيف أعرف أن المعالجة نجحت؟", answer: "المؤشرات تشمل استقرار الاستهلاك، تحسن سلوك الهبوط، وتحسن نتائج التحقق (مثل probing/اختبارات أو مراقبة التشققات) حسب خطة المشروع." },
-    ],
+    { question: "ما الخطوات العملية لطلب خدمة حقن التربة؟", answer: "ابدأ بتوثيق المشكلة (صور، قياسات)، ثم تواصل مع فريق إطلاق لتقييم أولي. بعد الزيارة الميدانية تُحدَّد التقنية المناسبة والتكلفة التقديرية قبل بدء التنفيذ.", questionEn: "What are the practical steps to request soil grouting service?", answerEn: "Start by documenting the problem (photos, measurements), then contact the ETLAQ team for initial assessment. After the field visit, the appropriate technique and estimated cost are determined before execution begins." },
+    { question: "ما الذي يشمله تقرير ما بعد الحقن؟", answer: "يشمل: خريطة نقاط الحقن المنجزة، سجلات الضغط والكميات لكل نقطة، نتائج اختبارات التحقق، توصيات للمتابعة، وشهادات مواد الحقن.", questionEn: "What does a post-grouting report include?", answerEn: "It includes: map of completed injection points, pressure and volume logs per point, verification test results, follow-up recommendations, and grout material certificates." },
+    { question: "كم عدد نقاط الحقن الضروري في المشروع المتوسط؟", answer: "يتوقف على مساحة المشكلة وعمق المعالجة. المشروع المتوسط قد يتراوح بين 10 و50 نقطة. نقاط الحقن تُحدَّد بعد الزيارة الميدانية وبناءً على نتائج التحقيق.", questionEn: "How many injection points are needed in a typical project?", answerEn: "Depends on problem area and treatment depth. A typical project may range from 10 to 50 points. Injection points are determined after the site visit and investigation results." },
+    { question: "هل يمكن توقف الحقن ثم استئنافه في اليوم التالي؟", answer: "نعم، لكن يُنبغي توثيق حالة كل نقطة عند التوقف لضمان استكمال المناطق غير المكتملة. بعض الخلطات قد تحتاج مواصفات خاصة عند الاستئناف لضمان الترابط مع الحقن السابق.", questionEn: "Can grouting be stopped and resumed the next day?", answerEn: "Yes, but each point's status at stoppage must be documented to ensure incomplete zones are finished. Some mixes may need special specifications on resumption to ensure bonding with previous grout." }
+  ],
     faqEn: [
       { question: "When is soil grouting the right solution?", answer: "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly." },
       { question: "How is cement grouting different from other grouts?", answer: "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective." },
@@ -7598,9 +7582,9 @@ export const articles: ArticleContent[] = [
     categoriesEn: ["Grouting & Improvement Encyclopedia", "Geotechnical Engineering", "Soil Grouting", "Ground Improvement Library"],
     date: "2026-02-10",
     readTime: "2 دقيقة",
-    readTimeEn: "3 min",
+    readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "geotech-encyclopedia-37",
+    slug: "monitoring-injection-pressure-protecting-structural-balance",
     image: {
       url: "/favicon.webp",
       alt: "مراقبة ضغط الحقن: الحفاظ على توازن المنشأ",
@@ -7716,11 +7700,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "متى يكون حقن التربة هو الخيار الأنسب؟", answer: "يكون مناسبًا عند الحاجة لتحسين خواص التربة تحت الأساسات، تقليل الهبوط، أو معالجة مسارات تسرب المياه—خصوصًا عندما تكون أعمال الحفر/الاستبدال غير ممكنة أو مكلفة." },
-      { question: "ما الفرق بين الحقن الأسمنتي وطرق الحقن الأخرى؟", answer: "الحقن الأسمنتي يعتمد على ملاط إسمنتي بخصائص لزوجة مناسبة، بينما توجد مواد أخرى (كيميائية/ميكروفاين) لظروف خاصة. اختيار المادة مرتبط بحجم المسام، النفاذية، والهدف (تقوية/عزل)." },
-      { question: "كيف نحدد نوع الخلطة واللزوجة المناسبة؟", answer: "نعتمد على طبيعة التربة/الصخور، نتائج الفحوصات، وهدف المعالجة. أحيانًا نبدأ بخليط تمهيدي ثم نعدّل تدريجيًا لتحقيق اختراق أفضل دون إحداث مشاكل جانبية." },
-      { question: "كيف أعرف أن المعالجة نجحت؟", answer: "المؤشرات تشمل استقرار الاستهلاك، تحسن سلوك الهبوط، وتحسن نتائج التحقق (مثل probing/اختبارات أو مراقبة التشققات) حسب خطة المشروع." },
-    ],
+    { question: "هل يمكن تطبيق حقن التربة تحت المباني القائمة دون تفريغها؟", answer: "نعم، وهو من أبرز مزايا الحقن. يُنفَّذ من خلال حفر نقاط حقن صغيرة بحد أدنى من الأعمال الإنشائية دون إخلاء المبنى في معظم الحالات.", questionEn: "Can soil grouting be applied under occupied buildings?", answerEn: "Yes, this is one of its key advantages. It is executed through small drill points with minimal structural work and without evacuating the building in most cases." },
+    { question: "ما الفرق بين حقن الأسمنت وحقن البوليمرات؟", answer: "حقن الأسمنت يُستخدم لملء الفراغات الكبيرة وتقوية التربة ميكانيكياً، بينما يناسب حقن البوليمرات التحكم بالتسرب وملء المسام الدقيقة التي لا يخترقها الأسمنت.", questionEn: "What is the difference between cement and polymer grouting?", answerEn: "Cement grouting fills large voids and improves mechanical strength; polymer grouting targets seepage control and fine pores that cement cannot penetrate." },
+    { question: "كيف تعرف أن حقن التربة هو الحل المناسب لمشكلتك؟", answer: "إذا كانت المشكلة هبوطاً أو تشققات ناتجة عن ضعف التربة أو تكهفات تحت الأساسات، فالحقن عادة الخيار الأنسب. التشخيص الدقيق يُؤكد ذلك قبل أي قرار.", questionEn: "How do you know if soil grouting is the right solution for your problem?", answerEn: "If the issue is settlement or cracks caused by weak soil or cavities under foundations, grouting is usually the right choice. Accurate diagnosis confirms this before any decision." },
+    { question: "ما المدة الزمنية اللازمة لملاحظة تحسن بعد الحقن؟", answer: "التحسن الميكانيكي يبدأ مع تصلّد الحقن خلال 24-72 ساعة للخلطات الأسمنتية. التقييم الكامل يستلزم أسبوعين إلى أربعة أسابيع مع مراقبة منتظمة لأجهزة قياس الهبوط.", questionEn: "How long does it take to notice improvement after grouting?", answerEn: "Mechanical improvement begins as grout sets within 24-72 hours for cement mixes. Full assessment requires 2-4 weeks with regular settlement monitoring." }
+  ],
     faqEn: [
       { question: "When is soil grouting the right solution?", answer: "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly." },
       { question: "How is cement grouting different from other grouts?", answer: "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective." },
@@ -7739,9 +7723,9 @@ export const articles: ArticleContent[] = [
     categoriesEn: ["Grouting & Improvement Encyclopedia", "Geotechnical Engineering", "Soil Grouting", "Ground Improvement Library"],
     date: "2026-02-13",
     readTime: "3 دقيقة",
-    readTimeEn: "2 min",
+    readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "geotech-encyclopedia-38",
+    slug: "flow-rate-measurement-estimating-void-volume-and-ground-response",
     image: {
       url: "/favicon.webp",
       alt: "قياس معدل التدفق (Flow Rate) وأهميته في تحديد حجم الفراغات",
@@ -7848,11 +7832,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "متى يكون حقن التربة هو الخيار الأنسب؟", answer: "يكون مناسبًا عند الحاجة لتحسين خواص التربة تحت الأساسات، تقليل الهبوط، أو معالجة مسارات تسرب المياه—خصوصًا عندما تكون أعمال الحفر/الاستبدال غير ممكنة أو مكلفة." },
-      { question: "ما الفرق بين الحقن الأسمنتي وطرق الحقن الأخرى؟", answer: "الحقن الأسمنتي يعتمد على ملاط إسمنتي بخصائص لزوجة مناسبة، بينما توجد مواد أخرى (كيميائية/ميكروفاين) لظروف خاصة. اختيار المادة مرتبط بحجم المسام، النفاذية، والهدف (تقوية/عزل)." },
-      { question: "كيف نحدد نوع الخلطة واللزوجة المناسبة؟", answer: "نعتمد على طبيعة التربة/الصخور، نتائج الفحوصات، وهدف المعالجة. أحيانًا نبدأ بخليط تمهيدي ثم نعدّل تدريجيًا لتحقيق اختراق أفضل دون إحداث مشاكل جانبية." },
-      { question: "كيف أعرف أن المعالجة نجحت؟", answer: "المؤشرات تشمل استقرار الاستهلاك، تحسن سلوك الهبوط، وتحسن نتائج التحقق (مثل probing/اختبارات أو مراقبة التشققات) حسب خطة المشروع." },
-    ],
+    { question: "ما مؤشرات الخطر التي تستوجب التدخل بالحقن فوراً؟", answer: "تشققات متوسعة بسرعة، هبوط مستمر ملحوظ، انحراف ظاهر في الجدران أو الأعمدة، أو وجود ضوضاء غير مألوفة في البنية. كل هذه مؤشرات تستدعي تقييماً هندسياً عاجلاً.", questionEn: "What danger signs require immediate grouting intervention?", answerEn: "Rapidly widening cracks, continuous visible settlement, apparent wall or column inclination, or unfamiliar structural sounds — all require urgent engineering assessment." },
+    { question: "هل حقن التربة آمن للمنشآت القريبة من موقع العمل؟", answer: "مع ضبط ضغوط الحقن ضمن الحدود الآمنة، يكون التأثير على المجاورات ضئيلاً. المشاريع في المناطق المكتظة تستدعي مراقبة مستمرة للمنشآت المجاورة طوال فترة التنفيذ.", questionEn: "Is soil grouting safe for structures near the work site?", answerEn: "With injection pressures within safe limits, the impact on adjacent structures is minimal. Dense-area projects require continuous monitoring of neighbouring structures throughout execution." },
+    { question: "كيف يُمنع انتشار الحقن خارج المنطقة المستهدفة؟", answer: "عبر ضبط اللزوجة وضغط الحقن، والاستناد إلى بيانات نفاذية التربة لتحديد نقاط الحقن. المراقبة الميدانية المستمرة للضغط تُنبّه لأي انتشار غير مخطط له.", questionEn: "How is uncontrolled grout spread prevented?", answerEn: "By controlling viscosity and injection pressure, using soil permeability data to position injection points, and continuous field pressure monitoring to alert against unplanned migration." },
+    { question: "ما الفترة الزمنية التي يتحمل فيها الحقن بعد التنفيذ؟", answer: "مع الاختيار الصحيح للمادة وجودة التنفيذ، يُفترض أن يكون الحقن حلاً دائماً. العمر الافتراضي للحقن الأسمنتي مماثل للخرسانة (50+ سنة)، والبوليمرات تتفاوت حسب النوع والبيئة.", questionEn: "How long does grout last after execution?", answerEn: "With correct material selection and quality execution, grouting should be a permanent solution. Cement grout lifespan matches concrete (50+ years); polymers vary by type and environment." }
+  ],
     faqEn: [
       { question: "When is soil grouting the right solution?", answer: "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly." },
       { question: "How is cement grouting different from other grouts?", answer: "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective." },
@@ -7871,9 +7855,9 @@ export const articles: ArticleContent[] = [
     categoriesEn: ["Grouting & Improvement Encyclopedia", "Geotechnical Engineering", "Soil Grouting", "Ground Improvement Library"],
     date: "2026-02-16",
     readTime: "3 دقيقة",
-    readTimeEn: "2 min",
+    readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "geotech-encyclopedia-39",
+    slug: "refusal-criteria-in-grouting-when-to-stop-at-a-point",
     image: {
       url: "/favicon.webp",
       alt: "معايير التوقف عن الحقن (Refusal Criteria): متى ننهي العمل في النقطة؟",
@@ -7901,7 +7885,7 @@ export const articles: ArticleContent[] = [
   - **انخفاض معدل التدفق (Flow Refusal):** عند انخفاض معدل الحقن تحت قيمة محددة (مثلاً أقل من 0.1 لتر/دقيقة)، الجهة المسؤولة تعتبر أن التربة رفضت الحقن.  
   - **ارتفاع الضغط بدون تغيير في التدفق:** ارتفاع الضغط بشكل مستمر مع ثبات أو انخفاض في معدل التدفق يشير إلى امتلاء الفراغات.  
   - **تغيرات ملموسة في تربة الموقع (Crack Monitoring أو Settlement Monitoring):** في حالة مراقبة التشققات أو الهبوط، عند عدم حدوث تحسن يُنهي الحقن.  
-  - **مدة الحقن القصوى:** لتجنب تجاوز الوقت والتأثيرات السلبية، يحدد العقد أحيانا حد أقصى للحقن عند كل نقطة.  
+  - **مدة الحقن القصوى:** لتجنب تجاوز الوقت والتأثيرات السلبية، يحدد العقد أحياناً حد أقصى للحقن عند كل نقطة.  
   
   #### 4. المعايير الدولية  
   تعتمد كثير من مشاريع الحقن المعايير الميدانية على المواصفات الفنية المعترف بها مثل:  
@@ -7974,12 +7958,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Khobar](/locations/khobar)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "متى يكون حقن التربة هو الخيار الأنسب؟", answer: "يكون مناسبًا عند الحاجة لتحسين خواص التربة تحت الأساسات، تقليل الهبوط، أو معالجة مسارات تسرب المياه—خصوصًا عندما تكون أعمال الحفر/الاستبدال غير ممكنة أو مكلفة." },
-      { question: "ما الفرق بين الحقن الأسمنتي وطرق الحقن الأخرى؟", answer: "الحقن الأسمنتي يعتمد على ملاط إسمنتي بخصائص لزوجة مناسبة، بينما توجد مواد أخرى (كيميائية/ميكروفاين) لظروف خاصة. اختيار المادة مرتبط بحجم المسام، النفاذية، والهدف (تقوية/عزل)." },
-      { question: "كيف نحدد نوع الخلطة واللزوجة المناسبة؟", answer: "نعتمد على طبيعة التربة/الصخور، نتائج الفحوصات، وهدف المعالجة. أحيانًا نبدأ بخليط تمهيدي ثم نعدّل تدريجيًا لتحقيق اختراق أفضل دون إحداث مشاكل جانبية." },
-      { question: "كيف أعرف أن المعالجة نجحت؟", answer: "المؤشرات تشمل استقرار الاستهلاك، تحسن سلوك الهبوط، وتحسن نتائج التحقق (مثل probing/اختبارات أو مراقبة التشققات) حسب خطة المشروع." },
-    ],
-    faqEn: [
+    { question: "كيف تُختار أنسب تقنية حقن لكل موقع؟", answer: "القرار يستند إلى نوع التربة ومشكلتها الجوهرية: ترب رملية نافذة تناسبها حقن الأسمنت والنفاذ، الترب الطينية تحتاج حقناً كيميائياً، والترب الهشة قد تتطلب Jet Grouting لتكوين أعمدة داعمة.", questionEn: "How is the most appropriate grouting technique selected for each site?", answerEn: "The decision is based on soil type and core problem: permeable sandy soils suit cement and permeation grouting, clays need chemical grouting, and weak soils may require Jet Grouting to form support columns." },
+    { question: "ما الاختبارات الضرورية قبل تنفيذ أي عملية حقن؟", answer: "الحد الأدنى المطلوب: تحديد نوع التربة (SPT أو CPT)، قياس النفاذية، وتحليل عينات مختبرية. في المشاريع الكبيرة تُضاف دراسة جيوفيزيائية (GPR/ERT) للحصول على صورة شاملة.", questionEn: "What tests are required before any grouting operation?", answerEn: "The minimum required: soil type identification (SPT or CPT), permeability measurement, and laboratory sample analysis. For larger projects, a geophysical study (GPR/ERT) is added for a comprehensive picture." },
+    { question: "كيف تُقيَّم جودة ونجاح عملية الحقن بعد التنفيذ؟", answer: "عبر اختبارات تحقق ما بعد الحقن: CPT أو اختبار ضغط المياه لقياس التحسن في خصائص التربة، مراقبة أجهزة قياس الهبوط، والفحص البصري للتشققات. تُقارَن النتائج بالقياسات الأولية.", questionEn: "How is grouting quality and success evaluated post-execution?", answerEn: "Through post-grouting verification tests: CPT or water pressure tests measuring soil property improvement, settlement monitoring instruments, and visual crack inspection. Results are compared against baseline measurements." },
+    { question: "ما العوامل التي تُحدد تكلفة مشروع حقن التربة؟", answer: "الأهم: عمق الحقن، نوع المادة المستخدمة، تعقيد المشروع وإمكانية الوصول، كمية الحقن المطلوبة، ووجود إنشاءات حساسة مجاورة تستدعي ضوابط إضافية.", questionEn: "What factors determine the cost of a soil grouting project?", answerEn: "Key factors: injection depth, material type used, project complexity and access, required grouting volume, and presence of sensitive adjacent structures requiring additional controls." }
+  ], faqEn: [
       { question: "When is soil grouting the right solution?", answer: "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly." },
       { question: "How is cement grouting different from other grouts?", answer: "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective." },
       { question: "How do you choose the mix and viscosity?", answer: "We base it on ground type, test results, and the treatment objective. In many cases, mixes are adjusted progressively to balance penetration and control." },
@@ -7999,7 +7982,7 @@ export const articles: ArticleContent[] = [
     readTime: "2 دقيقة",
     readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "geotech-encyclopedia-40",
+    slug: "why-grouting-logs-matter-daily-records-for-quality-and-traceability",
     image: {
       url: "/favicon.webp",
       alt: "أهمية السجلات اليومية (Grouting Logs) في توثيق الجودة",
@@ -8096,12 +8079,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "متى يكون حقن التربة هو الخيار الأنسب؟", answer: "يكون مناسبًا عند الحاجة لتحسين خواص التربة تحت الأساسات، تقليل الهبوط، أو معالجة مسارات تسرب المياه—خصوصًا عندما تكون أعمال الحفر/الاستبدال غير ممكنة أو مكلفة." },
-      { question: "ما الفرق بين الحقن الأسمنتي وطرق الحقن الأخرى؟", answer: "الحقن الأسمنتي يعتمد على ملاط إسمنتي بخصائص لزوجة مناسبة، بينما توجد مواد أخرى (كيميائية/ميكروفاين) لظروف خاصة. اختيار المادة مرتبط بحجم المسام، النفاذية، والهدف (تقوية/عزل)." },
-      { question: "كيف نحدد نوع الخلطة واللزوجة المناسبة؟", answer: "نعتمد على طبيعة التربة/الصخور، نتائج الفحوصات، وهدف المعالجة. أحيانًا نبدأ بخليط تمهيدي ثم نعدّل تدريجيًا لتحقيق اختراق أفضل دون إحداث مشاكل جانبية." },
-      { question: "كيف أعرف أن المعالجة نجحت؟", answer: "المؤشرات تشمل استقرار الاستهلاك، تحسن سلوك الهبوط، وتحسن نتائج التحقق (مثل probing/اختبارات أو مراقبة التشققات) حسب خطة المشروع." },
-    ],
-    faqEn: [
+    { question: "كيف تُختار أنسب تقنية حقن لكل موقع؟", answer: "القرار يستند إلى نوع التربة ومشكلتها الجوهرية: ترب رملية نافذة تناسبها حقن الأسمنت والنفاذ، الترب الطينية تحتاج حقناً كيميائياً، والترب الهشة قد تتطلب Jet Grouting لتكوين أعمدة داعمة.", questionEn: "How is the most appropriate grouting technique selected for each site?", answerEn: "The decision is based on soil type and core problem: permeable sandy soils suit cement and permeation grouting, clays need chemical grouting, and weak soils may require Jet Grouting to form support columns." },
+    { question: "ما الاختبارات الضرورية قبل تنفيذ أي عملية حقن؟", answer: "الحد الأدنى المطلوب: تحديد نوع التربة (SPT أو CPT)، قياس النفاذية، وتحليل عينات مختبرية. في المشاريع الكبيرة تُضاف دراسة جيوفيزيائية (GPR/ERT) للحصول على صورة شاملة.", questionEn: "What tests are required before any grouting operation?", answerEn: "The minimum required: soil type identification (SPT or CPT), permeability measurement, and laboratory sample analysis. For larger projects, a geophysical study (GPR/ERT) is added for a comprehensive picture." },
+    { question: "كيف تُقيَّم جودة ونجاح عملية الحقن بعد التنفيذ؟", answer: "عبر اختبارات تحقق ما بعد الحقن: CPT أو اختبار ضغط المياه لقياس التحسن في خصائص التربة، مراقبة أجهزة قياس الهبوط، والفحص البصري للتشققات. تُقارَن النتائج بالقياسات الأولية.", questionEn: "How is grouting quality and success evaluated post-execution?", answerEn: "Through post-grouting verification tests: CPT or water pressure tests measuring soil property improvement, settlement monitoring instruments, and visual crack inspection. Results are compared against baseline measurements." },
+    { question: "ما العوامل التي تُحدد تكلفة مشروع حقن التربة؟", answer: "الأهم: عمق الحقن، نوع المادة المستخدمة، تعقيد المشروع وإمكانية الوصول، كمية الحقن المطلوبة، ووجود إنشاءات حساسة مجاورة تستدعي ضوابط إضافية.", questionEn: "What factors determine the cost of a soil grouting project?", answerEn: "Key factors: injection depth, material type used, project complexity and access, required grouting volume, and presence of sensitive adjacent structures requiring additional controls." }
+  ], faqEn: [
       { question: "When is soil grouting the right solution?", answer: "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly." },
       { question: "How is cement grouting different from other grouts?", answer: "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective." },
       { question: "How do you choose the mix and viscosity?", answer: "We base it on ground type, test results, and the treatment objective. In many cases, mixes are adjusted progressively to balance penetration and control." },
@@ -8119,9 +8101,9 @@ export const articles: ArticleContent[] = [
     categoriesEn: ["Grouting & Improvement Encyclopedia", "Geotechnical Engineering", "Soil Grouting", "Ground Improvement Library"],
     date: "2026-02-22",
     readTime: "3 دقيقة",
-    readTimeEn: "2 min",
+    readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "geotech-encyclopedia-41",
+    slug: "site-safety-in-grouting-works-managing-highpressure-operations",
     image: {
       url: "/favicon.webp",
       alt: "السلامة المهنية في مواقع أعمال الحقن والتعامل مع الضغوط العالية",
@@ -8200,12 +8182,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "متى يكون حقن التربة هو الخيار الأنسب؟", answer: "يكون مناسبًا عند الحاجة لتحسين خواص التربة تحت الأساسات، تقليل الهبوط، أو معالجة مسارات تسرب المياه—خصوصًا عندما تكون أعمال الحفر/الاستبدال غير ممكنة أو مكلفة." },
-      { question: "ما الفرق بين الحقن الأسمنتي وطرق الحقن الأخرى؟", answer: "الحقن الأسمنتي يعتمد على ملاط إسمنتي بخصائص لزوجة مناسبة، بينما توجد مواد أخرى (كيميائية/ميكروفاين) لظروف خاصة. اختيار المادة مرتبط بحجم المسام، النفاذية، والهدف (تقوية/عزل)." },
-      { question: "كيف نحدد نوع الخلطة واللزوجة المناسبة؟", answer: "نعتمد على طبيعة التربة/الصخور، نتائج الفحوصات، وهدف المعالجة. أحيانًا نبدأ بخليط تمهيدي ثم نعدّل تدريجيًا لتحقيق اختراق أفضل دون إحداث مشاكل جانبية." },
-      { question: "كيف أعرف أن المعالجة نجحت؟", answer: "المؤشرات تشمل استقرار الاستهلاك، تحسن سلوك الهبوط، وتحسن نتائج التحقق (مثل probing/اختبارات أو مراقبة التشققات) حسب خطة المشروع." },
-    ],
-    faqEn: [
+    { question: "كيف تُختار أنسب تقنية حقن لكل موقع؟", answer: "القرار يستند إلى نوع التربة ومشكلتها الجوهرية: ترب رملية نافذة تناسبها حقن الأسمنت والنفاذ، الترب الطينية تحتاج حقناً كيميائياً، والترب الهشة قد تتطلب Jet Grouting لتكوين أعمدة داعمة.", questionEn: "How is the most appropriate grouting technique selected for each site?", answerEn: "The decision is based on soil type and core problem: permeable sandy soils suit cement and permeation grouting, clays need chemical grouting, and weak soils may require Jet Grouting to form support columns." },
+    { question: "ما الاختبارات الضرورية قبل تنفيذ أي عملية حقن؟", answer: "الحد الأدنى المطلوب: تحديد نوع التربة (SPT أو CPT)، قياس النفاذية، وتحليل عينات مختبرية. في المشاريع الكبيرة تُضاف دراسة جيوفيزيائية (GPR/ERT) للحصول على صورة شاملة.", questionEn: "What tests are required before any grouting operation?", answerEn: "The minimum required: soil type identification (SPT or CPT), permeability measurement, and laboratory sample analysis. For larger projects, a geophysical study (GPR/ERT) is added for a comprehensive picture." },
+    { question: "كيف تُقيَّم جودة ونجاح عملية الحقن بعد التنفيذ؟", answer: "عبر اختبارات تحقق ما بعد الحقن: CPT أو اختبار ضغط المياه لقياس التحسن في خصائص التربة، مراقبة أجهزة قياس الهبوط، والفحص البصري للتشققات. تُقارَن النتائج بالقياسات الأولية.", questionEn: "How is grouting quality and success evaluated post-execution?", answerEn: "Through post-grouting verification tests: CPT or water pressure tests measuring soil property improvement, settlement monitoring instruments, and visual crack inspection. Results are compared against baseline measurements." },
+    { question: "ما العوامل التي تُحدد تكلفة مشروع حقن التربة؟", answer: "الأهم: عمق الحقن، نوع المادة المستخدمة، تعقيد المشروع وإمكانية الوصول، كمية الحقن المطلوبة، ووجود إنشاءات حساسة مجاورة تستدعي ضوابط إضافية.", questionEn: "What factors determine the cost of a soil grouting project?", answerEn: "Key factors: injection depth, material type used, project complexity and access, required grouting volume, and presence of sensitive adjacent structures requiring additional controls." }
+  ], faqEn: [
       { question: "When is soil grouting the right solution?", answer: "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly." },
       { question: "How is cement grouting different from other grouts?", answer: "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective." },
       { question: "How do you choose the mix and viscosity?", answer: "We base it on ground type, test results, and the treatment objective. In many cases, mixes are adjusted progressively to balance penetration and control." },
@@ -8223,9 +8204,9 @@ export const articles: ArticleContent[] = [
     categoriesEn: ["Grouting & Improvement Encyclopedia", "Geotechnical Engineering", "Soil Grouting", "Ground Improvement Library"],
     date: "2026-02-25",
     readTime: "3 دقيقة",
-    readTimeEn: "2 min",
+    readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "geotech-encyclopedia-42",
+    slug: "site-management-coordinating-the-grouting-crew-with-the-main-contractor",
     image: {
       url: "/favicon.webp",
       alt: "إدارة الموقع وتنسيق العمل بين فريق الحقن والمقاول الرئيسي",
@@ -8318,12 +8299,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "متى يكون حقن التربة هو الخيار الأنسب؟", answer: "يكون مناسبًا عند الحاجة لتحسين خواص التربة تحت الأساسات، تقليل الهبوط، أو معالجة مسارات تسرب المياه—خصوصًا عندما تكون أعمال الحفر/الاستبدال غير ممكنة أو مكلفة." },
-      { question: "ما الفرق بين الحقن الأسمنتي وطرق الحقن الأخرى؟", answer: "الحقن الأسمنتي يعتمد على ملاط إسمنتي بخصائص لزوجة مناسبة، بينما توجد مواد أخرى (كيميائية/ميكروفاين) لظروف خاصة. اختيار المادة مرتبط بحجم المسام، النفاذية، والهدف (تقوية/عزل)." },
-      { question: "كيف نحدد نوع الخلطة واللزوجة المناسبة؟", answer: "نعتمد على طبيعة التربة/الصخور، نتائج الفحوصات، وهدف المعالجة. أحيانًا نبدأ بخليط تمهيدي ثم نعدّل تدريجيًا لتحقيق اختراق أفضل دون إحداث مشاكل جانبية." },
-      { question: "كيف أعرف أن المعالجة نجحت؟", answer: "المؤشرات تشمل استقرار الاستهلاك، تحسن سلوك الهبوط، وتحسن نتائج التحقق (مثل probing/اختبارات أو مراقبة التشققات) حسب خطة المشروع." },
-    ],
-    faqEn: [
+    { question: "كيف تُختار أنسب تقنية حقن لكل موقع؟", answer: "القرار يستند إلى نوع التربة ومشكلتها الجوهرية: ترب رملية نافذة تناسبها حقن الأسمنت والنفاذ، الترب الطينية تحتاج حقناً كيميائياً، والترب الهشة قد تتطلب Jet Grouting لتكوين أعمدة داعمة.", questionEn: "How is the most appropriate grouting technique selected for each site?", answerEn: "The decision is based on soil type and core problem: permeable sandy soils suit cement and permeation grouting, clays need chemical grouting, and weak soils may require Jet Grouting to form support columns." },
+    { question: "ما الاختبارات الضرورية قبل تنفيذ أي عملية حقن؟", answer: "الحد الأدنى المطلوب: تحديد نوع التربة (SPT أو CPT)، قياس النفاذية، وتحليل عينات مختبرية. في المشاريع الكبيرة تُضاف دراسة جيوفيزيائية (GPR/ERT) للحصول على صورة شاملة.", questionEn: "What tests are required before any grouting operation?", answerEn: "The minimum required: soil type identification (SPT or CPT), permeability measurement, and laboratory sample analysis. For larger projects, a geophysical study (GPR/ERT) is added for a comprehensive picture." },
+    { question: "كيف تُقيَّم جودة ونجاح عملية الحقن بعد التنفيذ؟", answer: "عبر اختبارات تحقق ما بعد الحقن: CPT أو اختبار ضغط المياه لقياس التحسن في خصائص التربة، مراقبة أجهزة قياس الهبوط، والفحص البصري للتشققات. تُقارَن النتائج بالقياسات الأولية.", questionEn: "How is grouting quality and success evaluated post-execution?", answerEn: "Through post-grouting verification tests: CPT or water pressure tests measuring soil property improvement, settlement monitoring instruments, and visual crack inspection. Results are compared against baseline measurements." },
+    { question: "ما العوامل التي تُحدد تكلفة مشروع حقن التربة؟", answer: "الأهم: عمق الحقن، نوع المادة المستخدمة، تعقيد المشروع وإمكانية الوصول، كمية الحقن المطلوبة، ووجود إنشاءات حساسة مجاورة تستدعي ضوابط إضافية.", questionEn: "What factors determine the cost of a soil grouting project?", answerEn: "Key factors: injection depth, material type used, project complexity and access, required grouting volume, and presence of sensitive adjacent structures requiring additional controls." }
+  ], faqEn: [
       { question: "When is soil grouting the right solution?", answer: "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly." },
       { question: "How is cement grouting different from other grouts?", answer: "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective." },
       { question: "How do you choose the mix and viscosity?", answer: "We base it on ground type, test results, and the treatment objective. In many cases, mixes are adjusted progressively to balance penetration and control." },
@@ -8343,7 +8323,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "geotech-encyclopedia-43",
+    slug: "common-execution-mistakes-in-groutingand-how-to-avoid-them",
     image: {
       url: "/favicon.webp",
       alt: "الأخطاء الشائعة في تنفيذ أعمال الحقن وكيفية تجنبها",
@@ -8478,12 +8458,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "متى يكون حقن التربة هو الخيار الأنسب؟", answer: "يكون مناسبًا عند الحاجة لتحسين خواص التربة تحت الأساسات، تقليل الهبوط، أو معالجة مسارات تسرب المياه—خصوصًا عندما تكون أعمال الحفر/الاستبدال غير ممكنة أو مكلفة." },
-      { question: "ما الفرق بين الحقن الأسمنتي وطرق الحقن الأخرى؟", answer: "الحقن الأسمنتي يعتمد على ملاط إسمنتي بخصائص لزوجة مناسبة، بينما توجد مواد أخرى (كيميائية/ميكروفاين) لظروف خاصة. اختيار المادة مرتبط بحجم المسام، النفاذية، والهدف (تقوية/عزل)." },
-      { question: "كيف نحدد نوع الخلطة واللزوجة المناسبة؟", answer: "نعتمد على طبيعة التربة/الصخور، نتائج الفحوصات، وهدف المعالجة. أحيانًا نبدأ بخليط تمهيدي ثم نعدّل تدريجيًا لتحقيق اختراق أفضل دون إحداث مشاكل جانبية." },
-      { question: "كيف أعرف أن المعالجة نجحت؟", answer: "المؤشرات تشمل استقرار الاستهلاك، تحسن سلوك الهبوط، وتحسن نتائج التحقق (مثل probing/اختبارات أو مراقبة التشققات) حسب خطة المشروع." },
-    ],
-    faqEn: [
+    { question: "كيف تُختار أنسب تقنية حقن لكل موقع؟", answer: "القرار يستند إلى نوع التربة ومشكلتها الجوهرية: ترب رملية نافذة تناسبها حقن الأسمنت والنفاذ، الترب الطينية تحتاج حقناً كيميائياً، والترب الهشة قد تتطلب Jet Grouting لتكوين أعمدة داعمة.", questionEn: "How is the most appropriate grouting technique selected for each site?", answerEn: "The decision is based on soil type and core problem: permeable sandy soils suit cement and permeation grouting, clays need chemical grouting, and weak soils may require Jet Grouting to form support columns." },
+    { question: "ما الاختبارات الضرورية قبل تنفيذ أي عملية حقن؟", answer: "الحد الأدنى المطلوب: تحديد نوع التربة (SPT أو CPT)، قياس النفاذية، وتحليل عينات مختبرية. في المشاريع الكبيرة تُضاف دراسة جيوفيزيائية (GPR/ERT) للحصول على صورة شاملة.", questionEn: "What tests are required before any grouting operation?", answerEn: "The minimum required: soil type identification (SPT or CPT), permeability measurement, and laboratory sample analysis. For larger projects, a geophysical study (GPR/ERT) is added for a comprehensive picture." },
+    { question: "كيف تُقيَّم جودة ونجاح عملية الحقن بعد التنفيذ؟", answer: "عبر اختبارات تحقق ما بعد الحقن: CPT أو اختبار ضغط المياه لقياس التحسن في خصائص التربة، مراقبة أجهزة قياس الهبوط، والفحص البصري للتشققات. تُقارَن النتائج بالقياسات الأولية.", questionEn: "How is grouting quality and success evaluated post-execution?", answerEn: "Through post-grouting verification tests: CPT or water pressure tests measuring soil property improvement, settlement monitoring instruments, and visual crack inspection. Results are compared against baseline measurements." },
+    { question: "ما العوامل التي تُحدد تكلفة مشروع حقن التربة؟", answer: "الأهم: عمق الحقن، نوع المادة المستخدمة، تعقيد المشروع وإمكانية الوصول، كمية الحقن المطلوبة، ووجود إنشاءات حساسة مجاورة تستدعي ضوابط إضافية.", questionEn: "What factors determine the cost of a soil grouting project?", answerEn: "Key factors: injection depth, material type used, project complexity and access, required grouting volume, and presence of sensitive adjacent structures requiring additional controls." }
+  ], faqEn: [
       { question: "When is soil grouting the right solution?", answer: "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly." },
       { question: "How is cement grouting different from other grouts?", answer: "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective." },
       { question: "How do you choose the mix and viscosity?", answer: "We base it on ground type, test results, and the treatment objective. In many cases, mixes are adjusted progressively to balance penetration and control." },
@@ -8503,7 +8482,7 @@ export const articles: ArticleContent[] = [
     readTime: "2 دقيقة",
     readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "geotech-encyclopedia-44",
+    slug: "maintaining-grouting-equipment-how-it-affects-accuracy-and-outcomes",
     image: {
       url: "/favicon.webp",
       alt: "صيانة معدات الحقن وأثرها على دقة النتائج",
@@ -8588,12 +8567,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "متى يكون حقن التربة هو الخيار الأنسب؟", answer: "يكون مناسبًا عند الحاجة لتحسين خواص التربة تحت الأساسات، تقليل الهبوط، أو معالجة مسارات تسرب المياه—خصوصًا عندما تكون أعمال الحفر/الاستبدال غير ممكنة أو مكلفة." },
-      { question: "ما الفرق بين الحقن الأسمنتي وطرق الحقن الأخرى؟", answer: "الحقن الأسمنتي يعتمد على ملاط إسمنتي بخصائص لزوجة مناسبة، بينما توجد مواد أخرى (كيميائية/ميكروفاين) لظروف خاصة. اختيار المادة مرتبط بحجم المسام، النفاذية، والهدف (تقوية/عزل)." },
-      { question: "كيف نحدد نوع الخلطة واللزوجة المناسبة؟", answer: "نعتمد على طبيعة التربة/الصخور، نتائج الفحوصات، وهدف المعالجة. أحيانًا نبدأ بخليط تمهيدي ثم نعدّل تدريجيًا لتحقيق اختراق أفضل دون إحداث مشاكل جانبية." },
-      { question: "كيف أعرف أن المعالجة نجحت؟", answer: "المؤشرات تشمل استقرار الاستهلاك، تحسن سلوك الهبوط، وتحسن نتائج التحقق (مثل probing/اختبارات أو مراقبة التشققات) حسب خطة المشروع." },
-    ],
-    faqEn: [
+    { question: "كيف تُختار أنسب تقنية حقن لكل موقع؟", answer: "القرار يستند إلى نوع التربة ومشكلتها الجوهرية: ترب رملية نافذة تناسبها حقن الأسمنت والنفاذ، الترب الطينية تحتاج حقناً كيميائياً، والترب الهشة قد تتطلب Jet Grouting لتكوين أعمدة داعمة.", questionEn: "How is the most appropriate grouting technique selected for each site?", answerEn: "The decision is based on soil type and core problem: permeable sandy soils suit cement and permeation grouting, clays need chemical grouting, and weak soils may require Jet Grouting to form support columns." },
+    { question: "ما الاختبارات الضرورية قبل تنفيذ أي عملية حقن؟", answer: "الحد الأدنى المطلوب: تحديد نوع التربة (SPT أو CPT)، قياس النفاذية، وتحليل عينات مختبرية. في المشاريع الكبيرة تُضاف دراسة جيوفيزيائية (GPR/ERT) للحصول على صورة شاملة.", questionEn: "What tests are required before any grouting operation?", answerEn: "The minimum required: soil type identification (SPT or CPT), permeability measurement, and laboratory sample analysis. For larger projects, a geophysical study (GPR/ERT) is added for a comprehensive picture." },
+    { question: "كيف تُقيَّم جودة ونجاح عملية الحقن بعد التنفيذ؟", answer: "عبر اختبارات تحقق ما بعد الحقن: CPT أو اختبار ضغط المياه لقياس التحسن في خصائص التربة، مراقبة أجهزة قياس الهبوط، والفحص البصري للتشققات. تُقارَن النتائج بالقياسات الأولية.", questionEn: "How is grouting quality and success evaluated post-execution?", answerEn: "Through post-grouting verification tests: CPT or water pressure tests measuring soil property improvement, settlement monitoring instruments, and visual crack inspection. Results are compared against baseline measurements." },
+    { question: "ما العوامل التي تُحدد تكلفة مشروع حقن التربة؟", answer: "الأهم: عمق الحقن، نوع المادة المستخدمة، تعقيد المشروع وإمكانية الوصول، كمية الحقن المطلوبة، ووجود إنشاءات حساسة مجاورة تستدعي ضوابط إضافية.", questionEn: "What factors determine the cost of a soil grouting project?", answerEn: "Key factors: injection depth, material type used, project complexity and access, required grouting volume, and presence of sensitive adjacent structures requiring additional controls." }
+  ], faqEn: [
       { question: "When is soil grouting the right solution?", answer: "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly." },
       { question: "How is cement grouting different from other grouts?", answer: "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective." },
       { question: "How do you choose the mix and viscosity?", answer: "We base it on ground type, test results, and the treatment objective. In many cases, mixes are adjusted progressively to balance penetration and control." },
@@ -8613,7 +8591,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "geotech-encyclopedia-45",
+    slug: "underpinning-options-grouting-vs-micropiles-and-other-solutions",
     image: {
       url: "/favicon.webp",
       alt: "تقوية الأساسات (Underpinning): خريطة خيارات بين الحقن والخوازيق",
@@ -8712,12 +8690,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "متى يكون حقن التربة هو الخيار الأنسب؟", answer: "يكون مناسبًا عند الحاجة لتحسين خواص التربة تحت الأساسات، تقليل الهبوط، أو معالجة مسارات تسرب المياه—خصوصًا عندما تكون أعمال الحفر/الاستبدال غير ممكنة أو مكلفة." },
-      { question: "ما الفرق بين الحقن الأسمنتي وطرق الحقن الأخرى؟", answer: "الحقن الأسمنتي يعتمد على ملاط إسمنتي بخصائص لزوجة مناسبة، بينما توجد مواد أخرى (كيميائية/ميكروفاين) لظروف خاصة. اختيار المادة مرتبط بحجم المسام، النفاذية، والهدف (تقوية/عزل)." },
-      { question: "كيف نحدد نوع الخلطة واللزوجة المناسبة؟", answer: "نعتمد على طبيعة التربة/الصخور، نتائج الفحوصات، وهدف المعالجة. أحيانًا نبدأ بخليط تمهيدي ثم نعدّل تدريجيًا لتحقيق اختراق أفضل دون إحداث مشاكل جانبية." },
-      { question: "كيف أعرف أن المعالجة نجحت؟", answer: "المؤشرات تشمل استقرار الاستهلاك، تحسن سلوك الهبوط، وتحسن نتائج التحقق (مثل probing/اختبارات أو مراقبة التشققات) حسب خطة المشروع." },
-    ],
-    faqEn: [
+    { question: "ما الفرق بين الهبوط الكلي والهبوط التفاضلي وأيهما أخطر؟", answer: "الهبوط الكلي هو نزول منتظم للمنشأة كاملها، بينما التفاضلي هو هبوط غير متساوٍ بين أجزائها. الهبوط التفاضلي أخطر بكثير لأنه يُسبب إجهادات انحناء وقوى قص تُفضي للتشقق والانهيار.", questionEn: "What is the difference between total and differential settlement and which is more dangerous?", answerEn: "Total settlement is uniform sinking of the entire structure, while differential is uneven settlement between its parts. Differential is far more dangerous as it causes bending stresses and shear forces leading to cracking and potential collapse." },
+    { question: "متى يكون الهبوط مقبولاً ومتى يستدعي التدخل الفوري؟", answer: "الهبوط المقبول يعتمد على نوع المنشأة: للمباني السكنية عادة < 25 مم كلي و< 15 مم تفاضلي. أي هبوط مصحوب بتشققات متسعة أو تشوه واضح في الهيكل يستدعي فحصاً فورياً.", questionEn: "When is settlement acceptable and when does it require immediate action?", answerEn: "Acceptable settlement depends on structure type: for residential buildings typically < 25mm total and < 15mm differential. Any settlement accompanied by widening cracks or visible structural distortion requires immediate inspection." },
+    { question: "كيف يُوقف حقن التربة الهبوط الجاري؟", answer: "يزيد الحقن من قدرة التحمل وصلابة التربة تحت الأساسات، مما يُقلل التشوه الإضافي. في بعض الحالات يُستخدم حقن الرفع (Compensation Grouting) لاسترداد جزء من الهبوط السابق.", questionEn: "How does soil grouting stop active settlement?", answerEn: "Grouting increases bearing capacity and stiffness of soil under foundations, reducing further deformation. In some cases Compensation Grouting is used to partially recover previous settlement." },
+    { question: "هل يمكن رفع المبنى مجدداً بعد هبوطه عبر الحقن؟", answer: "نعم، بتقنية Compensation Grouting المتحكّمة التي تستخدم ضغطاً متدرجاً لرفع الأساس ببطء ودقة. لكنها تحتاج مراقبة مستمرة دقيقة لتجنب الإفراط في الرفع أو تشقق الهيكل.", questionEn: "Can a building be re-lifted after settlement through grouting?", answerEn: "Yes, using controlled Compensation Grouting that applies incremental pressure to slowly and precisely lift the foundation. It requires continuous precise monitoring to avoid over-lifting or structural cracking." }
+  ], faqEn: [
       { question: "When is soil grouting the right solution?", answer: "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly." },
       { question: "How is cement grouting different from other grouts?", answer: "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective." },
       { question: "How do you choose the mix and viscosity?", answer: "We base it on ground type, test results, and the treatment objective. In many cases, mixes are adjusted progressively to balance penetration and control." },
@@ -8737,7 +8714,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "geotech-encyclopedia-46",
+    slug: "epoxy-injection-for-structural-cracks-when-it-counts-as-structural-repair",
     image: {
       url: "/favicon.webp",
       alt: "حقن الإيبوكسي للشقوق الإنشائية: متى يكون إصلاحاً إنشائياً؟",
@@ -8879,12 +8856,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "متى يكون حقن التربة هو الخيار الأنسب؟", answer: "يكون مناسبًا عند الحاجة لتحسين خواص التربة تحت الأساسات، تقليل الهبوط، أو معالجة مسارات تسرب المياه—خصوصًا عندما تكون أعمال الحفر/الاستبدال غير ممكنة أو مكلفة." },
-      { question: "ما الفرق بين الحقن الأسمنتي وطرق الحقن الأخرى؟", answer: "الحقن الأسمنتي يعتمد على ملاط إسمنتي بخصائص لزوجة مناسبة، بينما توجد مواد أخرى (كيميائية/ميكروفاين) لظروف خاصة. اختيار المادة مرتبط بحجم المسام، النفاذية، والهدف (تقوية/عزل)." },
-      { question: "كيف نحدد نوع الخلطة واللزوجة المناسبة؟", answer: "نعتمد على طبيعة التربة/الصخور، نتائج الفحوصات، وهدف المعالجة. أحيانًا نبدأ بخليط تمهيدي ثم نعدّل تدريجيًا لتحقيق اختراق أفضل دون إحداث مشاكل جانبية." },
-      { question: "كيف أعرف أن المعالجة نجحت؟", answer: "المؤشرات تشمل استقرار الاستهلاك، تحسن سلوك الهبوط، وتحسن نتائج التحقق (مثل probing/اختبارات أو مراقبة التشققات) حسب خطة المشروع." },
-    ],
-    faqEn: [
+    { question: "كيف تُختار أنسب تقنية حقن لكل موقع؟", answer: "القرار يستند إلى نوع التربة ومشكلتها الجوهرية: ترب رملية نافذة تناسبها حقن الأسمنت والنفاذ، الترب الطينية تحتاج حقناً كيميائياً، والترب الهشة قد تتطلب Jet Grouting لتكوين أعمدة داعمة.", questionEn: "How is the most appropriate grouting technique selected for each site?", answerEn: "The decision is based on soil type and core problem: permeable sandy soils suit cement and permeation grouting, clays need chemical grouting, and weak soils may require Jet Grouting to form support columns." },
+    { question: "ما الاختبارات الضرورية قبل تنفيذ أي عملية حقن؟", answer: "الحد الأدنى المطلوب: تحديد نوع التربة (SPT أو CPT)، قياس النفاذية، وتحليل عينات مختبرية. في المشاريع الكبيرة تُضاف دراسة جيوفيزيائية (GPR/ERT) للحصول على صورة شاملة.", questionEn: "What tests are required before any grouting operation?", answerEn: "The minimum required: soil type identification (SPT or CPT), permeability measurement, and laboratory sample analysis. For larger projects, a geophysical study (GPR/ERT) is added for a comprehensive picture." },
+    { question: "كيف تُقيَّم جودة ونجاح عملية الحقن بعد التنفيذ؟", answer: "عبر اختبارات تحقق ما بعد الحقن: CPT أو اختبار ضغط المياه لقياس التحسن في خصائص التربة، مراقبة أجهزة قياس الهبوط، والفحص البصري للتشققات. تُقارَن النتائج بالقياسات الأولية.", questionEn: "How is grouting quality and success evaluated post-execution?", answerEn: "Through post-grouting verification tests: CPT or water pressure tests measuring soil property improvement, settlement monitoring instruments, and visual crack inspection. Results are compared against baseline measurements." },
+    { question: "ما العوامل التي تُحدد تكلفة مشروع حقن التربة؟", answer: "الأهم: عمق الحقن، نوع المادة المستخدمة، تعقيد المشروع وإمكانية الوصول، كمية الحقن المطلوبة، ووجود إنشاءات حساسة مجاورة تستدعي ضوابط إضافية.", questionEn: "What factors determine the cost of a soil grouting project?", answerEn: "Key factors: injection depth, material type used, project complexity and access, required grouting volume, and presence of sensitive adjacent structures requiring additional controls." }
+  ], faqEn: [
       { question: "When is soil grouting the right solution?", answer: "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly." },
       { question: "How is cement grouting different from other grouts?", answer: "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective." },
       { question: "How do you choose the mix and viscosity?", answer: "We base it on ground type, test results, and the treatment objective. In many cases, mixes are adjusted progressively to balance penetration and control." },
@@ -8904,7 +8880,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "geotech-encyclopedia-47",
+    slug: "cfrp-strengthening-alongside-soil-grouting-integrated-repair-strategies",
     image: {
       url: "/favicon.webp",
       alt: "تدعيم العناصر الإنشائية بالكربون فايبر (CFRP) بالتزامن مع حقن التربة",
@@ -9028,12 +9004,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "متى يكون حقن التربة هو الخيار الأنسب؟", answer: "يكون مناسبًا عند الحاجة لتحسين خواص التربة تحت الأساسات، تقليل الهبوط، أو معالجة مسارات تسرب المياه—خصوصًا عندما تكون أعمال الحفر/الاستبدال غير ممكنة أو مكلفة." },
-      { question: "ما الفرق بين الحقن الأسمنتي وطرق الحقن الأخرى؟", answer: "الحقن الأسمنتي يعتمد على ملاط إسمنتي بخصائص لزوجة مناسبة، بينما توجد مواد أخرى (كيميائية/ميكروفاين) لظروف خاصة. اختيار المادة مرتبط بحجم المسام، النفاذية، والهدف (تقوية/عزل)." },
-      { question: "كيف نحدد نوع الخلطة واللزوجة المناسبة؟", answer: "نعتمد على طبيعة التربة/الصخور، نتائج الفحوصات، وهدف المعالجة. أحيانًا نبدأ بخليط تمهيدي ثم نعدّل تدريجيًا لتحقيق اختراق أفضل دون إحداث مشاكل جانبية." },
-      { question: "كيف أعرف أن المعالجة نجحت؟", answer: "المؤشرات تشمل استقرار الاستهلاك، تحسن سلوك الهبوط، وتحسن نتائج التحقق (مثل probing/اختبارات أو مراقبة التشققات) حسب خطة المشروع." },
-    ],
-    faqEn: [
+    { question: "كيف تُختار أنسب تقنية حقن لكل موقع؟", answer: "القرار يستند إلى نوع التربة ومشكلتها الجوهرية: ترب رملية نافذة تناسبها حقن الأسمنت والنفاذ، الترب الطينية تحتاج حقناً كيميائياً، والترب الهشة قد تتطلب Jet Grouting لتكوين أعمدة داعمة.", questionEn: "How is the most appropriate grouting technique selected for each site?", answerEn: "The decision is based on soil type and core problem: permeable sandy soils suit cement and permeation grouting, clays need chemical grouting, and weak soils may require Jet Grouting to form support columns." },
+    { question: "ما الاختبارات الضرورية قبل تنفيذ أي عملية حقن؟", answer: "الحد الأدنى المطلوب: تحديد نوع التربة (SPT أو CPT)، قياس النفاذية، وتحليل عينات مختبرية. في المشاريع الكبيرة تُضاف دراسة جيوفيزيائية (GPR/ERT) للحصول على صورة شاملة.", questionEn: "What tests are required before any grouting operation?", answerEn: "The minimum required: soil type identification (SPT or CPT), permeability measurement, and laboratory sample analysis. For larger projects, a geophysical study (GPR/ERT) is added for a comprehensive picture." },
+    { question: "كيف تُقيَّم جودة ونجاح عملية الحقن بعد التنفيذ؟", answer: "عبر اختبارات تحقق ما بعد الحقن: CPT أو اختبار ضغط المياه لقياس التحسن في خصائص التربة، مراقبة أجهزة قياس الهبوط، والفحص البصري للتشققات. تُقارَن النتائج بالقياسات الأولية.", questionEn: "How is grouting quality and success evaluated post-execution?", answerEn: "Through post-grouting verification tests: CPT or water pressure tests measuring soil property improvement, settlement monitoring instruments, and visual crack inspection. Results are compared against baseline measurements." },
+    { question: "ما العوامل التي تُحدد تكلفة مشروع حقن التربة؟", answer: "الأهم: عمق الحقن، نوع المادة المستخدمة، تعقيد المشروع وإمكانية الوصول، كمية الحقن المطلوبة، ووجود إنشاءات حساسة مجاورة تستدعي ضوابط إضافية.", questionEn: "What factors determine the cost of a soil grouting project?", answerEn: "Key factors: injection depth, material type used, project complexity and access, required grouting volume, and presence of sensitive adjacent structures requiring additional controls." }
+  ], faqEn: [
       { question: "When is soil grouting the right solution?", answer: "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly." },
       { question: "How is cement grouting different from other grouts?", answer: "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective." },
       { question: "How do you choose the mix and viscosity?", answer: "We base it on ground type, test results, and the treatment objective. In many cases, mixes are adjusted progressively to balance penetration and control." },
@@ -9051,9 +9026,9 @@ export const articles: ArticleContent[] = [
     categoriesEn: ["Grouting & Improvement Encyclopedia", "Geotechnical Engineering", "Soil Grouting", "Ground Improvement Library"],
     date: "2026-03-15",
     readTime: "3 دقيقة",
-    readTimeEn: "2 min",
+    readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "geotech-encyclopedia-48",
+    slug: "settlement-remediation-isolated-footings-vs-raft-foundations",
     image: {
       url: "/favicon.webp",
       alt: "معالجة هبوط القواعد المنفصلة مقابل اللبشة المسلحة",
@@ -9082,7 +9057,7 @@ export const articles: ArticleContent[] = [
   - **حقن النفث (Jet Grouting)**: يسمح بإنشاء أعمدة خرسانية مدعمة في التربة، مناسب للبنى التحتية الثقيلة واللبشة بسبب قدرته على تحسين التربة بعمق كبير مع تحكم جيد.
   
   #### 4. المعايير الفنية وتصميم الحلول  
-  ينصح باتباع مواصفات ASTM D 5849 و FHWA من أجل تقييم خصائص مادة الحقن وتأثيرها على التربة. يجب إجراء تقييم دقيق لانخفاض الهبوط قبل وبعد المعالجة باستخدام أجهزة جسر المراقبة (Crack Monitoring) لضمان استقرار الهبوط وعدم ظهور تشققات جديدة في المنشأ.  
+  ينصح باتباع مواصفات ASTM D5849 و FHWA من أجل تقييم خصائص مادة الحقن وتأثيرها على التربة. يجب إجراء تقييم دقيق لانخفاض الهبوط قبل وبعد المعالجة باستخدام أجهزة جسر المراقبة (Crack Monitoring) لضمان استقرار الهبوط وعدم ظهور تشققات جديدة في المنشأ.  
   
   #### 5. اعتبارات تصميم خاصة  
   - لتجنب هبوط متفاوت خطير في القواعد المنفصلة، من المهم فحص التربة بشكل مفصل لكل نقطة تحميل.  
@@ -9138,12 +9113,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "متى يكون حقن التربة هو الخيار الأنسب؟", answer: "يكون مناسبًا عند الحاجة لتحسين خواص التربة تحت الأساسات، تقليل الهبوط، أو معالجة مسارات تسرب المياه—خصوصًا عندما تكون أعمال الحفر/الاستبدال غير ممكنة أو مكلفة." },
-      { question: "ما الفرق بين الحقن الأسمنتي وطرق الحقن الأخرى؟", answer: "الحقن الأسمنتي يعتمد على ملاط إسمنتي بخصائص لزوجة مناسبة، بينما توجد مواد أخرى (كيميائية/ميكروفاين) لظروف خاصة. اختيار المادة مرتبط بحجم المسام، النفاذية، والهدف (تقوية/عزل)." },
-      { question: "كيف نحدد نوع الخلطة واللزوجة المناسبة؟", answer: "نعتمد على طبيعة التربة/الصخور، نتائج الفحوصات، وهدف المعالجة. أحيانًا نبدأ بخليط تمهيدي ثم نعدّل تدريجيًا لتحقيق اختراق أفضل دون إحداث مشاكل جانبية." },
-      { question: "كيف أعرف أن المعالجة نجحت؟", answer: "المؤشرات تشمل استقرار الاستهلاك، تحسن سلوك الهبوط، وتحسن نتائج التحقق (مثل probing/اختبارات أو مراقبة التشققات) حسب خطة المشروع." },
-    ],
-    faqEn: [
+    { question: "كيف تُختار أنسب تقنية حقن لكل موقع؟", answer: "القرار يستند إلى نوع التربة ومشكلتها الجوهرية: ترب رملية نافذة تناسبها حقن الأسمنت والنفاذ، الترب الطينية تحتاج حقناً كيميائياً، والترب الهشة قد تتطلب Jet Grouting لتكوين أعمدة داعمة.", questionEn: "How is the most appropriate grouting technique selected for each site?", answerEn: "The decision is based on soil type and core problem: permeable sandy soils suit cement and permeation grouting, clays need chemical grouting, and weak soils may require Jet Grouting to form support columns." },
+    { question: "ما الاختبارات الضرورية قبل تنفيذ أي عملية حقن؟", answer: "الحد الأدنى المطلوب: تحديد نوع التربة (SPT أو CPT)، قياس النفاذية، وتحليل عينات مختبرية. في المشاريع الكبيرة تُضاف دراسة جيوفيزيائية (GPR/ERT) للحصول على صورة شاملة.", questionEn: "What tests are required before any grouting operation?", answerEn: "The minimum required: soil type identification (SPT or CPT), permeability measurement, and laboratory sample analysis. For larger projects, a geophysical study (GPR/ERT) is added for a comprehensive picture." },
+    { question: "كيف تُقيَّم جودة ونجاح عملية الحقن بعد التنفيذ؟", answer: "عبر اختبارات تحقق ما بعد الحقن: CPT أو اختبار ضغط المياه لقياس التحسن في خصائص التربة، مراقبة أجهزة قياس الهبوط، والفحص البصري للتشققات. تُقارَن النتائج بالقياسات الأولية.", questionEn: "How is grouting quality and success evaluated post-execution?", answerEn: "Through post-grouting verification tests: CPT or water pressure tests measuring soil property improvement, settlement monitoring instruments, and visual crack inspection. Results are compared against baseline measurements." },
+    { question: "ما العوامل التي تُحدد تكلفة مشروع حقن التربة؟", answer: "الأهم: عمق الحقن، نوع المادة المستخدمة، تعقيد المشروع وإمكانية الوصول، كمية الحقن المطلوبة، ووجود إنشاءات حساسة مجاورة تستدعي ضوابط إضافية.", questionEn: "What factors determine the cost of a soil grouting project?", answerEn: "Key factors: injection depth, material type used, project complexity and access, required grouting volume, and presence of sensitive adjacent structures requiring additional controls." }
+  ], faqEn: [
       { question: "When is soil grouting the right solution?", answer: "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly." },
       { question: "How is cement grouting different from other grouts?", answer: "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective." },
       { question: "How do you choose the mix and viscosity?", answer: "We base it on ground type, test results, and the treatment objective. In many cases, mixes are adjusted progressively to balance penetration and control." },
@@ -9161,9 +9135,9 @@ export const articles: ArticleContent[] = [
     categoriesEn: ["Grouting & Improvement Encyclopedia", "Geotechnical Engineering", "Soil Grouting", "Ground Improvement Library"],
     date: "2026-03-18",
     readTime: "3 دقيقة",
-    readTimeEn: "2 min",
+    readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "geotech-encyclopedia-49",
+    slug: "protecting-heritage-structures-with-microgrouting-techniques",
     image: {
       url: "/favicon.webp",
       alt: "حماية المنشآت الأثرية والتاريخية باستخدام تقنيات الحقن الدقيق",
@@ -9274,11 +9248,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "متى يكون حقن التربة هو الخيار الأنسب؟", answer: "يكون مناسبًا عند الحاجة لتحسين خواص التربة تحت الأساسات، تقليل الهبوط، أو معالجة مسارات تسرب المياه—خصوصًا عندما تكون أعمال الحفر/الاستبدال غير ممكنة أو مكلفة." },
-      { question: "ما الفرق بين الحقن الأسمنتي وطرق الحقن الأخرى؟", answer: "الحقن الأسمنتي يعتمد على ملاط إسمنتي بخصائص لزوجة مناسبة، بينما توجد مواد أخرى (كيميائية/ميكروفاين) لظروف خاصة. اختيار المادة مرتبط بحجم المسام، النفاذية، والهدف (تقوية/عزل)." },
-      { question: "كيف نحدد نوع الخلطة واللزوجة المناسبة؟", answer: "نعتمد على طبيعة التربة/الصخور، نتائج الفحوصات، وهدف المعالجة. أحيانًا نبدأ بخليط تمهيدي ثم نعدّل تدريجيًا لتحقيق اختراق أفضل دون إحداث مشاكل جانبية." },
-      { question: "كيف أعرف أن المعالجة نجحت؟", answer: "المؤشرات تشمل استقرار الاستهلاك، تحسن سلوك الهبوط، وتحسن نتائج التحقق (مثل probing/اختبارات أو مراقبة التشققات) حسب خطة المشروع." },
-    ],
+    { question: "ما الخطوات العملية لطلب خدمة حقن التربة؟", answer: "ابدأ بتوثيق المشكلة (صور، قياسات)، ثم تواصل مع فريق إطلاق لتقييم أولي. بعد الزيارة الميدانية تُحدَّد التقنية المناسبة والتكلفة التقديرية قبل بدء التنفيذ.", questionEn: "What are the practical steps to request soil grouting service?", answerEn: "Start by documenting the problem (photos, measurements), then contact the ETLAQ team for initial assessment. After the field visit, the appropriate technique and estimated cost are determined before execution begins." },
+    { question: "ما الذي يشمله تقرير ما بعد الحقن؟", answer: "يشمل: خريطة نقاط الحقن المنجزة، سجلات الضغط والكميات لكل نقطة، نتائج اختبارات التحقق، توصيات للمتابعة، وشهادات مواد الحقن.", questionEn: "What does a post-grouting report include?", answerEn: "It includes: map of completed injection points, pressure and volume logs per point, verification test results, follow-up recommendations, and grout material certificates." },
+    { question: "كم عدد نقاط الحقن الضروري في المشروع المتوسط؟", answer: "يتوقف على مساحة المشكلة وعمق المعالجة. المشروع المتوسط قد يتراوح بين 10 و50 نقطة. نقاط الحقن تُحدَّد بعد الزيارة الميدانية وبناءً على نتائج التحقيق.", questionEn: "How many injection points are needed in a typical project?", answerEn: "Depends on problem area and treatment depth. A typical project may range from 10 to 50 points. Injection points are determined after the site visit and investigation results." },
+    { question: "هل يمكن توقف الحقن ثم استئنافه في اليوم التالي؟", answer: "نعم، لكن يُنبغي توثيق حالة كل نقطة عند التوقف لضمان استكمال المناطق غير المكتملة. بعض الخلطات قد تحتاج مواصفات خاصة عند الاستئناف لضمان الترابط مع الحقن السابق.", questionEn: "Can grouting be stopped and resumed the next day?", answerEn: "Yes, but each point's status at stoppage must be documented to ensure incomplete zones are finished. Some mixes may need special specifications on resumption to ensure bonding with previous grout." }
+  ],
     faqEn: [
       { question: "When is soil grouting the right solution?", answer: "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly." },
       { question: "How is cement grouting different from other grouts?", answer: "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective." },
@@ -9297,9 +9271,9 @@ export const articles: ArticleContent[] = [
     categoriesEn: ["Grouting & Improvement Encyclopedia", "Geotechnical Engineering", "Soil Grouting", "Ground Improvement Library"],
     date: "2026-03-21",
     readTime: "4 دقيقة",
-    readTimeEn: "3 min",
+    readTimeEn: "4 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "geotech-encyclopedia-50",
+    slug: "ground-improvement-under-roads-and-runways-special-requirements-and-fast-delivery",
     image: {
       url: "/favicon.webp",
       alt: "تقوية التربة تحت الطرق والمدارج: متطلبات خاصة وسرعة تنفيذ",
@@ -9352,7 +9326,7 @@ export const articles: ArticleContent[] = [
      يشمل أخذ عينات، اختبارات معياريّة (SPT، CPT) وتحليل النتائج لبناء نموذج أرضي دقيق.
   
   2. **تقييم أسباب المشاكل الأرضية:**  
-     التعرف على طبيعة ضعف التربة، وجود فراغات، تغير فيسفجيولوجيا الموقع أو تسربات المياه.
+     التعرف على طبيعة ضعف التربة، وجود فراغات، تغير جيولوجيا الموقع أو تسربات المياه.
   
   3. **تصميم الحل المناسب لتقوية التربة:**  
      اختيار تقنية الحقن المناسبة مع التحكم في تركيز الطبقة، ضغط الحقن، وتوقيت التنفيذ.
@@ -9463,11 +9437,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "ماذا يمكن أن تكشف الاختبارات الجيوفيزيائية في الموقع؟", answer: "تساعد الاختبارات مثل GPR وERT وMASW على تكوين صورة أولية عن الطبقات وتغيّر الخواص تحت السطح، ورصد مؤشرات الفراغات أو التباين في التربة والصخور. اختيار الاختبار يعتمد على عمق الهدف وطبيعة الموقع." },
-      { question: "ما الفرق بين GPR وERT ومتى نستخدم كلًا منهما؟", answer: "GPR مناسب أكثر للأعماق الضحلة نسبيًا ولرصد الأجسام/الفراغات في بيئات معينة، بينما ERT يعطي تصورًا أعمق عن تغيّر المقاومة الكهربائية ويمكن أن يكون مفيدًا في رصد مناطق التشبع أو التكهفات. غالبًا نستخدمهما تكامليًا." },
-      { question: "هل النتائج “قطعية” أم تحتاج تحقق؟", answer: "الجيوفيزياء تعطي مؤشرات قوية لكنها ليست بديلًا عن التحقق. في المواقع الحساسة ننفذ حفر/Cavity Probing للتحقق من الأهداف قبل أي معالجة، ثم نربط النتائج بالتقرير الجيوتقني والمعاينات." },
-      { question: "ما الذي أستلمه في نهاية العمل؟", answer: "تستلم خرائط/مقاطع تفسيرية، وصف المنهجية، حدود الدقة، وتوصيات عملية للخطوة التالية (تحقق، معالجة، أو متابعة)." },
-    ],
+    { question: "ما الفرق بين GPR وERT وMASW وأيهما أختار؟", answer: "GPR لكشف الفراغات والطبقات الضحلة، ERT لتصوير التربة على أعماق أكبر وتحديد نفاذيتها، MASW لقياس صلابة التربة وتصنيف الموقع زلزالياً. الاختيار يعتمد على هدف الدراسة وعمق المنطقة المستهدفة.", questionEn: "What is the difference between GPR, ERT, and MASW — which to choose?", answerEn: "GPR for shallow void and layer detection; ERT for deeper soil imaging and permeability mapping; MASW for soil stiffness and seismic site classification. Choice depends on study objective and target depth." },
+    { question: "كم تستغرق الدراسة الجيوفيزيائية عادة في الموقع؟", answer: "المسح الميداني لموقع متوسط يستغرق يوماً واحداً إلى ثلاثة أيام. التحليل وإعداد التقرير يحتاج أسبوعاً إلى أسبوعين حسب تعقيد البيانات.", questionEn: "How long does a geophysical survey typically take on site?", answerEn: "Field scanning for a typical site takes one to three days. Analysis and report preparation requires one to two weeks depending on data complexity." },
+    { question: "هل يمكن استخدام الدراسة الجيوفيزيائية بديلاً عن الحفر الاستكشافي؟", answer: "لا تُغني الدراسة الجيوفيزيائية كلياً عن الحفر لأخذ عينات مباشرة، لكنها تُوجِّه الحفر نحو المناطق الأكثر أهمية وتُقلل من عدد الحفريات الضرورية.", questionEn: "Can geophysical surveys replace exploratory drilling?", answerEn: "They cannot fully replace drilling for direct samples, but they guide drilling toward the most critical zones and reduce the number of required boreholes." },
+    { question: "ما المعلومات التي أحتاجها لتفسير تقرير الدراسة الجيوفيزيائية؟", answer: "أهمها: معرفة نوع التربة العامة في المنطقة، أعماق المياه الجوفية إن كانت متوفرة، وأي بيانات حفريات سابقة. هذه المعلومات تُساعد المهندس على تحسين دقة التفسير.", questionEn: "What background information do I need to interpret a geophysical report?", answerEn: "Key information: general soil type in the area, groundwater depth if available, and any previous borehole data. This helps the engineer improve interpretation accuracy." }
+  ],
     faqEn: [
       { question: "What can geophysical tests reveal on site?", answer: "Methods such as GPR, ERT, and MASW provide a subsurface picture—layering trends, anomalies, and indicators of voids or weak zones. The right method depends on target depth and ground conditions." },
       { question: "GPR vs ERT: when do we use each?", answer: "GPR is often effective for shallow targets and discrete features in suitable soils, while ERT can image deeper resistivity contrasts and moisture-related variations. Many projects benefit from a combined approach." },
@@ -9486,9 +9460,9 @@ export const articles: ArticleContent[] = [
     categoriesEn: ["Soil Grouting", "Geotechnical Engineering", "Ground Improvement Library"],
     date: "2026-03-24",
     readTime: "3 دقيقة",
-    readTimeEn: "2 min",
+    readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "soil-grouting-guide",
+    slug: "grouting-for-highrise-towers-and-heavyload-buildings-key-considerations",
     image: {
       url: "/favicon.webp",
       alt: "التعامل مع مشاكل التربة في الأبراج العالية والمباني ذات الأحمال الكبيرة",
@@ -9575,11 +9549,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "متى يكون حقن التربة هو الخيار الأنسب؟", answer: "يكون مناسبًا عند الحاجة لتحسين خواص التربة تحت الأساسات، تقليل الهبوط، أو معالجة مسارات تسرب المياه—خصوصًا عندما تكون أعمال الحفر/الاستبدال غير ممكنة أو مكلفة." },
-      { question: "ما الفرق بين الحقن الأسمنتي وطرق الحقن الأخرى؟", answer: "الحقن الأسمنتي يعتمد على ملاط إسمنتي بخصائص لزوجة مناسبة، بينما توجد مواد أخرى (كيميائية/ميكروفاين) لظروف خاصة. اختيار المادة مرتبط بحجم المسام، النفاذية، والهدف (تقوية/عزل)." },
-      { question: "كيف نحدد نوع الخلطة واللزوجة المناسبة؟", answer: "نعتمد على طبيعة التربة/الصخور، نتائج الفحوصات، وهدف المعالجة. أحيانًا نبدأ بخليط تمهيدي ثم نعدّل تدريجيًا لتحقيق اختراق أفضل دون إحداث مشاكل جانبية." },
-      { question: "كيف أعرف أن المعالجة نجحت؟", answer: "المؤشرات تشمل استقرار الاستهلاك، تحسن سلوك الهبوط، وتحسن نتائج التحقق (مثل probing/اختبارات أو مراقبة التشققات) حسب خطة المشروع." },
-    ],
+    { question: "هل يمكن تطبيق حقن التربة تحت المباني القائمة دون تفريغها؟", answer: "نعم، وهو من أبرز مزايا الحقن. يُنفَّذ من خلال حفر نقاط حقن صغيرة بحد أدنى من الأعمال الإنشائية دون إخلاء المبنى في معظم الحالات.", questionEn: "Can soil grouting be applied under occupied buildings?", answerEn: "Yes, this is one of its key advantages. It is executed through small drill points with minimal structural work and without evacuating the building in most cases." },
+    { question: "ما الفرق بين حقن الأسمنت وحقن البوليمرات؟", answer: "حقن الأسمنت يُستخدم لملء الفراغات الكبيرة وتقوية التربة ميكانيكياً، بينما يناسب حقن البوليمرات التحكم بالتسرب وملء المسام الدقيقة التي لا يخترقها الأسمنت.", questionEn: "What is the difference between cement and polymer grouting?", answerEn: "Cement grouting fills large voids and improves mechanical strength; polymer grouting targets seepage control and fine pores that cement cannot penetrate." },
+    { question: "كيف تعرف أن حقن التربة هو الحل المناسب لمشكلتك؟", answer: "إذا كانت المشكلة هبوطاً أو تشققات ناتجة عن ضعف التربة أو تكهفات تحت الأساسات، فالحقن عادة الخيار الأنسب. التشخيص الدقيق يُؤكد ذلك قبل أي قرار.", questionEn: "How do you know if soil grouting is the right solution for your problem?", answerEn: "If the issue is settlement or cracks caused by weak soil or cavities under foundations, grouting is usually the right choice. Accurate diagnosis confirms this before any decision." },
+    { question: "ما المدة الزمنية اللازمة لملاحظة تحسن بعد الحقن؟", answer: "التحسن الميكانيكي يبدأ مع تصلّد الحقن خلال 24-72 ساعة للخلطات الأسمنتية. التقييم الكامل يستلزم أسبوعين إلى أربعة أسابيع مع مراقبة منتظمة لأجهزة قياس الهبوط.", questionEn: "How long does it take to notice improvement after grouting?", answerEn: "Mechanical improvement begins as grout sets within 24-72 hours for cement mixes. Full assessment requires 2-4 weeks with regular settlement monitoring." }
+  ],
     faqEn: [
       { question: "When is soil grouting the right solution?", answer: "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly." },
       { question: "How is cement grouting different from other grouts?", answer: "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective." },
@@ -9600,7 +9574,7 @@ export const articles: ArticleContent[] = [
     readTime: "2 دقيقة",
     readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "foundation-strengthening-guide",
+    slug: "releveling-tilted-structures-using-grouting-techniques",
     image: {
       url: "/favicon.webp",
       alt: "استعادة استقامة المباني المائلة (Structure Re-leveling) عبر الحقن",
@@ -9696,12 +9670,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "متى يكون حقن التربة هو الخيار الأنسب؟", answer: "يكون مناسبًا عند الحاجة لتحسين خواص التربة تحت الأساسات، تقليل الهبوط، أو معالجة مسارات تسرب المياه—خصوصًا عندما تكون أعمال الحفر/الاستبدال غير ممكنة أو مكلفة." },
-      { question: "ما الفرق بين الحقن الأسمنتي وطرق الحقن الأخرى؟", answer: "الحقن الأسمنتي يعتمد على ملاط إسمنتي بخصائص لزوجة مناسبة، بينما توجد مواد أخرى (كيميائية/ميكروفاين) لظروف خاصة. اختيار المادة مرتبط بحجم المسام، النفاذية، والهدف (تقوية/عزل)." },
-      { question: "كيف نحدد نوع الخلطة واللزوجة المناسبة؟", answer: "نعتمد على طبيعة التربة/الصخور، نتائج الفحوصات، وهدف المعالجة. أحيانًا نبدأ بخليط تمهيدي ثم نعدّل تدريجيًا لتحقيق اختراق أفضل دون إحداث مشاكل جانبية." },
-      { question: "كيف أعرف أن المعالجة نجحت؟", answer: "المؤشرات تشمل استقرار الاستهلاك، تحسن سلوك الهبوط، وتحسن نتائج التحقق (مثل probing/اختبارات أو مراقبة التشققات) حسب خطة المشروع." },
-    ],
-    faqEn: [
+    { question: "كيف تُختار أنسب تقنية حقن لكل موقع؟", answer: "القرار يستند إلى نوع التربة ومشكلتها الجوهرية: ترب رملية نافذة تناسبها حقن الأسمنت والنفاذ، الترب الطينية تحتاج حقناً كيميائياً، والترب الهشة قد تتطلب Jet Grouting لتكوين أعمدة داعمة.", questionEn: "How is the most appropriate grouting technique selected for each site?", answerEn: "The decision is based on soil type and core problem: permeable sandy soils suit cement and permeation grouting, clays need chemical grouting, and weak soils may require Jet Grouting to form support columns." },
+    { question: "ما الاختبارات الضرورية قبل تنفيذ أي عملية حقن؟", answer: "الحد الأدنى المطلوب: تحديد نوع التربة (SPT أو CPT)، قياس النفاذية، وتحليل عينات مختبرية. في المشاريع الكبيرة تُضاف دراسة جيوفيزيائية (GPR/ERT) للحصول على صورة شاملة.", questionEn: "What tests are required before any grouting operation?", answerEn: "The minimum required: soil type identification (SPT or CPT), permeability measurement, and laboratory sample analysis. For larger projects, a geophysical study (GPR/ERT) is added for a comprehensive picture." },
+    { question: "كيف تُقيَّم جودة ونجاح عملية الحقن بعد التنفيذ؟", answer: "عبر اختبارات تحقق ما بعد الحقن: CPT أو اختبار ضغط المياه لقياس التحسن في خصائص التربة، مراقبة أجهزة قياس الهبوط، والفحص البصري للتشققات. تُقارَن النتائج بالقياسات الأولية.", questionEn: "How is grouting quality and success evaluated post-execution?", answerEn: "Through post-grouting verification tests: CPT or water pressure tests measuring soil property improvement, settlement monitoring instruments, and visual crack inspection. Results are compared against baseline measurements." },
+    { question: "ما العوامل التي تُحدد تكلفة مشروع حقن التربة؟", answer: "الأهم: عمق الحقن، نوع المادة المستخدمة، تعقيد المشروع وإمكانية الوصول، كمية الحقن المطلوبة، ووجود إنشاءات حساسة مجاورة تستدعي ضوابط إضافية.", questionEn: "What factors determine the cost of a soil grouting project?", answerEn: "Key factors: injection depth, material type used, project complexity and access, required grouting volume, and presence of sensitive adjacent structures requiring additional controls." }
+  ], faqEn: [
       { question: "When is soil grouting the right solution?", answer: "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly." },
       { question: "How is cement grouting different from other grouts?", answer: "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective." },
       { question: "How do you choose the mix and viscosity?", answer: "We base it on ground type, test results, and the treatment objective. In many cases, mixes are adjusted progressively to balance penetration and control." },
@@ -9719,9 +9692,9 @@ export const articles: ArticleContent[] = [
     categoriesEn: ["Cavity Detection", "Geotechnical Engineering", "Soil Grouting", "Ground Improvement Library"],
     date: "2026-03-30",
     readTime: "4 دقيقة",
-    readTimeEn: "3 min",
+    readTimeEn: "4 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "void-detection-guide",
+    slug: "how-to-read-a-geotechnical-investigation-report-from-tables-to-design-risks",
     image: {
       url: "/favicon.webp",
       alt: "كيف تقرأ تقرير جسات التربة؟ من الجداول إلى المخاطر التصميمية",
@@ -9852,12 +9825,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Al Rass](/locations/al-rass)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "ماذا يمكن أن تكشف الاختبارات الجيوفيزيائية في الموقع؟", answer: "تساعد الاختبارات مثل GPR وERT وMASW على تكوين صورة أولية عن الطبقات وتغيّر الخواص تحت السطح، ورصد مؤشرات الفراغات أو التباين في التربة والصخور. اختيار الاختبار يعتمد على عمق الهدف وطبيعة الموقع." },
-      { question: "ما الفرق بين GPR وERT ومتى نستخدم كلًا منهما؟", answer: "GPR مناسب أكثر للأعماق الضحلة نسبيًا ولرصد الأجسام/الفراغات في بيئات معينة، بينما ERT يعطي تصورًا أعمق عن تغيّر المقاومة الكهربائية ويمكن أن يكون مفيدًا في رصد مناطق التشبع أو التكهفات. غالبًا نستخدمهما تكامليًا." },
-      { question: "هل النتائج “قطعية” أم تحتاج تحقق؟", answer: "الجيوفيزياء تعطي مؤشرات قوية لكنها ليست بديلًا عن التحقق. في المواقع الحساسة ننفذ حفر/Cavity Probing للتحقق من الأهداف قبل أي معالجة، ثم نربط النتائج بالتقرير الجيوتقني والمعاينات." },
-      { question: "ما الذي أستلمه في نهاية العمل؟", answer: "تستلم خرائط/مقاطع تفسيرية، وصف المنهجية، حدود الدقة، وتوصيات عملية للخطوة التالية (تحقق، معالجة، أو متابعة)." },
-    ],
-    faqEn: [
+    { question: "كيف يُحدّد المهندس سبب تسرب المياه قبل الحقن؟", answer: "يبدأ بالفحص البصري وتتبع مسار الرطوبة، ثم قد يستخدم صبغة كيميائية (tracer dye) لتتبع مصدر التسرب، وأحياناً تصوير بالكاميرا الداخلية للأنابيب أو الشقوق.", questionEn: "How does the engineer identify the source of water seepage before grouting?", answerEn: "Starting with visual inspection and tracing moisture paths, then potentially using tracer dye to follow the source, and sometimes internal camera inspection of pipes or cracks." },
+    { question: "هل حقن البوليمرات (PU) يمنع التسرب بشكل دائم؟", answer: "في الغالب نعم إذا نُفّذ في المكان الصحيح وبالكميات المناسبة. البولي يوريثان يتمدد ويملأ الشقوق بشكل دائم. قد يحتاج إعادة تطبيق في حالات الضغط الهيدروستاتيكي العالي جداً.", questionEn: "Does PU polymer grouting provide permanent seepage prevention?", answerEn: "Generally yes when applied correctly and in appropriate quantities. Polyurethane expands and permanently seals cracks. Reapplication may be needed under very high hydrostatic pressure." },
+    { question: "ما الفرق بين حقن الشقوق وحقن التربة في سياق التسرب؟", answer: "حقن الشقوق يستهدف مسارات التسرب في الخرسانة أو الأساسات مباشرة، بينما حقن التربة يُقلل النفاذية في التربة المحيطة لمنع وصول المياه للأساسات أصلاً.", questionEn: "What is the difference between crack injection and soil grouting for seepage control?", answerEn: "Crack injection targets seepage paths directly in concrete or foundations, while soil grouting reduces permeability in surrounding soil to prevent water reaching foundations in the first place." },
+    { question: "كيف يؤثر ارتفاع منسوب المياه الجوفية على مشاريع الحقن؟", answer: "المياه الجوفية العالية تُضعف اللاصقية وتُمدّد الخلطات قبل تصلّدها. يُعالَج هذا بخلطات أسرع في التصلّد أو إضافة مسرّعات، وفي بعض الحالات خفض منسوب المياه مؤقتاً.", questionEn: "How does a high groundwater table affect grouting projects?", answerEn: "High groundwater weakens adhesion and dilutes mixes before setting. This is addressed using faster-setting mixes or accelerators, and in some cases temporary dewatering." }
+  ], faqEn: [
       { question: "What can geophysical tests reveal on site?", answer: "Methods such as GPR, ERT, and MASW provide a subsurface picture—layering trends, anomalies, and indicators of voids or weak zones. The right method depends on target depth and ground conditions." },
       { question: "GPR vs ERT: when do we use each?", answer: "GPR is often effective for shallow targets and discrete features in suitable soils, while ERT can image deeper resistivity contrasts and moisture-related variations. Many projects benefit from a combined approach." },
       { question: "Are results conclusive?", answer: "Geophysics provides strong indicators, but critical decisions typically require verification. Targeted probing/drilling is used to confirm anomalies before remediation." },
@@ -9875,9 +9847,9 @@ export const articles: ArticleContent[] = [
     categoriesEn: ["Sinkholes & Karst", "Geotechnical Engineering", "Soil Grouting", "Ground Improvement Library"],
     date: "2026-04-02",
     readTime: "3 دقيقة",
-    readTimeEn: "2 min",
+    readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "sinkhole-investigation-guide",
+    slug: "sensitivity-analysis-for-grouting-decisions-which-variable-changes-the-answer-most",
     image: {
       url: "/favicon.webp",
       alt: "تحليل الحساسية في قرارات الحقن: أي متغير يغير قرارك أكثر؟",
@@ -10008,12 +9980,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "متى يكون حقن التربة هو الخيار الأنسب؟", answer: "يكون مناسبًا عند الحاجة لتحسين خواص التربة تحت الأساسات، تقليل الهبوط، أو معالجة مسارات تسرب المياه—خصوصًا عندما تكون أعمال الحفر/الاستبدال غير ممكنة أو مكلفة." },
-      { question: "ما الفرق بين الحقن الأسمنتي وطرق الحقن الأخرى؟", answer: "الحقن الأسمنتي يعتمد على ملاط إسمنتي بخصائص لزوجة مناسبة، بينما توجد مواد أخرى (كيميائية/ميكروفاين) لظروف خاصة. اختيار المادة مرتبط بحجم المسام، النفاذية، والهدف (تقوية/عزل)." },
-      { question: "كيف نحدد نوع الخلطة واللزوجة المناسبة؟", answer: "نعتمد على طبيعة التربة/الصخور، نتائج الفحوصات، وهدف المعالجة. أحيانًا نبدأ بخليط تمهيدي ثم نعدّل تدريجيًا لتحقيق اختراق أفضل دون إحداث مشاكل جانبية." },
-      { question: "كيف أعرف أن المعالجة نجحت؟", answer: "المؤشرات تشمل استقرار الاستهلاك، تحسن سلوك الهبوط، وتحسن نتائج التحقق (مثل probing/اختبارات أو مراقبة التشققات) حسب خطة المشروع." },
-    ],
-    faqEn: [
+    { question: "كيف تُختار أنسب تقنية حقن لكل موقع؟", answer: "القرار يستند إلى نوع التربة ومشكلتها الجوهرية: ترب رملية نافذة تناسبها حقن الأسمنت والنفاذ، الترب الطينية تحتاج حقناً كيميائياً، والترب الهشة قد تتطلب Jet Grouting لتكوين أعمدة داعمة.", questionEn: "How is the most appropriate grouting technique selected for each site?", answerEn: "The decision is based on soil type and core problem: permeable sandy soils suit cement and permeation grouting, clays need chemical grouting, and weak soils may require Jet Grouting to form support columns." },
+    { question: "ما الاختبارات الضرورية قبل تنفيذ أي عملية حقن؟", answer: "الحد الأدنى المطلوب: تحديد نوع التربة (SPT أو CPT)، قياس النفاذية، وتحليل عينات مختبرية. في المشاريع الكبيرة تُضاف دراسة جيوفيزيائية (GPR/ERT) للحصول على صورة شاملة.", questionEn: "What tests are required before any grouting operation?", answerEn: "The minimum required: soil type identification (SPT or CPT), permeability measurement, and laboratory sample analysis. For larger projects, a geophysical study (GPR/ERT) is added for a comprehensive picture." },
+    { question: "كيف تُقيَّم جودة ونجاح عملية الحقن بعد التنفيذ؟", answer: "عبر اختبارات تحقق ما بعد الحقن: CPT أو اختبار ضغط المياه لقياس التحسن في خصائص التربة، مراقبة أجهزة قياس الهبوط، والفحص البصري للتشققات. تُقارَن النتائج بالقياسات الأولية.", questionEn: "How is grouting quality and success evaluated post-execution?", answerEn: "Through post-grouting verification tests: CPT or water pressure tests measuring soil property improvement, settlement monitoring instruments, and visual crack inspection. Results are compared against baseline measurements." },
+    { question: "ما العوامل التي تُحدد تكلفة مشروع حقن التربة؟", answer: "الأهم: عمق الحقن، نوع المادة المستخدمة، تعقيد المشروع وإمكانية الوصول، كمية الحقن المطلوبة، ووجود إنشاءات حساسة مجاورة تستدعي ضوابط إضافية.", questionEn: "What factors determine the cost of a soil grouting project?", answerEn: "Key factors: injection depth, material type used, project complexity and access, required grouting volume, and presence of sensitive adjacent structures requiring additional controls." }
+  ], faqEn: [
       { question: "When is soil grouting the right solution?", answer: "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly." },
       { question: "How is cement grouting different from other grouts?", answer: "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective." },
       { question: "How do you choose the mix and viscosity?", answer: "We base it on ground type, test results, and the treatment objective. In many cases, mixes are adjusted progressively to balance penetration and control." },
@@ -10033,7 +10004,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "validation-criteria-grouting",
+    slug: "the-future-of-soil-grouting-ai-sensors-and-remote-monitoring",
     image: {
       url: "/favicon.webp",
       alt: "مستقبل حقن التربة: الذكاء الاصطناعي والاستشعار عن بعد",
@@ -10142,12 +10113,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Al Majma’ah](/locations/majmaah)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "كيف نتحقق من وجود تكهفات أو فراغات تحت الأرض؟", answer: "عادة ندمج المسح الجيوفيزيائي مع الحفر الاستكشافي (Cavity Probing) حسب حساسية الموقع. الهدف هو تحويل “مؤشرات” إلى “حقائق” قبل اتخاذ قرار المعالجة." },
-      { question: "هل كل فراغ يعني خطرًا مباشرًا؟", answer: "ليس بالضرورة. نقيّم حجم الفراغ وعمقه وموقعه بالنسبة للأحمال ومصادر المياه، ثم نحدد مستوى الخطورة واحتمال التطور." },
-      { question: "ما الحلول الشائعة بعد اكتشاف الفراغات؟", answer: "قد تشمل الحقن الأسمنتي أو تحسين الصرف أو تدعيم موضعي حسب السبب. اختيار الحل يعتمد على سبب الفراغ (تكهف كارستي، تسرب مياه، ردم ضعيف…إلخ)." },
-      { question: "كيف تقللون مفاجآت الموقع أثناء التنفيذ؟", answer: "بالتحقق المرحلي، وربط البيانات الجيوفيزيائية بالملاحظات الميدانية، ووضع حدود واضحة لنطاق العمل وتحديث خطة المعالجة عند ظهور معطيات جديدة." },
-    ],
-    faqEn: [
+    { question: "كيف تُختار أنسب تقنية حقن لكل موقع؟", answer: "القرار يستند إلى نوع التربة ومشكلتها الجوهرية: ترب رملية نافذة تناسبها حقن الأسمنت والنفاذ، الترب الطينية تحتاج حقناً كيميائياً، والترب الهشة قد تتطلب Jet Grouting لتكوين أعمدة داعمة.", questionEn: "How is the most appropriate grouting technique selected for each site?", answerEn: "The decision is based on soil type and core problem: permeable sandy soils suit cement and permeation grouting, clays need chemical grouting, and weak soils may require Jet Grouting to form support columns." },
+    { question: "ما الاختبارات الضرورية قبل تنفيذ أي عملية حقن؟", answer: "الحد الأدنى المطلوب: تحديد نوع التربة (SPT أو CPT)، قياس النفاذية، وتحليل عينات مختبرية. في المشاريع الكبيرة تُضاف دراسة جيوفيزيائية (GPR/ERT) للحصول على صورة شاملة.", questionEn: "What tests are required before any grouting operation?", answerEn: "The minimum required: soil type identification (SPT or CPT), permeability measurement, and laboratory sample analysis. For larger projects, a geophysical study (GPR/ERT) is added for a comprehensive picture." },
+    { question: "كيف تُقيَّم جودة ونجاح عملية الحقن بعد التنفيذ؟", answer: "عبر اختبارات تحقق ما بعد الحقن: CPT أو اختبار ضغط المياه لقياس التحسن في خصائص التربة، مراقبة أجهزة قياس الهبوط، والفحص البصري للتشققات. تُقارَن النتائج بالقياسات الأولية.", questionEn: "How is grouting quality and success evaluated post-execution?", answerEn: "Through post-grouting verification tests: CPT or water pressure tests measuring soil property improvement, settlement monitoring instruments, and visual crack inspection. Results are compared against baseline measurements." },
+    { question: "ما العوامل التي تُحدد تكلفة مشروع حقن التربة؟", answer: "الأهم: عمق الحقن، نوع المادة المستخدمة، تعقيد المشروع وإمكانية الوصول، كمية الحقن المطلوبة، ووجود إنشاءات حساسة مجاورة تستدعي ضوابط إضافية.", questionEn: "What factors determine the cost of a soil grouting project?", answerEn: "Key factors: injection depth, material type used, project complexity and access, required grouting volume, and presence of sensitive adjacent structures requiring additional controls." }
+  ], faqEn: [
       { question: "How do we confirm cavities/voids below ground?", answer: "A reliable workflow combines geophysics with targeted probing/drilling where needed. The goal is to turn anomalies into confirmed targets before remediation." },
       { question: "Is every void an immediate hazard?", answer: "Not necessarily. Risk depends on size, depth, location relative to loads, and water conditions. We assess both severity and likelihood of progression." },
       { question: "What happens after voids are detected?", answer: "Common options include cement grouting, drainage improvements, or localized strengthening depending on root cause (karst, leakage, weak backfill, etc.)." },
@@ -10165,9 +10135,9 @@ export const articles: ArticleContent[] = [
     categoriesEn: ["Geophysical Surveys", "Geotechnical Engineering", "Soil Grouting", "Ground Improvement Library"],
     date: "2026-04-08",
     readTime: "3 دقيقة",
-    readTimeEn: "2 min",
+    readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "gpr-vs-ert",
+    slug: "case-study-treating-a-large-cavity-beneath-a-residential-arealessons-learned",
     image: {
       url: "/favicon.webp",
       alt: "دراسة حالة: معالجة تكهف ضخم تحت منطقة سكنية (الدروس المستفادة)",
@@ -10270,12 +10240,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "كيف نتحقق من وجود تكهفات أو فراغات تحت الأرض؟", answer: "عادة ندمج المسح الجيوفيزيائي مع الحفر الاستكشافي (Cavity Probing) حسب حساسية الموقع. الهدف هو تحويل “مؤشرات” إلى “حقائق” قبل اتخاذ قرار المعالجة." },
-      { question: "هل كل فراغ يعني خطرًا مباشرًا؟", answer: "ليس بالضرورة. نقيّم حجم الفراغ وعمقه وموقعه بالنسبة للأحمال ومصادر المياه، ثم نحدد مستوى الخطورة واحتمال التطور." },
-      { question: "ما الحلول الشائعة بعد اكتشاف الفراغات؟", answer: "قد تشمل الحقن الأسمنتي أو تحسين الصرف أو تدعيم موضعي حسب السبب. اختيار الحل يعتمد على سبب الفراغ (تكهف كارستي، تسرب مياه، ردم ضعيف…إلخ)." },
-      { question: "كيف تقللون مفاجآت الموقع أثناء التنفيذ؟", answer: "بالتحقق المرحلي، وربط البيانات الجيوفيزيائية بالملاحظات الميدانية، ووضع حدود واضحة لنطاق العمل وتحديث خطة المعالجة عند ظهور معطيات جديدة." },
-    ],
-    faqEn: [
+    { question: "كيف تُختار أنسب تقنية حقن لكل موقع؟", answer: "القرار يستند إلى نوع التربة ومشكلتها الجوهرية: ترب رملية نافذة تناسبها حقن الأسمنت والنفاذ، الترب الطينية تحتاج حقناً كيميائياً، والترب الهشة قد تتطلب Jet Grouting لتكوين أعمدة داعمة.", questionEn: "How is the most appropriate grouting technique selected for each site?", answerEn: "The decision is based on soil type and core problem: permeable sandy soils suit cement and permeation grouting, clays need chemical grouting, and weak soils may require Jet Grouting to form support columns." },
+    { question: "ما الاختبارات الضرورية قبل تنفيذ أي عملية حقن؟", answer: "الحد الأدنى المطلوب: تحديد نوع التربة (SPT أو CPT)، قياس النفاذية، وتحليل عينات مختبرية. في المشاريع الكبيرة تُضاف دراسة جيوفيزيائية (GPR/ERT) للحصول على صورة شاملة.", questionEn: "What tests are required before any grouting operation?", answerEn: "The minimum required: soil type identification (SPT or CPT), permeability measurement, and laboratory sample analysis. For larger projects, a geophysical study (GPR/ERT) is added for a comprehensive picture." },
+    { question: "كيف تُقيَّم جودة ونجاح عملية الحقن بعد التنفيذ؟", answer: "عبر اختبارات تحقق ما بعد الحقن: CPT أو اختبار ضغط المياه لقياس التحسن في خصائص التربة، مراقبة أجهزة قياس الهبوط، والفحص البصري للتشققات. تُقارَن النتائج بالقياسات الأولية.", questionEn: "How is grouting quality and success evaluated post-execution?", answerEn: "Through post-grouting verification tests: CPT or water pressure tests measuring soil property improvement, settlement monitoring instruments, and visual crack inspection. Results are compared against baseline measurements." },
+    { question: "ما العوامل التي تُحدد تكلفة مشروع حقن التربة؟", answer: "الأهم: عمق الحقن، نوع المادة المستخدمة، تعقيد المشروع وإمكانية الوصول، كمية الحقن المطلوبة، ووجود إنشاءات حساسة مجاورة تستدعي ضوابط إضافية.", questionEn: "What factors determine the cost of a soil grouting project?", answerEn: "Key factors: injection depth, material type used, project complexity and access, required grouting volume, and presence of sensitive adjacent structures requiring additional controls." }
+  ], faqEn: [
       { question: "How do we confirm cavities/voids below ground?", answer: "A reliable workflow combines geophysics with targeted probing/drilling where needed. The goal is to turn anomalies into confirmed targets before remediation." },
       { question: "Is every void an immediate hazard?", answer: "Not necessarily. Risk depends on size, depth, location relative to loads, and water conditions. We assess both severity and likelihood of progression." },
       { question: "What happens after voids are detected?", answer: "Common options include cement grouting, drainage improvements, or localized strengthening depending on root cause (karst, leakage, weak backfill, etc.)." },
@@ -10291,11 +10260,11 @@ export const articles: ArticleContent[] = [
     categoryEn: "Cracks & Structures",
     categoriesAr: ["شقوق ومنشآت", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
     categoriesEn: ["Cracks & Structures", "Geotechnical Engineering", "Soil Grouting", "Ground Improvement Library"],
-    date: "2026-04-11",
+    date: "2026-03-25",
     readTime: "3 دقيقة",
-    readTimeEn: "2 min",
+    readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "cracks-settlement-guide",
+    slug: "case-study-stopping-groundwater-leakage-in-a-commercial-basement",
     image: {
       url: "/favicon.webp",
       alt: "دراسة حالة: وقف تسرب مياه جوفية في قبو مبنى تجاري",
@@ -10390,12 +10359,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "متى يكون حقن التربة هو الخيار الأنسب؟", answer: "يكون مناسبًا عند الحاجة لتحسين خواص التربة تحت الأساسات، تقليل الهبوط، أو معالجة مسارات تسرب المياه—خصوصًا عندما تكون أعمال الحفر/الاستبدال غير ممكنة أو مكلفة." },
-      { question: "ما الفرق بين الحقن الأسمنتي وطرق الحقن الأخرى؟", answer: "الحقن الأسمنتي يعتمد على ملاط إسمنتي بخصائص لزوجة مناسبة، بينما توجد مواد أخرى (كيميائية/ميكروفاين) لظروف خاصة. اختيار المادة مرتبط بحجم المسام، النفاذية، والهدف (تقوية/عزل)." },
-      { question: "كيف نحدد نوع الخلطة واللزوجة المناسبة؟", answer: "نعتمد على طبيعة التربة/الصخور، نتائج الفحوصات، وهدف المعالجة. أحيانًا نبدأ بخليط تمهيدي ثم نعدّل تدريجيًا لتحقيق اختراق أفضل دون إحداث مشاكل جانبية." },
-      { question: "كيف أعرف أن المعالجة نجحت؟", answer: "المؤشرات تشمل استقرار الاستهلاك، تحسن سلوك الهبوط، وتحسن نتائج التحقق (مثل probing/اختبارات أو مراقبة التشققات) حسب خطة المشروع." },
-    ],
-    faqEn: [
+    { question: "ما الفرق بين الهبوط الكلي والهبوط التفاضلي وأيهما أخطر؟", answer: "الهبوط الكلي هو نزول منتظم للمنشأة كاملها، بينما التفاضلي هو هبوط غير متساوٍ بين أجزائها. الهبوط التفاضلي أخطر بكثير لأنه يُسبب إجهادات انحناء وقوى قص تُفضي للتشقق والانهيار.", questionEn: "What is the difference between total and differential settlement and which is more dangerous?", answerEn: "Total settlement is uniform sinking of the entire structure, while differential is uneven settlement between its parts. Differential is far more dangerous as it causes bending stresses and shear forces leading to cracking and potential collapse." },
+    { question: "متى يكون الهبوط مقبولاً ومتى يستدعي التدخل الفوري؟", answer: "الهبوط المقبول يعتمد على نوع المنشأة: للمباني السكنية عادة < 25 مم كلي و< 15 مم تفاضلي. أي هبوط مصحوب بتشققات متسعة أو تشوه واضح في الهيكل يستدعي فحصاً فورياً.", questionEn: "When is settlement acceptable and when does it require immediate action?", answerEn: "Acceptable settlement depends on structure type: for residential buildings typically < 25mm total and < 15mm differential. Any settlement accompanied by widening cracks or visible structural distortion requires immediate inspection." },
+    { question: "كيف يُوقف حقن التربة الهبوط الجاري؟", answer: "يزيد الحقن من قدرة التحمل وصلابة التربة تحت الأساسات، مما يُقلل التشوه الإضافي. في بعض الحالات يُستخدم حقن الرفع (Compensation Grouting) لاسترداد جزء من الهبوط السابق.", questionEn: "How does soil grouting stop active settlement?", answerEn: "Grouting increases bearing capacity and stiffness of soil under foundations, reducing further deformation. In some cases Compensation Grouting is used to partially recover previous settlement." },
+    { question: "هل يمكن رفع المبنى مجدداً بعد هبوطه عبر الحقن؟", answer: "نعم، بتقنية Compensation Grouting المتحكّمة التي تستخدم ضغطاً متدرجاً لرفع الأساس ببطء ودقة. لكنها تحتاج مراقبة مستمرة دقيقة لتجنب الإفراط في الرفع أو تشقق الهيكل.", questionEn: "Can a building be re-lifted after settlement through grouting?", answerEn: "Yes, using controlled Compensation Grouting that applies incremental pressure to slowly and precisely lift the foundation. It requires continuous precise monitoring to avoid over-lifting or structural cracking." }
+  ], faqEn: [
       { question: "When is soil grouting the right solution?", answer: "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly." },
       { question: "How is cement grouting different from other grouts?", answer: "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective." },
       { question: "How do you choose the mix and viscosity?", answer: "We base it on ground type, test results, and the treatment objective. In many cases, mixes are adjusted progressively to balance penetration and control." },
@@ -10411,11 +10379,11 @@ export const articles: ArticleContent[] = [
     categoryEn: "Soil Investigation",
     categoriesAr: ["اختبارات التربة", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
     categoriesEn: ["Soil Investigation", "Geotechnical Engineering", "Soil Grouting", "Ground Improvement Library"],
-    date: "2026-04-14",
+    date: "2026-03-28",
     readTime: "3 دقيقة",
-    readTimeEn: "2 min",
+    readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "soil-investigation-report-guide",
+    slug: "why-periodic-building-inspections-matter-early-signs-that-prevent-failures",
     image: {
       url: "/favicon.webp",
       alt: "أهمية الفحص الدوري للمباني: مؤشرات مبكرة تمنع كوارث مستقبلية",
@@ -10544,12 +10512,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Riyadh](/locations/riyadh)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "متى يكون حقن التربة هو الخيار الأنسب؟", answer: "يكون مناسبًا عند الحاجة لتحسين خواص التربة تحت الأساسات، تقليل الهبوط، أو معالجة مسارات تسرب المياه—خصوصًا عندما تكون أعمال الحفر/الاستبدال غير ممكنة أو مكلفة." },
-      { question: "ما الفرق بين الحقن الأسمنتي وطرق الحقن الأخرى؟", answer: "الحقن الأسمنتي يعتمد على ملاط إسمنتي بخصائص لزوجة مناسبة، بينما توجد مواد أخرى (كيميائية/ميكروفاين) لظروف خاصة. اختيار المادة مرتبط بحجم المسام، النفاذية، والهدف (تقوية/عزل)." },
-      { question: "كيف نحدد نوع الخلطة واللزوجة المناسبة؟", answer: "نعتمد على طبيعة التربة/الصخور، نتائج الفحوصات، وهدف المعالجة. أحيانًا نبدأ بخليط تمهيدي ثم نعدّل تدريجيًا لتحقيق اختراق أفضل دون إحداث مشاكل جانبية." },
-      { question: "كيف أعرف أن المعالجة نجحت؟", answer: "المؤشرات تشمل استقرار الاستهلاك، تحسن سلوك الهبوط، وتحسن نتائج التحقق (مثل probing/اختبارات أو مراقبة التشققات) حسب خطة المشروع." },
-    ],
-    faqEn: [
+    { question: "كيف تُختار أنسب تقنية حقن لكل موقع؟", answer: "القرار يستند إلى نوع التربة ومشكلتها الجوهرية: ترب رملية نافذة تناسبها حقن الأسمنت والنفاذ، الترب الطينية تحتاج حقناً كيميائياً، والترب الهشة قد تتطلب Jet Grouting لتكوين أعمدة داعمة.", questionEn: "How is the most appropriate grouting technique selected for each site?", answerEn: "The decision is based on soil type and core problem: permeable sandy soils suit cement and permeation grouting, clays need chemical grouting, and weak soils may require Jet Grouting to form support columns." },
+    { question: "ما الاختبارات الضرورية قبل تنفيذ أي عملية حقن؟", answer: "الحد الأدنى المطلوب: تحديد نوع التربة (SPT أو CPT)، قياس النفاذية، وتحليل عينات مختبرية. في المشاريع الكبيرة تُضاف دراسة جيوفيزيائية (GPR/ERT) للحصول على صورة شاملة.", questionEn: "What tests are required before any grouting operation?", answerEn: "The minimum required: soil type identification (SPT or CPT), permeability measurement, and laboratory sample analysis. For larger projects, a geophysical study (GPR/ERT) is added for a comprehensive picture." },
+    { question: "كيف تُقيَّم جودة ونجاح عملية الحقن بعد التنفيذ؟", answer: "عبر اختبارات تحقق ما بعد الحقن: CPT أو اختبار ضغط المياه لقياس التحسن في خصائص التربة، مراقبة أجهزة قياس الهبوط، والفحص البصري للتشققات. تُقارَن النتائج بالقياسات الأولية.", questionEn: "How is grouting quality and success evaluated post-execution?", answerEn: "Through post-grouting verification tests: CPT or water pressure tests measuring soil property improvement, settlement monitoring instruments, and visual crack inspection. Results are compared against baseline measurements." },
+    { question: "ما العوامل التي تُحدد تكلفة مشروع حقن التربة؟", answer: "الأهم: عمق الحقن، نوع المادة المستخدمة، تعقيد المشروع وإمكانية الوصول، كمية الحقن المطلوبة، ووجود إنشاءات حساسة مجاورة تستدعي ضوابط إضافية.", questionEn: "What factors determine the cost of a soil grouting project?", answerEn: "Key factors: injection depth, material type used, project complexity and access, required grouting volume, and presence of sensitive adjacent structures requiring additional controls." }
+  ], faqEn: [
       { question: "When is soil grouting the right solution?", answer: "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly." },
       { question: "How is cement grouting different from other grouts?", answer: "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective." },
       { question: "How do you choose the mix and viscosity?", answer: "We base it on ground type, test results, and the treatment objective. In many cases, mixes are adjusted progressively to balance penetration and control." },
@@ -10565,11 +10532,11 @@ export const articles: ArticleContent[] = [
     categoryEn: "Risk Management",
     categoriesAr: ["إدارة مخاطر", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
     categoriesEn: ["Risk Management", "Geotechnical Engineering", "Soil Grouting", "Ground Improvement Library"],
-    date: "2026-04-17",
+    date: "2026-04-01",
     readTime: "3 دقيقة",
     readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "pre-construction-risk-guide",
+    slug: "owners-guide-how-to-choose-a-specialized-grouting-contractor",
     image: {
       url: "/favicon.webp",
       alt: "دليل المالك: كيف تختار مقاول الحقن المتخصص؟",
@@ -10685,11 +10652,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Khobar](/locations/khobar)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "متى يكون حقن التربة هو الخيار الأنسب؟", answer: "يكون مناسبًا عند الحاجة لتحسين خواص التربة تحت الأساسات، تقليل الهبوط، أو معالجة مسارات تسرب المياه—خصوصًا عندما تكون أعمال الحفر/الاستبدال غير ممكنة أو مكلفة." },
-      { question: "ما الفرق بين الحقن الأسمنتي وطرق الحقن الأخرى؟", answer: "الحقن الأسمنتي يعتمد على ملاط إسمنتي بخصائص لزوجة مناسبة، بينما توجد مواد أخرى (كيميائية/ميكروفاين) لظروف خاصة. اختيار المادة مرتبط بحجم المسام، النفاذية، والهدف (تقوية/عزل)." },
-      { question: "كيف نحدد نوع الخلطة واللزوجة المناسبة؟", answer: "نعتمد على طبيعة التربة/الصخور، نتائج الفحوصات، وهدف المعالجة. أحيانًا نبدأ بخليط تمهيدي ثم نعدّل تدريجيًا لتحقيق اختراق أفضل دون إحداث مشاكل جانبية." },
-      { question: "كيف أعرف أن المعالجة نجحت؟", answer: "المؤشرات تشمل استقرار الاستهلاك، تحسن سلوك الهبوط، وتحسن نتائج التحقق (مثل probing/اختبارات أو مراقبة التشققات) حسب خطة المشروع." },
-    ],
+    { question: "ما مؤشرات الخطر التي تستوجب التدخل بالحقن فوراً؟", answer: "تشققات متوسعة بسرعة، هبوط مستمر ملحوظ، انحراف ظاهر في الجدران أو الأعمدة، أو وجود ضوضاء غير مألوفة في البنية. كل هذه مؤشرات تستدعي تقييماً هندسياً عاجلاً.", questionEn: "What danger signs require immediate grouting intervention?", answerEn: "Rapidly widening cracks, continuous visible settlement, apparent wall or column inclination, or unfamiliar structural sounds — all require urgent engineering assessment." },
+    { question: "هل حقن التربة آمن للمنشآت القريبة من موقع العمل؟", answer: "مع ضبط ضغوط الحقن ضمن الحدود الآمنة، يكون التأثير على المجاورات ضئيلاً. المشاريع في المناطق المكتظة تستدعي مراقبة مستمرة للمنشآت المجاورة طوال فترة التنفيذ.", questionEn: "Is soil grouting safe for structures near the work site?", answerEn: "With injection pressures within safe limits, the impact on adjacent structures is minimal. Dense-area projects require continuous monitoring of neighbouring structures throughout execution." },
+    { question: "كيف يُمنع انتشار الحقن خارج المنطقة المستهدفة؟", answer: "عبر ضبط اللزوجة وضغط الحقن، والاستناد إلى بيانات نفاذية التربة لتحديد نقاط الحقن. المراقبة الميدانية المستمرة للضغط تُنبّه لأي انتشار غير مخطط له.", questionEn: "How is uncontrolled grout spread prevented?", answerEn: "By controlling viscosity and injection pressure, using soil permeability data to position injection points, and continuous field pressure monitoring to alert against unplanned migration." },
+    { question: "ما الفترة الزمنية التي يتحمل فيها الحقن بعد التنفيذ؟", answer: "مع الاختيار الصحيح للمادة وجودة التنفيذ، يُفترض أن يكون الحقن حلاً دائماً. العمر الافتراضي للحقن الأسمنتي مماثل للخرسانة (50+ سنة)، والبوليمرات تتفاوت حسب النوع والبيئة.", questionEn: "How long does grout last after execution?", answerEn: "With correct material selection and quality execution, grouting should be a permanent solution. Cement grout lifespan matches concrete (50+ years); polymers vary by type and environment." }
+  ],
     faqEn: [
       { question: "When is soil grouting the right solution?", answer: "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly." },
       { question: "How is cement grouting different from other grouts?", answer: "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective." },
@@ -10706,11 +10673,11 @@ export const articles: ArticleContent[] = [
     categoryEn: "Asset Management",
     categoriesAr: ["إدارة الأصول", "الهندسة الجيوتقنية", "حقن التربة", "موسوعة حقن التربة"],
     categoriesEn: ["Asset Management", "Geotechnical Engineering", "Soil Grouting", "Ground Improvement Library"],
-    date: "2026-04-20",
+    date: "2026-04-05",
     readTime: "2 دقيقة",
     readTimeEn: "2 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "maintenance-monitoring-guide",
+    slug: "conclusion-grouting-as-a-discipline-bridging-field-experience-and-engineering-theory",
     image: {
       url: "/favicon.webp",
       alt: "الخلاصة: فلسفة الحقن كعلم يجمع بين الخبرة الميدانية والنظرية الهندسية",
@@ -10805,11 +10772,11 @@ export const articles: ArticleContent[] = [
   - [Our services in Khobar](/locations/khobar)
   - [Request a service / Contact us](/request-service)`,
     faqAr: [
-      { question: "متى يكون حقن التربة هو الخيار الأنسب؟", answer: "يكون مناسبًا عند الحاجة لتحسين خواص التربة تحت الأساسات، تقليل الهبوط، أو معالجة مسارات تسرب المياه—خصوصًا عندما تكون أعمال الحفر/الاستبدال غير ممكنة أو مكلفة." },
-      { question: "ما الفرق بين الحقن الأسمنتي وطرق الحقن الأخرى؟", answer: "الحقن الأسمنتي يعتمد على ملاط إسمنتي بخصائص لزوجة مناسبة، بينما توجد مواد أخرى (كيميائية/ميكروفاين) لظروف خاصة. اختيار المادة مرتبط بحجم المسام، النفاذية، والهدف (تقوية/عزل)." },
-      { question: "كيف نحدد نوع الخلطة واللزوجة المناسبة؟", answer: "نعتمد على طبيعة التربة/الصخور، نتائج الفحوصات، وهدف المعالجة. أحيانًا نبدأ بخليط تمهيدي ثم نعدّل تدريجيًا لتحقيق اختراق أفضل دون إحداث مشاكل جانبية." },
-      { question: "كيف أعرف أن المعالجة نجحت؟", answer: "المؤشرات تشمل استقرار الاستهلاك، تحسن سلوك الهبوط، وتحسن نتائج التحقق (مثل probing/اختبارات أو مراقبة التشققات) حسب خطة المشروع." },
-    ],
+    { question: "ما الخطوات العملية لطلب خدمة حقن التربة؟", answer: "ابدأ بتوثيق المشكلة (صور، قياسات)، ثم تواصل مع فريق إطلاق لتقييم أولي. بعد الزيارة الميدانية تُحدَّد التقنية المناسبة والتكلفة التقديرية قبل بدء التنفيذ.", questionEn: "What are the practical steps to request soil grouting service?", answerEn: "Start by documenting the problem (photos, measurements), then contact the ETLAQ team for initial assessment. After the field visit, the appropriate technique and estimated cost are determined before execution begins." },
+    { question: "ما الذي يشمله تقرير ما بعد الحقن؟", answer: "يشمل: خريطة نقاط الحقن المنجزة، سجلات الضغط والكميات لكل نقطة، نتائج اختبارات التحقق، توصيات للمتابعة، وشهادات مواد الحقن.", questionEn: "What does a post-grouting report include?", answerEn: "It includes: map of completed injection points, pressure and volume logs per point, verification test results, follow-up recommendations, and grout material certificates." },
+    { question: "كم عدد نقاط الحقن الضروري في المشروع المتوسط؟", answer: "يتوقف على مساحة المشكلة وعمق المعالجة. المشروع المتوسط قد يتراوح بين 10 و50 نقطة. نقاط الحقن تُحدَّد بعد الزيارة الميدانية وبناءً على نتائج التحقيق.", questionEn: "How many injection points are needed in a typical project?", answerEn: "Depends on problem area and treatment depth. A typical project may range from 10 to 50 points. Injection points are determined after the site visit and investigation results." },
+    { question: "هل يمكن توقف الحقن ثم استئنافه في اليوم التالي؟", answer: "نعم، لكن يُنبغي توثيق حالة كل نقطة عند التوقف لضمان استكمال المناطق غير المكتملة. بعض الخلطات قد تحتاج مواصفات خاصة عند الاستئناف لضمان الترابط مع الحقن السابق.", questionEn: "Can grouting be stopped and resumed the next day?", answerEn: "Yes, but each point's status at stoppage must be documented to ensure incomplete zones are finished. Some mixes may need special specifications on resumption to ensure bonding with previous grout." }
+  ],
     faqEn: [
       { question: "When is soil grouting the right solution?", answer: "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly." },
       { question: "How is cement grouting different from other grouts?", answer: "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective." },
@@ -10830,7 +10797,7 @@ export const articles: ArticleContent[] = [
     readTime: "3 دقيقة",
     readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "cfrp-soil-grouting-framework",
+    slug: "combining-soil-grouting-and-cfrp-strengthening-a-practical-framework-for-settlement-mitigation",
     image: {
       url: "/favicon.webp",
       alt: "دمج حقن التربة مع تدعيم CFRP: إطار عملي لاستقرار المنشآت ومعالجة الهبوط",
@@ -10971,7 +10938,7 @@ The concurrent application of CFRP strengthening and soil grouting constitutes a
     readTime: "3 دقيقة",
     readTimeEn: "3 min",
     author: "فريق ETLAQ الهندسي",
-    slug: "cfrp-soil-grouting-materials-standards",
+    slug: "materials-and-standards-for-cfrp-soil-grouting-choosing-the-right-system-and-reducing-cracking",
     image: {
       url: "/favicon.webp",
       alt: "مواد ومعايير دمج CFRP مع حقن التربة: اختيار النظام المناسب وتقليل التشققات",
