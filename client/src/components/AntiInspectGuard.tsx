@@ -92,15 +92,12 @@ useEffect(() => {
         return;
       }
 
-      // Ctrl/Cmd+C (copy) — allow if user is focused on contact elements (phone/email)
+      // Ctrl/Cmd+C (copy) — allow only on explicitly copyable elements
       if (ctrlOrMeta && key === 'c') {
         const active = document.activeElement;
         const sel = window.getSelection();
         const anchorEl = sel?.anchorNode?.parentElement;
-        const isContactFocused = active && (active.tagName === 'INPUT' || active.tagName === 'TEXTAREA'
-          || active.closest?.('a[href^="tel:"], a[href^="mailto:"]'));
-        const isContactSelected = anchorEl?.closest?.('a[href^="tel:"], a[href^="mailto:"]');
-        if (isContactFocused || isContactSelected) return; // allow copying contact info
+        if (isCopyAllowed(active, anchorEl)) return; // allow
         e.preventDefault();
         e.stopPropagation();
         return;
@@ -128,23 +125,47 @@ useEffect(() => {
     };
 
     // --- Block copy/cut via events (best-effort) ---
-    // Allow copying phone numbers and email addresses for usability.
-    const isContactElement = (el: Element | null): boolean => {
+    // Allow copying ONLY elements explicitly marked as copyable:
+    // - Phone links (tel:), email links (mailto:)
+    // - Company name and other elements with [data-copyable]
+    // - Form inputs and textareas
+    const isCopyableElement = (el: Element | null): boolean => {
       if (!el) return false;
       const tag = el.tagName?.toLowerCase();
       if (tag === 'input' || tag === 'textarea') return true;
+      // Check the element itself or ancestors for copyable markers
       const href = el.getAttribute?.('href') || '';
       if (href.startsWith('tel:') || href.startsWith('mailto:')) return true;
-      const closest = el.closest?.('a[href^="tel:"], a[href^="mailto:"], input, textarea');
+      const closest = el.closest?.('a[href^="tel:"], a[href^="mailto:"], input, textarea, [data-copyable]');
       return !!closest;
     };
+
+    /**
+     * Check if copy should be allowed based on the focused element
+     * or the element containing the text selection.
+     */
+    function isCopyAllowed(active: Element | null, selAnchor: Element | null | undefined): boolean {
+      if (isCopyableElement(active)) return true;
+      if (selAnchor && isCopyableElement(selAnchor)) return true;
+      // Also check if the active element is inside a copyable container
+      if (active?.closest?.('[data-copyable]')) return true;
+      if (selAnchor?.closest?.('[data-copyable]')) return true;
+      return false;
+    }
+
     const onCopy = (e: ClipboardEvent) => {
-      if (isContactElement(e.target as Element)) return; // allow
+      const target = e.target as Element;
+      const sel = window.getSelection();
+      const anchorEl = sel?.anchorNode?.parentElement;
+      if (isCopyAllowed(target, anchorEl)) return; // allow
       e.preventDefault();
       e.stopPropagation();
     };
     const onCut = (e: ClipboardEvent) => {
-      if (isContactElement(e.target as Element)) return; // allow
+      const target = e.target as Element;
+      const sel = window.getSelection();
+      const anchorEl = sel?.anchorNode?.parentElement;
+      if (isCopyAllowed(target, anchorEl)) return; // allow
       e.preventDefault();
       e.stopPropagation();
     };

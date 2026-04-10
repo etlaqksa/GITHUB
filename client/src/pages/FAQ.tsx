@@ -10,6 +10,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import {HelpCircle, Phone} from 'lucide-react';
 import { IconWhatsapp } from '@/components/icons/etlaq';
 import LocalizedLink from '@/components/LocalizedLink';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
 export default function FAQ() {
   const { language } = useLanguage();
@@ -164,6 +165,7 @@ export default function FAQ() {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary/5 via-background to-accent/5 py-10 md:py-10">
         <div className="container text-center space-y-4">
+          <Breadcrumbs items={[{ name: language === 'ar' ? 'الأسئلة الشائعة' : 'FAQ', href: '/faq', isCurrent: true }]} />
           <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
             <HelpCircle className="h-10 w-10 text-primary" />
           </div>

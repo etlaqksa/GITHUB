@@ -2,13 +2,13 @@ import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { mapPathToLang } from '@/lib/mapPathToLang';
 import { useTheme, ColorTheme } from '@/contexts/ThemeContext';
-import { Menu, X, Palette } from 'lucide-react';
+import { Menu, X, Palette, Moon, Sun } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { useLocation } from 'wouter';
 import LocalizedLink from '@/components/LocalizedLink';
 export default function Header() {
   const { language, setLanguage, t } = useLanguage();
-  const { colorTheme, setColorTheme } = useTheme();
+  const { colorTheme, setColorTheme, mode, toggleMode } = useTheme();
   const [location, setLocation] = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -23,7 +23,7 @@ export default function Header() {
     setThemeMenuOpen(false);
   };
 
-  const navigation = [
+  const navigation: Array<{ name: string; href: string; external?: boolean }> = [
     { name: t('nav.home'), href: '/' },
     { name: t('nav.about'), href: '/about' },
     { name: t('nav.services'), href: '/services' },
@@ -264,6 +264,18 @@ export default function Header() {
             )}
           </div>
 
+          {/* Dark Mode Toggle */}
+          <Button
+            variant="outline"
+            size="icon"
+            onClick={toggleMode}
+            className="border-2 border-primary/50 hover:border-primary transition-colors"
+            aria-label={mode === 'dark' ? (language === 'ar' ? 'الوضع الفاتح' : 'Light mode') : (language === 'ar' ? 'الوضع الداكن' : 'Dark mode')}
+            type="button"
+          >
+            {mode === 'dark' ? <Sun className="h-4 w-4 text-yellow-400" /> : <Moon className="h-4 w-4 text-primary" />}
+          </Button>
+
           {/* Language toggle (always visible) */}
           <Button
             variant="outline"
@@ -300,8 +312,8 @@ export default function Header() {
       </nav>
 
       {/* Mobile Navigation (true mobile): only nav items inside hamburger (actions stay in header) */}
-      {mobileMenuOpen && (
-        <div className={`${isMobile ? "" : "hidden"} border-t bg-background`}>
+      {mobileMenuOpen && isMobile && !isDesktopModeMobile && (
+        <div className="border-t bg-background">
           <div className="container py-4 space-y-2">
             {navigation.map((item) =>
               item.external ? (

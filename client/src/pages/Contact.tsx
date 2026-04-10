@@ -5,6 +5,7 @@ import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { IconEmail, IconLocation, IconPhone } from '@/components/icons/etlaq';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import { useState } from 'react';
 import { toast } from 'sonner';
 import { useLocation } from 'wouter';
@@ -162,6 +163,7 @@ export default function Contact() {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary/5 via-background to-accent/5 py-10 md:py-10">
         <div className="container text-center space-y-4">
+          <Breadcrumbs items={[{ name: language === 'ar' ? 'تواصل معنا' : 'Contact', href: '/contact', isCurrent: true }]} />
           <h1 className="text-4xl md:text-5xl font-bold">
             {language === 'ar' ? 'تواصل معنا' : 'Contact Us'}
           </h1>

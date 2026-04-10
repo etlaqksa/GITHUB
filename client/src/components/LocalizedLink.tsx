@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'wouter';
 import { ensureLeadingSlash } from '@/lib/localizePath';
 
-type Props = Omit<React.ComponentProps<typeof Link>, 'href'> & {
+type Props = Omit<React.ComponentProps<typeof Link>, 'href'> & React.AnchorHTMLAttributes<HTMLAnchorElement> & {
   /**
    * IMPORTANT:
    * The app is mounted under /ar/* and /en/* using <Router base="/ar"> or <Router base="/en">.

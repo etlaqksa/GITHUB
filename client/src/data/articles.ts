@@ -23,8 +23,8 @@ export interface ArticleContent {
   content: string;
   contentEn: string;
   slug: string;
-  faqAr?: { question: string; answer: string }[];
-  faqEn?: { question: string; answer: string }[];
+  faqAr?: FAQItem[];
+  faqEn?: FAQItem[];
   image?: ArticleImage;
   excerpt?: string;
   excerptEn?: string;

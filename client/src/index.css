@@ -1167,17 +1167,9 @@ html, body, #root {
   .btn-hover-slide,
   .icon-hover-rotate,
   .icon-hover-bounce {
-    -webkit-transform: translateZ(0);
-    -moz-transform: translateZ(0);
-    -ms-transform: translateZ(0);
-    -o-transform: translateZ(0);
     transform: translateZ(0);
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
     backface-visibility: hidden;
-    -webkit-perspective: 1000;
-    -moz-perspective: 1000;
-    perspective: 1000;
+    perspective: 1000px;
   }
 
   /* Fix for Chrome animation delays */
@@ -1188,12 +1180,9 @@ html, body, #root {
   }
 
   /* Ensure transitions work in older browsers */
-  * {
-    -webkit-transition-property: all;
-    -moz-transition-property: all;
-    -o-transition-property: all;
-    transition-property: all;
-  }
+  /* Note: vendor prefixes for transition-property are no longer needed.
+     The previous global * { transition-property: all } was removed because
+     it caused performance issues and conflicted with component-level transitions. */
 }
 
 /* Force reload styles - Cache busting */
@@ -1910,11 +1899,13 @@ html { scrollbar-gutter: stable; }
   -webkit-touch-callout: none;
 }
 
-/* Allow selection inside form fields */
+/* Allow selection inside form fields and explicitly copyable elements */
 .etlaq-guard-on input,
 .etlaq-guard-on textarea,
 .etlaq-guard-on [contenteditable="true"],
-.etlaq-guard-on [contenteditable=""] {
+.etlaq-guard-on [contenteditable=""],
+.etlaq-guard-on [data-copyable],
+.etlaq-guard-on [data-copyable] * {
   -webkit-user-select: text !important;
   user-select: text !important;
 }

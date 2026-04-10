@@ -12,6 +12,7 @@ import { loadArticles } from '@/data/articlesLoader';
 import ProtectedImage from '@/components/ProtectedImage';
 import LocalizedLink from '@/components/LocalizedLink';
 import { SEO } from '@/components/SEO';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import { absUrl } from '@/lib/siteUrl';
 import { getArticleUrlSlug } from '@/lib/articleUrl';
 import { getArticleImageName } from '@/data/articleImageMap';
@@ -284,6 +285,7 @@ export default function Blog() {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-8">
+          <Breadcrumbs items={[{ name: language === 'ar' ? 'المدونة' : 'Blog', href: '/blog', isCurrent: true }]} />
           <h1 className="text-3xl font-bold mb-2">{language === 'ar' ? 'المدونة' : 'Blog'}</h1>
           <p className="text-muted-foreground">
             {language === 'ar'

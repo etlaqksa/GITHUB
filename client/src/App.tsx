@@ -63,6 +63,7 @@ const LazyStickyCTA = lazy(() => import("./components/StickyCTA"));
 const LazySmartAssistantLauncher = lazy(() => import("./components/SmartAssistantLauncher"));
 const LazyAnalytics = lazy(() => import("./components/Analytics"));
 const LazyUpdateAvailableBanner = lazy(() => import("./components/UpdateAvailableBanner"));
+const LazyExitIntentPopup = lazy(() => import("./components/ExitIntentPopup"));
 
 // Defer toast runtime (sonner) to avoid adding it to the critical path.
 // (We only need the Toaster after the first interaction or later in the session.)
@@ -248,6 +249,9 @@ function AppLayout() {
         </DeferredMount>
         <DeferredMount timeoutMs={5000} requireInteraction>
           <LazySmartAssistantLauncher />
+        </DeferredMount>
+        <DeferredMount timeoutMs={6000} requireInteraction>
+          <LazyExitIntentPopup />
         </DeferredMount>
       </Suspense>
     </div>

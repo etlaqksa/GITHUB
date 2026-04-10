@@ -5,6 +5,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 import { useEffect, useMemo, useState } from 'react';
 import ProtectedImage from '@/components/ProtectedImage';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
 type GalleryImage = {
   id: number;
@@ -177,6 +178,7 @@ export default function Gallery() {
     <div className="min-h-screen py-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-8">
+          <Breadcrumbs items={[{ name: language === 'ar' ? 'معرض الصور' : 'Gallery', href: '/gallery', isCurrent: true }]} />
           <h1 className="text-3xl md:text-4xl font-bold">
             {language === 'ar' ? 'معرض الصور' : 'Gallery'}
           </h1>
