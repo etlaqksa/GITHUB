@@ -28,6 +28,8 @@ import EmergencyCTA from '@/components/EmergencyCTA';
 import ProcessTimeline from '@/components/ProcessTimeline';
 import FeaturedProjects from '@/components/FeaturedProjects';
 import CertificationsBar from '@/components/CertificationsBar';
+import VideoGallery from '@/components/VideoGallery';
+import { groutingVideos } from '@/data/videos';
 
 // Load FAQ accordion only when it is near the viewport.
 // This removes Radix accordion logic from the initial render, which PSI often flags as forced reflow.
@@ -537,6 +539,13 @@ export default function HomeBelowFold() {
 
       {/* FEATURED PROJECTS — project showcase */}
       <FeaturedProjects limit={6} />
+
+      {/* VIDEO GALLERY — real field work footage */}
+      <section className="py-10 md:py-14">
+        <div className="container">
+          <VideoGallery videos={groutingVideos} maxInitial={4} />
+        </div>
+      </section>
 
       {/* TESTIMONIALS — client reviews carousel */}
       <TestimonialsSection className="bg-muted/20" />

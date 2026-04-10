@@ -3,10 +3,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { SEO } from '@/components/SEO';
 import TrustStats from '@/components/TrustStats';
+import VideoGallery from '@/components/VideoGallery';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { CheckCircle, ClipboardList, Drill, FileText, Shield, Timer } from 'lucide-react';
 import LocalizedLink from '@/components/LocalizedLink';
 import AutoLinkedText from '@/components/AutoLinkedText';
+import { groutingVideos, buildVideoSchema } from '@/data/videos';
 
 export default function ServiceGrouting() {
   const { language, t } = useLanguage();
@@ -153,15 +155,20 @@ export default function ServiceGrouting() {
           },
         ];
 
-  // Build FAQPage schema for rich snippets in Google Search.
+  // Build combined schema: FAQPage + VideoObject for rich snippets.
   const faqSchema = {
     '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: faqs.map((f) => ({
-      '@type': 'Question',
-      name: f.q,
-      acceptedAnswer: { '@type': 'Answer', text: f.a },
-    })),
+    '@graph': [
+      {
+        '@type': 'FAQPage',
+        mainEntity: faqs.map((f) => ({
+          '@type': 'Question',
+          name: f.q,
+          acceptedAnswer: { '@type': 'Answer', text: f.a },
+        })),
+      },
+      ...buildVideoSchema(groutingVideos, language as 'ar' | 'en'),
+    ],
   };
 
   return (
@@ -420,6 +427,13 @@ export default function ServiceGrouting() {
                 </CardContent>
               </Card>
             </div>
+          </div>
+        </section>
+
+        {/* Video Gallery */}
+        <section className="py-10">
+          <div className="container">
+            <VideoGallery videos={groutingVideos} maxInitial={4} />
           </div>
         </section>
 
