@@ -54,6 +54,13 @@ export const groutingVideos: VideoItem[] = [
     locationAr: 'جدة',
     locationEn: 'Jeddah',
   },
+  {
+    id: 'aoAYgyYnXxA',
+    titleAr: 'تنفيذ أعمال الحفر لمعالجة التكهفات بمشروع إنشاء مبنى تعليمي - الدمام',
+    titleEn: 'Drilling for cavity treatment at an educational building — Dammam',
+    locationAr: 'الدمام',
+    locationEn: 'Dammam',
+  },
 ];
 
 /**
