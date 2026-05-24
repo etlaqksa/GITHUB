@@ -20,15 +20,15 @@ import {
   IconSoilGrouting,
 } from '@/components/icons/etlaq';
 
-// New high-conversion sections
-import TestimonialsSection from '@/components/TestimonialsSection';
-import ServiceDecisionHelper from '@/components/ServiceDecisionHelper';
-import WhyChooseUs from '@/components/WhyChooseUs';
-import EmergencyCTA from '@/components/EmergencyCTA';
-import ProcessTimeline from '@/components/ProcessTimeline';
-import FeaturedProjects from '@/components/FeaturedProjects';
-import CertificationsBar from '@/components/CertificationsBar';
-import VideoGallery from '@/components/VideoGallery';
+// Lazy loaded below-the-fold sections
+const TestimonialsSection = lazy(() => import('@/components/TestimonialsSection'));
+const ServiceDecisionHelper = lazy(() => import('@/components/ServiceDecisionHelper'));
+const WhyChooseUs = lazy(() => import('@/components/WhyChooseUs'));
+const EmergencyCTA = lazy(() => import('@/components/EmergencyCTA'));
+const ProcessTimeline = lazy(() => import('@/components/ProcessTimeline'));
+const FeaturedProjects = lazy(() => import('@/components/FeaturedProjects'));
+const CertificationsBar = lazy(() => import('@/components/CertificationsBar'));
+const VideoGallery = lazy(() => import('@/components/VideoGallery'));
 import { groutingVideos } from '@/data/videos';
 
 // Load FAQ accordion only when it is near the viewport.
@@ -529,36 +529,68 @@ export default function HomeBelowFold() {
       </InViewMount>
 
       {/* SERVICE DECISION HELPER — interactive 3-question guide */}
-      <ServiceDecisionHelper className="bg-slate-50/60" />
+      <InViewMount fallback={<div className="w-full px-4 py-8"><div className="h-64 bg-slate-50/60 rounded-3xl animate-pulse" /></div>}>
+        <Suspense fallback={<div className="w-full px-4 py-8"><div className="h-64 bg-slate-50/60 rounded-3xl animate-pulse" /></div>}>
+          <ServiceDecisionHelper className="bg-slate-50/60" />
+        </Suspense>
+      </InViewMount>
 
       {/* PROCESS TIMELINE — how we work */}
-      <ProcessTimeline />
+      <InViewMount fallback={<div className="w-full px-4 py-8"><div className="h-80 bg-muted/15 rounded-3xl animate-pulse" /></div>}>
+        <Suspense fallback={<div className="w-full px-4 py-8"><div className="h-80 bg-muted/15 rounded-3xl animate-pulse" /></div>}>
+          <ProcessTimeline />
+        </Suspense>
+      </InViewMount>
 
       {/* WHY CHOOSE US — 6 differentiators */}
-      <WhyChooseUs className="bg-slate-50" />
+      <InViewMount fallback={<div className="w-full px-4 py-8"><div className="h-80 bg-slate-50 rounded-3xl animate-pulse" /></div>}>
+        <Suspense fallback={<div className="w-full px-4 py-8"><div className="h-80 bg-slate-50 rounded-3xl animate-pulse" /></div>}>
+          <WhyChooseUs className="bg-slate-50" />
+        </Suspense>
+      </InViewMount>
 
       {/* FEATURED PROJECTS — project showcase */}
-      <FeaturedProjects limit={6} />
+      <InViewMount fallback={<div className="w-full px-4 py-8"><div className="h-[480px] bg-muted/10 rounded-3xl animate-pulse" /></div>}>
+        <Suspense fallback={<div className="w-full px-4 py-8"><div className="h-[480px] bg-muted/10 rounded-3xl animate-pulse" /></div>}>
+          <FeaturedProjects limit={6} />
+        </Suspense>
+      </InViewMount>
 
       {/* VIDEO GALLERY — real field work footage */}
-      <section className="py-10 md:py-14">
-        <div className="container">
-          <VideoGallery videos={groutingVideos} maxInitial={4} />
-        </div>
-      </section>
+      <InViewMount fallback={<div className="w-full px-4 py-8"><div className="h-80 bg-card rounded-3xl animate-pulse" /></div>}>
+        <Suspense fallback={<div className="w-full px-4 py-8"><div className="h-80 bg-card rounded-3xl animate-pulse" /></div>}>
+          <section className="py-10 md:py-14">
+            <div className="container">
+              <VideoGallery videos={groutingVideos} maxInitial={4} />
+            </div>
+          </section>
+        </Suspense>
+      </InViewMount>
 
       {/* TESTIMONIALS — client reviews carousel */}
-      <TestimonialsSection className="bg-muted/20" />
+      <InViewMount fallback={<div className="w-full px-4 py-8"><div className="h-64 bg-muted/20 rounded-3xl animate-pulse" /></div>}>
+        <Suspense fallback={<div className="w-full px-4 py-8"><div className="h-64 bg-muted/20 rounded-3xl animate-pulse" /></div>}>
+          <TestimonialsSection className="bg-muted/20" />
+        </Suspense>
+      </InViewMount>
 
       {/* CERTIFICATIONS BAR — trust indicators */}
-      <section className="py-8">
-        <div className="container">
-          <CertificationsBar variant="dark" />
-        </div>
-      </section>
+      <InViewMount fallback={<div className="w-full px-4 py-4"><div className="h-20 bg-muted/10 rounded-3xl animate-pulse" /></div>}>
+        <Suspense fallback={<div className="w-full px-4 py-4"><div className="h-20 bg-muted/10 rounded-3xl animate-pulse" /></div>}>
+          <section className="py-8">
+            <div className="container">
+              <CertificationsBar variant="dark" />
+            </div>
+          </section>
+        </Suspense>
+      </InViewMount>
 
       {/* EMERGENCY CTA — for urgent cases */}
-      <EmergencyCTA />
+      <InViewMount fallback={<div className="w-full px-4 py-4"><div className="h-44 bg-red-950/10 rounded-3xl animate-pulse" /></div>}>
+        <Suspense fallback={<div className="w-full px-4 py-4"><div className="h-44 bg-red-950/10 rounded-3xl animate-pulse" /></div>}>
+          <EmergencyCTA />
+        </Suspense>
+      </InViewMount>
 
       {/* FINAL CTA */}
       <section className="py-6 md:py-10">
