@@ -14,7 +14,7 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({
   children,
-  defaultMode = "light",
+  defaultMode = "dark",
   defaultColorTheme = "blue",
 }: {
   children: React.ReactNode;

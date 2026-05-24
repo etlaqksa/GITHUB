@@ -302,7 +302,7 @@ function App() {
 
   return (
     <ErrorBoundary>
-      <ThemeProvider defaultMode="light">
+      <ThemeProvider defaultMode="dark">
         <LanguageProvider>
           {/* Tooltips are provided locally where needed (e.g., Sidebar). */}
           <Suspense fallback={null}>
