@@ -7,7 +7,6 @@ import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import ClaritySpaBridge from "./components/ClaritySpaBridge";
 import SkipToContent from "./components/SkipToContent";
-import AntiInspectGuard from "./components/AntiInspectGuard";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import { InternalLinkingProvider } from "./contexts/InternalLinkingContext";
@@ -64,6 +63,7 @@ const LazySmartAssistantLauncher = lazy(() => import("./components/SmartAssistan
 const LazyAnalytics = lazy(() => import("./components/Analytics"));
 const LazyUpdateAvailableBanner = lazy(() => import("./components/UpdateAvailableBanner"));
 const LazyExitIntentPopup = lazy(() => import("./components/ExitIntentPopup"));
+const LazyAntiInspectGuard = lazy(() => import("./components/AntiInspectGuard"));
 
 // Defer toast runtime (sonner) to avoid adding it to the critical path.
 // (We only need the Toaster after the first interaction or later in the session.)
@@ -323,12 +323,16 @@ function App() {
               <LazyToaster />
             </DeferredMount>
           </Suspense>
-            <AntiInspectGuard />
-            <Suspense fallback={null}>
-              <DeferredMount timeoutMs={3000} requireInteraction>
-                <LazyAnalytics />
-              </DeferredMount>
-            </Suspense>
+          <Suspense fallback={null}>
+            <DeferredMount timeoutMs={4000} requireInteraction>
+              <LazyAntiInspectGuard />
+            </DeferredMount>
+          </Suspense>
+          <Suspense fallback={null}>
+            <DeferredMount timeoutMs={3000} requireInteraction>
+              <LazyAnalytics />
+            </DeferredMount>
+          </Suspense>
             <WouterRouter base={base}>
               <AppLayout />
             </WouterRouter>
