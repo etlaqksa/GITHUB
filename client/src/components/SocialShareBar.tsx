@@ -176,7 +176,7 @@ export default function SocialShareBar({ title, showCompanyDetails = true, url, 
     const og = safeGetOgImage();
     if (og) return og;
     if (typeof window === "undefined") return "";
-    return `${window.location.origin}/og-share.png`;
+    return `${window.location.origin}/og-share.webp`;
   }, [imageUrl, loc]);
 
   const shareText = useMemo(() => buildShareText({ title, url: resolvedUrl, isAr }), [title, resolvedUrl, isAr]);

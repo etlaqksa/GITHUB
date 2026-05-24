@@ -18,7 +18,7 @@ import { Etlaq3DIconDefs } from "@/components/icons/etlaq";
 // Enable only in dev, or by setting VITE_INTERNAL_TOOLS=true at build time.
 const INTERNAL_TOOLS_ENABLED = import.meta.env.DEV || (import.meta.env.VITE_INTERNAL_TOOLS === "true");
 
-const Home = lazy(() => import("./pages/Home"));
+import Home from "./pages/Home";
 const About = lazy(() => import("./pages/About"));
 const Services = lazy(() => import("./pages/Services"));
 const Projects = lazy(() => import("./pages/Projects"));
