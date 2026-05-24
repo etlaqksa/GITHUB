@@ -52,6 +52,14 @@
         }
       } catch (e3) {}
       try {
+        var m = localStorage.getItem('theme-mode') || 'dark';
+        if (m === 'dark') {
+          html.classList.add('dark');
+        } else {
+          html.classList.remove('dark');
+        }
+      } catch (eDm) {}
+      try {
         var isLh =
           navigator.userAgent.includes('Chrome-Lighthouse') ||
           navigator.userAgent.includes('Lighthouse') ||

@@ -249,6 +249,12 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
+# Cache social icons for 1 year
+[[headers]]
+  for = "/social-icons/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
 # Cache split articles JSON indexes for 1 hour to allow quick edits but maintain speed
 [[headers]]
   for = "/article-data/*"

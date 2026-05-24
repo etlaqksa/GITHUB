@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import LocalizedLink from '@/components/LocalizedLink';
 
 const SESSION_KEY = 'etlaq-exit-popup-seen';
-const MOBILE_TIMER_MS = 45_000; // 45 seconds on mobile
+const MOBILE_TIMER_MS = 90_000; // 90 seconds on mobile (more respectful UX)
 const MIN_TIME_ON_SITE_MS = 8_000; // Don't show within first 8 seconds
 
 /**

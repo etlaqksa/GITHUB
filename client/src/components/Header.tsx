@@ -20,7 +20,7 @@ export default function Header() {
   // Horizontal-scroll nav helpers (used when "Desktop site" is enabled on mobile).
 
   const handleThemeChange = (theme: ColorTheme) => {
-    console.log(`Changing theme to: ${theme}`);
+    if (import.meta.env.DEV) console.log(`Changing theme to: ${theme}`);
     setColorTheme(theme);
     setThemeMenuOpen(false);
   };
@@ -68,8 +68,8 @@ export default function Header() {
       if (!mobile && !desktopModeMobile) setMobileMenuOpen(false);
     };
 
-    // Defer the initial compute to prevent render-blocking / forced reflow during bootstrap
-    const handle = setTimeout(compute, 1000);
+    // Run compute immediately on mount to prevent layout shifts (CLS)
+    compute();
 
     const onResize = () => {
       compute();
@@ -82,7 +82,6 @@ export default function Header() {
     else if (mq?.addListener) mq.addListener(onResize);
 
     return () => {
-      clearTimeout(handle);
       window.removeEventListener('resize', onResize);
       if (mq?.removeEventListener) mq.removeEventListener('change', onResize);
       // @ts-ignore

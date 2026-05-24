@@ -225,7 +225,7 @@ useEffect(() => {
     document.addEventListener('cut', onCut, true);
     document.addEventListener('dragstart', onDragStart, true);
 
-    const i = window.setInterval(detect, 500);
+    const i = window.setInterval(detect, 2000);
     window.addEventListener('resize', detect);
     detect();
 

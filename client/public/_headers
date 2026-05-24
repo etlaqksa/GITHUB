@@ -30,6 +30,10 @@
 /og-articles/*
   Cache-Control: public, max-age=31536000, immutable
 
+# Cache social icons (stable file names)
+/social-icons/*
+  Cache-Control: public, max-age=31536000, immutable
+
 # Cache brand assets (stable file names)
 /logo*
   Cache-Control: public, max-age=31536000, immutable
