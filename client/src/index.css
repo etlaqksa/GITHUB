@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import "tw-animate-css";
+/* @import "tw-animate-css"; */
 
 /* Local fonts (self-hosted via @fontsource) */
 /* Local fonts (self-hosted via static /fonts/ to enable preloading and bypass Vite renaming) */
@@ -2300,3 +2300,83 @@ html {
 .dark .etlaq-badge-grouting  { background: rgb(29 78 216 / 0.25); color: rgb(147 197 253); }
 .dark .etlaq-badge-cavity    { background: rgb(146 64 14 / 0.25); color: rgb(253 230 138); }
 .dark .etlaq-badge-geophys   { background: rgb(6 95 70 / 0.25);  color: rgb(110 231 183); }
+
+/* ── Performance-driven Hero Layout Classes ── */
+/* Prevents JS matchMedia calls, prevents hydration layout shifts, and stabilizes LCP */
+.etlaq-hero-height {
+  /* Default: desktop / fine pointer */
+  min-height: clamp(520px, 78vh, 760px);
+}
+
+@media (min-width: 768px) {
+  .etlaq-hero-height {
+    min-height: clamp(620px, 80vh, 860px);
+  }
+}
+
+@media (pointer: coarse) {
+  .etlaq-hero-height {
+    min-height: clamp(520px, 74vh, 740px);
+  }
+}
+
+@media (pointer: coarse) and (min-width: 768px) {
+  .etlaq-hero-height {
+    min-height: clamp(520px, 70vh, 720px);
+  }
+}
+
+/* Hero contrast overlay */
+.etlaq-hero-overlay {
+  background-color: rgba(0, 0, 0, 0.38);
+}
+
+@media (pointer: coarse) {
+  .etlaq-hero-overlay {
+    background-color: rgba(0, 0, 0, 0.44);
+  }
+}
+
+@media (pointer: coarse) and (min-width: 768px) {
+  .etlaq-hero-overlay {
+    background-color: rgba(0, 0, 0, 0.48);
+  }
+}
+
+/* Hero contrast overlay (light theme) */
+.etlaq-hero-overlay-light {
+  background-color: rgba(255, 255, 255, 0.18);
+}
+
+@media (pointer: coarse) {
+  .etlaq-hero-overlay-light {
+    background-color: rgba(255, 255, 255, 0.22);
+  }
+}
+
+@media (pointer: coarse) and (min-width: 768px) {
+  .etlaq-hero-overlay-light {
+    background-color: rgba(255, 255, 255, 0.25);
+  }
+}
+
+/* Hero inner padding */
+.etlaq-hero-padding {
+  padding-top: 3rem; /* pt-12 */
+  padding-bottom: 4rem; /* pb-16 */
+}
+
+@media (min-width: 768px) {
+  .etlaq-hero-padding {
+    padding-top: 4rem; /* pt-16 */
+    padding-bottom: 5rem; /* pb-20 */
+  }
+}
+
+@media (pointer: coarse) {
+  .etlaq-hero-padding {
+    padding-top: 2.5rem; /* pt-10 */
+    padding-bottom: 3.5rem; /* pb-14 */
+  }
+}
+

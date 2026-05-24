@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { Suspense, lazy, useEffect, useMemo, useState } from 'react';
 
 import { SEO } from '@/components/SEO';
 import HeroIntroSequence from '@/components/hero/HeroIntroSequence';
@@ -9,7 +9,7 @@ import { absUrl } from '@/lib/siteUrl';
 import { useUrlSearch } from '@/lib/useUrlSearch';
 import { useLocation } from 'wouter';
 
-import HomeBelowFold from './home/HomeBelowFold';
+const HomeBelowFold = lazy(() => import('./home/HomeBelowFold'));
 
 
 export default function Home() {
@@ -81,37 +81,7 @@ export default function Home() {
 
   // "Desktop mode" on mobile browsers can report a wide viewport (so md/lg styles apply),
   // but the device is still a phone (coarse pointer).
-  const [isCoarsePointer, setIsCoarsePointer] = useState(false);
-  const [isDesktopModeMobile, setIsDesktopModeMobile] = useState(false);
-  useEffect(() => {
-    if (typeof window === 'undefined' || !window.matchMedia) return;
-    const mq = window.matchMedia('(pointer: coarse)');
-    const mqDesktopMode = window.matchMedia('(pointer: coarse) and (min-width: 768px)');
-
-    const onChange = () => setIsCoarsePointer(!!mq.matches);
-    const onChangeDesktopMode = () => setIsDesktopModeMobile(!!mqDesktopMode.matches);
-
-    onChange();
-    onChangeDesktopMode();
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    (mq as any).addEventListener?.('change', onChange);
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    (mqDesktopMode as any).addEventListener?.('change', onChangeDesktopMode);
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    (mq as any).addListener?.(onChange);
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    (mqDesktopMode as any).addListener?.(onChangeDesktopMode);
-    return () => {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      (mq as any).removeEventListener?.('change', onChange);
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      (mqDesktopMode as any).removeEventListener?.('change', onChangeDesktopMode);
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      (mq as any).removeListener?.(onChange);
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      (mqDesktopMode as any).removeListener?.(onChangeDesktopMode);
-    };
-  }, []);
+  // Coarse pointer and mobile desktop mode detected via pure CSS in index.css
 
   return (
     <>
@@ -153,14 +123,7 @@ export default function Home() {
       {/* HERO */}
       <section
         data-anti-contextmenu="true"
-        className={
-          `relative isolate overflow-hidden flex items-center ` +
-          (isDesktopModeMobile
-            ? 'min-h-[clamp(520px,70vh,720px)]'
-            : isCoarsePointer
-              ? 'min-h-[clamp(520px,74vh,740px)]'
-              : 'min-h-[clamp(520px,78vh,760px)] md:min-h-[clamp(620px,80vh,860px)]')
-        }
+        className="relative isolate overflow-hidden flex items-center etlaq-hero-height"
       >
         <div
           className={
@@ -188,27 +151,12 @@ export default function Home() {
         <div
           className={
             'absolute inset-0 z-10 pointer-events-none ' +
-            (effectiveHeroVariant === 'light'
-              ? isDesktopModeMobile
-                ? 'bg-white/25'
-                : isCoarsePointer
-                  ? 'bg-white/22'
-                  : 'bg-white/18'
-              : isDesktopModeMobile
-                ? 'bg-black/48'
-                : isCoarsePointer
-                  ? 'bg-black/44'
-                  : 'bg-black/38')
+            (effectiveHeroVariant === 'light' ? 'etlaq-hero-overlay-light' : 'etlaq-hero-overlay')
           }
           aria-hidden="true"
         />
 
-        <div
-          className={
-            'w-full px-4 relative z-20 flex items-center justify-center ' +
-            (isCoarsePointer ? 'pt-10 pb-14' : 'pt-12 pb-16 md:pt-16 md:pb-20')
-          }
-        >
+        <div className="w-full px-4 relative z-20 flex items-center justify-center etlaq-hero-padding">
           <HeroIntroSequence
             heroVariant={effectiveHeroVariant}
             heroWhatsAppUrl={heroWhatsAppUrl}
@@ -223,7 +171,9 @@ export default function Home() {
       </section>
 
       {/* BELOW THE FOLD */}
-      <HomeBelowFold />
+      <Suspense fallback={<div className="h-96" />}>
+        <HomeBelowFold />
+      </Suspense>
     </>
   );
 }

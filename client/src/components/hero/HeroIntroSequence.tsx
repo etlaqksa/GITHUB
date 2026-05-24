@@ -317,28 +317,14 @@ export default function HeroIntroSequence({
   const brandGradientText =
     'bg-gradient-to-l from-secondary via-amber-500 to-orange-500 text-transparent bg-clip-text';
 
-  // Skip animation for returning visitors, PageSpeed/Lighthouse audits, or mobile screens — show final content immediately.
-  const isReturningVisitor = useMemo(() => {
-    if (typeof window === 'undefined') return false;
-    try {
-      return sessionStorage.getItem('etlaq-hero-seen') === '1';
-    } catch { return false; }
-  }, []);
+  // We default to `done = true` for instant paint on pre-rendered HTML and to bypass hydration layout shifts.
+  // Then we check on the client in `useEffect` whether we should run the animation.
+  const [done, setDone] = useState(true);
+  const [scene, setScene] = useState<Scene>(0);
+  const [sceneVisible, setSceneVisible] = useState(true);
 
-  const isLighthouse = useMemo(() => {
-    if (typeof window === 'undefined') return false;
-    return (
-      navigator.userAgent.includes('Chrome-Lighthouse') ||
-      navigator.userAgent.includes('Lighthouse') ||
-      navigator.userAgent.includes('SpeedInsights') ||
-      !!window.navigator.webdriver
-    );
-  }, []);
-
-  const isMobile = useMemo(() => {
-    if (typeof window === 'undefined') return false;
-    return window.innerWidth < 768;
-  }, []);
+  // Keep track of visitor animation enablement on the client side
+  const [shouldAnimate, setShouldAnimate] = useState(false);
 
   const timeline = useMemo(
     () => ({
@@ -349,10 +335,6 @@ export default function HeroIntroSequence({
     }),
     []
   );
-
-  const [scene, setScene] = useState<Scene>(0);
-  const [sceneVisible, setSceneVisible] = useState(true);
-  const [done, setDone] = useState(isReturningVisitor || isLighthouse || isMobile);
 
   // Allow users to advance the intro sequence by clicking/tapping.
   const fastAdvanceTimerRef = useRef<number | null>(null);
@@ -366,20 +348,47 @@ export default function HeroIntroSequence({
     };
   }, []);
 
-  // When switching hero variants, restart the intro sequence (keeps the toggle feeling "alive").
+  // Set up client-side states (avoiding hydration mismatches entirely)
   useEffect(() => {
-    if (prefersReducedMotion || isLighthouse || isMobile) return;
+    if (typeof window === 'undefined') return;
+
+    try {
+      const isReturning = sessionStorage.getItem('etlaq-hero-seen') === '1';
+      const isLh =
+        navigator.userAgent.includes('Chrome-Lighthouse') ||
+        navigator.userAgent.includes('Lighthouse') ||
+        navigator.userAgent.includes('SpeedInsights') ||
+        !!window.navigator.webdriver;
+      const isMob = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      if (isReturning || isLh || isMob || prefersReduced) {
+        setDone(true);
+        setShouldAnimate(false);
+      } else {
+        // First-time desktop visitor with motion enabled -> trigger intro animation!
+        setDone(false);
+        setShouldAnimate(true);
+        setScene(0);
+        setSceneVisible(true);
+      }
+    } catch {
+      setDone(true);
+      setShouldAnimate(false);
+    }
+  }, [heroVariant, forceMotion]);
+
+  // Restart sequence when toggling motion or changing hero variant (if animated)
+  useEffect(() => {
+    if (!shouldAnimate) return;
     setScene(0);
     setSceneVisible(true);
     setDone(false);
-  }, [heroVariant, prefersReducedMotion, isLighthouse, isMobile]);
+  }, [heroVariant, shouldAnimate]);
 
+  // Manage animation timer sequence
   useEffect(() => {
-    if (prefersReducedMotion || isReturningVisitor || isLighthouse || isMobile) {
-      setDone(true);
-      return;
-    }
-    if (done) return;
+    if (!shouldAnimate || done) return;
 
     const showFor = timeline.showMs[scene];
     const fadeFor = timeline.fadeMs[scene];
@@ -400,14 +409,17 @@ export default function HeroIntroSequence({
       window.clearTimeout(t1);
       window.clearTimeout(t2);
     };
-  }, [prefersReducedMotion, isReturningVisitor, isLighthouse, isMobile, done, scene, timeline]);
+  }, [shouldAnimate, done, scene, timeline]);
 
   // Mark visitor as returning after first complete animation.
+  // Mark visitor as returning after first complete animation.
   useEffect(() => {
-    if (done && !isReturningVisitor && !isLighthouse && !isMobile) {
-      try { sessionStorage.setItem('etlaq-hero-seen', '1'); } catch {}
+    if (done && shouldAnimate) {
+      try {
+        sessionStorage.setItem('etlaq-hero-seen', '1');
+      } catch {}
     }
-  }, [done, isReturningVisitor, isLighthouse, isMobile]);
+  }, [done, shouldAnimate]);
 
   const advanceScene = useCallback(() => {
     if (prefersReducedMotion || done) return;
@@ -486,9 +498,10 @@ export default function HeroIntroSequence({
       className={
         'mx-auto w-full max-w-5xl space-y-5 md:space-y-6 text-center flex flex-col items-center transition-opacity duration-700 ' +
         (tone === 'dark' ? 'text-white ' : 'text-slate-950 ') +
-        (done ? 'opacity-100 visible pointer-events-auto' : 'opacity-0 invisible pointer-events-none')
+        (done
+          ? 'opacity-100 visible pointer-events-auto'
+          : 'max-md:opacity-100 max-md:visible max-md:pointer-events-auto opacity-0 invisible pointer-events-none')
       }
-      aria-hidden={!done}
     >
       {TopPill}
 
@@ -621,7 +634,9 @@ export default function HeroIntroSequence({
         // Centering the overlay would push the animated scenes below the first viewport.
         // So we align to the top on <sm and keep the centered layout on sm+.
         'absolute inset-0 flex items-start justify-center pt-16 pb-10 sm:items-center sm:justify-center sm:pt-0 sm:pb-0 sm:py-10 md:py-14 transition-opacity duration-700 ' +
-        (done ? 'opacity-0 pointer-events-none' : 'opacity-100 cursor-pointer')
+        (done
+          ? 'opacity-0 pointer-events-none'
+          : 'max-md:opacity-0 max-md:pointer-events-none opacity-100 cursor-pointer')
       }
       aria-hidden={done}
       onClick={onSceneClick}

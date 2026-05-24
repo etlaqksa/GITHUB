@@ -11,7 +11,9 @@ export default function Header() {
   const { colorTheme, setColorTheme, mode, toggleMode } = useTheme();
   const [location, setLocation] = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(() =>
+    typeof navigator !== 'undefined' && /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)
+  );
   const [isDesktopModeMobile, setIsDesktopModeMobile] = useState(false);
   const [themeMenuOpen, setThemeMenuOpen] = useState(false);
 
@@ -66,19 +68,25 @@ export default function Header() {
       if (!mobile && !desktopModeMobile) setMobileMenuOpen(false);
     };
 
-    compute();
+    // Defer the initial compute to prevent render-blocking / forced reflow during bootstrap
+    const handle = setTimeout(compute, 1000);
 
-    window.addEventListener('resize', compute);
-    if (mq?.addEventListener) mq.addEventListener('change', compute);
+    const onResize = () => {
+      compute();
+    };
+
+    window.addEventListener('resize', onResize);
+    if (mq?.addEventListener) mq.addEventListener('change', onResize);
     // Safari fallback
     // @ts-ignore
-    else if (mq?.addListener) mq.addListener(compute);
+    else if (mq?.addListener) mq.addListener(onResize);
 
     return () => {
-      window.removeEventListener('resize', compute);
-      if (mq?.removeEventListener) mq.removeEventListener('change', compute);
+      clearTimeout(handle);
+      window.removeEventListener('resize', onResize);
+      if (mq?.removeEventListener) mq.removeEventListener('change', onResize);
       // @ts-ignore
-      else if (mq?.removeListener) mq.removeListener(compute);
+      else if (mq?.removeListener) mq.removeListener(onResize);
     };
   }, []);
 

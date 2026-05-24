@@ -82,19 +82,7 @@ const PILLAR_ACCENTS = ['16 185 129', '37 99 235', '245 158 11', '168 85 247'];
 export default function HomeBelowFold() {
   const { language } = useLanguage();
 
-  const isLighthouse = useMemo(() => {
-    if (typeof window === 'undefined') return false;
-    return (
-      navigator.userAgent.includes('Chrome-Lighthouse') ||
-      navigator.userAgent.includes('Lighthouse') ||
-      navigator.userAgent.includes('SpeedInsights') ||
-      !!window.navigator.webdriver
-    );
-  }, []);
 
-  if (isLighthouse) {
-    return <div style={{ minHeight: '2200px' }} className="w-full" aria-hidden="true" />;
-  }
 
   const requestLabel = (serviceKey: string) => {
     if (language === 'ar') {

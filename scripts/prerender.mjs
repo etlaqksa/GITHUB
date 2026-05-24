@@ -28,7 +28,7 @@ if (IS_WIN && !IS_NETLIFY && (process.env.PRERENDER_WIN ?? '0') !== '1') {
 }
 
 const DIST_DIR = path.join(process.cwd(), 'dist');
-const SITEMAP_PATH = path.join(DIST_DIR, 'sitemap.xml');
+const SITEMAP_PATH = path.join(DIST_DIR, 'sitemap-priority.xml');
 
 if (!fs.existsSync(DIST_DIR)) {
   console.error('[prerender] dist/ not found. Run build first.');
