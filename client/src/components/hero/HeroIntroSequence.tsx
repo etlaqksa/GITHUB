@@ -592,7 +592,7 @@ export default function HeroIntroSequence({
         >
           <Button
             size="lg"
-            className="w-full sm:w-auto bg-green-600 hover:bg-green-700 text-white font-semibold shadow-[0_12px_32px_rgba(0,0,0,0.25)] gap-2"
+            className="w-full sm:w-auto bg-green-700 hover:bg-green-800 text-white font-semibold shadow-[0_12px_32px_rgba(0,0,0,0.25)] gap-2"
             onClick={onWhatsappClick}
           >
             <IconWhatsapp className="h-4 w-4" />

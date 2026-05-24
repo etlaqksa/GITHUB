@@ -74,7 +74,6 @@ export default function TopBar() {
             <a
               href={`tel:${COMPANY_INFO.phoneInternational}`}
               className="inline-flex items-center gap-2 rounded-full px-2 py-1 text-white no-underline hover:bg-white/10 transition"
-              aria-label={isAr ? 'اتصال' : 'Call'}
             >
               <IconPhone className="h-4 w-4 opacity-90" />
               <span dir="ltr" className="font-semibold tracking-tight whitespace-nowrap">
@@ -85,7 +84,6 @@ export default function TopBar() {
             <a
               href={`mailto:${COMPANY_INFO.email}`}
               className="inline-flex items-center gap-2 rounded-full px-2 py-1 text-white no-underline hover:bg-white/10 transition"
-              aria-label={isAr ? 'البريد الإلكتروني' : 'Email'}
             >
               <IconEmail className="h-4 w-4 opacity-90" />
               <span className="hidden sm:inline font-semibold tracking-tight">{COMPANY_INFO.email}</span>
