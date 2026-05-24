@@ -213,3 +213,56 @@
   to = "/404"
   status = 404
   force = true
+
+# ─── High-Performance Caching Headers ───────────────────────────────────────
+# Cache built assets (immutable chunked JS and CSS) for 1 year
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    X-Content-Type-Options = "nosniff"
+
+# Cache static images and media for 1 year
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, must-revalidate"
+
+[[headers]]
+  for = "/article-images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, must-revalidate"
+
+[[headers]]
+  for = "/gallery/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, must-revalidate"
+
+# Cache fonts for 1 year
+[[headers]]
+  for = "/*.woff2"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.woff"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache split articles JSON indexes for 1 hour to allow quick edits but maintain speed
+[[headers]]
+  for = "/article-data/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
+# Prevent caching for critical sitemaps, manifests, and index.html to ensure instant updates
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
