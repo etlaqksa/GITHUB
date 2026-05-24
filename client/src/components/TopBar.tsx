@@ -1,9 +1,39 @@
-import { IconEmail } from '@/components/icons/etlaq/IconEmail';
-import { IconPhone } from '@/components/icons/etlaq/IconPhone';
 import { SocialIcon } from '@/components/SocialIcons';
 
 import { COMPANY_INFO } from '@/config/company';
 import { useLanguage } from '@/contexts/LanguageContext';
+
+function IconPhone({ className }: { className?: string }) {
+  return (
+    <img
+      src="/social-icons/phone.webp"
+      width="24"
+      height="24"
+      className={className}
+      alt=""
+      aria-hidden="true"
+      loading="lazy"
+      decoding="async"
+      draggable={false}
+    />
+  );
+}
+
+function IconEmail({ className }: { className?: string }) {
+  return (
+    <img
+      src="/social-icons/email.webp"
+      width="24"
+      height="24"
+      className={className}
+      alt=""
+      aria-hidden="true"
+      loading="lazy"
+      decoding="async"
+      draggable={false}
+    />
+  );
+}
 
 const social = [
   {

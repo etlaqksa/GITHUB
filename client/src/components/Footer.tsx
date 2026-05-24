@@ -1,10 +1,57 @@
 import { useLanguage } from '@/contexts/LanguageContext';
-import { IconEmail } from '@/components/icons/etlaq/IconEmail';
-import { IconLocation } from '@/components/icons/etlaq/IconLocation';
-import { IconPhone } from '@/components/icons/etlaq/IconPhone';
 import { SocialIcon } from '@/components/SocialIcons';
 import LocalizedLink from '@/components/LocalizedLink';
 import { COMPANY_INFO } from '@/config/company';
+
+function IconPhone({ className }: { className?: string }) {
+  return (
+    <img
+      src="/social-icons/phone.webp"
+      width="24"
+      height="24"
+      className={className}
+      alt=""
+      aria-hidden="true"
+      loading="lazy"
+      decoding="async"
+      draggable={false}
+    />
+  );
+}
+
+function IconEmail({ className }: { className?: string }) {
+  return (
+    <img
+      src="/social-icons/email.webp"
+      width="24"
+      height="24"
+      className={className}
+      alt=""
+      aria-hidden="true"
+      loading="lazy"
+      decoding="async"
+      draggable={false}
+    />
+  );
+}
+
+function IconLocation({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 48 48"
+      width="1em"
+      height="1em"
+      fill="none"
+      focusable="false"
+      aria-hidden="true"
+      role="presentation"
+      className={['etlaq-icon', className].filter(Boolean).join(' ')}
+    >
+      <path d="M24 4C16.3 4 10 10.3 10 18C10 28.5 24 44 24 44C24 44 38 28.5 38 18C38 10.3 31.7 4 24 4Z" fill="url(#realSilver)" filter="url(#innerShadow)" stroke="url(#realBlue)" strokeWidth="2.5" />
+      <circle cx="24" cy="18" fill="url(#realGold)" r="5" />
+    </svg>
+  );
+}
 
 export default function Footer() {
   const { t, language } = useLanguage();

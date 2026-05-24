@@ -7,10 +7,52 @@ import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { usePrefersReducedMotion } from '@/components/hero/usePrefersReducedMotion';
 import { ArrowLeft, Sparkles } from 'lucide-react';
-import { IconGprRadar } from '@/components/icons/etlaq/IconGprRadar';
-import { IconShieldCheck } from '@/components/icons/etlaq/IconShieldCheck';
-import { IconSoilGrouting } from '@/components/icons/etlaq/IconSoilGrouting';
-import { IconWhatsapp } from '@/components/icons/etlaq/IconWhatsapp';
+function IconGprRadar({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 48 48" width="1em" height="1em" fill="none" className={['etlaq-icon', className].filter(Boolean).join(' ')}>
+      <rect fill="url(#realBlue)" filter="url(#innerShadow)" height="12" rx="3" width="20" x="14" y="8" />
+      <path d="M20 8V4M28 8V4" stroke="url(#realBlue)" strokeLinecap="round" strokeWidth="2.5" />
+      <path d="M18 28C22 32 26 32 30 28M14 34C20 40 28 40 34 34M10 40C18 48 30 48 38 40" stroke="url(#realGold)" strokeLinecap="round" strokeWidth="3" />
+    </svg>
+  );
+}
+
+function IconShieldCheck({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 48 48" width="1em" height="1em" fill="none" className={['etlaq-icon', className].filter(Boolean).join(' ')}>
+      <path d="M24 4L8 10V22C8 32 14.5 41 24 44C33.5 41 40 32 40 22V10L24 4Z" fill="url(#realSilver)" filter="url(#innerShadow)" stroke="url(#realBlue)" strokeLinejoin="round" strokeWidth="2.5" />
+      <path d="M16 24L22 30L32 18" stroke="url(#realGold)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="4" />
+    </svg>
+  );
+}
+
+function IconSoilGrouting({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 48 48" width="1em" height="1em" fill="none" className={['etlaq-icon', className].filter(Boolean).join(' ')}>
+      <rect fill="url(#realSilver)" filter="url(#innerShadow)" height="20" rx="2" width="40" x="4" y="24" />
+      <path d="M4 32H44M4 40H44" stroke="url(#realBlue)" strokeDasharray="4 4" strokeWidth="2.5" />
+      <path d="M24 6V30" filter="url(#innerShadow)" stroke="url(#realGold)" strokeLinecap="round" strokeWidth="4" />
+      <path d="M18 10H30" stroke="url(#realBlue)" strokeLinecap="round" strokeWidth="3" />
+      <circle cx="24" cy="34" fill="url(#realGold)" filter="url(#innerShadow)" r="6" />
+    </svg>
+  );
+}
+
+function IconWhatsapp({ className }: { className?: string }) {
+  return (
+    <img
+      src="/social-icons/whatsapp.webp"
+      width="24"
+      height="24"
+      className={className}
+      alt=""
+      aria-hidden="true"
+      loading="lazy"
+      decoding="async"
+      draggable={false}
+    />
+  );
+}
 
 import { useTheme } from '@/contexts/ThemeContext';
 
