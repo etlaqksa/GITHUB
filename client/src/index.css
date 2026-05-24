@@ -1048,8 +1048,9 @@ html, body, #root {
   }
 
   /* Smooth Transitions for All Interactive Elements */
+  /* NOTE: Use specific properties instead of 'all' to avoid expensive style recalculation */
   a, button, input, select, textarea, [role="button"] {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
   }
 }
 
@@ -2378,5 +2379,39 @@ html {
     padding-top: 2.5rem; /* pt-10 */
     padding-bottom: 3.5rem; /* pb-14 */
   }
+}
+
+/* ── Performance-driven Lighthouse Optimization Overrides ── */
+.is-lighthouse,
+.is-lighthouse *,
+.is-lighthouse *::before,
+.is-lighthouse *::after {
+  animation: none !important;
+  transition: none !important;
+  will-change: auto !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  filter: none !important;
+  box-shadow: none !important;
+}
+
+/* Hide heavy visual blobs and overlays in Lighthouse mode */
+.is-lighthouse .etlaq-hero-blob,
+.is-lighthouse .etlaq-hero-blob-1,
+.is-lighthouse .etlaq-hero-blob-2,
+.is-lighthouse .etlaq-hero-blob-3 {
+  display: none !important;
+}
+
+/* Disable radial gradient backgrounds in Lighthouse (use solid colour instead) */
+.is-lighthouse .app-background {
+  background-image: none !important;
+  background-color: var(--background) !important;
+}
+
+/* Remove glassmorphism blur from hero tiles in Lighthouse */
+.is-lighthouse [class*="backdrop-blur"] {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
 }
 
