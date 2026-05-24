@@ -54,7 +54,7 @@ export default function WhatsAppButton() {
       rel="noopener noreferrer"
       data-ga-placement="floating"
       data-ga-intent="general"
-      className="fixed bottom-[calc(env(safe-area-inset-bottom,0px)+6rem)] md:bottom-6 right-6 z-50 bg-[oklch(0.65_0.18_195)] text-white rounded-full p-4 shadow-lg transition-all duration-300 hover:scale-110 group"
+      className="fixed bottom-[calc(env(safe-area-inset-bottom,0px)+6rem)] md:bottom-6 right-6 z-50 bg-[#075E54] text-white rounded-full p-4 shadow-lg transition-all duration-300 hover:scale-110 group"
       aria-label={isAr ? "تواصل معنا عبر واتساب" : "Contact us on WhatsApp"}
       title={isAr ? "واتساب" : "WhatsApp"}
     >

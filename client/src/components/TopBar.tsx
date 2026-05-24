@@ -73,6 +73,7 @@ export default function TopBar() {
           <div className="flex items-center gap-3 sm:gap-4 text-[12px] sm:text-sm text-white rtl:flex-row-reverse">
             <a
               href={`tel:${COMPANY_INFO.phoneInternational}`}
+              aria-label={isAr ? `اتصل بنا: ${COMPANY_INFO.phoneDisplay}` : `Call us: ${COMPANY_INFO.phoneDisplay}`}
               className="inline-flex items-center gap-2 rounded-full px-2 py-1 text-white no-underline hover:bg-white/10 transition"
             >
               <IconPhone className="h-4 w-4 opacity-90" />
@@ -83,6 +84,7 @@ export default function TopBar() {
 
             <a
               href={`mailto:${COMPANY_INFO.email}`}
+              aria-label={isAr ? `راسلنا: ${COMPANY_INFO.email}` : `Email us: ${COMPANY_INFO.email}`}
               className="inline-flex items-center gap-2 rounded-full px-2 py-1 text-white no-underline hover:bg-white/10 transition"
             >
               <IconEmail className="h-4 w-4 opacity-90" />
