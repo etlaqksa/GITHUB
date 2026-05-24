@@ -1,0 +1,18 @@
+# ETLAQ KSA (شركة إطلاق المتميزة المحدودة)
+
+ETLAQ KSA is the premier provider of professional engineering solutions in Saudi Arabia, specializing in soil cement grouting, cavity/void detection, and geophysical surveys.
+
+## Core Services
+
+- [Soil Grouting (حقن التربة)](https://etlaqksa.com/services/grouting) - Specialized cement grouting, foundation underpinning, and differential settlement remediation.
+- [Cavity Detection (كشف التكهفات)](https://etlaqksa.com/services/cavity) - Drilling-based cavity probing, mapping, and geogrid stabilization.
+- [Geophysical Surveys (الدراسات الجيوفيزيائية)](https://etlaqksa.com/services/geophysical) - Subsurface imaging via Electrical Resistivity Tomography (ERT) and Ground Penetrating Radar (GPR).
+
+## Main Sections
+
+- [Home Page (الرئيسية)](https://etlaqksa.com/)
+- [About Us (من نحن)](https://etlaqksa.com/about)
+- [Projects Gallery (معرض أعمالنا)](https://etlaqksa.com/gallery)
+- [Blog & Resource Hub (المدونة)](https://etlaqksa.com/blog)
+- [Coverage Locations (مدن التغطية)](https://etlaqksa.com/locations)
+- [Request Service (اطلب خدمة جيوتقنية)](https://etlaqksa.com/request-service)
