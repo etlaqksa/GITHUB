@@ -1,5 +1,7 @@
 import { useLanguage } from '@/contexts/LanguageContext';
-import { IconEmail, IconLocation, IconPhone } from '@/components/icons/etlaq';
+import { IconEmail } from '@/components/icons/etlaq/IconEmail';
+import { IconLocation } from '@/components/icons/etlaq/IconLocation';
+import { IconPhone } from '@/components/icons/etlaq/IconPhone';
 import { SocialIcon } from '@/components/SocialIcons';
 import LocalizedLink from '@/components/LocalizedLink';
 import { COMPANY_INFO } from '@/config/company';

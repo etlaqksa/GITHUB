@@ -7,7 +7,10 @@ import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { usePrefersReducedMotion } from '@/components/hero/usePrefersReducedMotion';
 import { ArrowLeft, Sparkles } from 'lucide-react';
-import { IconGprRadar, IconShieldCheck, IconSoilGrouting, IconWhatsapp } from '@/components/icons/etlaq';
+import { IconGprRadar } from '@/components/icons/etlaq/IconGprRadar';
+import { IconShieldCheck } from '@/components/icons/etlaq/IconShieldCheck';
+import { IconSoilGrouting } from '@/components/icons/etlaq/IconSoilGrouting';
+import { IconWhatsapp } from '@/components/icons/etlaq/IconWhatsapp';
 
 import { useTheme } from '@/contexts/ThemeContext';
 

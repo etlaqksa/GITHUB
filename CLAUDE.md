@@ -77,3 +77,10 @@ The following B2B features have been deferred to future iterations as per strate
      * Suggested geotechnical investigation route (ERT, GPR, or Cement Grouting).
      * Recommended validation tests (standard penetration tests, core drilling).
   4. Generate and download a beautifully styled PDF directly from the browser client using `jspdf` or serverless functions.
+
+---
+
+## ⚡ PageSpeed Insights Audit Workflow Rule
+* **Location of Audits**: Saved report files (HTML + files folder) are downloaded by the user to `C:\Users\moham\Downloads\PageSpeed Insights` (under `Mobile/` and `Desktop/` subdirectories).
+* **Cleanup Mandate**: ALWAYS delete all contents inside `Mobile/` and `Desktop/` directories immediately after completing the diagnostic analysis to keep the folders ready for the next run.
+

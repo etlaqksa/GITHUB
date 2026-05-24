@@ -1,4 +1,5 @@
-import { IconEmail, IconPhone } from '@/components/icons/etlaq';
+import { IconEmail } from '@/components/icons/etlaq/IconEmail';
+import { IconPhone } from '@/components/icons/etlaq/IconPhone';
 import { SocialIcon } from '@/components/SocialIcons';
 
 import { COMPANY_INFO } from '@/config/company';

@@ -8,17 +8,15 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { trackEvent } from '@/lib/analytics';
 import { cities } from '@/data/seoLocations';
 import { AlertTriangle, CheckCircle2, Sparkles } from 'lucide-react';
-import {
-  IconBuilding,
-  IconChecklist,
-  IconClock,
-  IconGprRadar,
-  IconHardHat,
-  IconLocation,
-  IconPump,
-  IconShieldCheck,
-  IconSoilGrouting,
-} from '@/components/icons/etlaq';
+import { IconBuilding } from '@/components/icons/etlaq/IconBuilding';
+import { IconChecklist } from '@/components/icons/etlaq/IconChecklist';
+import { IconClock } from '@/components/icons/etlaq/IconClock';
+import { IconGprRadar } from '@/components/icons/etlaq/IconGprRadar';
+import { IconHardHat } from '@/components/icons/etlaq/IconHardHat';
+import { IconLocation } from '@/components/icons/etlaq/IconLocation';
+import { IconPump } from '@/components/icons/etlaq/IconPump';
+import { IconShieldCheck } from '@/components/icons/etlaq/IconShieldCheck';
+import { IconSoilGrouting } from '@/components/icons/etlaq/IconSoilGrouting';
 
 // Lazy loaded below-the-fold sections
 const TestimonialsSection = lazy(() => import('@/components/TestimonialsSection'));
