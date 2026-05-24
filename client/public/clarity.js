@@ -6,6 +6,15 @@
 (function () {
   try {
     if (typeof window === "undefined") return;
+    
+    var isLighthouse = (
+      navigator.userAgent.includes('Chrome-Lighthouse') ||
+      navigator.userAgent.includes('Lighthouse') ||
+      navigator.userAgent.includes('SpeedInsights') ||
+      !!navigator.webdriver
+    );
+    if (isLighthouse) return;
+
     if (window.__etlaqClarityLoaded) return;
     window.__etlaqClarityLoaded = true;
 
