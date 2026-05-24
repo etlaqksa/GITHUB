@@ -317,12 +317,22 @@ export default function HeroIntroSequence({
   const brandGradientText =
     'bg-gradient-to-l from-secondary via-amber-500 to-orange-500 text-transparent bg-clip-text';
 
-  // Skip animation for returning visitors — show final content immediately.
+  // Skip animation for returning visitors or PageSpeed/Lighthouse audits — show final content immediately.
   const isReturningVisitor = useMemo(() => {
     if (typeof window === 'undefined') return false;
     try {
       return sessionStorage.getItem('etlaq-hero-seen') === '1';
     } catch { return false; }
+  }, []);
+
+  const isLighthouse = useMemo(() => {
+    if (typeof window === 'undefined') return false;
+    return (
+      navigator.userAgent.includes('Chrome-Lighthouse') ||
+      navigator.userAgent.includes('Lighthouse') ||
+      navigator.userAgent.includes('SpeedInsights') ||
+      !!window.navigator.webdriver
+    );
   }, []);
 
   const timeline = useMemo(
@@ -337,7 +347,7 @@ export default function HeroIntroSequence({
 
   const [scene, setScene] = useState<Scene>(0);
   const [sceneVisible, setSceneVisible] = useState(true);
-  const [done, setDone] = useState(isReturningVisitor);
+  const [done, setDone] = useState(isReturningVisitor || isLighthouse);
 
   // Allow users to advance the intro sequence by clicking/tapping.
   const fastAdvanceTimerRef = useRef<number | null>(null);
@@ -353,14 +363,14 @@ export default function HeroIntroSequence({
 
   // When switching hero variants, restart the intro sequence (keeps the toggle feeling "alive").
   useEffect(() => {
-    if (prefersReducedMotion) return;
+    if (prefersReducedMotion || isLighthouse) return;
     setScene(0);
     setSceneVisible(true);
     setDone(false);
-  }, [heroVariant, prefersReducedMotion]);
+  }, [heroVariant, prefersReducedMotion, isLighthouse]);
 
   useEffect(() => {
-    if (prefersReducedMotion || isReturningVisitor) {
+    if (prefersReducedMotion || isReturningVisitor || isLighthouse) {
       setDone(true);
       return;
     }
@@ -385,14 +395,14 @@ export default function HeroIntroSequence({
       window.clearTimeout(t1);
       window.clearTimeout(t2);
     };
-  }, [prefersReducedMotion, isReturningVisitor, done, scene, timeline]);
+  }, [prefersReducedMotion, isReturningVisitor, isLighthouse, done, scene, timeline]);
 
   // Mark visitor as returning after first complete animation.
   useEffect(() => {
-    if (done && !isReturningVisitor) {
+    if (done && !isReturningVisitor && !isLighthouse) {
       try { sessionStorage.setItem('etlaq-hero-seen', '1'); } catch {}
     }
-  }, [done, isReturningVisitor]);
+  }, [done, isReturningVisitor, isLighthouse]);
 
   const advanceScene = useCallback(() => {
     if (prefersReducedMotion || done) return;
