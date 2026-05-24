@@ -9,6 +9,8 @@ import { usePrefersReducedMotion } from '@/components/hero/usePrefersReducedMoti
 import { ArrowLeft, Sparkles } from 'lucide-react';
 import { IconGprRadar, IconShieldCheck, IconSoilGrouting, IconWhatsapp } from '@/components/icons/etlaq';
 
+import { useTheme } from '@/contexts/ThemeContext';
+
 type HeroVariant = 'gradient' | 'blobs' | 'grid' | 'light';
 type Tone = 'dark' | 'light';
 
@@ -110,20 +112,22 @@ function HeroVariantSwitcher({
             shell
           }
         >
-          {(Object.keys(labels) as HeroVariant[]).map((v) => (
-            <button
-              key={v}
-              type="button"
-              aria-pressed={heroVariant === v}
-              onClick={() => {
-                onVariantChange(v);
-                setOpen(false);
-              }}
-              className={btnBase + ' whitespace-nowrap ' + (heroVariant === v ? btnOn : btnOff)}
-            >
-              {labels[v]}
-            </button>
-          ))}
+          {(Object.keys(labels) as HeroVariant[])
+            .filter((v) => tone === 'light' || v !== 'light')
+            .map((v) => (
+              <button
+                key={v}
+                type="button"
+                aria-pressed={heroVariant === v}
+                onClick={() => {
+                  if (onVariantChange) onVariantChange(v);
+                  setOpen(false);
+                }}
+                className={btnBase + ' whitespace-nowrap ' + (heroVariant === v ? btnOn : btnOff)}
+              >
+                {labels[v]}
+              </button>
+            ))}
 
           {onToggleMotion ? (
             <>
@@ -258,8 +262,9 @@ export default function HeroIntroSequence({
   const { language } = useLanguage();
   const prefersReducedMotion = usePrefersReducedMotion();
 
+  const { mode } = useTheme();
   const variant: 'ar' | 'en' = language === 'ar' ? 'ar' : 'en';
-  const tone: Tone = heroVariant === 'light' ? 'light' : 'dark';
+  const tone: Tone = mode === 'dark' ? 'dark' : (heroVariant === 'light' ? 'light' : 'dark');
 
   const accentOrange = tone === 'dark' ? 'text-amber-300' : 'text-orange-600';
   const accentEmerald = tone === 'dark' ? 'text-emerald-300' : 'text-emerald-700';

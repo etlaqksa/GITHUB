@@ -1,0 +1,79 @@
+{
+  "id": 57,
+  "title": "معايير التوقف عن الحقن (Refusal Criteria): متى ننهي العمل في النقطة؟",
+  "titleEn": "Refusal Criteria in Grouting: When to Stop at a Point",
+  "category": "موسوعة الحقن والتحسين",
+  "categoryEn": "Grouting & Improvement Encyclopedia",
+  "categoriesAr": [
+    "موسوعة الحقن والتحسين",
+    "الهندسة الجيوتقنية",
+    "حقن التربة",
+    "موسوعة حقن التربة"
+  ],
+  "categoriesEn": [
+    "Grouting & Improvement Encyclopedia",
+    "Geotechnical Engineering",
+    "Soil Grouting",
+    "Ground Improvement Library"
+  ],
+  "date": "2026-02-16",
+  "readTime": "3 دقيقة",
+  "readTimeEn": "3 min",
+  "author": "فريق ETLAQ الهندسي",
+  "slug": "refusal-criteria-in-grouting-when-to-stop-at-a-point",
+  "image": {
+    "url": "/favicon.webp",
+    "alt": "معايير التوقف عن الحقن (Refusal Criteria): متى ننهي العمل في النقطة؟",
+    "creditName": "ETLAQ (generated)",
+    "creditUrl": "",
+    "license": "Internal"
+  },
+  "excerpt": "مقدمة تعد عملية حقن التربة من التقنيات الهندسية الحيوية لتحسين خواص التربة وزيادة قدرتها على التحمل، كما تستخدم لمعالجة الهبوط ومنع تسرب المياه وملء الفراغات. ومع ذلك، يواجه المهندسون الميدانيون تحدي تحديد الوقت المناسب للتوقف عن الحقن عند كل نقطة، وهي ما يُعرف بـ \"معايير التوقف عن الحقن\" أو \"Refusal Criteria\". إن فهم هذه المعايير ضروري…",
+  "excerptEn": "Introduction Soil grouting is a vital geotechnical technique for improving soil properties, increasing bearing capacity, mitigating settlement, preventing seepage, and filling voids. However, one of the field engineers’ significant challenges is to determine the appropriate moment to cease injection at each grouting point—this is…",
+  "content": "### مقدمة  \n  تعد عملية حقن التربة من التقنيات الهندسية الحيوية لتحسين خواص التربة وزيادة قدرتها على التحمل، كما تستخدم لمعالجة الهبوط ومنع تسرب المياه وملء الفراغات. ومع ذلك، يواجه المهندسون الميدانيون تحدي تحديد الوقت المناسب للتوقف عن الحقن عند كل نقطة، وهي ما يُعرف بـ \"معايير التوقف عن الحقن\" أو \"Refusal Criteria\". إن فهم هذه المعايير ضروري لضمان جودة العمل، توفير التكاليف، وتفادي الأضرار المحتملة للتربة والمنشآت القائمة.\n  \n  ### المحتوى الفني التفصيلي  \n  #### 1. ما هي معايير التوقف عن الحقن؟  \n  معايير التوقف عن الحقن هي القيم الحدية أو المؤشرات التي يعتمد عليها المهندس الميداني لاتخاذ قرار بإنهاء الحقن في نقطة معينة بسبب عدم قدرة التربة على استيعاب المزيد من المواد أو عدم وجود تحسن ملموس. هذه المعايير تحدد بناءً على الضغط المستخدم في الحقن، معدل التدفق، مقاومة التربة، واستجابة التربة للمواد المحقونة.\n  \n  #### 2. العوامل المؤثرة في معايير التوقف  \n  - **نوع التربة:** التربة الرملية تطلب معايير مختلفة عن التربة الطينية أو الصخرية.  \n  - **نوع المادة المحقونة:** حقن الأسمنت، البولي يوريثان، أو النفث عالي الضغط يختلف في سلوك التربة.  \n  - **ضغط الحقن ومعدل التدفق:** عادةً ينخفض معدل التدفق مع زيادة الضغط، ويُعتبر التوقف عند وصول الضغط لمستوى معين أو انخفاض معدل التدفق إلى قيمة حرجة.  \n  - **وجود تكهفات أو فراغات:** تؤثر على توزيع الحقن واستجابته.  \n  - **شروط الموقع:** مثل العمق، مستوى المياه الجوفية، والتشوهات القائمة.  \n  \n  #### 3. آليات التوقف الشائعة  \n  - **انخفاض معدل التدفق (Flow Refusal):** عند انخفاض معدل الحقن تحت قيمة محددة (مثلاً أقل من 0.1 لتر/دقيقة)، الجهة المسؤولة تعتبر أن التربة رفضت الحقن.  \n  - **ارتفاع الضغط بدون تغيير في التدفق:** ارتفاع الضغط بشكل مستمر مع ثبات أو انخفاض في معدل التدفق يشير إلى امتلاء الفراغات.  \n  - **تغيرات ملموسة في تربة الموقع (Crack Monitoring أو Settlement Monitoring):** في حالة مراقبة التشققات أو الهبوط، عند عدم حدوث تحسن يُنهي الحقن.  \n  - **مدة الحقن القصوى:** لتجنب تجاوز الوقت والتأثيرات السلبية، يحدد العقد أحياناً حد أقصى للحقن عند كل نقطة.  \n  \n  #### 4. المعايير الدولية  \n  تعتمد كثير من مشاريع الحقن المعايير الميدانية على المواصفات الفنية المعترف بها مثل:  \n  - **EN 12715**: معيار أوروبي لأنظمة الحقن وتحديد معايير التوقف بناء على القياسات الميدانية.  \n  - **ASTM D5600**: معايير اختبار الحقن للأساسات وتحليل الانسداد (Refusal).  \n  - **FHWA (Federal Highway Administration) Guidelines**: توجيهات للحقن في المشاريع الكبرى مع تأكيد على معايير التوقف بناء على الضغط والتدفق.  \n  \n  #### 5. خطوات عملية لتطبيق معايير التوقف  \n  1. تحديد نوع الحقن والمواد المستخدمة بناءً على تحليل التربة.  \n  2. ضبط مسبق لضغط الحقن والمعدل حسب توصيات المصنع والمشروع.  \n  3. قياس الضغط والتدفق بدقة مستمرة أثناء الحقن.  \n  4. مراقبة التشققات أو الهبوط باستخدام أجهزة قياس دقيقة (Crack/Settlement Monitors).  \n  5. اعتماد قرار التوقف عند تحقق أحد معايير الانسداد أو الرفض حسب المعايير المُعتمدة.  \n  6. توثيق العملية بالتفصيل (سجلات الضغط، التدفق، الوقت، ونتائج المراقبة).  \n  \n  ### الخلاصة  \n  معايير التوقف عن الحقن تعتبر من أهم أدوات ضمان نجاح عمليات حقن التربة وتحقيق الأداء المطلوب مع الحرص على السلامة والاقتصاد. يجب دمج المعايير الفنية مع الخبرة الميدانية ومراقبة مستمرة لضمان اتخاذ القرار الصحيح بشأن توقف الحقن في النقاط المختلفة. الالتزام بالمعايير الدولية والمعتمدة يساهم في توحيد الإجراءات وتجنب المشاكل التقنية والهندسية المستقبلية.\n  \n  ## روابط ذات صلة داخل موقعنا\n  \n  - [حقن التربة (الحقن الأسمنتي)](/services/grouting)\n  - [كشف التكهفات والفراغات](/services/cavity)\n  - [جميع المدن التي نغطيها](/locations)\n  - [خدماتنا في الرياض](/locations/riyadh)\n  - [خدماتنا في الخبر](/locations/khobar)\n  - [اطلب خدمة / تواصل معنا](/request-service)",
+  "contentEn": "### Introduction  \n  Soil grouting is a vital geotechnical technique for improving soil properties, increasing bearing capacity, mitigating settlement, preventing seepage, and filling voids. However, one of the field engineers’ significant challenges is to determine the appropriate moment to cease injection at each grouting point—this is referred to as the “Refusal Criteria.” Understanding these criteria is essential to ensure quality control, optimize cost efficiency, and avoid soil or structural damage.\n  \n  ### Detailed Technical Content  \n  #### 1. What Are Refusal Criteria?  \n  Refusal criteria are threshold values or indicators used by field engineers to decide when to stop grouting at a given point due to the soil’s inability to absorb additional grout or when no significant improvement is observed. These criteria are based on injection pressure, flow rate, soil resistance, and soil response to grout materials.\n  \n  #### 2. Factors Affecting Refusal Criteria  \n  - **Soil Type:** Sand, clay, or rock present different grouting behaviors and refusal thresholds.  \n  - **Grout Type:** Cementitious grout, polyurethane, or jet grout influence soil differently.  \n  - **Injection Pressure and Flow Rate:** Usually, injection flow rate decreases as pressure increases; refusal is often declared when pressure reaches a pre-set limit or the flow rate drops below a critical threshold.  \n  - **Presence of Voids or Cavities:** These affect grout distribution and injection response.  \n  - **Site Conditions:** Such as depth, groundwater table, and existing ground deformation.  \n  \n  #### 3. Common Stopping Mechanisms  \n  - **Flow Refusal:** When the injection flow rate falls below a predetermined limit (e.g., less than 0.1 liters per minute), indicating that the soil cannot accept more grout.  \n  - **Pressure Build-Up without Flow Increase:** Sustained pressure rise accompanied by constant or decreasing flow rate signals void saturation.  \n  - **Observable Soil Response (Crack/Settlement Monitoring):** When there is no noticeable improvement in crack width or ground settlement, grout injection is halted.  \n  - **Maximum Injection Duration:** Contractual or technical limits are often set for maximum grout injection time at each point to avoid negative effects.  \n  \n  #### 4. International Standards  \n  Grouting projects commonly employ recognized standards such as:  \n  - **EN 12715:** European standard detailing injection systems and refusal criteria based on field measurements.  \n  - **ASTM D5600:** Standard guide for grouting foundations and refusal analysis.  \n  - **FHWA Guidelines:** Federal Highway Administration’s instructions for grouting in major projects emphasizing refusal criteria based on pressure and flow.  \n  \n  #### 5. Practical Steps for Implementing Refusal Criteria  \n  1. Select grout type and injection parameters based on soil investigation.  \n  2. Pre-set injection pressures and flow rates according to manufacturer and project specifications.  \n  3. Continuously monitor injection pressure and flow during grouting.  \n  4. Monitor cracks or settlements using specialized instruments (crack monitors, settlement gauges).  \n  5. Decide refusal and stop injection when one or more refusal criteria are met according to the accepted standards.  \n  6. Maintain detailed documentation of pressure, flow, injection time, and monitoring results.  \n  \n  ### Conclusion  \n  Refusal criteria are critical tools for ensuring successful soil grouting operations that meet required performance while safeguarding safety and cost-effectiveness. Integrating technical standards with practical field experience and continuous monitoring ensures the right decision-making regarding when to stop grout injection at each location. Adhering to recognized international standards facilitates standardized procedures and helps avoid technical and geotechnical complications in the future.\n  \n  ## Related links on our site\n  \n  - [Soil Grouting (Cement Injection)](/services/grouting)\n  - [Void & Cavity Detection](/services/cavity)\n  - [All cities we serve](/locations)\n  - [Our services in Riyadh](/locations/riyadh)\n  - [Our services in Khobar](/locations/khobar)\n  - [Request a service / Contact us](/request-service)",
+  "faqAr": [
+    {
+      "question": "كيف تُختار أنسب تقنية حقن لكل موقع؟",
+      "answer": "القرار يستند إلى نوع التربة ومشكلتها الجوهرية: ترب رملية نافذة تناسبها حقن الأسمنت والنفاذ، الترب الطينية تحتاج حقناً كيميائياً، والترب الهشة قد تتطلب Jet Grouting لتكوين أعمدة داعمة.",
+      "questionEn": "How is the most appropriate grouting technique selected for each site?",
+      "answerEn": "The decision is based on soil type and core problem: permeable sandy soils suit cement and permeation grouting, clays need chemical grouting, and weak soils may require Jet Grouting to form support columns."
+    },
+    {
+      "question": "ما الاختبارات الضرورية قبل تنفيذ أي عملية حقن؟",
+      "answer": "الحد الأدنى المطلوب: تحديد نوع التربة (SPT أو CPT)، قياس النفاذية، وتحليل عينات مختبرية. في المشاريع الكبيرة تُضاف دراسة جيوفيزيائية (GPR/ERT) للحصول على صورة شاملة.",
+      "questionEn": "What tests are required before any grouting operation?",
+      "answerEn": "The minimum required: soil type identification (SPT or CPT), permeability measurement, and laboratory sample analysis. For larger projects, a geophysical study (GPR/ERT) is added for a comprehensive picture."
+    },
+    {
+      "question": "كيف تُقيَّم جودة ونجاح عملية الحقن بعد التنفيذ؟",
+      "answer": "عبر اختبارات تحقق ما بعد الحقن: CPT أو اختبار ضغط المياه لقياس التحسن في خصائص التربة، مراقبة أجهزة قياس الهبوط، والفحص البصري للتشققات. تُقارَن النتائج بالقياسات الأولية.",
+      "questionEn": "How is grouting quality and success evaluated post-execution?",
+      "answerEn": "Through post-grouting verification tests: CPT or water pressure tests measuring soil property improvement, settlement monitoring instruments, and visual crack inspection. Results are compared against baseline measurements."
+    },
+    {
+      "question": "ما العوامل التي تُحدد تكلفة مشروع حقن التربة؟",
+      "answer": "الأهم: عمق الحقن، نوع المادة المستخدمة، تعقيد المشروع وإمكانية الوصول، كمية الحقن المطلوبة، ووجود إنشاءات حساسة مجاورة تستدعي ضوابط إضافية.",
+      "questionEn": "What factors determine the cost of a soil grouting project?",
+      "answerEn": "Key factors: injection depth, material type used, project complexity and access, required grouting volume, and presence of sensitive adjacent structures requiring additional controls."
+    }
+  ],
+  "faqEn": [
+    {
+      "question": "When is soil grouting the right solution?",
+      "answer": "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly."
+    },
+    {
+      "question": "How is cement grouting different from other grouts?",
+      "answer": "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective."
+    },
+    {
+      "question": "How do you choose the mix and viscosity?",
+      "answer": "We base it on ground type, test results, and the treatment objective. In many cases, mixes are adjusted progressively to balance penetration and control."
+    },
+    {
+      "question": "How do I know the treatment worked?",
+      "answer": "Indicators include stabilized take patterns, improved monitoring results, and verification outputs (probing/tests) aligned with the project’s acceptance criteria."
+    }
+  ]
+}

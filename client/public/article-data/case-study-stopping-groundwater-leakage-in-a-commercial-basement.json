@@ -1,0 +1,79 @@
+{
+  "id": 75,
+  "title": "دراسة حالة: وقف تسرب مياه جوفية في قبو مبنى تجاري",
+  "titleEn": "Case Study: Stopping Groundwater Leakage in a Commercial Basement",
+  "category": "شقوق ومنشآت",
+  "categoryEn": "Cracks & Structures",
+  "categoriesAr": [
+    "شقوق ومنشآت",
+    "الهندسة الجيوتقنية",
+    "حقن التربة",
+    "موسوعة حقن التربة"
+  ],
+  "categoriesEn": [
+    "Cracks & Structures",
+    "Geotechnical Engineering",
+    "Soil Grouting",
+    "Ground Improvement Library"
+  ],
+  "date": "2026-03-25",
+  "readTime": "3 دقيقة",
+  "readTimeEn": "3 min",
+  "author": "فريق ETLAQ الهندسي",
+  "slug": "case-study-stopping-groundwater-leakage-in-a-commercial-basement",
+  "image": {
+    "url": "/favicon.webp",
+    "alt": "دراسة حالة: وقف تسرب مياه جوفية في قبو مبنى تجاري",
+    "creditName": "ETLAQ (generated)",
+    "creditUrl": "",
+    "license": "Internal"
+  },
+  "excerpt": "مقدمة تعد مشكلة تسرب المياه الجوفية في القبو من القضايا الحرجة التي تواجه العديد من المباني التجارية، حيث تؤثر سلبًا على سلامة الهيكل الخرساني وجودة الاستخدام الداخلي. ويلعب تحكم تسرب المياه دورًا محوريًا في الحفاظ على قدرة التحمل الهيكلي ومنع الأضرار البيئية والصحية المتعلقة بالرطوبة الزائدة والعفن. تهدف هذه الدراسة إلى تقديم تحليل…",
+  "excerptEn": "Introduction Groundwater leakage in basements is a critical issue affecting many commercial buildings, negatively impacting structural integrity and indoor environment quality. Controlling groundwater seepage is crucial to maintaining load bearing capacity and preventing structural and environmental damage due to excessive moisture and…",
+  "content": "### مقدمة  \n  تعد مشكلة تسرب المياه الجوفية في القبو من القضايا الحرجة التي تواجه العديد من المباني التجارية، حيث تؤثر سلبًا على سلامة الهيكل الخرساني وجودة الاستخدام الداخلي. ويلعب تحكم تسرب المياه دورًا محوريًا في الحفاظ على قدرة التحمل الهيكلي ومنع الأضرار البيئية والصحية المتعلقة بالرطوبة الزائدة والعفن. تهدف هذه الدراسة إلى تقديم تحليل هندسي مفصل لحالة حقيقية تم فيها وقف تسرب مياه جوفية بقبو مبنى تجاري باستخدام تقنيات حقن التربة المتقدمة، مع التركيز على اختيار الأساليب المناسبة والتقنيات الميدانية المعتمدة.\n  \n  ### دراسة الحالة\n  \n  #### وصف المشكلة  \n  لاحظت إدارة المبنى التجاري ارتفاعًا ملحوظًا في نسبة الرطوبة داخل القبو، بالإضافة إلى تشققات طفيفة في الجدران الخرسانية التي تشير إلى تسرب مياه جوفية عبر التربة المحيطة. تم جمع بيانات أولية باستخدام اختبارات الحفر اليدوي وفحص مقاومة التربة، بالإضافة إلى تقنية رادار اختراق الأرض (GPR) لتحديد مواقع الفراغات ذات النفاذ المائي العالي.\n  \n  #### التحقيقات الميدانية والتحليل  \n  - **اختبارات التربة:** أظهرت نتائج اختبارات الحفر أن التربة حول القبو عبارة عن طبقة رملية متوسطة الكثافة مع وجود مناطق طينية رطبة. مع تسجيل منسوب مياه جوفية قريب من مستوى القبو.  \n  - **تقنية GPR:** أوضحت وجود فراغات وتكهفات ناتجة عن تراكم المياه وتآكل التربة، مما خلق مسارات للتسرب تحت القبو.  \n  - **فحص التشققات:** تمت دراسة نمط التشققات باستخدام جسر المراقبة (Crack Monitoring) لتتبع تطورها وتحديد مدى نشاطها.\n  \n  #### الحل الهندسي المتبع  \n  \n  اعتمد الحل على تقنية **حقن الستار (Curtain Grouting)** باستخدام خليط الأسمنت المُعَد خصيصًا لمنع تسرب المياه. تضمنت الخطوات:  \n  1. حفر ثقوب الحقن على محيط جدران القبو بعمق يصل إلى مستوى طبقة التربة المشبعة.  \n  2. حقن خليط الأسمنت تحت ضغط محكم بحيث يشكل جدارًا مانعًا للماء يمنع مرور المياه عبر التربة.  \n  3. مراقبة الضغوط وتدفق الحقن بشكل مستمر لضمان تغطية كاملة للفراغات والتكهفات.  \n  \n  اُستخدِم خليط أسمنتي ذو خواص مقاومة للتآكل، مستوفٍ لمتطلبات المعيار الدولي EN 12715 فيما يتعلق بأنظمة الحقن والتربة المالئة. كما تم تطبيق خطة ضمان الجودة وفقًا لمواصفات ASTM D5102-19 لضمان الاتساق والكفاءة.\n  \n  #### النتائج والتقييم  \n  - توقف تسرب المياه بالكامل بعد إتمام الحقن.  \n  - تحسن ملحوظ في مقاومة التربة القبوية وزيادة في قدرة التحمل.  \n  - استقرار التشققات مع انعدام ظهور تشققات جديدة خلال فترة المتابعة (مدة 12 شهراً).  \n  - تحسنت ظروف الرطوبة الداخلية، مما رفع جودة استخدام القبو.\n  \n  ### خلاصة  \n  تُظهر هذه الدراسة كيف يمكن لتقنيات حقن التربة، خصوصًا حقن الستار، أن تكون حلاً فعالاً ومستدامًا لمشاكل تسرب المياه في الأقبية التجارية. إن نجاح العملية يتطلب دراسة هندسية دقيقة، استخدام مواد وخليط مطابق للمواصفات العالمية، وتنفيذ عمليات مراقبة جودة دقيقة قبل وأثناء وبعد التنفيذ. يُوصى بإجراء الفحص الجيوتقني الكامل واستخدام تقنيات الكشف الحديثة مثل GPR لتقييم الوضع قبل اتخاذ القرار النهائي بشأن الحل المناسب.\n  \n  ## روابط ذات صلة داخل موقعنا\n  \n  - [حقن التربة (الحقن الأسمنتي)](/services/grouting)\n  - [كشف التكهفات والفراغات](/services/cavity)\n  - [جميع المدن التي نغطيها](/locations)\n  - [خدماتنا في الرياض](/locations/riyadh)\n  - [اطلب خدمة / تواصل معنا](/request-service)",
+  "contentEn": "### Introduction  \n  Groundwater leakage in basements is a critical issue affecting many commercial buildings, negatively impacting structural integrity and indoor environment quality. Controlling groundwater seepage is crucial to maintaining load-bearing capacity and preventing structural and environmental damage due to excessive moisture and mold growth. This case study presents a detailed engineering analysis of a real-life project involving the cessation of groundwater leakage in a commercial building basement using advanced soil grouting techniques, with emphasis on selecting appropriate methods and field implementation.\n  \n  ### Case Study\n  \n  #### Problem Description  \n  The building management noticed a significant increase in humidity levels inside the basement, accompanied by minor cracks on concrete walls indicative of groundwater seepage through surrounding soil. Preliminary data were collected via manual boreholes, soil resistivity tests, and Ground Penetrating Radar (GPR) technology to detect voids and high-permeability pathways around the basement.\n  \n  #### Field Investigation and Analysis  \n  - **Soil Testing:** The borehole data indicated medium-dense sandy soil with localized wet clay zones around the basement, with groundwater level near the basement floor.  \n  - **GPR Survey:** Revealed presence of cavities and soil washout zones causing seepage paths beneath the basement slab.  \n  - **Crack Monitoring:** Conducted to evaluate the pattern and activity level of cracks, confirming the urgency of seepage mitigation.\n  \n  #### Engineering Solution Implemented  \n  \n  The adopted solution involved **Curtain Grouting** using a specially formulated cementitious grout designed to act as a waterproof barrier. The procedure included:  \n  1. Drilling injection holes around the basement perimeter to depths reaching the saturated soil layer.  \n  2. Injecting cement grout under controlled pressure to form an impermeable curtain wall blocking water flow through soil pores.  \n  3. Continuous monitoring of injection pressures and grout volumes to ensure comprehensive filling of voids and fracture zones.\n  \n  The cement grout mix used conformed to international standard EN 12715 related to grouting materials and soil filling systems. Additionally, a rigorous Quality Assurance / Quality Control (QA/QC) protocol was followed according to ASTM D5102-19 to verify grout consistency and effectiveness.\n  \n  #### Outcomes and Evaluation  \n  - Complete cessation of groundwater leakage upon grout curing.  \n  - Significant improvement in soil bearing capacity and basement floor stability.  \n  - Stabilization of cracks with no new crack development observed over a 12-month follow-up period.  \n  - Improved indoor humidity conditions, enhancing basement usability.\n  \n  ### Summary  \n  This case study demonstrates that soil grouting techniques, particularly curtain grouting, provide an effective and sustainable solution for groundwater seepage problems in commercial basements. Success requires careful geotechnical analysis, use of materials compliant with global standards, and strict QA/QC monitoring before, during, and after implementation. Comprehensive geotechnical site investigation and modern detection technologies such as GPR are highly recommended to inform the optimal remediation strategy.\n  \n  ---\n  \n  **References:**  \n  - EN 12715: \"Execution of special geotechnical work – Grouting\"  \n  - ASTM D5102-19: \"Standard Guide for Soil-Cement Testing\"  \n  - FHWA-NHI-09-038: \"Ground Improvement Techniques\"  \n  - \"Geotechnical Engineering Principles & Practices\", Design Manuals, 2020\n  \n  ## Related links on our site\n  \n  - [Soil Grouting (Cement Injection)](/services/grouting)\n  - [Void & Cavity Detection](/services/cavity)\n  - [All cities we serve](/locations)\n  - [Our services in Riyadh](/locations/riyadh)\n  - [Request a service / Contact us](/request-service)",
+  "faqAr": [
+    {
+      "question": "ما الفرق بين الهبوط الكلي والهبوط التفاضلي وأيهما أخطر؟",
+      "answer": "الهبوط الكلي هو نزول منتظم للمنشأة كاملها، بينما التفاضلي هو هبوط غير متساوٍ بين أجزائها. الهبوط التفاضلي أخطر بكثير لأنه يُسبب إجهادات انحناء وقوى قص تُفضي للتشقق والانهيار.",
+      "questionEn": "What is the difference between total and differential settlement and which is more dangerous?",
+      "answerEn": "Total settlement is uniform sinking of the entire structure, while differential is uneven settlement between its parts. Differential is far more dangerous as it causes bending stresses and shear forces leading to cracking and potential collapse."
+    },
+    {
+      "question": "متى يكون الهبوط مقبولاً ومتى يستدعي التدخل الفوري؟",
+      "answer": "الهبوط المقبول يعتمد على نوع المنشأة: للمباني السكنية عادة < 25 مم كلي و< 15 مم تفاضلي. أي هبوط مصحوب بتشققات متسعة أو تشوه واضح في الهيكل يستدعي فحصاً فورياً.",
+      "questionEn": "When is settlement acceptable and when does it require immediate action?",
+      "answerEn": "Acceptable settlement depends on structure type: for residential buildings typically < 25mm total and < 15mm differential. Any settlement accompanied by widening cracks or visible structural distortion requires immediate inspection."
+    },
+    {
+      "question": "كيف يُوقف حقن التربة الهبوط الجاري؟",
+      "answer": "يزيد الحقن من قدرة التحمل وصلابة التربة تحت الأساسات، مما يُقلل التشوه الإضافي. في بعض الحالات يُستخدم حقن الرفع (Compensation Grouting) لاسترداد جزء من الهبوط السابق.",
+      "questionEn": "How does soil grouting stop active settlement?",
+      "answerEn": "Grouting increases bearing capacity and stiffness of soil under foundations, reducing further deformation. In some cases Compensation Grouting is used to partially recover previous settlement."
+    },
+    {
+      "question": "هل يمكن رفع المبنى مجدداً بعد هبوطه عبر الحقن؟",
+      "answer": "نعم، بتقنية Compensation Grouting المتحكّمة التي تستخدم ضغطاً متدرجاً لرفع الأساس ببطء ودقة. لكنها تحتاج مراقبة مستمرة دقيقة لتجنب الإفراط في الرفع أو تشقق الهيكل.",
+      "questionEn": "Can a building be re-lifted after settlement through grouting?",
+      "answerEn": "Yes, using controlled Compensation Grouting that applies incremental pressure to slowly and precisely lift the foundation. It requires continuous precise monitoring to avoid over-lifting or structural cracking."
+    }
+  ],
+  "faqEn": [
+    {
+      "question": "When is soil grouting the right solution?",
+      "answer": "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly."
+    },
+    {
+      "question": "How is cement grouting different from other grouts?",
+      "answer": "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective."
+    },
+    {
+      "question": "How do you choose the mix and viscosity?",
+      "answer": "We base it on ground type, test results, and the treatment objective. In many cases, mixes are adjusted progressively to balance penetration and control."
+    },
+    {
+      "question": "How do I know the treatment worked?",
+      "answer": "Indicators include stabilized take patterns, improved monitoring results, and verification outputs (probing/tests) aligned with the project’s acceptance criteria."
+    }
+  ]
+}

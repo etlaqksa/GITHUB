@@ -1,0 +1,79 @@
+{
+  "id": 66,
+  "title": "معالجة هبوط القواعد المنفصلة مقابل اللبشة المسلحة",
+  "titleEn": "Settlement Remediation: Isolated Footings vs Raft Foundations",
+  "category": "موسوعة الحقن والتحسين",
+  "categoryEn": "Grouting & Improvement Encyclopedia",
+  "categoriesAr": [
+    "موسوعة الحقن والتحسين",
+    "الهندسة الجيوتقنية",
+    "حقن التربة",
+    "موسوعة حقن التربة"
+  ],
+  "categoriesEn": [
+    "Grouting & Improvement Encyclopedia",
+    "Geotechnical Engineering",
+    "Soil Grouting",
+    "Ground Improvement Library"
+  ],
+  "date": "2026-03-15",
+  "readTime": "3 دقيقة",
+  "readTimeEn": "3 min",
+  "author": "فريق ETLAQ الهندسي",
+  "slug": "settlement-remediation-isolated-footings-vs-raft-foundations",
+  "image": {
+    "url": "/favicon.webp",
+    "alt": "معالجة هبوط القواعد المنفصلة مقابل اللبشة المسلحة",
+    "creditName": "ETLAQ (generated)",
+    "creditUrl": "",
+    "license": "Internal"
+  },
+  "excerpt": "المقدمة يعد هبوط الأساسات من أهم التحديات الهندسية التي تؤثر على سلامة واستدامة المنشآت. تختلف طرق معالجة هبوط القواعد المنفصلة عن اللبشة المسلحة بسبب الاختلاف في توزيع الأحمال وطريقة انتقالها إلى التربة. يتطلب اختيار الطريقة المثلى لتحسين ودعم الأرض فهمًا دقيقًا لنوعية التربة، ونوع الأساس، ونمط الهبوط، والعوامل البيئية المحيطة. في هذا…",
+  "excerptEn": "Introduction Settlement of foundations is a critical geotechnical challenge impacting the safety and serviceability of structures. The treatment of settlement differs significantly between isolated footings and reinforced raft foundations due to variations in load distribution and load transfer mechanisms to the soil. Optimal ground…",
+  "content": "### المقدمة  \n  يعد هبوط الأساسات من أهم التحديات الهندسية التي تؤثر على سلامة واستدامة المنشآت. تختلف طرق معالجة هبوط القواعد المنفصلة عن اللبشة المسلحة بسبب الاختلاف في توزيع الأحمال وطريقة انتقالها إلى التربة. يتطلب اختيار الطريقة المثلى لتحسين ودعم الأرض فهمًا دقيقًا لنوعية التربة، ونوع الأساس، ونمط الهبوط، والعوامل البيئية المحيطة. في هذا المقال، نسلط الضوء على الفروق الجوهرية بين علاج هبوط القواعد المنفصلة ومعالجة اللبشة المسلحة بالإضافة إلى أفضل التقنيات المتبعة في تحسين التربة بواسطة حقن التربة (Soil Grouting) وتقنيات رفع الأساسات.\n  \n  ### المحتوى الفني التفصيلي\n  \n  #### 1. طبيعة هبوط القواعد المنفصلة مقابل اللبشة المسلحة  \n  - **القواعد المنفصلة**: تكون مستقلة لكل عمود، ويتحدد تأثير الهبوط فيها غالبًا بحدوث هبوط متفاوت بين القواعد مما قد يؤدي إلى ميلان أو تشققات في العناصر الإنشائية العلوية.  \n  - **اللبشة المسلحة**: هي أساس مشترك يغطي مساحة كبيرة ويوزع الأحمال بالتساوي على التربة. هبوط اللبشة عادة ما يكون أكثر توحدًا ولكن يمكن أن يظهر هبوط متفاوت إذا كانت التربة غير متجانسة.\n  \n  #### 2. أسباب الهبوط وطرق المعالجة وفقاً لنوع الأساس  \n  - **هبوط القواعد المنفصلة**: يحدث في الغالب بسبب ضعف التربة تحت القاعدة أو وجود فراغات وتكهفات، مما يستدعي معالجة التربة تحت كل قاعدة بشكل مستقل، وغالباً باستخدام حقن الأسمنت أو حقن البولي يوريثان لرفع القاعدة وتصحيح مستوى الهبوط.  \n  - **هبوط اللبشة المسلحة**: معقد أكثر بسبب الحجم الكبير للأساس. في حالات الهبوط، يتم معالجة التربة بالتزامن مع تقوية اللبشة أو رفعها عبر تقنيات الحقن الميكانيكية مثل حقن النفث (Jet Grouting) التي تعزز التربة بشكل موحد تحتيًا، مما يقلل من تركز الإجهادات.\n  \n  #### 3. تقنيات حقن التربة لمعالجة الهبوط  \n  - **حقن الأسمنت (Cement Grouting)**: يناسب التربة الحبيبية والطينية ويعمل على ملء الفراغات وزيادة الكثافة. يتبع معايير مثل EN 12715 لضمان جودة الخليط والضغط المناسب.  \n  - **حقن البولي يوريثان (Polyurethane Injection)**: يستخدم خصوصًا للرفع السريع والتعديل الفعال في الصخور والتربة الطينية غير المتماسكة، وله خواص انكماش منخفضة ومقاومة كيميائية عالية.  \n  - **حقن النفث (Jet Grouting)**: يسمح بإنشاء أعمدة خرسانية مدعمة في التربة، مناسب للبنى التحتية الثقيلة واللبشة بسبب قدرته على تحسين التربة بعمق كبير مع تحكم جيد.\n  \n  #### 4. المعايير الفنية وتصميم الحلول  \n  ينصح باتباع مواصفات ASTM D5849 و FHWA من أجل تقييم خصائص مادة الحقن وتأثيرها على التربة. يجب إجراء تقييم دقيق لانخفاض الهبوط قبل وبعد المعالجة باستخدام أجهزة جسر المراقبة (Crack Monitoring) لضمان استقرار الهبوط وعدم ظهور تشققات جديدة في المنشأ.  \n  \n  #### 5. اعتبارات تصميم خاصة  \n  - لتجنب هبوط متفاوت خطير في القواعد المنفصلة، من المهم فحص التربة بشكل مفصل لكل نقطة تحميل.  \n  - في اللبشة، لابد من ضمان توحيد خصائص التربة تحت كامل مساحة اللبشة لتجنب اختلافات الهبوط.  \n  - تطبيق برنامج مراقبة دوري خلال وبعد الحقن.  \n  - اختيار المادة والكمية ونمط الحقن حسب نوع التربة والظروف المناخية والمائية.\n  \n  ### الخلاصة  \n  يختلف أسلوب معالجة هبوط القواعد المنفصلة عن اللبشة المسلحة بشكل جوهري بسبب اختلاف توزيع الأحمال وحجم الأساس، ويتوقف اختيار الطريقة على دراسة هندسية دقيقة للتربة والأساسات. تقنيات الحقن المختلفة مثل حقن الأسمنت، حقن البولي يوريثان، وحقن النفث توفر حلولًا فعالة لمعالجة الهبوط وغيره من مشاكل التربة. تبني مقاييس ومواصفات عالمية أثناء التصميم والتنفيذ يضمن سلامة المنشآت وتحقيق الكفاءة الاقتصادية المطلوبة.\n  \n  ## روابط ذات صلة داخل موقعنا\n  \n  - [حقن التربة (الحقن الأسمنتي)](/services/grouting)\n  - [كشف التكهفات والفراغات](/services/cavity)\n  - [جميع المدن التي نغطيها](/locations)\n  - [خدماتنا في الرياض](/locations/riyadh)\n  - [اطلب خدمة / تواصل معنا](/request-service)",
+  "contentEn": "### Introduction  \n  Settlement of foundations is a critical geotechnical challenge impacting the safety and serviceability of structures. The treatment of settlement differs significantly between isolated footings and reinforced raft foundations due to variations in load distribution and load transfer mechanisms to the soil. Optimal ground improvement methods require a thorough understanding of soil type, foundation type, settlement pattern, and environmental conditions. This article highlights the key differences in addressing settlement in isolated footings versus reinforced raft foundations, alongside advanced soil grouting and foundation lifting techniques.\n  \n  ### Detailed Technical Content\n  \n  #### 1. Nature of Settlement in Isolated Footings vs. Reinforced Rafts  \n  - **Isolated Footings:** Independent foundations for each column; settlements often exhibit differential characteristics, which can cause structural tilting and cracking.  \n  - **Reinforced Raft Foundations:** Serve as a large combined slab distributing loads evenly over a broad area. Settlement tends to be more uniform but may be differential if the soil beneath is heterogeneous.\n  \n  #### 2. Causes of Settlement and Treatment Methods Per Foundation Type  \n  - **Isolated Footings Settlement:** Usually due to weak soil beneath individual footings or the presence of voids and cavities. Treatment focuses on soil improvement below each footing individually, commonly by cement grouting or polyurethane injection to lift and restore level.  \n  - **Raft Foundation Settlement:** More complex due to size; treatment involves soil improvement combined with raft strengthening or lifting. Jet grouting is often employed to uniformly enhance soil properties beneath the raft and mitigate concentrated stresses.\n  \n  #### 3. Soil Grouting Techniques for Settlement Treatment  \n  - **Cement Grouting:** Suitable for granular and clayey soils, fills voids and densifies soil. Standards such as EN 12715 guide mix design and injection pressures.  \n  - **Polyurethane Injection:** Ideal for quick lifting and stabilization in weak clayey or loose soils, offering low shrinkage and chemical resistance.  \n  - **Jet Grouting:** Creates in-situ soilcrete columns, excellent for heavy infrastructure and rafts, providing deep and controlled soil improvement.\n  \n  #### 4. Technical Standards and Design Practices  \n  Compliance with ASTM D5849 and FHWA guidelines is recommended for assessing grout material properties and soil impact. Settlement monitoring through crack monitors and instrumentation before and after grouting is essential to verify effectiveness and prevent additional structural damage.\n  \n  #### 5. Special Design Considerations  \n  - Detailed soil assessment at each footing location to mitigate differential settlement for isolated footings.  \n  - Uniform soil conditioning beneath the entire raft to control raft settlement.  \n  - Rigorous monitoring protocols during and after grouting operations.  \n  - Selection of grout type, volume, and injection pattern tailored to soil characteristics and hydrological conditions.\n  \n  ### Conclusion  \n  The approach to treating settlement in isolated footings versus reinforced raft foundations varies fundamentally due to differences in load distribution and foundation geometry. Appropriate selection from a suite of grouting techniques—cement, polyurethane, and jet grouting—provides effective solutions for settlement remediation and ground improvement. Adherence to international engineering standards throughout design and execution ensures structural integrity, performance, and cost-efficiency.\n  \n  ## Related links on our site\n  \n  - [Soil Grouting (Cement Injection)](/services/grouting)\n  - [Void & Cavity Detection](/services/cavity)\n  - [All cities we serve](/locations)\n  - [Our services in Riyadh](/locations/riyadh)\n  - [Request a service / Contact us](/request-service)",
+  "faqAr": [
+    {
+      "question": "كيف تُختار أنسب تقنية حقن لكل موقع؟",
+      "answer": "القرار يستند إلى نوع التربة ومشكلتها الجوهرية: ترب رملية نافذة تناسبها حقن الأسمنت والنفاذ، الترب الطينية تحتاج حقناً كيميائياً، والترب الهشة قد تتطلب Jet Grouting لتكوين أعمدة داعمة.",
+      "questionEn": "How is the most appropriate grouting technique selected for each site?",
+      "answerEn": "The decision is based on soil type and core problem: permeable sandy soils suit cement and permeation grouting, clays need chemical grouting, and weak soils may require Jet Grouting to form support columns."
+    },
+    {
+      "question": "ما الاختبارات الضرورية قبل تنفيذ أي عملية حقن؟",
+      "answer": "الحد الأدنى المطلوب: تحديد نوع التربة (SPT أو CPT)، قياس النفاذية، وتحليل عينات مختبرية. في المشاريع الكبيرة تُضاف دراسة جيوفيزيائية (GPR/ERT) للحصول على صورة شاملة.",
+      "questionEn": "What tests are required before any grouting operation?",
+      "answerEn": "The minimum required: soil type identification (SPT or CPT), permeability measurement, and laboratory sample analysis. For larger projects, a geophysical study (GPR/ERT) is added for a comprehensive picture."
+    },
+    {
+      "question": "كيف تُقيَّم جودة ونجاح عملية الحقن بعد التنفيذ؟",
+      "answer": "عبر اختبارات تحقق ما بعد الحقن: CPT أو اختبار ضغط المياه لقياس التحسن في خصائص التربة، مراقبة أجهزة قياس الهبوط، والفحص البصري للتشققات. تُقارَن النتائج بالقياسات الأولية.",
+      "questionEn": "How is grouting quality and success evaluated post-execution?",
+      "answerEn": "Through post-grouting verification tests: CPT or water pressure tests measuring soil property improvement, settlement monitoring instruments, and visual crack inspection. Results are compared against baseline measurements."
+    },
+    {
+      "question": "ما العوامل التي تُحدد تكلفة مشروع حقن التربة؟",
+      "answer": "الأهم: عمق الحقن، نوع المادة المستخدمة، تعقيد المشروع وإمكانية الوصول، كمية الحقن المطلوبة، ووجود إنشاءات حساسة مجاورة تستدعي ضوابط إضافية.",
+      "questionEn": "What factors determine the cost of a soil grouting project?",
+      "answerEn": "Key factors: injection depth, material type used, project complexity and access, required grouting volume, and presence of sensitive adjacent structures requiring additional controls."
+    }
+  ],
+  "faqEn": [
+    {
+      "question": "When is soil grouting the right solution?",
+      "answer": "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly."
+    },
+    {
+      "question": "How is cement grouting different from other grouts?",
+      "answer": "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective."
+    },
+    {
+      "question": "How do you choose the mix and viscosity?",
+      "answer": "We base it on ground type, test results, and the treatment objective. In many cases, mixes are adjusted progressively to balance penetration and control."
+    },
+    {
+      "question": "How do I know the treatment worked?",
+      "answer": "Indicators include stabilized take patterns, improved monitoring results, and verification outputs (probing/tests) aligned with the project’s acceptance criteria."
+    }
+  ]
+}

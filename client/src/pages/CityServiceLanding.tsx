@@ -114,6 +114,17 @@ function ModelLanding(props: {
     },
     serviceType: lang === 'ar' ? service.ar : service.en,
     url: canonical,
+    offers: {
+      '@type': 'Offer',
+      priceCurrency: 'SAR',
+      price: '0',
+      description: lang === 'ar' ? 'طلب تقييم فني للموقع وخطة خطوة تالية' : 'Request site assessment and next-step plan',
+      url: canonical,
+    },
+    audience: {
+      '@type': 'Audience',
+      audienceType: lang === 'ar' ? 'ملاك العقارات، المهندسين، المقاولين، المطورين العقاريين' : 'Property owners, Engineers, Contractors, Developers',
+    },
   };
 
   const localBusinessSchema = buildLocalBusinessSchema({ url: getSiteUrl(), logoUrl: absUrl('/logo.webp'), imageUrl: ogImage });
@@ -465,6 +476,17 @@ export default function CityServiceLanding({ params }: Props) {
       : { '@type': 'Country', name: 'Saudi Arabia' },
     serviceType: serviceName,
     url: canonical,
+    offers: {
+      '@type': 'Offer',
+      priceCurrency: 'SAR',
+      price: '0',
+      description: language === 'ar' ? 'طلب تقييم فني للموقع وخطة خطوة تالية' : 'Request site assessment and next-step plan',
+      url: canonical,
+    },
+    audience: {
+      '@type': 'Audience',
+      audienceType: language === 'ar' ? 'ملاك العقارات، المهندسين، المقاولين، المطورين العقاريين' : 'Property owners, Engineers, Contractors, Developers',
+    },
   };
 
   const localBusinessSchema = buildLocalBusinessSchema({ url: getSiteUrl(), logoUrl: absUrl('/logo.webp'), imageUrl: ogImage });

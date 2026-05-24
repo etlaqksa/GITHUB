@@ -1,0 +1,79 @@
+{
+  "id": 45,
+  "title": "المسح الكهربائي (ERT): رسم خرائط المقاومية للكشف عن المياه والفراغات",
+  "titleEn": "Electrical Resistivity Tomography (ERT): Mapping Resistivity to Detect Water and Voids",
+  "category": "موسوعة الحقن والتحسين",
+  "categoryEn": "Grouting & Improvement Encyclopedia",
+  "categoriesAr": [
+    "موسوعة الحقن والتحسين",
+    "الهندسة الجيوتقنية",
+    "حقن التربة",
+    "موسوعة حقن التربة"
+  ],
+  "categoriesEn": [
+    "Grouting & Improvement Encyclopedia",
+    "Geotechnical Engineering",
+    "Soil Grouting",
+    "Ground Improvement Library"
+  ],
+  "date": "2026-01-11",
+  "readTime": "3 دقيقة",
+  "readTimeEn": "3 min",
+  "author": "فريق ETLAQ الهندسي",
+  "slug": "electrical-resistivity-tomography-ert-mapping-resistivity-to-detect-water-and-voids",
+  "image": {
+    "url": "/favicon.webp",
+    "alt": "المسح الكهربائي (ERT): رسم خرائط المقاومية للكشف عن المياه والفراغات",
+    "creditName": "ETLAQ (generated)",
+    "creditUrl": "",
+    "license": "Internal"
+  },
+  "excerpt": "مقدمة تعد تقنية المسح الكهربائي (Electrical Resistivity Tomography – ERT) من أهم الأدوات الجيوفيزيائية المستخدمة في مجال الهندسة الجيوتقنية لرسم خرائط خواص التربة تحت سطح الأرض. تهدف هذه التقنية إلى قياس مقاومة التربة الكهربائية، والتي تعكس خصائصها الفيزيائية والكيميائية، وبذلك يتمكن المهندس من تشخيص وجود المياه الجوفية، الفراغات،…",
+  "excerptEn": "Introduction Electrical Resistivity Tomography (ERT) is a pivotal geophysical tool widely used in geotechnical engineering for subsurface soil characterization. This technique measures the soil’s electrical resistivity, which reflects its physical and chemical properties, enabling engineers to detect groundwater, voids, cavities, and…",
+  "content": "### مقدمة  \n  تعد تقنية المسح الكهربائي (Electrical Resistivity Tomography – ERT) من أهم الأدوات الجيوفيزيائية المستخدمة في مجال الهندسة الجيوتقنية لرسم خرائط خواص التربة تحت سطح الأرض. تهدف هذه التقنية إلى قياس مقاومة التربة الكهربائية، والتي تعكس خصائصها الفيزيائية والكيميائية، وبذلك يتمكن المهندس من تشخيص وجود المياه الجوفية، الفراغات، التكهفات، والطبقات المختلفه للتربة. يعد المسح الكهربائي وسيلة غير مدمرة وآمنة تتيح الحصول على صورة شبه ثلاثية الأبعاد لتوزع الخصائص الكهربائية، مما يسهم في تحسين تصميم عمليات حقن التربة ودراسات تحسين الأرض.\n  \n  ### المفهوم العلمي والتقني لتقنية ERT  \n  تعتمد تقنية المسح الكهربائي على إرسال تيار كهربائي منخفض وشبه مستمر داخل الأرض عبر أقطاب معينة، وقياس فرق الجهد الناتج بين أقطاب استقبال أخرى. من خلال تحريك الأقطاب على طول شبكة مفروشة على سطح الأرض وبالأعماق المدروسة، تُجمع آلاف القياسات المقاومة. تُحلل هذه البيانات باستخدام خوارزميات عكس (Inversion Algorithms) متقدمة لتحويل قيم المقاومة الكهربائية إلى صورة خرائطية ثلاثية الأبعاد توضح توزيع مقاومية التربة.\n  \n  المقاومية الكهربائية تعتمد بشكل وثيق على محتوى الماء، نوعية ونسبة المعادن، ونسبة الفراغات داخل التربة. المياه النقية ذات المقاومة العالية بينما المياه الجوفية المشبعة تكون ذات مقاومية منخفضة، وكذلك الفراغات الهوائية في التربة تظهر كمناطق عالية المقاومة. هذا يمكننا من تمييز المناطق الرطبة، المناطق الجافة، وفراغات التربة بشكل دقيق.\n  \n  ### التطبيقات الهندسية لتقنية المسح الكهربائي  \n  - **الكشف عن المياه الجوفية:** تحديد مستوى المياه الجوفية وانتشاره وتأثيره على سلوك التربة والأساسات.  \n  - **اكتشاف الفراغات والتكهفات:** كشف التجاويف والكهوف تحت الأرض التي قد تسبب خطورة في الاستقرار.  \n  - **رسم خرائط تربة معقدة الطبقات:** دراسة التغيرات في نوع التربة بالتدرج العمودي والأفقي.  \n  - **تقييم مواقع الحقن:** تحديد المواقع الأمثل للحقن سواء كان حقن الأسمنت، البولي يوريثان أو تقنيات النفث.  \n  - **مراقبة التسربات:** تحديد مناطق تسرب المياه من أنابيب أو شبكات تحت الأرض.\n  \n  ### المواد والمعايير القياسية  \n  تراعي عمليات المسح باستخدام ERT التوصيات والمعايير الدولية، مثل المعيار الأمريكي ASTM D6431 \"Standard Guide for Electrical Resistivity and Induced Polarization Surveys\" والمعيار الأوروبي EN 12715 للأعمال الجيوتقنية المتعلقة بخصائص التربة والكشف عن المياه الجوفية. تتضمن هذه المعايير تعليمات تنفيذية دقيقة لضمان دقة البيانات وتفسيرها الصحيح.\n  \n  ### خطوات تنفيذ المسح الكهربائي  \n  1. **التخطيط الميداني:** تحديد نطاق المنطقة المتوقع فحصها ووضع شبكة الأقطاب بشكل مناسب لضمان تغطية عالية الدقة.  \n  2. **تنصيب الأقطاب:** استخدام أقطاب معدنية يتم توصيلها بالأجهزة المعنية مع مراعاة اختراق جيد للتربة.  \n  3. **جمع البيانات:** بإجراء القياسات على امتداد الشبكة، مع ضبط التيارات والفولتية ضمن الحدود الآمنة.  \n  4. **معالجة البيانات:** تطبيق الخوارزميات العكسية لتحويل القياسات الأولية إلى خرائط مقاومية.  \n  5. **تحليل النتائج:** تفسير الخرائط مع دمج البيانات الجيوتقنية الأخرى لاتخاذ القرارات الهندسية المناسبة.\n  \n  ### التحديات والقيود  \n  - وجود نسبة عالية من الملوحة في التربة قد يؤثر سلباً على القراءة.  \n  - ظروف الطقس الرطبة قد تزيد من عدم انتظام القياسات.  \n  - الحاجة إلى خبرة عالية في تفسير البيانات لتفادي الأخطاء في الاستنتاج.\n  \n  ### الخلاصة  \n  تعد تقنية المسح الكهربائي (ERT) أداة فعالة وضرورية لرسم خرائط الخواص الكهربائية تحت الأرض، والكشف الدقيق عن حمل المياه والفراغات. تساعد هذه التقنية على تقليل المخاطر المرتبطة بالإنشاءات والتربة غير المستقرة، وتحسين نتائج حقن التربة ومعالجة الهبوط. مع مراعاة اتباع المعايير الدولية وتنفيذ المسح بشكل احترافي، توفر هذه التقنية معلومات غنية تساعد في اتخاذ قرارات تصميمية سليمة وفعالة.\n  \n  ## روابط ذات صلة داخل موقعنا\n  \n  - [الاختبارات الجيوفيزيائية (GPR/ERT/MASW)](/services/geophysical)\n  - [كشف التكهفات والفراغات](/services/cavity)\n  - [جميع المدن التي نغطيها](/locations)\n  - [خدماتنا في الرياض](/locations/riyadh)\n  - [اطلب خدمة / تواصل معنا](/request-service)",
+  "contentEn": "### Introduction  \n  Electrical Resistivity Tomography (ERT) is a pivotal geophysical tool widely used in geotechnical engineering for subsurface soil characterization. This technique measures the soil’s electrical resistivity, which reflects its physical and chemical properties, enabling engineers to detect groundwater, voids, cavities, and heterogeneous soil layers. ERT is a non-destructive, safe method that provides quasi-3D images of electrical property distribution, thereby improving the design and monitoring of soil grouting and ground improvement interventions.\n  \n  ### Scientific and Technical Principles of ERT  \n  ERT works by injecting a low and nearly direct current into the ground through a set of electrodes and measuring the potential difference between other electrodes. By systematically moving the electrodes over a grid laid out on the surface or boreholes, thousands of resistivity data points are collected. Advanced inversion algorithms process these data to convert resistivity values into three-dimensional resistivity maps that show the spatial distribution of soil resistivity.\n  \n  Electrical resistivity is highly dependent on soil moisture content, mineral composition, and porosity. Pure water usually exhibits high resistivity, while groundwater-saturated soils have lower resistivity. Air-filled voids manifest as zones of high resistivity. This contrast allows for precise identification of wet zones, dry soils, and underground voids.\n  \n  ### Engineering Applications of Electrical Resistivity Survey  \n  - **Groundwater detection:** Locating and mapping the groundwater table and its effect on soil and foundation behavior.  \n  - **Void and cavity detection:** Identifying subsurface cavities and karstic features that threaten structural stability.  \n  - **Soil heterogeneity mapping:** Assessing vertical and lateral layering in complex soil profiles.  \n  - **Injection site evaluation:** Selecting optimal grouting locations for cement, polyurethane, or jet grouting techniques.  \n  - **Leakage monitoring:** Detecting leaks from underground pipes and infrastructure.\n  \n  ### Materials and Standards  \n  ERT survey implementation adheres to international guidelines, such as ASTM D6431 “Standard Guide for Electrical Resistivity and Induced Polarization Surveys” and European standard EN 12715 related to geotechnical investigations of soil and groundwater. These standards prescribe protocols to assure high data reliability and correct interpretation.\n  \n  ### ERT Survey Procedure  \n  1. **Field planning:** Define the investigation area and deploy a suitable electrode array for adequate spatial coverage.  \n  2. **Electrode installation:** Use metallic electrodes with ensured soil contact for effective current injection and potential measurement.  \n  3. **Data acquisition:** Perform systematic resistivity measurements with controlled current and voltage parameters.  \n  4. **Data processing:** Apply robust inversion algorithms to generate resistivity distribution models.  \n  5. **Result interpretation:** Integrate resistivity maps with other geotechnical data to guide engineering decisions.\n  \n  ### Challenges and Limitations  \n  - High soil salinity can distort resistivity readings.  \n  - Moist or rainy conditions may lead to measurement noise.  \n  - Expert interpretation is critical to avoid misrepresentation of subsurface conditions.\n  \n  ### Conclusion  \n  Electrical Resistivity Tomography (ERT) is a powerful and indispensable tool for subsurface electrical characterization and accurate detection of water presence and voids. This technique mitigates risks associated with unstable soils and subsurface anomalies, enhancing soil grouting and ground improvement outcomes. When executed following international standards and best practices, ERT provides valuable insights that support sound and cost-effective geotechnical designs.\n  \n  ## Related links on our site\n  \n  - [Geophysical Testing (GPR/ERT/MASW)](/services/geophysical)\n  - [Void & Cavity Detection](/services/cavity)\n  - [All cities we serve](/locations)\n  - [Our services in Riyadh](/locations/riyadh)\n  - [Request a service / Contact us](/request-service)",
+  "faqAr": [
+    {
+      "question": "ما الفرق بين MASW وReMi في تحليل الموجات السطحية؟",
+      "answer": "كلاهما يحلل موجات Rayleigh، لكن MASW يستخدم مصدراً نشطاً (ضربة مطرقة) وهو أسرع وأكثر تحكماً، بينما ReMi يعتمد على الضوضاء السلبية المحيطة وأفضل في المناطق الحضرية المزدحمة.",
+      "questionEn": "What is the difference between MASW and ReMi in surface wave analysis?",
+      "answerEn": "Both analyse Rayleigh waves, but MASW uses an active source (hammer blow) and is faster and more controlled, while ReMi relies on passive ambient noise and performs better in busy urban areas."
+    },
+    {
+      "question": "ما المعلومات التي يوفرها MASW ولا توفرها طرق أخرى؟",
+      "answer": "MASW يُقدّر معامل القص (Vs30) الذي يُستخدم في تصميم المنشآت الزلزالية وتصنيف الموقع حسب IBC/ASCE. هذه المعلومة لا تتوفر مباشرة من CPT أو SPT.",
+      "questionEn": "What information does MASW provide that other methods do not?",
+      "answerEn": "MASW estimates the shear wave velocity profile (Vs30) used in seismic structural design and site classification per IBC/ASCE — information not directly available from CPT or SPT."
+    },
+    {
+      "question": "كيف يُؤثّر سمك التربة الناعمة على نتائج MASW؟",
+      "answer": "كلما زاد سمك التربة الناعمة، انخفضت سرعة الموجة الكلية وأصبح الموقع أكثر حساسية للزلازل. التضخيم يرتبط عكسياً بسرعة الموجة وطردياً مع سمك الطبقة الناعمة.",
+      "questionEn": "How does soft soil thickness affect MASW results?",
+      "answerEn": "Greater soft soil thickness lowers overall wave velocity and increases seismic site amplification. Amplification is inversely related to wave velocity and directly related to soft layer thickness."
+    },
+    {
+      "question": "هل يمكن دمج MASW مع ERT في موقع واحد؟",
+      "answer": "نعم، وهو شائع في التحقيقات الشاملة. ERT يُعطي صورة المقاومة الكهربائية بينما MASW يُعطي صورة السرعة الميكانيكية، ودمجهما يُقلل الغموض في تفسير النتائج.",
+      "questionEn": "Can MASW and ERT be combined at the same site?",
+      "answerEn": "Yes, this is common in comprehensive investigations. ERT provides the resistivity image while MASW provides the mechanical velocity profile — combining both reduces ambiguity in interpretation."
+    }
+  ],
+  "faqEn": [
+    {
+      "question": "What can geophysical tests reveal on site?",
+      "answer": "Methods such as GPR, ERT, and MASW provide a subsurface picture—layering trends, anomalies, and indicators of voids or weak zones. The right method depends on target depth and ground conditions."
+    },
+    {
+      "question": "GPR vs ERT: when do we use each?",
+      "answer": "GPR is often effective for shallow targets and discrete features in suitable soils, while ERT can image deeper resistivity contrasts and moisture-related variations. Many projects benefit from a combined approach."
+    },
+    {
+      "question": "Are results conclusive?",
+      "answer": "Geophysics provides strong indicators, but critical decisions typically require verification. Targeted probing/drilling is used to confirm anomalies before remediation."
+    },
+    {
+      "question": "What deliverables do I get?",
+      "answer": "You receive interpreted sections/maps, a clear description of assumptions and limits, and practical next-step recommendations for verification and/or treatment."
+    }
+  ]
+}

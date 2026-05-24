@@ -1,0 +1,79 @@
+{
+  "id": 11,
+  "title": "الحقن النفاذي (Permeation Grouting): الآلية والتطبيقات",
+  "titleEn": "Permeation Grouting: Mechanism and Applications",
+  "category": "جيولوجيا/جيوتقنية السعودية",
+  "categoryEn": "Saudi Geotechnics",
+  "categoriesAr": [
+    "جيولوجيا/جيوتقنية السعودية",
+    "الهندسة الجيوتقنية",
+    "حقن التربة",
+    "موسوعة حقن التربة"
+  ],
+  "categoriesEn": [
+    "Saudi Geotechnics",
+    "Geotechnical Engineering",
+    "Soil Grouting",
+    "Ground Improvement Library"
+  ],
+  "date": "2025-10-01",
+  "readTime": "3 دقيقة",
+  "readTimeEn": "3 min",
+  "author": "فريق ETLAQ الهندسي",
+  "slug": "permeation-grouting-mechanism-and-applications",
+  "image": {
+    "url": "/favicon.webp",
+    "alt": "الحقن النفاذي (Permeation Grouting): الآلية والتطبيقات",
+    "creditName": "ETLAQ (generated)",
+    "creditUrl": "",
+    "license": "Internal"
+  },
+  "excerpt": "مقدمة يُعد الحقن النفاذي إحدى تقنيات تحسين التربة المتقدمة والفعالة، والتي تعتمد على حقن مواد غروانية سائلة ذات لزوجة منخفضة في مسام التربة لتحسين خواصها البدنية والميكانيكية دون إحداث تشويه ملحوظ في هيكلها الطبيعي. يُستخدم هذا الأسلوب على نطاق واسع في مشاريع البنية التحتية والهندسة الجيوتقنية لمقاومة الهبوط، زيادة قدرة التحمل، ومنع تسرب…",
+  "excerptEn": "Introduction Permeation grouting is an advanced and effective ground improvement technique that involves injecting low viscosity grout materials into the soil pores to enhance its physical and mechanical properties without significantly disturbing the natural soil structure. This technique is widely used in geotechnical and…",
+  "content": "### مقدمة  \n  يُعد الحقن النفاذي إحدى تقنيات تحسين التربة المتقدمة والفعالة، والتي تعتمد على حقن مواد غروانية سائلة ذات لزوجة منخفضة في مسام التربة لتحسين خواصها البدنية والميكانيكية دون إحداث تشويه ملحوظ في هيكلها الطبيعي. يُستخدم هذا الأسلوب على نطاق واسع في مشاريع البنية التحتية والهندسة الجيوتقنية لمقاومة الهبوط، زيادة قدرة التحمل، ومنع تسرب المياه.  \n  \n  تهدف هذه المقالة إلى تقديم شرح شامل للآلية العلمية لعملية الحقن النفاذي، المواد المستخدمة، والتطبيقات الهندسية النموذجية، مع الاستشهاد بالمعايير الدولية ذات العلاقة مثل EN 12715 و ASTM D4647، مع توضيح الاعتبارات الهندسية والتصميمية لضمان نجاح العملية.\n  \n  ### الآلية الفنية للحقن النفاذي  \n  الحقن النفاذي يعتمد على إدخال غروان مائع (Grout) منخفض اللزوجة يتسلل خلال الفراغات والمسام في التربة دون إحداث تغيير كبير في حجم أو توزيع الحبيبات. الهدف هو ملء الفراغات بين حبيبات التربة وتعزيز الاتصال بينها، مما يؤدي إلى زيادة الانضغاطية، تقليل النفاذية، وتحسين قوة التربة الحاملة.\n  \n  #### خطوات العملية  \n  1. **تقييم مواقع الحقن**: يتم تحديد مواقع الثقوب وعمقها استنادًا إلى نتائج التحقيق الجيوتقني (حفر، اختبار SPT، فحوصات مختبرية).  \n  2. **تحضير المواد الغروانية**: استخدام خليط مناسب يعتمد على نوع التربة (رملية، طينية، خليط) يشمل عادةً الأسمنت المخفف، الميكروسيمنت، أو مواد كيميائية مثل السيليكات أو البولي يوريثان حسب التطبيق.  \n  3. **حقن الغروان**: باستخدام مضخات ضغط منخفض، يتم تسريب الغروان عبر أنابيب الحقن في التربة، مما يسمح له بالانتشار بين حبيبات التربة.  \n  4. **المراقبة والتحكم**: مراقبة ضغط الحقن ومعدل التدفق لضمان تغطية المسام دون تشويه التربة أو إحداث إصابات.  \n  \n  #### المواد المستخدمة  \n  - **الأسمنت المائي منخفض اللزوجة**: مطابق لمعايير ASTM C150 وEN 197-1، مع إضافات لتحسين النفاذية والسيولة.  \n  - **الميكروسيمنت (Microfine Cement)**: يوفر نفاذية أعلى للمواد في التربة الناعمة.  \n  - **مواد كيميائية متميزة**: مثل السيليكات (Sodium Silicate) والبولي يوريثان التي تتميز بسرعة تصلبها ومقاومتها الكيميائية، مناسبة لإنشاء حاجز مائي.  \n  \n  ### المعايير والمواصفات  \n  - **EN 12715:2019**: تحدد متطلبات المواد واختبارات أداء الغروانات المستخدمة في الحقن النفاذي.  \n  - **ASTM D4647-05(2015)**: معيار اختبار النفاذية للغروان في التربة ويُستخدم لضمان قابلية الخلط والخلط الجيد.  \n  - **FHWA – Manual on Grouting**: يوفر إرشادات تنفيذية حقلية ونصائح التصميم والسلامة.  \n  \n  ### التطبيقات العملية  \n  - **تحسين قدرة التحمل للأساسات**: تستخدم بشكل شائع لتحسين التربة الرملية والرملية الطينية تحت قواعد المباني.  \n  - **منع تسرب المياه**: حقن حاجز مائي لمنع تسرب المياه الجوفية أو من الأنفاق.  \n  - **معالجة الهبوط غير المتجانس**: تقليل احتمال هبوط الأساسات الناتج عن ضعف التربة أو وجود فراغات.  \n  - **ملء الفراغات والتكهفات**: ملء التباينات أو التجاويف الدقيقة تحت المنشآت الحساسة.  \n  \n  ### الفوائد والتحديات  \n  #### الفوائد  \n  - تحسين متجانس دون تشويه هيكلي كبير  \n  - مرونة في اختيار المواد حسب نوع التربة والمتطلبات  \n  - تقليل مخاطر الهبوط والانزلاق  \n  - تقليل نفاذية المياه والمساحات الفارغة  \n  \n  #### التحديات  \n  - الحاجة إلى تقييم دقيق لنوع التربة وخواصها  \n  - التحكم الصارم بمعدلات الضغط والتدفق لتجنب التشوه أو الكسر  \n  - تكلفة المواد واختيار النوع الأمثل للغروان  \n  \n  ### الخلاصة  \n  الحقن النفاذي تقنية فعالة وموثوقة لتحسين خواص التربة وتعزيز أداء المنشآت الهندسية، شرط الالتزام بالمعايير الفنية العالمية واجراء دراسات التربة التفصيلية. ينصح بالاعتماد على مواد غروانية ملائمة ومراقبة تنفيذ حثيثة لضمان تحقيق الفائدة القصوى وتقليل المخاطر المحتملة.\n  \n  ## روابط ذات صلة داخل موقعنا\n  \n  - [حقن التربة (الحقن الأسمنتي)](/services/grouting)\n  - [الاختبارات الجيوفيزيائية (GPR/ERT/MASW)](/services/geophysical)\n  - [جميع المدن التي نغطيها](/locations)\n  - [خدماتنا في الرياض](/locations/riyadh)\n  - [اطلب خدمة / تواصل معنا](/request-service)",
+  "contentEn": "### Introduction  \n  Permeation grouting is an advanced and effective ground improvement technique that involves injecting low-viscosity grout materials into the soil pores to enhance its physical and mechanical properties without significantly disturbing the natural soil structure. This technique is widely used in geotechnical and infrastructure projects for controlling settlement, increasing bearing capacity, and preventing water seepage.\n  \n  This article aims to provide a comprehensive technical overview of the permeation grouting mechanism, materials used, and typical engineering applications, with references to international standards such as EN 12715 and ASTM D4647, as well as design considerations to ensure successful implementation.\n  \n  ### Technical Mechanism of Permeation Grouting  \n  Permeation grouting entails injecting a fluid grout that penetrates through soil voids and pores without causing particle displacement or structural distortion. The primary objective is to fill the voids between soil grains to improve compaction, reduce permeability, and enhance the soil's load-bearing capacity.\n  \n  #### Process Steps  \n  1. **Site and Injection Point Assessment**: Injection points and depths are determined based on geotechnical investigation data (boreholes, SPT, lab tests).  \n  2. **Grout Preparation**: Selection of suitable grout mix depending on soil type (sandy, clayey, mixed) typically comprising diluted cement, microfine cement, or chemical grouts like silicates or polyurethane.  \n  3. **Grout Injection**: Using low-pressure pumps, grout is permeated into the soil through injection pipes, allowing the grout to spread among the soil particles.  \n  4. **Monitoring and Control**: Injection pressure and flow rates are monitored meticulously to ensure effective permeation without soil distortion or fracturing.  \n  \n  #### Materials Used  \n  - **Low-Viscosity Cement Grouts**: Conforming to ASTM C150 and EN 197-1 standards, often enhanced with admixtures to improve flowability and permeability.  \n  - **Microfine Cement**: Provides better penetration ability for finer soils.  \n  - **Special Chemical Grouts**: Such as sodium silicate and polyurethane, characterized by rapid setting times and chemical resistance, ideal for waterproofing barriers.  \n  \n  ### Standards and Specifications  \n  - **EN 12715:2019**: Specifies material requirements and performance tests for grouting materials in permeation grouting.  \n  - **ASTM D4647-05 (2015)**: Standard test method for permeability of grout in soils, ensuring proper mixing and flow characteristics.  \n  - **FHWA Manual on Grouting**: Provides field application guidelines and design/safety recommendations.  \n  \n  ### Practical Applications  \n  - **Foundation Bearing Capacity Improvement**: Commonly applied in sandy and silty soils beneath building footings.  \n  - **Seepage Control**: Creation of impermeable grouted curtains to reduce groundwater inflow, especially in tunnels and underground structures.  \n  - **Mitigation of Differential Settlement**: Enhancing soil strength and homogeneity to reduce uneven foundation settlement.  \n  - **Void and Cavity Filling**: Filling small soil voids or fissures particularly beneath sensitive structures.  \n  \n  ### Benefits and Challenges  \n  #### Benefits  \n  - Homogeneous improvement without substantial soil displacement  \n  - Flexibility in grout selection tailored to soil and project needs  \n  - Reduces risks of settlement and soil instability  \n  - Lowers soil permeability and fills voids effectively  \n  \n  #### Challenges  \n  - Requires detailed soil characterization for grout design  \n  - Precise control of injection parameters to avoid soil fracturing  \n  - Material cost and selection optimization critical for effectiveness  \n  \n  ### Conclusion  \n  Permeation grouting is a reliable and technically sound ground improvement technique, capable of enhancing soil properties and reinforcing geotechnical performance when executed in compliance with international standards and thorough soil investigations. Appropriate grout materials selection and rigorous quality control during injection are key factors to maximize benefits and minimize risks.\n  \n  ## Related links on our site\n  \n  - [Soil Grouting (Cement Injection)](/services/grouting)\n  - [Geophysical Testing (GPR/ERT/MASW)](/services/geophysical)\n  - [All cities we serve](/locations)\n  - [Our services in Riyadh](/locations/riyadh)\n  - [Request a service / Contact us](/request-service)",
+  "faqAr": [
+    {
+      "question": "ما مؤشرات الخطر التي تستوجب التدخل بالحقن فوراً؟",
+      "answer": "تشققات متوسعة بسرعة، هبوط مستمر ملحوظ، انحراف ظاهر في الجدران أو الأعمدة، أو وجود ضوضاء غير مألوفة في البنية. كل هذه مؤشرات تستدعي تقييماً هندسياً عاجلاً.",
+      "questionEn": "What danger signs require immediate grouting intervention?",
+      "answerEn": "Rapidly widening cracks, continuous visible settlement, apparent wall or column inclination, or unfamiliar structural sounds — all require urgent engineering assessment."
+    },
+    {
+      "question": "هل حقن التربة آمن للمنشآت القريبة من موقع العمل؟",
+      "answer": "مع ضبط ضغوط الحقن ضمن الحدود الآمنة، يكون التأثير على المجاورات ضئيلاً. المشاريع في المناطق المكتظة تستدعي مراقبة مستمرة للمنشآت المجاورة طوال فترة التنفيذ.",
+      "questionEn": "Is soil grouting safe for structures near the work site?",
+      "answerEn": "With injection pressures within safe limits, the impact on adjacent structures is minimal. Dense-area projects require continuous monitoring of neighbouring structures throughout execution."
+    },
+    {
+      "question": "كيف يُمنع انتشار الحقن خارج المنطقة المستهدفة؟",
+      "answer": "عبر ضبط اللزوجة وضغط الحقن، والاستناد إلى بيانات نفاذية التربة لتحديد نقاط الحقن. المراقبة الميدانية المستمرة للضغط تُنبّه لأي انتشار غير مخطط له.",
+      "questionEn": "How is uncontrolled grout spread prevented?",
+      "answerEn": "By controlling viscosity and injection pressure, using soil permeability data to position injection points, and continuous field pressure monitoring to alert against unplanned migration."
+    },
+    {
+      "question": "ما الفترة الزمنية التي يتحمل فيها الحقن بعد التنفيذ؟",
+      "answer": "مع الاختيار الصحيح للمادة وجودة التنفيذ، يُفترض أن يكون الحقن حلاً دائماً. العمر الافتراضي للحقن الأسمنتي مماثل للخرسانة (50+ سنة)، والبوليمرات تتفاوت حسب النوع والبيئة.",
+      "questionEn": "How long does grout last after execution?",
+      "answerEn": "With correct material selection and quality execution, grouting should be a permanent solution. Cement grout lifespan matches concrete (50+ years); polymers vary by type and environment."
+    }
+  ],
+  "faqEn": [
+    {
+      "question": "When is soil grouting the right solution?",
+      "answer": "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly."
+    },
+    {
+      "question": "How is cement grouting different from other grouts?",
+      "answer": "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective."
+    },
+    {
+      "question": "How do you choose the mix and viscosity?",
+      "answer": "We base it on ground type, test results, and the treatment objective. In many cases, mixes are adjusted progressively to balance penetration and control."
+    },
+    {
+      "question": "How do I know the treatment worked?",
+      "answer": "Indicators include stabilized take patterns, improved monitoring results, and verification outputs (probing/tests) aligned with the project’s acceptance criteria."
+    }
+  ]
+}

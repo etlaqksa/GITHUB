@@ -80,11 +80,23 @@ export function buildCityServiceModel(params: { lang: 'ar' | 'en'; city: City; s
       intro: byLang(
         lang,
         [
-          `نساعد ملاك العقارات والمنشآت في ${c} على حماية المبنى والبنية التحتية عبر معالجة مناطق الضعف تحت الأساسات قبل أن تتطور إلى هبوط أو تشققات مكلفة.`,
+          city.slug === 'riyadh'
+            ? `نساعد ملاك العقارات والمنشآت في الرياض على حماية المباني والبنية التحتية عبر معالجة مناطق الضعف والتكهفات الطبيعية في صخور الحجر الجيري (Limestone) خصوصاً في أحياء شمال الرياض (الياسمين، النرجس، العارض، القيروان) قبل أن تتطور إلى هبوط أو تشققات مكلفة.`
+            : city.slug === 'jeddah'
+            ? `نساعد ملاك العقارات والمنشآت في جدة على حماية المباني الساحلية والبنية التحتية عبر معالجة هبوط التربة وتأثير المياه الجوفية والتربة الطينية الساحلية التي تؤدي لغسيل التربة (Washout) تحت القواعد والأساسات.`
+            : city.slug === 'dammam' || city.slug === 'khobar'
+            ? `نساعد ملاك العقارات والمنشآت في ${c} على معالجة تكهفات الحجر الجيري (Limestone Voids) وتقوية التربة الرملية المفككة وهبوط الأساسات فوق السبخات الرطبة والملحية باستخدام خلطات حقن إسمنتية متقدمة ومقاومة للكبريتات والأملاح.`
+            : `نساعد ملاك العقارات والمنشآت في ${c} على حماية المبنى والبنية التحتية عبر معالجة مناطق الضعف تحت الأساسات قبل أن تتطور إلى هبوط أو تشققات مكلفة.`,
           `الفكرة ليست “حقن وخلاص”—بل تشخيص مبسط، ثم اختيار طريقة مناسبة، ثم تنفيذ منضبط يساعد على استقرار الحالة وتقليل المخاطر.`,
         ],
         [
-          `In ${c}, we help owners protect buildings and infrastructure by treating subsurface weak zones before they become costly settlement or cracking.`,
+          city.slug === 'riyadh'
+            ? `In Riyadh, we help owners protect buildings by treating subsurface weak zones and limestone voids, especially in northern neighborhoods like Al-Yasmin, Al-Narjis, Al-Arid, and Al-Qairawan before they cause settlement.`
+            : city.slug === 'jeddah'
+            ? `In Jeddah, we help owners protect coastal properties by addressing soil settlement and the washing out of fine clays under foundations due to high groundwater tables.`
+            : city.slug === 'dammam' || city.slug === 'khobar'
+            ? `In ${c}, we help owners treat limestone cavities (Limestone Voids), strengthen loose sandy soils, and stabilize foundations built on saline, wet Sabkha formations using advanced sulfate-resistant cementitious grouts.`
+            : `In ${c}, we help owners protect buildings and infrastructure by treating subsurface weak zones before they become costly settlement or cracking.`,
           `It’s not “inject and hope”—we start with a practical diagnosis, choose the right grouting approach, then execute in a controlled way to reduce risk.`,
         ],
       ),
@@ -122,13 +134,25 @@ export function buildCityServiceModel(params: { lang: 'ar' | 'en'; city: City; s
       types: byLang(
         lang,
         [
-          { title: 'حقن ملء الفراغات والتكهفات', body: 'يستهدف سد التجاويف تحت الأرضيات أو قرب الأساسات لتقليل خطر الهبوط الموضعي.' },
+          city.slug === 'riyadh'
+            ? { title: 'حقن ملء التكهفات الكلسية بشمال الرياض', body: 'يستهدف تعبئة الفجوات والفراغات الطبيعية في صخور الحجر الجيري أسفل القواعد لضمان استقرار الأساسات.' }
+            : city.slug === 'jeddah'
+            ? { title: 'حقن مقاوم للمياه الجوفية بجدة', body: 'يستهدف سد الفراغات الناتجة عن تسرب وغسيل المياه الجوفية ومنع حركة التربة الطينية الساحلية.' }
+            : city.slug === 'dammam' || city.slug === 'khobar'
+            ? { title: 'حقن التكهفات الكلسية والسبخات المقاوم للكبريتات', body: 'معالجة فراغات الحجر الجيري وتقوية التربة الرملية والسبخات باستخدام ملاط إسمنت خاص مقاوم للأملاح والظروف الرطبة.' }
+            : { title: 'حقن ملء الفراغات والتكهفات', body: 'يستهدف سد التجاويف تحت الأرضيات أو قرب الأساسات لتقليل خطر الهبوط الموضعي.' },
           { title: 'الحقن الاختراقي (Permeation)', body: 'يدخل الملاط داخل المسام لتحسين تماسك التربة دون إزاحة كبيرة عندما تسمح التربة بذلك.' },
           { title: 'الحقن بالتكثيف (Compaction)', body: 'يركز على زيادة كثافة التربة ورفع قدرتها على التحمل مع ضوابط تمنع الرفع غير المسيطر عليه.' },
           { title: 'حقن موجّه تحت الأساسات', body: 'عند وجود مناطق ضعف محددة، يتم تحديد النقاط والأعماق لاستهداف المشكلة بدقة.' },
         ],
         [
-          { title: 'Void/cavity filling', body: 'Targets cavities below floors or near foundations to reduce localized settlement.' },
+          city.slug === 'riyadh'
+            ? { title: 'Void filling in limestone cavities', body: 'Targets natural voids and cavities in northern Riyadh’s limestone formations below footings to secure foundations.' }
+            : city.slug === 'jeddah'
+            ? { title: 'Water-resistant grouting in Jeddah', body: 'Addresses voids caused by groundwater washout and stabilizes coastal clay soils under foundations.' }
+            : city.slug === 'dammam' || city.slug === 'khobar'
+            ? { title: 'Sulfate-resistant Karst & Sabkha grouting', body: 'Addresses limestone cavities and consolidates loose sandy/sabkha soils using special salt-resistant cementitious mixtures.' }
+            : { title: 'Void/cavity filling', body: 'Targets cavities below floors or near foundations to reduce localized settlement.' },
           { title: 'Permeation grouting', body: 'Fills soil pores to improve cohesion without significant displacement—when soil allows.' },
           { title: 'Compaction grouting', body: 'Densifies the ground to increase bearing capacity, with controls to avoid uncontrolled heave.' },
           { title: 'Targeted underpin support', body: 'When weak zones are localized, injection is planned to address specific areas precisely.' },
@@ -238,11 +262,23 @@ export function buildCityServiceModel(params: { lang: 'ar' | 'en'; city: City; s
       intro: byLang(
         lang,
         [
-          `في كثير من الحالات لا يكون الهبوط أو التشققات “مشكلة خرسانة” بل نتيجة فراغات/تكهفات أو تربة ضعيفة تحت السطح داخل ${c}.`,
+          city.slug === 'riyadh'
+            ? `في كثير من الحالات لا يكون الهبوط أو التشققات في الرياض “مشكلة خرسانة” بل نتيجة فراغات وتكهفات طبيعية في صخور الحجر الجيري تحت الأساسات، خصوصاً في أحياء شمال الرياض (الياسمين، النرجس، العارض، القيروان).`
+            : city.slug === 'jeddah'
+            ? `في كثير من الحالات لا يكون الهبوط أو التشققات في جدة “مشكلة خرسانة” بل نتيجة هبوط التربة الطينية الساحلية وتجاويف غسيل التربة الناجمة عن المياه الجوفية أو تسربات شبكات المياه.`
+            : city.slug === 'dammam' || city.slug === 'khobar'
+            ? `في كثير من الحالات لا يكون الهبوط في ${c} “مشكلة خرسانة” بل نتيجة تكهفات طبيعية في صخور الحجر الجيري تحت السطح، أو تراجع كثافة التربة الرملية المفككة وطبقات السبخة الملحية الرطبة بفعل حركة المياه.`
+            : `في كثير من الحالات لا يكون الهبوط أو التشققات “مشكلة خرسانة” بل نتيجة فراغات/تكهفات أو تربة ضعيفة تحت السطح داخل ${c}.`,
           'نساعدك على معرفة أين المشكلة بالضبط قبل اتخاذ قرار الحقن أو الترميم، لتوفير الوقت والتكلفة وتقليل المخاطر.',
         ],
         [
-          `Often, settlement or cracking is not a “concrete issue” but a subsurface void/weak ground problem in ${c}.`,
+          city.slug === 'riyadh'
+            ? `Often, settlement or cracking in Riyadh is not a concrete issue but rather a result of natural cavities and voids in limestone formations, especially in northern neighborhoods like Al-Yasmin, Al-Narjis, Al-Arid, and Al-Qairawan.`
+            : city.slug === 'jeddah'
+            ? `Often, settlement or cracking in Jeddah is not a structural concrete issue but stems from coastal clay movements and subsurface soil washout due to water tables or network leaks.`
+            : city.slug === 'dammam' || city.slug === 'khobar'
+            ? `Often, settlement in ${c} is not a concrete fault but driven by natural limestone cavities, or compaction issues in loose sandy soils and wet saline Sabkha layers.`
+            : `Often, settlement or cracking is not a “concrete issue” but a subsurface void/weak ground problem in ${c}.`,
           `We help you locate the issue before choosing grouting or repairs—saving time, cost and reducing risk.`,
         ],
       ),
@@ -280,13 +316,25 @@ export function buildCityServiceModel(params: { lang: 'ar' | 'en'; city: City; s
       types: byLang(
         lang,
         [
-          { title: 'GPR (الرادار الأرضي)', body: 'مناسب لرصد التغيرات تحت السطح في نطاقات معينة، خصوصًا تحت البلاطات والطرق.' },
+          city.slug === 'riyadh'
+            ? { title: 'مسح الرادار الأرضي (GPR) للتكهفات الكلسية', body: 'رسم خرائط تحت السطح لرصد الفجوات ومناطق الضعف في صخور الحجر الجيري قبل تسببها بالهبوط.' }
+            : city.slug === 'jeddah'
+            ? { title: 'رصد مسارات المياه وخلل التربة الطينية', body: 'تحديد قنوات غسيل المياه وتراجع كثافة التربة الساحلية تحت السطح.' }
+            : city.slug === 'dammam' || city.slug === 'khobar'
+            ? { title: 'قياس المقاومة والـ GPR للتكهفات والسبخات', body: 'دمج تقنيات الرصد (GPR/ERT) لتحديد التكهفات الكلسية، الطبقات الرخوة ومخاطر الهبوط في التربة الملحية الرطبة.' }
+            : { title: 'GPR (الرادار الأرضي)', body: 'مناسب لرصد التغيرات تحت السطح في نطاقات معينة، خصوصًا تحت البلاطات والطرق.' },
           { title: 'ERT (المقاومة الكهربائية)', body: 'يفيد في تتبع مناطق الرطوبة/الفراغات وتأثير المياه حسب خصائص التربة.' },
           { title: 'Seismic / MASW', body: 'يعطي مؤشرات عن صلابة الطبقات وتغيراتها عندما يكون ذلك مناسبًا.' },
           { title: 'تحقق موجه (عند الحاجة)', body: 'في بعض الحالات نوصي بحفر/اختبار تحقق محدود لتأكيد النتائج قبل المعالجة.' },
         ],
         [
-          { title: 'GPR (Ground Penetrating Radar)', body: 'Good for detecting near-surface contrasts—commonly for slabs, pavements and roads.' },
+          city.slug === 'riyadh'
+            ? { title: 'GPR Grouting-Void mapping', body: 'Subsurface radar scanning to map cavities and weak zones in northern Riyadh limestone.' }
+            : city.slug === 'jeddah'
+            ? { title: 'Seepage & clay anomaly tracking', body: 'Locates groundwater channels causing soil washout and coastal clay shifting.' }
+            : city.slug === 'dammam' || city.slug === 'khobar'
+            ? { title: 'Resistivity & GPR void scanning', body: 'Combines GPR and ERT to identify limestone cavities, loose layers and settlement risks in damp salty environments.' }
+            : { title: 'GPR (Ground Penetrating Radar)', body: 'Good for detecting near-surface contrasts—commonly for slabs, pavements and roads.' },
           { title: 'ERT (Electrical Resistivity)', body: 'Useful to track moisture/void indicators and water influence depending on soil type.' },
           { title: 'Seismic / MASW', body: 'Provides stiffness/velocity indicators when relevant to the case.' },
           { title: 'Targeted validation (if needed)', body: 'Limited validation drilling/testing may be recommended to confirm before treatment.' },

@@ -1,0 +1,79 @@
+{
+  "id": 15,
+  "title": "حقن الستارة (Curtain Grouting): فلسفة تقليل النفاذية في السدود",
+  "titleEn": "Curtain Grouting: A Strategy for Permeability Reduction in Dams",
+  "category": "تقوية إنشائية",
+  "categoryEn": "Structural Strengthening",
+  "categoriesAr": [
+    "تقوية إنشائية",
+    "الهندسة الجيوتقنية",
+    "حقن التربة",
+    "موسوعة حقن التربة"
+  ],
+  "categoriesEn": [
+    "Structural Strengthening",
+    "Geotechnical Engineering",
+    "Soil Grouting",
+    "Ground Improvement Library"
+  ],
+  "date": "2025-10-13",
+  "readTime": "3 دقيقة",
+  "readTimeEn": "3 min",
+  "author": "فريق ETLAQ الهندسي",
+  "slug": "curtain-grouting-a-strategy-for-permeability-reduction-in-dams",
+  "image": {
+    "url": "/favicon.webp",
+    "alt": "حقن الستارة (Curtain Grouting): فلسفة تقليل النفاذية في السدود",
+    "creditName": "ETLAQ (generated)",
+    "creditUrl": "",
+    "license": "Internal"
+  },
+  "excerpt": "مقدمة تعد تقنية حقن الستارة من أهم أساليب تحسين التربة المستخدمة في مجالات الهندسة الجيوتقنية، لا سيما في مشاريع السدود ومحطات المياه. الهدف الرئيسي من هذه التقنية هو إنشاء حاجز نفاذي تحت الأرض للسيطرة على تسرب المياه ومنع حدوث تآكل أو ضعف في جسم السد أو أساساته. يعتمد نجاح هذه العملية على التصميم الدقيق والتنفيذ المحكم لمراحل الحقن، مع…",
+  "excerptEn": "Introduction Curtain grouting is one of the most critical soil improvement techniques widely employed in geotechnical engineering, particularly in dam and hydraulic structure projects. The primary objective of curtain grouting is to create a subsurface impermeable barrier designed to control water seepage and prevent erosion or weakening…",
+  "content": "### مقدمة  \n  تعد تقنية حقن الستارة من أهم أساليب تحسين التربة المستخدمة في مجالات الهندسة الجيوتقنية، لا سيما في مشاريع السدود ومحطات المياه. الهدف الرئيسي من هذه التقنية هو إنشاء حاجز نفاذي تحت الأرض للسيطرة على تسرب المياه ومنع حدوث تآكل أو ضعف في جسم السد أو أساساته. يعتمد نجاح هذه العملية على التصميم الدقيق والتنفيذ المحكم لمراحل الحقن، مع مراعاة طبيعة التربة والمياه الجوفية.\n  \n  ### المحتوى الفني التفصيلي  \n  #### تعريف حقن الستارة  \n  حقن الستارة هو عملية إنشاء جدار أسمنتي أو كيميائي يمتد عمودياً داخل التربة تحت السد، بهدف تقليل نفاذية التربة ومنع تسرب المياه عبر جسم السد أو قاعدته. يتم ذلك عن طريق إدخال محاليل أو معاجين إلى التربة عبر ثقوب حقن منظمة بشكل هندسي مسبق.\n  \n  #### آلية العمل  \n  - **إحداث ثقوب الحقن**: تحفر ثقوب رأسية أو مائلة عبر التربة أو الصخور القابلة للاختراق تحت السد على مسافات محددة.  \n  - **إدخال معجون الحقن**: يتم حقن خليط من الأسمنت المخفف، البوليمرات، أو مواد كيميائية خاصة تحت ضغط محسوب ليملأ الفراغات والشقوق داخل التربة ويكوّن حاجزًا متماسكًا.  \n  - **تكوين الحاجز**: يتصلب المعجون داخل التربة ليشكل كتلة مغلقة تمنع مرور المياه، مع المحافظة على استقرار التربة وعدم إحداث تشوهات كبيرة.\n  \n  #### المواد المستخدمة  \n  - **معجون الأسمنت**: خليط مائي من الأسمنت بنسبة تركيز تكون عادة بين 5-15% حسب التربة المراد معالجتها، ويُستخدم في الترب الرملية والحصوية.  \n  - **المعاجين الكيميائية**: مثل البوليمرات والسيليكات؛ تستخدم في الترب كثيفة التفاصيل كالطين.  \n  - **المواد المهجنة**: تجمع بين الأسمنت والمواد الكيميائية لتحقيق خصائص متخصصة.\n  \n  #### أهمية التصميم والتنفيذ  \n  - **تصميم الستارة**: يجب تحديد عمق، عرض، وكثافة ثقوب الحقن بناءً على خصائص التربة وكمية تسرب المياه المتوقعة، مع الالتزام بالمعايير الدولية كـ EN 12715 وFHWA.  \n  - **متابعة جودة الحقن**: تشمل مراقبة ضغط وتدفق المعجون، استخدام تقنيات رصد مختلفة مثل رادار اختراق الأرض (GPR) ودراسات التربة لضمان إتمام الستارة بفعالية.\n  \n  #### التطبيقات الهندسية  \n  - سدود الأرض والحواجز المائية لمنع تسرب المياه وتعزيز الاستقرار.  \n  - حماية الأساسات من الترشيح وتآكل التربة.  \n  - سد الشقوق والفراغات الناتجة في الصخور أو التربة المتماسكة.\n  \n  #### المعايير الدولية  \n  تلتزم عمليات حقن الستارة بمعايير مثل:  \n  - **EN 12715**: المواصفات الفنية للحقن بالأسمنت في التربة.  \n  - **FHWA Manual – Grouting Technology in Embankment Dams**: دليل الدورتين الأمريكية للطرق السريعة حول استخدام الحقن في السدود.  \n  - **ASTM C939**: اختبار معاجين الأسمنت للحقن.\n  \n  ### الخلاصة  \n  تعتبر تقنية حقن الستارة من الحلول الهندسية الفعالة والمستدامة للسيطرة على تسرب المياه في مشاريع السدود. نجاحها يعتمد على فهم عميق لظروف الموقع، اختيار المواد وتطبيق طرق الحقن الصحيحة، إلى جانب مراقبة الجودة المستمرة. بالاعتماد على المعايير الدولية والتنفيذ الهندسي الدقيق، يمكن تعزيز استدامة البنية التحتية المائية وضمان سلامة المنشآت.\n  \n  ## روابط ذات صلة داخل موقعنا\n  \n  - [حقن التربة (الحقن الأسمنتي)](/services/grouting)\n  - [كشف التكهفات والفراغات](/services/cavity)\n  - [جميع المدن التي نغطيها](/locations)\n  - [خدماتنا في الرياض](/locations/riyadh)\n  - [اطلب خدمة / تواصل معنا](/request-service)",
+  "contentEn": "### Introduction  \n  Curtain grouting is one of the most critical soil improvement techniques widely employed in geotechnical engineering, particularly in dam and hydraulic structure projects. The primary objective of curtain grouting is to create a subsurface impermeable barrier designed to control water seepage and prevent erosion or weakening within the dam body and its foundations. The success of this method relies heavily on careful design and meticulous execution, considering soil conditions and groundwater characteristics.\n  \n  ### Detailed Technical Content  \n  #### Definition of Curtain Grouting  \n  Curtain grouting is the process of constructing a grout curtain—a vertical cementitious or chemical barrier within soil or rock beneath or adjacent to a dam—aimed at reducing permeability and preventing water seepage through the dam foundation or embankment. This is achieved by injecting grout materials into the ground through systematically arranged boreholes.\n  \n  #### Mechanism of Action  \n  - **Drilling of Injection Holes**: Vertical or inclined holes are drilled at predetermined spacing through permeable soil or rock layers beneath the dam.  \n  - **Injection of Grout Mixture**: A fluid grout, typically a cement slurry or chemical mixture, is injected under controlled pressure to fill soil voids, fractures, and intergranular spaces, forming a sealed barrier.  \n  - **Formation of the Curtain**: Upon setting, the grout hardens creating a consolidated mass that blocks water flow while maintaining soil stability without significant displacement.\n  \n  #### Materials Used  \n  - **Cement Grout**: Typically a cement-water mix ranging between 5% and 15% cement concentration depending on soil permeability and grain size; commonly used in sand and gravel soils.  \n  - **Chemical Grouts**: Polymers, sodium silicate, and specialty chemicals used to penetrate finer, cohesive soils such as clays.  \n  - **Composite Grouts**: Blends of cement and chemical agents tailored for enhanced performance.\n  \n  #### Design and Execution Essentials  \n  - **Curtain Design**: Depth, thickness, and spacing of grout holes must be engineered based on site-specific geotechnical investigations and expected seepage quantities, adhering to international standards such as EN 12715 and FHWA guidelines.  \n  - **Quality Control and Monitoring**: Continuous monitoring of grout pressure, volume, and flow rates during injection is critical. Advanced monitoring techniques like Ground Penetrating Radar (GPR) and periodic soil surveys help verify curtain integrity.\n  \n  #### Engineering Applications  \n  - Earth dams and levees to prevent seepage and internal erosion.  \n  - Foundation waterproofing and soil stabilization beneath hydraulic structures.  \n  - Filling of fissures and voids in rock or dense soil formations.\n  \n  #### International Standards  \n  Operations typically comply with:  \n  - **EN 12715**: Technical specification for cement grout injection in soils.  \n  - **FHWA Grouting Manual for Embankment Dams**: A comprehensive U.S. Federal Highway Administration guide on grouting practices in dams.  \n  - **ASTM C939**: Standard test method for flow consistency of cement grout.\n  \n  ### Conclusion  \n  Curtain grouting is an effective, sustainable geotechnical solution to mitigate water seepage and enhance dam foundation stability. Its success depends on a thorough understanding of ground conditions, proper material selection, appropriate injection techniques, and rigorous quality assurance protocols. Following internationally recognized standards and best practices ensures the longevity and safety of critical hydraulic infrastructures.\n  \n  ## Related links on our site\n  \n  - [Soil Grouting (Cement Injection)](/services/grouting)\n  - [Void & Cavity Detection](/services/cavity)\n  - [All cities we serve](/locations)\n  - [Our services in Riyadh](/locations/riyadh)\n  - [Request a service / Contact us](/request-service)",
+  "faqAr": [
+    {
+      "question": "ما الخطوات العملية لطلب خدمة حقن التربة؟",
+      "answer": "ابدأ بتوثيق المشكلة (صور، قياسات)، ثم تواصل مع فريق إطلاق لتقييم أولي. بعد الزيارة الميدانية تُحدَّد التقنية المناسبة والتكلفة التقديرية قبل بدء التنفيذ.",
+      "questionEn": "What are the practical steps to request soil grouting service?",
+      "answerEn": "Start by documenting the problem (photos, measurements), then contact the ETLAQ team for initial assessment. After the field visit, the appropriate technique and estimated cost are determined before execution begins."
+    },
+    {
+      "question": "ما الذي يشمله تقرير ما بعد الحقن؟",
+      "answer": "يشمل: خريطة نقاط الحقن المنجزة، سجلات الضغط والكميات لكل نقطة، نتائج اختبارات التحقق، توصيات للمتابعة، وشهادات مواد الحقن.",
+      "questionEn": "What does a post-grouting report include?",
+      "answerEn": "It includes: map of completed injection points, pressure and volume logs per point, verification test results, follow-up recommendations, and grout material certificates."
+    },
+    {
+      "question": "كم عدد نقاط الحقن الضروري في المشروع المتوسط؟",
+      "answer": "يتوقف على مساحة المشكلة وعمق المعالجة. المشروع المتوسط قد يتراوح بين 10 و50 نقطة. نقاط الحقن تُحدَّد بعد الزيارة الميدانية وبناءً على نتائج التحقيق.",
+      "questionEn": "How many injection points are needed in a typical project?",
+      "answerEn": "Depends on problem area and treatment depth. A typical project may range from 10 to 50 points. Injection points are determined after the site visit and investigation results."
+    },
+    {
+      "question": "هل يمكن توقف الحقن ثم استئنافه في اليوم التالي؟",
+      "answer": "نعم، لكن يُنبغي توثيق حالة كل نقطة عند التوقف لضمان استكمال المناطق غير المكتملة. بعض الخلطات قد تحتاج مواصفات خاصة عند الاستئناف لضمان الترابط مع الحقن السابق.",
+      "questionEn": "Can grouting be stopped and resumed the next day?",
+      "answerEn": "Yes, but each point's status at stoppage must be documented to ensure incomplete zones are finished. Some mixes may need special specifications on resumption to ensure bonding with previous grout."
+    }
+  ],
+  "faqEn": [
+    {
+      "question": "When is soil grouting the right solution?",
+      "answer": "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly."
+    },
+    {
+      "question": "How is cement grouting different from other grouts?",
+      "answer": "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective."
+    },
+    {
+      "question": "How do you choose the mix and viscosity?",
+      "answer": "We base it on ground type, test results, and the treatment objective. In many cases, mixes are adjusted progressively to balance penetration and control."
+    },
+    {
+      "question": "How do I know the treatment worked?",
+      "answer": "Indicators include stabilized take patterns, improved monitoring results, and verification outputs (probing/tests) aligned with the project’s acceptance criteria."
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "id": 23,
+  "title": "رولوجيا الملاط الإسمنتي: اللزوجة، الإجهاد الخاضع، والاتساق",
+  "titleEn": "Cement Grout Rheology: Viscosity, Yield Stress, and Consistency",
+  "category": "موسوعة الحقن والتحسين",
+  "categoryEn": "Grouting & Improvement Encyclopedia",
+  "categoriesAr": [
+    "موسوعة الحقن والتحسين",
+    "الهندسة الجيوتقنية",
+    "حقن التربة",
+    "موسوعة حقن التربة"
+  ],
+  "categoriesEn": [
+    "Grouting & Improvement Encyclopedia",
+    "Geotechnical Engineering",
+    "Soil Grouting",
+    "Ground Improvement Library"
+  ],
+  "date": "2025-11-06",
+  "readTime": "3 دقيقة",
+  "readTimeEn": "3 min",
+  "author": "فريق ETLAQ الهندسي",
+  "slug": "cement-grout-rheology-viscosity-yield-stress-and-consistency",
+  "image": {
+    "url": "/favicon.webp",
+    "alt": "رولوجيا الملاط الإسمنتي: اللزوجة، الإجهاد الخاضع، والاتساق",
+    "creditName": "ETLAQ (generated)",
+    "creditUrl": "",
+    "license": "Internal"
+  },
+  "excerpt": "المقدمة تلعب رولوجيا الملاط الإسمنتي دوراً محورياً في نجاح عمليات حقن التربة (Soil Grouting) وتحسين خواص الأرض الأساسية. يُعرّف الملاط الإسمنتي كمزيج يتكون أساساً من الأسمنت والماء، وقد يضاف إليه مواد معدنية أو كيميائية لتحسين أدائه. تُعد اللزوجة، الإجهاد الخاضع، والاتساق من الخصائص الرولوجية الأساسية التي تؤثر مباشرة على قابلية الملاط…",
+  "excerptEn": "Introduction The rheology of cement grout is a critical factor in the success of soil grouting and ground improvement operations. Cement grout, primarily composed of cement and water with possible mineral or chemical additives, exhibits complex flow behavior characterized by its viscosity, shear stress, and consistency. These rheological…",
+  "content": "### المقدمة  \n  تلعب رولوجيا الملاط الإسمنتي دوراً محورياً في نجاح عمليات حقن التربة (Soil Grouting) وتحسين خواص الأرض الأساسية. يُعرّف الملاط الإسمنتي كمزيج يتكون أساساً من الأسمنت والماء، وقد يضاف إليه مواد معدنية أو كيميائية لتحسين أدائه. تُعد اللزوجة، الإجهاد الخاضع، والاتساق من الخصائص الرولوجية الأساسية التي تؤثر مباشرة على قابلية الملاط للحقن، نفاذيته إلى التربة، وتكوينه بعد التصلب. يهدف هذا المقال إلى تقديم مراجعة شاملة وعملية لهذه الخصائص الفنية، مع التركيز على تأثيرها في تصنيع وتطبيق الملاط الإسمنتي وفقاً للمعايير الدولية مثل EN 12715 وASTM C939.\n  \n  ### المحتوى الفني التفصيلي\n  \n  #### 1. مفهوم رولوجيا الملاط الإسمنتي  \n  رولوجيا الملاط الإسمنتي تدرس سلوك التدفق والتهيج للملاط تحت تأثير قوى الشد والضغط أثناء الحقن. يتصرف الملاط عادة كسائل غير نيوتوني، بمعنى أن لزوجته تتغير بتغير معدل القص (Shear Rate). يساعد فهم هذه السلوكيات في التحكم بعملية الحقن، التقليل من حدوث الانفصال (Segregation) والبردة (Bleeding)، وضمان ملء الفراغات بشكل فعال.\n  \n  #### 2. اللزوجة (Viscosity)  \n  - **التعريف:** هي مقاومة الملاط للتدفق تحت تأثير قوى القص.  \n  - **الخصائص:**  \n    - الملاط العادي يظهر عادة سلوك \"Thixotropic\" حيث تنخفض اللزوجة مع زيادة القص، مما يسهل الحقن.  \n    - نزول اللزوجة جداً يؤدي إلى ترسيب سريع للمكونات الصلبة، مما يضر باتساق الملاط.  \n    - ارتفاع اللزوجة قد يمنع الملاط من النفاذ عبر المسامات الرقيقة في التربة.  \n  - **التحكم:** يمكن تعديل اللزوجة بإضافة مواد معدنية مثل الفليرز، أو مواد كيميائية (Superplasticizers) تقلل اللزوجة مع الحفاظ على الاتساق.\n  \n  #### 3. الإجهاد الخاضع (Shear Stress)  \n  - يمثل إجهاد القص القوة المطلوبة لتحريك جزيئات الملاط بالنسبة لبعضها البعض.  \n  - يلعب دوراً مهماً في مقاومة تغير الشكل أثناء الضخ ويؤثر في توزيع الملاط ضمن التربة.  \n  - يتم قياسه باستخدام أجهزة رولوغراف (Rheometers) لتقدير العلاقة بين القص واللزوجة.\n  \n  #### 4. الاتساق (Consistency)  \n  - يشير إلى مدى تماسك الملاط وقدرته على الاحتفاظ ببنيته أثناء الحقن.  \n  - يقاس عادة باستخدام معايير مثل اختبار السمت (Flow Table Test) ASTM C939، ويؤثر في المقاومة الأولية للملاط وفعاليته في منع التسرب.  \n  - يجب أن تكون الاتساق متوازنة بحيث تضمن النفاذ والاستقرار بعد الحقن.\n  \n  #### 5. تأثير عوامل خارجية  \n  - **نسبة الماء إلى الأسمنت (Water/Cement Ratio):** زيادة النسبة ترفع السيولة وتخفض اللزوجة، لكنها تقلل من القوة النهائية للملاط.  \n  - **درجة الحرارة:** تؤثر في سرعة تفاعل الأسمنت وبالتالي تغير خصائص الملاط الرولوجية مع الزمن.  \n  - **الإضافات (Admixtures):** مثل مسحوق السيليكا أو Polycarboxylate ethers يمكن تعديل اللزوجة والاتساق بدقة.\n  \n  #### 6. تطبيقات عملية وتأثير الخصائص الرولوجية في حقن التربة  \n  تؤثر خواص الملاط الرولوجية على:  \n  - سهولة الحقن النفاذي (Permeation Grouting) مروراً بمسام التربة دون تشويه.  \n  - قدرة الملاط على رفع التربة في حقن التكتيل (Compaction Grouting).  \n  - دقة تشكيل الستار الخزني للأسمنت في حقن الستار (Curtain Grouting).  \n  يجب تصميم الملاط لتوازن بين اللزوجة والاتساق حسب نوع التربة المطلوب معالجتها.\n  \n  #### 7. المعايير الدولية ذات العلاقة  \n  - **EN 12715:** تحدد المتطلبات الفنية لملاط الحقن من حيث اللزوجة، الاتساق، والصلابة.  \n  - **ASTM C939:** معيار اختبار السمت والاتساق للملاطات.  \n  - **FHWA Guidelines:** تقدم توصيات لخصائص الملاط في عمليات حقن التربة والتطبيقات العملية.\n  \n  ### الخلاصة  \n  تُعد الرولوجيا حجر الأساس لضمان نجاح حقن الملاط الإسمنتي، حيث توجه تصميم الخلطات حسب متطلبات المشروع ونوع التربة. التحكم الدقيق في اللزوجة، الإجهاد الخاضع، والاتساق يمكن أن يقلل المخاطر الفنية والاقتصادية مثل انسداد الفتحات أو فشل التصلب. توصي الممارسات الهندسية بإجراء اختبارات رولوجية قبل التنفيذ، مع الالتزام بالمعايير الدولية لضمان الحلول التقنية المستدامة ونجاح عمليات تحسين التربة.\n  \n  ## روابط ذات صلة داخل موقعنا\n  \n  - [حقن التربة (الحقن الأسمنتي)](/services/grouting)\n  - [الاختبارات الجيوفيزيائية (GPR/ERT/MASW)](/services/geophysical)\n  - [جميع المدن التي نغطيها](/locations)\n  - [خدماتنا في الرياض](/locations/riyadh)\n  - [اطلب خدمة / تواصل معنا](/request-service)",
+  "contentEn": "### Introduction  \n  The rheology of cement grout is a critical factor in the success of soil grouting and ground improvement operations. Cement grout, primarily composed of cement and water with possible mineral or chemical additives, exhibits complex flow behavior characterized by its viscosity, shear stress, and consistency. These rheological properties directly influence the grout’s injectability, penetration into soil pores, and its final performance upon setting. This article provides a comprehensive technical review of these properties, emphasizing their practical implications in grout mix design and application, in line with international standards such as EN 12715 and ASTM C939.\n  \n  ### Detailed Technical Content\n  \n  #### 1. Understanding Cement Grout Rheology  \n  Cement grout rheology examines the flow and deformation behavior of grout mixtures under applied shear and pressure forces during injection. Typically, cement grout behaves as a non-Newtonian fluid; its viscosity changes with shear rate—a critical aspect when optimizing grout flow through soil strata. Mastery of this behavior enables control over segregation, bleeding, and ensures effective void filling in soil reinforcement.\n  \n  #### 2. Viscosity  \n  - **Definition:** The resistance of grout to flow under shear forces.  \n  - **Characteristics:**  \n    - Ordinary cement grout often exhibits thixotropic behavior: viscosity decreases with increasing shear rate, facilitating pumping.  \n    - Very low viscosity risks rapid sedimentation of solids, harming mix uniformity and grout reliability.  \n    - Excessively high viscosity reduces permeability through soil voids, hindering injection.  \n  - **Control Methods:** Adjusted by incorporating mineral fillers or chemical admixtures such as superplasticizers, which lower viscosity while maintaining necessary consistency.\n  \n  #### 3. Shear Stress  \n  - Shear stress represents the force required to slide grout particles relative to each other.  \n  - It governs grout deformation resistance during pumping and affects grout distribution within the soil matrix.  \n  - Rheometers are used to characterize the shear stress-shear rate relationship, informing mix design adjustments.\n  \n  #### 4. Consistency  \n  - Consistency refers to the cohesiveness and workability of the grout, crucial for maintaining structure during injection.  \n  - Standardized tests such as ASTM C939 Flow Table Test measure consistency; balance of flowability and stability is critical for sealing effectiveness and initial grout strength.  \n  - Proper consistency ensures grout penetration without premature setting or segregation.\n  \n  #### 5. Influence of External Factors  \n  - **Water-Cement Ratio (w/c):** Increasing w/c ratio enhances fluidity and reduces viscosity but compromises final grout strength.  \n  - **Temperature:** Affects cement hydration kinetics, causing temporal variation in rheological properties.  \n  - **Admixtures:** Materials such as silica fume and polycarboxylate ether polymers enable precise tailoring of viscosity and consistency.\n  \n  #### 6. Practical Applications and Rheological Impacts in Soil Grouting  \n  Rheological properties influence:  \n  - Ease of permeation grouting by allowing grout to pass soil pores without disruption.  \n  - Effectiveness of compaction grouting in densifying and lifting soil via grout displacement.  \n  - Formation precision of grout curtains in cutoff wall applications.  \n  Grout mixes are designed to balance viscosity and consistency to suit the soil type and intended improvement goal.\n  \n  #### 7. Relevant International Standards  \n  - **EN 12715:** Specifies technical requirements for grout including viscosity, consistency, and strength.  \n  - **ASTM C939:** Standard test method for flow consistency of cement grout mixes.  \n  - **FHWA Guidelines:** Offers recommendations on grout properties for various soil stabilization methods.\n  \n  ### Conclusion  \n  Rheological characterization is fundamental to ensuring the success of cement grout injection. Controlling viscosity, shear stress, and consistency is essential to mitigate risks such as borehole blockage or grout failure post-injection. Engineering best practices advocate performing rheological testing prior to field application and adherence to international standards to deliver durable and effective ground improvement solutions.\n  \n  ---\n  \n  # References\n  \n  1. EN 12715: Grouting – Cement-based Grouts – Definitions, Requirements and Test Methods.  \n  2. ASTM C939 – Standard Test Method for Flow Consistency of Cementitious Grout.  \n  3. FHWA (2007), Manual on Grouting for Soil Improvement and Stabilization.  \n  4. Mitchell, J.K., & Soga, K. (2005). Fundamentals of Soil Behavior. Wiley.  \n  5. Houlsby, A.C. (1990). A Dilatant Plasticity Model for Cement Grout Rheology, Journal of Engineering Mechanics.\n  \n  ---\n  \n  *Prepared by [Your Company/Consultant Name], Geotechnical Engineering Specialists.*\n  \n  ## Related links on our site\n  \n  - [Soil Grouting (Cement Injection)](/services/grouting)\n  - [Geophysical Testing (GPR/ERT/MASW)](/services/geophysical)\n  - [All cities we serve](/locations)\n  - [Our services in Riyadh](/locations/riyadh)\n  - [Request a service / Contact us](/request-service)",
+  "faqAr": [
+    {
+      "question": "ما مؤشرات الخطر التي تستوجب التدخل بالحقن فوراً؟",
+      "answer": "تشققات متوسعة بسرعة، هبوط مستمر ملحوظ، انحراف ظاهر في الجدران أو الأعمدة، أو وجود ضوضاء غير مألوفة في البنية. كل هذه مؤشرات تستدعي تقييماً هندسياً عاجلاً.",
+      "questionEn": "What danger signs require immediate grouting intervention?",
+      "answerEn": "Rapidly widening cracks, continuous visible settlement, apparent wall or column inclination, or unfamiliar structural sounds — all require urgent engineering assessment."
+    },
+    {
+      "question": "هل حقن التربة آمن للمنشآت القريبة من موقع العمل؟",
+      "answer": "مع ضبط ضغوط الحقن ضمن الحدود الآمنة، يكون التأثير على المجاورات ضئيلاً. المشاريع في المناطق المكتظة تستدعي مراقبة مستمرة للمنشآت المجاورة طوال فترة التنفيذ.",
+      "questionEn": "Is soil grouting safe for structures near the work site?",
+      "answerEn": "With injection pressures within safe limits, the impact on adjacent structures is minimal. Dense-area projects require continuous monitoring of neighbouring structures throughout execution."
+    },
+    {
+      "question": "كيف يُمنع انتشار الحقن خارج المنطقة المستهدفة؟",
+      "answer": "عبر ضبط اللزوجة وضغط الحقن، والاستناد إلى بيانات نفاذية التربة لتحديد نقاط الحقن. المراقبة الميدانية المستمرة للضغط تُنبّه لأي انتشار غير مخطط له.",
+      "questionEn": "How is uncontrolled grout spread prevented?",
+      "answerEn": "By controlling viscosity and injection pressure, using soil permeability data to position injection points, and continuous field pressure monitoring to alert against unplanned migration."
+    },
+    {
+      "question": "ما الفترة الزمنية التي يتحمل فيها الحقن بعد التنفيذ؟",
+      "answer": "مع الاختيار الصحيح للمادة وجودة التنفيذ، يُفترض أن يكون الحقن حلاً دائماً. العمر الافتراضي للحقن الأسمنتي مماثل للخرسانة (50+ سنة)، والبوليمرات تتفاوت حسب النوع والبيئة.",
+      "questionEn": "How long does grout last after execution?",
+      "answerEn": "With correct material selection and quality execution, grouting should be a permanent solution. Cement grout lifespan matches concrete (50+ years); polymers vary by type and environment."
+    }
+  ],
+  "faqEn": [
+    {
+      "question": "When is soil grouting the right solution?",
+      "answer": "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly."
+    },
+    {
+      "question": "How is cement grouting different from other grouts?",
+      "answer": "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective."
+    },
+    {
+      "question": "How do you choose the mix and viscosity?",
+      "answer": "We base it on ground type, test results, and the treatment objective. In many cases, mixes are adjusted progressively to balance penetration and control."
+    },
+    {
+      "question": "How do I know the treatment worked?",
+      "answer": "Indicators include stabilized take patterns, improved monitoring results, and verification outputs (probing/tests) aligned with the project’s acceptance criteria."
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "id": 21,
+  "title": "الحقن أسفل اللبشة (Under-Raft Grouting): تحسين تفاعل التربة والأساس",
+  "titleEn": "Under‑Raft Grouting: Improving Soil–Foundation Interaction",
+  "category": "موسوعة الحقن والتحسين",
+  "categoryEn": "Grouting & Improvement Encyclopedia",
+  "categoriesAr": [
+    "موسوعة الحقن والتحسين",
+    "الهندسة الجيوتقنية",
+    "حقن التربة",
+    "موسوعة حقن التربة"
+  ],
+  "categoriesEn": [
+    "Grouting & Improvement Encyclopedia",
+    "Geotechnical Engineering",
+    "Soil Grouting",
+    "Ground Improvement Library"
+  ],
+  "date": "2025-10-31",
+  "readTime": "3 دقيقة",
+  "readTimeEn": "3 min",
+  "author": "فريق ETLAQ الهندسي",
+  "slug": "underraft-grouting-improving-soilfoundation-interaction",
+  "image": {
+    "url": "/favicon.webp",
+    "alt": "الحقن أسفل اللبشة (Under-Raft Grouting): تحسين تفاعل التربة والأساس",
+    "creditName": "ETLAQ (generated)",
+    "creditUrl": "",
+    "license": "Internal"
+  },
+  "excerpt": "مقدمة تعتبر عملية الحقن أسفل اللبشة (Under Raft Grouting) إحدى تقنيات تحسين التربة المتقدمة المستخدمة في تعزيز تفاعل التربة مع الأساسات المنشأة عليها، خاصة في الحالات التي تعاني فيها التربة الأساس من ضعف أو وجود تكهفات وفراغات. تهدف هذه العملية إلى تقليل الهبوط غير المتساوي وزيادة قدرة تحمل التربة، مما ينعكس بشكل إيجابي على استقرار…",
+  "excerptEn": "Introduction Under raft grouting is an advanced ground improvement technique employed to enhance the soil foundation interaction beneath raft foundations, especially where the foundation soils are weak, loose, or contain voids and cavities. The primary objective is to mitigate differential settlement, increase soil bearing capacity, and…",
+  "content": "### مقدمة  \n  تعتبر عملية الحقن أسفل اللبشة (Under-Raft Grouting) إحدى تقنيات تحسين التربة المتقدمة المستخدمة في تعزيز تفاعل التربة مع الأساسات المنشأة عليها، خاصة في الحالات التي تعاني فيها التربة الأساس من ضعف أو وجود تكهفات وفراغات. تهدف هذه العملية إلى تقليل الهبوط غير المتساوي وزيادة قدرة تحمل التربة، مما ينعكس بشكل إيجابي على استقرار المباني وسلامتها الإنشائية. في هذا المقال، نستعرض المفاهيم الأساسية لتقنية الحقن أسفل اللبشة، المواد المستخدمة، الطرق التنفيذية، والكودات والمعايير الدولية التي تحكم هذه الممارسة الهندسية.\n  \n  ### المحتوى الفني التفصيلي\n  \n  #### 1. مفهوم الحقن أسفل اللبشة  \n  تعريف الحقن أسفل اللبشة هو حقن مواد معالجة داخل طبقة التربة الواقعة تحت اللبشة الخرسانية (Raft Foundation) بهدف تحسين خواصها الميكانيكية وزيادة تماسُكها مع اللبشة. يُعد هذا الخيار مثالياً في حالات التربة الطينية غير المتماسكة، أو الرملية الهشة، وكذلك التربة التي تحتوي على فراغات أو تكهفات قد تؤدي لهبوط غير متساوٍ.\n  \n  #### 2. آلية العمل  \n  يتم إدخال خليط الحقن عبر ثقوب منصبة مباشرة تحت اللبشة، حيث تُحقن المواد (عادةً معجون أسمنتي أو راتنجات بوليمرية) لتملأ الفراغات وتكثف التربة، مما يرفع من معامل دفع التربة (Soil Modulus) ويقلل النفاذية. تعتمد الآلية على ضغط الحقن المناسب الذي يحقق انتشار متجانس ضمن التربة المستهدفة، مع تجنب رفع اللبشة بالقدر المفرط.\n  \n  #### 3. المواد المستخدمة  \n  - **حقن الأسمنت (Cement Grouting):** خليط أسمنتي مائي بنسبة تركيز محسوبة لتناسب نوع التربة، يستخدم لزيادة التضاغط والقوة.  \n  - **حقن البولي يوريثان (Polyurethane Grouting):** مادة ذات وزن خفيف، سريعة التصلب، تُستخدم في حالات وجود تسربات مياه أو لتحسين مقاومة النفاذية.  \n  - **حقن النفث (Jet Grouting):** تقنية متقدمة تستخدم نفث مياه وأسمنت عالي الضغط لتحطيم التربة وخلطها مع الأسمنت، مما يخلق أعمدة خرسانية تُعزز التربة من القاعدة.\n  \n  #### 4. خطوات التنفيذ  \n  1. **الفحص والتحليل:** يشمل اختبار التربة تحت اللبشة (مثلاً SPT أو CPT) وتحديد طبيعة المشاكل (الهبوط، الفراغات، انخفاض القدرة الحاملة).  \n  2. **تصميم برنامج الحقن:** اختيار نوع الحقن، حجم الخلطات، وبتصميم ضغط الحقن حسب خصائص التربة والمساحيق المستخدمة.  \n  3. **الحقن الميداني:** حفر ثقوب الحقن بشكل منظم تحت اللبشة، وتوزيع نقاط الحقن لتغطية كامل مساحة اللبشة.  \n  4. **الرقابة وضبط الجودة:** متابعة ضغط وكمية الحقن، مع قياس الاستجابة التحتية (مثل تسجيل الهبوط أو الرفع الناتج).  \n  \n  #### 5. التوافق مع المعايير الدولية  \n  - **EN 12715:** يحدد متطلبات حقن التربة الكيميائي والأسمنتي، وكذلك اشتراطات الجودة والإجراءات الفنية.  \n  - **FHWA NHI-05-039:** دليل الإدارة الهندسية لعمليات الحقن، مع التركيز على تقييم التربة وقواعد الأمن والسلامة.  \n  - **ASTM D6122:** مواصفات تنفيذ وإشراف عمليات الحقن الأسمنتي.  \n  \n  #### 6. الفوائد الهندسية  \n  - زيادة قدرة التحمل الأساس وتحسين خصائص التربة تحت اللبشة.  \n  - تقليل الهبوط الاستقراري والهبوط التفريقي.  \n  - منع تحرك المياه الجوفية والتقليل من التآكلات.  \n  - إطالة عمر المباني وتقليل الحاجة إلى إصلاحات مستقبلية.\n  \n  ### الخلاصة  \n  تمثل تقنية الحقن أسفل اللبشة حلاً فعالاً لتحسين التربة وتعزيز تفاعلها مع اللبشة الخرسانية، وهي مناسبة لمجموعة واسعة من التحديات الجيوتقنية مثل ضعف التربة، الفراغات، والتسربات. عند تنفيذها وفقاً للمعايير الدولية وبخبرة هندسية دقيقة، توفر هذه التقنية استقراراً هيكلياً كبيراً وتدفع نحو استدامة المنشآت مع تقليل المخاطر والتكاليف.\n  \n  ## روابط ذات صلة داخل موقعنا\n  \n  - [كشف التكهفات والفراغات](/services/cavity)\n  - [حقن التربة (الحقن الأسمنتي)](/services/grouting)\n  - [جميع المدن التي نغطيها](/locations)\n  - [خدماتنا في الرياض](/locations/riyadh)\n  - [اطلب خدمة / تواصل معنا](/request-service)",
+  "contentEn": "### Introduction  \n  Under-raft grouting is an advanced ground improvement technique employed to enhance the soil-foundation interaction beneath raft foundations, especially where the foundation soils are weak, loose, or contain voids and cavities. The primary objective is to mitigate differential settlement, increase soil bearing capacity, and consequently improve the overall structural stability and safety of buildings. This article delves into the fundamental principles of under-raft grouting, materials and methods used, implementation practices, and relevant international standards guiding this critical geotechnical intervention.\n  \n  ### Detailed Technical Content\n  \n  #### 1. Concept of Under-Raft Grouting  \n  Under-raft grouting involves injecting grout materials into the soil layer directly beneath a raft foundation to improve its mechanical properties and ensure better contact with the foundation. It is particularly advantageous for problematic soils such as loose sands, soft clays, or soils containing cavities that may cause uneven settlement and structural distress.\n  \n  #### 2. Mechanism of Action  \n  Grout is injected through strategically positioned boreholes under the raft, penetrating voids and densifying the soil. Typical grout materials include cement slurry and polymer resins that fill gaps, increase soil stiffness (modulus), and reduce permeability. Proper pressure control ensures uniform grout distribution while avoiding excessive heave of the raft.\n  \n  #### 3. Materials Utilized  \n  - **Cement Grouting:** A water-cement mixture designed to enhance soil compaction and strength beneath the raft.  \n  - **Polyurethane Grouting:** Lightweight, fast-setting material used primarily for sealing water leakage zones and reducing soil permeability.  \n  - **Jet Grouting:** High-pressure jetting of cement-water slurry to mechanically disaggregate and mix the soil, forming strong soil-cement columns underneath the raft for reinforced support.\n  \n  #### 4. Implementation Steps  \n  1. **Site Investigation:** Conduct in-situ soil tests (SPT, CPT) beneath the raft to diagnose settlement issues, soil strength, and void presence.  \n  2. **Grouting Program Design:** Determine grout type, mix proportions, and injection pressure tailored to site-specific soil conditions and project needs.  \n  3. **Field Injection:** Drill injection holes systematically beneath the raft and perform grout injection ensuring uniform coverage and controlled pressures.  \n  4. **Quality Control & Monitoring:** Track injection parameters (pressure, volume), monitor ground response (settlement or heave), and verify performance against design objectives.\n  \n  #### 5. Compliance with International Standards  \n  - **EN 12715:** Specifies technical and quality requirements for cement and chemical soil grouting works.  \n  - **FHWA NHI-05-039:** Provides comprehensive guidance on engineering considerations for ground improvement grouting processes.  \n  - **ASTM D6122:** Details execution and inspection protocols for cementitious grouting.\n  \n  #### 6. Engineering Benefits  \n  - Improved foundation bearing capacity and soil-raft contact.  \n  - Reduction of total and differential settlements.  \n  - Prevention of groundwater seepage and soil erosion.  \n  - Extended service life of foundations and reduced maintenance costs.\n  \n  ### Conclusion  \n  Under-raft grouting stands as an efficient geotechnical solution for improving sub-foundation soils, addressing challenges of weak soils, voids, and water ingress. When expertly applied according to international standards and best engineering practices, this method significantly enhances structural stability, reduces risk, and contributes to sustainable infrastructure development.\n  \n  ## Related links on our site\n  \n  - [Void & Cavity Detection](/services/cavity)\n  - [Soil Grouting (Cement Injection)](/services/grouting)\n  - [All cities we serve](/locations)\n  - [Our services in Riyadh](/locations/riyadh)\n  - [Request a service / Contact us](/request-service)",
+  "faqAr": [
+    {
+      "question": "متى يُوصى بالكشف الجيوفيزيائي قبل حقن التربة؟",
+      "answer": "يُوصى به دائماً عند وجود شك في حجم أو موقع التكهفات، وعندما تكون تكاليف الحقن الغير موجَّه مرتفعة، وفي المواقع التي يُشكّل فيها الحقن غير الدقيق خطراً على المنشأة.",
+      "questionEn": "When is geophysical detection recommended before grouting?",
+      "answerEn": "Always recommended when cavity size or location is uncertain, when unguided grouting costs are high, and when imprecise injection poses structural risk."
+    },
+    {
+      "question": "كيف تختلف أساليب كشف التكهفات في التربة الصحراوية؟",
+      "answer": "التربة الصحراوية الجافة تُعطي أفضل النتائج مع GPR لأن الجفاف يُقلل امتصاص الإشارة. لكن التغيرات الكبيرة في درجات الحرارة قد تؤثر على معايرة الأجهزة وتستدعي قراءات صباحية.",
+      "questionEn": "How do cavity detection methods differ in desert soil?",
+      "answerEn": "Arid desert soil gives best GPR results as dryness reduces signal absorption. However, large temperature variations can affect instrument calibration and may require morning readings."
+    },
+    {
+      "question": "ما دقة تحديد عمق التكهف بجهاز GPR؟",
+      "answer": "في التربة المتجانسة الجافة: دقة ±5-10% من العمق الفعلي. تتأثر الدقة بتغيّر خصائص التربة مع العمق وبوجود طبقات رطبة تُغيّر سرعة انتشار الموجة.",
+      "questionEn": "How accurate is GPR in determining cavity depth?",
+      "answerEn": "In homogeneous dry soil: ±5-10% of actual depth. Accuracy is affected by soil property variation with depth and moist layers that alter wave propagation speed."
+    },
+    {
+      "question": "هل يمكن تمييز التكهف الجاف عن المملوء بماء بجهاز GPR؟",
+      "answer": "نعم، التكهف المائي يُعطي انعكاساً أقوى بسبب الفرق الكبير في الثابت العزلي، بينما التكهف الجاف يُعطي انعكاساً أضعف. الفرق في طبيعة الانعكاس يُساعد في التمييز.",
+      "questionEn": "Can dry and water-filled cavities be distinguished with GPR?",
+      "answerEn": "Yes, water-filled cavities produce stronger reflections due to high dielectric contrast, while dry cavities give weaker reflections. The reflection character helps differentiate them."
+    }
+  ],
+  "faqEn": [
+    {
+      "question": "How do we confirm cavities/voids below ground?",
+      "answer": "A reliable workflow combines geophysics with targeted probing/drilling where needed. The goal is to turn anomalies into confirmed targets before remediation."
+    },
+    {
+      "question": "Is every void an immediate hazard?",
+      "answer": "Not necessarily. Risk depends on size, depth, location relative to loads, and water conditions. We assess both severity and likelihood of progression."
+    },
+    {
+      "question": "What happens after voids are detected?",
+      "answer": "Common options include cement grouting, drainage improvements, or localized strengthening depending on root cause (karst, leakage, weak backfill, etc.)."
+    },
+    {
+      "question": "How do you reduce surprises during execution?",
+      "answer": "By staged verification, correlating geophysical anomalies with field observations, and updating the treatment plan when new information emerges."
+    }
+  ]
+}

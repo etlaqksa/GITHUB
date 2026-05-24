@@ -1,0 +1,79 @@
+{
+  "id": 6,
+  "title": "المصطلحات الأساسية في عالم الحقن (نفاذية، لزوجة، ضغط، تدفق)",
+  "titleEn": "Essential Grouting Terminology: Permeability, Viscosity, Pressure, and Flow",
+  "category": "اختبارات التربة",
+  "categoryEn": "Soil Testing",
+  "categoriesAr": [
+    "اختبارات التربة",
+    "الهندسة الجيوتقنية",
+    "حقن التربة",
+    "موسوعة حقن التربة"
+  ],
+  "categoriesEn": [
+    "Soil Testing",
+    "Geotechnical Engineering",
+    "Soil Grouting",
+    "Ground Improvement Library"
+  ],
+  "date": "2025-09-16",
+  "readTime": "3 دقيقة",
+  "readTimeEn": "3 min",
+  "author": "فريق ETLAQ الهندسي",
+  "slug": "essential-grouting-terminology-permeability-viscosity-pressure-and-flow",
+  "image": {
+    "url": "/favicon.webp",
+    "alt": "المصطلحات الأساسية في عالم الحقن (نفاذية، لزوجة، ضغط، تدفق)",
+    "creditName": "ETLAQ (generated)",
+    "creditUrl": "",
+    "license": "Internal"
+  },
+  "excerpt": "مقدمة تُعد عملية حقن التربة تقنيّةً هندسيةً متقدمةً تهدف لتحسين خواص التربة وزيادة قدرتها على التحمل ومنع التسربات المائية والتكتّلات الفراغية. لتحقيق نتائج فعالة وآمنة في هذه العملية، لا بد من فهم المصطلحات والأسس التقنية الرئيسية التي تؤثر في سلوك مواد الحقن أثناء الحقن وفي التربة نفسها. من أهم هذه المصطلحات: النفاذية، اللزوجة، الضغط،…",
+  "excerptEn": "Introduction Soil grouting is an advanced geotechnical technique used to improve soil properties, increase load bearing capacity, prevent water seepage, and fill voids. To achieve effective and safe results, it is essential to understand the fundamental technical terms influencing the behavior of both the grout materials and the soil.…",
+  "content": "### مقدمة  \n  تُعد عملية حقن التربة تقنيّةً هندسيةً متقدمةً تهدف لتحسين خواص التربة وزيادة قدرتها على التحمل ومنع التسربات المائية والتكتّلات الفراغية. لتحقيق نتائج فعالة وآمنة في هذه العملية، لا بد من فهم المصطلحات والأسس التقنية الرئيسية التي تؤثر في سلوك مواد الحقن أثناء الحقن وفي التربة نفسها. من أهم هذه المصطلحات: النفاذية، اللزوجة، الضغط، والتدفق. تتحكم هذه المعايير في اختيار تركيبة مادّة الحقن، وضبط طريقة التنفيذ، وضمان تحقيق الأهداف التصميمية بما يتوافق مع المعايير الدولية مثل EN 12715 وASTM C939.\n  \n  ### المصطلحات الفنية الأساسية  \n  \n  #### 1. النفاذية (Permeability)  \n  النفاذية تشير إلى قدرة التربة أو المادة على السماح بمرور السوائل من خلالها. في عالم الحقن، نفاذية التربة تحدد الطريقة الأنسب لحقن المادة:  \n  - تربة نفاذتها عالية (رملية أو حصوية) تسمح بحقن المواد السائلة التي تتوغل بين الفراغات دون تغيير حالي للتربة.  \n  - تربة نفاذتها منخفضة (طينية أو متماسكة) قد تتطلب حقن بطرق خاصة مثل حقن الضغط أو النفث.  \n  \n  ويمكن قياس النفاذية طبقاً لمعايير ASTM D2434 باستخدام أجهزة تسريب المياه.\n  \n  #### 2. اللزوجة (Viscosity)  \n  اللزوجة هي مقياس لمقاومة السائل للجريان، وحدتها هي باسكال ثانية (Pa·s). تؤثر لزوجة محلول الحقن في سرعة انتشاره داخل التربة وقدرته على ملء الفراغات دون التسبب في نحت التربة أو تجويفات غير مرغوبة. مثال: المواد الإسمنتية ذات لزوجة عالية تُستخدم في تقنيات الجسر الأسمنتي (Compaction Grouting)، بينما المواد الكيماوية ذات لزوجة منخفضة (مثل البولي يوريثان) تُستخدم في نفوذ التربة.  \n  تتأثر اللزوجة بالحرارة وبتكوين المادة وكذلك باستعمال الإضافات الكيميائية.\n  \n  #### 3. الضغط (Pressure)  \n  الضغط في عمليات الحقن هو القوة التي تُطبق لتحريك مادة الحقن إلى داخل التربة والفراغات. يجب ضبط قيمة الضغط بدقة لتحقيق اختراق مناسب دون إحداث تشققات أو أضرار هيكلية في التربة أو المنشأ القريب. تحكم معايير EN 12715 في حدود الضغط المقبولة حسب نوع التربة وطريقة الحقن.  \n  يتم قياس الضغط بالباسكال (Pa) أو ميغا باسكال (MPa)، وعادةً يتم تسجيله أثناء الحقن لضمان ضبط العملية.\n  \n  #### 4. التدفق (Flow)  \n  التدفق هو معدل حركة مادة الحقن خلال الفوهات في الوحدات التجريبية والحقن، ويعبّر عنه بوحدة الحجم/الزمن (مثل ليتر/دقيقة). يؤثر التدفق على فعالية توزيع المادة داخل التربة، كما يؤثر ارتفاعه أو انخفاضه على توزيع الضغط واللزوجة داخل القنوات الأرضية.  \n  ينبغي مراقبة التدفق باستمرار باستخدام أجهزة قياس التدفق لتجنب الانسداد أو التسرب.\n  \n  ### العلاقة المتبادلة وتأثيرها في نجاح عملية الحقن  \n  تعتمد فعالية الحقن على التوازن الأمثل بين هذه العوامل:  \n  - **النفاذية** تحدد إمكانية دخول المادة وامتدادها ضمن مسام التربة.  \n  - **اللزوجة** تؤثر على قدرة المادة على النفاذ وتوزيعها دون التسبب في تآكل التربة.  \n  - **الضغط** يجب أن يكون كافياً لدفع المادة، لكنه لا يتجاوز الحد الذي يسبب تلف التربة.  \n  - **التدفق** يضمن وصول كمية مناسبة من المادة في الوقت المناسب.  \n  \n  على سبيل المثال، في تقنية حقن النفاذ (Permeation Grouting)، يتم استخدام مواد ذات نفاذية عالية ولزوجة منخفضة مع ضغط متحكم فيه لتحقيق تغلغل فعال دون تشويه التربة. أما في حقن الضغط (Compaction Grouting)، تُستخدم مواد ذات لزوجة عالية وضغط أكبر لإنشاء كتلة صلبة تعزز التربة.\n  \n  ### معايير وممارسات دولية  \n  تُحدد المواصفات الفنية مثل EN 12715 و ASTM C939 إجراءات اختبار وتطبيق المواد، حيث يُراعى معها:  \n  - حد الضغط وأوقات الحقن.  \n  - خصائص المواد كتفاوت اللزوجة والاختراق.  \n  - مراقبة مستمرة للضغط والتدفق.  \n  \n  هذه المعايير تضمن سلامة المنشآت وتحقيق الأهداف الهندسية بشكل مستدام.\n  \n  ### خلاصة  \n  فهم المصطلحات الأساسية: النفاذية، اللزوجة، الضغط، والتدفق، يشكل القاعدة العلمية الهندسية التي يبنى عليها تصميم وتنفيذ أعمال حقن التربة بفعالية. التحكم والتوازن بين هذه المتغيرات يضمن رفع جودة التربة، تقليل الهبوط، وحماية المنشآت من مشاكل الفراغات والتسربات، بما يتوافق مع أعلى معايير السلامة والجودة الدولية.\n  \n  ## روابط ذات صلة داخل موقعنا\n  \n  - [حقن التربة (الحقن الأسمنتي)](/services/grouting)\n  - [كشف التكهفات والفراغات](/services/cavity)\n  - [جميع المدن التي نغطيها](/locations)\n  - [خدماتنا في الرياض](/locations/riyadh)\n  - [اطلب خدمة / تواصل معنا](/request-service)",
+  "contentEn": "### Introduction  \n  Soil grouting is an advanced geotechnical technique used to improve soil properties, increase load-bearing capacity, prevent water seepage, and fill voids. To achieve effective and safe results, it is essential to understand the fundamental technical terms influencing the behavior of both the grout materials and the soil. The four primary terms are permeability, viscosity, pressure, and flow. These parameters govern the selection of grout mix, injection methods, and ensure design objectives are met in accordance with international standards such as EN 12715 and ASTM C939.\n  \n  ### Fundamental Technical Terms  \n  \n  #### 1. Permeability  \n  Permeability is the ability of soil or a material to allow fluid to pass through it. In grouting, soil permeability determines the suitable injection method:  \n  - Soils with high permeability (such as sands and gravels) allow injecting liquid grout that permeates pore spaces without soil disturbance.  \n  - Low permeability soils (clays or cohesive soils) often require special injection methods like compaction or jet grouting.  \n  \n  Permeability is measured according to ASTM D2434 using constant head permeability tests.\n  \n  #### 2. Viscosity  \n  Viscosity quantifies a fluid's resistance to flow and is expressed in Pascal-seconds (Pa·s). The viscosity of grout affects how fast it spreads within soil pores and its ability to fill voids without causing soil erosion or cavity creation. For instance, cement-based grouts are typically high viscosity used in compaction grouting, whereas chemical grouts such as polyurethane have low viscosity and permeate soil more easily.  \n  Viscosity varies with temperature, grout composition, and chemical admixtures.\n  \n  #### 3. Pressure  \n  Pressure in grouting operations is the force applied to push the grout into the soil voids. Precise control of injection pressure is necessary to achieve penetration without damaging soil structure or adjacent foundations. EN 12715 specifies allowable pressure limits depending on soil type and injection method.  \n  Pressure is measured in Pascals (Pa) or Megapascals (MPa) and is continuously monitored during grouting.\n  \n  #### 4. Flow  \n  Flow rate describes the volume of grout moving through injection nozzles per unit time (e.g., liters per minute). Flow rate impacts how effectively grout distributes within the soil. Excessively high or low flow rates can cause pressure fluctuations or clogging.  \n  Flow is monitored using flow meters to ensure consistency and prevent operational issues.\n  \n  ### Interrelationship and Impact on Grouting Success  \n  The effectiveness of soil grouting depends on an optimal balance among these factors:  \n  - **Permeability** governs the grout's ability to penetrate soil pores.  \n  - **Viscosity** affects grout mobility and soil disturbance risk.  \n  - **Pressure** must be sufficient to push grout into soil but not exceed damage thresholds.  \n  - **Flow** ensures the grout volume is delivered at a suitable rate.  \n  \n  For example, permeation grouting uses low viscosity, high permeability materials under controlled pressure to infiltrate soil pores without soil deformation. Conversely, compaction grouting utilizes high viscosity grout and higher pressure to form a solid mass that densifies soil.\n  \n  ### International Standards and Practices  \n  Technical specifications like EN 12715 and ASTM C939 govern testing and application protocols, including:  \n  - Injection pressure limits and durations.  \n  - Grout properties such as viscosity and permeation capability.  \n  - Continuous monitoring of pressure and flow parameters during application.  \n  \n  Complying with these standards assures structural safety and the achievement of desired soil improvement objectives sustainably.\n  \n  ### Conclusion  \n  Understanding the fundamental terms permeation, viscosity, pressure, and flow forms the engineering foundation for designing and executing effective soil grouting works. Proper control and balance of these variables ensure improved soil quality, reduced settlement, and protection of structures from voids and seepage, aligned with the highest safety and quality international standards.\n  \n  ## Related links on our site\n  \n  - [Soil Grouting (Cement Injection)](/services/grouting)\n  - [Void & Cavity Detection](/services/cavity)\n  - [All cities we serve](/locations)\n  - [Our services in Riyadh](/locations/riyadh)\n  - [Request a service / Contact us](/request-service)",
+  "faqAr": [
+    {
+      "question": "ما الخطوات العملية لطلب خدمة حقن التربة؟",
+      "answer": "ابدأ بتوثيق المشكلة (صور، قياسات)، ثم تواصل مع فريق إطلاق لتقييم أولي. بعد الزيارة الميدانية تُحدَّد التقنية المناسبة والتكلفة التقديرية قبل بدء التنفيذ.",
+      "questionEn": "What are the practical steps to request soil grouting service?",
+      "answerEn": "Start by documenting the problem (photos, measurements), then contact the ETLAQ team for initial assessment. After the field visit, the appropriate technique and estimated cost are determined before execution begins."
+    },
+    {
+      "question": "ما الذي يشمله تقرير ما بعد الحقن؟",
+      "answer": "يشمل: خريطة نقاط الحقن المنجزة، سجلات الضغط والكميات لكل نقطة، نتائج اختبارات التحقق، توصيات للمتابعة، وشهادات مواد الحقن.",
+      "questionEn": "What does a post-grouting report include?",
+      "answerEn": "It includes: map of completed injection points, pressure and volume logs per point, verification test results, follow-up recommendations, and grout material certificates."
+    },
+    {
+      "question": "كم عدد نقاط الحقن الضروري في المشروع المتوسط؟",
+      "answer": "يتوقف على مساحة المشكلة وعمق المعالجة. المشروع المتوسط قد يتراوح بين 10 و50 نقطة. نقاط الحقن تُحدَّد بعد الزيارة الميدانية وبناءً على نتائج التحقيق.",
+      "questionEn": "How many injection points are needed in a typical project?",
+      "answerEn": "Depends on problem area and treatment depth. A typical project may range from 10 to 50 points. Injection points are determined after the site visit and investigation results."
+    },
+    {
+      "question": "هل يمكن توقف الحقن ثم استئنافه في اليوم التالي؟",
+      "answer": "نعم، لكن يُنبغي توثيق حالة كل نقطة عند التوقف لضمان استكمال المناطق غير المكتملة. بعض الخلطات قد تحتاج مواصفات خاصة عند الاستئناف لضمان الترابط مع الحقن السابق.",
+      "questionEn": "Can grouting be stopped and resumed the next day?",
+      "answerEn": "Yes, but each point's status at stoppage must be documented to ensure incomplete zones are finished. Some mixes may need special specifications on resumption to ensure bonding with previous grout."
+    }
+  ],
+  "faqEn": [
+    {
+      "question": "When is soil grouting the right solution?",
+      "answer": "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly."
+    },
+    {
+      "question": "How is cement grouting different from other grouts?",
+      "answer": "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective."
+    },
+    {
+      "question": "How do you choose the mix and viscosity?",
+      "answer": "We base it on ground type, test results, and the treatment objective. In many cases, mixes are adjusted progressively to balance penetration and control."
+    },
+    {
+      "question": "How do I know the treatment worked?",
+      "answer": "Indicators include stabilized take patterns, improved monitoring results, and verification outputs (probing/tests) aligned with the project’s acceptance criteria."
+    }
+  ]
+}

@@ -4,6 +4,7 @@ import { Badge } from '@/components/ui/badge';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { useLanguage } from '@/contexts/LanguageContext';
 import type { ArticleContent } from '@/data/articles';
+import type { ArticleIndexItem } from '@/data/articlesIndex';
 import { loadArticles } from '@/data/articlesLoader';
 import { SEO } from '@/components/SEO';
 import { User, ArrowLeft, ArrowRight } from 'lucide-react';
@@ -43,7 +44,7 @@ function estimateReadTime(content: string, language: 'ar' | 'en') {
   return language === 'ar' ? `${minutes} دقيقة` : `${minutes} min`;
 }
 
-function getCategories(article: ArticleContent, language: 'ar' | 'en') {
+function getCategories(article: any, language: 'ar' | 'en') {
   const raw =
     (language === 'ar'
       ? (article.categoriesAr && article.categoriesAr.length ? article.categoriesAr : [article.category].filter(Boolean))
@@ -109,7 +110,7 @@ export default function BlogPost() {
   const [, setLocation] = useLocation();
 
   // Lazy-load the large encyclopedia dataset.
-  const [allArticles, setAllArticles] = useState<ArticleContent[]>([]);
+  const [allArticles, setAllArticles] = useState<ArticleIndexItem[]>([]);
   const [isLoadingArticles, setIsLoadingArticles] = useState(true);
 
   useEffect(() => {
@@ -142,6 +143,41 @@ export default function BlogPost() {
     return findArticleByAnySlug(slug, allArticles);
   }, [params?.slug, allArticles]);
 
+  // Fetch full article JSON dynamically when article metadata is loaded
+  const [fullArticle, setFullArticle] = useState<ArticleContent | null>(null);
+  const [isLoadingFullContent, setIsLoadingFullContent] = useState(false);
+  const [loadError, setLoadError] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (!article) {
+      setFullArticle(null);
+      return;
+    }
+    let alive = true;
+    setIsLoadingFullContent(true);
+    setLoadError(null);
+    fetch(`/article-data/${article.slug}.json`)
+      .then((res) => {
+        if (!res.ok) throw new Error(language === 'ar' ? 'تعذر تحميل محتوى المقال' : 'Failed to load article content');
+        return res.json();
+      })
+      .then((data) => {
+        if (!alive) return;
+        setFullArticle(data);
+      })
+      .catch((err) => {
+        if (!alive) return;
+        setLoadError(err?.message || 'Error');
+      })
+      .finally(() => {
+        if (!alive) return;
+        setIsLoadingFullContent(false);
+      });
+    return () => {
+      alive = false;
+    };
+  }, [article, language]);
+
   const title = useMemo(() => {
     if (!article) return '';
     return language === 'ar' ? article.title : (article.titleEn || article.title);
@@ -149,19 +185,23 @@ export default function BlogPost() {
 
   const description = useMemo(() => {
     if (!article) return '';
-    const raw = language === 'ar' ? article.content : (article.contentEn || article.content);
-    return stripMarkdown(raw).slice(0, 160);
+    return language === 'ar' ? (article.excerpt || '') : (article.excerptEn || article.excerpt || '');
   }, [article, language]);
 
   const cats = useMemo(() => (article ? getCategories(article, language) : []), [article, language]);
 
   const contentRaw = useMemo(() => {
+    if (!fullArticle) return '';
+    if (language === 'ar') return fullArticle.content || '';
+    return normalizeEnglishContent(fullArticle.contentEn || fullArticle.content || '');
+  }, [fullArticle, language]);
+
+  const readTime = useMemo(() => {
     if (!article) return '';
-    if (language === 'ar') return article.content || '';
-    return normalizeEnglishContent(article.contentEn || article.content || '');
+    return language === 'ar' ? article.readTime : (article.readTimeEn || article.readTime);
   }, [article, language]);
-  const readTime = useMemo(() => estimateReadTime(contentRaw, language), [contentRaw, language]);
-  const canonicalSlug = useMemo(() => (article ? getArticleUrlSlug(article, language) : ''), [article, language]);
+
+  const canonicalSlug = useMemo(() => (article ? getArticleUrlSlug(article as any, language) : ''), [article, language]);
   const pageUrl = useMemo(() => absUrl(`/${language}/blog/${canonicalSlug || (params?.slug || '')}`), [language, canonicalSlug, params?.slug]);
 
   // Canonicalize URL (supports legacy slugs and cross-language slugs).
@@ -196,9 +236,9 @@ export default function BlogPost() {
 
 
   const faqItems = useMemo(() => {
-    if (!article) return [] as { question: string; answer: string }[];
-    return (language === 'ar' ? (article.faqAr || []) : (article.faqEn || [])) as { question: string; answer: string }[];
-  }, [article, language]);
+    if (!fullArticle) return [] as { question: string; answer: string }[];
+    return (language === 'ar' ? (fullArticle.faqAr || []) : (fullArticle.faqEn || [])) as { question: string; answer: string }[];
+  }, [fullArticle, language]);
 
 		const schema = useMemo(() => {
     if (!article) return undefined;
@@ -240,11 +280,11 @@ export default function BlogPost() {
   }, [article, title, description, pageUrl, faqItems, language]);
 
   const { prevArticle, nextArticle } = useMemo(() => {
-    if (!article) return { prevArticle: null as ArticleContent | null, nextArticle: null as ArticleContent | null };
+    if (!article) return { prevArticle: null as ArticleIndexItem | null, nextArticle: null as ArticleIndexItem | null };
 
     // Keep the same sequence used by the blog listing ([] array order),
     // but only include items that have content in the current language.
-    const list = allArticles.filter((a) => (language === 'ar' ? Boolean(a.title && a.content) : Boolean(a.titleEn && a.contentEn)));
+    const list = allArticles.filter((a) => (language === 'ar' ? Boolean(a.title) : Boolean(a.titleEn)));
     // Keep a stable order
     list.sort((a, b) => (a.id ?? 0) - (b.id ?? 0));
     const idx = list.findIndex((a) => a.id === article.id);
@@ -335,7 +375,9 @@ export default function BlogPost() {
   };
 
 
-  if (isLoadingArticles) {
+  const showLoading = isLoadingArticles || (article && !fullArticle && !loadError);
+
+  if (showLoading) {
     return (
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-3xl mx-auto text-center text-muted-foreground">
@@ -455,7 +497,7 @@ export default function BlogPost() {
           </>
         )}
 
-        <div className="bg-background rounded-2xl border border-border shadow-sm p-6 md:p-8">
+        <div className="bg-card rounded-2xl border border-border shadow-sm p-6 md:p-8">
           {/* Cover */}
           {heroSrc ? (
             <div className="aspect-[16/9] w-full overflow-hidden rounded-xl bg-muted mb-5">
@@ -597,13 +639,13 @@ export default function BlogPost() {
 
           </article>
 
-          {((language === 'ar' ? article.faqAr : article.faqEn) || []).length > 0 && (
+          {faqItems.length > 0 && (
             <section className="mt-10">
               <h2 className="text-xl font-semibold mb-4">
                 {language === 'ar' ? 'الأسئلة الشائعة' : 'Frequently Asked Questions'}
               </h2>
               <Accordion type="single" collapsible className="w-full">
-                {((language === 'ar' ? article.faqAr : article.faqEn) || []).map((f: any, idx: number) => (
+                {faqItems.map((f: any, idx: number) => (
                   <AccordionItem key={String(idx)} value={String(idx)}>
                     <AccordionTrigger className="text-right">
                       <span className={language === 'ar' ? 'text-right' : 'text-left'}>{f.question}</span>

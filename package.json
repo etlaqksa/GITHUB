@@ -12,7 +12,7 @@
     "dev": "vite",
     "dev:client": "vite",
     "dev:static": "vite",
-    "prebuild": "node scripts/generate_sitemap.mjs",
+    "prebuild": "npx tsx scripts/split_articles.ts && node scripts/generate_sitemap.mjs",
     "build": "vite build",
     "postbuild": "node scripts/prerender.mjs",
     "preview": "vite preview --port 4173 --strictPort",
@@ -20,7 +20,7 @@
     "format": "prettier --write .",
     "test": "vitest run",
     "gen:images": "node scripts/generate_article_images.mjs",
-    "build:netlify": "node scripts/generate_sitemap.mjs && vite build",
+    "build:netlify": "npx tsx scripts/split_articles.ts && node scripts/generate_sitemap.mjs && vite build",
     "publish:images": "npm run gen:images && git add client/public/article-images && (git commit -m \"Update article images\" || echo \"No changes to commit\") && git push"
   },
   "dependencies": {

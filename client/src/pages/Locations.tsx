@@ -5,6 +5,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { cities, serviceLandings, getCitySlug, getServiceSlug } from '@/data/seoLocations';
 import { buildSiteKeywords } from '@/lib/seoKeywords';
 import { absUrl } from '@/lib/siteUrl';
+import InteractiveMap from '@/components/InteractiveMap';
 
 export default function Locations() {
   const { language } = useLanguage();
@@ -35,7 +36,11 @@ export default function Locations() {
             <p className="text-muted-foreground leading-relaxed">{description}</p>
           </div>
 
-          <div className="mt-10 grid md:grid-cols-3 gap-6">
+          <div className="mt-12 max-w-4xl mx-auto">
+            <InteractiveMap />
+          </div>
+
+          <div className="mt-16 grid md:grid-cols-3 gap-6">
             {cities.map((c) => {
               const citySlug = getCitySlug(c, language);
               return (

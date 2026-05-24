@@ -7,7 +7,7 @@ import { User, ChevronLeft, ChevronRight } from 'lucide-react';
 import { IconCalendar, IconClock, IconSearch } from '@/components/icons/etlaq';
 import { useMemo, useState, useEffect } from 'react';
 import { useLocation } from 'wouter';
-import type { ArticleContent } from '@/data/articles';
+import type { ArticleIndexItem } from '@/data/articlesIndex';
 import { loadArticles } from '@/data/articlesLoader';
 import ProtectedImage from '@/components/ProtectedImage';
 import LocalizedLink from '@/components/LocalizedLink';
@@ -57,15 +57,7 @@ function normalizeForSearch(input: string) {
     .trim();
 }
 
-function estimateReadTime(content: string, lang: 'ar' | 'en') {
-  const plain = stripMarkdown(content);
-  const words = plain.split(/\s+/).filter(Boolean).length;
-  const wpm = lang === 'ar' ? 170 : 220;
-  const minutes = Math.max(1, Math.round(words / wpm));
-  return lang === 'ar' ? `${minutes} دقيقة` : `${minutes} min`;
-}
-
-function getCategories(article: ArticleContent, language: 'ar' | 'en') {
+function getCategories(article: ArticleIndexItem, language: 'ar' | 'en') {
   const raw =
     (language === 'ar'
       ? (article.categoriesAr && article.categoriesAr.length ? article.categoriesAr : [article.category].filter(Boolean))
@@ -83,15 +75,14 @@ function ArticleCard({
   language,
   onPickCategory,
 }: {
-  article: ArticleContent;
+  article: ArticleIndexItem;
   language: 'ar' | 'en';
   onPickCategory: (cat: string) => void;
 }) {
   const title = language === 'ar' ? article.title : stripArabic(article.titleEn || '');
-  const content = language === 'ar' ? article.content : stripArabic(article.contentEn || '');
   const excerpt = language === 'ar'
-    ? (article.excerpt ?? (stripMarkdown(article.content).slice(0, 220) + (stripMarkdown(article.content).length > 220 ? '…' : '')))
-    : (article.excerptEn ?? (stripMarkdown(stripArabic(article.contentEn || '')).slice(0, 220) + (stripMarkdown(stripArabic(article.contentEn || '')).length > 220 ? '…' : '')));
+    ? (article.excerpt ?? '')
+    : (article.excerptEn ?? '');
 
   const cats = getCategories(article, language);
   const imgUrl = `/article-images/card/${language}/${getArticleImageName(article.slug)}.webp`;
@@ -147,7 +138,7 @@ function ArticleCard({
           </div>
           <div className="flex items-center gap-1">
             <IconClock className="h-4 w-4" />
-            <span>{estimateReadTime(language === 'ar' ? article.content : (article.contentEn || ''), language)}</span>
+            <span>{language === 'ar' ? article.readTime : (article.readTimeEn || article.readTime)}</span>
           </div>
           <div className="flex items-center gap-1">
             <User className="h-4 w-4" />
@@ -175,7 +166,7 @@ export default function Blog() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
   // Lazy-load the large encyclopedia dataset.
-  const [allArticles, setAllArticles] = useState<ArticleContent[]>([]);
+  const [allArticles, setAllArticles] = useState<ArticleIndexItem[]>([]);
   const [isLoadingArticles, setIsLoadingArticles] = useState(true);
 
   useEffect(() => {
@@ -239,12 +230,12 @@ export default function Blog() {
         // Search across both Arabic + English fields to avoid "no results" surprises.
         // Also normalize Arabic variants so common spelling differences still match.
         const titleAr = a.title || '';
-        const contentAr = a.content || '';
+        const excerptAr = a.excerpt || '';
         const titleEn = stripArabic(a.titleEn || '');
-        const contentEn = stripArabic(a.contentEn || '');
+        const excerptEn = stripArabic(a.excerptEn || '');
 
         const hay = normalizeForSearch(
-          `${titleAr} ${stripMarkdown(contentAr)} ${titleEn} ${stripMarkdown(contentEn)}`
+          `${titleAr} ${excerptAr} ${titleEn} ${excerptEn}`
         );
 
         const matchesSearch = q ? hay.includes(q) : true;

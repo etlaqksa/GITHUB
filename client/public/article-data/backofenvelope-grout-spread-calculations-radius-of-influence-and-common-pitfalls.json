@@ -1,0 +1,63 @@
+{
+  "id": 33,
+  "title": "حسابات تقريبية لانتشار الحقن: نصف قطر تأثير ولماذا يخطئ كثيرًا",
+  "titleEn": "Back‑of‑Envelope Grout Spread Calculations: Radius of Influence and Common Pitfalls",
+  "category": "موسوعة الحقن والتحسين",
+  "categoryEn": "Grouting & Improvement Encyclopedia",
+  "categoriesAr": [
+    "موسوعة الحقن والتحسين",
+    "الهندسة الجيوتقنية",
+    "حقن التربة",
+    "موسوعة حقن التربة"
+  ],
+  "categoriesEn": [
+    "Grouting & Improvement Encyclopedia",
+    "Geotechnical Engineering",
+    "Soil Grouting",
+    "Ground Improvement Library"
+  ],
+  "date": "2025-12-06",
+  "readTime": "4 دقائق",
+  "readTimeEn": "4 min",
+  "author": "فريق ETLAQ الهندسي",
+  "slug": "backofenvelope-grout-spread-calculations-radius-of-influence-and-common-pitfalls",
+  "image": {
+    "url": "/favicon.webp",
+    "alt": "حسابات تقريبية لانتشار الحقن: نصف قطر تأثير ولماذا يخطئ كثيرًا",
+    "creditName": "ETLAQ (generated)",
+    "creditUrl": "",
+    "license": "Internal"
+  },
+  "excerpt": "عندما تبحث عن حلّ لمشكلة تحت الأساسات، ستجد مصطلحات كثيرة—لكن المهم هو فهم المعنى العملي لكل مصطلح. في هذا الموضوع نشرح «حسابات تقريبية لانتشار الحقن: نصف قطر تأثير ولماذا يخطئ كثيرًا» بلغة قريبة من العميل، ونربط بين ما تراه على السطح وبين ما قد يحدث في التربة أو الصخور تحت الأساسات. الفكرة ليست أن نحفظ مصطلحات، بل أن نفهم كيف نختصر الطريق إلى قرار صحيح بأقل مخاطرة.",
+  "excerptEn": "Clients often ask for a quick fix, but the right answer begins with understanding the mechanism, not the material name. In this article, we explain “Back‑of‑Envelope Spread Estimates: Radius of Influence—and Why It Misleads” in plain, client‑friendly language while keeping engineering accuracy. The aim is not to overload you with terms, but to help you reach a safe decision with less uncertainty.",
+  "content": "# حسابات تقريبية لانتشار الحقن: نصف قطر تأثير ولماذا يخطئ كثيرًا\n  \n  عندما تبحث عن حلّ لمشكلة تحت الأساسات، ستجد مصطلحات كثيرة—لكن المهم هو فهم المعنى العملي لكل مصطلح. في هذا الموضوع نشرح «حسابات تقريبية لانتشار الحقن: نصف قطر تأثير ولماذا يخطئ كثيرًا» بلغة قريبة من العميل، ونربط بين ما تراه على السطح وبين ما قد يحدث في التربة أو الصخور تحت الأساسات. الفكرة ليست أن نحفظ مصطلحات، بل أن نفهم كيف نختصر الطريق إلى قرار صحيح بأقل مخاطرة.\n  \n  في السطور التالية سنحوّل حسابات وتقريبية إلى خطوات تفكير بسيطة: ما الذي تسأل عنه، وما الذي تقيسه، وكيف تربط النتيجة بالخدمة المناسبة.\n  \n  الحقن يتعامل مع ما تحت السطح، لكن قراره يبدأ من السطح: أين المشكلة؟ كيف تتغير؟ وما الذي يغذيها؟ هذه الأسئلة تجعل الحقن خطوة محسوبة بدل أن يكون محاولة عامة. إذا كنت تسمع آراء متباينة من أكثر من مقاول أو مكتب، فغالبًا السبب أن كل طرف يفترض آلية مختلفة للمشكلة.\n  \n  الفكرة الأساسية في حقن التربة ليست «ملء الفراغات» فقط، بل تغيير خاصية محددة تحت الأساس: تقليل نفاذية، رفع مقاومة قص، أو تقليل قابلية الانضغاط. عندما نفهم أي خاصية نريد تحسينها، يصبح اختيار مادة الحقن وطريقة توزيعها قرارًا منطقيًا بدل أن يكون تجربة. وهنا تظهر قيمة جمع «قصة الموقع» كاملة: نوع الأساس، تاريخ تسربات المياه، أعمال مجاورة، وأي تغيير حديث في الأحمال أو الاستخدام.\n  \n  إذا كانت المشكلة «تحت الأساس»، فالهدف غالبًا أحد ثلاثة: تقليل نفاذية مسار ماء، زيادة صلابة طبقة ضعيفة، أو معالجة فراغات/تفكك. تحديد الهدف من البداية يختصر الطريق إلى الحل الصحيح.\n  \n  مثال شائع في المدن: هبوط بسيط قرب رصيف أو ساحة بسبب أعمال خدمات تحت الأرض. هنا قد يكون الخطر موضعيًا، وإجراء كشف موجّه أو حقن محدود في المنطقة الحرجة قد يكون كافيًا بدل علاج شامل للموقع كله.\n  \n  العميل الذكي لا يطارد الأرقام وحدها؛ يطارد الاتجاه. إذا كانت المؤشرات تتغير مع الزمن، فهذا يعطيك أولويات واضحة: أين تركز الفحص، وأين قد تكفي متابعة دورية قبل أي أعمال.\n  \n  للاطلاع على خدماتنا المرتبطة بهذا الموضوع، شوف [حقن التربة](/services/grouting)، [كشف التكهفات](/services/cavity). داخل الموقع ستجد أيضًا صفحات مدن وخدمات تساعدك تربط الفكرة بموقعك الفعلي، مثل صفحات الرياض وجدة والدمام.\n  \n  إذا رغبت بالقراءة من مصادر موثوقة، ابحث عن FHWA (Ground Improvement) ومعيار EN 12715 (Grouting) كمدخل عام، ثم طبّق المنطق على حالة موقعك. نحن في ETLAQ نترجم هذه المبادئ إلى قرار عملي يناسب ظروف الموقع داخل المملكة.\n  \n  النتيجة الأفضل تتحقق عندما يكون التشخيص واضحًا والخطوة التالية محددة. المقال يعطيك منطق القرار، والفحص الميداني يؤكد التفاصيل.\n  ## روابط ذات صلة داخل موقعنا\n  \n  - [خدمة حقن التربة](/services/grouting)\n  - [كشف التكهفات والفراغات](/services/cavity)\n  - [الدراسات الجيوفيزيائية](/services/geophysical)\n  - [تواصل معنا للاستشارة](/contact)\n  ",
+  "contentEn": "# Back‑of‑Envelope Spread Estimates: Radius of Influence—and Why It Misleads\n  \n  Clients often ask for a quick fix, but the right answer begins with understanding the mechanism, not the material name. In this article, we explain “Back‑of‑Envelope Spread Estimates: Radius of Influence—and Why It Misleads” in plain, client‑friendly language while keeping engineering accuracy. The aim is not to overload you with terms, but to help you reach a safe decision with less uncertainty.\n  \n  We translate Back, Envelope, Spread into a readable story—linking symptoms to subsurface mechanisms and clarifying the practical boundaries of each option.\n  \n  Soil grouting is not only about “filling gaps.” The real goal is to change a specific property under a foundation: reduce permeability, improve stiffness, or limit compressibility. Once the target property is clear, material selection and execution logic become consistent and measurable. If you have received different opinions, it is often because each opinion assumes a different mechanism—and therefore a different best tool.\n  \n  Grouting decisions start at the surface: where is the symptom, how does it evolve, and what feeds it? That makes treatment a calculated step, not a generic attempt. A complete “site story” matters: foundation type, leakage history, nearby works, and any recent load or usage changes.\n  \n  When the problem is “under the foundation,” the target is usually one of three: reduce a water pathway, stiffen a weak layer, or treat voids/loose pockets. Defining the target early keeps the solution coherent.\n  \n  Sometimes movement is limited to one room while the rest stays stable. That pattern supports a localized mechanism such as a pocket void or a specific weak layer.\n  \n  Good decisions track trends rather than single numbers. If indicators evolve over time, you gain a clear map of where to investigate and where monitoring may be enough.\n  \n  If you want a clear next step for your site, start from [Soil Grouting](/services/grouting), [Geophysical Surveys](/services/geophysical). You can also reach us via [Contact](/contact) or start with a [Service Request](/request-service).\n  \n  For credible references, search for FHWA guidance on ground improvement and EN 12715 (Special geotechnical work: Grouting). They provide structured thinking rather than a one‑size recipe. We translate that framework into practical, site‑ready decisions in KSA conditions.\n  \n  A durable result comes from a clear diagnosis and a focused next step. This article gives decision logic; site verification confirms the details.\n  ",
+  "faqAr": [
+    {
+      "question": "هل حسابات يعني بالضرورة وجود خطر كبير؟",
+      "answer": "ليس بالضرورة. الأهم هو اتجاه المؤشر مع الزمن وارتباطه بأحداث مثل تسرب أو أعمال مجاورة. أحيانًا يكون الأثر ثابتًا وغير متطور، وأحيانًا يكون مؤشرًا مبكرًا يحتاج فحصًا موجّهًا."
+    },
+    {
+      "question": "متى أحتاج خطوة فحص قبل أي معالجة؟",
+      "answer": "إذا كانت الأعراض متغيرة أو لديك أكثر من مؤشر في نفس الوقت (مثل شقوق مع رطوبة أو هبوط)، أو إذا كانت قيمة المبنى/المخاطر عالية، فالفحص الموجّه يقلل احتمالية اختيار علاج غير مناسب."
+    },
+    {
+      "question": "ما الخطوة العملية الأولى التي تنصحون بها؟",
+      "answer": "ابدأ بجمع معلومات بسيطة: صور بتاريخ، قياس عرض الشق إن وجد، تحديد وجود تسرب، ووصف المكان بدقة. بعدها يمكن اختيار مسار سريع: مسح/كشف، أو تقييم مبدئي ثم قرار معالجة."
+    }
+  ],
+  "faqEn": [
+    {
+      "question": "Does Back automatically mean high risk?",
+      "answer": "Not always. What matters is the trend over time and whether it correlates with triggers like leakage or nearby works. Some signs are stable; others are early indicators that deserve targeted verification."
+    },
+    {
+      "question": "When should I verify before choosing treatment?",
+      "answer": "If symptoms are changing, if multiple indicators appear together (cracks + moisture + settlement), or if the asset risk is high, a focused verification step reduces the chance of a mismatched solution."
+    },
+    {
+      "question": "What is the first practical step you recommend?",
+      "answer": "Collect simple evidence: dated photos, basic measurements (e.g., crack width), leakage checks, and accurate location notes. Then choose a low‑risk path: targeted survey/detection or an initial assessment that leads to a clear decision."
+    }
+  ]
+}

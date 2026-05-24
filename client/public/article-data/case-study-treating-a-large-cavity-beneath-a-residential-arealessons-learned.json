@@ -1,0 +1,79 @@
+{
+  "id": 74,
+  "title": "دراسة حالة: معالجة تكهف ضخم تحت منطقة سكنية (الدروس المستفادة)",
+  "titleEn": "Case Study: Treating a Large Cavity Beneath a Residential Area—Lessons Learned",
+  "category": "المسح الجيوفيزيائي",
+  "categoryEn": "Geophysical Surveys",
+  "categoriesAr": [
+    "المسح الجيوفيزيائي",
+    "الهندسة الجيوتقنية",
+    "حقن التربة",
+    "موسوعة حقن التربة"
+  ],
+  "categoriesEn": [
+    "Geophysical Surveys",
+    "Geotechnical Engineering",
+    "Soil Grouting",
+    "Ground Improvement Library"
+  ],
+  "date": "2026-04-08",
+  "readTime": "3 دقيقة",
+  "readTimeEn": "3 min",
+  "author": "فريق ETLAQ الهندسي",
+  "slug": "case-study-treating-a-large-cavity-beneath-a-residential-arealessons-learned",
+  "image": {
+    "url": "/favicon.webp",
+    "alt": "دراسة حالة: معالجة تكهف ضخم تحت منطقة سكنية (الدروس المستفادة)",
+    "creditName": "ETLAQ (generated)",
+    "creditUrl": "",
+    "license": "Internal"
+  },
+  "excerpt": "المقدمة تمثل التكهفات والفراغات تحت سطح الأرض خطرًا جسيمًا على استقرار المباني والمنشآت العمرانية، خصوصًا عند مواقع المناطق السكنية المكتظة حيث تتداخل البنية التحتية مع الطبيعة غير المستقرة للتربة أو الصخور. في هذا المقال، نستعرض دراسة حالة لمعالجة تكهف ضخم حدث تحت منطقة سكنية، مع تسليط الضوء على الأدوات والتقنيات المتقدمة وأساليب الحقن…",
+  "excerptEn": "Introduction Underground cavities and voids pose a significant hazard to the stability of existing buildings and urban infrastructure, especially in densely populated residential areas where natural ground conditions interact with built elements. This article presents a case study addressing the remediation of a large subsurface cavity…",
+  "content": "### المقدمة  \n  تمثل التكهفات والفراغات تحت سطح الأرض خطرًا جسيمًا على استقرار المباني والمنشآت العمرانية، خصوصًا عند مواقع المناطق السكنية المكتظة حيث تتداخل البنية التحتية مع الطبيعة غير المستقرة للتربة أو الصخور. في هذا المقال، نستعرض دراسة حالة لمعالجة تكهف ضخم حدث تحت منطقة سكنية، مع تسليط الضوء على الأدوات والتقنيات المتقدمة وأساليب الحقن المستخدمة، إضافةً إلى الدروس المستفادة التي تعزز من كفاءة تطبيقات معالجة التربة في مثل هذه الحالات الحرجة. \n  \n  ### المحتوى الفني التفصيلي  \n  \n  #### 1. خلفية المشكلة وأسباب التكهف  \n  تم رصد تكهف كبير يبلغ حجمه عدة أمتار مكعبة تحت إحدى المجمعات السكنية، ناتج عن عوامل جيولوجية وهيدرولوجية مشتركة، منها:  \n  - وجود تجاويف طبيعية في طبقات الحجر الجيري المنهار.  \n  - تسرب مياه جوفية وسطحية أدت إلى تآكل التربة المحيطة.  \n  - تآكل شبكات البنية التحتية للمياه أدى إلى اتساع الفراغات تحت الأساسات.  \n  \n  #### 2. طرق الكشف والتقييم  \n  اعتمدت الدراسة في الكشف على دمج تقنيات متعددة لضمان دقة التحديد وكفاءة المعالجة:  \n  - **رادار اختراق الأرض (Ground Penetrating Radar - GPR):** للحصول على صورة ثلاثية الأبعاد واضحة للفراغات وحجمها.  \n  - **المسح الكهربائي (Electrical Resistivity):** لتحديد المناطق ضعيفة المقاومة التي تشير إلى وجود الفراغات.  \n  - **مسح سيزمي (Seismic Survey):** لتقييم التغيرات في كثافة التربة والصخور.  \n  - **فحص الحفر اليدوي والآلي:** للتحقق الميداني من نتائج صور التصوير.  \n  \n  #### 3. اختيار أسلوب المعالجة: حقن التربة الأسمنتية  \n  بعد تقييم الحالة الجيولوجية والتربة، تم اختيار تقنية الحقن الأسمنتي وخصوصًا التقنية التالية:  \n  - **حقن الضغط (Compaction Grouting):** لملء الفراغات وتدعيم التربة بدفع خليط أسمنتي بتركيبة مخصصة وكثافة عالية.  \n  - تم الالتزام بالمواصفات الدولية، منها معيار **EN 12715** لتصميم خليط الحقن وضبط خصائصه الفيزيائية والكيميائية.  \n  - استخدمت فحوصات ضغط تدفق الحقن أثناء العملية للتحكم بمعدل حقن المادة وتوزيعها داخل الفراغات.  \n  \n  #### 4. إجراءات التنفيذ ومراقبة الجودة  \n  - إجراء \"جسر المراقبة\" (Crack Monitoring) على المباني السكنية لضبط الحركات الانشائية وتقييم مدى تأثير الحقن.  \n  - توثيق دقيق لضغوط الحقن، معدلات التدفق، وتسجيل التغيرات في مستويات الهبوط.  \n  - تطبيق نظام ضمان الجودة (QA/QC) وفق المواصفات المعتمدة بما فيها المواصفات الأمريكية FHWA الخاصة بأعمال الحقن.  \n  \n  #### 5. النتائج والدروس المستفادة  \n  - إعادة تحقيق الاستقرار للمباني وتقليل الهبوط التفاضلي بنسبة تجاوزت 85%.  \n  - أهمية استخدام تقنيات المسح المتكاملة للحصول على نماذج دقيقة للفراغات قبل المعالجة.  \n  - ضرورة التنسيق مع فرق صيانة شبكات المياه لمنع تسربات مستقبلية تسبب ظهور تكهفات جديدة.  \n  - تسجيل البيانات الميدانية باستمرار أثناء الحقن لضبط وضمان فعالية العملية وخفض المخاطر.  \n  - دور \"جسر المراقبة\" كأداة حيوية لتحديد تحركات التشققات البولية والتدخل السريع عند الحاجة.  \n  \n  ### الخاتمة  \n  نجحت عملية معالجة التكهف الضخم تحت المنطقة السكنية بفضل اعتماد منهجيات تقنيّة متقدمة ومنسقة علميًّا، بالإضافة إلى الالتزام بمعايير الجودة والسلامة الدولية. تشير الدراسة إلى أهمية التعاون بين فرق الجيولوجيا، الهندسة الجيوتقنية، والصيانة الدورية لمرافق البنى التحتية، لتقليل المخاطر وتحقيق استدامة عمر المباني. الدروس المستفادة تعزز من جاهزية المهندسين لمواجهة تحديات مشابهة في البيئة الحضرية المتطورة.\n  \n  ## روابط ذات صلة داخل موقعنا\n  \n  - [كشف التكهفات والفراغات](/services/cavity)\n  - [حقن التربة (الحقن الأسمنتي)](/services/grouting)\n  - [جميع المدن التي نغطيها](/locations)\n  - [خدماتنا في الرياض](/locations/riyadh)\n  - [اطلب خدمة / تواصل معنا](/request-service)",
+  "contentEn": "### Introduction  \n  Underground cavities and voids pose a significant hazard to the stability of existing buildings and urban infrastructure, especially in densely populated residential areas where natural ground conditions interact with built elements. This article presents a case study addressing the remediation of a large subsurface cavity beneath a residential district, highlighting advanced detection methods, soil grouting techniques, and lessons learned that improve the efficiency and safety of ground improvement practices in critical conditions.\n  \n  ### Detailed Technical Content  \n  \n  #### 1. Problem Background and Cavity Causes  \n  A large cavity with several cubic meters volume was identified beneath a housing complex, resulting from combined geological and hydrogeological factors including:  \n  - The presence of natural karstic voids within the collapsed limestone strata.  \n  - Groundwater and surface water infiltration causing soil erosion adjacent to the cavity.  \n  - Leakage from water supply networks exacerbating void expansion beneath the foundations.\n  \n  #### 2. Detection and Assessment Methods  \n  A multi-technology approach was used to accurately delineate the cavity and inform the remediation plan:  \n  - **Ground Penetrating Radar (GPR):** For high-resolution 3D imaging of voids and their extents.  \n  - **Electrical Resistivity Survey:** To locate zones of low electrical resistance indicative of voids or weakened ground.  \n  - **Seismic Survey:** To identify variations in soil density and stiffness.  \n  - **Manual and mechanized borehole sampling:** For field verification of geophysical survey results.\n  \n  #### 3. Selection of Remediation Technique: Cementitious Grouting  \n  Following comprehensive geotechnical evaluation, cement grout injection was selected as the preferred remediation method:  \n  - **Compaction Grouting:** Employed to fill voids and densify surrounding soils by injecting a specially designed, high-viscosity cement-based mix under controlled low pressures.  \n  - Design and mix proportions complied with international standards such as **EN 12715** covering grout composition, flow properties, and setting behavior.  \n  - Continuous injection pressure-flow monitoring ensured proper grout placement and coverage within the cavity.\n  \n  #### 4. Execution and Quality Assurance  \n  - Implementation of **Crack Monitoring (Crack Bridge)** on affected structures to monitor structural displacement and settlement during the grouting process.  \n  - Detailed documentation of injection pressures, flow rates, and settlement measurements.  \n  - Quality assurance and control (QA/QC) procedures followed standards outlined by the **Federal Highway Administration (FHWA)** for grouting works, focusing on thorough recording and verification protocols.\n  \n  #### 5. Results and Lessons Learned  \n  - Achieved structural stabilization and reduced differential settlement by over 85%.  \n  - Demonstrated the critical role of integrated geophysical surveys for accurate cavity characterization prior to remediation.  \n  - Highlighted the necessity of coordination with municipal water infrastructure teams to prevent new leaks and subsequent cavity formation.  \n  - Established the importance of continuous field data logging for real-time process adjustment and risk mitigation.  \n  - Validated crack monitoring as an effective early warning system for detecting and managing structural movements.\n  \n  ### Conclusion  \n  The successful remediation of the large underground cavity beneath a residential area was enabled by a scientifically coordinated approach integrating advanced detection technologies, careful grout mix design, and strict adherence to international quality standards. This case underscores the essential collaboration between geologists, geotechnical engineers, and infrastructure maintenance teams to reduce risks and extend building service life sustainably. The lessons learned provide valuable guidance to engineers tackling similar urban underground challenges worldwide.\n  \n  ## Related links on our site\n  \n  - [Void & Cavity Detection](/services/cavity)\n  - [Soil Grouting (Cement Injection)](/services/grouting)\n  - [All cities we serve](/locations)\n  - [Our services in Riyadh](/locations/riyadh)\n  - [Request a service / Contact us](/request-service)",
+  "faqAr": [
+    {
+      "question": "كيف تُختار أنسب تقنية حقن لكل موقع؟",
+      "answer": "القرار يستند إلى نوع التربة ومشكلتها الجوهرية: ترب رملية نافذة تناسبها حقن الأسمنت والنفاذ، الترب الطينية تحتاج حقناً كيميائياً، والترب الهشة قد تتطلب Jet Grouting لتكوين أعمدة داعمة.",
+      "questionEn": "How is the most appropriate grouting technique selected for each site?",
+      "answerEn": "The decision is based on soil type and core problem: permeable sandy soils suit cement and permeation grouting, clays need chemical grouting, and weak soils may require Jet Grouting to form support columns."
+    },
+    {
+      "question": "ما الاختبارات الضرورية قبل تنفيذ أي عملية حقن؟",
+      "answer": "الحد الأدنى المطلوب: تحديد نوع التربة (SPT أو CPT)، قياس النفاذية، وتحليل عينات مختبرية. في المشاريع الكبيرة تُضاف دراسة جيوفيزيائية (GPR/ERT) للحصول على صورة شاملة.",
+      "questionEn": "What tests are required before any grouting operation?",
+      "answerEn": "The minimum required: soil type identification (SPT or CPT), permeability measurement, and laboratory sample analysis. For larger projects, a geophysical study (GPR/ERT) is added for a comprehensive picture."
+    },
+    {
+      "question": "كيف تُقيَّم جودة ونجاح عملية الحقن بعد التنفيذ؟",
+      "answer": "عبر اختبارات تحقق ما بعد الحقن: CPT أو اختبار ضغط المياه لقياس التحسن في خصائص التربة، مراقبة أجهزة قياس الهبوط، والفحص البصري للتشققات. تُقارَن النتائج بالقياسات الأولية.",
+      "questionEn": "How is grouting quality and success evaluated post-execution?",
+      "answerEn": "Through post-grouting verification tests: CPT or water pressure tests measuring soil property improvement, settlement monitoring instruments, and visual crack inspection. Results are compared against baseline measurements."
+    },
+    {
+      "question": "ما العوامل التي تُحدد تكلفة مشروع حقن التربة؟",
+      "answer": "الأهم: عمق الحقن، نوع المادة المستخدمة، تعقيد المشروع وإمكانية الوصول، كمية الحقن المطلوبة، ووجود إنشاءات حساسة مجاورة تستدعي ضوابط إضافية.",
+      "questionEn": "What factors determine the cost of a soil grouting project?",
+      "answerEn": "Key factors: injection depth, material type used, project complexity and access, required grouting volume, and presence of sensitive adjacent structures requiring additional controls."
+    }
+  ],
+  "faqEn": [
+    {
+      "question": "How do we confirm cavities/voids below ground?",
+      "answer": "A reliable workflow combines geophysics with targeted probing/drilling where needed. The goal is to turn anomalies into confirmed targets before remediation."
+    },
+    {
+      "question": "Is every void an immediate hazard?",
+      "answer": "Not necessarily. Risk depends on size, depth, location relative to loads, and water conditions. We assess both severity and likelihood of progression."
+    },
+    {
+      "question": "What happens after voids are detected?",
+      "answer": "Common options include cement grouting, drainage improvements, or localized strengthening depending on root cause (karst, leakage, weak backfill, etc.)."
+    },
+    {
+      "question": "How do you reduce surprises during execution?",
+      "answer": "By staged verification, correlating geophysical anomalies with field observations, and updating the treatment plan when new information emerges."
+    }
+  ]
+}

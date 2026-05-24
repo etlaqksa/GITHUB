@@ -1,0 +1,79 @@
+{
+  "id": 40,
+  "title": "تأثير الأعمال الإنشائية المجاورة على استقرار المباني القائمة",
+  "titleEn": "Impact of Nearby Construction on Existing Building Stability",
+  "category": "موسوعة الحقن والتحسين",
+  "categoryEn": "Grouting & Improvement Encyclopedia",
+  "categoriesAr": [
+    "موسوعة الحقن والتحسين",
+    "الهندسة الجيوتقنية",
+    "حقن التربة",
+    "موسوعة حقن التربة"
+  ],
+  "categoriesEn": [
+    "Grouting & Improvement Encyclopedia",
+    "Geotechnical Engineering",
+    "Soil Grouting",
+    "Ground Improvement Library"
+  ],
+  "date": "2025-12-27",
+  "readTime": "3 دقيقة",
+  "readTimeEn": "3 min",
+  "author": "فريق ETLAQ الهندسي",
+  "slug": "impact-of-nearby-construction-on-existing-building-stability",
+  "image": {
+    "url": "/favicon.webp",
+    "alt": "تأثير الأعمال الإنشائية المجاورة على استقرار المباني القائمة",
+    "creditName": "ETLAQ (generated)",
+    "creditUrl": "",
+    "license": "Internal"
+  },
+  "excerpt": "المقدمة تُعد الأعمال الإنشائية المجاورة من العوامل الجوهرية التي قد تؤثر سلبًا على استقرار المباني القائمة، لا سيما في المناطق العمرانية ذات الكثافة العالية. تشمل هذه الأعمال عمليات الحفر، والحقن الأرضي، والإنشاءات العميقة التي قد تؤدي إلى تغيرات في خواص التربة وأنماط الإجهاد، مما يُسفر عن هبوط أرضي، وتشقق في المنشآت، وأحيانًا تدهور في…",
+  "excerptEn": "Introduction Adjacent construction activities represent a critical factor that can adversely affect the stability of existing buildings, particularly in densely built urban areas. Such activities include excavation, soil grouting, and deep foundation works which alter soil properties and stress distribution, potentially causing ground…",
+  "content": "### المقدمة\n  \n  تُعد الأعمال الإنشائية المجاورة من العوامل الجوهرية التي قد تؤثر سلبًا على استقرار المباني القائمة، لا سيما في المناطق العمرانية ذات الكثافة العالية. تشمل هذه الأعمال عمليات الحفر، والحقن الأرضي، والإنشاءات العميقة التي قد تؤدي إلى تغيرات في خواص التربة وأنماط الإجهاد، مما يُسفر عن هبوط أرضي، وتشقق في المنشآت، وأحيانًا تدهور في الأداء الخرساني أو الانشائي. من ثم، تبرز أهمية دراسة وتحليل تأثير هذه الأعمال بالتفصيل لتجنب المخاطر الهيكلية وضمان سلامة المباني القائمة.\n  \n  تتناول هذه المقالة أهمية تقييم تأثير الأعمال الإنشائية المجاورة، الأساليب الهندسية المستخدمة في رصد وتحليل المشكلات الإنشائية، وطرق المعالجة والتقنيات الحديثة لتحسين التربة وحقنها وفقًا للمعايير الدولية مثل EN 12715 وASTM.\n  \n  ### المحتوى التفصيلي\n  \n  #### 1. آليات تأثير الأعمال الإنشائية المجاورة على المباني القائمة\n  \n  عند تنفيذ أعمال الحفر أو الحقن في الأراضي المجاورة، تحدث تغييرات في توزيع الضغوط الأرضية والتي قد تؤدي إلى نقل وتحويل التشوهات نحو المنشآت القائمة. تلك الآليات تشمل:\n  \n  - **الهبوط الكلي والهبوط التفريقي (Total and Differential Settlement):** الهبوط الكلي نتيجة انضغاط التربة، أما التفريقي فيؤثر بشكل خاص على استقرار المنشأة مما يؤدي إلى نشوء تشققات وتحميل غير متساوٍ.\n    \n  - **تغيرات في خواص التربة:** قد يؤدي تغيير محتوى الرطوبة أو إزالة التربة إلى ضعف قدرة التحمل، خاصة في التربة الطينية والرملية.\n  \n  - **تأثير الاهتزازات:** معدات الحفر والحقن تُنتج اهتزازات قد تؤثر على أداء التربة والأساسات.\n  \n  #### 2. المعايير الدولية والتوجيهات الفنية والمتطلبات الهندسية\n  \n  يُوصى بالعودة إلى المعايير الفنية لتعزيز الإجراءات الوقائية أثناء تنفيذ أعمال الحفر والحقن:\n  \n  - **EN 12715:** معيار أوروبي يُحدد متطلبات مراقبة التشققات في المنشآت أثناء الحقن.\n  \n  - **FHWA Publications:** توجيهات إدارة الطرق السريعة الأمريكية في تقنيات الحقن والمراقبة.\n  \n  - **ASTM Standards (مثل ASTM D4633, ASTM C828):** تحدد طرق حقن التربة وكيميائيات المعالجة وجودة المواد.\n  \n  #### 3. طرق الرصد الهندسي لمراقبة استقرار المباني\n  \n  - **جسر المراقبة (Crack Monitoring):** تركيب أجهزة قياس حركة التشققات لتقييم التغيرات الفورية خلال الأشهر الأولى بعد بدء الأعمال.\n    \n  - **رادار اختراق الأرض (GPR):** لاكتشاف الفراغات أو التغيرات في خصائص التربة حول الأساسات بدون حفر.\n  \n  - **المسح الكهربائي والسيزمي:** لتحديد مناطق ضعف التربة والتغيرات في الكثافة.\n  \n  #### 4. تقنيات الحقن والتدعيم المناسبة للأعمال المجاورة\n  \n  - **حقن الأسمنت (Cement Grouting):** يستخدم لملء الفراغات وتثبيت التربة بفعالية. يُطبق تحت ضغوط مضبوطة لتفادي تكدس التربة المجاورة.\n  \n  - **حقن البولي يوريثان (Polyurethane Injection):** فعال لوقف تسرب المياه ولتقليل الهبوط، سريع التصلب وخفيف الوزن.\n  \n  - **حقن النفث (Jet Grouting):** تقنية متقدمة لتشكيل أعمدة خرسانية تزيد من صلابة التربة في المناطق المتأثرة.\n  \n  كما يُفضل تطبيق برامج مراقبة الجودة (QA/QC) بشكل مستمر خلال مراحل الحقن لقياس الضغوط والتدفقات وحفظ سجلات التقدم.\n  \n  #### 5. التحديات والحلول في معالجة تأثيرات الأنشطة المجاورة\n  \n  - **تجنب الهبوط التفريقي:** عن طريق تنفيذ نماذج تحليل استقرار ومعالجة التربة قبل البدء في الأشغال.\n  \n  - **مراقبة متواصلة:** لضمان التعرف المبكر على أي هبوط أو تشققات عن طريق أجهزة قياس حساسة.\n  \n  - **التنسيق مع أصحاب المباني:** لتوفير خطط طوارئ وتأمين المنشآت أثناء فترة تنفيذ الأعمال.\n  \n  #### 6. أهمية فحص ودراسة التربة قبل وأثناء التنفيذ\n  \n  فحص التربة بكفاءة يعتبر حجر الأساس في فهم تأثير الأعمال المجاورة، ويشمل:\n  \n  - تحليل طبقات التربة وخصائصها (الكثافة، محتوى الماء، مقاومة التحميل).\n  \n  - تحديد وجود فراغات أو شقوق.\n  \n  - قياس منسوب المياه الجوفية.\n  \n  وهذا يتيح اختيار التقنية الأنسب للحقن والمعالجة ويقلل من المخاطر.\n  \n  ### الخلاصة\n  \n  تُعد دراسة تأثير الأعمال الإنشائية المجاورة على استقرار المباني القائمة عملية هندسية معقدة تتطلب فهماً عميقاً لسلوك التربة، واستخدام تقنيات مبتكرة للرصد والمعالجة. التزام المهندسين بأحدث المعايير الدولية، وتطبيق برامج مراقبة فعالة، واستعمال أساليب الحقن الحديثة مثل حقن الأسمنت والبولي يوريثان وحقن النفث تضمن حماية المنشآت القائمة من المخاطر المحتملة.\n  \n  الاهتمام المسبق بتقييم التربة ودراسة التفاعلات الأرضية مع المشاريع المجاورة هو السبيل لضمان استدامة المباني وسلامتها الإنشائية.\n  \n  ## روابط ذات صلة داخل موقعنا\n  \n  - [حقن التربة (الحقن الأسمنتي)](/services/grouting)\n  - [الاختبارات الجيوفيزيائية (GPR/ERT/MASW)](/services/geophysical)\n  - [جميع المدن التي نغطيها](/locations)\n  - [خدماتنا في الرياض](/locations/riyadh)\n  - [اطلب خدمة / تواصل معنا](/request-service)",
+  "contentEn": "### Introduction\n  \n  Adjacent construction activities represent a critical factor that can adversely affect the stability of existing buildings, particularly in densely built urban areas. Such activities include excavation, soil grouting, and deep foundation works which alter soil properties and stress distribution, potentially causing ground settlements, structural cracks, and deterioration in the structural performance of buildings.\n  \n  Therefore, comprehensively assessing and analyzing the impact of adjacent works is essential to mitigate structural risks and ensure the safety of existing structures.\n  \n  This article covers the significance of evaluating the impacts of adjacent construction, engineering monitoring and analysis methods, and modern soil improvement and grouting techniques compliant with international standards such as EN 12715 and ASTM.\n  \n  ### Detailed Technical Content\n  \n  #### 1. Mechanisms of Impact from Adjacent Construction on Existing Buildings\n  \n  When excavation or grouting occurs near existing structures, stress redistribution within the soil leads to deformation patterns that can propagate to the building foundations. Key mechanisms include:\n  \n  - **Total and Differential Settlement:** Total settlement results from overall soil compression, while differential settlement causes uneven structural loading and crack development.\n  \n  - **Changes in Soil Properties:** Alterations in moisture content or soil removal weaken support capacity, especially in clay and loose sandy soils.\n  \n  - **Vibration Effects:** Ground vibrations from heavy machinery may induce additional stresses or reduce soil strength.\n  \n  #### 2. International Standards and Engineering Guidance\n  \n  Adhering to relevant standards and guidelines is critical for safe execution and monitoring:\n  \n  - **EN 12715:** European standard defining crack monitoring requirements during pressure grouting.\n  \n  - **FHWA Publications:** U.S. Federal Highway Administration documents outlining soil grouting and monitoring practices.\n  \n  - **ASTM Standards (e.g., ASTM D4633 for cement grouting, ASTM C828 for epoxy injection):** Provide testing protocols for injection materials and procedures.\n  \n  #### 3. Engineering Monitoring Methods for Building Stability\n  \n  - **Crack Monitoring:** Installing crack width gauges or displacement sensors to measure real-time structural response during adjacent works.\n  \n  - **Ground Penetrating Radar (GPR):** Non-invasive technique for detecting subsurface voids or soil heterogeneities around foundations.\n  \n  - **Electrical Resistivity and Seismic Surveys:** Identify zones of weak or disturbed soil through contrast in electrical and acoustic properties.\n  \n  #### 4. Suitable Injection and Soil Stabilization Techniques\n  \n  - **Cement Grouting:** Effective for filling voids and stabilizing soft soils, applied under controlled low pressures to avoid additional soil displacement.\n  \n  - **Polyurethane Injection:** Rapid curing material suitable for sealing water leaks and lifting settled areas with minimal weight addition.\n  \n  - **Jet Grouting:** High-pressure jetting to create soil–cement columns, enhancing ground stiffness in critical zones.\n  \n  Continuous QA/QC during injection works, including pressure and flow monitoring and maintaining detailed records, is essential for controlled ground improvement.\n  \n  #### 5. Challenges and Solutions in Mitigating Adjacent Construction Effects\n  \n  - **Preventing Differential Settlement:** Through pre-construction geotechnical modeling and pre-emptive soil treatment.\n  \n  - **Continuous Monitoring:** Early detection of ground movements using sensors enables proactive mitigation.\n  \n  - **Stakeholder Communication:** Coordination with building owners for emergency response plans and safety assurance.\n  \n  #### 6. Importance of Soil Investigation Before and During Construction\n  \n  Comprehensive soil investigation underpins understanding of ground behavior, covering:\n  \n  - Soil stratigraphy and mechanical properties (density, moisture content, bearing capacity).\n  \n  - Identification of cavities or discontinuities.\n  \n  - Monitoring groundwater levels.\n  \n  This enables selecting the most appropriate grouting strategy and minimizes structural risks.\n  \n  ### Conclusion\n  \n  Evaluating the impact of adjacent construction activities on existing buildings is a complex geotechnical challenge necessitating a robust understanding of soil-structure interaction, utilization of modern monitoring technologies, and application of advanced grouting techniques. Compliance with international standards such as EN 12715 and ASTM, coupled with diligent QA/QC practices, ensures buildings’ structural integrity is safeguarded.\n  \n  Proactive soil assessment and careful implementation of soil improvement measures are fundamental to sustaining the safety and durability of existing urban structures amidst new construction activities.\n  \n  ---\n  \n  # References\n  \n  - European Committee for Standardization (CEN), EN 12715: “Execution of special geotechnical works — Grouting”\n  \n  - Federal Highway Administration (FHWA), “Grouting Technology for Soil Improvements,” Various publications.\n  \n  - ASTM International (ASTM), Standards such as ASTM D4633 - Standard Guide for Cementitious Grout for Treated Soils, ASTM C828 - Standard Practice for Application of Epoxy Injection for Repair of Concrete.\n  \n  - Das, B.M., “Principles of Foundation Engineering,” 9th Edition, Cengage Learning, 2015.\n  \n  - Terzaghi, K., Peck, R.B., Mesri, G., “Soil Mechanics in Engineering Practice,” 3rd Edition, Wiley, 1996.\n  \n  ---\n  \n  This article is prepared with due technical diligence, suitable for publishing on professional soil grouting and ground improvement dedicated platforms.\n  \n  ## Related links on our site\n  \n  - [Soil Grouting (Cement Injection)](/services/grouting)\n  - [Geophysical Testing (GPR/ERT/MASW)](/services/geophysical)\n  - [All cities we serve](/locations)\n  - [Our services in Riyadh](/locations/riyadh)\n  - [Request a service / Contact us](/request-service)",
+  "faqAr": [
+    {
+      "question": "كيف تتكوّن التكهفات الكارستية تحت المباني؟",
+      "answer": "تتكوّن عادة في الصخور الكلسية أو الجبسية عندما تُذيب المياه الحمضية المعادن تدريجياً عبر الشقوق. في المناطق الجافة كالمملكة العربية السعودية يكون الجبس المصدر الرئيسي للتكهفات.",
+      "questionEn": "How do karstic cavities form beneath buildings?",
+      "answerEn": "They typically form in limestone or gypsum rock when acidic water gradually dissolves minerals through fractures. In arid regions like Saudi Arabia, gypsum is the main source of cavity formation."
+    },
+    {
+      "question": "ما الخطوات الأولى عند اكتشاف تكهف تحت مبنى قائم؟",
+      "answer": "أولاً التوثيق والقياس الدقيق لموقع وحجم التكهف، ثم تقييم استقرار البلاطة فوقه، ثم تحديد مصدر التكهف لمنع توسعه، وأخيراً اختيار طريقة الملء المناسبة.",
+      "questionEn": "What are the first steps when a cavity is discovered beneath an existing building?",
+      "answerEn": "First, accurately document and measure cavity location and size; assess slab stability above it; identify the cavity source to prevent expansion; then select the appropriate filling method."
+    },
+    {
+      "question": "هل يمكن أن يتوسع التكهف بعد الملء بالحقن؟",
+      "answer": "إذا لم يُعالَج مصدر الماء المسبّب للتكهف، فنعم يمكن تكوّن تكهفات جديدة قريبة. لذلك الحقن وحده غير كافٍ دون معالجة العوامل المُسبّبة.",
+      "questionEn": "Can the cavity expand again after grouting?",
+      "answerEn": "If the water source causing the cavity is not addressed, new adjacent cavities can form. This is why grouting alone is insufficient without treating the underlying causes."
+    },
+    {
+      "question": "ما الفرق بين معالجة تكهف جاف وآخر مملوء بالماء؟",
+      "answer": "التكهف الجاف يُملأ بمعجون أسمنتي أو رغوي مباشرة. التكهف المائي يحتاج معجوناً سريع التصلّد أو مادة تتفاعل مع الماء كالبولي يوريثان قبل الملء الكامل.",
+      "questionEn": "What is the difference between treating a dry cavity and a water-filled one?",
+      "answerEn": "Dry cavities are filled directly with cement or foam grout. Water-filled cavities require fast-setting grout or water-reactive material like polyurethane before full filling."
+    }
+  ],
+  "faqEn": [
+    {
+      "question": "When is soil grouting the right solution?",
+      "answer": "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly."
+    },
+    {
+      "question": "How is cement grouting different from other grouts?",
+      "answer": "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective."
+    },
+    {
+      "question": "How do you choose the mix and viscosity?",
+      "answer": "We base it on ground type, test results, and the treatment objective. In many cases, mixes are adjusted progressively to balance penetration and control."
+    },
+    {
+      "question": "How do I know the treatment worked?",
+      "answer": "Indicators include stabilized take patterns, improved monitoring results, and verification outputs (probing/tests) aligned with the project’s acceptance criteria."
+    }
+  ]
+}

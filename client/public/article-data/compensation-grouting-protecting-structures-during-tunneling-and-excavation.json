@@ -1,0 +1,79 @@
+{
+  "id": 16,
+  "title": "الحقن التعويضي (Compensation Grouting): حماية المنشآت أثناء الحفر النفقي",
+  "titleEn": "Compensation Grouting: Protecting Structures During Tunneling and Excavation",
+  "category": "إدارة الأصول",
+  "categoryEn": "Asset Management",
+  "categoriesAr": [
+    "إدارة الأصول",
+    "الهندسة الجيوتقنية",
+    "حقن التربة",
+    "موسوعة حقن التربة"
+  ],
+  "categoriesEn": [
+    "Asset Management",
+    "Geotechnical Engineering",
+    "Soil Grouting",
+    "Ground Improvement Library"
+  ],
+  "date": "2025-10-16",
+  "readTime": "3 دقيقة",
+  "readTimeEn": "3 min",
+  "author": "فريق ETLAQ الهندسي",
+  "slug": "compensation-grouting-protecting-structures-during-tunneling-and-excavation",
+  "image": {
+    "url": "/favicon.webp",
+    "alt": "الحقن التعويضي (Compensation Grouting): حماية المنشآت أثناء الحفر النفقي",
+    "creditName": "ETLAQ (generated)",
+    "creditUrl": "",
+    "license": "Internal"
+  },
+  "excerpt": "مقدمة تُعد عمليات الحفر النفقي من التحديات الهندسية الكبرى التي تواجه المشروعات البنية التحتية الحديثة، خاصة في المناطق الحضرية التي تضم منشآت قائمة حساسة. ومن المشاكل الشائعة أثناء الحفر النفقي هو هبوط التربة وانخفاض مستوى الأساسات، مما قد يسبب أضرارًا جسيمة في المنشآت المجاورة. ومن الحلول الفعالة لمواجهة هذه المشكلة هو الحقن التعويضي…",
+  "excerptEn": "Introduction Tunneling and underground excavation pose significant engineering challenges, especially in urban areas with sensitive existing structures. One common issue during tunneling is soil settlement and foundation drop, which can cause serious damage to adjacent buildings. Compensation Grouting is an advanced, controlled technique…",
+  "content": "### مقدمة  \n  تُعد عمليات الحفر النفقي من التحديات الهندسية الكبرى التي تواجه المشروعات البنية التحتية الحديثة، خاصة في المناطق الحضرية التي تضم منشآت قائمة حساسة. ومن المشاكل الشائعة أثناء الحفر النفقي هو هبوط التربة وانخفاض مستوى الأساسات، مما قد يسبب أضرارًا جسيمة في المنشآت المجاورة. ومن الحلول الفعالة لمواجهة هذه المشكلة هو الحقن التعويضي (Compensation Grouting)، وهو تقنية متقدمة ومتحكم بها تهدف إلى تعويض الهبوط الأرضي والسيطرة عليه، وبالتالي حماية المنشآت أثناء عمليات الحفر.\n  \n  ### ما هو الحقن التعويضي؟  \n  الحقن التعويضي هو عملية حقن تربة تحت المنشآت القائمة بواسطة مواد معينة، عادةً خليط أسمنتي أو مواد أخرى مناسبة، بهدف رفع السفوح التحتية التي هبطت أو تقليل الهبوط المتوقع نتيجة للحفر. تنفذ هذه العملية بصورة تحكمية بحيث يتم التحقق المستمر من تحركات التربة والمنشآت باستخدام أجهزة مراقبة التشققات (Crack Monitors) وأجهزة قياس الهبوط.\n  \n  ### آلية العمل  \n  تُحفر ثقوب حقن صغيرة تبعد عن المنشأة بعدة أمتار في الطبقة الأرضية التي تتأثر بالحفر النفقي. يتم إدخال أنابيب خاصة (عادة أنابيب مزدوجة تتيح التحكم في تدفق المواد) وتحقن المواد تحت ضغط مضبوط. عند حقن المادة، تُولد قوة رفع على التربة مما يعوض الهبوط ويقلل من التغيرات الجانبية في التربة المحيطة بالمنشأة. وبفضل المراقبة المستمرة، يمكن تعديل معدلات الحقن لتحقيق أفضل نتائج دون التسبب باضطراب زائد في الأرض.\n  \n  ### المواد المستخدمة  \n  - **خليط الأسمنت:** الأكثر شيوعاً، يوفر صلابة وقوة في التربة بعد التصلب.  \n  - **البوليمرات التفاعلية:** مثل البولي يوريثان، تستخدم أحيانًا لتقليل النفاذية أو معالجة تشققات نشطة.  \n  - **خليط الأسمنت المعدل:** يتم تعديله كي يتمدد قليلاً لتوفير رفع أفضل دون تشقق التربة.\n  \n  ### المعايير والممارسات الدولية  \n  يُنصح بالاطلاع على معايير مثل EN 12715 التي تخصص متطلبات ومقاييس عمليات الحقن المختلفة بما فيها الحقن التعويضي. كما توفر إرشادات FHWA الأمريكية (Federal Highway Administration) معايير تنفيذية تختص بفعالية وسلامة العمليات تحت المنشآت القائمة. من الضروري الالتزام بخطة مراقبة صارمة تضم رصد التشققات، قياس الانزياح الرأسي والأفقي، ومتابعة ضغط الحقن مُسجلاً.\n  \n  ### التطبيقات العملية  \n  - حماية المباني التاريخية والآيلة للسقوط أثناء الحفر تحتها.  \n  - تثبيت الأنفاق ومحطات المترو في المناطق الحضرية.  \n  - معالجة الهبوط الناتج عن الحفر العميق بجانب المباني الحساسة.  \n  - تعزيز الأراضي الضعيفة دون الحاجة لهدم المنشآت.\n  \n  ### لماذا الحقن التعويضي؟  \n  - يقلل مخاطر الهبوط المفاجئ والضرر المحتمل للمنشآت.  \n  - تحكم دقيق في استجابة التربة والهياكل.  \n  - سرعة الاستجابة وسهولة التنفيذ في المواقع الصعبة.  \n  - قابلية التطبيق مع تقنيات مراقبة متقدمة.\n  \n  ### خاتمة  \n  يعتبر الحقن التعويضي تقنية حيوية في مجال تحسين التربة وحماية المنشآت أثناء عمليات الحفر النفقي، خاصة في الأسواق الحضرية ذات الكثافة العالية. من خلال فهم الآلية بشكل جيد والالتزام بالمعايير الفنية الدقيقة، يمكن تحقيق أقصى قدر من الحماية للمنشآت القائمة وتفادي مشاكل الهبوط. يجدر بالمختصين دمج برامج مراقبة دقيقة مع تطبيق هذه التقنية لضمان نتائج آمنة وفعالة.\n  \n  ## روابط ذات صلة داخل موقعنا\n  \n  - [حقن التربة (الحقن الأسمنتي)](/services/grouting)\n  - [كشف التكهفات والفراغات](/services/cavity)\n  - [جميع المدن التي نغطيها](/locations)\n  - [خدماتنا في الرياض](/locations/riyadh)\n  - [اطلب خدمة / تواصل معنا](/request-service)",
+  "contentEn": "### Introduction  \n  Tunneling and underground excavation pose significant engineering challenges, especially in urban areas with sensitive existing structures. One common issue during tunneling is soil settlement and foundation drop, which can cause serious damage to adjacent buildings. Compensation Grouting is an advanced, controlled technique aimed at mitigating and compensating for ground settlement, thus protecting structures during tunneling works.\n  \n  ### What is Compensation Grouting?  \n  Compensation Grouting is a controlled soil injection process executed beneath existing structures using cementitious or other suitable grouting materials to lift settled ground or reduce anticipated settlement due to tunneling. This method involves continuous monitoring of soil and structure movements through instruments such as crack monitors and settlement gauges.\n  \n  ### Working Mechanism  \n  Small grout injection ports are installed a few meters away from the structures in the soil strata influenced by tunnel excavation. Special double-tube injection pipes are used to inject grout at controlled pressures. The injected grout exerts an upward force on the soil, compensating for the settlement and limiting lateral soil movements. Continuous monitoring allows precise injection rates adjustment to maximize effectiveness without causing excessive soil disturbance.\n  \n  ### Materials Used  \n  - **Cementitious grout:** The most common grout material providing strength and stiffness to the soil once cured.  \n  - **Reactive polymers:** Such as polyurethane, occasionally used to reduce permeability or treat active cracks.  \n  - **Modified cement grout:** Tailored to have slight expansion properties to better compensate settlement without soil fracturing.\n  \n  ### Relevant Standards and Practices  \n  Reference should be made to international standards such as **EN 12715**, which outlines requirements and quality controls for grouting works including compensation grouting. The **FHWA (Federal Highway Administration)** guidelines provide practical specifications on performing grouting under existing structures for safety and effectiveness. A strict QA/QC program including crack monitoring, vertical and horizontal displacement measurements, and grout pressure logging is essential.\n  \n  ### Practical Applications  \n  - Protection of historic or vulnerable buildings during tunneling works underneath.  \n  - Stabilization of subway tunnels and stations in urban settings.  \n  - Mitigation of settlement caused by deep excavations adjacent to sensitive structures.  \n  - Ground improvement without necessitating demolition or underpinning.\n  \n  ### Why Choose Compensation Grouting?  \n  - Minimizes risks of sudden settlements and structural damage.  \n  - Provides precise control over soil and structural behavior.  \n  - Rapid response and ease of implementation in restricted sites.  \n  - Compatible with advanced instrumentation and monitoring systems.\n  \n  ### Conclusion  \n  Compensation Grouting plays a vital role in ground improvement and safeguarding structures during tunneling, particularly in dense urban environments. With a thorough understanding of its mechanism and strict adherence to engineering standards, it is possible to ensure maximum protection of existing infrastructure while preventing costly settlements. Integration of robust monitoring programs with this technique guarantees safe and efficient outcomes for modern geotechnical projects.\n  \n  ---\n  \n  # References  \n  - EN 12715: Execution and control of grouting for structures.  \n  - FHWA Report: Geotechnical Engineering Circular No. 6 (GEC6), Soil and Rock Grouting, U.S. Federal Highway Administration.  \n  - ASTM D5849 – Standard Test Method for Measurement of Grout Spreadability.\n  \n  ## Related links on our site\n  \n  - [Soil Grouting (Cement Injection)](/services/grouting)\n  - [Void & Cavity Detection](/services/cavity)\n  - [All cities we serve](/locations)\n  - [Our services in Riyadh](/locations/riyadh)\n  - [Request a service / Contact us](/request-service)",
+  "faqAr": [
+    {
+      "question": "هل يمكن تطبيق حقن التربة تحت المباني القائمة دون تفريغها؟",
+      "answer": "نعم، وهو من أبرز مزايا الحقن. يُنفَّذ من خلال حفر نقاط حقن صغيرة بحد أدنى من الأعمال الإنشائية دون إخلاء المبنى في معظم الحالات.",
+      "questionEn": "Can soil grouting be applied under occupied buildings?",
+      "answerEn": "Yes, this is one of its key advantages. It is executed through small drill points with minimal structural work and without evacuating the building in most cases."
+    },
+    {
+      "question": "ما الفرق بين حقن الأسمنت وحقن البوليمرات؟",
+      "answer": "حقن الأسمنت يُستخدم لملء الفراغات الكبيرة وتقوية التربة ميكانيكياً، بينما يناسب حقن البوليمرات التحكم بالتسرب وملء المسام الدقيقة التي لا يخترقها الأسمنت.",
+      "questionEn": "What is the difference between cement and polymer grouting?",
+      "answerEn": "Cement grouting fills large voids and improves mechanical strength; polymer grouting targets seepage control and fine pores that cement cannot penetrate."
+    },
+    {
+      "question": "كيف تعرف أن حقن التربة هو الحل المناسب لمشكلتك؟",
+      "answer": "إذا كانت المشكلة هبوطاً أو تشققات ناتجة عن ضعف التربة أو تكهفات تحت الأساسات، فالحقن عادة الخيار الأنسب. التشخيص الدقيق يُؤكد ذلك قبل أي قرار.",
+      "questionEn": "How do you know if soil grouting is the right solution for your problem?",
+      "answerEn": "If the issue is settlement or cracks caused by weak soil or cavities under foundations, grouting is usually the right choice. Accurate diagnosis confirms this before any decision."
+    },
+    {
+      "question": "ما المدة الزمنية اللازمة لملاحظة تحسن بعد الحقن؟",
+      "answer": "التحسن الميكانيكي يبدأ مع تصلّد الحقن خلال 24-72 ساعة للخلطات الأسمنتية. التقييم الكامل يستلزم أسبوعين إلى أربعة أسابيع مع مراقبة منتظمة لأجهزة قياس الهبوط.",
+      "questionEn": "How long does it take to notice improvement after grouting?",
+      "answerEn": "Mechanical improvement begins as grout sets within 24-72 hours for cement mixes. Full assessment requires 2-4 weeks with regular settlement monitoring."
+    }
+  ],
+  "faqEn": [
+    {
+      "question": "When is soil grouting the right solution?",
+      "answer": "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly."
+    },
+    {
+      "question": "How is cement grouting different from other grouts?",
+      "answer": "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective."
+    },
+    {
+      "question": "How do you choose the mix and viscosity?",
+      "answer": "We base it on ground type, test results, and the treatment objective. In many cases, mixes are adjusted progressively to balance penetration and control."
+    },
+    {
+      "question": "How do I know the treatment worked?",
+      "answer": "Indicators include stabilized take patterns, improved monitoring results, and verification outputs (probing/tests) aligned with the project’s acceptance criteria."
+    }
+  ]
+}

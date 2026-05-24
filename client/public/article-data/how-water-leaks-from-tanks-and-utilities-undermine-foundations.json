@@ -1,0 +1,79 @@
+{
+  "id": 36,
+  "title": "تأثير تسربات المياه (الخزانات والشبكات) على استقرار الأساسات",
+  "titleEn": "How Water Leaks from Tanks and Utilities Undermine Foundations",
+  "category": "موسوعة الحقن والتحسين",
+  "categoryEn": "Grouting & Improvement Encyclopedia",
+  "categoriesAr": [
+    "موسوعة الحقن والتحسين",
+    "الهندسة الجيوتقنية",
+    "حقن التربة",
+    "موسوعة حقن التربة"
+  ],
+  "categoriesEn": [
+    "Grouting & Improvement Encyclopedia",
+    "Geotechnical Engineering",
+    "Soil Grouting",
+    "Ground Improvement Library"
+  ],
+  "date": "2025-12-15",
+  "readTime": "3 دقيقة",
+  "readTimeEn": "3 min",
+  "author": "فريق ETLAQ الهندسي",
+  "slug": "how-water-leaks-from-tanks-and-utilities-undermine-foundations",
+  "image": {
+    "url": "/favicon.webp",
+    "alt": "تأثير تسربات المياه (الخزانات والشبكات) على استقرار الأساسات",
+    "creditName": "ETLAQ (generated)",
+    "creditUrl": "",
+    "license": "Internal"
+  },
+  "excerpt": "مقدمة تعد تسربات المياه من الخزانات وشبكات المياه من أهم المشكلات الهندسية التي تؤثر سلباً على استقرار الأساسات، مما قد يتسبب في هبوط المباني، وتشققها، وحتى انهيارها في الحالات القصوى. ترتبط هذه المشكلة بطبيعة التربة، ونوع التسرب، وكمية المياه المتسربة، بالإضافة إلى خصائص الأساس وتصميمه. لذلك، فإن فهم آلية تأثير تسرب المياه على التربة…",
+  "excerptEn": "Introduction Water leakage from reservoirs and water distribution networks is a critical engineering issue adversely affecting foundation stability. Such leakages can lead to building settlement, cracking, and in extreme cases, structural failure. The impact depends largely on soil type, leakage volume and characteristics, foundation…",
+  "content": "# تأثير تسربات المياه (الخزانات والشبكات) على استقرار الأساسات\n  \n  **مقدمة**  \n  تعد تسربات المياه من الخزانات وشبكات المياه من أهم المشكلات الهندسية التي تؤثر سلباً على استقرار الأساسات، مما قد يتسبب في هبوط المباني، وتشققها، وحتى انهيارها في الحالات القصوى. ترتبط هذه المشكلة بطبيعة التربة، ونوع التسرب، وكمية المياه المتسربة، بالإضافة إلى خصائص الأساس وتصميمه. لذلك، فإن فهم آلية تأثير تسرب المياه على التربة والأساسات يمثل خطوة أساسية في تقييم المخاطر واختيار طرق المعالجة الملائمة لضمان سلامة المنشآت.\n  \n  **المحتوى الفني التفصيلي**  \n  \n  1. **آليات تأثير تسربات المياه على التربة والأساسات**  \n     - **تغيير خواص التربة:** يؤدي تسرب المياه إلى زيادة نسبة الرطوبة في التربة، ما يغير من خصائصها الميكانيكية مثل قوة التحمل ومقاومة القص. في الترب الطينية القابلة للتقلص والتمدد، قد يتسبب التسرب بتمدد أو انكماش التربة، مسببا تشوهات في الأساسات.  \n     - **تآكل التربة وانتقالها:** تتسبب حركة المياه تحت الأساسات في غسل وهجرة جزيئات التربة (الظاهرة المعروفة بتآكل النفاذية)، مما يؤدي إلى تشكل فراغات أو تكهفات تحت الأساسات. هذه الفراغات تسبب تراجع الدعم وتولد إجهادات زائدة تؤدي إلى هبوط موضعي أو شامل.  \n     - **ارتفاع مستوى المياه الجوفية:** يمكن لتسربات المياه أن ترفع منسوب المياه الجوفية بشكل غير متوقع، ما يغير من توزيع الضغوط الهيدروليكية ويخفض من مقاومة التربة، وخاصة في الترب الرملية أو الحصوية، مسببا انزلاق أو هبوط.  \n     - **ضغط هيدروليكي إضافي:** الجريان القوي أو النفوذ تحت الأساسات قد يولد ضغوط مياه جانبية إضافية تؤثر على سلامة التربة وقوى الاحتكاك التي تتحملها.\n  \n  2. **أنواع تسربات المياه وتأثيراتها**  \n     - *تسربات الشبكات:* غالباً ما تكون متفرقة وتتسبب في رطوبة وصعوبة تكتل التربة، وقد تؤدي إلى تآكل موضعي عند أماكن الكسر أو الوصلات.  \n     - *تسربات الخزانات:* نظرًا لحجم المياه المخزنة، تمتاز بالتسربات المستمرة ومناطق التشبع الواسعة، ما قد يؤدي إلى تمدد أو تسييل التربة تحت الأساسات إذا كانت التربة عرضة لذلك.\n  \n  3. **معايير وتقنيات الكشف عن تسربات المياه والتكهفات**  \n     - **رادار اختراق الأرض (GPR):** فعال في كشف الفراغات والتغيرات الرطوبية بدقة عالية.  \n     - **المسح الكهربائي المقاوم:** يحدد المناطق التي بها مياه زائدة أو تسرب من خلال قياس مقاومة التربة.  \n     - **المسح السيزمي:** يمكنه تقييم استقرار التربة وتحديد المناطق التي تعرضت لتآكل أو تسييل.  \n     - **مراقبة التشققات (Crack Monitoring):** لرصد تطور التشققات في المنشأة نتيجة تسرب المياه وتأثيرها على الاستقرار.\n  \n  4. **طرق معالجة آثار تسرب المياه على الأساسات**  \n     تعتمد الطرق على نوع التربة، درجة التأثير، وكمية المياه المتسربة، وتشمل:  \n     - **حقن التربة (Soil Grouting):**  \n       - *حقن الأسمنت (Cement Grouting):* لتعزيز التربة وملء الفراغات ومنع تسرب المياه تحت الأساسات.  \n       - *حقن البولي يوريثان (Polyurethane Injection):* لتكوين حاجز مائي سريع التصلب، ملائم لمعالجة التسربات النشطة بفعالية عالية.  \n       - *حقن النفث (Jet Grouting):* لإنشاء أعمدة خرسانية معززة في التربة المتأثرة بالتسرب.  \n       - *حقن الستار (Curtain Grouting):* إنشاء جدران عازلة مائية لمنع نفاذ المياه.  \n     - **تقوية ودعم الأساسات:** استخدام الخوازيق الصغيرة أو تدعيم القواعد بمواد مناسبة لتحمل الأحمال الأعلى الناتجة عن تغير خواص التربة.  \n     - **تحسين نظام الصرف:** لتخفيض منسوب المياه الجوفية، والحد من تراكم المياه تحت الأساسات.  \n     - **مراقبة مستمرة:** لضمان فعالية الحلول وتقييم أي تغيرات في الاستقرار.\n  \n  5. **المعايير الدولية ذات الصلة**  \n     - معيار EN 12715: معايير تنفيذ حقن المواد لتحسين التربة.  \n     - معايير ASTM C938 و ASTM D6103: لتقييم مواد حقن التربة واختبارها.  \n     - دليل FHWA (Federal Highway Administration) لاستخدام تقنيات السوائل المحقونة في معالجة التربة.  \n  \n  **خاتمة**  \n  تعد تسربات المياه من شبكة التوزيع والخزانات أحد العوامل الرئيسية التي تهدد استقرار الأساسات. فهم آليات تأثير المياه على التربة وتطبيق تقنيات الكشف والمعالجة المناسبة يضمنان استمرارية أداء المنشآت وسلامتها الهيكلية. ينصح بالاعتماد على الدراسات الجيوتقنية المتخصصة، المراقبة المستمرة، واستخدام تقنيات الحقن المتقدمة وفقاً للمعايير الدولية لحل هذه المشكلات بكفاءة عالية.\n  \n  ## روابط ذات صلة داخل موقعنا\n  \n  - [حقن التربة (الحقن الأسمنتي)](/services/grouting)\n  - [كشف التكهفات والفراغات](/services/cavity)\n  - [الاختبارات الجيوفيزيائية (GPR/ERT/MASW)](/services/geophysical)\n  - [جميع المدن التي نغطيها](/locations)\n  - [خدماتنا في الرياض](/locations/riyadh)\n  - [اطلب خدمة / تواصل معنا](/request-service)",
+  "contentEn": "# Impact of Water Leakage (Reservoirs and Networks) on Foundation Stability\n  \n  **Introduction**  \n  Water leakage from reservoirs and water distribution networks is a critical engineering issue adversely affecting foundation stability. Such leakages can lead to building settlement, cracking, and in extreme cases, structural failure. The impact depends largely on soil type, leakage volume and characteristics, foundation design, and site conditions. Hence, understanding the mechanisms by which water leakage affects soil and foundations is crucial for risk assessment and selecting appropriate remediation methods to ensure structural safety.\n  \n  **Detailed Technical Content**\n  \n  1. **Mechanisms of Water Leakage Impact on Soil and Foundations**  \n     - **Modification of Soil Properties:** Water leakage increases soil moisture content, altering mechanical properties such as bearing capacity and shear strength. In shrink-swell clays, leakage can cause soil expansion or contraction, inducing differential settlement and foundation distress.  \n     - **Soil Erosion and Particle Migration:** Subsurface water flow can cause soil particle washing (soil erosion), leading to the formation of subsurface voids or cavities beneath foundations. These voids reduce soil support, generate stress concentrations, and trigger localized or overall settlement.  \n     - **Rise in Groundwater Level:** Water leakage can elevate groundwater levels unexpectedly, affecting pore water pressures. In sandy or gravelly soils, this may reduce effective stress and shear strength, resulting in slips or foundation instability.  \n     - **Additional Hydraulic Pressure:** Flowing water under foundations may exert lateral hydraulic pressures, compromising soil stability and frictional resistance.\n  \n  2. **Types of Water Leakage and Their Effects**  \n     - *Network Leakages:* Typically localized leaks resulting in soil saturation, reduced cohesion, and potential localized erosion near joints or pipeline failures.  \n     - *Reservoir Leakages:* Larger volumes and prolonged leakage cause widespread saturation, increasing the risk of soil softening, liquefaction potential, and foundation distress beneath storage structures.\n  \n  3. **Detection Techniques for Water Leakages and Cavities**  \n     - **Ground Penetrating Radar (GPR):** Effective for high-resolution imaging of subsurface voids and moisture variations without excavation.  \n     - **Electrical Resistivity Surveys:** Identify high-moisture or water-affected zones by measuring soil resistivity changes.  \n     - **Seismic Surveys:** Assess soil stability and detect zones subject to erosion or liquefaction via acoustic wave velocity changes.  \n     - **Crack Monitoring:** Tracks evolving structural cracks to correlate with water leakage effects on stability and serviceability.\n  \n  4. **Mitigation Methods for Leakage-Induced Foundation Problems**  \n     Mitigation depends on soil characteristics, severity of impact, and leakage intensity:  \n     - **Soil Grouting Technologies:**  \n       - *Cementitious Grouting:* Used to strengthen soil, fill voids, and reduce permeability under foundations.  \n       - *Polyurethane Injection:* Rapid-setting hydrophobic materials to seal active water leaks efficiently.  \n       - *Jet Grouting:* High-pressure jets create cement-soil columns to reinforce affected zones.  \n       - *Curtain Grouting:* Construction of impermeable barriers to block water ingress.  \n     - **Foundation Strengthening:** Micro-piles, underpinning, or other structural reinforcements to carry increased loads from weakened soil.  \n     - **Drainage Improvement:** Installation of drainage systems to lower groundwater tables and reduce water accumulation.  \n     - **Continuous Monitoring:** Ensures remediation effectiveness and detects emerging stability concerns.\n  \n  5. **Relevant International Standards**  \n     - EN 12715: Execution of in-situ injections of cementitious and chemical groutings for ground improvement.  \n     - ASTM C938 and ASTM D6103: Standards for testing grout materials used in soil stabilization.  \n     - FHWA Guidelines: Recommendations for the use of grouting and chemical injection for soil stabilization and seepage control.\n  \n  **Conclusion**  \n  Water leakages from underground networks and reservoirs constitute a major threat to foundation stability. A thorough understanding of soil–water interaction mechanisms, coupled with the use of advanced detection and remediation techniques compliant with international standards, ensures structural safety and durability. It is essential to conduct detailed geotechnical investigations, implement ongoing structural monitoring, and apply state-of-the-art grouting solutions tailored to site-specific conditions.\n  \n  ## Related links on our site\n  \n  - [Soil Grouting (Cement Injection)](/services/grouting)\n  - [Void & Cavity Detection](/services/cavity)\n  - [Geophysical Testing (GPR/ERT/MASW)](/services/geophysical)\n  - [All cities we serve](/locations)\n  - [Our services in Riyadh](/locations/riyadh)\n  - [Request a service / Contact us](/request-service)",
+  "faqAr": [
+    {
+      "question": "كيف تُختار أنسب تقنية حقن لكل موقع؟",
+      "answer": "القرار يستند إلى نوع التربة ومشكلتها الجوهرية: ترب رملية نافذة تناسبها حقن الأسمنت والنفاذ، الترب الطينية تحتاج حقناً كيميائياً، والترب الهشة قد تتطلب Jet Grouting لتكوين أعمدة داعمة.",
+      "questionEn": "How is the most appropriate grouting technique selected for each site?",
+      "answerEn": "The decision is based on soil type and core problem: permeable sandy soils suit cement and permeation grouting, clays need chemical grouting, and weak soils may require Jet Grouting to form support columns."
+    },
+    {
+      "question": "ما الاختبارات الضرورية قبل تنفيذ أي عملية حقن؟",
+      "answer": "الحد الأدنى المطلوب: تحديد نوع التربة (SPT أو CPT)، قياس النفاذية، وتحليل عينات مختبرية. في المشاريع الكبيرة تُضاف دراسة جيوفيزيائية (GPR/ERT) للحصول على صورة شاملة.",
+      "questionEn": "What tests are required before any grouting operation?",
+      "answerEn": "The minimum required: soil type identification (SPT or CPT), permeability measurement, and laboratory sample analysis. For larger projects, a geophysical study (GPR/ERT) is added for a comprehensive picture."
+    },
+    {
+      "question": "كيف تُقيَّم جودة ونجاح عملية الحقن بعد التنفيذ؟",
+      "answer": "عبر اختبارات تحقق ما بعد الحقن: CPT أو اختبار ضغط المياه لقياس التحسن في خصائص التربة، مراقبة أجهزة قياس الهبوط، والفحص البصري للتشققات. تُقارَن النتائج بالقياسات الأولية.",
+      "questionEn": "How is grouting quality and success evaluated post-execution?",
+      "answerEn": "Through post-grouting verification tests: CPT or water pressure tests measuring soil property improvement, settlement monitoring instruments, and visual crack inspection. Results are compared against baseline measurements."
+    },
+    {
+      "question": "ما العوامل التي تُحدد تكلفة مشروع حقن التربة؟",
+      "answer": "الأهم: عمق الحقن، نوع المادة المستخدمة، تعقيد المشروع وإمكانية الوصول، كمية الحقن المطلوبة، ووجود إنشاءات حساسة مجاورة تستدعي ضوابط إضافية.",
+      "questionEn": "What factors determine the cost of a soil grouting project?",
+      "answerEn": "Key factors: injection depth, material type used, project complexity and access, required grouting volume, and presence of sensitive adjacent structures requiring additional controls."
+    }
+  ],
+  "faqEn": [
+    {
+      "question": "When is soil grouting the right solution?",
+      "answer": "It is suitable when you need to improve ground properties under foundations, reduce settlement, or control seepage—especially when excavation/replacement is impractical or costly."
+    },
+    {
+      "question": "How is cement grouting different from other grouts?",
+      "answer": "Cement grout uses a cementitious suspension, while other systems (chemical or microfine) may be used for specific permeability or performance needs. Selection depends on pore size, permeability, and the objective."
+    },
+    {
+      "question": "How do you choose the mix and viscosity?",
+      "answer": "We base it on ground type, test results, and the treatment objective. In many cases, mixes are adjusted progressively to balance penetration and control."
+    },
+    {
+      "question": "How do I know the treatment worked?",
+      "answer": "Indicators include stabilized take patterns, improved monitoring results, and verification outputs (probing/tests) aligned with the project’s acceptance criteria."
+    }
+  ]
+}

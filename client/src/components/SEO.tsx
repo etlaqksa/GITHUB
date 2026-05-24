@@ -2,6 +2,26 @@ import { Helmet } from 'react-helmet-async';
 import { getLangFromPathname, stripLangPrefix } from '@/lib/localizePath';
 import { mapPathToLang } from '@/lib/mapPathToLang';
 
+function hasBaseSchema(schemaObj: any): boolean {
+  if (!schemaObj) return false;
+  
+  const isBaseType = (type: any) => {
+    if (typeof type !== 'string') return false;
+    const t = type.toLowerCase();
+    return t === 'localbusiness' || t === 'organization' || t === 'website' || t === 'corporation';
+  };
+
+  if (isBaseType(schemaObj['@type'])) {
+    return true;
+  }
+
+  if (Array.isArray(schemaObj['@graph'])) {
+    return schemaObj['@graph'].some((item: any) => item && isBaseType(item['@type']));
+  }
+
+  return false;
+}
+
 interface SEOProps {
   title?: string;
   description?: string;
@@ -162,7 +182,16 @@ export function SEO({
       <meta name="distribution" content="global" />
 
       {/* Structured Data */}
-      <script type="application/ld+json">{JSON.stringify(schema || defaultSchema)}</script>
+      {schema ? (
+        <>
+          <script type="application/ld+json">{JSON.stringify(schema)}</script>
+          {!hasBaseSchema(schema) && (
+            <script type="application/ld+json">{JSON.stringify(defaultSchema)}</script>
+          )}
+        </>
+      ) : (
+        <script type="application/ld+json">{JSON.stringify(defaultSchema)}</script>
+      )}
     </Helmet>
   );
 }

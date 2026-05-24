@@ -3,6 +3,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { SEO } from '@/components/SEO';
 import HeroIntroSequence from '@/components/hero/HeroIntroSequence';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useTheme } from '@/contexts/ThemeContext';
 import { trackEvent } from '@/lib/analytics';
 import { absUrl } from '@/lib/siteUrl';
 import { useUrlSearch } from '@/lib/useUrlSearch';
@@ -42,6 +43,9 @@ export default function Home() {
 
     return { heroVariant, showHeroPreview, forceMotion };
   }, [loc, search]);
+
+  const { mode } = useTheme();
+  const effectiveHeroVariant = mode === 'dark' && heroVariant === 'light' ? 'gradient' : heroVariant;
 
   // Allow forcing motion for previewing animations even if the OS has reduced-motion enabled.
   useEffect(() => {
@@ -161,17 +165,17 @@ export default function Home() {
         <div
           className={
             'absolute inset-0 z-0 etlaq-hero-bg ' +
-            (heroVariant === 'blobs'
+            (effectiveHeroVariant === 'blobs'
               ? 'etlaq-hero-bg--blobs'
-              : heroVariant === 'grid'
+              : effectiveHeroVariant === 'grid'
                 ? 'etlaq-hero-bg--grid'
-                : heroVariant === 'light'
+                : effectiveHeroVariant === 'light'
                   ? 'etlaq-hero-bg--light'
                   : 'etlaq-hero-bg--gradient')
           }
           aria-hidden="true"
         >
-          {heroVariant === 'blobs' ? (
+          {effectiveHeroVariant === 'blobs' ? (
             <>
               <div className="etlaq-hero-blob etlaq-hero-blob-1" />
               <div className="etlaq-hero-blob etlaq-hero-blob-2" />
@@ -184,7 +188,7 @@ export default function Home() {
         <div
           className={
             'absolute inset-0 z-10 pointer-events-none ' +
-            (heroVariant === 'light'
+            (effectiveHeroVariant === 'light'
               ? isDesktopModeMobile
                 ? 'bg-white/25'
                 : isCoarsePointer
@@ -206,7 +210,7 @@ export default function Home() {
           }
         >
           <HeroIntroSequence
-            heroVariant={heroVariant}
+            heroVariant={effectiveHeroVariant}
             heroWhatsAppUrl={heroWhatsAppUrl}
             showVariantSwitcher={showHeroPreview}
             forceMotion={forceMotion}

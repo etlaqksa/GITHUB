@@ -1,0 +1,79 @@
+{
+  "id": 39,
+  "title": "الفراغات تحت بلاطات الأرضيات: الأسباب، المخاطر، وطرق المعالجة",
+  "titleEn": "Voids Beneath Floor Slabs: Causes, Risks, and Repair Options",
+  "category": "موسوعة الحقن والتحسين",
+  "categoryEn": "Grouting & Improvement Encyclopedia",
+  "categoriesAr": [
+    "موسوعة الحقن والتحسين",
+    "الهندسة الجيوتقنية",
+    "حقن التربة",
+    "موسوعة حقن التربة"
+  ],
+  "categoriesEn": [
+    "Grouting & Improvement Encyclopedia",
+    "Geotechnical Engineering",
+    "Soil Grouting",
+    "Ground Improvement Library"
+  ],
+  "date": "2025-12-24",
+  "readTime": "3 دقيقة",
+  "readTimeEn": "3 min",
+  "author": "فريق ETLAQ الهندسي",
+  "slug": "voids-beneath-floor-slabs-causes-risks-and-repair-options",
+  "image": {
+    "url": "/favicon.webp",
+    "alt": "الفراغات تحت بلاطات الأرضيات: الأسباب، المخاطر، وطرق المعالجة",
+    "creditName": "ETLAQ (generated)",
+    "creditUrl": "",
+    "license": "Internal"
+  },
+  "excerpt": "المقدمة تمثل الفراغات تحت بلاطات الأرضيات مشكلة هندسية أساسية تؤثر سلبًا على سلامة المنشآت واستقرارها الإنشائي. عادةً ما تكون هذه الفراغات ناتجة عن عوامل جيولوجية أو إنشائية تؤدي إلى هبوط الأرضيات أو ظهور تصدعات في البلاطات الخرسانية. تهدف هذه المقالة إلى تقديم تحليل شامل لأسباب الفراغات، المخاطر المرتبطة بها، بالإضافة إلى أفضل تقنيات…",
+  "excerptEn": "Introduction Voids beneath floor slabs pose a critical geotechnical challenge that can adversely impact the structural integrity and serviceability of buildings. These voids typically arise from geological or construction related factors that cause slab settlement or cracking. This article provides a comprehensive technical review of the…",
+  "content": "### المقدمة  \n  تمثل الفراغات تحت بلاطات الأرضيات مشكلة هندسية أساسية تؤثر سلبًا على سلامة المنشآت واستقرارها الإنشائي. عادةً ما تكون هذه الفراغات ناتجة عن عوامل جيولوجية أو إنشائية تؤدي إلى هبوط الأرضيات أو ظهور تصدعات في البلاطات الخرسانية. تهدف هذه المقالة إلى تقديم تحليل شامل لأسباب الفراغات، المخاطر المرتبطة بها، بالإضافة إلى أفضل تقنيات المعالجة المعتمدة عالمياً مع مراعاة المعايير الدولية كمعيار EN 12715 ودلائل FHWA وASTM.\n  \n  ### الأسباب  \n  1. **ضعف التربة الأساسية**  \n     - تربة طينية قابلة للانكماش أو التمدد (Expansive Clays)  \n     - تربة رملية غير متماسكة أو متحركة (Loose Sands)  \n  2. **وجود فراغات وتكهفات طبيعية أو ناتجة عن تآكل**  \n     - تجوية الصخور أو تآكل الكائنات الجيولوجية تحت البلاطة  \n  3. **تسرب المياه والفيضانات**  \n     - تسرب مياه شبكات الصرف أو المياه الجوفية مما يؤدي إلى تآكل التربة ودفعها خارج نطاق البلاطة  \n  4. **سوء عملية الدمك (Compaction) أثناء التنفيذ**  \n     - ترك فراغات هوائية أو غير مكتملة الدمك تحت البلاطة  \n  5. **تأثير الأنشطة التحتيه أو هبوط التربة**  \n     - تحرك التربة الناتج عن أعمال الحفر القريبة أو تغير في منسوب المياه الجوفية  \n  \n  ### المخاطر  \n  - **تصدعات وحركات في البلاط الخرسانية** مما يؤثر على الصلابة والمتانة.  \n  - **هبوط أرضي متفاوت** قد يؤدي إلى تلف أنظمة التمديدات والتشطيبات.  \n  - **ضعف في قدرة تحمل الأرضية** يشكل خطراً على سلامة المعدات والأشخاص.  \n  - **تسرب المياه والمشاكل البيئية** بسبب وجود فراغات تسمح بالتسلل.  \n  \n  ### طرق المعالجة  \n  \n  #### 1. الكشف والتشخيص  \n  - **رادار اختراق الأرض (GPR)**: تقنية غير مدمرة للكشف الدقيق عن الفراغات، مع مراعاة أن دقة الكشف تتراجع في التربة المشبعة بالمياه.  \n  - **المسح الكهربائي**: يستخدم لقياس مقاومة التربة وتحديد مناطق الفراغات أو الكثافات غير المتجانسة.  \n  - **اختبارات الحفر والتنقيب**: لتأكيد وجود الفراغات وقياس أبعادها.  \n  \n  #### 2. المعالجة الهندسية  \n  \n  **أ‌- حقن التربة**  \n  - **حقن الأسمنت (Cementitious Grouting):** يستخدم مزيج أسمنتي بخصائص متغيرة حسب نوع التربة (مثلاً: EN 12715 يحدد أنسجة الحقن والتجانس).  \n  - **حقن البولي يوريثان (Polyurethane Injection):** سريع التصلب، يستخدم لملء الفراغات الصغيرة وتثبيت التربة، خصوصاً في التربة الرطبة.  \n  - **حقن النفث (Jet Grouting):** تقنية متقدمة تستهدف تفتيت التربة وخلطها بالأسمنت تحت ضغط عالي لإنشاء أعمدة دعم معززة.  \n  \n  **ب‌- تقنيات الرفع**  \n  - **رفع البلاطة الخرسانية (Mudjacking / Slab Jacking):** حقن مواد مملوءة في الفراغات لرفع البلاطة وتسويتها.  \n  \n  **ت‌- تعزيز الأساسات**  \n  - اعتماد الخوازيق الصغيرة أو دعامات تقوية في الحالات الحرجة لضمان استقرار البلاطات.  \n  \n  ### المعايير والمواصفات  \n  - معيار **EN 12715** الخاص بمواد حقن التربة.  \n  - دلائل **FHWA** لإجراءات حقن التربة ومراقبة الجودة.  \n  - مواصفات **ASTM D6024** المحددة لتقنيات ضغط الحقن وفحص الخصائص.  \n  \n  ### الخاتمة  \n  الفراغات تحت بلاطات الأرضيات تمثل تحدياً هندسياً يتطلب فهماً دقيقاً لأسباب نشوئها ومخاطرها، مع تطبيق حلول هندسية مدروسة ومراقبة الجودة بكفاءة. استخدام تقنيات الكشف الحديثة مثل رادار اختراق الأرض، إلى جانب تطبيق أساليب الحقن المخصصة بحسب نوع التربة والفراغ، تضمن استعادة سلامة الأرضيات وتحسين أداء المنشآت. الالتزام بالمعايير الدولية يساهم في اختيار الحلول المثلى ويضمن نجاح عمليات المعالجة والاستدامة الإنشائية طويلة الأمد.\n  \n  ## روابط ذات صلة داخل موقعنا\n  \n  - [كشف التكهفات والفراغات](/services/cavity)\n  - [حقن التربة (الحقن الأسمنتي)](/services/grouting)\n  - [جميع المدن التي نغطيها](/locations)\n  - [خدماتنا في الرياض](/locations/riyadh)\n  - [اطلب خدمة / تواصل معنا](/request-service)",
+  "contentEn": "### Introduction  \n  Voids beneath floor slabs pose a critical geotechnical challenge that can adversely impact the structural integrity and serviceability of buildings. These voids typically arise from geological or construction-related factors that cause slab settlement or cracking. This article provides a comprehensive technical review of the causes, associated risks, and internationally recognized remediation methods, referencing standards such as EN 12715, FHWA guidelines, and ASTM specifications.\n  \n  ### Causes  \n  1. **Weak Foundation Soil**  \n     - Expansive clay soils prone to shrink-swell behavior  \n     - Loose, non-cohesive sandy soils susceptible to migration  \n  2. **Presence of Natural or Erosional Cavities**  \n     - Rock cavities or soil erosion beneath the slab leading to subsurface voids  \n  3. **Water Leakage and Flooding**  \n     - Leakage from plumbing networks or rising groundwater causing soil removal and void formation  \n  4. **Poor Compaction during Construction**  \n     - Entrapped air voids or incomplete compaction under the slab  \n  5. **Subsurface Activities and Ground Movements**  \n     - Nearby excavation, tunneling, or groundwater fluctuations causing soil displacement  \n  \n  ### Risks  \n  - **Cracking and differential movement of concrete slabs** affecting structural stiffness and durability.  \n  - **Uneven settlement** leading to damage of embedded services and finishes.  \n  - **Reduced bearing capacity** posing safety risks for equipment and occupants.  \n  - **Water ingress and environmental issues** due to pathways created by voids.  \n  \n  ### Remediation Methods  \n  \n  #### 1. Detection and Diagnosis  \n  - **Ground Penetrating Radar (GPR):** Non-destructive method for accurate void detection, though effectiveness reduces in saturated soils.  \n  - **Electrical Resistivity Survey:** Measures soil electrical properties to locate voids or heterogeneous zones.  \n  - **Borehole Investigations:** Confirm void dimensions and soil conditions directly.  \n  \n  #### 2. Engineering Remediation  \n  \n  **a. Soil Grouting**  \n  - **Cementitious Grouting:** Injection of cement-based grout tailored to soil permeability and strength requirements (EN 12715 guides grout composition and application).  \n  - **Polyurethane Injection:** Fast-setting, lightweight resin used for filling small voids and stabilizing soils in wet conditions.  \n  - **Jet Grouting:** High-pressure jetting to fracture soil and mix it with grout to form cemented columns for reinforcement.  \n  \n  **b. Slab Lifting Techniques**  \n  - **Mudjacking / Slab Jacking:** Injection of grout or controlled fill materials to raise and level settled slabs.  \n  \n  **c. Foundation Reinforcements**  \n  - Installation of micro-piles or underpinning elements in severe cases to ensure slab stability.  \n  \n  ### Standards and Specifications  \n  - **EN 12715:** Specification for cementitious grouts used in soil improvement.  \n  - **FHWA Manuals:** Guidelines for grouting practices and quality control procedures.  \n  - **ASTM D6024:** Standard practice covering pressure grouting techniques and performance criteria.  \n  \n  ### Conclusion  \n  Void formation beneath floor slabs is a complex geotechnical phenomenon requiring a thorough understanding of the causative mechanisms and associated risks. Employing advanced non-destructive detection methods such as GPR, combined with tailored grouting and slab lifting techniques, supports safe and cost-effective remediation. Adherence to international standards and rigorous quality assurance programs ensures long-term slab performance and structural safety.\n  \n  ## Related links on our site\n  \n  - [Void & Cavity Detection](/services/cavity)\n  - [Soil Grouting (Cement Injection)](/services/grouting)\n  - [All cities we serve](/locations)\n  - [Our services in Riyadh](/locations/riyadh)\n  - [Request a service / Contact us](/request-service)",
+  "faqAr": [
+    {
+      "question": "كيف تُختار أنسب تقنية حقن لكل موقع؟",
+      "answer": "القرار يستند إلى نوع التربة ومشكلتها الجوهرية: ترب رملية نافذة تناسبها حقن الأسمنت والنفاذ، الترب الطينية تحتاج حقناً كيميائياً، والترب الهشة قد تتطلب Jet Grouting لتكوين أعمدة داعمة.",
+      "questionEn": "How is the most appropriate grouting technique selected for each site?",
+      "answerEn": "The decision is based on soil type and core problem: permeable sandy soils suit cement and permeation grouting, clays need chemical grouting, and weak soils may require Jet Grouting to form support columns."
+    },
+    {
+      "question": "ما الاختبارات الضرورية قبل تنفيذ أي عملية حقن؟",
+      "answer": "الحد الأدنى المطلوب: تحديد نوع التربة (SPT أو CPT)، قياس النفاذية، وتحليل عينات مختبرية. في المشاريع الكبيرة تُضاف دراسة جيوفيزيائية (GPR/ERT) للحصول على صورة شاملة.",
+      "questionEn": "What tests are required before any grouting operation?",
+      "answerEn": "The minimum required: soil type identification (SPT or CPT), permeability measurement, and laboratory sample analysis. For larger projects, a geophysical study (GPR/ERT) is added for a comprehensive picture."
+    },
+    {
+      "question": "كيف تُقيَّم جودة ونجاح عملية الحقن بعد التنفيذ؟",
+      "answer": "عبر اختبارات تحقق ما بعد الحقن: CPT أو اختبار ضغط المياه لقياس التحسن في خصائص التربة، مراقبة أجهزة قياس الهبوط، والفحص البصري للتشققات. تُقارَن النتائج بالقياسات الأولية.",
+      "questionEn": "How is grouting quality and success evaluated post-execution?",
+      "answerEn": "Through post-grouting verification tests: CPT or water pressure tests measuring soil property improvement, settlement monitoring instruments, and visual crack inspection. Results are compared against baseline measurements."
+    },
+    {
+      "question": "ما العوامل التي تُحدد تكلفة مشروع حقن التربة؟",
+      "answer": "الأهم: عمق الحقن، نوع المادة المستخدمة، تعقيد المشروع وإمكانية الوصول، كمية الحقن المطلوبة، ووجود إنشاءات حساسة مجاورة تستدعي ضوابط إضافية.",
+      "questionEn": "What factors determine the cost of a soil grouting project?",
+      "answerEn": "Key factors: injection depth, material type used, project complexity and access, required grouting volume, and presence of sensitive adjacent structures requiring additional controls."
+    }
+  ],
+  "faqEn": [
+    {
+      "question": "How do we confirm cavities/voids below ground?",
+      "answer": "A reliable workflow combines geophysics with targeted probing/drilling where needed. The goal is to turn anomalies into confirmed targets before remediation."
+    },
+    {
+      "question": "Is every void an immediate hazard?",
+      "answer": "Not necessarily. Risk depends on size, depth, location relative to loads, and water conditions. We assess both severity and likelihood of progression."
+    },
+    {
+      "question": "What happens after voids are detected?",
+      "answer": "Common options include cement grouting, drainage improvements, or localized strengthening depending on root cause (karst, leakage, weak backfill, etc.)."
+    },
+    {
+      "question": "How do you reduce surprises during execution?",
+      "answer": "By staged verification, correlating geophysical anomalies with field observations, and updating the treatment plan when new information emerges."
+    }
+  ]
+}
