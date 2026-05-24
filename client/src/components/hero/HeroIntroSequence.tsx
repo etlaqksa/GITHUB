@@ -616,13 +616,32 @@ export default function HeroIntroSequence({
 
       <div
         className={
-          'w-full max-w-5xl rounded-2xl border p-5 md:p-6 ' +
+          'w-full max-w-5xl rounded-2xl border p-5 md:p-6 hidden md:block ' +
           (tone === 'dark'
             ? 'border-white/20 bg-black/55 shadow-[0_22px_60px_rgba(0,0,0,0.55)]'
             : 'border-black/10 bg-white/70 shadow-[0_18px_50px_rgba(0,0,0,0.14)]')
         }
       >
         <TrustStats compact variant={tone === 'dark' ? 'inverse' : 'default'} />
+      </div>
+
+      {/* Lightweight, static glassmorphism trust ribbon for mobile viewports (zero JS blocking time) */}
+      <div
+        className={
+          'flex md:hidden flex-wrap items-center justify-center gap-2 mt-2 w-full ' +
+          (tone === 'dark' ? 'text-white/90' : 'text-slate-800')
+        }
+      >
+        {[
+          { val: '15+', label: variant === 'ar' ? 'سنة خبرة' : 'Years exp.' },
+          { val: '200+', label: variant === 'ar' ? 'مشروع منجز' : 'Projects' },
+          { val: '100+', label: variant === 'ar' ? 'عميل راضٍ' : 'Clients' },
+        ].map((s) => (
+          <span key={s.val} className="flex items-center gap-1.5 border border-white/10 rounded-xl px-3 py-1.5 bg-black/40 backdrop-blur-sm shadow-[0_8px_20px_rgba(0,0,0,0.2)]">
+            <span className="text-base font-extrabold text-secondary">{s.val}</span>
+            <span className="text-xs font-semibold">{s.label}</span>
+          </span>
+        ))}
       </div>
     </div>
   );
