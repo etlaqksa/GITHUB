@@ -317,7 +317,7 @@ export default function HeroIntroSequence({
   const brandGradientText =
     'bg-gradient-to-l from-secondary via-amber-500 to-orange-500 text-transparent bg-clip-text';
 
-  // Skip animation for returning visitors or PageSpeed/Lighthouse audits — show final content immediately.
+  // Skip animation for returning visitors, PageSpeed/Lighthouse audits, or mobile screens — show final content immediately.
   const isReturningVisitor = useMemo(() => {
     if (typeof window === 'undefined') return false;
     try {
@@ -335,6 +335,11 @@ export default function HeroIntroSequence({
     );
   }, []);
 
+  const isMobile = useMemo(() => {
+    if (typeof window === 'undefined') return false;
+    return window.innerWidth < 768;
+  }, []);
+
   const timeline = useMemo(
     () => ({
       // 0: headline, 1: services, 2: long intro, 3: early intervention, 4: counters
@@ -347,7 +352,7 @@ export default function HeroIntroSequence({
 
   const [scene, setScene] = useState<Scene>(0);
   const [sceneVisible, setSceneVisible] = useState(true);
-  const [done, setDone] = useState(isReturningVisitor || isLighthouse);
+  const [done, setDone] = useState(isReturningVisitor || isLighthouse || isMobile);
 
   // Allow users to advance the intro sequence by clicking/tapping.
   const fastAdvanceTimerRef = useRef<number | null>(null);
@@ -363,14 +368,14 @@ export default function HeroIntroSequence({
 
   // When switching hero variants, restart the intro sequence (keeps the toggle feeling "alive").
   useEffect(() => {
-    if (prefersReducedMotion || isLighthouse) return;
+    if (prefersReducedMotion || isLighthouse || isMobile) return;
     setScene(0);
     setSceneVisible(true);
     setDone(false);
-  }, [heroVariant, prefersReducedMotion, isLighthouse]);
+  }, [heroVariant, prefersReducedMotion, isLighthouse, isMobile]);
 
   useEffect(() => {
-    if (prefersReducedMotion || isReturningVisitor || isLighthouse) {
+    if (prefersReducedMotion || isReturningVisitor || isLighthouse || isMobile) {
       setDone(true);
       return;
     }
@@ -395,14 +400,14 @@ export default function HeroIntroSequence({
       window.clearTimeout(t1);
       window.clearTimeout(t2);
     };
-  }, [prefersReducedMotion, isReturningVisitor, isLighthouse, done, scene, timeline]);
+  }, [prefersReducedMotion, isReturningVisitor, isLighthouse, isMobile, done, scene, timeline]);
 
   // Mark visitor as returning after first complete animation.
   useEffect(() => {
-    if (done && !isReturningVisitor && !isLighthouse) {
+    if (done && !isReturningVisitor && !isLighthouse && !isMobile) {
       try { sessionStorage.setItem('etlaq-hero-seen', '1'); } catch {}
     }
-  }, [done, isReturningVisitor, isLighthouse]);
+  }, [done, isReturningVisitor, isLighthouse, isMobile]);
 
   const advanceScene = useCallback(() => {
     if (prefersReducedMotion || done) return;

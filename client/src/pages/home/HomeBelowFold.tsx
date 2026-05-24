@@ -291,243 +291,253 @@ export default function HomeBelowFold() {
   return (
     <>
       {/* QUICK PATHS */}
-      <section className="py-8 md:py-12">
-        <div className="w-full px-4">
-          <div className="max-w-3xl mx-auto text-center space-y-3">
-            <h2 className="text-2xl md:text-4xl font-bold">
-              {language === 'ar' ? 'اختر حالتك — وخذ خطوة واضحة' : 'Pick your case — get a clear next step'}
-            </h2>
-            <p className="text-muted-foreground">
-              {language === 'ar'
-                ? 'بدون تعقيد: اختر ما يطابق حالتك، ثم أرسل التفاصيل لنقترح المسار الأنسب.'
-                : 'No friction: choose what matches your case, then share details and we’ll guide the best route.'}
-            </p>
-          </div>
+      <InViewMount fallback={<div className="h-96" />}>
+        <section className="py-8 md:py-12">
+          <div className="w-full px-4">
+            <div className="max-w-3xl mx-auto text-center space-y-3">
+              <h2 className="text-2xl md:text-4xl font-bold">
+                {language === 'ar' ? 'اختر حالتك — وخذ خطوة واضحة' : 'Pick your case — get a clear next step'}
+              </h2>
+              <p className="text-muted-foreground">
+                {language === 'ar'
+                  ? 'بدون تعقيد: اختر ما يطابق حالتك، ثم أرسل التفاصيل لنقترح المسار الأنسب.'
+                  : 'No friction: choose what matches your case, then share details and we’ll guide the best route.'}
+              </p>
+            </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
-            {quickPaths.map((p, idx) => (
-              <Card
-                key={p.title}
-                className="h-full etlaq-accent-card"
-                style={accentStyle(QUICK_PATH_ACCENTS[idx % QUICK_PATH_ACCENTS.length])}
-              >
-                <CardHeader className="space-y-2 pb-3">
-                  <div className="h-10 w-10 rounded-2xl etlaq-accent-icon flex items-center justify-center">
-                    <p.icon className="h-5 w-5" />
-                  </div>
-                  <CardTitle className="text-base">{p.title}</CardTitle>
-                  <CardDescription className="leading-relaxed text-sm">{p.desc}</CardDescription>
-                </CardHeader>
-                <CardContent className="pt-0">
-                  <LocalizedLink href={p.href}>
-                    <Button
-                      className="w-full rounded-full"
-                      onClick={() => trackEvent('home_quickpath_click', { language, path: p.title })}
-                    >
-                      {quickPathCta(p.href)}
-                    </Button>
-                  </LocalizedLink>
-                </CardContent>
-              </Card>
-            ))}
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
+              {quickPaths.map((p, idx) => (
+                <Card
+                  key={p.title}
+                  className="h-full etlaq-accent-card"
+                  style={accentStyle(QUICK_PATH_ACCENTS[idx % QUICK_PATH_ACCENTS.length])}
+                >
+                  <CardHeader className="space-y-2 pb-3">
+                    <div className="h-10 w-10 rounded-2xl etlaq-accent-icon flex items-center justify-center">
+                      <p.icon className="h-5 w-5" />
+                    </div>
+                    <CardTitle className="text-base">{p.title}</CardTitle>
+                    <CardDescription className="leading-relaxed text-sm">{p.desc}</CardDescription>
+                  </CardHeader>
+                  <CardContent className="pt-0">
+                    <LocalizedLink href={p.href}>
+                      <Button
+                        className="w-full rounded-full"
+                        onClick={() => trackEvent('home_quickpath_click', { language, path: p.title })}
+                      >
+                        {quickPathCta(p.href)}
+                      </Button>
+                    </LocalizedLink>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </InViewMount>
 
       {/* SERVICES */}
-      <section id="services" className="py-8 md:py-12 bg-muted/20">
-        <div className="w-full px-4">
-          <div className="max-w-3xl mx-auto text-center space-y-3">
-            <h2 className="text-2xl md:text-4xl font-bold">{language === 'ar' ? 'خدماتنا الأساسية' : 'Core services'}</h2>
-            <p className="text-muted-foreground">
-              {language === 'ar'
-                ? 'خدمات مركزة ومباشرة لمعالجة المشاكل تحت الأساسات: حقن التربة، كشف التكهفات، والدراسات الجيوفيزيائية.'
-                : 'Focused subsurface services: soil grouting, cavity detection, and geophysical surveys.'}
-            </p>
-          </div>
+      <InViewMount fallback={<div className="h-[500px]" />}>
+        <section id="services" className="py-8 md:py-12 bg-muted/20">
+          <div className="w-full px-4">
+            <div className="max-w-3xl mx-auto text-center space-y-3">
+              <h2 className="text-2xl md:text-4xl font-bold">{language === 'ar' ? 'خدماتنا الأساسية' : 'Core services'}</h2>
+              <p className="text-muted-foreground">
+                {language === 'ar'
+                  ? 'خدمات مركزة ومباشرة لمعالجة المشاكل تحت الأساسات: حقن التربة، كشف التكهفات، والدراسات الجيوفيزيائية.'
+                  : 'Focused subsurface services: soil grouting, cavity detection, and geophysical surveys.'}
+              </p>
+            </div>
 
-          <div className="grid md:grid-cols-3 gap-6 mt-6">
-            {services.map((s) => (
-              <Card key={s.href} className="h-full etlaq-accent-card" style={accentStyle(SERVICE_ACCENTS[s.key])}>
-                <CardHeader>
-                  <div className="flex items-center gap-3">
-                    <div className="h-10 w-10 rounded-2xl etlaq-accent-icon flex items-center justify-center">
-                      <s.icon className="h-5 w-5" />
+            <div className="grid md:grid-cols-3 gap-6 mt-6">
+              {services.map((s) => (
+                <Card key={s.href} className="h-full etlaq-accent-card" style={accentStyle(SERVICE_ACCENTS[s.key])}>
+                  <CardHeader>
+                    <div className="flex items-center gap-3">
+                      <div className="h-10 w-10 rounded-2xl etlaq-accent-icon flex items-center justify-center">
+                        <s.icon className="h-5 w-5" />
+                      </div>
+                      <div>
+                        <CardTitle className="text-lg">{s.title}</CardTitle>
+                        <CardDescription>{language === 'ar' ? 'تفاصيل ومخرجات' : 'Details & deliverables'}</CardDescription>
+                      </div>
                     </div>
-                    <div>
-                      <CardTitle className="text-lg">{s.title}</CardTitle>
-                      <CardDescription>{language === 'ar' ? 'تفاصيل ومخرجات' : 'Details & deliverables'}</CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-5">
+                    <p className="text-muted-foreground leading-relaxed">{s.desc}</p>
+                    <div className="etlaq-card rounded-xl border bg-card/60 backdrop-blur p-4">
+                      <p className="text-sm font-medium mb-3">{language === 'ar' ? 'ماذا تتوقع؟' : 'What to expect'}</p>
+                      <ul className="space-y-2">
+                        {s.bullets.map((b) => (
+                          <li key={b} className="flex items-start gap-2 text-sm text-muted-foreground">
+                            <CheckCircle2 className="h-4 w-4 mt-0.5 text-primary" />
+                            <span className="leading-relaxed">{b}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
-                  </div>
+                    <div className="flex flex-col gap-2">
+                      <LocalizedLink href={s.href}>
+                        <Button variant="outline" className="w-full">
+                          {language === 'ar' ? 'استعرض التفاصيل' : 'View details'}
+                        </Button>
+                      </LocalizedLink>
+                      <LocalizedLink href={`/request-service?service=${s.key}`}>
+                        <Button
+                          className="w-full"
+                          onClick={() => trackEvent('home_service_request', { language, service: s.key })}
+                        >
+                          {requestLabel(s.key)}
+                        </Button>
+                      </LocalizedLink>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+      </InViewMount>
+
+      {/* APPROACH + VALUE */}
+      <InViewMount fallback={<div className="h-[400px]" />}>
+        <section className="py-8 md:py-12">
+          <div className="w-full px-4">
+            <div className="grid lg:grid-cols-2 gap-6 items-start">
+              <div className="space-y-3">
+                <h2 className="text-2xl md:text-4xl font-bold">{language === 'ar' ? 'منهجية عمل تقلل المخاطر' : 'A method that reduces risk'}</h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  {language === 'ar'
+                    ? 'هدفنا ليس “حل سريع” فقط — بل حل صحيح. لذلك نعتمد خطوات واضحة من التشخيص حتى التسليم، مع تنفيذ مرحلي وتوثيق مناسب لمتطلبات المشروع.'
+                    : 'Our goal isn’t just a “quick fix” — it’s the correct fix. We follow clear steps from diagnosis to deliverables, with staged execution and documentation aligned with project requirements.'}
+                </p>
+
+                <div className="grid sm:grid-cols-2 gap-3 pt-1">
+                  {valuePillars.map((p, idx) => (
+                    <Card key={p.title} className="etlaq-accent-card" style={accentStyle(PILLAR_ACCENTS[idx % PILLAR_ACCENTS.length])}>
+                      <CardHeader className="space-y-1.5 pb-4">
+                        <div className="h-10 w-10 rounded-2xl etlaq-accent-icon flex items-center justify-center">
+                          <p.icon className="h-5 w-5" />
+                        </div>
+                        <CardTitle className="text-base">{p.title}</CardTitle>
+                        <CardDescription className="leading-relaxed text-sm">{p.desc}</CardDescription>
+                      </CardHeader>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+
+              <Card className="rounded-3xl border bg-card/70 backdrop-blur">
+                <CardHeader className="pb-3">
+                  <CardTitle className="text-xl">{language === 'ar' ? 'كيف نمشي معك خطوة بخطوة' : 'How we work — step by step'}</CardTitle>
+                  <CardDescription className="leading-relaxed">
+                    {language === 'ar'
+                      ? 'خطوات عملية تناسب مشاريع الأفراد والمقاولين والمطورين — بدون تعقيد زائد.'
+                      : 'Practical steps for owners, contractors, and developers — without unnecessary complexity.'}
+                  </CardDescription>
                 </CardHeader>
-                <CardContent className="space-y-5">
-                  <p className="text-muted-foreground leading-relaxed">{s.desc}</p>
-                  <div className="etlaq-card rounded-xl border bg-card/60 backdrop-blur p-4">
-                    <p className="text-sm font-medium mb-3">{language === 'ar' ? 'ماذا تتوقع؟' : 'What to expect'}</p>
-                    <ul className="space-y-2">
-                      {s.bullets.map((b) => (
-                        <li key={b} className="flex items-start gap-2 text-sm text-muted-foreground">
-                          <CheckCircle2 className="h-4 w-4 mt-0.5 text-primary" />
-                          <span className="leading-relaxed">{b}</span>
-                        </li>
-                      ))}
-                    </ul>
+                <CardContent>
+                  <div className="grid sm:grid-cols-2 gap-3">
+                    {approach.map((st) => (
+                      <div key={st.title} className="rounded-2xl border bg-background/60 p-3">
+                        <div className="flex items-start gap-2.5">
+                          <div className="h-9 w-9 rounded-2xl border bg-background flex items-center justify-center flex-shrink-0">
+                            <st.icon className="h-4 w-4 text-primary" />
+                          </div>
+                          <div>
+                            <div className="font-semibold text-sm">{st.title}</div>
+                            <div className="text-xs text-muted-foreground leading-relaxed mt-0.5">{st.desc}</div>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                  <div className="flex flex-col gap-2">
-                    <LocalizedLink href={s.href}>
-                      <Button variant="outline" className="w-full">
-                        {language === 'ar' ? 'استعرض التفاصيل' : 'View details'}
-                      </Button>
-                    </LocalizedLink>
-                    <LocalizedLink href={`/request-service?service=${s.key}`}>
-                      <Button
-                        className="w-full"
-                        onClick={() => trackEvent('home_service_request', { language, service: s.key })}
-                      >
-                        {requestLabel(s.key)}
+
+                  <div className="mt-4">
+                    <LocalizedLink href="/request-service">
+                      <Button className="w-full" onClick={() => trackEvent('home_method_cta', { language })}>
+                        {language === 'ar' ? 'ابدأ بالتقييم' : 'Start with an assessment'}
                       </Button>
                     </LocalizedLink>
                   </div>
                 </CardContent>
               </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* APPROACH + VALUE */}
-      <section className="py-8 md:py-12">
-        <div className="w-full px-4">
-          <div className="grid lg:grid-cols-2 gap-6 items-start">
-            <div className="space-y-3">
-              <h2 className="text-2xl md:text-4xl font-bold">{language === 'ar' ? 'منهجية عمل تقلل المخاطر' : 'A method that reduces risk'}</h2>
-              <p className="text-muted-foreground leading-relaxed">
-                {language === 'ar'
-                  ? 'هدفنا ليس “حل سريع” فقط — بل حل صحيح. لذلك نعتمد خطوات واضحة من التشخيص حتى التسليم، مع تنفيذ مرحلي وتوثيق مناسب لمتطلبات المشروع.'
-                  : 'Our goal isn’t just a “quick fix” — it’s the correct fix. We follow clear steps from diagnosis to deliverables, with staged execution and documentation aligned with project requirements.'}
-              </p>
-
-              <div className="grid sm:grid-cols-2 gap-3 pt-1">
-                {valuePillars.map((p, idx) => (
-                  <Card key={p.title} className="etlaq-accent-card" style={accentStyle(PILLAR_ACCENTS[idx % PILLAR_ACCENTS.length])}>
-                    <CardHeader className="space-y-1.5 pb-4">
-                      <div className="h-10 w-10 rounded-2xl etlaq-accent-icon flex items-center justify-center">
-                        <p.icon className="h-5 w-5" />
-                      </div>
-                      <CardTitle className="text-base">{p.title}</CardTitle>
-                      <CardDescription className="leading-relaxed text-sm">{p.desc}</CardDescription>
-                    </CardHeader>
-                  </Card>
-                ))}
-              </div>
             </div>
-
-            <Card className="rounded-3xl border bg-card/70 backdrop-blur">
-              <CardHeader className="pb-3">
-                <CardTitle className="text-xl">{language === 'ar' ? 'كيف نمشي معك خطوة بخطوة' : 'How we work — step by step'}</CardTitle>
-                <CardDescription className="leading-relaxed">
-                  {language === 'ar'
-                    ? 'خطوات عملية تناسب مشاريع الأفراد والمقاولين والمطورين — بدون تعقيد زائد.'
-                    : 'Practical steps for owners, contractors, and developers — without unnecessary complexity.'}
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="grid sm:grid-cols-2 gap-3">
-                  {approach.map((st) => (
-                    <div key={st.title} className="rounded-2xl border bg-background/60 p-3">
-                      <div className="flex items-start gap-2.5">
-                        <div className="h-9 w-9 rounded-2xl border bg-background flex items-center justify-center flex-shrink-0">
-                          <st.icon className="h-4 w-4 text-primary" />
-                        </div>
-                        <div>
-                          <div className="font-semibold text-sm">{st.title}</div>
-                          <div className="text-xs text-muted-foreground leading-relaxed mt-0.5">{st.desc}</div>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="mt-4">
-                  <LocalizedLink href="/request-service">
-                    <Button className="w-full" onClick={() => trackEvent('home_method_cta', { language })}>
-                      {language === 'ar' ? 'ابدأ بالتقييم' : 'Start with an assessment'}
-                    </Button>
-                  </LocalizedLink>
-                </div>
-              </CardContent>
-            </Card>
           </div>
-        </div>
-      </section>
+        </section>
+      </InViewMount>
 
       {/* CLIENTS HEADING + LOGOS */}
-      <section className="pt-8 pb-0">
-        <div className="w-full px-4">
-          <div className="max-w-3xl mx-auto text-center space-y-3 mb-6">
-            <h2 className="text-2xl md:text-4xl font-bold">
-              {language === 'ar' ? 'عملاؤنا' : 'Our Clients'}
-            </h2>
-            <p className="text-muted-foreground">
-              {language === 'ar'
-                ? 'نفخر بثقة كبرى الجهات الحكومية والخاصة في المملكة العربية السعودية'
-                : 'Trusted by leading public & private sector organisations across Saudi Arabia'}
-            </p>
+      <InViewMount fallback={<div className="h-28" />}>
+        <section className="pt-8 pb-0">
+          <div className="w-full px-4">
+            <div className="max-w-3xl mx-auto text-center space-y-3 mb-6">
+              <h2 className="text-2xl md:text-4xl font-bold">
+                {language === 'ar' ? 'عملاؤنا' : 'Our Clients'}
+              </h2>
+              <p className="text-muted-foreground">
+                {language === 'ar'
+                  ? 'نفخر بثقة كبرى الجهات الحكومية والخاصة في المملكة العربية السعودية'
+                  : 'Trusted by leading public & private sector organisations across Saudi Arabia'}
+              </p>
+            </div>
           </div>
-        </div>
-        <ClientLogosWall />
-      </section>
+          <ClientLogosWall />
+        </section>
+      </InViewMount>
 
       {/* LOCATIONS */}
-      <section className="py-7 md:py-10 bg-muted/20">
-        <div className="w-full px-4">
-          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-5">
-            <div className="space-y-2">
-              <h2 className="text-2xl md:text-3xl font-bold">
-                {language === 'ar' ? 'نغطي مناطق المملكة' : 'Serving all regions of KSA'}
-              </h2>
-              <p className="text-muted-foreground leading-relaxed text-sm">
-                {language === 'ar'
-                  ? 'فرق ميدانية وخطط تنفيذ قابلة للتوسع حسب حجم المشروع. يمكنك البدء من صفحة مدينتك أو طلب تقييم مباشر.'
-                  : 'Field crews and scalable execution plans depending on scope. Start from your city page or request an assessment.'}
-              </p>
+      <InViewMount fallback={<div className="h-44" />}>
+        <section className="py-7 md:py-10 bg-muted/20">
+          <div className="w-full px-4">
+            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-5">
+              <div className="space-y-2">
+                <h2 className="text-2xl md:text-3xl font-bold">
+                  {language === 'ar' ? 'نغطي مناطق المملكة' : 'Serving all regions of KSA'}
+                </h2>
+                <p className="text-muted-foreground leading-relaxed text-sm">
+                  {language === 'ar'
+                    ? 'فرق ميدانية وخطط تنفيذ قابلة للتوسع حسب حجم المشروع. يمكنك البدء من صفحة مدينتك أو طلب تقييم مباشر.'
+                    : 'Field crews and scalable execution plans depending on scope. Start from your city page or request an assessment.'}
+                </p>
 
-              <div className="flex flex-col sm:flex-row gap-2 pt-1">
-                <LocalizedLink href="/locations" className="inline-flex">
-                  <Button variant="secondary" size="sm" className="w-full sm:w-auto">
-                    {language === 'ar' ? 'استعرض المدن' : 'Browse locations'}
-                  </Button>
-                </LocalizedLink>
-                <LocalizedLink href="/request-service" className="inline-flex">
-                  <Button size="sm" className="w-full sm:w-auto">{language === 'ar' ? 'اطلب تقييم' : 'Request assessment'}</Button>
-                </LocalizedLink>
-              </div>
-            </div>
-
-            <Card className="rounded-2xl border bg-card/70 backdrop-blur shrink-0">
-              <CardHeader className="pb-2">
-                <CardTitle className="text-base">{language === 'ar' ? 'مدن رئيسية' : 'Major cities'}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-wrap gap-1.5">
-                  {topCities.map((c) => (
-                    <LocalizedLink
-                      key={c.slug}
-                      href={`/locations/${c.slug}`}
-                      className="text-xs rounded-full border px-2.5 py-1 bg-background hover:bg-accent transition"
-                    >
-                      {language === 'ar' ? c.ar : c.en}
-                    </LocalizedLink>
-                  ))}
-                  <LocalizedLink href="/locations" className="text-xs rounded-full border px-2.5 py-1 bg-background hover:bg-accent transition">
-                    {language === 'ar' ? 'كل المدن' : 'All locations'}
+                <div className="flex flex-col sm:flex-row gap-2 pt-1">
+                  <LocalizedLink href="/locations" className="inline-flex">
+                    <Button variant="secondary" size="sm" className="w-full sm:w-auto">
+                      {language === 'ar' ? 'استعرض المدن' : 'Browse locations'}
+                    </Button>
+                  </LocalizedLink>
+                  <LocalizedLink href="/request-service" className="inline-flex">
+                    <Button size="sm" className="w-full sm:w-auto">{language === 'ar' ? 'اطلب تقييم' : 'Request assessment'}</Button>
                   </LocalizedLink>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+
+              <Card className="rounded-2xl border bg-card/70 backdrop-blur shrink-0">
+                <CardHeader className="pb-2">
+                  <CardTitle className="text-base">{language === 'ar' ? 'مدن رئيسية' : 'Major cities'}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex flex-wrap gap-1.5">
+                    {topCities.map((c) => (
+                      <LocalizedLink
+                        key={c.slug}
+                        href={`/locations/${c.slug}`}
+                        className="text-xs rounded-full border px-2.5 py-1 bg-background hover:bg-accent transition"
+                      >
+                        {language === 'ar' ? c.ar : c.en}
+                      </LocalizedLink>
+                    ))}
+                    <LocalizedLink href="/locations" className="text-xs rounded-full border px-2.5 py-1 bg-background hover:bg-accent transition">
+                      {language === 'ar' ? 'كل المدن' : 'All locations'}
+                    </LocalizedLink>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </InViewMount>
 
       {/* FAQ (lazy + in-view) */}
       <InViewMount
