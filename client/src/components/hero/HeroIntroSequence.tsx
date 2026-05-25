@@ -278,12 +278,12 @@ function BenefitTiles({ variant, tone }: { variant: 'ar' | 'en'; tone: Tone }) {
       : ['text-sky-700', 'text-amber-700', 'text-emerald-700', 'text-violet-700'];
 
   return (
-    <div className="grid w-full max-w-4xl gap-3 grid-cols-2 md:grid-cols-4">
+    <div className="grid w-full max-w-4xl gap-3 grid-cols-2 md:grid-cols-4 mx-auto justify-center justify-items-center">
       {items.map((it, idx) => (
         <div
           key={it}
           className={
-            'rounded-2xl border px-3 py-3 text-center font-extrabold transition hover:-translate-y-0.5 ' +
+            'w-full rounded-2xl border px-3 py-3 text-center font-extrabold transition hover:-translate-y-0.5 ' +
             tile
           }
         >
