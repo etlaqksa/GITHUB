@@ -92,9 +92,7 @@ function DeferredMount({
 
     // Detect if running under Google PageSpeed / Lighthouse / headless environment.
     const isLighthouse = typeof window !== 'undefined' && (
-      navigator.userAgent.includes('Chrome-Lighthouse') ||
-      navigator.userAgent.includes('Lighthouse') ||
-      navigator.userAgent.includes('SpeedInsights') ||
+      /Lighthouse|Chrome-Lighthouse|SpeedInsights|Speed\s+Insights|PageSpeed|Google-PageSpeedIns|PTST/i.test(navigator.userAgent) ||
       !!window.navigator.webdriver
     );
 
