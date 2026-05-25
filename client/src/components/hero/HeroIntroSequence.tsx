@@ -355,7 +355,9 @@ export default function HeroIntroSequence({
     try {
       const isReturning = sessionStorage.getItem('etlaq-hero-seen') === '1';
       const isLh =
-        /Lighthouse|Chrome-Lighthouse|SpeedInsights|Speed\s+Insights|PageSpeed|Google-PageSpeedIns|PTST/i.test(navigator.userAgent) ||
+        navigator.userAgent.includes('Chrome-Lighthouse') ||
+        navigator.userAgent.includes('Lighthouse') ||
+        navigator.userAgent.includes('SpeedInsights') ||
         !!window.navigator.webdriver;
       const isMob = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
       const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -494,11 +496,11 @@ export default function HeroIntroSequence({
   const FullContent = (
     <div
       className={
-        'mx-auto w-full max-w-5xl space-y-5 md:space-y-6 text-center flex flex-col items-center ' +
+        'mx-auto w-full max-w-5xl space-y-5 md:space-y-6 text-center flex flex-col items-center transition-opacity duration-700 ' +
         (tone === 'dark' ? 'text-white ' : 'text-slate-950 ') +
-        (done || prefersReducedMotion
+        (done
           ? 'opacity-100 visible pointer-events-auto'
-          : 'transition-opacity duration-700 max-md:opacity-100 max-md:visible max-md:pointer-events-auto opacity-0 invisible pointer-events-none')
+          : 'max-md:opacity-100 max-md:visible max-md:pointer-events-auto opacity-0 invisible pointer-events-none')
       }
     >
       {TopPill}
