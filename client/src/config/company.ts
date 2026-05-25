@@ -9,7 +9,7 @@ export const COMPANY_INFO = {
   // Display helpers
   // NOTE: remove spaces to avoid line-breaks on mobile top bars.
   phoneDisplay: "+966534145922",
-  email: "etlaqksa@gmail.com",
+  email: "info@etlaqksa.com",
 
   // Social handle
   socialHandle: "etlaqksa",

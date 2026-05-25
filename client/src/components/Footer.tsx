@@ -211,10 +211,10 @@ export default function Footer() {
               <li className="flex items-start space-x-2 rtl:space-x-reverse text-sm">
                 <IconEmail className="h-4 w-4 mt-0.5 flex-shrink-0 opacity-90" />
                 <a 
-                  href="mailto:etlaqksa@gmail.com" 
+                  href="mailto:info@etlaqksa.com" 
                   className="opacity-90 hover:opacity-100 hover:underline transition-all"
                 >
-                  etlaqksa@gmail.com
+                  info@etlaqksa.com
                 </a>
               </li>
               <li className="flex items-start space-x-2 rtl:space-x-reverse text-sm">
