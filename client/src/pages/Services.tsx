@@ -504,8 +504,8 @@ export default function Services() {
 
               <div className="grid md:grid-cols-3 gap-4 mt-6">
                 {chooser.map((c) => (
-                  <Card key={c.title} className="h-full border-border/60 bg-card/70 backdrop-blur">
-                    <CardHeader className="space-y-3">
+                  <Card key={c.title} className="h-full border-border/60 bg-card/70 backdrop-blur flex flex-col justify-between">
+                    <CardHeader className="space-y-3 flex flex-col items-center text-center">
                       <div className="h-12 w-12 rounded-2xl border bg-background flex items-center justify-center">
                         <c.icon className="h-6 w-6 text-primary" />
                       </div>
@@ -550,12 +550,12 @@ export default function Services() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
             {workflow.map((w) => (
               <Card key={w.title} className="h-full border-border/60 bg-card/70 backdrop-blur">
-                <CardHeader>
+                <CardHeader className="flex flex-col items-center text-center">
                   <div className="h-12 w-12 rounded-2xl border bg-background flex items-center justify-center">
                     <w.icon className="h-6 w-6 text-primary" />
                   </div>
-                  <CardTitle className="text-lg mt-3">{w.title}</CardTitle>
-                  <CardDescription className="leading-relaxed">{w.desc}</CardDescription>
+                  <CardTitle className="text-lg mt-3 text-center">{w.title}</CardTitle>
+                  <CardDescription className="leading-relaxed text-center">{w.desc}</CardDescription>
                 </CardHeader>
               </Card>
             ))}

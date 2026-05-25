@@ -100,15 +100,15 @@ export default function WhyChooseUs({ className = '' }: Props) {
             return (
               <div
                 key={pillar.titleEn}
-                className="group rounded-2xl border bg-white p-6 shadow-sm hover:shadow-md transition-shadow"
+                className="group rounded-2xl border bg-white p-6 shadow-sm hover:shadow-md transition-shadow text-center flex flex-col items-center justify-center"
               >
                 <div className={`mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl ${pillar.bgColor}`}>
                   <Icon className={`h-6 w-6 ${pillar.accentColor}`} aria-hidden="true" />
                 </div>
-                <h3 className="font-bold text-slate-900 mb-2 text-base">
+                <h3 className="font-bold text-slate-900 mb-2 text-base text-center">
                   {isAr ? pillar.titleAr : pillar.titleEn}
                 </h3>
-                <p className="text-slate-500 text-sm leading-relaxed text-start">
+                <p className="text-slate-500 text-sm leading-relaxed text-center">
                   {isAr ? pillar.descAr : pillar.descEn}
                 </p>
               </div>

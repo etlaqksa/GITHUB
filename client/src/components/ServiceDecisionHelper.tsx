@@ -218,8 +218,8 @@ export default function ServiceDecisionHelper({ className = '' }: Props) {
           <div className="rounded-2xl border bg-white shadow-lg shadow-slate-100 overflow-hidden">
             {/* Result view */}
             {res && (
-              <div className="p-6 md:p-8">
-                <div className={`rounded-xl border p-4 mb-6 ${res.bgColor}`}>
+              <div className="p-6 md:p-8 flex flex-col items-center">
+                <div className={`w-full rounded-xl border p-4 mb-6 text-center flex flex-col items-center justify-center ${res.bgColor}`}>
                   <div className="text-xs font-semibold text-slate-500 mb-1 uppercase tracking-wide">
                     {isAr ? 'التوصية' : 'Recommendation'}
                   </div>
@@ -231,11 +231,11 @@ export default function ServiceDecisionHelper({ className = '' }: Props) {
                   </div>
                 </div>
 
-                <p className="text-slate-600 text-sm leading-relaxed mb-6 text-start">
+                <p className="text-slate-600 text-sm leading-relaxed mb-6 text-center">
                   {isAr ? res.reasonAr : res.reasonEn}
                 </p>
 
-                <div className="flex flex-col sm:flex-row gap-3">
+                <div className="flex flex-col sm:flex-row gap-3 w-full">
                   <LocalizedLink href={res.requestHref} className="flex-1">
                     <Button className="w-full gap-2 bg-blue-600 hover:bg-blue-700 text-white" size="lg">
                       {isAr ? 'اطلب الخدمة الآن' : 'Request Service Now'}
@@ -254,21 +254,21 @@ export default function ServiceDecisionHelper({ className = '' }: Props) {
 
             {/* Question view */}
             {!res && step && (
-              <div className="p-6 md:p-8">
-                <div className="mb-2 text-xs font-semibold text-slate-400 uppercase tracking-wide">
+              <div className="p-6 md:p-8 flex flex-col items-center">
+                <div className="mb-2 text-xs font-semibold text-slate-400 uppercase tracking-wide text-center">
                   {isAr ? step.idAr : step.idEn}
                 </div>
-                <h3 className="text-lg md:text-xl font-bold text-slate-900 mb-6 text-start leading-snug">
+                <h3 className="text-lg md:text-xl font-bold text-slate-900 mb-6 text-center leading-snug w-full">
                   {isAr ? step.questionAr : step.questionEn}
                 </h3>
 
-                <div className="space-y-3">
+                <div className="space-y-3 w-full">
                   {step.options.map((opt, i) => (
                     <button
                       key={i}
                       type="button"
                       onClick={() => handleOption(opt.next)}
-                      className="w-full text-start rounded-xl border border-slate-200 bg-slate-50 px-4 py-3.5 text-sm font-medium text-slate-700 hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700 transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 active:scale-[0.99] flex items-center justify-between gap-3"
+                      className="w-full text-center rounded-xl border border-slate-200 bg-slate-50 px-4 py-3.5 text-sm font-medium text-slate-700 hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700 transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 active:scale-[0.99] flex items-center justify-center gap-2"
                     >
                       <span>{isAr ? opt.labelAr : opt.labelEn}</span>
                       <span className="flex-shrink-0 text-slate-400">

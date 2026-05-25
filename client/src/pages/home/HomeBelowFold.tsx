@@ -297,10 +297,10 @@ export default function HomeBelowFold() {
               {quickPaths.map((p, idx) => (
                 <Card
                   key={p.title}
-                  className="h-full etlaq-accent-card"
+                  className="h-full etlaq-accent-card flex flex-col justify-between"
                   style={accentStyle(QUICK_PATH_ACCENTS[idx % QUICK_PATH_ACCENTS.length])}
                 >
-                  <CardHeader className="space-y-2 pb-3">
+                  <CardHeader className="space-y-2 pb-3 flex flex-col items-center text-center">
                     <div className="h-10 w-10 rounded-2xl etlaq-accent-icon flex items-center justify-center">
                       <p.icon className="h-5 w-5" />
                     </div>
@@ -339,9 +339,9 @@ export default function HomeBelowFold() {
 
             <div className="grid md:grid-cols-3 gap-6 mt-6">
               {services.map((s) => (
-                <Card key={s.href} className="h-full etlaq-accent-card" style={accentStyle(SERVICE_ACCENTS[s.key])}>
-                  <CardHeader>
-                    <div className="flex items-center gap-3">
+                <Card key={s.href} className="h-full etlaq-accent-card flex flex-col justify-between" style={accentStyle(SERVICE_ACCENTS[s.key])}>
+                  <CardHeader className="flex flex-col items-center text-center pb-2">
+                    <div className="flex flex-col items-center text-center gap-3 w-full">
                       <div className="h-10 w-10 rounded-2xl etlaq-accent-icon flex items-center justify-center">
                         <s.icon className="h-5 w-5" />
                       </div>
@@ -351,20 +351,22 @@ export default function HomeBelowFold() {
                       </div>
                     </div>
                   </CardHeader>
-                  <CardContent className="space-y-5">
-                    <p className="text-muted-foreground leading-relaxed">{s.desc}</p>
-                    <div className="etlaq-card rounded-xl border bg-card/60 backdrop-blur p-4">
-                      <p className="text-sm font-medium mb-3">{language === 'ar' ? 'ماذا تتوقع؟' : 'What to expect'}</p>
-                      <ul className="space-y-2">
-                        {s.bullets.map((b) => (
-                          <li key={b} className="flex items-start gap-2 text-sm text-muted-foreground">
-                            <CheckCircle2 className="h-4 w-4 mt-0.5 text-primary" />
-                            <span className="leading-relaxed">{b}</span>
-                          </li>
-                        ))}
-                      </ul>
+                  <CardContent className="space-y-5 flex-grow flex flex-col justify-between">
+                    <div className="space-y-5">
+                      <p className="text-muted-foreground leading-relaxed text-center">{s.desc}</p>
+                      <div className="etlaq-card rounded-xl border bg-card/60 backdrop-blur p-4">
+                        <p className="text-sm font-medium mb-3 text-center">{language === 'ar' ? 'ماذا تتوقع؟' : 'What to expect'}</p>
+                        <ul className="space-y-2">
+                          {s.bullets.map((b) => (
+                            <li key={b} className="flex items-start justify-center gap-2 text-sm text-muted-foreground text-center">
+                              <CheckCircle2 className="h-4 w-4 mt-0.5 text-primary flex-shrink-0" />
+                              <span className="leading-relaxed">{b}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                     </div>
-                    <div className="flex flex-col gap-2">
+                    <div className="flex flex-col gap-2 mt-4">
                       <LocalizedLink href={s.href}>
                         <Button variant="outline" className="w-full">
                           {language === 'ar' ? 'استعرض التفاصيل' : 'View details'}
@@ -403,7 +405,7 @@ export default function HomeBelowFold() {
                 <div className="grid sm:grid-cols-2 gap-3 pt-1">
                   {valuePillars.map((p, idx) => (
                     <Card key={p.title} className="etlaq-accent-card" style={accentStyle(PILLAR_ACCENTS[idx % PILLAR_ACCENTS.length])}>
-                      <CardHeader className="space-y-1.5 pb-4">
+                      <CardHeader className="space-y-1.5 pb-4 flex flex-col items-center text-center">
                         <div className="h-10 w-10 rounded-2xl etlaq-accent-icon flex items-center justify-center">
                           <p.icon className="h-5 w-5" />
                         </div>
@@ -417,8 +419,8 @@ export default function HomeBelowFold() {
 
               <Card className="rounded-3xl border bg-card/70 backdrop-blur">
                 <CardHeader className="pb-3">
-                  <CardTitle className="text-xl">{language === 'ar' ? 'كيف نمشي معك خطوة بخطوة' : 'How we work — step by step'}</CardTitle>
-                  <CardDescription className="leading-relaxed">
+                  <CardTitle className="text-xl text-center">{language === 'ar' ? 'كيف نمشي معك خطوة بخطوة' : 'How we work — step by step'}</CardTitle>
+                  <CardDescription className="leading-relaxed text-center">
                     {language === 'ar'
                       ? 'خطوات عملية تناسب مشاريع الأفراد والمقاولين والمطورين — بدون تعقيد زائد.'
                       : 'Practical steps for owners, contractors, and developers — without unnecessary complexity.'}
@@ -427,8 +429,8 @@ export default function HomeBelowFold() {
                 <CardContent>
                   <div className="grid sm:grid-cols-2 gap-3">
                     {approach.map((st) => (
-                      <div key={st.title} className="rounded-2xl border bg-background/60 p-3">
-                        <div className="flex items-start gap-2.5">
+                      <div key={st.title} className="rounded-2xl border bg-background/60 p-3 flex flex-col items-center justify-center">
+                        <div className="flex flex-col items-center text-center gap-2.5 w-full">
                           <div className="h-9 w-9 rounded-2xl border bg-background flex items-center justify-center flex-shrink-0">
                             <st.icon className="h-4 w-4 text-primary" />
                           </div>

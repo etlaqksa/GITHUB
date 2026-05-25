@@ -637,9 +637,9 @@ export default function HeroIntroSequence({
           { val: '200+', label: variant === 'ar' ? 'مشروع منجز' : 'Projects' },
           { val: '100+', label: variant === 'ar' ? 'عميل راضٍ' : 'Clients' },
         ].map((s) => (
-          <span key={s.val} className="flex items-center gap-1.5 border border-white/10 rounded-xl px-3 py-1.5 bg-black/40 backdrop-blur-sm shadow-[0_8px_20px_rgba(0,0,0,0.2)]">
-            <span className="text-base font-extrabold text-secondary">{s.val}</span>
-            <span className="text-xs font-semibold">{s.label}</span>
+          <span key={s.val} className="flex flex-col items-center justify-center text-center border border-white/10 rounded-xl px-3 py-2 bg-black/40 backdrop-blur-sm shadow-[0_8px_20px_rgba(0,0,0,0.2)] min-w-[95px]">
+            <span className="text-base font-extrabold text-secondary leading-tight">{s.val}</span>
+            <span className="text-[10px] font-semibold leading-tight mt-0.5">{s.label}</span>
           </span>
         ))}
       </div>
@@ -780,9 +780,9 @@ export default function HeroIntroSequence({
               { val: '200+', label: variant === 'ar' ? 'مشروع' : 'Projects' },
               { val: '100+', label: variant === 'ar' ? 'عميل' : 'Clients' },
             ].map((s) => (
-              <span key={s.val} className="flex items-center gap-1.5">
-                <span className="text-base md:text-lg font-extrabold text-secondary">{s.val}</span>
-                {s.label}
+              <span key={s.val} className="flex flex-col items-center justify-center text-center">
+                <span className="text-base md:text-lg font-extrabold text-secondary leading-tight">{s.val}</span>
+                <span className="text-xs font-semibold leading-tight mt-0.5">{s.label}</span>
               </span>
             ))}
           </div>
